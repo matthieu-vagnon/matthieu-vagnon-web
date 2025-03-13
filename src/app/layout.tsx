@@ -25,7 +25,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const data = [
+  const apps = [
     {
       title: 'Home',
       icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
@@ -54,11 +54,11 @@ export default function RootLayout({
         {children}
         <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
           <Dock className='items-end pb-3'>
-            {data.map((item, idx) => (
-              <Link href={item.href} key={idx}>
+            {apps.map((app, idx) => (
+              <Link href={app.href} key={idx}>
                 <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-                  <DockLabel>{item.title}</DockLabel>
-                  <DockIcon>{item.icon}</DockIcon>
+                  <DockLabel>{app.title}</DockLabel>
+                  <DockIcon>{app.icon}</DockIcon>
                 </DockItem>
               </Link>
             ))}
