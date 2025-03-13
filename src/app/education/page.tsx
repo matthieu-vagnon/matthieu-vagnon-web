@@ -1,3 +1,4 @@
+import { BlurFade } from '@/components/ui/blur-fade'
 import { Timeline } from '@/components/ui/timeline'
 
 export default function Education() {
@@ -55,5 +56,9 @@ export default function Education() {
     }
   ]
 
-  return <Timeline data={data} />
+  return (
+    <BlurFade>
+      <Timeline data={data} />
+    </BlurFade>
+  )
 }

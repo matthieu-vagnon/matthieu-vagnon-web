@@ -1,17 +1,17 @@
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock'
 import { Braces, BriefcaseBusiness, GraduationCap, HomeIcon } from 'lucide-react'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Libre_Bodoni, Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const signikaNegative = Signika_Negative({
+  variable: '--font-signika-negative',
   subsets: ['latin']
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const libreBodoni = Libre_Bodoni({
+  variable: '--font-libre-bodoni',
   subsets: ['latin']
 })
 
@@ -50,7 +50,7 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}>
+      <body className={`${signikaNegative.variable} ${libreBodoni.variable} antialiased relative min-h-screen`}>
         {children}
         <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
           <Dock className='items-end pb-3'>

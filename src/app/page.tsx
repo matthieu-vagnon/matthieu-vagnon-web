@@ -1,11 +1,9 @@
 import LandingTitle from '@/app/components/LandingTitle'
-import StackCarousel from '@/app/components/StackCarousel'
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center justify-center h-screen'>
+    <div className='flex flex-col items-center py-16 px-8'>
       <LandingTitle />
-      <StackCarousel />
     </div>
   )
 }
