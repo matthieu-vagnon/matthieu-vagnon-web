@@ -29,17 +29,25 @@ type DockItemProps = {
   className?: string
   children: React.ReactNode
 }
+
+// Interface pour les props des enfants du DockItem
+interface DockItemChildProps {
+  width?: MotionValue<number>
+  isHovered?: MotionValue<number>
+}
+
 type DockLabelProps = {
   className?: string
   children: React.ReactNode
-}
+} & DockItemChildProps
+
 type DockIconProps = {
   className?: string
   children: React.ReactNode
-}
+} & DockItemChildProps
 
 type DocContextType = {
-  mouseX: MotionValue
+  mouseX: MotionValue<number>
   spring: SpringOptions
   magnification: number
   distance: number
@@ -138,17 +146,20 @@ function DockItem({ children, className }: DockItemProps) {
       role='button'
       aria-haspopup='true'
     >
-      {Children.map(children, (child) => cloneElement(child as React.ReactElement, { width, isHovered }))}
+      {Children.map(children, (child) =>
+        cloneElement(child as React.ReactElement<DockItemChildProps>, { width, isHovered })
+      )}
     </motion.div>
   )
 }
 
 function DockLabel({ children, className, ...rest }: DockLabelProps) {
-  const restProps = rest as Record<string, unknown>
-  const isHovered = restProps['isHovered'] as MotionValue<number>
+  const isHovered = rest.isHovered as MotionValue<number>
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    if (!isHovered) return () => {}
+
     const unsubscribe = isHovered.on('change', (latest) => {
       setIsVisible(latest === 1)
     })
@@ -179,8 +190,7 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
 }
 
 function DockIcon({ children, className, ...rest }: DockIconProps) {
-  const restProps = rest as Record<string, unknown>
-  const width = restProps['width'] as MotionValue<number>
+  const width = rest.width as MotionValue<number>
 
   const widthTransform = useTransform(width, (val) => val / 2)
 
