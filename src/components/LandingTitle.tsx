@@ -11,19 +11,17 @@ export default function LandingTitle() {
       <motion.div layout>
         <BlurFade className='flex'>
           <Card variant='dots'>
-            <CardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans text-xl sm:text-3xl md:text-4xl pt-2 pr-2 pb-0 pl-2'>
+            <CardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
               <BlurFade delay={0.1} className='flex'>
                 <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                   Hello, I&apos;m <span className='font-bold'>Matthieu Vagnon</span>,
                 </motion.span>
               </BlurFade>
-              <div className='flex flex-row items-center'>
-                <BlurFade delay={0.1} className='flex'>
+              <BlurFade delay={0.2} className='flex'>
+                <span className='flex items-center mt-1 md:mt-2'>
                   <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                     Freelance{' '}
                   </motion.span>
-                </BlurFade>
-                <BlurFade delay={0.2}>
                   <TextRotate
                     texts={['Front-End Engineer', 'Digital Designer', 'Website Creator']}
                     mainClassName='text-white px-2 sm:px-2 md:px-3 bg-[#007fff] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg'
@@ -36,8 +34,8 @@ export default function LandingTitle() {
                     transition={{ type: 'spring', damping: 30, stiffness: 400 }}
                     rotationInterval={3000}
                   />
-                </BlurFade>
-              </div>
+                </span>
+              </BlurFade>
             </CardContent>
           </Card>
         </BlurFade>
