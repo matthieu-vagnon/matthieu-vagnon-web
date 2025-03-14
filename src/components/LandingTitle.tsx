@@ -10,7 +10,7 @@ import { Particles } from './ui/particles'
 export default function LandingTitle() {
   return (
     <LayoutGroup>
-      <div className='relative h-screen w-full flex justify-center items-center'>
+      <div className='h-screen w-full flex justify-center items-center'>
         <div className='flex flex-col gap-6 sm:gap-8 md:gap-12 justify-center items-center'>
           <motion.div layout>
             <BlurFade className='flex'>
@@ -50,7 +50,7 @@ export default function LandingTitle() {
             <MagneticSocialLinks />
           </BlurFade>
         </div>
-        <Particles className='absolute inset-0 -z-1' quantity={100} ease={80} color='black' refresh />
+        <Particles className='fixed inset-0 -z-1' quantity={100} ease={80} color='black' refresh />
       </div>
     </LayoutGroup>
   )
