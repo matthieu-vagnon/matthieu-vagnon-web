@@ -1,5 +1,5 @@
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock'
-import { HomeIcon, Mail } from 'lucide-react'
+import { HomeIcon, MessageCircle } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
@@ -42,8 +42,8 @@ export default function RootLayout({
     //   href: '/code-showcase'
     // },
     {
-      title: 'Send a Message',
-      icon: <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+      title: 'Get In Touch',
+      icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
       href: 'mailto:mvagnon@icloud.com'
     }
     // {

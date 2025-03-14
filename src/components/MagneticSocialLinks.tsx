@@ -39,7 +39,7 @@ function MagneticSocialLink({ children, link }: { children: React.ReactNode; lin
 
 const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'LinkedIn CV',
+    label: 'LinkedIn',
     link: 'https://linkedin.com/in/matthieu-vagnon'
   },
   {
@@ -51,8 +51,8 @@ const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://github.com/matthieu-vagnon'
   },
   {
-    label: 'Contact',
-    link: 'mailto:mvagnon@icloud.com'
+    label: 'Curriculum Vitae',
+    link: '#'
   }
 ]
 
