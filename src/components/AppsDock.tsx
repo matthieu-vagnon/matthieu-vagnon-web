@@ -3,7 +3,6 @@
 import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { createPortal } from 'react-dom'
 import { ContactModal } from './ContactModal'
 import {
   DialogStack,
@@ -28,20 +27,14 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
 
   if (app.modal) {
     return (
-      <DialogStack>
+      <React.Fragment>
         <DialogStackTrigger asChild>
           <Link href='#'> {children}</Link>
         </DialogStackTrigger>
-        {createPortal(
-          <React.Fragment>
-            <DialogStackOverlay />
-            <DialogStackBody>
-              <DialogStackContent>{app.modal}</DialogStackContent>
-            </DialogStackBody>
-          </React.Fragment>,
-          document.body
-        )}
-      </DialogStack>
+        <DialogStackBody>
+          <DialogStackContent>{app.modal}</DialogStackContent>
+        </DialogStackBody>
+      </React.Fragment>
     )
   }
 
@@ -83,17 +76,20 @@ export default function AppsDock() {
   ]
 
   return (
-    <div id='dock-root' className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
-      <Dock className='items-end pb-3'>
-        {apps.map((app, idx) => (
-          <AppWrapper key={idx} app={app}>
-            <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-              <DockLabel>{app.title}</DockLabel>
-              <DockIcon>{app.icon}</DockIcon>
-            </DockItem>
-          </AppWrapper>
-        ))}
-      </Dock>
-    </div>
+    <DialogStack>
+      <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
+        <Dock className='items-end pb-3'>
+          {apps.map((app, idx) => (
+            <AppWrapper key={idx} app={app}>
+              <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
+                <DockLabel>{app.title}</DockLabel>
+                <DockIcon>{app.icon}</DockIcon>
+              </DockItem>
+            </AppWrapper>
+          ))}
+        </Dock>
+      </div>
+      <DialogStackOverlay />
+    </DialogStack>
   )
 }
