@@ -13,7 +13,7 @@ import {
 import { Children, cloneElement, createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 const DOCK_HEIGHT = 128
-const DEFAULT_MAGNIFICATION = 50
+const DEFAULT_MAGNIFICATION = 52
 const DEFAULT_DISTANCE = 150
 const DEFAULT_PANEL_HEIGHT = 64
 
