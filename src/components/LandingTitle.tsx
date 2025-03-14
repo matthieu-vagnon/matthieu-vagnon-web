@@ -9,7 +9,7 @@ import { Particles } from './ui/particles'
 export default function LandingTitle() {
   return (
     <LayoutGroup>
-      <div className='relative h-screen w-screen p-4 flex justify-center items-center overflow-hidden'>
+      <div className='relative h-screen w-screen flex justify-center items-center'>
         <motion.div layout>
           <BlurFade className='flex'>
             <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
