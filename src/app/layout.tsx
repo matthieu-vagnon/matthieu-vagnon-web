@@ -60,7 +60,9 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={`${signikaNegative.variable} ${libreBodoni.variable} antialiased relative min-h-screen`}>
+      <body
+        className={`${signikaNegative.variable} ${libreBodoni.variable} antialiased relative min-h-screen p-4 overflow-x-hidden`}
+      >
         {children}
         <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
           <Dock className='items-end pb-3'>
