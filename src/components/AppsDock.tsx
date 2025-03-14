@@ -4,8 +4,8 @@ import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { ContactModal } from './ContactModal'
-import { DialogStack, DialogStackOverlay, DialogStackTrigger } from './ui/dialog-stack'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
+import { Dialog, DialogTrigger } from './ui/nested-dialog'
 
 type App = {
   title: string
@@ -21,12 +21,10 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
 
   if (app.modal) {
     return (
-      <React.Fragment>
-        <DialogStackTrigger asChild>
-          <Link href='#'> {children}</Link>
-        </DialogStackTrigger>
+      <Dialog>
+        <DialogTrigger>{children}</DialogTrigger>
         {app.modal}
-      </React.Fragment>
+      </Dialog>
     )
   }
 
@@ -68,20 +66,17 @@ export default function AppsDock() {
   ]
 
   return (
-    <DialogStack>
-      <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
-        <Dock className='items-end pb-3'>
-          {apps.map((app, idx) => (
-            <AppWrapper key={idx} app={app}>
-              <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-                <DockLabel>{app.title}</DockLabel>
-                <DockIcon>{app.icon}</DockIcon>
-              </DockItem>
-            </AppWrapper>
-          ))}
-        </Dock>
-      </div>
-      <DialogStackOverlay />
-    </DialogStack>
+    <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
+      <Dock className='items-end pb-3'>
+        {apps.map((app, idx) => (
+          <AppWrapper key={idx} app={app}>
+            <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
+              <DockLabel>{app.title}</DockLabel>
+              <DockIcon>{app.icon}</DockIcon>
+            </DockItem>
+          </AppWrapper>
+        ))}
+      </Dock>
+    </div>
   )
 }

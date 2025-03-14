@@ -49,11 +49,11 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github Portfolio',
     link: 'https://github.com/matthieu-vagnon'
-  },
-  {
-    label: 'Curriculum Vitae',
-    link: '#'
   }
+  // {
+  //   label: 'Curriculum Vitae',
+  //   link: '#'
+  // }
 ]
 
 function MagneticSocialLinks() {
