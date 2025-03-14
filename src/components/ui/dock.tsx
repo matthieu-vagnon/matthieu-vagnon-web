@@ -142,6 +142,7 @@ function DockItem({ children, className }: DockItemProps) {
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       onTouchStart={() => isHovered.set(0)}
+      onTouchEnd={() => isHovered.set(0)}
       className={cn('relative inline-flex items-center justify-center active:brightness-90', className)}
       tabIndex={0}
       role='button'
