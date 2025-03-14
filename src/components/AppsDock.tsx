@@ -2,6 +2,8 @@
 
 import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
+import React from 'react'
+import { createPortal } from 'react-dom'
 import { ContactModal } from './ContactModal'
 import {
   DialogStack,
@@ -30,10 +32,15 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
         <DialogStackTrigger asChild>
           <Link href='#'> {children}</Link>
         </DialogStackTrigger>
-        <DialogStackOverlay />
-        <DialogStackBody>
-          <DialogStackContent>{app.modal}</DialogStackContent>
-        </DialogStackBody>
+        {createPortal(
+          <React.Fragment>
+            <DialogStackOverlay />
+            <DialogStackBody>
+              <DialogStackContent>{app.modal}</DialogStackContent>
+            </DialogStackBody>
+          </React.Fragment>,
+          document.body
+        )}
       </DialogStack>
     )
   }
@@ -76,7 +83,7 @@ export default function AppsDock() {
   ]
 
   return (
-    <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
+    <div id='dock-root' className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
       <Dock className='items-end pb-3'>
         {apps.map((app, idx) => (
           <AppWrapper key={idx} app={app}>
