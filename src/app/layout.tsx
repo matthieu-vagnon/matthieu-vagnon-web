@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${signikaNegative.variable} ${libreBodoni.variable} antialiased max-w-[3840px] mx-auto relative min-h-screen p-4 sm:p-6 md:p-8 overflow-x-hidden`}
+        className={`${signikaNegative.variable} ${libreBodoni.variable} antialiased max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden`}
       >
         {children}
         <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
