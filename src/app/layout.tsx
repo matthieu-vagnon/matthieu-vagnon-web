@@ -1,5 +1,4 @@
-import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock'
-import { HomeIcon, MessageCircle } from 'lucide-react'
+import AppsDock from '@/components/AppsDock'
 import type { Metadata } from 'next'
 import { Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
@@ -20,39 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const apps = [
-    {
-      title: 'Home',
-      icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-      href: '/'
-    },
-    // {
-    //   title: 'Education',
-    //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   href: '/education'
-    // },
-    // {
-    //   title: 'Case Studies',
-    //   icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   href: '/case-studies'
-    // },
-    // {
-    //   title: 'Code Showcase',
-    //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   href: '/code-showcase'
-    // },
-    {
-      title: 'Get In Touch',
-      icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-      href: 'mailto:mvagnon@icloud.com'
-    }
-    // {
-    //   title: 'Configuration',
-    //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   href: '/configuration'
-    // }
-  ]
-
   return (
     <html lang='en'>
       <body
@@ -68,18 +34,7 @@ export default function RootLayout({
           </svg>
         </Link>
         {children}
-        <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
-          <Dock className='items-end pb-3'>
-            {apps.map((app, idx) => (
-              <Link href={app.href} key={idx}>
-                <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-                  <DockLabel>{app.title}</DockLabel>
-                  <DockIcon>{app.icon}</DockIcon>
-                </DockItem>
-              </Link>
-            ))}
-          </Dock>
-        </div>
+        <AppsDock />
       </body>
     </html>
   )
