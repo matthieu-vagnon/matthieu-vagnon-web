@@ -1,5 +1,5 @@
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock'
-import { Braces, BriefcaseBusiness, GraduationCap, HomeIcon } from 'lucide-react'
+import { BriefcaseBusiness, FileCode, GraduationCap, HomeIcon } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Libre_Bodoni, Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
@@ -42,9 +42,9 @@ export default function RootLayout({
       href: '/case-studies'
     },
     {
-      title: 'Components Library',
-      icon: <Braces className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-      href: '/components-library'
+      title: 'Code Showcase',
+      icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+      href: '/code-showcase'
     }
   ]
 
