@@ -1,7 +1,7 @@
 export default function CodeShowcase() {
   return (
     <div>
-      <h1>Code Showcase</h1>
+      <h1>This app will be implemented soon.</h1>
     </div>
   )
 }
