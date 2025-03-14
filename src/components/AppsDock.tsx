@@ -4,13 +4,7 @@ import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { ContactModal } from './ContactModal'
-import {
-  DialogStack,
-  DialogStackBody,
-  DialogStackContent,
-  DialogStackOverlay,
-  DialogStackTrigger
-} from './ui/dialog-stack'
+import { DialogStack, DialogStackOverlay, DialogStackTrigger } from './ui/dialog-stack'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 
 type App = {
@@ -31,9 +25,7 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
         <DialogStackTrigger asChild>
           <Link href='#'> {children}</Link>
         </DialogStackTrigger>
-        <DialogStackBody>
-          <DialogStackContent>{app.modal}</DialogStackContent>
-        </DialogStackBody>
+        {app.modal}
       </React.Fragment>
     )
   }
