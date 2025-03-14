@@ -1,5 +1,5 @@
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/ui/dock'
-import { BriefcaseBusiness, FileCode, GraduationCap, HomeIcon } from 'lucide-react'
+import { BriefcaseBusiness, Cog, FileCode, GraduationCap, HomeIcon, Mail } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Libre_Bodoni, Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
@@ -45,6 +45,16 @@ export default function RootLayout({
       title: 'Code Showcase',
       icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
       href: '/code-showcase'
+    },
+    {
+      title: 'Send a Message',
+      icon: <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+      href: 'mailto:mvagnon@icloud.com'
+    },
+    {
+      title: 'Configuration',
+      icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+      href: '/configuration'
     }
   ]
 
