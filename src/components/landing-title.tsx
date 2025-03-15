@@ -4,7 +4,7 @@ import { BlurFade } from '@/components/ui/blur-fade'
 import { Card, CardContent } from '@/components/ui/card'
 import { TextRotate } from '@/components/ui/text-rotate'
 import { LayoutGroup, motion } from 'motion/react'
-import { Button } from './ui/button'
+import { LinkButton } from './ui/button'
 import { Particles } from './ui/particles'
 
 type SocialLink = {
@@ -73,9 +73,9 @@ export default function LandingTitle() {
           <BlurFade delay={0.5} className='flex'>
             <div className='flex items-center justify-center gap-3 flex-wrap'>
               {SOCIAL_LINKS.map((link) => (
-                <Button variant='link' key={link.label} link={link.link}>
+                <LinkButton variant='link' key={link.label} href={link.link}>
                   {link.label}
-                </Button>
+                </LinkButton>
               ))}
             </div>
           </BlurFade>
