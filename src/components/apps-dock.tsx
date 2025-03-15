@@ -1,5 +1,6 @@
 'use client'
 
+import { useDockStatus } from '@/hooks/use-dock-status'
 import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -32,6 +33,7 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
 }
 
 export default function AppsDock() {
+  const { isDockOpen } = useDockStatus()
   const apps: App[] = [
     {
       title: 'Home',
@@ -66,7 +68,11 @@ export default function AppsDock() {
   ]
 
   return (
-    <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-100'>
+    <div
+      className={`fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-100 ${
+        isDockOpen ? 'translate-y-0' : 'translate-y-full'
+      } transition-transform duration-300`}
+    >
       <Dock className='items-end pb-3'>
         {apps.map((app, idx) => (
           <AppWrapper key={idx} app={app}>

@@ -1,4 +1,5 @@
 import AppsDock from '@/components/apps-dock'
+import DockStatusProvider from '@/hooks/use-dock-status'
 import type { Metadata } from 'next'
 import { Signika_Negative } from 'next/font/google'
 import Link from 'next/link'
@@ -33,8 +34,10 @@ export default function RootLayout({
             <rect y='650' width='800' height='150' fill='#007FFF' />
           </svg>
         </Link>
-        {children}
-        <AppsDock />
+        <DockStatusProvider>
+          {children}
+          <AppsDock />
+        </DockStatusProvider>
       </body>
     </html>
   )

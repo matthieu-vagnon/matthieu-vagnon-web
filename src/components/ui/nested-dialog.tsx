@@ -1,5 +1,6 @@
 'use client'
 
+import { useDockStatus } from '@/hooks/use-dock-status'
 import { cn } from '@/lib/utils'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { X } from 'lucide-react'
@@ -13,8 +14,14 @@ interface DialogContextValue {
 const DialogContext = React.createContext<DialogContextValue | undefined>(undefined)
 
 function Dialog({ children }: { children: React.ReactNode }) {
+  const { setIsDockOpen } = useDockStatus()
   const [outerOpen, setOuterOpen] = React.useState(false)
   const [innerOpen, setInnerOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsDockOpen(!outerOpen)
+  }, [outerOpen, setIsDockOpen])
+
   return (
     <DialogContext.Provider value={{ innerOpen, setInnerOpen }}>
       <DialogPrimitive.Root open={outerOpen} onOpenChange={setOuterOpen}>
