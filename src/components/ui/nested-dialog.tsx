@@ -32,8 +32,11 @@ function Dialog({ children }: { children: React.ReactNode }) {
 }
 
 const DialogTrigger = DialogPrimitive.Trigger
+
 const DialogPortal = DialogPrimitive.Portal
+
 const DialogClose = DialogPrimitive.Close
+
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -54,14 +57,16 @@ const DialogContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => {
   const context = React.useContext(DialogContext)
+
   if (!context) throw new Error('DialogContent must be used within a Dialog')
+
   return (
     <DialogPortal>
       <DialogOverlay />
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          'fixed overflow-hidden left-1/2 top-1/2 z-98 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2 sm:rounded-lg',
+          'fixed overflow-hidden left-1/2 top-1/2 z-98 grid w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2 sm:rounded-lg',
           context.innerOpen && 'translate-y-[-60%] translate-x-[-55%] scale-[0.95]',
           className
         )}
@@ -80,7 +85,9 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
 
 function InnerDialog({ children }: { children: React.ReactNode }) {
   const context = React.useContext(DialogContext)
+
   if (!context) throw new Error('InnerDialog must be used within a Dialog')
+
   React.useEffect(() => {
     const handleEscapeKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && context.innerOpen) {
@@ -93,6 +100,7 @@ function InnerDialog({ children }: { children: React.ReactNode }) {
       document.removeEventListener('keydown', handleEscapeKeyDown)
     }
   }, [context.innerOpen, context.setInnerOpen])
+
   return (
     <DialogPrimitive.Root open={context.innerOpen} onOpenChange={context.setInnerOpen}>
       {children}
@@ -107,27 +115,33 @@ const InnerDialogContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, draggable = false, ...props }, ref) => {
   const context = React.useContext(DialogContext)
+
   if (!context) throw new Error('InnerDialogContent must be used within a Dialog')
+
   const [isDragging, setIsDragging] = React.useState(false)
   const [startY, setStartY] = React.useState(0)
   const [currentY, setCurrentY] = React.useState(0)
   const contentRef = React.useRef<HTMLDivElement>(null)
+
   React.useEffect(() => {
     if (context.innerOpen) {
       setCurrentY(0)
     }
   }, [context.innerOpen])
+
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!draggable) return
     setIsDragging(true)
     setStartY(e.clientY - currentY)
     e.currentTarget.setPointerCapture(e.pointerId)
   }
+
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!isDragging || !draggable) return
     const newY = e.clientY - startY
     setCurrentY(newY > 0 ? newY : 0)
   }
+
   const handlePointerUp = () => {
     if (!draggable) return
     setIsDragging(false)
@@ -137,6 +151,7 @@ const InnerDialogContent = React.forwardRef<
       setCurrentY(0)
     }
   }
+
   return (
     <DialogPortal>
       <DialogPrimitive.Content
@@ -145,7 +160,7 @@ const InnerDialogContent = React.forwardRef<
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         className={cn(
-          'fixed overflow-hidden left-1/2 top-1/2 z-99 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
+          'fixed overflow-hidden left-1/2 top-1/2 z-99 grid w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
           className
         )}
         {...props}
