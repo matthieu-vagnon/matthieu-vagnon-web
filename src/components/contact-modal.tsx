@@ -26,12 +26,14 @@ export function ContactModal() {
       <div className='flex flex-col gap-4 pt-2 pr-4 pb-4 pl-4'>
         <InnerDialog>
           <InnerDialogTrigger asChild>
-            <Button variant='outline' size='lg' className='flex justify-between h-18 w-full text-left'>
+            <Button variant='outline' size='lg' className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'>
               <div className='flex items-center space-x-4'>
                 <Calendar size={16} />
                 <div>
-                  <h3 className='text-sm font-medium'>Schedule a Meeting</h3>
-                  <p className='text-sm text-muted-foreground'>Schedule a meeting with me to discuss your project.</p>
+                  <h3 className='text-xs sm:text-sm font-medium'>Schedule a Meeting</h3>
+                  <p className='text-xs sm:text-sm text-muted-foreground'>
+                    Schedule a meeting with me to discuss your project.
+                  </p>
                 </div>
               </div>
             </Button>
@@ -49,7 +51,7 @@ export function ContactModal() {
         <LinkButton
           variant='outline'
           size='lg'
-          className='flex justify-between h-18 w-full text-left'
+          className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'
           href='mailto:mvagnon@icloud.com'
           external
           noExternalIndicator
@@ -57,8 +59,8 @@ export function ContactModal() {
           <div className='flex items-center space-x-4'>
             <Mail size={16} />
             <div>
-              <h3 className='text-sm font-medium'>Email</h3>
-              <p className='text-sm text-muted-foreground'>Send me an email to discuss your project.</p>
+              <h3 className='text-xs sm:text-sm font-medium'>Email</h3>
+              <p className='text-xs sm:text-sm text-muted-foreground'>Send me an email to discuss your project.</p>
             </div>
           </div>
         </LinkButton>
