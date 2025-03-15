@@ -62,7 +62,7 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
     )
   }
 
-  return <>{children}</>
+  return children
 }
 
 export default function AppsDock() {
@@ -71,7 +71,7 @@ export default function AppsDock() {
   return (
     <div
       className={`fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-100 ${
-        isDockOpen ? 'translate-y-0' : 'translate-y-full'
+        true ? 'translate-y-0' : 'translate-y-full'
       } transition-transform duration-300`}
     >
       <Dock className='items-end pb-3'>
