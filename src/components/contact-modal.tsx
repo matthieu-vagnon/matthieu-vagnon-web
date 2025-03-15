@@ -1,9 +1,8 @@
 'use client'
 
 import { Calendar, Mail } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import Script from 'next/script'
-import { Button } from './ui/button'
+import { InlineWidget } from 'react-calendly'
+import { Button, LinkButton } from './ui/button'
 import {
   DialogContent,
   DialogDescription,
@@ -18,8 +17,6 @@ import {
 } from './ui/nested-dialog'
 
 export function ContactModal() {
-  const router = useRouter()
-
   return (
     <DialogContent className='p-0'>
       <DialogHeader className='border-b p-4'>
@@ -46,19 +43,14 @@ export function ContactModal() {
                 Please follow the steps below to schedule a meeting with me.
               </InnerDialogDescription>
             </InnerDialogHeader>
-            <div
-              className='calendly-inline-widget'
-              data-url='https://calendly.com/main-mvagnon/30min'
-              style={{ minWidth: '320px', height: '700px' }}
-            />
-            <Script src='https://assets.calendly.com/assets/external/widget.js' />
+            <InlineWidget url='https://calendly.com/main-mvagnon/30min' />
           </InnerDialogContent>
         </InnerDialog>
-        <Button
-          onClick={() => router.push('mailto:mvagnon@icloud.com')}
+        <LinkButton
           variant='outline'
           size='lg'
           className='flex justify-between h-18 w-full text-left'
+          href='mailto:mvagnon@icloud.com'
         >
           <div className='flex items-center space-x-4'>
             <Mail size={16} />
@@ -67,7 +59,7 @@ export function ContactModal() {
               <p className='text-sm text-muted-foreground'>Send me an email to discuss your project.</p>
             </div>
           </div>
-        </Button>
+        </LinkButton>
       </div>
     </DialogContent>
   )
