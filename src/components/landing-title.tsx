@@ -4,8 +4,32 @@ import { BlurFade } from '@/components/ui/blur-fade'
 import { Card, CardContent } from '@/components/ui/card'
 import { TextRotate } from '@/components/ui/text-rotate'
 import { LayoutGroup, motion } from 'motion/react'
-import { MagneticSocialLinks } from './magnetic-social-link'
+import { Button } from './ui/button'
 import { Particles } from './ui/particles'
+
+type SocialLink = {
+  label: string
+  link: string
+}
+
+const SOCIAL_LINKS: SocialLink[] = [
+  {
+    label: 'LinkedIn',
+    link: 'https://linkedin.com/in/matthieu-vagnon'
+  },
+  {
+    label: 'Instagram Portfolio',
+    link: 'https://instagram.com/matthieu.vagnon'
+  },
+  {
+    label: 'Github Portfolio',
+    link: 'https://github.com/matthieu-vagnon'
+  }
+  // {
+  //   label: 'Curriculum Vitae',
+  //   link: '#'
+  // }
+]
 
 export default function LandingTitle() {
   return (
@@ -47,7 +71,13 @@ export default function LandingTitle() {
             </BlurFade>
           </motion.div>
           <BlurFade delay={0.5} className='flex'>
-            <MagneticSocialLinks />
+            <div className='flex items-center justify-center gap-3 flex-wrap'>
+              {SOCIAL_LINKS.map((link) => (
+                <Button variant='link' key={link.label} link={link.link}>
+                  {link.label}
+                </Button>
+              ))}
+            </div>
           </BlurFade>
         </div>
         <Particles className='fixed inset-0 -z-1' quantity={100} ease={80} color='black' refresh />

@@ -15,6 +15,39 @@ type App = {
   modal?: React.ReactNode
 }
 
+const APPS: App[] = [
+  {
+    title: 'Home',
+    icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    url: '/'
+  },
+  // {
+  //   title: 'Education',
+  //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/education'
+  // },
+  // {
+  //   title: 'Case Studies',
+  //   icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/case-studies'
+  // },
+  // {
+  //   title: 'Code Showcase',
+  //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/code-showcase'
+  // },
+  {
+    title: 'Get In Touch',
+    icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    modal: <ContactModal />
+  }
+  // {
+  //   title: 'Configuration',
+  //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/configuration'
+  // }
+]
+
 function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) {
   if (app.url) {
     return <Link href={app.url}>{children}</Link>
@@ -34,38 +67,6 @@ function AppWrapper({ app, children }: { app: App; children: React.ReactNode }) 
 
 export default function AppsDock() {
   const { isDockOpen } = useDockStatus()
-  const apps: App[] = [
-    {
-      title: 'Home',
-      icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-      url: '/'
-    },
-    // {
-    //   title: 'Education',
-    //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   url: '/education'
-    // },
-    // {
-    //   title: 'Case Studies',
-    //   icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   url: '/case-studies'
-    // },
-    // {
-    //   title: 'Code Showcase',
-    //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   url: '/code-showcase'
-    // },
-    {
-      title: 'Get In Touch',
-      icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-      modal: <ContactModal />
-    }
-    // {
-    //   title: 'Configuration',
-    //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    //   url: '/configuration'
-    // }
-  ]
 
   return (
     <div
@@ -74,7 +75,7 @@ export default function AppsDock() {
       } transition-transform duration-300`}
     >
       <Dock className='items-end pb-3'>
-        {apps.map((app, idx) => (
+        {APPS.map((app, idx) => (
           <AppWrapper key={idx} app={app}>
             <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
               <DockLabel>{app.title}</DockLabel>
