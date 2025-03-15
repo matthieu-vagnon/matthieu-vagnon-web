@@ -45,7 +45,7 @@ export function ContactModal() {
                 Please follow the steps below to schedule a meeting with me.
               </InnerDialogDescription>
             </InnerDialogHeader>
-            <InlineWidget url='https://calendly.com/main-mvagnon/30min' />
+            <InlineWidget url='https://calendly.com/matthieu-vagnon/30min' />
           </InnerDialogContent>
         </InnerDialog>
         <LinkButton
