@@ -1,4 +1,4 @@
-import AppsDock from '@/components/AppsDock'
+import AppsDock from '@/components/apps-dock'
 import type { Metadata } from 'next'
 import { Signika_Negative } from 'next/font/google'
 import Link from 'next/link'

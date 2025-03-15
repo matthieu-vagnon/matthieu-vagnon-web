@@ -3,7 +3,7 @@
 import { HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { ContactModal } from './ContactModal'
+import { ContactModal } from './contact-modal'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 import { Dialog, DialogTrigger } from './ui/nested-dialog'
 
@@ -66,7 +66,7 @@ export default function AppsDock() {
   ]
 
   return (
-    <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-10'>
+    <div className='fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-100'>
       <Dock className='items-end pb-3'>
         {apps.map((app, idx) => (
           <AppWrapper key={idx} app={app}>

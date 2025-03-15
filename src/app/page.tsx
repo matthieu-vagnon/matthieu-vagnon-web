@@ -1,4 +1,4 @@
-import LandingTitle from '@/components/LandingTitle'
+import LandingTitle from '@/components/landing-title'
 
 export default function Home() {
   return <LandingTitle />

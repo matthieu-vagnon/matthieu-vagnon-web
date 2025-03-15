@@ -4,7 +4,7 @@ import { BlurFade } from '@/components/ui/blur-fade'
 import { Card, CardContent } from '@/components/ui/card'
 import { TextRotate } from '@/components/ui/text-rotate'
 import { LayoutGroup, motion } from 'motion/react'
-import { MagneticSocialLinks } from './MagneticSocialLinks'
+import { MagneticSocialLinks } from './magnetic-social-link'
 import { Particles } from './ui/particles'
 
 export default function LandingTitle() {
