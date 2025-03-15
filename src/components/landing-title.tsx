@@ -73,7 +73,7 @@ export default function LandingTitle() {
           <BlurFade delay={0.5} className='flex'>
             <div className='flex items-center justify-center gap-3 flex-wrap'>
               {SOCIAL_LINKS.map((link) => (
-                <LinkButton variant='link' key={link.label} href={link.link}>
+                <LinkButton variant='secondary' size='sm' key={link.label} href={link.link} external>
                   {link.label}
                 </LinkButton>
               ))}
