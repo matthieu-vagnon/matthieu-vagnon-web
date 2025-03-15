@@ -51,6 +51,8 @@ export function ContactModal() {
           size='lg'
           className='flex justify-between h-18 w-full text-left'
           href='mailto:mvagnon@icloud.com'
+          external
+          noExternalIndicator
         >
           <div className='flex items-center space-x-4'>
             <Mail size={16} />

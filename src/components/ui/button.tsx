@@ -70,6 +70,7 @@ function LinkButton({
   size,
   href,
   external = false,
+  noExternalIndicator = false,
   children,
   ...props
 }: LinkProps &
@@ -77,6 +78,7 @@ function LinkButton({
   VariantProps<typeof buttonVariants> & {
     href: string
     external?: boolean
+    noExternalIndicator?: boolean
   }) {
   return (
     <ButtonWrapper size={size}>
@@ -87,7 +89,7 @@ function LinkButton({
         {...props}
       >
         {children}
-        {external && (
+        {external && !noExternalIndicator && (
           <svg
             width='15'
             height='15'
