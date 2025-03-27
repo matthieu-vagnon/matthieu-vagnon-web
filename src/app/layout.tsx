@@ -39,7 +39,6 @@ export default function RootLayout({
               <LinkButton
                 href='https://github.com/matthieu-vagnon/matthieu-vagnon-web'
                 external
-                noExternalIndicator
                 variant='link'
                 size='inline'
                 className='text-base'

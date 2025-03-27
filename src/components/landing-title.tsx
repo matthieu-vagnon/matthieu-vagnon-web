@@ -3,13 +3,22 @@
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Card, CardContent } from '@/components/ui/card'
 import { TextRotate } from '@/components/ui/text-rotate'
+import { cn } from '@/lib/utils'
 import { LayoutGroup, motion } from 'motion/react'
 import { LinkButton } from './ui/button'
+import { CardStack } from './ui/card-stack'
 import { Particles } from './ui/particles'
 
 type SocialLink = {
   label: string
   link: string
+}
+
+type Card = {
+  id: number
+  name: string
+  designation: string
+  content: React.ReactNode
 }
 
 const SOCIAL_LINKS: SocialLink[] = [
@@ -29,6 +38,51 @@ const SOCIAL_LINKS: SocialLink[] = [
   //   label: 'Curriculum Vitae',
   //   link: '#'
   // }
+]
+
+const Highlight = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <span
+      className={cn(
+        'font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5',
+        className
+      )}
+    >
+      {children}
+    </span>
+  )
+}
+
+const CARDS: Card[] = [
+  {
+    id: 0,
+    name: 'Mohamed Bibimoune',
+    designation: 'Head of TotalEnergies Gas&Power Predictive Department',
+    content: (
+      <p>
+        Matthieu provided Predictive Layer with <Highlight>high standard quality</Highlight> product from front-end
+        point of view. He developed <Highlight>several products</Highlight> used live by our customers to consume the
+        forecasts produced by our company. He is <Highlight>serious</Highlight> and always
+        <Highlight>delivers on time</Highlight>, taking into account our requirements. I would
+        <Highlight>highly recommend him</Highlight> as a service provider for any front application needed.
+      </p>
+    )
+  },
+  {
+    id: 1,
+    name: 'Serge Rigori',
+    designation: 'CEO and Chairman of Predictive Layer',
+    content: (
+      <p>
+        Matthieu has distinguished himself by his <Highlight>technical expertise</Highlight>, his
+        <Highlight>creativity</Highlight> and his <Highlight>commitment</Highlight> to the success of the projects
+        entrusted to him. He has notably demonstrated a<Highlight>perfect mastery</Highlight> of technologies as well as
+        the ability to <Highlight>adapt rapidly</Highlight> to our tools and processes. Matthieu has also demonstrated a
+        real talent for developing <Highlight>ergonomic</Highlight> and <Highlight>performant</Highlight> user
+        interfaces.
+      </p>
+    )
+  }
 ]
 
 export default function LandingTitle() {
@@ -80,8 +134,13 @@ export default function LandingTitle() {
             </div>
           </BlurFade>
         </div>
-        <Particles className='fixed inset-0 -z-1' quantity={100} ease={80} color='black' refresh />
       </div>
+      <BlurFade delay={1} className='flex'>
+        <div className='absolute hidden xl:block bottom-8 right-0'>
+          <CardStack items={CARDS} />
+        </div>
+      </BlurFade>
+      <Particles className='fixed inset-0 -z-1' quantity={100} ease={80} color='black' refresh />
     </LayoutGroup>
   )
 }
