@@ -29,7 +29,7 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
         newArray.unshift(newArray.pop()!) // move the last element to the front
         return newArray
       })
-    }, 5000)
+    }, 15000)
   }
 
   return (
