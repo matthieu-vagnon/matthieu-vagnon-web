@@ -1,7 +1,8 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
-import { ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 let interval: NodeJS.Timeout
@@ -17,6 +18,7 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   const CARD_OFFSET = offset || 10
   const SCALE_FACTOR = scaleFactor || 0.06
   const [cards, setCards] = useState<Card[]>(items)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   const startFlipping = () => {
     interval = setInterval(() => {
@@ -28,6 +30,14 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
     }, 15000)
   }
 
+  const handleCollapse = () => {
+    setIsCollapsed(!isCollapsed)
+  }
+
+  const handleExpand = () => {
+    setIsCollapsed(false)
+  }
+
   useEffect(() => {
     startFlipping()
 
@@ -35,10 +45,18 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   }, [])
 
   return (
-    <div className='w-110 h-60 flex justify-center items-center gap-2'>
+    <div
+      className={cn(
+        'w-110 h-60 flex justify-center items-center gap-2 transition-all duration-200',
+        isCollapsed && 'translate-x-[95%]'
+      )}
+    >
       <div className='h-full w-5'>
-        <button className='h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all duration-200 hover:bg-neutral-200/50'>
-          <ChevronRight className='size-4' />
+        <button
+          onClick={isCollapsed ? handleExpand : handleCollapse}
+          className='h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all duration-200 hover:bg-neutral-200/50'
+        >
+          {isCollapsed ? <ChevronLeft className='size-4' /> : <ChevronRight className='size-4' />}
         </button>
       </div>
       <div className='relative h-full w-full'>
