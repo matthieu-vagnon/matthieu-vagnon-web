@@ -17,13 +17,14 @@ const buttonVariants = cva(
           'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
         secondary: 'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
-        link: 'hover:bg-transparent hover:text-accent-foreground dark:hover:bg-transparent dark:hover:text-accent-foreground'
+        link: 'hover:bg-transparent hover:text-accent-foreground dark:hover:bg-transparent dark:hover:text-accent-foreground underline'
       },
       size: {
         default: 'min-h-9 px-2 sm:px-4 py-2',
         sm: 'min-h-8 py-2 rounded-md gap-1.5 px-2 sm:px-3',
         lg: 'min-h-10 py-2 rounded-md px-4 sm:px-6',
-        icon: 'size-9'
+        icon: 'size-9',
+        inline: 'p-0'
       }
     },
     defaultVariants: {
@@ -35,13 +36,15 @@ const buttonVariants = cva(
 
 function ButtonWrapper({ children, size }: { children: React.ReactNode } & VariantProps<typeof buttonVariants>) {
   return (
-    <Magnetic
-      range={1000}
-      springOptions={{ bounce: 0 }}
-      intensity={size === 'lg' ? 0.05 : size === 'icon' ? 0.3 : 0.15}
-    >
-      <div className='cursor-pointer'>{children}</div>
-    </Magnetic>
+    <div className={cn(size === 'inline' && 'inline-block')}>
+      <Magnetic
+        range={1000}
+        springOptions={{ bounce: 0 }}
+        intensity={size === 'lg' ? 0.05 : size === 'icon' ? 0.2 : 0.1}
+      >
+        <div className='cursor-pointer'>{children}</div>
+      </Magnetic>
+    </div>
   )
 }
 

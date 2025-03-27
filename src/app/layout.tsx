@@ -34,14 +34,14 @@ export default function RootLayout({
               <rect width='800' height='800' fill='#001428' />
               <rect y='650' width='800' height='150' fill='#007FFF' />
             </svg>
-            <div className='flex items-center text-base whitespace-nowrap'>
-              <span>See this webapp&apos;s source code</span>
+            <div className='whitespace-nowrap'>
+              <span>Check out public repo{` `}</span>
               <LinkButton
                 href='https://github.com/matthieu-vagnon/matthieu-vagnon-web'
                 external
                 noExternalIndicator
                 variant='link'
-                size='icon'
+                size='inline'
                 className='text-base'
               >
                 here
