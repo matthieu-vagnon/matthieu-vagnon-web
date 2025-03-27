@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
         <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-          <div className='flex flex-wrap gap-1 justify-between items-center absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 h-8 sm:h-10 md:h-12'>
+          <div className='flex flex-wrap gap-1 justify-between items-center absolute top-4 sm:top-6 md:top-8 left-0 right-0 h-8 sm:h-10 md:h-12 px-[inherit]'>
             <svg height='100%' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <rect width='800' height='800' fill='#001428' />
               <rect y='650' width='800' height='150' fill='#007FFF' />

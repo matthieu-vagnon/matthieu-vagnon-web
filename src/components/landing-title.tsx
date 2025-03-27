@@ -3,8 +3,8 @@
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Card, CardContent } from '@/components/ui/card'
 import { TextRotate } from '@/components/ui/text-rotate'
-import { cn } from '@/lib/utils'
 import { LayoutGroup, motion } from 'motion/react'
+import Highlight from './highlight'
 import { LinkButton } from './ui/button'
 import { CardStack } from './ui/card-stack'
 import { Particles } from './ui/particles'
@@ -39,19 +39,6 @@ const SOCIAL_LINKS: SocialLink[] = [
   //   link: '#'
   // }
 ]
-
-const Highlight = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return (
-    <span
-      className={cn(
-        'font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5',
-        className
-      )}
-    >
-      {children}
-    </span>
-  )
-}
 
 const CARDS: Card[] = [
   {
@@ -89,7 +76,7 @@ export default function LandingTitle() {
   return (
     <LayoutGroup>
       <div className='h-screen w-full flex justify-center items-center'>
-        <div className='flex flex-col gap-6 sm:gap-8 md:gap-12 justify-center items-center'>
+        <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center md:pb-16'>
           <motion.div layout>
             <BlurFade className='flex'>
               <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
@@ -135,8 +122,8 @@ export default function LandingTitle() {
           </BlurFade>
         </div>
       </div>
-      <BlurFade delay={1} className='flex'>
-        <div className='absolute hidden xl:block bottom-8 right-0'>
+      <BlurFade delay={0.8} className='flex'>
+        <div className='absolute hidden md:block bottom-20 right-0'>
           <CardStack items={CARDS} />
         </div>
       </BlurFade>
