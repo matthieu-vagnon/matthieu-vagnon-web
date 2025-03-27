@@ -17,20 +17,21 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   const SCALE_FACTOR = scaleFactor || 0.06
   const [cards, setCards] = useState<Card[]>(items)
 
+  const startFlipping = () => {
+    interval = setInterval(() => {
+      setCards((prevCards: Card[]) => {
+        const newArray = [...prevCards]
+        newArray.unshift(newArray.pop()!)
+        return newArray
+      })
+    }, 15000)
+  }
+
   useEffect(() => {
     startFlipping()
 
     return () => clearInterval(interval)
   }, [])
-  const startFlipping = () => {
-    interval = setInterval(() => {
-      setCards((prevCards: Card[]) => {
-        const newArray = [...prevCards] // create a copy of the array
-        newArray.unshift(newArray.pop()!) // move the last element to the front
-        return newArray
-      })
-    }, 15000)
-  }
 
   return (
     <div className='relative w-100 h-60'>
@@ -38,14 +39,14 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
         return (
           <motion.div
             key={card.id}
-            className='absolute dark:bg-black bg-white w-100 h-60 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between'
+            className='absolute dark:bg-black bg-white w-full h-full rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between'
             style={{
               transformOrigin: 'top center'
             }}
             animate={{
               top: index * -CARD_OFFSET,
-              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index //  decrease z-index for the cards that are behind
+              scale: 1 - index * SCALE_FACTOR,
+              zIndex: cards.length - index
             }}
           >
             <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200'>{card.content}</div>
