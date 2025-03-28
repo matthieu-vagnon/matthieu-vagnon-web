@@ -1,6 +1,5 @@
 import AppsDock from '@/components/apps-dock'
 import Highlight from '@/components/highlight'
-import { BlurFade } from '@/components/ui/blur-fade'
 import { LinkButton } from '@/components/ui/button'
 import { CardStack } from '@/components/ui/card-stack'
 import DockStatusProvider from '@/hooks/use-dock-status'
@@ -93,11 +92,7 @@ export default function RootLayout({
           <TestimonialsCollapsedProvider>
             <DockStatusProvider>
               {children}
-              <BlurFade delay={1} className='flex'>
-                <div className='absolute hidden md:block bottom-20 right-0'>
-                  <CardStack items={CARDS} />
-                </div>
-              </BlurFade>
+              <CardStack items={CARDS} />
               <AppsDock />
             </DockStatusProvider>
           </TestimonialsCollapsedProvider>

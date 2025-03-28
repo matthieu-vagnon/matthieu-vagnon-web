@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 type TestimonialsCollapsedContextType = {
   isCollapsed: boolean
@@ -8,7 +8,7 @@ type TestimonialsCollapsedContextType = {
 }
 
 const TestimonialsCollapsedContext = React.createContext<TestimonialsCollapsedContextType>({
-  isCollapsed: false,
+  isCollapsed: true,
   setIsCollapsed: () => {}
 })
 
@@ -17,7 +17,11 @@ export const useTestimonialsCollapsed = () => {
 }
 
 export const TestimonialsCollapsedProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isCollapsed, setIsCollapsed] = React.useState(false)
+  const [isCollapsed, setIsCollapsed] = React.useState(true)
+
+  useEffect(() => {
+    setIsCollapsed(false)
+  }, [])
 
   return (
     <TestimonialsCollapsedContext.Provider value={{ isCollapsed, setIsCollapsed }}>
