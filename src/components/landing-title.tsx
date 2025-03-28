@@ -24,11 +24,11 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github Portfolio',
     link: 'https://github.com/matthieu-vagnon'
+  },
+  {
+    label: 'Curriculum Vitae',
+    link: '/profile.pdf'
   }
-  // {
-  //   label: 'Curriculum Vitae',
-  //   link: '#'
-  // }
 ]
 
 export default function LandingTitle() {
