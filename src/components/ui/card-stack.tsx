@@ -48,14 +48,14 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   return (
     <div
       className={cn(
-        'w-110 h-60 flex justify-center items-center gap-2 transition-all duration-200',
+        'w-110 h-60 flex justify-center items-center gap-2 transition-all ease-[cubic-bezier(.13,.66,.33,1.3)] duration-400',
         isCollapsed && 'translate-x-[95%]'
       )}
     >
       <div className='h-full w-5'>
         <button
           onClick={isCollapsed ? handleExpand : handleCollapse}
-          className='h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all duration-200 hover:bg-neutral-200/50'
+          className='h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all ease-in-out duration-200 hover:bg-neutral-200/50'
         >
           {isCollapsed ? <ChevronLeft className='size-4' /> : <ChevronRight className='size-4' />}
         </button>
