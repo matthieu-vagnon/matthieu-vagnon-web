@@ -48,8 +48,8 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   return (
     <div
       className={cn(
-        'w-120 h-60 justify-center items-center gap-2 transition-all ease-[cubic-bezier(.13,.66,.33,1.3)] duration-400 fixed hidden md:flex bottom-20 right-20',
-        isCollapsed && 'translate-x-[100%]'
+        'w-120 h-60 justify-center items-center gap-2 transition-all ease-[cubic-bezier(.13,.66,.33,1.3)] duration-400 fixed hidden md:flex bottom-20 right-10',
+        isCollapsed && 'translate-x-[95%]'
       )}
     >
       <div className='h-full w-5'>
