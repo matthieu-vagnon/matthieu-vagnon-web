@@ -1,7 +1,7 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
-import { HomeIcon, MessageCircle } from 'lucide-react'
+import { BriefcaseBusiness, HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { ContactModal } from './contact-modal'
@@ -26,11 +26,11 @@ const APPS: App[] = [
   //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
   //   url: '/education'
   // },
-  // {
-  //   title: 'Case Studies',
-  //   icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/case-studies'
-  // },
+  {
+    title: 'Case Studies',
+    icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    url: '/case-studies'
+  },
   // {
   //   title: 'Code Showcase',
   //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
