@@ -1,5 +1,6 @@
 'use client'
 
+import { useTestimonialsCollapsed } from '@/hooks/use-testimonials-collapsed'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -18,7 +19,7 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
   const CARD_OFFSET = offset || 10
   const SCALE_FACTOR = scaleFactor || 0.06
   const [cards, setCards] = useState<Card[]>(items)
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const { isCollapsed, setIsCollapsed } = useTestimonialsCollapsed()
 
   const startFlipping = () => {
     interval = setInterval(() => {

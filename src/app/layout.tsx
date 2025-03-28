@@ -1,6 +1,7 @@
 import AppsDock from '@/components/apps-dock'
 import { LinkButton } from '@/components/ui/button'
 import DockStatusProvider from '@/hooks/use-dock-status'
+import { TestimonialsCollapsedProvider } from '@/hooks/use-testimonials-collapsed'
 import type { Metadata } from 'next'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
@@ -47,10 +48,12 @@ export default function RootLayout({
               </LinkButton>
             </div>
           </div>
-          <DockStatusProvider>
-            {children}
-            <AppsDock />
-          </DockStatusProvider>
+          <TestimonialsCollapsedProvider>
+            <DockStatusProvider>
+              {children}
+              <AppsDock />
+            </DockStatusProvider>
+          </TestimonialsCollapsedProvider>
         </div>
       </body>
     </html>
