@@ -34,8 +34,8 @@ const SOCIAL_LINKS: SocialLink[] = [
 export default function LandingTitle() {
   return (
     <LayoutGroup>
-      <div className='h-screen w-full flex justify-center items-center'>
-        <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center md:pb-16'>
+      <div className='h-screen w-full min-h-[500px] sm:min-h-[550px] md:min-h-[600px] flex justify-center items-center'>
+        <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
           <motion.div layout>
             <BlurFade className='flex'>
               <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
