@@ -1,9 +1,11 @@
 import AppsDock from '@/components/apps-dock'
 import Highlight from '@/components/highlight'
+import { BlurFade } from '@/components/ui/blur-fade'
 import { LinkButton } from '@/components/ui/button'
 import { CardStack } from '@/components/ui/card-stack'
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import DockStatusProvider from '@/hooks/use-dock-status'
-import { TestimonialsCollapsedProvider } from '@/hooks/use-testimonials-collapsed'
+import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
 import type { Metadata } from 'next'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
@@ -71,8 +73,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-        <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-          <div className='flex flex-wrap gap-1 justify-between items-center absolute top-4 sm:top-6 md:top-8 left-0 right-0 h-8 sm:h-10 md:h-12 px-[inherit]'>
+        <div className='max-w-[3840px] mx-auto relative min-h-screen pt-18 sm:pt-24 md:pt-28 pb-24 px-4 sm:px-6 md:px-8 overflow-x-hidden flex flex-col justify-center'>
+          <BlurFade className='flex flex-nowrap gap-2 justify-between items-center w-full fixed top-4 sm:top-8 left-0 right-0 z-100 h-8 sm:h-10 md:h-12 px-[inherit]'>
             <svg height='100%' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <rect width='800' height='800' fill='#001428' />
               <rect y='650' width='800' height='150' fill='#007FFF' />
@@ -89,14 +91,18 @@ export default function RootLayout({
                 here
               </LinkButton>
             </div>
-          </div>
-          <TestimonialsCollapsedProvider>
+          </BlurFade>
+          <ProgressiveBlur
+            direction='top'
+            className='fixed top-0 left-0 w-full h-20 sm:h-28 md:h-36 z-99 pointer-events-none'
+          />
+          <TestimonialsStatusProvider>
             <DockStatusProvider>
               {children}
               <CardStack items={CARDS} />
               <AppsDock />
             </DockStatusProvider>
-          </TestimonialsCollapsedProvider>
+          </TestimonialsStatusProvider>
         </div>
       </body>
     </html>

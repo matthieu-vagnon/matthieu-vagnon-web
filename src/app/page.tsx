@@ -1,5 +1,51 @@
-import LandingTitle from '@/components/landing-title'
+import TitleBox from '@/components/title-box'
+import { BlurFade } from '@/components/ui/blur-fade'
+import { LinkButton } from '@/components/ui/button'
+import { Particles } from '@/components/ui/particles'
+import React from 'react'
+
+type SocialLink = {
+  label: string
+  link: string
+}
+
+const SOCIAL_LINKS: SocialLink[] = [
+  {
+    label: 'LinkedIn',
+    link: 'https://linkedin.com/in/matthieu-vagnon'
+  },
+  {
+    label: 'Instagram Portfolio',
+    link: 'https://instagram.com/matthieu.vagnon'
+  },
+  {
+    label: 'Github Portfolio',
+    link: 'https://github.com/matthieu-vagnon'
+  },
+  {
+    label: 'Curriculum Vitae',
+    link: '/profile.pdf'
+  }
+]
 
 export default function Home() {
-  return <LandingTitle />
+  return (
+    <React.Fragment>
+      <div className='h-full w-full flex justify-center items-center'>
+        <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
+          <TitleBox />
+          <BlurFade delay={0.6} className='flex'>
+            <div className='flex items-center justify-center gap-3 flex-wrap'>
+              {SOCIAL_LINKS.map((link) => (
+                <LinkButton variant='secondary' size='sm' key={link.label} href={link.link} external>
+                  {link.label}
+                </LinkButton>
+              ))}
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+      <Particles className='fixed inset-0 -z-1' quantity={100} ease={80} color='black' refresh />
+    </React.Fragment>
+  )
 }

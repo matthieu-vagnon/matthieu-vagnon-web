@@ -88,7 +88,7 @@ function LinkButton({
       <Link
         href={href}
         target={external ? '_blank' : '_self'}
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn('cursor-pointer', buttonVariants({ variant, size, className }))}
         {...props}
       >
         {children}

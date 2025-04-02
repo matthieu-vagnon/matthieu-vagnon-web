@@ -1,7 +1,6 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
-import { useTestimonialsCollapsed } from '@/hooks/use-testimonials-collapsed'
 import { BriefcaseBusiness, HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -21,32 +20,27 @@ const APPS: App[] = [
   {
     title: 'Home',
     icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    url: '/',
-    testimonial: true
+    url: '/'
   },
   // {
   //   title: 'Education',
   //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
   //   url: '/education',
-  //   testimonial: false
   // },
   {
     title: 'Case Studies',
     icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    url: '/case-studies',
-    testimonial: false
+    url: '/case-studies'
   },
   // {
   //   title: 'Code Showcase',
   //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
   //   url: '/code-showcase',
-  //   testimonial: false
   // },
   {
     title: 'Get In Touch',
     icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    modal: <ContactModal />,
-    testimonial: true
+    modal: <ContactModal />
   }
   // {
   //   title: 'Configuration',
@@ -56,10 +50,8 @@ const APPS: App[] = [
 ]
 
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
-  const { setIsCollapsed } = useTestimonialsCollapsed()
-
   return (
-    <Link href={app.url ?? '#'} onClick={onClick || (!app.testimonial ? () => setIsCollapsed(true) : undefined)}>
+    <Link href={app.url ?? '#'} onClick={onClick}>
       <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
         <DockLabel>{app.title}</DockLabel>
         <DockIcon>{app.icon}</DockIcon>
