@@ -27,7 +27,7 @@ export default function CaseStudies() {
       <React.Fragment>
         <BlurFade delay={0.2}>
           <div className='flex flex-col items-center justify-center'>
-            <h1 className='text-3xl md:text-4xl font-bold font-sans-special text-center'>Case Studies</h1>
+            <h1 className='text-center'>Case Studies</h1>
             <p className='text-base md:text-lg font-sans-special text-center text-gray-500'>
               Here are some of the projects I&apos;ve worked on.
             </p>

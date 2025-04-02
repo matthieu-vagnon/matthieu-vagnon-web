@@ -74,7 +74,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
         <div className='max-w-[3840px] mx-auto relative min-h-screen pt-18 sm:pt-24 md:pt-28 pb-24 px-4 sm:px-6 md:px-8 overflow-x-hidden flex flex-col justify-center'>
-          <BlurFade className='flex flex-nowrap gap-2 justify-between items-center w-full fixed top-4 sm:top-8 left-0 right-0 z-100 h-8 sm:h-10 md:h-12 px-[inherit]'>
+          <BlurFade className='flex flex-nowrap gap-2 justify-between items-center w-full fixed top-6 sm:top-8 left-0 right-0 z-100 h-8 sm:h-10 md:h-12 px-[inherit]'>
             <svg height='100%' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <rect width='800' height='800' fill='#001428' />
               <rect y='650' width='800' height='150' fill='#007FFF' />
