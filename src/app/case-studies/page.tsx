@@ -25,7 +25,7 @@ export default function CaseStudies() {
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
       <React.Fragment>
-        <BlurFade delay={0.2}>
+        <BlurFade>
           <div className='flex flex-col items-center justify-center'>
             <h1 className='text-center'>Case Studies</h1>
             <p className='text-base md:text-lg font-sans-special text-center text-gray-500'>
@@ -35,7 +35,7 @@ export default function CaseStudies() {
         </BlurFade>
         <div className='mt-10 flex flex-row items-center justify-center flex-wrap gap-4'>
           {PROJECTS.map((project, index) => (
-            <BlurFade key={project.title} delay={0.4 + index * 0.1}>
+            <BlurFade key={project.title} delay={0.2 + index * 0.2}>
               <ProjectCard image={project.image} title={project.title} description={project.description} />
             </BlurFade>
           ))}

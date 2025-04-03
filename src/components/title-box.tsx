@@ -9,16 +9,16 @@ export default function TitleBox() {
   return (
     <LayoutGroup>
       <motion.div layout>
-        <BlurFade delay={0.2} className='flex'>
+        <BlurFade className='flex'>
           <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
             <Card variant='dots' className='h-fit w-fit bg-white'>
               <CardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
-                <BlurFade delay={0.3} className='flex'>
+                <BlurFade delay={0.1} className='flex'>
                   <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                     Hello, I&apos;m <span className='font-bold'>Matthieu Vagnon</span>,
                   </motion.span>
                 </BlurFade>
-                <BlurFade delay={0.4} className='flex'>
+                <BlurFade delay={0.2} className='flex'>
                   <span className='flex items-center mt-1 md:mt-2'>
                     <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                       Freelance{' '}
