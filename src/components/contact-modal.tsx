@@ -1,7 +1,8 @@
 'use client'
 
+import Cal, { getCalApi } from '@calcom/embed-react'
 import { Calendar, Mail } from 'lucide-react'
-import { InlineWidget } from 'react-calendly'
+import { useEffect } from 'react'
 import { Button, LinkButton } from './ui/button'
 import {
   DialogContent,
@@ -17,6 +18,13 @@ import {
 } from './ui/nested-dialog'
 
 export function ContactModal() {
+  useEffect(() => {
+    ;(async function () {
+      const cal = await getCalApi({ namespace: '30min' })
+      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' })
+    })()
+  }, [])
+
   return (
     <DialogContent className='p-0'>
       <DialogHeader className='border-b p-4'>
@@ -45,7 +53,12 @@ export function ContactModal() {
                 Please follow the steps below to schedule a meeting with me.
               </InnerDialogDescription>
             </InnerDialogHeader>
-            <InlineWidget url='https://calendly.com/matthieu-vagnon/30min' />
+            <Cal
+              namespace='30min'
+              calLink='matthieu-vagnon/30min'
+              style={{ width: '100%', height: '100%', maxHeight: 'calc(100vh - 100px)', overflow: 'scroll' }}
+              config={{ layout: 'month_view' }}
+            />
           </InnerDialogContent>
         </InnerDialog>
         <LinkButton
