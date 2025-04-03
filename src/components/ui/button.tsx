@@ -42,7 +42,7 @@ function ButtonWrapper({ children, size }: { children: React.ReactNode } & Varia
         springOptions={{ bounce: 0 }}
         intensity={size === 'lg' ? 0.05 : size === 'icon' ? 0.2 : 0.1}
       >
-        <div className='cursor-pointer'>{children}</div>
+        {children}
       </Magnetic>
     </div>
   )

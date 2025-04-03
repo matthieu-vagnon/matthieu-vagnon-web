@@ -1,6 +1,6 @@
 'use client'
 
-import { LayoutGroup, motion } from 'motion/react'
+import { LayoutGroup, motion } from 'framer-motion'
 import { BlurFade } from './ui/blur-fade'
 import { Card, CardContent } from './ui/card'
 import { TextRotate } from './ui/text-rotate'

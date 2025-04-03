@@ -1,23 +1,39 @@
-import ProjectCard from '@/components/project-card'
+import ProjectCard, { Project } from '@/components/project-card'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import React from 'react'
 
-const PROJECTS = [
+const PROJECTS: Project[] = [
   {
-    title: 'Project 1',
-    description: 'Description 1',
-    image: '/smart-interview/builder-2.png'
+    title: 'Smart Interview',
+    description: 'A platform to create AI-powered questionnaires and mass analyze responses.',
+    backgroundImage: '/smart-interview/case-study.png',
+    previewImage: '/smart-interview/builder-2.png',
+    url: 'case-studies/smart-interview',
+    type: 'SaaS'
   },
   {
-    title: 'Project 2',
-    description: 'Description 2',
-    image: '/smart-interview/builder-3.png'
+    title: 'Crystal',
+    description: 'A platform to view and manage AI-powered trading tools.',
+    backgroundImage: '/crystal/case-study.png',
+    url: 'case-studies/crystal',
+    type: 'SaaS'
   },
   {
-    title: 'Project 3',
-    description: 'Description 3',
-    image: '/smart-interview/builder-4.png'
+    title: 'Matthieu Vagnon',
+    description: 'The web application you are currently watching.',
+    backgroundImage: '/matthieu-vagnon/case-study.png',
+    previewImage: '/matthieu-vagnon/web-1.png',
+    url: 'case-studies/matthieu-vagnon',
+    type: 'Web Application'
+  },
+  {
+    title: 'Koryori Ya Ozaki',
+    description: 'A simple web application for a Japanese restaurant.',
+    backgroundImage: '/koryori-ya/case-study.png',
+    previewImage: '/koryori-ya/web-1.png',
+    url: 'case-studies/koryori-ya',
+    type: 'Web Application'
   }
 ]
 
@@ -33,11 +49,18 @@ export default function CaseStudies() {
             </p>
           </div>
         </BlurFade>
-        <div className='mt-10 flex flex-row items-center justify-center flex-wrap gap-4'>
+        <div className='flex flex-row flex-wrap justify-center gap-5 mt-14'>
           {PROJECTS.map((project, index) => (
-            <BlurFade key={project.title} delay={0.2 + index * 0.2}>
-              <ProjectCard image={project.image} title={project.title} description={project.description} />
-            </BlurFade>
+            <ProjectCard
+              key={index}
+              priority={index}
+              backgroundImage={project.backgroundImage}
+              previewImage={project.previewImage}
+              title={project.title}
+              description={project.description}
+              url={project.url}
+              type={project.type}
+            />
           ))}
         </div>
       </React.Fragment>

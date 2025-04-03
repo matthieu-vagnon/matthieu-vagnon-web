@@ -3,8 +3,8 @@ import TitleBox from '@/components/title-box'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { LinkButton } from '@/components/ui/button'
 import { Particles } from '@/components/ui/particles'
-
 import React from 'react'
+
 type SocialLink = {
   label: string
   link: string
