@@ -1,3 +1,4 @@
+import PageTitle from '@/components/page-title'
 import ProjectCard, { Project } from '@/components/project-card'
 import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
@@ -41,12 +42,7 @@ export default function CaseStudies() {
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
       <BlurFade>
-        <div className='flex flex-col items-center justify-center'>
-          <h1 className='text-center'>Case Studies</h1>
-          <p className='text-base md:text-lg font-sans-special text-center text-gray-500'>
-            Here are some of the projects I&apos;ve worked on.
-          </p>
-        </div>
+        <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
       <div className='flex flex-row flex-wrap justify-evenly gap-5 mt-10 sm:mt-12 md:mt-14'>
         {PROJECTS.map((project, index) => (

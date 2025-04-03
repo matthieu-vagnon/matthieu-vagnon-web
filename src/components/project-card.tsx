@@ -37,7 +37,7 @@ export default function ProjectCard({
           className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 px-5 py-4'
         >
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[type])}>{type}</div>
-          <h2 className='text-2xl font-bold text-white z-2 font-sans-special'>{title}</h2>
+          <h3 className='text-2xl font-bold text-white z-2 font-sans-special'>{title}</h3>
           <p className='text-sm max-h-0 text-white opacity-0 group-hover:max-h-full group-hover:opacity-100 transition-all duration-300 z-1'>
             {description}
           </p>
