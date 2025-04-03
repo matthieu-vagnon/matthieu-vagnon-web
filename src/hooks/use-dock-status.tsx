@@ -1,21 +1,17 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 const DockStatusContext = createContext<{
   isDockOpen: boolean
   setIsDockOpen: (isDockOpen: boolean) => void
 }>({
-  isDockOpen: false,
+  isDockOpen: true,
   setIsDockOpen: () => {}
 })
 
 export default function DockStatusProvider({ children }: { children: React.ReactNode }) {
-  const [isDockOpen, setIsDockOpen] = useState(false)
-
-  useEffect(() => {
-    setIsDockOpen(true)
-  }, [])
+  const [isDockOpen, setIsDockOpen] = useState(true)
 
   return <DockStatusContext.Provider value={{ isDockOpen, setIsDockOpen }}>{children}</DockStatusContext.Provider>
 }
