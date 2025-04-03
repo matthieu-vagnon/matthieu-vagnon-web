@@ -23,14 +23,9 @@ const APPS: App[] = [
     url: '/'
   },
   // {
-  //   title: 'Why Me?',
+  //   title: 'Profile',
   //   icon: <UserRound className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/why-me'
-  // },
-  // {
-  //   title: 'Education',
-  //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/education',
+  //   url: '/profile'
   // },
   {
     title: 'Case Studies',
