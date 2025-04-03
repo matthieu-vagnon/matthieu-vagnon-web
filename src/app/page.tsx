@@ -1,9 +1,10 @@
+import Highlight from '@/components/highlight'
 import TitleBox from '@/components/title-box'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { LinkButton } from '@/components/ui/button'
 import { Particles } from '@/components/ui/particles'
-import React from 'react'
 
+import React from 'react'
 type SocialLink = {
   label: string
   link: string
@@ -35,6 +36,13 @@ export default function Home() {
         <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
           <TitleBox />
           <BlurFade delay={0.6} className='flex'>
+            <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
+              The <Highlight color='blue'>magician</Highlight> you&apos;ve always needed to{' '}
+              <Highlight color='blue'>unlock the full potential</Highlight> of your SaaS or web app through{' '}
+              <Highlight color='blue'>user experience</Highlight>.
+            </p>
+          </BlurFade>
+          <BlurFade delay={0.8} className='flex'>
             <div className='flex items-center justify-center gap-3 flex-wrap'>
               {SOCIAL_LINKS.map((link) => (
                 <LinkButton variant='secondary' size='sm' key={link.label} href={link.link} external>
