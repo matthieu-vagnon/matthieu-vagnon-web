@@ -30,7 +30,7 @@ export default function ProjectCard({
   type
 }: Project & { priority: number }) {
   return (
-    <BlurFade delay={0.2 + priority * 0.2} className='h-90 md:h-100 w-70 md:w-80'>
+    <BlurFade delay={0.2 + priority * 0.1} className='h-90 md:h-100 w-70 md:w-80'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
         <Link
           href={url}
@@ -43,11 +43,17 @@ export default function ProjectCard({
           </p>
           {previewImage && (
             <div className='absolute w-full p-2 left-0 top-0 rounded-sm z-1'>
-              <Image className='w-full rounded-sm shadow-lg' src={previewImage} alt={title} width={300} height={200} />
+              <Image
+                className='pointer-events-none w-full rounded-sm shadow-lg'
+                src={previewImage}
+                alt={title}
+                width={300}
+                height={200}
+              />
             </div>
           )}
           <Image
-            className='absolute object-cover object-center h-full w-full left-0 right-0 group-hover:scale-110 transition-transform duration-300'
+            className='absolute pointer-events-none object-cover object-center h-full w-full left-0 right-0 group-hover:scale-110 transition-transform duration-300'
             src={backgroundImage}
             alt={title}
             fill

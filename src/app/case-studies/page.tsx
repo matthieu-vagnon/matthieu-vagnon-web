@@ -1,7 +1,7 @@
 import ProjectCard, { Project } from '@/components/project-card'
+import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
-import React from 'react'
 
 const PROJECTS: Project[] = [
   {
@@ -40,30 +40,36 @@ const PROJECTS: Project[] = [
 export default function CaseStudies() {
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
-      <React.Fragment>
-        <BlurFade>
-          <div className='flex flex-col items-center justify-center'>
-            <h1 className='text-center'>Case Studies</h1>
-            <p className='text-base md:text-lg font-sans-special text-center text-gray-500'>
-              Here are some of the projects I&apos;ve worked on.
-            </p>
-          </div>
-        </BlurFade>
-        <div className='flex flex-row flex-wrap justify-between gap-5 mt-14'>
-          {PROJECTS.map((project, index) => (
-            <ProjectCard
-              key={index}
-              priority={index}
-              backgroundImage={project.backgroundImage}
-              previewImage={project.previewImage}
-              title={project.title}
-              description={project.description}
-              url={project.url}
-              type={project.type}
-            />
-          ))}
+      <BlurFade>
+        <div className='flex flex-col items-center justify-center'>
+          <h1 className='text-center'>Case Studies</h1>
+          <p className='text-base md:text-lg font-sans-special text-center text-gray-500'>
+            Here are some of the projects I&apos;ve worked on.
+          </p>
         </div>
-      </React.Fragment>
+      </BlurFade>
+      <div className='flex flex-row flex-wrap justify-evenly gap-5 mt-10 sm:mt-12 md:mt-14'>
+        {PROJECTS.map((project, index) => (
+          <ProjectCard
+            key={index}
+            priority={index}
+            backgroundImage={project.backgroundImage}
+            previewImage={project.previewImage}
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            type={project.type}
+          />
+        ))}
+      </div>
+      <BlurFade delay={0.2 + PROJECTS.length * 0.1}>
+        <SeeMore
+          links={[
+            { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
+            { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
+          ]}
+        />
+      </BlurFade>
     </TestimonialsStatusWrapper>
   )
 }
