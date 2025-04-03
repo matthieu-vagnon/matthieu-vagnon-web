@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import { ContactModal } from './contact-modal'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 import { Dialog, DialogTrigger } from './ui/nested-dialog'
+import { ProgressiveBlur } from './ui/progressive-blur'
 
 type App = {
   title: string
@@ -79,6 +80,7 @@ export default function AppsDock() {
         </Dock>
       </div>
       {activeModal !== undefined && APPS[activeModal].modal}
+      <ProgressiveBlur direction='bottom' className='fixed bottom-0 left-0 h-18 w-full z-99' />
     </Dialog>
   )
 }

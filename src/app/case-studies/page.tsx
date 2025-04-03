@@ -49,7 +49,7 @@ export default function CaseStudies() {
             </p>
           </div>
         </BlurFade>
-        <div className='flex flex-row flex-wrap justify-center gap-5 mt-14'>
+        <div className='flex flex-row flex-wrap justify-between gap-5 mt-14'>
           {PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}

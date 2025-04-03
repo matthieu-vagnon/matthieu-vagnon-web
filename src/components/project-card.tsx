@@ -30,11 +30,11 @@ export default function ProjectCard({
   type
 }: Project & { priority: number }) {
   return (
-    <BlurFade delay={0.2 + priority * 0.2} className='flex flex-auto h-90 md:h-100 min-w-70 max-w-80 w-min'>
+    <BlurFade delay={0.2 + priority * 0.2} className='h-90 md:h-100 w-70 md:w-80'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
         <Link
           href={url}
-          className='relative rounded-lg h-full w-full overflow-hidden group flex flex-col justify-end items-start gap-2 px-5 py-4'
+          className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 px-5 py-4'
         >
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[type])}>{type}</div>
           <h2 className='text-2xl font-bold text-white z-2 font-sans-special'>{title}</h2>
