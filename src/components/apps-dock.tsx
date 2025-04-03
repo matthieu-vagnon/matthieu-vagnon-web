@@ -23,6 +23,11 @@ const APPS: App[] = [
     url: '/'
   },
   // {
+  //   title: 'Why Me?',
+  //   icon: <UserRound className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/why-me'
+  // },
+  // {
   //   title: 'Education',
   //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
   //   url: '/education',
@@ -32,11 +37,6 @@ const APPS: App[] = [
     icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
     url: '/case-studies'
   },
-  // {
-  //   title: 'Code Showcase',
-  //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/code-showcase',
-  // },
   {
     title: 'Get In Touch',
     icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
@@ -45,7 +45,7 @@ const APPS: App[] = [
   // {
   //   title: 'Configuration',
   //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/configuration'
+  //   modal: <ConfigurationModal />
   // }
 ]
 
