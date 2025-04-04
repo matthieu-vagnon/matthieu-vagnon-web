@@ -50,7 +50,7 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
     <BlurFade delay={0.8} className={cn('fixed bottom-25 right-10 z-99', isCollapsed && 'pointer-events-none')}>
       <div
         className={cn(
-          'w-120 h-60 justify-center items-center gap-2 hidden md:flex transition-all ease-[cubic-bezier(.6,.05,.01,1.4)] duration-800',
+          'w-120 h-60 justify-center items-center gap-2 hidden md:flex transition-all ease-[cubic-bezier(.17,.67,.49,1.32)] duration-400',
           isCollapsed && 'translate-x-110'
         )}
       >
