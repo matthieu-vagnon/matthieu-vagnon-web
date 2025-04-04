@@ -80,7 +80,7 @@ export default function AppsDock() {
         </Dock>
       </div>
       {activeModal !== undefined && APPS[activeModal].modal}
-      <ProgressiveBlur direction='bottom' className='fixed bottom-0 left-0 h-18 w-full z-99' />
+      <ProgressiveBlur direction='bottom' className='pointer-events-none fixed bottom-0 left-0 h-24 w-full z-99' />
     </Dialog>
   )
 }

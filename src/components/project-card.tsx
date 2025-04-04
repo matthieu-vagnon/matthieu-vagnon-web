@@ -29,7 +29,7 @@ export default function ProjectCard({
   coverImage
 }: Project & { priority: number; coverImage: string }) {
   return (
-    <BlurFade delay={0.2 + priority * 0.1} className='h-80 sm:h-90 md:h-100 w-60 sm:w-70 md:w-80'>
+    <BlurFade delay={0.3 + priority * 0.1} className='h-80 sm:h-90 md:h-100 w-60 sm:w-70 md:w-80'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
         <Link
           href={url}

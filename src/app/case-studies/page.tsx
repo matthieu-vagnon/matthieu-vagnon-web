@@ -1,3 +1,4 @@
+import Header from '@/components/header'
 import PageTitle from '@/components/page-title'
 import ProjectCard, { Project } from '@/components/project-card'
 import SeeMore from '@/components/see-more'
@@ -37,6 +38,9 @@ export default function CaseStudies() {
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
       <BlurFade>
+        <Header />
+      </BlurFade>
+      <BlurFade delay={0.1}>
         <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
       <div className='flex flex-row flex-wrap mt-10 sm:mt-12 md:mt-14 justify-center gap-5'>
@@ -53,13 +57,13 @@ export default function CaseStudies() {
           />
         ))}
       </div>
-      <BlurFade delay={0.2 + PROJECTS.length * 0.1}>
+      <BlurFade delay={0.4 + PROJECTS.length * 0.1}>
         <SeeMore
           links={[
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
             { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
           ]}
-          className='mt-10 sm:mt-12 md:mt-14'
+          className='mt-10 sm:mt-12 md:mt-14 mb-28'
         />
       </BlurFade>
     </TestimonialsStatusWrapper>

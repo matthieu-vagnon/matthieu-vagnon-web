@@ -1,8 +1,6 @@
 import AppsDock from '@/components/apps-dock'
 import Highlight from '@/components/highlight'
-import { LinkButton } from '@/components/ui/button'
 import { CardStack } from '@/components/ui/card-stack'
-import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import DockStatusProvider from '@/hooks/use-dock-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
 import type { Metadata } from 'next'
@@ -72,29 +70,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-        <div className='max-w-[3840px] mx-auto relative min-h-screen pt-18 sm:pt-24 md:pt-28 pb-24 px-4 sm:px-6 md:px-8 overflow-x-hidden flex flex-col justify-center'>
-          <div className='flex flex-nowrap gap-2 justify-between items-center w-full fixed top-4 sm:top-6 md:top-8 left-0 right-0 z-100 h-8 sm:h-10 md:h-12 px-[inherit]'>
-            <svg height='100%' viewBox='0 0 800 800' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <rect width='800' height='800' fill='#001428' />
-              <rect y='650' width='800' height='150' fill='#007FFF' />
-            </svg>
-            <div className='whitespace-nowrap'>
-              <span>Check out public repo{` `}</span>
-              <LinkButton
-                href='https://github.com/matthieu-vagnon/matthieu-vagnon-web'
-                external
-                variant='link'
-                size='inline'
-                className='text-base'
-              >
-                here
-              </LinkButton>
-            </div>
-          </div>
-          <ProgressiveBlur
-            direction='top'
-            className='fixed top-0 left-0 w-full h-16 sm:h-22 md:h-28 z-99 pointer-events-none'
-          />
+        <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden flex flex-col justify-center'>
           <TestimonialsStatusProvider>
             <DockStatusProvider>
               {children}
