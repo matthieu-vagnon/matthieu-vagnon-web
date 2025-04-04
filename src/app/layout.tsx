@@ -93,7 +93,7 @@ export default function RootLayout({
           </div>
           <ProgressiveBlur
             direction='top'
-            className='fixed top-0 left-0 w-full h-20 sm:h-28 md:h-36 z-99 pointer-events-none'
+            className='fixed top-0 left-0 w-full h-16 sm:h-22 md:h-28 z-99 pointer-events-none'
           />
           <TestimonialsStatusProvider>
             <DockStatusProvider>

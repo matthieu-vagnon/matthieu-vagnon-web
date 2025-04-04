@@ -8,31 +8,26 @@ const PROJECTS: Project[] = [
   {
     title: 'Smart Interview',
     description: 'A platform to create AI-powered questionnaires and mass analyze responses.',
-    backgroundImage: '/smart-interview/case-study.png',
-    previewImage: '/smart-interview/builder-2.png',
     url: 'case-studies/smart-interview',
     type: 'SaaS'
   },
   {
     title: 'Crystal',
     description: 'A platform to view and manage AI-powered trading tools.',
-    backgroundImage: '/crystal/case-study.png',
     url: 'case-studies/crystal',
     type: 'SaaS'
   },
   {
     title: 'Matthieu Vagnon',
     description: 'The web application you are currently watching.',
-    backgroundImage: '/matthieu-vagnon/case-study.png',
-    previewImage: '/matthieu-vagnon/web-1.png',
+    image: '/matthieu-vagnon/web-1.png',
     url: 'case-studies/matthieu-vagnon',
     type: 'Web Application'
   },
   {
     title: 'Koryori Ya Ozaki',
     description: 'A simple web application for a Japanese restaurant.',
-    backgroundImage: '/koryori-ya/case-study.png',
-    previewImage: '/koryori-ya/web-1.png',
+    image: '/koryori-ya/web-1.png',
     url: 'case-studies/koryori-ya',
     type: 'Web Application'
   }
@@ -44,17 +39,17 @@ export default function CaseStudies() {
       <BlurFade>
         <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
-      <div className='flex flex-row flex-wrap justify-evenly gap-5 mt-10 sm:mt-12 md:mt-14'>
+      <div className='flex flex-row flex-wrap mt-10 sm:mt-12 md:mt-14 justify-between gap-5'>
         {PROJECTS.map((project, index) => (
           <ProjectCard
             key={index}
             priority={index}
-            backgroundImage={project.backgroundImage}
-            previewImage={project.previewImage}
             title={project.title}
             description={project.description}
+            image={project.image}
             url={project.url}
             type={project.type}
+            coverImage={`/project-card-cover/${(index + 1) % 5}.png`}
           />
         ))}
       </div>

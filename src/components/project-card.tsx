@@ -5,10 +5,9 @@ import { BlurFade } from './ui/blur-fade'
 import { Magnetic } from './ui/magnetic'
 
 export type Project = {
-  backgroundImage: string
-  previewImage?: string
   title: string
   description: string
+  image?: string
   url: string
   type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
 }
@@ -22,15 +21,15 @@ const typeVariants = {
 
 export default function ProjectCard({
   priority,
-  backgroundImage,
-  previewImage,
   title,
   description,
+  image,
   url,
-  type
-}: Project & { priority: number }) {
+  type,
+  coverImage
+}: Project & { priority: number; coverImage: string }) {
   return (
-    <BlurFade delay={0.2 + priority * 0.1} className='h-90 md:h-100 w-70 md:w-80'>
+    <BlurFade delay={0.2 + priority * 0.1} className='h-90 md:h-100 min-w-70 max-w-85 flex-auto w-min'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
         <Link
           href={url}
@@ -38,14 +37,12 @@ export default function ProjectCard({
         >
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[type])}>{type}</div>
           <h3 className='text-2xl font-bold text-white z-2 font-sans-special'>{title}</h3>
-          <p className='text-sm max-h-0 text-white opacity-0 group-hover:max-h-full group-hover:opacity-100 transition-all duration-300 z-1'>
-            {description}
-          </p>
-          {previewImage && (
+          <p className='text-sm text-white z-1'>{description}</p>
+          {image && (
             <div className='absolute w-full p-2 left-0 top-0 rounded-sm z-1'>
               <Image
                 className='pointer-events-none w-full rounded-sm shadow-lg'
-                src={previewImage}
+                src={image}
                 alt={title}
                 width={300}
                 height={200}
@@ -54,7 +51,7 @@ export default function ProjectCard({
           )}
           <Image
             className='absolute pointer-events-none object-cover object-center h-full w-full left-0 right-0 group-hover:scale-110 transition-transform duration-300'
-            src={backgroundImage}
+            src={coverImage}
             alt={title}
             fill
           />
