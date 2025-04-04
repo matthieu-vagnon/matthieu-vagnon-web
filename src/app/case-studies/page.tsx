@@ -53,7 +53,7 @@ export default function CaseStudies() {
             image={project.image}
             url={project.url}
             type={project.type}
-            coverImage={`/project-card-cover/${(index + 1) % 5}.png`}
+            coverImage={`/project-card-cover/${(index % 5) + 1}.png`}
           />
         ))}
       </div>
