@@ -39,7 +39,7 @@ export default function CaseStudies() {
       <BlurFade>
         <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
-      <div className='flex flex-row flex-wrap mt-10 sm:mt-12 md:mt-14 justify-between gap-5'>
+      <div className='flex flex-row flex-wrap mt-10 sm:mt-12 md:mt-14 justify-center gap-5'>
         {PROJECTS.map((project, index) => (
           <ProjectCard
             key={index}
