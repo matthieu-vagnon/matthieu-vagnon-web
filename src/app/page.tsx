@@ -32,7 +32,7 @@ const SOCIAL_LINKS: SocialLink[] = [
 export default function Home() {
   return (
     <React.Fragment>
-      <div className='h-full w-full flex justify-center items-center'>
+      <div className='min-h-screen w-full flex justify-center items-center pt-8 pb-22'>
         <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
           <TitleBox />
           <BlurFade delay={0.3} className='flex'>

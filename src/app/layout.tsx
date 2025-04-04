@@ -70,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-        <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden flex flex-col justify-center'>
+        <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden'>
           <TestimonialsStatusProvider>
             <DockStatusProvider>
               {children}
