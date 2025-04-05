@@ -5,6 +5,7 @@ import DockStatusProvider from '@/hooks/use-dock-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
 import type { Metadata } from 'next'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
+import NextTopLoader from 'nextjs-toploader'
 import './globals.css'
 
 const signikaNegative = Signika_Negative({
@@ -70,6 +71,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
+        <NextTopLoader showSpinner={false} color='#007fff' />
         <div className='max-w-[3840px] mx-auto relative min-h-screen px-4 sm:px-6 md:px-8 overflow-x-hidden'>
           <TestimonialsStatusProvider>
             <DockStatusProvider>
