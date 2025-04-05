@@ -6,7 +6,6 @@ declare global {
     shortDescription: string
     longDescription: string
     previewImg?: string
-    url: string
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     technologies: string[]
     gallery?: string[]

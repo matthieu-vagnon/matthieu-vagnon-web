@@ -16,16 +16,17 @@ export default function CaseStudies() {
         <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
       <div className='flex flex-row flex-wrap mt-10 sm:mt-12 md:mt-14 justify-center gap-5'>
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            priority={index}
-            coverImage={`/project-card-cover/${(index % 5) + 1}.png`}
-            {...project}
-          />
+        {Object.entries(projects).map(([key, project], index) => (
+          <BlurFade key={key} delay={0.3 + index * 0.1}>
+            <ProjectCard
+              coverImage={`/project-card-cover/${(index % 5) + 1}.png`}
+              url={`/case-studies/${key}`}
+              {...project}
+            />
+          </BlurFade>
         ))}
       </div>
-      <BlurFade delay={0.4 + projects.length * 0.1}>
+      <BlurFade delay={0.4 + Object.keys(projects).length * 0.1}>
         <SeeMore
           links={[
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },

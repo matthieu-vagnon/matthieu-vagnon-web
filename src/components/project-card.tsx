@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BlurFade } from './ui/blur-fade'
 import { Magnetic } from './ui/magnetic'
 
 const typeVariants = {
@@ -11,16 +10,12 @@ const typeVariants = {
   Other: 'bg-gray-500'
 }
 
-export default function ProjectCard({
-  priority,
-  coverImage,
-  ...project
-}: Project & { priority: number; coverImage: string }) {
+export default function ProjectCard({ coverImage, url, ...project }: Project & { coverImage: string; url: string }) {
   return (
-    <BlurFade delay={0.3 + priority * 0.1} className='h-80 sm:h-90 md:h-100 w-60 sm:w-70 md:w-80'>
+    <div className='h-80 sm:h-90 md:h-100 w-60 sm:w-70 md:w-80'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
         <Link
-          href={project.url}
+          href={url}
           className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 px-5 py-4'
         >
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[project.type])}>
@@ -52,6 +47,6 @@ export default function ProjectCard({
           />
         </Link>
       </Magnetic>
-    </BlurFade>
+    </div>
   )
 }
