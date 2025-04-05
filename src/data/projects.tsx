@@ -8,12 +8,13 @@ export const projects: Record<string, Project> = {
     previewImg: '/matthieu-vagnon/web-1.png',
     type: 'Web Application',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'OpenAI'],
+    gallery: ['/matthieu-vagnon/web-1.png'],
     problem: 'Creating questionnaires and analyzing responses is a time-consuming task.',
     solution: 'Create AI-powered questionnaires and mass analyze responses.',
     results: 'Save time and resources.',
     relatedUrls: [
       {
-        title: 'Web App',
+        name: 'Matthieu Vagnon Web',
         url: 'https://mvagnon.dev'
       }
     ]
@@ -26,12 +27,13 @@ export const projects: Record<string, Project> = {
     longDescription: 'A platform to create AI-powered questionnaires and mass analyze responses.',
     type: 'SaaS',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'OpenAI'],
+    gallery: ['/smart-interview/builder-1.mov'],
     problem: 'Creating questionnaires and analyzing responses is a time-consuming task.',
     solution: 'Create AI-powered questionnaires and mass analyze responses.',
     results: 'Save time and resources.',
     relatedUrls: [
       {
-        title: 'Pulse Partners',
+        name: 'Pulse Partners',
         url: 'https://pulse-partners.ch'
       }
     ]
@@ -45,12 +47,13 @@ export const projects: Record<string, Project> = {
     previewImg: '/koryori-ya/web-1.png',
     type: 'Web Application',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'OpenAI'],
+    gallery: ['/koryori-ya/web-1.png'],
     problem: 'Creating questionnaires and analyzing responses is a time-consuming task.',
     solution: 'Create AI-powered questionnaires and mass analyze responses.',
     results: 'Save time and resources.',
     relatedUrls: [
       {
-        title: 'Web App',
+        name: 'Koryori Ya Ozaki',
         url: 'https://koryoriyaozaki.uk'
       }
     ]

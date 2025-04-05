@@ -32,7 +32,6 @@ export default function CaseStudies() {
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
             { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
           ]}
-          className='mt-10 sm:mt-12 md:mt-14 mb-28'
         />
       </BlurFade>
     </TestimonialsStatusWrapper>

@@ -13,7 +13,7 @@ declare global {
     solution: string
     results: string
     relatedUrls?: {
-      title: string
+      name: string
       url: string
     }[]
   }
