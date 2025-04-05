@@ -26,8 +26,13 @@ export default function ProjectCard({
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[project.type])}>
             {project.type}
           </div>
-          <h3 className='text-2xl font-bold text-white z-2 font-sans-special'>{project.title}</h3>
-          <p className='text-sm text-white z-1'>{project.shortDescription}</p>
+          <div className='flex flex-row items-baseline gap-1 sm:gap-2'>
+            <h3 className='text-lg sm:text-xl md:text-2xl font-bold text-white z-1 font-sans-special'>
+              {project.title}
+            </h3>
+            <span className='text-xs sm:text-sm md:text-base text-white/50 font-bold z-1'>{project.year}</span>
+          </div>
+          <p className='text-xs sm:text-sm md:text-base text-white z-1'>{project.shortDescription}</p>
           {project.previewImg && (
             <div className='absolute w-full p-2 left-0 top-0 rounded-sm z-1'>
               <Image
