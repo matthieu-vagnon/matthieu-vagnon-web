@@ -49,7 +49,8 @@ export default function Project({ params }: { params: { project: string } }) {
       </BlurFade>
       <BlurFade delay={blurDelay++ / 10}>
         <Block title='Description of the Project' position='left'>
-          {project.longDescription}
+          <span>{project.longDescription}</span>
+          <span>{project.technologies.join(', ')}</span>
         </Block>
       </BlurFade>
       {project.gallery && project.gallery.length > 0 && (
