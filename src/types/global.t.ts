@@ -8,7 +8,7 @@ declare global {
     previewImg?: string
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     technologies: string[]
-    gallery?: string[]
+    gallery?: { title: string; url: string }[]
     problem: React.ReactNode
     solution: React.ReactNode
     results: React.ReactNode
