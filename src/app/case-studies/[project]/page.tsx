@@ -95,21 +95,27 @@ export default async function Project(props: { params: Params }) {
           </div>
         </Block>
       </BlurFade>
-      <BlurFade delay={blurDelay++ / 10}>
-        <Block icon={Frown} title='Problem' position='right'>
-          {project.problem}
-        </Block>
-      </BlurFade>
-      <BlurFade delay={blurDelay++ / 10}>
-        <Block icon={Smile} title='Solution' position='left'>
-          {project.solution}
-        </Block>
-      </BlurFade>
-      <BlurFade delay={blurDelay++ / 10}>
-        <Block icon={Package} title='Results' position='right'>
-          {project.results}
-        </Block>
-      </BlurFade>
+      {project.problem && (
+        <BlurFade delay={blurDelay++ / 10}>
+          <Block icon={Frown} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            {project.problem}
+          </Block>
+        </BlurFade>
+      )}
+      {project.solution && (
+        <BlurFade delay={blurDelay++ / 10}>
+          <Block icon={Smile} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            {project.solution}
+          </Block>
+        </BlurFade>
+      )}
+      {project.results && (
+        <BlurFade delay={blurDelay++ / 10}>
+          <Block icon={Package} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            {project.results}
+          </Block>
+        </BlurFade>
+      )}
       <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
           links={[

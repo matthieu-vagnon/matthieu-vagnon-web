@@ -9,9 +9,9 @@ declare global {
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     technologies: string[]
     gallery?: { title: string; url: string }[]
-    problem: React.ReactNode
-    solution: React.ReactNode
-    results: React.ReactNode
+    problem?: React.ReactNode
+    solution?: React.ReactNode
+    results?: React.ReactNode
     relatedUrls?: {
       name: string
       url: string
