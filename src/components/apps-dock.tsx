@@ -46,14 +46,14 @@ const APPS: App[] = [
 ]
 
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
-  return (
-    <Link href={app.url ?? '#'} onClick={onClick}>
-      <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-        <DockLabel>{app.title}</DockLabel>
-        <DockIcon>{app.icon}</DockIcon>
-      </DockItem>
-    </Link>
+  const content = (
+    <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
+      <DockLabel>{app.title}</DockLabel>
+      <DockIcon>{app.icon}</DockIcon>
+    </DockItem>
   )
+
+  return app.url ? <Link href={app.url}>{content}</Link> : <button onClick={onClick}>{content}</button>
 }
 
 export default function AppsDock() {
