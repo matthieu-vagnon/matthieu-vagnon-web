@@ -36,10 +36,14 @@ function Block({
           <Icon className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7' />
           <h3 className='text-xl sm:text-2xl md:text-3xl font-sans-special font-bold'>{title}</h3>
         </div>
-        <p className='text-base text-gray-500'>{children}</p>
+        <div className='text-base md:text-lg text-gray-500'>{children}</div>
       </div>
     </div>
   )
+}
+
+function Technology({ technology }: { technology: string }) {
+  return <div className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white'>{technology}</div>
 }
 
 type Params = Promise<{ project: string }>
@@ -84,7 +88,11 @@ export default async function Project(props: { params: Params }) {
       <BlurFade delay={blurDelay++ / 10}>
         <Block icon={BookOpen} title='Description of the Project' position='left'>
           <span>{project.longDescription}</span>
-          <span>{project.technologies.join(', ')}</span>
+          <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
+            {project.technologies.map((technology, index) => (
+              <Technology key={index} technology={technology} />
+            ))}
+          </div>
         </Block>
       </BlurFade>
       <BlurFade delay={blurDelay++ / 10}>
