@@ -42,7 +42,10 @@ function Block({
   )
 }
 
-export default function Project({ params }: { params: { project: string } }) {
+type Params = Promise<{ project: string }>
+
+export default async function Project(props: { params: Params }) {
+  const params = await props.params
   const project = projects[params.project]
   let blurDelay = 0
 
