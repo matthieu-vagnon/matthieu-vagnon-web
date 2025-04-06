@@ -1,14 +1,15 @@
 import Header from '@/components/header'
+import { ImageButton } from '@/components/image-button'
 import PageTitle from '@/components/page-title'
 import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Magnetic } from '@/components/ui/magnetic'
+import { VideoButton } from '@/components/video-button'
 import { projects } from '@/data/projects'
 import { cn } from '@/lib/utils'
 import { BookOpen, Frown, LucideIcon, Package, Smile } from 'lucide-react'
-import Image from 'next/image'
+import React from 'react'
 
 function Block({
   icon: Icon,
@@ -39,26 +40,6 @@ function Block({
         <p className='text-base text-gray-500'>{children}</p>
       </div>
     </div>
-  )
-}
-
-function VideoButton({ title, video }: { title: string; video: string }) {
-  return (
-    <Magnetic range={500} intensity={0.1}>
-      <button className='rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-        <video src={video} className='rounded-lg' autoPlay muted loop />
-      </button>
-    </Magnetic>
-  )
-}
-
-function ImageButton({ title, image }: { title: string; image: string }) {
-  return (
-    <Magnetic range={500} intensity={0.1}>
-      <button className='rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-        <Image src={image} alt={image} width={600} height={600} />
-      </button>
-    </Magnetic>
   )
 }
 
