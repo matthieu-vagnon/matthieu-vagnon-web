@@ -1,3 +1,15 @@
+import koryoriYa1 from '@/../public/koryori-ya/web-1.png'
+import koryoriYa2 from '@/../public/koryori-ya/web-2.png'
+import koryoriYa3 from '@/../public/koryori-ya/web-3.png'
+import koryoriYa4 from '@/../public/koryori-ya/web-4.png'
+import mvWeb1 from '@/../public/matthieu-vagnon/web-1.png'
+import mvWeb2 from '@/../public/matthieu-vagnon/web-2.png'
+import mvWeb3 from '@/../public/matthieu-vagnon/web-3.png'
+import mvWeb4 from '@/../public/matthieu-vagnon/web-4.png'
+import smartInterviewBuilder2 from '@/../public/smart-interview/builder-2.png'
+import smartInterviewBuilder3 from '@/../public/smart-interview/builder-3.png'
+import smartInterviewBuilder4 from '@/../public/smart-interview/builder-4.png'
+import smartInterviewBuilder5 from '@/../public/smart-interview/builder-5.png'
 import Highlight from '@/components/highlight'
 
 export const projects: Record<string, Project> = {
@@ -13,14 +25,14 @@ export const projects: Record<string, Project> = {
         my links in a simple way on <Highlight color='blue'>mobile and desktop</Highlight>.
       </span>
     ),
-    previewImg: '/matthieu-vagnon/web-1.png',
+    previewImg: mvWeb1,
     type: 'Web Application',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
     gallery: [
-      { title: 'Home Page', url: '/matthieu-vagnon/web-1.png' },
-      { title: 'Case Study Page', url: '/matthieu-vagnon/web-2.png' },
-      { title: 'Video Player', url: '/matthieu-vagnon/web-3.png' },
-      { title: 'Meeting Scheduler', url: '/matthieu-vagnon/web-4.png' }
+      { title: 'Home Page', img: mvWeb1 },
+      { title: 'Case Study Page', img: mvWeb2 },
+      { title: 'Video Player', img: mvWeb3 },
+      { title: 'Meeting Scheduler', img: mvWeb4 }
     ],
     relatedUrls: [
       {
@@ -44,15 +56,15 @@ export const projects: Record<string, Project> = {
         add maximum details to the analysis.
       </span>
     ),
-    previewImg: '/smart-interview/builder-5.png',
+    previewImg: smartInterviewBuilder5,
     type: 'SaaS',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'NPM', 'Vercel', 'Supabase'],
     gallery: [
-      { title: 'Builder Tour', url: '/smart-interview/builder-1.mov' },
-      { title: 'Builder Editor', url: '/smart-interview/builder-2.png' },
-      { title: 'Builder Preview', url: '/smart-interview/builder-3.png' },
-      { title: 'Builder JSON Editor', url: '/smart-interview/builder-4.png' },
-      { title: 'Builder Presets', url: '/smart-interview/builder-5.png' }
+      { title: 'Builder Tour', video: '/smart-interview/builder-1.mov' },
+      { title: 'Builder Editor', img: smartInterviewBuilder2 },
+      { title: 'Builder Preview', img: smartInterviewBuilder3 },
+      { title: 'Builder JSON Editor', img: smartInterviewBuilder4 },
+      { title: 'Builder Presets', img: smartInterviewBuilder5 }
     ],
     problem: (
       <ul className='list-disc list-inside'>
@@ -114,14 +126,14 @@ export const projects: Record<string, Project> = {
         their adress and letting people <Highlight color='blue'>call them</Highlight> via the push of a button.
       </span>
     ),
-    previewImg: '/koryori-ya/web-3.png',
+    previewImg: koryoriYa3,
     type: 'Web Application',
     technologies: ['React', 'TypeScript', 'CSS', 'NPM', 'Vercel'],
     gallery: [
-      { title: 'Loading Page', url: '/koryori-ya/web-1.png' },
-      { title: 'Landing View', url: '/koryori-ya/web-2.png' },
-      { title: 'Concept View', url: '/koryori-ya/web-3.png' },
-      { title: 'Map', url: '/koryori-ya/web-4.png' }
+      { title: 'Loading Page', img: koryoriYa1 },
+      { title: 'Landing View', img: koryoriYa2 },
+      { title: 'Concept View', img: koryoriYa3 },
+      { title: 'Map', img: koryoriYa4 }
     ],
     relatedUrls: [
       {
