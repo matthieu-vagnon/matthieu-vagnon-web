@@ -1,18 +1,20 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
-import { HomeIcon, MessageCircle } from 'lucide-react'
+import { BriefcaseBusiness, HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { ContactModal } from './contact-modal'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 import { Dialog, DialogTrigger } from './ui/nested-dialog'
+import { ProgressiveBlur } from './ui/progressive-blur'
 
 type App = {
   title: string
   icon: React.ReactNode
   url?: string
   modal?: React.ReactNode
+  testimonial?: boolean
 }
 
 const APPS: App[] = [
@@ -22,20 +24,15 @@ const APPS: App[] = [
     url: '/'
   },
   // {
-  //   title: 'Education',
-  //   icon: <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/education'
+  //   title: 'Profile',
+  //   icon: <UserRound className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+  //   url: '/profile'
   // },
-  // {
-  //   title: 'Case Studies',
-  //   icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/case-studies'
-  // },
-  // {
-  //   title: 'Code Showcase',
-  //   icon: <FileCode className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/code-showcase'
-  // },
+  {
+    title: 'Case Studies',
+    icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    url: '/case-studies'
+  },
   {
     title: 'Get In Touch',
     icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
@@ -44,19 +41,19 @@ const APPS: App[] = [
   // {
   //   title: 'Configuration',
   //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/configuration'
+  //   modal: <ConfigurationModal />
   // }
 ]
 
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
-  return (
-    <Link href={app.url ?? '#'} onClick={onClick}>
-      <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-        <DockLabel>{app.title}</DockLabel>
-        <DockIcon>{app.icon}</DockIcon>
-      </DockItem>
-    </Link>
+  const content = (
+    <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
+      <DockLabel>{app.title}</DockLabel>
+      <DockIcon>{app.icon}</DockIcon>
+    </DockItem>
   )
+
+  return app.url ? <Link href={app.url}>{content}</Link> : <button onClick={onClick}>{content}</button>
 }
 
 export default function AppsDock() {
@@ -83,6 +80,7 @@ export default function AppsDock() {
         </Dock>
       </div>
       {activeModal !== undefined && APPS[activeModal].modal}
+      <ProgressiveBlur direction='bottom' className='pointer-events-none fixed bottom-0 left-0 h-24 w-full z-99' />
     </Dialog>
   )
 }

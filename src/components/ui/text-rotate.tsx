@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { AnimatePresence, AnimatePresenceProps, motion, MotionProps, Transition } from 'motion/react'
+import { AnimatePresence, AnimatePresenceProps, motion, MotionProps, Transition } from 'framer-motion'
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react'
 
 interface TextRotateProps {

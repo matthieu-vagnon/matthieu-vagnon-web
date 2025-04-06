@@ -34,15 +34,19 @@ const buttonVariants = cva(
   }
 )
 
-function ButtonWrapper({ children, size }: { children: React.ReactNode } & VariantProps<typeof buttonVariants>) {
+function ButtonWrapper({
+  children,
+  size,
+  disabled
+}: { children: React.ReactNode; disabled?: boolean } & VariantProps<typeof buttonVariants>) {
   return (
     <div className={cn(size === 'inline' && 'inline-block')}>
       <Magnetic
-        range={1000}
+        range={disabled ? 0 : 1000}
         springOptions={{ bounce: 0 }}
         intensity={size === 'lg' ? 0.05 : size === 'icon' ? 0.2 : 0.1}
       >
-        <div className='cursor-pointer'>{children}</div>
+        {children}
       </Magnetic>
     </div>
   )
@@ -61,7 +65,7 @@ function Button({
   const Comp = asChild ? Slot : 'button'
 
   return (
-    <ButtonWrapper size={size}>
+    <ButtonWrapper size={size} disabled={props.disabled ?? false}>
       <Comp data-slot='button' className={cn(buttonVariants({ variant, size, className }))} {...props} />
     </ButtonWrapper>
   )
@@ -88,7 +92,7 @@ function LinkButton({
       <Link
         href={href}
         target={external ? '_blank' : '_self'}
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn('cursor-pointer', buttonVariants({ variant, size, className }))}
         {...props}
       >
         {children}
