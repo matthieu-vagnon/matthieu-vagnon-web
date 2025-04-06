@@ -21,7 +21,7 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
           <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[project.type])}>
             {project.type}
           </div>
-          <div className='flex flex-row items-baseline gap-1 sm:gap-2'>
+          <div className='flex flex-row items-center gap-1 sm:gap-2'>
             <h3 className='text-lg sm:text-xl md:text-2xl font-bold text-white z-1 font-sans-special'>
               {project.title}
             </h3>
@@ -34,8 +34,6 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
                 className='pointer-events-none w-full rounded-sm shadow-lg'
                 src={project.previewImg}
                 alt={project.title}
-                width={300}
-                height={200}
               />
             </div>
           )}

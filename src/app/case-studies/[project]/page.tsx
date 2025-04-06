@@ -74,7 +74,7 @@ export default async function Project(props: { params: Params }) {
                 className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pt-16 pb-8 flex items-center justify-center'
               >
                 <BlurFade delay={blurDelay++ / 10}>
-                  <MediaButton title={element.title} element={element.url} />
+                  <MediaButton title={element.title} img={element.img} video={element.video} />
                 </BlurFade>
               </CarouselItem>
             ))}
