@@ -53,12 +53,7 @@ export const projects: Record<string, Project> = {
     previewImg: '/koryori-ya/web-1.png',
     type: 'Web Application',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'OpenAI'],
-    gallery: [
-      { title: 'Home Page', url: '/koryori-ya/web-1.png' },
-      { title: 'Menu Page', url: '/koryori-ya/web-1.png' },
-      { title: 'About Page', url: '/koryori-ya/web-1.png' },
-      { title: 'Contact Page', url: '/koryori-ya/web-1.png' }
-    ],
+    gallery: [{ title: 'Home Page', url: '/koryori-ya/web-1.png' }],
     problem: <span>Creating questionnaires and analyzing responses is a time-consuming task.</span>,
     solution: <span>Create AI-powered questionnaires and mass analyze responses.</span>,
     results: <span>Save time and resources.</span>,

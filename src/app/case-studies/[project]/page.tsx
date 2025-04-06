@@ -1,11 +1,10 @@
 import Header from '@/components/header'
-import { ImageButton } from '@/components/image-button'
+import { MediaButton } from '@/components/media-button'
 import PageTitle from '@/components/page-title'
 import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { VideoButton } from '@/components/video-button'
 import { projects } from '@/data/projects'
 import { cn } from '@/lib/utils'
 import { BookOpen, Frown, LucideIcon, Package, Smile } from 'lucide-react'
@@ -68,11 +67,7 @@ export default function Project({ params }: { params: { project: string } }) {
                 className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pt-16 pb-8 flex items-center justify-center'
               >
                 <BlurFade delay={blurDelay++ / 10}>
-                  {element.url.endsWith('.mov') ? (
-                    <VideoButton title={element.title} video={element.url} />
-                  ) : (
-                    <ImageButton title={element.title} image={element.url} />
-                  )}
+                  <MediaButton title={element.title} element={element.url} />
                 </BlurFade>
               </CarouselItem>
             ))}
