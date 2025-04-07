@@ -17,7 +17,11 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
       <Magnetic range={500} intensity={0.1}>
         <DialogTrigger asChild>
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-            {video && <video src={video} className='rounded-lg' preload='metadata' muted />}
+            {video && (
+              <video className='rounded-lg' preload='metadata' muted>
+                <source src={video} />
+              </video>
+            )}
             {img && <Image src={img} alt={title} className='rounded-lg' />}
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
