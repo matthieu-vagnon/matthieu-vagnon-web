@@ -22,7 +22,7 @@ export function MediaButton({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <Magnetic range={500} intensity={0.1}>
+      <Magnetic intensity={0.07}>
         <DialogTrigger asChild>
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
             {(img || video?.preview) && (

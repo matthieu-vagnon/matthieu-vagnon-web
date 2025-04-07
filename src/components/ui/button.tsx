@@ -5,6 +5,14 @@ import Link, { LinkProps } from 'next/link'
 import * as React from 'react'
 import { Magnetic } from './magnetic'
 
+const INTENSITY_MAP: Record<string, number> = {
+  default: 0.1,
+  sm: 0.13,
+  lg: 0.05,
+  icon: 0.2,
+  inline: 0.13
+}
+
 const buttonVariants = cva(
   "hover:cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
@@ -41,11 +49,7 @@ function ButtonWrapper({
 }: { children: React.ReactNode; disabled?: boolean } & VariantProps<typeof buttonVariants>) {
   return (
     <div className={cn(size === 'inline' && 'inline-block')}>
-      <Magnetic
-        range={disabled ? 0 : 1000}
-        springOptions={{ bounce: 0 }}
-        intensity={size === 'lg' ? 0.05 : size === 'icon' ? 0.2 : 0.1}
-      >
+      <Magnetic disabled={disabled} intensity={INTENSITY_MAP[size ?? 'default']}>
         {children}
       </Magnetic>
     </div>

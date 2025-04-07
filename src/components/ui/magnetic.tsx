@@ -9,6 +9,7 @@ export type MagneticProps = {
   children: React.ReactNode
   intensity?: number
   range?: number
+  disabled?: boolean
   actionArea?: 'self' | 'parent' | 'global'
   springOptions?: SpringOptions
   className?: string
@@ -17,7 +18,8 @@ export type MagneticProps = {
 export function Magnetic({
   children,
   intensity = 0.6,
-  range = 100,
+  range,
+  disabled = false,
   actionArea = 'self',
   springOptions = SPRING_CONFIG,
   className
@@ -42,10 +44,21 @@ export function Magnetic({
 
         const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
 
-        if (isHovered && absoluteDistance <= range) {
-          const scale = 1 - absoluteDistance / range
-          x.set(distanceX * intensity * scale)
-          y.set(distanceY * intensity * scale)
+        if (isHovered && !disabled) {
+          if (range) {
+            if (absoluteDistance <= range) {
+              const scale = 1 - absoluteDistance / range
+
+              x.set(distanceX * intensity * scale)
+              y.set(distanceY * intensity * scale)
+            } else {
+              x.set(0)
+              y.set(0)
+            }
+          } else {
+            x.set(distanceX * intensity)
+            y.set(distanceY * intensity)
+          }
         } else {
           x.set(0)
           y.set(0)
