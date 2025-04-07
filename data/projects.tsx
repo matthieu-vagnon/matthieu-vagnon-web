@@ -7,6 +7,7 @@ import mvWeb1 from '@/public/matthieu-vagnon/web-1.png'
 import mvWeb2 from '@/public/matthieu-vagnon/web-2.png'
 import mvWeb3 from '@/public/matthieu-vagnon/web-3.png'
 import mvWeb4 from '@/public/matthieu-vagnon/web-4.png'
+import smartInterviewBuilder1Preview from '@/public/smart-interview/builder-1/preview.png'
 import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png'
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png'
 import smartInterviewBuilder4 from '@/public/smart-interview/builder-4.png'
@@ -60,7 +61,13 @@ export const projects: Record<string, Project> = {
     type: 'SaaS',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'NPM', 'Vercel', 'Supabase'],
     gallery: [
-      { title: 'Builder Tour', video: '/smart-interview/builder-1.mov' },
+      {
+        title: 'Builder Tour',
+        video: {
+          src: '/smart-interview/builder-1/video.mov',
+          preview: smartInterviewBuilder1Preview
+        }
+      },
       { title: 'Builder Editor', img: smartInterviewBuilder2 },
       { title: 'Builder Preview', img: smartInterviewBuilder3 },
       { title: 'Builder JSON Editor', img: smartInterviewBuilder4 },

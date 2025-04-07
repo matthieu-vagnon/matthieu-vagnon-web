@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Pause, Play, Volume1, Volume2, VolumeX } from 'lucide-react'
+import { StaticImageData } from 'next/image'
 import { useRef, useState } from 'react'
 
 const formatTime = (seconds: number) => {
@@ -42,9 +43,9 @@ const CustomSlider = ({
   )
 }
 
-const VideoPlayer = ({ src }: { src: string }) => {
+const VideoPlayer = ({ src, preview }: { src: string; preview: StaticImageData }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
   const [volume, setVolume] = useState(1)
   const [progress, setProgress] = useState(0)
   const [isMuted, setIsMuted] = useState(false)
@@ -116,7 +117,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
     <motion.div
       className='inline-block relative rounded-md sm:rounded-lg md:rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
       onMouseEnter={() => setShowControls(true)}
-      onMouseLeave={() => setShowControls(true)}
+      onMouseLeave={() => setShowControls(false)}
     >
       <video
         ref={videoRef}
@@ -124,6 +125,8 @@ const VideoPlayer = ({ src }: { src: string }) => {
         onTimeUpdate={handleTimeUpdate}
         src={src}
         onClick={togglePlay}
+        autoPlay
+        poster={preview.src}
       />
 
       <AnimatePresence>

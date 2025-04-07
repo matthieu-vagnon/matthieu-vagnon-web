@@ -9,7 +9,15 @@ import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
 import VideoPlayer from './ui/video-player'
 
-export function MediaButton({ title, img, video }: { title: string; img?: StaticImageData; video?: string }) {
+export function MediaButton({
+  title,
+  img,
+  video
+}: {
+  title: string
+  img?: StaticImageData
+  video?: { src: string; preview: StaticImageData }
+}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -17,12 +25,9 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
       <Magnetic range={500} intensity={0.1}>
         <DialogTrigger asChild>
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-            {video && (
-              <video className='rounded-lg' preload='metadata' muted>
-                <source src={`${video}#t=4`} />
-              </video>
+            {(img || video?.preview) && (
+              <Image src={img ?? video!.preview} placeholder='blur' alt={title} className='rounded-lg' />
             )}
-            {img && <Image src={img} placeholder='blur' alt={title} className='rounded-lg' />}
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
                 <PlayIcon className='w-4 h-4 text-white' />
@@ -43,7 +48,7 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
               <VisuallyHidden asChild>
                 <DialogTitle>{title}</DialogTitle>
               </VisuallyHidden>
-              {video && <VideoPlayer src={video} />}
+              {video?.src && video?.preview && <VideoPlayer src={video!.src} preview={video!.preview} />}
               {img && (
                 <Image
                   src={img}

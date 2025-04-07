@@ -10,7 +10,7 @@ declare global {
     previewImg?: StaticImageData
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     technologies: string[]
-    gallery?: { title: string; img?: StaticImageData; video?: string }[]
+    gallery?: { title: string; img?: StaticImageData; video?: { src: string; preview: StaticImageData } }[]
     problem?: React.ReactNode
     solution?: React.ReactNode
     results?: React.ReactNode
