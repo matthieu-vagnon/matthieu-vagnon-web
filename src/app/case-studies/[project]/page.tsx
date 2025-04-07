@@ -5,10 +5,10 @@ import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { projects } from '@/data/projects'
 import { cn } from '@/lib/utils'
 import { BookOpen, Frown, LucideIcon, Package, Smile } from 'lucide-react'
 import React from 'react'
+import { projects } from '../../../../data/projects'
 
 function Block({
   icon: Icon,

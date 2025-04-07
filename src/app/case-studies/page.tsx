@@ -4,7 +4,7 @@ import ProjectCard from '@/components/project-card'
 import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
-import { projects } from '@/data/projects'
+import { projects } from '../../../data/projects'
 
 export default function CaseStudies() {
   return (
