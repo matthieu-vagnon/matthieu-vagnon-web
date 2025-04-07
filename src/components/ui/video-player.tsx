@@ -114,11 +114,17 @@ const VideoPlayer = ({ src }: { src: string }) => {
 
   return (
     <motion.div
-      className='relative w-full max-w-4xl mx-auto rounded-md sm:rounded-lg md:rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
+      className='inline-block relative rounded-md sm:rounded-lg md:rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
-      <video ref={videoRef} className='w-full' onTimeUpdate={handleTimeUpdate} src={src} onClick={togglePlay} />
+      <video
+        ref={videoRef}
+        className='h-full max-h-[calc(100vh-20px)] w-full max-w-4xl mx-auto'
+        onTimeUpdate={handleTimeUpdate}
+        src={src}
+        onClick={togglePlay}
+      />
 
       <AnimatePresence>
         {showControls && (

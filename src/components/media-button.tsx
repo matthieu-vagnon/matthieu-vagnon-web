@@ -2,7 +2,6 @@
 
 import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
-import { motion } from 'framer-motion'
 import { PlayIcon } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
@@ -37,21 +36,19 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
         </DialogTrigger>
       </Magnetic>
       <DialogPortal>
-        <DialogOverlay className='absolute inset-0 z-100 bg-black/75 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
-          <DialogContent>
+        <DialogOverlay className='fixed inset-0 z-100 px-2 sm:px-5 md:px-10 flex items-center justify-center bg-black/75 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
+          <DialogContent className='inline-block'>
             <VisuallyHidden asChild>
               <DialogTitle>{title}</DialogTitle>
             </VisuallyHidden>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              {video && <VideoPlayer src={video} />}
-              {img && (
-                <Image
-                  src={img}
-                  alt={title}
-                  className='w-full max-w-4xl mx-auto rounded-md sm:rounded-lg md:rounded-xl'
-                />
-              )}
-            </motion.div>
+            {video && <VideoPlayer src={video} />}
+            {img && (
+              <Image
+                src={img}
+                alt={title}
+                className='w-full max-w-4xl mx-auto max-h-[calc(100vh-20px)] overflow-hidden rounded-md sm:rounded-lg md:rounded-xl'
+              />
+            )}
           </DialogContent>
         </DialogOverlay>
       </DialogPortal>
