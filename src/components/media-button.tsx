@@ -5,28 +5,19 @@ import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import { motion } from 'framer-motion'
 import { PlayIcon } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
 import VideoPlayer from './ui/video-player'
 
 export function MediaButton({ title, img, video }: { title: string; img?: StaticImageData; video?: string }) {
-  const videoPreviewRef = useRef<HTMLVideoElement>(null)
   const [open, setOpen] = useState(false)
-
-  useEffect(() => {
-    if (open) {
-      videoPreviewRef.current?.pause()
-    } else {
-      videoPreviewRef.current?.play()
-    }
-  }, [open])
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <Magnetic range={500} intensity={0.1}>
         <DialogTrigger asChild>
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-            {video && <video ref={videoPreviewRef} src={video} className='rounded-lg' autoPlay muted loop />}
+            {video && <video src={video} className='rounded-lg' preload='metadata' muted />}
             {img && <Image src={img} alt={title} className='rounded-lg' />}
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
