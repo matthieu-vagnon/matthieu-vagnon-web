@@ -116,7 +116,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
     <motion.div
       className='inline-block relative rounded-md sm:rounded-lg md:rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
       onMouseEnter={() => setShowControls(true)}
-      onMouseLeave={() => setShowControls(false)}
+      onMouseLeave={() => setShowControls(true)}
     >
       <video
         ref={videoRef}
@@ -129,7 +129,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
       <AnimatePresence>
         {showControls && (
           <motion.div
-            className='absolute bottom-0 mx-auto max-w-xl left-0 right-0 p-4 m-2 bg-[#11111198] backdrop-blur-md rounded-2xl'
+            className='absolute bottom-0 mx-auto max-w-xl left-2 right-2 p-4 m-2 bg-[#11111198] backdrop-blur-md rounded-2xl'
             initial={{ y: 20, opacity: 0, filter: 'blur(10px)' }}
             animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
             exit={{ y: 20, opacity: 0, filter: 'blur(10px)' }}
@@ -141,8 +141,8 @@ const VideoPlayer = ({ src }: { src: string }) => {
               <span className='text-white text-sm'>{formatTime(duration)}</span>
             </div>
 
-            <div className='flex items-center justify-between'>
-              <div className='flex items-center gap-4'>
+            <div className='flex items-center justify-between gap-2'>
+              <div className='flex items-center gap-2'>
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <Button
                     onClick={togglePlay}
@@ -171,13 +171,13 @@ const VideoPlayer = ({ src }: { src: string }) => {
                     </Button>
                   </motion.div>
 
-                  <div className='w-24'>
+                  <div className='w-12'>
                     <CustomSlider value={volume * 100} onChange={handleVolumeChange} />
                   </div>
                 </div>
               </div>
 
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-2 overflow-hidden'>
                 {[0.5, 1, 1.5, 2].map((speed) => (
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={speed}>
                     <Button
