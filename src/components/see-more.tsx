@@ -7,15 +7,18 @@ export default function SeeMore({ links, className }: { links: { name: string; u
   return (
     <React.Fragment>
       <Separator className='my-10 sm:my-12 md:my-14' />
-      <div className={cn('flex flex-col items-center justify-center mb-28 gap-2', className)}>
-        <h3 className='font-sans-special text-lg sm:text-xl font-semibold'>Related Links</h3>
-        <div className='flex flex-row gap-2 items-center justify-center'>
-          {links.map((link) => (
-            <LinkButton key={link.name} external variant='outline' href={link.url}>
-              {link.name}
-            </LinkButton>
-          ))}
+      <div className={cn('flex flex-col items-center justify-center mb-28 gap-5', className)}>
+        <div className='flex flex-col items-center justify-center gap-2'>
+          <h3 className='font-sans-special text-lg sm:text-xl font-semibold'>Related Links</h3>
+          <div className='flex flex-row gap-2 items-center justify-center'>
+            {links.map((link) => (
+              <LinkButton key={link.name} external variant='outline' href={link.url}>
+                {link.name}
+              </LinkButton>
+            ))}
+          </div>
         </div>
+        <div className='text-xs text-gray-500'>Made with ❤️ by Matthieu Vagnon</div>
       </div>
     </React.Fragment>
   )
