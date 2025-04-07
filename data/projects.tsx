@@ -74,7 +74,7 @@ export const projects: Record<string, Project> = {
       { title: 'Builder Presets', img: smartInterviewBuilder5 }
     ],
     problem: (
-      <ul className='list-disc list-inside'>
+      <ol className='list-decimal list-inside'>
         <li>
           Users find it <Highlight color='red'>hard to create and manage questionnaires</Highlight> and may spend too
           much time implementing simple questions.
@@ -83,10 +83,10 @@ export const projects: Record<string, Project> = {
           Potential clients finding the application <Highlight color='red'>dated</Highlight>,{' '}
           <Highlight color='red'>not intuitive</Highlight> and <Highlight color='red'>laggy</Highlight>.
         </li>
-      </ul>
+      </ol>
     ),
     solution: (
-      <ul className='list-disc list-inside'>
+      <ol className='list-decimal list-inside'>
         <li>
           Tweaking the UI to make it <Highlight color='emerald'>user-friendly</Highlight> (using icons, colors, better
           spacing, ...).
@@ -103,7 +103,7 @@ export const projects: Record<string, Project> = {
           Adding <Highlight color='emerald'>animations</Highlight> and{' '}
           <Highlight color='emerald'>loading states</Highlight>.
         </li>
-      </ul>
+      </ol>
     ),
     results: (
       <span>
