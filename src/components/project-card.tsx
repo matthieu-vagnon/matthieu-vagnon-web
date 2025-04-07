@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { Magnetic } from './ui/magnetic'
 
@@ -10,7 +10,11 @@ const typeVariants = {
   Other: 'bg-gray-500'
 }
 
-export default function ProjectCard({ coverImage, url, ...project }: Project & { coverImage: string; url: string }) {
+export default function ProjectCard({
+  coverImage,
+  url,
+  ...project
+}: Project & { coverImage: StaticImageData; url: string }) {
   return (
     <div className='h-80 sm:h-90 md:h-100 w-60 sm:w-70 md:w-80'>
       <Magnetic range={500} intensity={0.1} className='h-full w-full'>
@@ -32,6 +36,7 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
             <div className='absolute w-full p-2 left-0 top-0 rounded-sm z-1'>
               <Image
                 className='pointer-events-none w-full rounded-sm shadow-lg'
+                placeholder='blur'
                 src={project.previewImg}
                 alt={project.title}
               />
@@ -39,6 +44,7 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
           )}
           <Image
             className='absolute pointer-events-none object-cover object-center h-full w-full left-0 top-0 group-hover:scale-110 transition-transform duration-300'
+            placeholder='blur'
             src={coverImage}
             height={400}
             width={320}

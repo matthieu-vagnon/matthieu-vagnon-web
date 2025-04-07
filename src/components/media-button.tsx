@@ -22,7 +22,7 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
                 <source src={`${video}#t=4`} />
               </video>
             )}
-            {img && <Image src={img} alt={title} className='rounded-lg' />}
+            {img && <Image src={img} placeholder='blur' alt={title} className='rounded-lg' />}
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
                 <PlayIcon className='w-4 h-4 text-white' />
@@ -47,6 +47,7 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
               {img && (
                 <Image
                   src={img}
+                  placeholder='blur'
                   alt={title}
                   className='w-full max-w-4xl mx-auto max-h-[calc(100vh-20px)] overflow-hidden rounded-md sm:rounded-lg md:rounded-xl'
                 />
