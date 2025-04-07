@@ -31,7 +31,7 @@ export function ContactModal() {
         <DialogTitle>Choose a Contact Method</DialogTitle>
         <DialogDescription>Please select your preferred contact method.</DialogDescription>
       </DialogHeader>
-      <div className='flex flex-col gap-4 pt-2 pr-4 pb-4 pl-4'>
+      <div className='flex flex-col gap-4 pt-5 pr-4 pb-4 pl-4'>
         <InnerDialog>
           <InnerDialogTrigger asChild>
             <Button variant='outline' size='lg' className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'>
