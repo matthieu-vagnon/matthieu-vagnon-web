@@ -114,7 +114,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
 
   return (
     <motion.div
-      className='relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
+      className='relative w-full max-w-4xl mx-auto rounded-md sm:rounded-lg md:rounded-xl overflow-hidden bg-[#11111198] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-sm'
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >

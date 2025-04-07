@@ -37,16 +37,22 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
         </DialogTrigger>
       </Magnetic>
       <DialogPortal>
-        <DialogOverlay className='fixed inset-0 z-100 bg-black/75 backdrop-blur-sm px-2 sm:px-5 md:px-15 flex items-center justify-center data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <DialogContent>
-              <VisuallyHidden asChild>
-                <DialogTitle>{title}</DialogTitle>
-              </VisuallyHidden>
+        <DialogOverlay className='absolute inset-0 z-100 bg-black/75 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
+          <DialogContent>
+            <VisuallyHidden asChild>
+              <DialogTitle>{title}</DialogTitle>
+            </VisuallyHidden>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               {video && <VideoPlayer src={video} />}
-              {img && <Image src={img} height={1000} width={1000} alt={title} className='rounded-xl' />}
-            </DialogContent>
-          </motion.div>
+              {img && (
+                <Image
+                  src={img}
+                  alt={title}
+                  className='w-full max-w-4xl mx-auto rounded-md sm:rounded-lg md:rounded-xl'
+                />
+              )}
+            </motion.div>
+          </DialogContent>
         </DialogOverlay>
       </DialogPortal>
     </Dialog>

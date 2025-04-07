@@ -24,13 +24,7 @@ function Block({
   className?: string
 }) {
   return (
-    <div
-      className={cn(
-        'flex w-full mt-10 sm:mt-12 md:mt-14',
-        position === 'left' ? 'justify-start' : 'justify-end',
-        className
-      )}
-    >
+    <div className={cn('flex w-full', position === 'left' ? 'justify-start' : 'justify-end', className)}>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 w-full md:w-2/3 xl:w-1/2'>
         <div className='flex flex-row items-center gap-2 md:gap-3 w-full'>
           <Icon className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7' />
@@ -71,7 +65,7 @@ export default async function Project(props: { params: Params }) {
             {project.gallery.map((element, index) => (
               <CarouselItem
                 key={index}
-                className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pt-16 pb-8 flex items-center justify-center'
+                className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
               >
                 <BlurFade delay={blurDelay++ / 10}>
                   <MediaButton title={element.title} img={element.img} video={element.video} />
@@ -85,37 +79,39 @@ export default async function Project(props: { params: Params }) {
           </BlurFade>
         </Carousel>
       )}
-      <BlurFade delay={blurDelay++ / 10}>
-        <Block icon={BookOpen} title='Description of the Project' position='left'>
-          <span>{project.longDescription}</span>
-          <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
-            {project.technologies.map((technology, index) => (
-              <Technology key={index} technology={technology} />
-            ))}
-          </div>
-        </Block>
-      </BlurFade>
-      {project.problem && (
+      <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={blurDelay++ / 10}>
-          <Block icon={Frown} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-            {project.problem}
+          <Block icon={BookOpen} title='Description of the Project' position='left'>
+            <span>{project.longDescription}</span>
+            <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
+              {project.technologies.map((technology, index) => (
+                <Technology key={index} technology={technology} />
+              ))}
+            </div>
           </Block>
         </BlurFade>
-      )}
-      {project.solution && (
-        <BlurFade delay={blurDelay++ / 10}>
-          <Block icon={Smile} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-            {project.solution}
-          </Block>
-        </BlurFade>
-      )}
-      {project.results && (
-        <BlurFade delay={blurDelay++ / 10}>
-          <Block icon={Package} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-            {project.results}
-          </Block>
-        </BlurFade>
-      )}
+        {project.problem && (
+          <BlurFade delay={blurDelay++ / 10}>
+            <Block icon={Frown} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {project.problem}
+            </Block>
+          </BlurFade>
+        )}
+        {project.solution && (
+          <BlurFade delay={blurDelay++ / 10}>
+            <Block icon={Smile} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {project.solution}
+            </Block>
+          </BlurFade>
+        )}
+        {project.results && (
+          <BlurFade delay={blurDelay++ / 10}>
+            <Block icon={Package} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {project.results}
+            </Block>
+          </BlurFade>
+        )}
+      </div>
       <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
           links={[

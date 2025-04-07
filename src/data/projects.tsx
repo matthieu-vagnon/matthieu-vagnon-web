@@ -20,9 +20,9 @@ export const projects: Record<string, Project> = {
     shortDescription: 'The web application you are currently watching.',
     longDescription: (
       <span>
-        A simple <Highlight color='blue'>portfolio web application</Highlight> made with{' '}
-        <Highlight color='blue'>React and Next.js</Highlight> letting you watch my case studies, contact me and access
-        my links in a simple way on <Highlight color='blue'>mobile and desktop</Highlight>.
+        A simple <Highlight color='gray'>portfolio web application</Highlight> made with{' '}
+        <Highlight color='gray'>React and Next.js</Highlight> letting you watch my case studies, contact me and access
+        my links in a simple way on <Highlight color='gray'>mobile and desktop</Highlight>.
       </span>
     ),
     previewImg: mvWeb1,
@@ -48,10 +48,10 @@ export const projects: Record<string, Project> = {
     shortDescription: 'A platform to create AI-powered questionnaires and mass analyze responses.',
     longDescription: (
       <span>
-        A SaaS platform to create <Highlight color='blue'>AI-powered questionnaires</Highlight>. A questionnaire is
-        created by using the integrated <Highlight color='blue'>builder</Highlight> or by importing a{' '}
-        <Highlight color='blue'>JSON file</Highlight>. The questionnaire is then sent to the audience and the responses
-        can be analyzed in the same application to <Highlight color='blue'>target their optimal audience</Highlight>.
+        A SaaS platform to create <Highlight color='gray'>AI-powered questionnaires</Highlight>. A questionnaire is
+        created by using the integrated <Highlight color='gray'>builder</Highlight> or by importing a{' '}
+        <Highlight color='gray'>JSON file</Highlight>. The questionnaire is then sent to the audience and the responses
+        can be analyzed in the same application to <Highlight color='gray'>target their optimal audience</Highlight>.
         The AI automatically adds context-based questions to the questionnaire when the user answers a questionnaire to
         add maximum details to the analysis.
       </span>
@@ -100,11 +100,11 @@ export const projects: Record<string, Project> = {
     ),
     results: (
       <span>
-        The application is now more <Highlight color='blue'>user-friendly</Highlight>,{' '}
-        <Highlight color='blue'>intuitive</Highlight>,<Highlight color='blue'>consistent</Highlight> and let users{' '}
-        <Highlight color='blue'>save time</Highlight> and <Highlight color='blue'>resources</Highlight> while being able
-        to create <Highlight color='blue'>complex questionnaires</Highlight>. The{' '}
-        <Highlight color='blue'>UI was improved a bit</Highlight> but the time constraints didn&apos;t allow me to do
+        The application is now more <Highlight color='gray'>user-friendly</Highlight>,{' '}
+        <Highlight color='gray'>intuitive</Highlight>,<Highlight color='gray'>consistent</Highlight> and let users{' '}
+        <Highlight color='gray'>save time</Highlight> and <Highlight color='gray'>resources</Highlight> while being able
+        to create <Highlight color='gray'>complex questionnaires</Highlight>. The{' '}
+        <Highlight color='gray'>UI was improved a bit</Highlight> but the time constraints didn&apos;t allow me to do
         more.
       </span>
     ),
@@ -122,8 +122,8 @@ export const projects: Record<string, Project> = {
     shortDescription: 'A simple web application for a Japanese restaurant.',
     longDescription: (
       <span>
-        A simple single page web application for a <Highlight color='blue'>Japanese restaurant</Highlight> showcasing
-        their adress and letting people <Highlight color='blue'>call them</Highlight> via the push of a button.
+        A simple single page web application for a <Highlight color='gray'>Japanese restaurant</Highlight> showcasing
+        their adress and letting people <Highlight color='gray'>call them</Highlight> via the push of a button.
       </span>
     ),
     previewImg: koryoriYa3,
@@ -149,9 +149,9 @@ export const projects: Record<string, Project> = {
     shortDescription: 'A platform to view and manage AI-powered trading tools.',
     longDescription: (
       <span>
-        A platform to view and manage <Highlight color='blue'>AI-powered trading tools</Highlight> initially made for
-        <Highlight color='blue'>Predictive Layer</Highlight> and now actively used by{' '}
-        <Highlight color='blue'>TotalEnergies</Highlight> as Predictive Layer is now part of them.
+        A platform to view and manage <Highlight color='gray'>AI-powered trading tools</Highlight> initially made for
+        <Highlight color='gray'>Predictive Layer</Highlight> and now actively used by{' '}
+        <Highlight color='gray'>TotalEnergies</Highlight> as Predictive Layer is now part of them.
       </span>
     ),
     type: 'SaaS',
@@ -174,9 +174,9 @@ export const projects: Record<string, Project> = {
     ),
     results: (
       <span>
-        The tool is now <Highlight color='blue'>used in production</Highlight> by TotalEnergies teams and is working
-        perfectly well. The <Highlight color='blue'>data loads well</Highlight> and the{' '}
-        <Highlight color='blue'>interface is clear</Highlight>.
+        The tool is now <Highlight color='gray'>used in production</Highlight> by TotalEnergies teams and is working
+        perfectly well. The <Highlight color='gray'>data loads well</Highlight> and the{' '}
+        <Highlight color='gray'>interface is clear</Highlight>.
       </span>
     )
   }
