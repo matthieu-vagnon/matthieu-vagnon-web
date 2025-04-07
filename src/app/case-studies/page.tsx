@@ -23,7 +23,7 @@ export default function CaseStudies() {
       <BlurFade delay={0.1}>
         <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
       </BlurFade>
-      <div className='flex flex-row flex-wrap justify-center gap-5'>
+      <div className='flex flex-row flex-wrap justify-center gap-3 sm:gap-5'>
         {Object.entries(projects).map(([key, project], index) => (
           <BlurFade key={key} delay={0.3 + index * 0.1}>
             <ProjectCard coverImage={COVER_IMAGES[index % 5]} url={`/case-studies/${key}`} {...project} />
