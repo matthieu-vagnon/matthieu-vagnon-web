@@ -40,7 +40,8 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
           <Image
             className='absolute pointer-events-none object-cover object-center h-full w-full left-0 right-0 group-hover:scale-110 transition-transform duration-300'
             src={coverImage}
-            alt={project.title}
+            alt='Background'
+            quality={25}
             fill
           />
         </Link>
