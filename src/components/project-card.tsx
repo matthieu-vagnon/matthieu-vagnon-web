@@ -38,11 +38,12 @@ export default function ProjectCard({ coverImage, url, ...project }: Project & {
             </div>
           )}
           <Image
-            className='absolute pointer-events-none object-cover object-center h-full w-full left-0 right-0 group-hover:scale-110 transition-transform duration-300'
+            className='absolute pointer-events-none object-cover object-center h-full w-full left-0 top-0 group-hover:scale-110 transition-transform duration-300'
             src={coverImage}
+            height={400}
+            width={320}
             alt='Background'
-            quality={25}
-            fill
+            quality={40}
           />
         </Link>
       </Magnetic>
