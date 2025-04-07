@@ -177,7 +177,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
                 </div>
               </div>
 
-              <div className='flex items-center gap-2 overflow-hidden'>
+              <div className='flex items-center gap-2'>
                 {[0.5, 1, 1.5, 2].map((speed) => (
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={speed}>
                     <Button
