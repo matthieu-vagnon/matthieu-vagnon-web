@@ -19,7 +19,7 @@ export function MediaButton({ title, img, video }: { title: string; img?: Static
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
             {video && (
               <video className='rounded-lg' preload='metadata' muted>
-                <source src={video} />
+                <source src={`${video}#t=4`} />
               </video>
             )}
             {img && <Image src={img} alt={title} className='rounded-lg' />}
