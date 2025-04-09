@@ -90,9 +90,11 @@ export async function generateMetadata(props: { params: Params }) {
   }
 }
 
-export default async function Project(props: { params: Params }) {
+export default async function Project(props: { params: Params; searchParams: Promise<{ video: string }> }) {
   const params = await props.params
+  const searchParams = await props.searchParams
   const project = projects[params.project]
+  const videoIndex = searchParams.video
   let blurDelay = 0
 
   const incrementBlurDelay = () => {
@@ -123,7 +125,7 @@ export default async function Project(props: { params: Params }) {
                     key={index}
                     className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
                   >
-                    <MediaButton video={video} />
+                    <MediaButton video={video} isOpen={videoIndex === index.toString()} />
                   </CarouselItem>
                 ))}
                 {project.gallery.img?.map((img, index) => (

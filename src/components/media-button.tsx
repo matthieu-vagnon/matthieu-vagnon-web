@@ -10,11 +10,11 @@ import { Magnetic } from './ui/magnetic'
 import VideoPlayer from './ui/video-player'
 
 type Props =
-  | { img: NonNullable<NonNullable<Project['gallery']>['img']>[number]; video?: never }
-  | { video: NonNullable<NonNullable<Project['gallery']>['video']>[number]; img?: never }
+  | { img: NonNullable<NonNullable<Project['gallery']>['img']>[number]; video?: never; isOpen?: never }
+  | { video: NonNullable<NonNullable<Project['gallery']>['video']>[number]; img?: never; isOpen?: boolean }
 
-export function MediaButton({ img, video }: Props) {
-  const [open, setOpen] = useState(false)
+export function MediaButton({ img, video, isOpen = false }: Props) {
+  const [open, setOpen] = useState(isOpen)
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
