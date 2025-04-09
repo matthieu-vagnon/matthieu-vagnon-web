@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.',
     images: [
       {
-        url: '/og-image.png'
+        url: 'https://mvagnon.dev/og-image.png'
       }
     ]
   },
