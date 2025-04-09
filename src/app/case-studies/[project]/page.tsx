@@ -54,8 +54,15 @@ export async function generateMetadata(props: { params: Params }) {
     title: `${project.title} Case Study by Matthieu Vagnon`,
     description: project.longDescription,
     openGraph: {
+      type: 'article',
+      siteName: 'Matthieu Vagnon Web',
       title: `${project.title} Case Study by Matthieu Vagnon`,
-      description: project.shortDescription
+      description: project.shortDescription,
+      images: [
+        {
+          url: `${process.env.URL!}/og-image.png`
+        }
+      ]
     },
     keywords: [
       'Matthieu Vagnon',

@@ -4,20 +4,12 @@ import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTitle, Dialog
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import { motion } from 'framer-motion'
 import { PlayIcon } from 'lucide-react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
 import VideoPlayer from './ui/video-player'
 
-export function MediaButton({
-  title,
-  img,
-  video
-}: {
-  title: string
-  img?: StaticImageData
-  video?: { src: string; preview: StaticImageData }
-}) {
+export function MediaButton({ title, img, video }: NonNullable<Project['gallery']>[number]) {
   const [open, setOpen] = useState(false)
 
   return (
