@@ -76,7 +76,17 @@ export const projects: Record<string, Project> = {
     ),
     previewImg: smartInterviewBuilder5,
     type: 'SaaS',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'NPM', 'Vercel', 'Supabase'],
+    technologies: [
+      'Cursor IDE',
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Shadcn UI',
+      'NPM',
+      'Vercel',
+      'Supabase'
+    ],
     gallery: [
       {
         title: 'Builder Tour',
