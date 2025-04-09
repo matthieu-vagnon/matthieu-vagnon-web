@@ -5,7 +5,12 @@ export const metadata: Metadata = {
   description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.',
   openGraph: {
     title: 'Matthieu Vagnon Case Studies',
-    description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.'
+    description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.',
+    images: [
+      {
+        url: 'https://mvagnon.dev/og-image.png'
+      }
+    ]
   },
   keywords: [
     'Matthieu Vagnon',
