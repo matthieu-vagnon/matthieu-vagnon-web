@@ -46,17 +46,32 @@ function Technology({ technology }: { technology: string }) {
 
 type Params = Promise<{ project: string }>
 
+export async function generateMetadata(props: { params: Params }) {
+  const params = await props.params
+  const project = projects[params.project]
+
+  return {
+    title: `${project.title} Case Study | Matthieu Vagnon`,
+    description: project.longDescription
+  }
+}
+
 export default async function Project(props: { params: Params }) {
   const params = await props.params
   const project = projects[params.project]
   let blurDelay = 0
 
+  const incrementBlurDelay = () => {
+    blurDelay++
+    return blurDelay / 10
+  }
+
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
-      <BlurFade delay={blurDelay++ / 10}>
+      <BlurFade>
         <Header />
       </BlurFade>
-      <BlurFade delay={blurDelay++ / 10}>
+      <BlurFade delay={incrementBlurDelay()}>
         <PageTitle
           title={`${project.title} Case Study \u2022 ${project.year}`}
           description={project.shortDescription}
@@ -64,7 +79,7 @@ export default async function Project(props: { params: Params }) {
         />
       </BlurFade>
       {project.gallery && project.gallery.length > 0 && (
-        <BlurFade delay={blurDelay++ / 10}>
+        <BlurFade delay={incrementBlurDelay()}>
           <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
             <CarouselContent>
               {project.gallery.map((element, index) => (
@@ -84,7 +99,7 @@ export default async function Project(props: { params: Params }) {
         </BlurFade>
       )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
-        <BlurFade delay={blurDelay++ / 10}>
+        <BlurFade delay={incrementBlurDelay()}>
           <Block icon={BookOpen} title='Description of the Project' position='left'>
             <span>{project.longDescription}</span>
             <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
@@ -95,28 +110,28 @@ export default async function Project(props: { params: Params }) {
           </Block>
         </BlurFade>
         {project.problem && (
-          <BlurFade delay={blurDelay++ / 10}>
+          <BlurFade delay={incrementBlurDelay()}>
             <Block icon={Frown} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.problem}
             </Block>
           </BlurFade>
         )}
         {project.solution && (
-          <BlurFade delay={blurDelay++ / 10}>
+          <BlurFade delay={incrementBlurDelay()}>
             <Block icon={Smile} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.solution}
             </Block>
           </BlurFade>
         )}
         {project.results && (
-          <BlurFade delay={blurDelay++ / 10}>
+          <BlurFade delay={incrementBlurDelay()}>
             <Block icon={Package} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.results}
             </Block>
           </BlurFade>
         )}
       </div>
-      <BlurFade delay={blurDelay++ / 10}>
+      <BlurFade delay={incrementBlurDelay()}>
         <SeeMore
           links={[
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },

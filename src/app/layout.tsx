@@ -21,7 +21,7 @@ const sourceSans3 = Source_Sans_3({
 export const metadata: Metadata = {
   title: 'Matthieu Vagnon | Front-End Engineer & Digital Designer for SaaS & Web Apps',
   description:
-    "Hi I'm Matthieu Vagnon, React/Next expert, front-end engineer and digital designer working independently since 2022 to provide my clients with cutting-edge SaaS and web apps."
+    "Hi I'm Matthieu Vagnon, React and Next.js expert, front-end engineer, digital designer and application deployment expert working independently since 2022 to provide my clients with cutting-edge SaaS and web apps."
 }
 
 type Card = {
