@@ -64,24 +64,24 @@ export default async function Project(props: { params: Params }) {
         />
       </BlurFade>
       {project.gallery && project.gallery.length > 0 && (
-        <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
-          <CarouselContent>
-            {project.gallery.map((element, index) => (
-              <CarouselItem
-                key={index}
-                className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
-              >
-                <BlurFade delay={blurDelay++ / 10}>
+        <BlurFade delay={blurDelay++ / 10}>
+          <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
+            <CarouselContent>
+              {project.gallery.map((element, index) => (
+                <CarouselItem
+                  key={index}
+                  className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
+                >
                   <MediaButton title={element.title} img={element.img} video={element.video} />
-                </BlurFade>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <BlurFade delay={blurDelay++ / 10} className='flex flex-row gap-2 items-center justify-start'>
-            <CarouselPrevious />
-            <CarouselNext />
-          </BlurFade>
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className='flex flex-row gap-2 items-center justify-start'>
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
+        </BlurFade>
       )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={blurDelay++ / 10}>
