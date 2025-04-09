@@ -9,7 +9,11 @@ import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
 import VideoPlayer from './ui/video-player'
 
-export function MediaButton({ title, img, video }: NonNullable<Project['gallery']>[number]) {
+type Props =
+  | { img: NonNullable<NonNullable<Project['gallery']>['img']>[number]; video?: never }
+  | { video: NonNullable<NonNullable<Project['gallery']>['video']>[number]; img?: never }
+
+export function MediaButton({ img, video }: Props) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -17,9 +21,12 @@ export function MediaButton({ title, img, video }: NonNullable<Project['gallery'
       <Magnetic intensity={0.07}>
         <DialogTrigger asChild>
           <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
-            {(img || video?.preview) && (
-              <Image src={img ?? video!.preview} placeholder='blur' alt={title} className='rounded-lg' />
-            )}
+            <Image
+              src={img?.image ?? video!.previewImage}
+              placeholder='blur'
+              alt={img?.title ?? video!.title}
+              className='rounded-lg'
+            />
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
                 <PlayIcon className='w-4 h-4 text-white' />
@@ -38,14 +45,14 @@ export function MediaButton({ title, img, video }: NonNullable<Project['gallery'
           >
             <DialogContent className='inline-block'>
               <VisuallyHidden asChild>
-                <DialogTitle>{title}</DialogTitle>
+                <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
               </VisuallyHidden>
-              {video?.src && video?.preview && <VideoPlayer src={video!.src} preview={video!.preview} />}
+              {video && <VideoPlayer src={video.src} preview={video.previewImage} />}
               {img && (
                 <Image
-                  src={img}
+                  src={img.image}
                   placeholder='blur'
-                  alt={title}
+                  alt={img.title}
                   className='w-full max-w-4xl mx-auto max-h-[calc(100vh-20px)] overflow-hidden rounded-md sm:rounded-lg md:rounded-xl'
                 />
               )}

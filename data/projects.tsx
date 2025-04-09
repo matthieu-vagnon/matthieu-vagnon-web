@@ -37,12 +37,14 @@ export const projects: Record<string, Project> = {
     previewImg: mvWeb1,
     type: 'Web Application',
     technologies: ['Cursor IDE', 'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
-    gallery: [
-      { title: 'Home Page', img: mvWeb1 },
-      { title: 'Case Study Page', img: mvWeb2 },
-      { title: 'Video Player', img: mvWeb3 },
-      { title: 'Meeting Scheduler', img: mvWeb4 }
-    ],
+    gallery: {
+      img: [
+        { title: 'Home Page', image: mvWeb1 },
+        { title: 'Case Study Page', image: mvWeb2 },
+        { title: 'Video Player', image: mvWeb3 },
+        { title: 'Meeting Scheduler', image: mvWeb4 }
+      ]
+    },
     relatedUrls: [
       {
         name: 'Matthieu Vagnon Web',
@@ -87,19 +89,33 @@ export const projects: Record<string, Project> = {
       'Vercel',
       'Supabase'
     ],
-    gallery: [
-      {
-        title: 'Builder Tour',
-        video: {
-          src: '/smart-interview/builder-1/video.mov',
-          preview: smartInterviewBuilder1Preview
+    gallery: {
+      img: [
+        {
+          title: 'Builder Editor',
+          image: smartInterviewBuilder2
+        },
+        {
+          title: 'Builder Preview',
+          image: smartInterviewBuilder3
+        },
+        {
+          title: 'Builder JSON Editor',
+          image: smartInterviewBuilder4
+        },
+        {
+          title: 'Builder Presets',
+          image: smartInterviewBuilder5
         }
-      },
-      { title: 'Builder Editor', img: smartInterviewBuilder2 },
-      { title: 'Builder Preview', img: smartInterviewBuilder3 },
-      { title: 'Builder JSON Editor', img: smartInterviewBuilder4 },
-      { title: 'Builder Presets', img: smartInterviewBuilder5 }
-    ],
+      ],
+      video: [
+        {
+          title: 'Builder Tour',
+          src: '/smart-interview/builder-1/video.mov',
+          previewImage: smartInterviewBuilder1Preview
+        }
+      ]
+    },
     problem: (
       <ol className='list-decimal list-inside'>
         <li>
@@ -171,12 +187,14 @@ export const projects: Record<string, Project> = {
     previewImg: koryoriYa3,
     type: 'Web Application',
     technologies: ['React', 'TypeScript', 'CSS', 'NPM', 'Vercel'],
-    gallery: [
-      { title: 'Loading Page', img: koryoriYa1 },
-      { title: 'Landing View', img: koryoriYa2 },
-      { title: 'Concept View', img: koryoriYa3 },
-      { title: 'Map', img: koryoriYa4 }
-    ],
+    gallery: {
+      img: [
+        { title: 'Loading Page', image: koryoriYa1 },
+        { title: 'Landing View', image: koryoriYa2 },
+        { title: 'Concept View', image: koryoriYa3 },
+        { title: 'Map', image: koryoriYa4 }
+      ]
+    },
     relatedUrls: [
       {
         name: 'Koryori Ya Ozaki',

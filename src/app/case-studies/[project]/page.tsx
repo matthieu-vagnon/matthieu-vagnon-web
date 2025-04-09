@@ -59,9 +59,17 @@ export async function generateMetadata(props: { params: Params }) {
       title: `${project.title} Case Study by Matthieu Vagnon`,
       description: project.shortDescription,
       images: [
+        ...(project.gallery?.img?.map((img) => ({
+          url: `${process.env.URL!}${img.image.src}`
+        })) || []),
         {
           url: `${process.env.URL!}/og-image.png`
         }
+      ],
+      videos: [
+        ...(project.gallery?.video?.map((video) => ({
+          url: `${process.env.URL!}${video.src}`
+        })) || [])
       ]
     },
     keywords: [
@@ -104,26 +112,36 @@ export default async function Project(props: { params: Params }) {
           tags={project.tags}
         />
       </BlurFade>
-      {project.gallery && project.gallery.length > 0 && (
-        <BlurFade delay={incrementBlurDelay()}>
-          <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
-            <CarouselContent>
-              {project.gallery.map((element, index) => (
-                <CarouselItem
-                  key={index}
-                  className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
-                >
-                  <MediaButton title={element.title} img={element.img} video={element.video} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className='flex flex-row gap-2 items-center justify-start'>
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </Carousel>
-        </BlurFade>
-      )}
+      {project.gallery &&
+        ((project.gallery.img && project.gallery.img?.length > 0) ||
+          (project.gallery.video && project.gallery.video?.length > 0)) && (
+          <BlurFade delay={incrementBlurDelay()}>
+            <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
+              <CarouselContent>
+                {project.gallery.video?.map((video, index) => (
+                  <CarouselItem
+                    key={index}
+                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
+                  >
+                    <MediaButton video={video} />
+                  </CarouselItem>
+                ))}
+                {project.gallery.img?.map((img, index) => (
+                  <CarouselItem
+                    key={index}
+                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
+                  >
+                    <MediaButton img={img} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className='flex flex-row gap-2 items-center justify-start'>
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            </Carousel>
+          </BlurFade>
+        )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={incrementBlurDelay()}>
           <Block icon={BookOpen} title='Description of the Project' position='left'>
