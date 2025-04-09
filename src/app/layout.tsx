@@ -26,12 +26,14 @@ export const metadata: Metadata = {
   description:
     "Hi I'm Matthieu Vagnon, React and Next.js expert, front-end engineer, digital designer and application deployment expert working independently since 2022 to provide my clients with cutting-edge SaaS and web apps.",
   openGraph: {
+    type: 'website',
+    siteName: 'Matthieu Vagnon Web',
     title: 'Matthieu Vagnon, Front-End Engineer & Digital Designer',
     description:
       'React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.',
     images: [
       {
-        url: 'https://mvagnon.dev/og-image.png'
+        url: `${process.env.URL!}/og-image.png`
       }
     ]
   },
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Matthieu Vagnon',
-      url: 'https://mvagnon.dev'
+      url: process.env.URL!
     }
   ]
 }
