@@ -17,7 +17,15 @@ export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
     title: 'Matthieu Vagnon Web',
     year: 2025,
-    tags: ['Web Application', 'Portfolio'],
+    tags: [
+      'Web Application',
+      'Portfolio',
+      'Web Project Management',
+      'Responsive Web Design',
+      'Web Development',
+      'Application Deployment',
+      'Web Maintenance'
+    ],
     shortDescription: 'The web application you are currently watching.',
     longDescription: (
       <span>
@@ -28,7 +36,7 @@ export const projects: Record<string, Project> = {
     ),
     previewImg: mvWeb1,
     type: 'Web Application',
-    technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
+    technologies: ['Cursor IDE', 'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
     gallery: [
       { title: 'Home Page', img: mvWeb1 },
       { title: 'Case Study Page', img: mvWeb2 },
@@ -45,7 +53,16 @@ export const projects: Record<string, Project> = {
   'smart-interview': {
     title: 'Smart Interview',
     year: 2024,
-    tags: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
+    tags: [
+      'AI',
+      'SaaS',
+      'Questionnaire',
+      'Mass Analysis',
+      'Responsive Web Design',
+      'Web Development',
+      'Application Deployment',
+      'Web Maintenance'
+    ],
     shortDescription: 'A platform to create AI-powered questionnaires and mass analyze responses.',
     longDescription: (
       <span>
@@ -125,7 +142,15 @@ export const projects: Record<string, Project> = {
   'koryori-ya': {
     title: 'Koryori Ya Ozaki',
     year: 2024,
-    tags: ['Web Application', 'Japanese Restaurant'],
+    tags: [
+      'Web Application',
+      'Japanese Restaurant',
+      'Web Project Management',
+      'Responsive Web Design',
+      'Web Development',
+      'Application Deployment',
+      'Web Maintenance'
+    ],
     shortDescription: 'A simple web application for a Japanese restaurant.',
     longDescription: (
       <span>
@@ -152,7 +177,17 @@ export const projects: Record<string, Project> = {
   crystal: {
     title: 'Crystal',
     year: 2023,
-    tags: ['AI', 'SaaS', 'Trading', 'Analysis'],
+    tags: [
+      'AI',
+      'SaaS',
+      'Trading',
+      'Analysis',
+      'Web Project Management',
+      'Responsive Web Design',
+      'Web Development',
+      'Application Deployment',
+      'Web Maintenance'
+    ],
     shortDescription: 'A platform to view and manage AI-powered trading tools.',
     longDescription: (
       <span>
