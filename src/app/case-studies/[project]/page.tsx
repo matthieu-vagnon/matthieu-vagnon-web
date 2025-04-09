@@ -5,10 +5,10 @@ import SeeMore from '@/components/see-more'
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { projects } from '@/data/projects'
 import { cn } from '@/lib/utils'
 import { BookOpen, Frown, LucideIcon, Package, Smile } from 'lucide-react'
 import React from 'react'
-import { projects } from '../../../../data/projects'
 
 function Block({
   icon: Icon,
@@ -51,8 +51,26 @@ export async function generateMetadata(props: { params: Params }) {
   const project = projects[params.project]
 
   return {
-    title: `${project.title} Case Study | Matthieu Vagnon`,
-    description: project.longDescription
+    title: `${project.title} Case Study by Matthieu Vagnon`,
+    description: project.longDescription,
+    openGraph: {
+      title: `${project.title} Case Study by Matthieu Vagnon`,
+      description: project.shortDescription
+    },
+    keywords: [
+      'Matthieu Vagnon',
+      'Front-End Engineer',
+      'Digital Designer',
+      'SaaS',
+      'Web App',
+      'React',
+      'Next.js',
+      'Case Study',
+      'Case Study',
+      `${project.title}`,
+      `${project.year}`,
+      ...project.tags
+    ]
   }
 }
 

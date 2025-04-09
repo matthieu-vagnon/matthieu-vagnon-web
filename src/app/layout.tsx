@@ -19,9 +19,29 @@ const sourceSans3 = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: 'Matthieu Vagnon | Front-End Engineer & Digital Designer for SaaS & Web Apps',
+  title: {
+    default: 'Matthieu Vagnon, Front-End Engineer & Digital Designer',
+    template: '%s | Matthieu Vagnon'
+  },
   description:
-    "Hi I'm Matthieu Vagnon, React and Next.js expert, front-end engineer, digital designer and application deployment expert working independently since 2022 to provide my clients with cutting-edge SaaS and web apps."
+    "Hi I'm Matthieu Vagnon, React and Next.js expert, front-end engineer, digital designer and application deployment expert working independently since 2022 to provide my clients with cutting-edge SaaS and web apps.",
+  openGraph: {
+    title: 'Matthieu Vagnon, Front-End Engineer & Digital Designer',
+    description:
+      'React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.',
+    images: [
+      {
+        url: '/og-image.png'
+      }
+    ]
+  },
+  keywords: ['Matthieu Vagnon', 'Front-End Engineer', 'Digital Designer', 'SaaS', 'Web App', 'React', 'Next.js'],
+  authors: [
+    {
+      name: 'Matthieu Vagnon',
+      url: 'https://mvagnon.dev'
+    }
+  ]
 }
 
 type Card = {
