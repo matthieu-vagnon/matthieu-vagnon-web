@@ -25,7 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         title: media.title,
         description: project.shortDescription,
         thumbnail_loc: `${process.env.URL!}${media.previewImage.src}`,
-        content_loc: `${process.env.URL!}${media.src}`
+        content_loc: `${process.env.URL!}${media.src}`,
+        player_loc: `${process.env.URL!}/case-studies/${url}`
       }))
     }))
   ]
