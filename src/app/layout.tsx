@@ -1,6 +1,6 @@
 import AppsDock from '@/components/apps-dock'
-import Highlight from '@/components/highlight'
 import { CardStack } from '@/components/ui/card-stack'
+import { testimonials } from '@/data/testimonials'
 import DockStatusProvider from '@/hooks/use-dock-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
 import type { Metadata } from 'next'
@@ -46,45 +46,6 @@ export const metadata: Metadata = {
   ]
 }
 
-type Card = {
-  id: number
-  name: string
-  designation: string
-  content: React.ReactNode
-}
-
-const CARDS: Card[] = [
-  {
-    id: 0,
-    name: 'Mohamed Bibimoune',
-    designation: 'Head of TotalEnergies Gas&Power Predictive Department',
-    content: (
-      <p>
-        Matthieu provided Predictive Layer with <Highlight>high standard quality</Highlight> product from front-end
-        point of view. He developed <Highlight>several products</Highlight> used live by our customers to consume the
-        forecasts produced by our company. He is <Highlight>serious</Highlight> and always
-        <Highlight>delivers on time</Highlight>, taking into account our requirements. I would
-        <Highlight>highly recommend him</Highlight> as a service provider for any front application needed.
-      </p>
-    )
-  },
-  {
-    id: 1,
-    name: 'Serge Rigori',
-    designation: 'CEO and Chairman of Predictive Layer',
-    content: (
-      <p>
-        Matthieu has distinguished himself by his <Highlight>technical expertise</Highlight>, his
-        <Highlight>creativity</Highlight> and his <Highlight>commitment</Highlight> to the success of the projects
-        entrusted to him. He has notably demonstrated a<Highlight>perfect mastery</Highlight> of technologies as well as
-        the ability to <Highlight>adapt rapidly</Highlight> to our tools and processes. Matthieu has also demonstrated a
-        real talent for developing <Highlight>ergonomic</Highlight> and <Highlight>performant</Highlight> user
-        interfaces.
-      </p>
-    )
-  }
-]
-
 export default function RootLayout({
   children
 }: Readonly<{
@@ -98,7 +59,7 @@ export default function RootLayout({
           <TestimonialsStatusProvider>
             <DockStatusProvider>
               {children}
-              <CardStack items={CARDS} />
+              <CardStack items={testimonials} />
               <AppsDock />
             </DockStatusProvider>
           </TestimonialsStatusProvider>

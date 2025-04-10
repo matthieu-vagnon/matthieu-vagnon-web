@@ -1,6 +1,15 @@
 import { StaticImageData } from 'next/image'
 
 declare global {
+  type Testimonial = {
+    id: number
+    name: string
+    company: string
+    position: string
+    testimonial: React.ReactNode
+    method?: string
+    image: StaticImageData
+  }
   type Project = {
     title: string
     year: number

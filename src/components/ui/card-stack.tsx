@@ -4,27 +4,29 @@ import { useTestimonialsStatus } from '@/hooks/use-testimonials-status'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { BlurFade } from './blur-fade'
 
 let interval: NodeJS.Timeout
 
-type Card = {
-  id: number
-  name: string
-  designation: string
-  content: React.ReactNode
-}
-
-export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offset?: number; scaleFactor?: number }) => {
+export const CardStack = ({
+  items,
+  offset,
+  scaleFactor
+}: {
+  items: Testimonial[]
+  offset?: number
+  scaleFactor?: number
+}) => {
   const CARD_OFFSET = offset || 10
   const SCALE_FACTOR = scaleFactor || 0.06
-  const [cards, setCards] = useState<Card[]>(items)
+  const [cards, setCards] = useState<Testimonial[]>(items)
   const { isCollapsed, setIsCollapsed } = useTestimonialsStatus()
 
   const startFlipping = () => {
     interval = setInterval(() => {
-      setCards((prevCards: Card[]) => {
+      setCards((prevCards: Testimonial[]) => {
         const newArray = [...prevCards]
         newArray.unshift(newArray.pop()!)
         return newArray
@@ -81,10 +83,17 @@ export const CardStack = ({ items, offset, scaleFactor }: { items: Card[]; offse
                   zIndex: cards.length - index
                 }}
               >
-                <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200'>{card.content}</div>
-                <div>
-                  <p className='text-neutral-500 text-md font-medium dark:text-white'>{card.name}</p>
-                  <p className='text-neutral-400 text-sm font-normal dark:text-neutral-200'>{card.designation}</p>
+                <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200'>{card.testimonial}</div>
+                <div className='flex items-center justify-start gap-3'>
+                  {card.image && (
+                    <Image src={card.image} alt={card.name} width={35} height={35} className='rounded-full' />
+                  )}
+                  <div>
+                    <p className='text-neutral-500 text-md font-medium dark:text-white'>
+                      {`${card.name}${card.method ? ` via ${card.method}` : ''}`}
+                    </p>
+                    <p className='text-neutral-400 text-sm font-normal dark:text-neutral-200'>{card.position}</p>
+                  </div>
                 </div>
               </motion.div>
             )
