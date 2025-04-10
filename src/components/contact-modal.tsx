@@ -56,7 +56,7 @@ export function ContactModal() {
             <Cal
               namespace='30min'
               calLink='matthieu-vagnon/30min'
-              style={{ width: '100%', height: '100%', maxHeight: 'calc(100vh - 100px)', overflow: 'scroll' }}
+              style={{ width: '100%', height: '100%', maxHeight: 'calc(100svh - 100px)', overflow: 'scroll' }}
               config={{ layout: 'month_view' }}
             />
           </InnerDialogContent>

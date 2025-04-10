@@ -54,18 +54,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-        <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
-        <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-          <TestimonialsStatusProvider>
-            <DockStatusProvider>
+      <TestimonialsStatusProvider>
+        <DockStatusProvider>
+          <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
+            <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
+            <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
               {children}
               <CardStack items={testimonials} />
               <AppsDock />
-            </DockStatusProvider>
-          </TestimonialsStatusProvider>
-        </div>
-      </body>
+            </div>
+          </body>
+        </DockStatusProvider>
+      </TestimonialsStatusProvider>
       <SpeedInsights />
     </html>
   )
