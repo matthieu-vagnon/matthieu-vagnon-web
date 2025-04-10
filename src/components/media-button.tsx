@@ -47,7 +47,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
                 <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
               </VisuallyHidden>
               {video && (
-                <div className='relative w-[calc(100dvw-20px)] max-w-4xl pt-[56.25%]'>
+                <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
                   <iframe
                     src={video.src}
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
@@ -62,7 +62,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
                   src={img.image}
                   placeholder='blur'
                   alt={img.title}
-                  className='w-[calc(100dvw-20px)] max-w-4xl rounded-xl'
+                  className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
                 />
               )}
             </DialogContent>
