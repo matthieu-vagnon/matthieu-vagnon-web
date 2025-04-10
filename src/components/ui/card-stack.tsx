@@ -92,7 +92,9 @@ export const CardStack = ({
                     <p className='text-neutral-500 text-md font-medium dark:text-white'>
                       {`${card.name}${card.method ? ` via ${card.method}` : ''}`}
                     </p>
-                    <p className='text-neutral-400 text-sm font-normal dark:text-neutral-200'>{card.position}</p>
+                    <p className='text-neutral-400 text-sm font-normal dark:text-neutral-200'>
+                      {card.company} - {card.position}
+                    </p>
                   </div>
                 </div>
               </motion.div>
