@@ -3,6 +3,7 @@ import { CardStack } from '@/components/ui/card-stack'
 import { testimonials } from '@/data/testimonials'
 import DockStatusProvider from '@/hooks/use-dock-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
@@ -65,6 +66,7 @@ export default function RootLayout({
           </TestimonialsStatusProvider>
         </div>
       </body>
+      <SpeedInsights />
     </html>
   )
 }
