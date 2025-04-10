@@ -22,7 +22,7 @@ declare global {
     previewImg?: StaticImageData
     gallery?: {
       img?: { title: string; image: StaticImageData }[]
-      video?: { title: string; description: string; src: string; previewImage: StaticImageData }[]
+      video?: { title: string; src: string; previewImage: StaticImageData }[]
     }
     problem?: React.ReactNode
     solution?: React.ReactNode

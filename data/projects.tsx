@@ -7,7 +7,7 @@ import mvWeb1 from '@/public/matthieu-vagnon/web-1.png'
 import mvWeb2 from '@/public/matthieu-vagnon/web-2.png'
 import mvWeb3 from '@/public/matthieu-vagnon/web-3.png'
 import mvWeb4 from '@/public/matthieu-vagnon/web-4.png'
-import smartInterviewBuilder1Preview from '@/public/smart-interview/builder-1/preview.png'
+import smartInterviewBuilder1 from '@/public/smart-interview/builder-1.png'
 import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png'
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png'
 import smartInterviewBuilder4 from '@/public/smart-interview/builder-4.png'
@@ -110,10 +110,8 @@ export const projects: Record<string, Project> = {
       video: [
         {
           title: 'Builder Tour',
-          description:
-            'Matthieu Vagnon worked on Smart Interview. Here is a tour of the builder editor from this tool.',
-          src: '/smart-interview/builder-1/video.mov',
-          previewImage: smartInterviewBuilder1Preview
+          src: 'https://www.youtube.com/embed/zy5hgYR-H74',
+          previewImage: smartInterviewBuilder1
         }
       ]
     },

@@ -7,7 +7,6 @@ import { PlayIcon } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
-import VideoPlayer from './ui/video-player'
 
 type Props =
   | { img: NonNullable<NonNullable<Project['gallery']>['img']>[number]; video?: never; isOpen?: never }
@@ -47,13 +46,23 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
               <VisuallyHidden asChild>
                 <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
               </VisuallyHidden>
-              {video && <VideoPlayer src={video.src} preview={video.previewImage} />}
+              {video && (
+                <div className='relative w-[calc(100dvw-20px)] max-w-4xl pt-[56.25%]'>
+                  <iframe
+                    src={video.src}
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    referrerPolicy='strict-origin-when-cross-origin'
+                    allowFullScreen
+                    className='absolute top-0 left-0 w-full h-full border-0 rounded-md sm:rounded-lg md:rounded-xl'
+                  />
+                </div>
+              )}
               {img && (
                 <Image
                   src={img.image}
                   placeholder='blur'
                   alt={img.title}
-                  className='w-full max-w-4xl mx-auto max-h-[calc(100vh-20px)] overflow-hidden rounded-md sm:rounded-lg md:rounded-xl'
+                  className='w-[calc(100dvw-20px)] max-w-4xl rounded-md sm:rounded-lg md:rounded-xl'
                 />
               )}
             </DialogContent>
