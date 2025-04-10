@@ -194,9 +194,10 @@ export default async function Project(props: { params: Params; searchParams: Pro
       <BlurFade delay={incrementBlurDelay()}>
         <SeeMore
           links={[
+            ...(project.relatedUrls?.map((url) => ({ important: true, ...url })) || []),
+            { name: 'Youtube Channel', url: 'https://www.youtube.com/@matthieu-vagnon' },
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
-            { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' },
-            ...(project.relatedUrls || [])
+            { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
           ]}
           className='mt-10 sm:mt-12 md:mt-14 mb-28'
         />

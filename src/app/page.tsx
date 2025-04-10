@@ -16,6 +16,10 @@ const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://linkedin.com/in/matthieu-vagnon'
   },
   {
+    label: 'Youtube Channel',
+    link: 'https://www.youtube.com/@matthieu-vagnon'
+  },
+  {
     label: 'Instagram Portfolio',
     link: 'https://instagram.com/matthieu.vagnon'
   },
