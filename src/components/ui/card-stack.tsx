@@ -53,7 +53,7 @@ export const CardStack = ({
       <div
         className={cn(
           'w-120 h-60 justify-center items-center gap-2 hidden md:flex transition-all ease-[cubic-bezier(.17,.67,.49,1.32)] duration-400',
-          isCollapsed && 'translate-x-110'
+          isCollapsed && 'translate-x-108'
         )}
       >
         <div className='h-full w-5'>

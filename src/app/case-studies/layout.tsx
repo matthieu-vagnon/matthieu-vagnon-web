@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Matthieu Vagnon Web',
     title: 'Matthieu Vagnon Case Studies',
-    description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.',
-    images: [
-      {
-        url: `${process.env.URL!}/og-image.png`
-      }
-    ]
+    description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.'
+    // images: [
+    //   {
+    //     url: `${process.env.URL!}/og-image.png`
+    //   }
+    // ]
   },
   keywords: [
     'Matthieu Vagnon',
