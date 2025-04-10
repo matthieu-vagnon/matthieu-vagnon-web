@@ -19,7 +19,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
     <Dialog open={open} onOpenChange={setOpen}>
       <Magnetic intensity={0.07}>
         <DialogTrigger asChild>
-          <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300'>
+          <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 outline-none'>
             <Image
               src={img?.image ?? video!.previewImage}
               placeholder='blur'
