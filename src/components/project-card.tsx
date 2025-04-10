@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { Magnetic } from './ui/magnetic'
 
 const typeVariants = {
-  'Web Application': 'bg-blue-500 border-1 border-blue-400/80 outline-1 outline-blue-500/60 text-blue-900',
-  SaaS: 'bg-green-500 border-1 border-green-400/80 outline-1 outline-green-500/60 text-green-900',
-  Contribution: 'bg-yellow-500 border-1 border-yellow-400/80 outline-1 outline-yellow-500/60 text-yellow-900',
-  Other: 'bg-gray-500 border-1 border-gray-400/80 outline-1 outline-gray-500/60 text-gray-900'
+  'Web Application': 'bg-blue-500 border-1 border-blue-400/80 outline-1 outline-blue-500/60',
+  SaaS: 'bg-green-500 border-1 border-green-400/80 outline-1 outline-green-500/60',
+  Contribution: 'bg-yellow-500 border-1 border-yellow-400/80 outline-1 outline-yellow-500/60',
+  Other: 'bg-gray-500 border-1 border-gray-400/80 outline-1 outline-gray-500/60'
 }
 
 export default function ProjectCard({
