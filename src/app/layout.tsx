@@ -56,7 +56,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
         <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
-        <div className='max-w-[3840px] mx-auto relative min-h-dvh px-4 sm:px-6 md:px-8 overflow-x-hidden'>
+        <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
           <TestimonialsStatusProvider>
             <DockStatusProvider>
               {children}
