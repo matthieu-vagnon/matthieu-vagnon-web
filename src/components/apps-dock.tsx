@@ -1,13 +1,15 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
-import { BriefcaseBusiness, HomeIcon, MessageCircle } from 'lucide-react'
+import { BriefcaseBusiness, Cog, HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { ConfigurationModal } from './configuration-modal'
 import { ContactModal } from './contact-modal'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 import { Dialog, DialogTrigger } from './ui/nested-dialog'
 import { ProgressiveBlur } from './ui/progressive-blur'
+import { Separator } from './ui/separator'
 
 type App = {
   title: string
@@ -32,17 +34,20 @@ const APPS: App[] = [
     title: 'Case Studies',
     icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
     url: '/case-studies'
-  },
+  }
+]
+
+const MODALS: App[] = [
   {
     title: 'Get In Touch',
     icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
     modal: <ContactModal />
+  },
+  {
+    title: 'Configuration',
+    icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
+    modal: <ConfigurationModal />
   }
-  // {
-  //   title: 'Configuration',
-  //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   modal: <ConfigurationModal />
-  // }
 ]
 
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
@@ -68,18 +73,18 @@ export default function AppsDock() {
         } transition-transform duration-300`}
       >
         <Dock className='items-end pb-3'>
-          {APPS.map((app, idx) =>
-            app.modal ? (
-              <DialogTrigger key={idx} asChild>
-                <DockElement app={app} onClick={() => setActiveModal(idx)} />
-              </DialogTrigger>
-            ) : (
-              <DockElement key={idx} app={app} />
-            )
-          )}
+          {APPS.map((app, idx) => (
+            <DockElement key={idx} app={app} />
+          ))}
+          <Separator orientation='vertical' className='h-10' />
+          {MODALS.map((modal, idx) => (
+            <DialogTrigger key={idx} asChild>
+              <DockElement app={modal} onClick={() => setActiveModal(idx)} />
+            </DialogTrigger>
+          ))}
         </Dock>
       </div>
-      {activeModal !== undefined && APPS[activeModal].modal}
+      {activeModal !== undefined && MODALS[activeModal].modal}
       <ProgressiveBlur direction='bottom' className='pointer-events-none fixed bottom-0 left-0 h-24 w-full z-99' />
     </Dialog>
   )
