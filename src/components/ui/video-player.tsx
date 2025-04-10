@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Pause, Play, Volume1, Volume2, VolumeX } from 'lucide-react'
 import { StaticImageData } from 'next/image'
-import { useRef, useState } from 'react'
+import { Suspense, useRef, useState } from 'react'
 
 const formatTime = (seconds: number) => {
   const minutes = Math.floor(seconds / 60)
@@ -119,15 +119,17 @@ const VideoPlayer = ({ src, preview }: { src: string; preview: StaticImageData }
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
-      <video
-        ref={videoRef}
-        className='h-full max-h-[calc(100vh-20px)] w-full max-w-4xl mx-auto'
-        onTimeUpdate={handleTimeUpdate}
-        src={src}
-        onClick={togglePlay}
-        autoPlay
-        poster={preview.src}
-      />
+      <Suspense fallback={<p>Loading video...</p>}>
+        <video
+          ref={videoRef}
+          className='h-full max-h-[calc(100vh-20px)] w-full max-w-4xl mx-auto'
+          onTimeUpdate={handleTimeUpdate}
+          src={src}
+          onClick={togglePlay}
+          autoPlay
+          poster={preview.src}
+        />
+      </Suspense>
 
       <AnimatePresence>
         {showControls && (
