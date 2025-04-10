@@ -36,6 +36,14 @@ function Block({
   )
 }
 
+function Skill({ skill }: { skill: string }) {
+  return (
+    <div className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white border border-gray-400 outline outline-gray-500'>
+      {skill}
+    </div>
+  )
+}
+
 function Technology({ technology }: { technology: string }) {
   return (
     <div className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white border border-gray-400 outline outline-gray-500'>
@@ -85,6 +93,7 @@ export async function generateMetadata(props: { params: Params }) {
       `${project.title}`,
       `${project.year}`,
       ...project.tags,
+      ...project.skills,
       ...project.technologies
     ]
   }
@@ -148,6 +157,11 @@ export default async function Project(props: { params: Params; searchParams: Pro
         <BlurFade delay={incrementBlurDelay()}>
           <Block icon={BookOpen} title='Description of the Project' position='left'>
             <span>{project.longDescription}</span>
+            <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
+              {project.skills.map((skill, index) => (
+                <Skill key={index} skill={skill} />
+              ))}
+            </div>
             <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
               {project.technologies.map((technology, index) => (
                 <Technology key={index} technology={technology} />
