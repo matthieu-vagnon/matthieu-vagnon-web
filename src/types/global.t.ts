@@ -4,15 +4,16 @@ declare global {
   type Project = {
     title: string
     year: number
-    tags: string[]
+    type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     shortDescription: string
     longDescription: React.ReactNode
-    previewImg?: StaticImageData
-    type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
+    tags: string[]
+    skills: string[]
     technologies: string[]
+    previewImg?: StaticImageData
     gallery?: {
       img?: { title: string; image: StaticImageData }[]
-      video?: { title: string; src: string; previewImage: StaticImageData }[]
+      video?: { title: string; description: string; src: string; previewImage: StaticImageData }[]
     }
     problem?: React.ReactNode
     solution?: React.ReactNode

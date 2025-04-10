@@ -23,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       images: project.gallery?.img?.map((media) => `${process.env.URL!}${media.image.src}`),
       videos: project.gallery?.video?.map((media, index) => ({
         title: media.title,
-        description: project.shortDescription,
+        description: media.description,
         thumbnail_loc: `${process.env.URL!}${media.previewImage.src}`,
         content_loc: `${process.env.URL!}${media.src}`,
         player_loc: `${process.env.URL!}/case-studies/${url}?video=${index}`

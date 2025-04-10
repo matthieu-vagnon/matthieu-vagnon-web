@@ -17,15 +17,7 @@ export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
     title: 'Matthieu Vagnon Web',
     year: 2025,
-    tags: [
-      'Web Application',
-      'Portfolio',
-      'Web Project Management',
-      'Responsive Web Design',
-      'Web Development',
-      'Application Deployment',
-      'Web Maintenance'
-    ],
+    type: 'Web Application',
     shortDescription: 'The web application you are currently watching.',
     longDescription: (
       <span>
@@ -34,9 +26,17 @@ export const projects: Record<string, Project> = {
         my links in a simple way on <Highlight color='gray'>mobile and desktop</Highlight>.
       </span>
     ),
-    previewImg: mvWeb1,
-    type: 'Web Application',
+    tags: ['Web Application', 'Portfolio'],
+    skills: [
+      'Web Development',
+      'Web Design',
+      'Responsive Design',
+      'Web Project Management',
+      'Deployment',
+      'Web Maintenance'
+    ],
     technologies: ['Cursor IDE', 'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
+    previewImg: mvWeb1,
     gallery: {
       img: [
         { title: 'Home Page', image: mvWeb1 },
@@ -55,16 +55,7 @@ export const projects: Record<string, Project> = {
   'smart-interview': {
     title: 'Smart Interview',
     year: 2024,
-    tags: [
-      'AI',
-      'SaaS',
-      'Questionnaire',
-      'Mass Analysis',
-      'Responsive Web Design',
-      'Web Development',
-      'Application Deployment',
-      'Web Maintenance'
-    ],
+    type: 'SaaS',
     shortDescription: 'A platform to create AI-powered questionnaires and mass analyze responses.',
     longDescription: (
       <span>
@@ -76,8 +67,15 @@ export const projects: Record<string, Project> = {
         add maximum details to the analysis.
       </span>
     ),
-    previewImg: smartInterviewBuilder5,
-    type: 'SaaS',
+    tags: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
+    skills: [
+      'Web Development',
+      'Web Design',
+      'Responsive Design',
+      'Web Project Management',
+      'Deployment',
+      'Web Maintenance'
+    ],
     technologies: [
       'Cursor IDE',
       'React',
@@ -89,6 +87,7 @@ export const projects: Record<string, Project> = {
       'Vercel',
       'Supabase'
     ],
+    previewImg: smartInterviewBuilder5,
     gallery: {
       img: [
         {
@@ -111,6 +110,8 @@ export const projects: Record<string, Project> = {
       video: [
         {
           title: 'Builder Tour',
+          description:
+            'Matthieu Vagnon worked on Smart Interview. Here is a tour of the builder editor from this tool.',
           src: '/smart-interview/builder-1/video.mov',
           previewImage: smartInterviewBuilder1Preview
         }
@@ -168,15 +169,7 @@ export const projects: Record<string, Project> = {
   'koryori-ya': {
     title: 'Koryori Ya Ozaki',
     year: 2024,
-    tags: [
-      'Web Application',
-      'Japanese Restaurant',
-      'Web Project Management',
-      'Responsive Web Design',
-      'Web Development',
-      'Application Deployment',
-      'Web Maintenance'
-    ],
+    type: 'Web Application',
     shortDescription: 'A simple web application for a Japanese restaurant.',
     longDescription: (
       <span>
@@ -184,9 +177,17 @@ export const projects: Record<string, Project> = {
         their adress and letting people <Highlight color='gray'>call them</Highlight> via the push of a button.
       </span>
     ),
-    previewImg: koryoriYa3,
-    type: 'Web Application',
+    tags: ['Web Application', 'Japanese Restaurant'],
+    skills: [
+      'Web Development',
+      'Web Design',
+      'Responsive Design',
+      'Web Project Management',
+      'Deployment',
+      'Web Maintenance'
+    ],
     technologies: ['React', 'TypeScript', 'CSS', 'NPM', 'Vercel'],
+    previewImg: koryoriYa3,
     gallery: {
       img: [
         { title: 'Loading Page', image: koryoriYa1 },
@@ -205,17 +206,7 @@ export const projects: Record<string, Project> = {
   crystal: {
     title: 'Crystal',
     year: 2023,
-    tags: [
-      'AI',
-      'SaaS',
-      'Trading',
-      'Analysis',
-      'Web Project Management',
-      'Responsive Web Design',
-      'Web Development',
-      'Application Deployment',
-      'Web Maintenance'
-    ],
+    type: 'SaaS',
     shortDescription: 'A platform to view and manage AI-powered trading tools.',
     longDescription: (
       <span>
@@ -224,7 +215,15 @@ export const projects: Record<string, Project> = {
         <Highlight color='gray'>TotalEnergies</Highlight> as Predictive Layer is now part of them.
       </span>
     ),
-    type: 'SaaS',
+    tags: ['AI', 'SaaS', 'Trading', 'Analysis'],
+    skills: [
+      'Web Development',
+      'Web Design',
+      'Responsive Design',
+      'Web Project Management',
+      'Deployment',
+      'Web Maintenance'
+    ],
     technologies: ['React', 'JavaScript', 'NPM', 'React Router', 'Material UI', 'MUI-X'],
     problem: (
       <span>
