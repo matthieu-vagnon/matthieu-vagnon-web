@@ -33,7 +33,7 @@ export default function CaseStudies() {
       <BlurFade delay={0.4 + Object.keys(projects).length * 0.1}>
         <SeeMore
           links={[
-            { name: 'Youtube Channel', url: 'https://www.youtube.com/@matthieu-vagnon' },
+            { name: 'YouTube', url: 'https://www.youtube.com/@matthieu-vagnon' },
             { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
             { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
           ]}
