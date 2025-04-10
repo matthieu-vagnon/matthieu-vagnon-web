@@ -66,7 +66,7 @@ const DialogContent = React.forwardRef<
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          'fixed overflow-hidden left-1/2 top-1/2 z-102 w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
+          'max-h-[calc(100svh-1rem)] flex flex-col fixed overflow-hidden left-1/2 top-1/2 z-102 w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
           context.innerOpen && 'translate-y-[-60%] translate-x-[-55%] scale-[0.95]',
           className
         )}
@@ -165,7 +165,9 @@ const InnerDialogContent = React.forwardRef<
         )}
         {...props}
       >
-        <div ref={contentRef}>{children}</div>
+        <div ref={contentRef} className='max-h-[calc(100svh-1rem)] flex flex-col'>
+          {children}
+        </div>
         <DialogClose className='hover:cursor-pointer absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
           <X className='h-4 w-4' />
           <span className='sr-only'>Close</span>
@@ -207,7 +209,7 @@ const InnerDialogDescription = React.forwardRef<
 InnerDialogDescription.displayName = 'InnerDialogDescription'
 
 const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn('flex flex-col space-y-1.5 text-left h-fit', className)} {...props} />
+  <div className={cn('flex flex-col space-y-1.5 text-left h-fit border-b p-4', className)} {...props} />
 )
 DialogHeader.displayName = 'DialogHeader'
 
