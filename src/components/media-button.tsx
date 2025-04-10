@@ -42,7 +42,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
             transition={{ duration: 0.5 }}
             className='inline-block'
           >
-            <DialogContent className='inline-block'>
+            <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-scroll rounded-sm'>
               <VisuallyHidden asChild>
                 <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
               </VisuallyHidden>
@@ -53,7 +53,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                     referrerPolicy='strict-origin-when-cross-origin'
                     allowFullScreen
-                    className='absolute top-0 left-0 w-full h-full border-0 rounded-md sm:rounded-lg md:rounded-xl'
+                    className='absolute top-0 left-0 w-full h-full border-0 rounded-xl'
                   />
                 </div>
               )}
@@ -62,7 +62,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
                   src={img.image}
                   placeholder='blur'
                   alt={img.title}
-                  className='w-[calc(100dvw-20px)] max-w-4xl rounded-md sm:rounded-lg md:rounded-xl'
+                  className='w-[calc(100dvw-20px)] max-w-4xl rounded-xl'
                 />
               )}
             </DialogContent>
