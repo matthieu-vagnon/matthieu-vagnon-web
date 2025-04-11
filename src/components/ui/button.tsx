@@ -61,15 +61,17 @@ function Button({
   variant,
   size,
   asChild = false,
+  noMagnetic = false,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    noMagnetic?: boolean
   }) {
   const Comp = asChild ? Slot : 'button'
 
   return (
-    <ButtonWrapper size={size} disabled={props.disabled ?? false}>
+    <ButtonWrapper size={size} disabled={props.disabled || noMagnetic}>
       <Comp data-slot='button' className={cn(buttonVariants({ variant, size, className }))} {...props} />
     </ButtonWrapper>
   )
@@ -82,6 +84,7 @@ function LinkButton({
   href,
   external = false,
   noExternalIndicator = false,
+  noMagnetic = false,
   children,
   ...props
 }: LinkProps &
@@ -90,9 +93,10 @@ function LinkButton({
     href: string
     external?: boolean
     noExternalIndicator?: boolean
+    noMagnetic?: boolean
   }) {
   return (
-    <ButtonWrapper size={size}>
+    <ButtonWrapper size={size} disabled={noMagnetic}>
       <Link
         href={href}
         target={external ? '_blank' : '_self'}

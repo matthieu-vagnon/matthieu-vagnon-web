@@ -20,7 +20,6 @@ function MagneticElement({
   children,
   intensity = 0.6,
   range,
-  disabled = false,
   actionArea = 'self',
   springOptions = SPRING_CONFIG,
   className
@@ -40,10 +39,14 @@ function MagneticElement({
         const centerY = rect.top + rect.height / 2
         const distanceX = e.clientX - centerX
         const distanceY = e.clientY - centerY
-
         const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
 
-        if (isHovered && !disabled) {
+        const reset = () => {
+          x.set(0)
+          y.set(0)
+        }
+
+        if (isHovered) {
           if (range) {
             if (absoluteDistance <= range) {
               const scale = 1 - absoluteDistance / range
@@ -51,16 +54,14 @@ function MagneticElement({
               x.set(distanceX * intensity * scale)
               y.set(distanceY * intensity * scale)
             } else {
-              x.set(0)
-              y.set(0)
+              reset()
             }
           } else {
             x.set(distanceX * intensity)
             y.set(distanceY * intensity)
           }
         } else {
-          x.set(0)
-          y.set(0)
+          reset()
         }
       }
     }
@@ -124,9 +125,9 @@ function MagneticElement({
 export function Magnetic(props: MagneticProps) {
   const { isMagnetic } = useMagneticStatus()
 
-  return isMagnetic ? (
-    <MagneticElement {...props}>{props.children}</MagneticElement>
-  ) : (
+  return !isMagnetic || props.disabled ? (
     <div className={props.className}>{props.children}</div>
+  ) : (
+    <MagneticElement {...props}>{props.children}</MagneticElement>
   )
 }
