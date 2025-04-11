@@ -38,7 +38,7 @@ export function ConfigurationModal() {
               <SelectValue placeholder='Select a color' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='default'>Default (Blue)</SelectItem>
+              <SelectItem value='default'>Blue</SelectItem>
               <SelectItem value='green'>Green</SelectItem>
               <SelectItem value='yellow'>Yellow</SelectItem>
             </SelectContent>
