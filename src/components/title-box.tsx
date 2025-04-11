@@ -1,6 +1,7 @@
 'use client'
 
 import { LayoutGroup, motion } from 'framer-motion'
+import Logo from './logo'
 import { BlurFade } from './ui/blur-fade'
 import { Card, CardContent } from './ui/card'
 import { TextRotate } from './ui/text-rotate'
@@ -13,6 +14,11 @@ export default function TitleBox() {
           <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
             <Card variant='dots' className='h-fit w-fit bg-white'>
               <CardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
+                <BlurFade className='flex mb-2'>
+                  <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
+                    <Logo />
+                  </motion.span>
+                </BlurFade>
                 <BlurFade delay={0.1} className='flex'>
                   <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                     Hello, I&apos;m <span className='font-bold'>Matthieu Vagnon</span>,
