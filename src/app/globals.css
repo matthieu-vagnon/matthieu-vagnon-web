@@ -5,9 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-main-default: var(--main-default);
-  --color-main-green: var(--main-green);
-  --color-main-yellow: var(--main-yellow);
+  --color-main: var(--main-default);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-source-sans-3);
@@ -49,9 +47,7 @@
 
 :root {
   --radius: 0.625rem;
-  --main-default: #007fff;
-  --main-green: #00ff00;
-  --main-yellow: #ffff00;
+  --main: #007fff;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -117,6 +113,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+html[data-accent-color='green'] {
+  --main: #00ff00;
+}
+
+html[data-accent-color='yellow'] {
+  --main: #ffff00;
 }
 
 @layer base {

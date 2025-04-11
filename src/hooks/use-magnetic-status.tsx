@@ -14,6 +14,11 @@ const MagneticStatusContext = createContext<{
 export default function MagneticStatusProvider({ children }: { children: React.ReactNode }) {
   const [isMagnetic, setIsMagnetic] = useState(true)
 
+  const changeIsMagnetic = (isMagnetic: boolean) => {
+    setIsMagnetic(isMagnetic)
+    setCookie('magnetic', isMagnetic.toString())
+  }
+
   useEffect(() => {
     getCookie('magnetic').then((cookie) => {
       if (cookie) {
@@ -21,11 +26,6 @@ export default function MagneticStatusProvider({ children }: { children: React.R
       }
     })
   }, [])
-
-  const changeIsMagnetic = (isMagnetic: boolean) => {
-    setIsMagnetic(isMagnetic)
-    setCookie('magnetic', isMagnetic.toString())
-  }
 
   return (
     <MagneticStatusContext.Provider value={{ isMagnetic, changeIsMagnetic }}>{children}</MagneticStatusContext.Provider>

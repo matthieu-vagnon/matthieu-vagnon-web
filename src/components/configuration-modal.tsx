@@ -1,5 +1,6 @@
 'use client'
 
+import { useAccentColor } from '@/hooks/use-accent-color'
 import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { Checkbox } from './ui/checkbox'
 import { Label } from './ui/label'
@@ -8,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus()
+  const { accentColor, changeAccentColor } = useAccentColor()
 
   return (
     <DialogContent className='p-0'>
@@ -31,7 +33,7 @@ export function ConfigurationModal() {
         </div>
         <div className='flex flex-col gap-2'>
           <Label>Accent Color</Label>
-          <Select>
+          <Select value={accentColor} onValueChange={changeAccentColor}>
             <SelectTrigger>
               <SelectValue placeholder='Select a color' />
             </SelectTrigger>

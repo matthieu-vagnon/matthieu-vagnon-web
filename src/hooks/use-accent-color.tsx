@@ -7,25 +7,27 @@ const AccentColorContext = createContext<{
   accentColor: string
   changeAccentColor: (accentColor: string) => void
 }>({
-  accentColor: 'var(--main-default)',
+  accentColor: 'default',
   changeAccentColor: () => {}
 })
 
 export default function AccentColorProvider({ children }: { children: React.ReactNode }) {
-  const [accentColor, setAccentColor] = useState('var(--main-default)')
+  const [accentColor, setAccentColor] = useState('default')
+
+  const changeAccentColor = (accentColor: string) => {
+    document.documentElement.setAttribute('data-accent-color', accentColor)
+    setCookie('accent-color', accentColor)
+    setAccentColor(accentColor)
+  }
 
   useEffect(() => {
     getCookie('accent-color').then((cookie) => {
       if (cookie) {
+        document.documentElement.setAttribute('data-accent-color', cookie)
         setAccentColor(cookie)
       }
     })
   }, [])
-
-  const changeAccentColor = (accentColor: string) => {
-    setAccentColor(accentColor)
-    setCookie('accent-color', accentColor)
-  }
 
   return (
     <AccentColorContext.Provider value={{ accentColor, changeAccentColor }}>{children}</AccentColorContext.Provider>
