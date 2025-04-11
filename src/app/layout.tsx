@@ -1,6 +1,7 @@
 import AppsDock from '@/components/apps-dock'
 import { CardStack } from '@/components/ui/card-stack'
 import { testimonials } from '@/data/testimonials'
+import AccentColorProvider from '@/hooks/use-accent-color'
 import DockStatusProvider from '@/hooks/use-dock-status'
 import MagneticStatusProvider from '@/hooks/use-magnetic-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
@@ -58,14 +59,16 @@ export default function RootLayout({
       <TestimonialsStatusProvider>
         <DockStatusProvider>
           <MagneticStatusProvider>
-            <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-              <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
-              <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-                {children}
-                <CardStack items={testimonials} />
-                <AppsDock />
-              </div>
-            </body>
+            <AccentColorProvider>
+              <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
+                <NextTopLoader showSpinner={false} color='var(--main)' zIndex={999} />
+                <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
+                  {children}
+                  <CardStack items={testimonials} />
+                  <AppsDock />
+                </div>
+              </body>
+            </AccentColorProvider>
           </MagneticStatusProvider>
         </DockStatusProvider>
       </TestimonialsStatusProvider>
