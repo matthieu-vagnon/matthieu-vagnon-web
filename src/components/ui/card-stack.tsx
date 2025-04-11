@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { BlurFade } from './blur-fade'
+import { Magnetic } from './magnetic'
 
 let interval: NodeJS.Timeout
 
@@ -57,16 +58,14 @@ export const CardStack = ({
         )}
       >
         <div className='h-full w-5'>
-          <button
-            onClick={isCollapsed ? handleExpand : handleCollapse}
-            className='pointer-events-auto group h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all ease-in-out duration-200 hover:bg-neutral-200/50'
-          >
-            {isCollapsed ? (
-              <ChevronLeft className='size-4 transition-all ease-in-out duration-200 translate-x-0.5 group-hover:translate-x-0' />
-            ) : (
-              <ChevronRight className='size-4 transition-all ease-in-out duration-200 -translate-x-0.5 group-hover:translate-x-0' />
-            )}
-          </button>
+          <Magnetic size='sm' className='w-full h-full'>
+            <button
+              onClick={isCollapsed ? handleExpand : handleCollapse}
+              className='pointer-events-auto group h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all ease-in-out duration-200 hover:bg-neutral-200/50'
+            >
+              {isCollapsed ? <ChevronLeft className='size-4' /> : <ChevronRight className='size-4' />}
+            </button>
+          </Magnetic>
         </div>
         <div className='relative h-full w-full'>
           {cards.map((card, index) => {
