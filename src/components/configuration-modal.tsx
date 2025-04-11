@@ -1,5 +1,6 @@
 'use client'
 
+import { Checkbox } from './ui/checkbox'
 import { Label } from './ui/label'
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/nested-dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
@@ -24,6 +25,23 @@ export function ConfigurationModal() {
               <SelectItem value='jp'>日本語</SelectItem>
             </SelectContent>
           </Select>
+        </div>
+        <div className='flex flex-col gap-2'>
+          <Label>Accent Color</Label>
+          <Select>
+            <SelectTrigger>
+              <SelectValue placeholder='Select a color' />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value='default'>Default (Blue)</SelectItem>
+              <SelectItem value='green'>Green</SelectItem>
+              <SelectItem value='yellow'>Yellow</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className='flex flex-col gap-2'>
+          <Label>Magnetic Buttons</Label>
+          <Checkbox />
         </div>
       </div>
     </DialogContent>
