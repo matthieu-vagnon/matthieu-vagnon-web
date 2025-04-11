@@ -36,15 +36,7 @@ function Block({
   )
 }
 
-function Skill({ skill }: { skill: string }) {
-  return (
-    <div className='text-xs sm:text-sm bg-[var(--main-dark)] px-2 py-1 rounded-md text-white border border-[var(--main)]/50 outline outline-[var(--main-dark)]'>
-      {skill}
-    </div>
-  )
-}
-
-function Technology({ technology }: { technology: string }) {
+function SkillTag({ technology }: { technology: string }) {
   return (
     <div className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white border border-gray-400 outline outline-gray-500'>
       {technology}
@@ -156,16 +148,26 @@ export default async function Project(props: { params: Params; searchParams: Pro
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={incrementBlurDelay()}>
           <Block icon={BookOpen} title='Description of the Project' position='left'>
-            <span>{project.longDescription}</span>
-            <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
-              {project.skills.map((skill, index) => (
-                <Skill key={index} skill={skill} />
-              ))}
-            </div>
-            <div className='flex flex-row flex-wrap gap-2 mt-3 sm:mt-4 md:mt-5 items-center justify-start'>
-              {project.technologies.map((technology, index) => (
-                <Technology key={index} technology={technology} />
-              ))}
+            <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
+              <div>{project.longDescription}</div>
+              <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
+                <div className='flex flex-col gap-1'>
+                  <span className='text-sm font-medium text-gray-400'>Skills</span>
+                  <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
+                    {project.skills.map((skill, index) => (
+                      <SkillTag key={index} technology={skill} />
+                    ))}
+                  </div>
+                </div>
+                <div className='flex flex-col gap-1'>
+                  <span className='text-sm font-medium text-gray-400'>Technologies</span>
+                  <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
+                    {project.technologies.map((technology, index) => (
+                      <SkillTag key={index} technology={technology} />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </Block>
         </BlurFade>
