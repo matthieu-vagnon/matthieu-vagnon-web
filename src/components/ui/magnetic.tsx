@@ -16,7 +16,7 @@ export type MagneticProps = {
   className?: string
 }
 
-export function Magnetic({
+function MagneticElement({
   children,
   intensity = 0.6,
   range,
@@ -25,7 +25,6 @@ export function Magnetic({
   springOptions = SPRING_CONFIG,
   className
 }: MagneticProps) {
-  const { isMagnetic } = useMagneticStatus()
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
@@ -92,10 +91,6 @@ export function Magnetic({
     }
   }, [actionArea])
 
-  if (!isMagnetic) {
-    return <div className={className}>{children}</div>
-  }
-
   const handleMouseEnter = () => {
     if (actionArea === 'self') {
       setIsHovered(true)
@@ -123,5 +118,15 @@ export function Magnetic({
     >
       {children}
     </motion.div>
+  )
+}
+
+export function Magnetic(props: MagneticProps) {
+  const { isMagnetic } = useMagneticStatus()
+
+  return isMagnetic ? (
+    <MagneticElement {...props}>{props.children}</MagneticElement>
+  ) : (
+    <div className={props.className}>{props.children}</div>
   )
 }
