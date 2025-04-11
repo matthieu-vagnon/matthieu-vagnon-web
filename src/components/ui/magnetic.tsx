@@ -9,21 +9,12 @@ const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 }
 export type MagneticProps = {
   children: React.ReactNode
   intensity?: number
-  range?: number
   disabled?: boolean
-  actionArea?: 'self' | 'parent' | 'global'
   springOptions?: SpringOptions
   className?: string
 }
 
-function MagneticElement({
-  children,
-  intensity = 0.6,
-  range,
-  actionArea = 'self',
-  springOptions = SPRING_CONFIG,
-  className
-}: MagneticProps) {
+function MagneticElement({ children, intensity = 0.6, springOptions = SPRING_CONFIG, className }: MagneticProps) {
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
@@ -39,29 +30,13 @@ function MagneticElement({
         const centerY = rect.top + rect.height / 2
         const distanceX = e.clientX - centerX
         const distanceY = e.clientY - centerY
-        const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
-
-        const reset = () => {
-          x.set(0)
-          y.set(0)
-        }
 
         if (isHovered) {
-          if (range) {
-            if (absoluteDistance <= range) {
-              const scale = 1 - absoluteDistance / range
-
-              x.set(distanceX * intensity * scale)
-              y.set(distanceY * intensity * scale)
-            } else {
-              reset()
-            }
-          } else {
-            x.set(distanceX * intensity)
-            y.set(distanceY * intensity)
-          }
+          x.set(distanceX * intensity)
+          y.set(distanceY * intensity)
         } else {
-          reset()
+          x.set(0)
+          y.set(0)
         }
       }
     }
@@ -71,46 +46,23 @@ function MagneticElement({
     return () => {
       document.removeEventListener('mousemove', calculateDistance)
     }
-  }, [ref, isHovered, intensity, range])
-
-  useEffect(() => {
-    if (actionArea === 'parent' && ref.current?.parentElement) {
-      const parent = ref.current.parentElement
-
-      const handleParentEnter = () => setIsHovered(true)
-      const handleParentLeave = () => setIsHovered(false)
-
-      parent.addEventListener('mouseenter', handleParentEnter)
-      parent.addEventListener('mouseleave', handleParentLeave)
-
-      return () => {
-        parent.removeEventListener('mouseenter', handleParentEnter)
-        parent.removeEventListener('mouseleave', handleParentLeave)
-      }
-    } else if (actionArea === 'global') {
-      setIsHovered(true)
-    }
-  }, [actionArea])
+  }, [ref, isHovered, intensity])
 
   const handleMouseEnter = () => {
-    if (actionArea === 'self') {
-      setIsHovered(true)
-    }
+    setIsHovered(true)
   }
 
   const handleMouseLeave = () => {
-    if (actionArea === 'self') {
-      setIsHovered(false)
-      x.set(0)
-      y.set(0)
-    }
+    setIsHovered(false)
+    x.set(0)
+    y.set(0)
   }
 
   return (
     <motion.div
       ref={ref}
-      onMouseEnter={actionArea === 'self' ? handleMouseEnter : undefined}
-      onMouseLeave={actionArea === 'self' ? handleMouseLeave : undefined}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         x: springX,
         y: springY
