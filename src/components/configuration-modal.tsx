@@ -9,8 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus()
-  const { changeAccentColor } = useAccentColor()
-  const accentColor = document.documentElement.getAttribute('data-accent-color')
+  const { accentColor, changeAccentColor } = useAccentColor()
 
   return (
     <DialogContent className='p-0'>
@@ -34,7 +33,7 @@ export function ConfigurationModal() {
         </div>
         <div className='flex flex-col gap-2'>
           <Label>Accent Color</Label>
-          <Select value={accentColor ?? 'default'} onValueChange={changeAccentColor}>
+          <Select value={accentColor} onValueChange={changeAccentColor}>
             <SelectTrigger>
               <SelectValue placeholder='Select a color' />
             </SelectTrigger>
