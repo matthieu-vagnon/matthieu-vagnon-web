@@ -34,7 +34,7 @@ export function ContactModal() {
       <div className='flex flex-col gap-4 pt-1 pr-4 pb-4 pl-4'>
         <InnerDialog>
           <InnerDialogTrigger asChild>
-            <Button variant='outline' size='lg' className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'>
+            <Button variant='outline' size='md' className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'>
               <div className='flex items-center space-x-4'>
                 <Calendar size={16} />
                 <div>
@@ -63,7 +63,7 @@ export function ContactModal() {
         </InnerDialog>
         <LinkButton
           variant='outline'
-          size='lg'
+          size='md'
           className='flex justify-between min-h-16 sm:min-h-18 w-full text-left'
           href='mailto:mvagnon@icloud.com'
           external

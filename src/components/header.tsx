@@ -13,7 +13,8 @@ export default function Header() {
           href='https://github.com/matthieu-vagnon/matthieu-vagnon-web'
           external
           variant='link'
-          size='inline'
+          size='xs'
+          isInline
           className='text-base'
         >
           here

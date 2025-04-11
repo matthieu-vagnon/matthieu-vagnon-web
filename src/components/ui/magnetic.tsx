@@ -6,15 +6,22 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 }
 
+const SIZES_CONFIG = {
+  xs: 0.1,
+  sm: 0.09,
+  md: 0.06,
+  lg: 0.05
+}
+
 export type MagneticProps = {
   children: React.ReactNode
-  intensity?: number
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   disabled?: boolean
   springOptions?: SpringOptions
   className?: string
 }
 
-function MagneticElement({ children, intensity = 0.6, springOptions = SPRING_CONFIG, className }: MagneticProps) {
+function MagneticElement({ children, size = 'sm', springOptions = SPRING_CONFIG, className }: MagneticProps) {
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
@@ -32,8 +39,8 @@ function MagneticElement({ children, intensity = 0.6, springOptions = SPRING_CON
         const distanceY = e.clientY - centerY
 
         if (isHovered) {
-          x.set(distanceX * intensity)
-          y.set(distanceY * intensity)
+          x.set(distanceX * SIZES_CONFIG[size])
+          y.set(distanceY * SIZES_CONFIG[size])
         } else {
           x.set(0)
           y.set(0)
@@ -46,7 +53,7 @@ function MagneticElement({ children, intensity = 0.6, springOptions = SPRING_CON
     return () => {
       document.removeEventListener('mousemove', calculateDistance)
     }
-  }, [ref, isHovered, intensity])
+  }, [ref, isHovered, size])
 
   const handleMouseEnter = () => {
     setIsHovered(true)

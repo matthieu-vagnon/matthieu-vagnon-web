@@ -16,7 +16,7 @@ export default function ProjectCard({
   ...project
 }: Project & { coverImage: StaticImageData; url: string }) {
   return (
-    <Magnetic intensity={0.07} className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>
+    <Magnetic size='lg' className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>
       <Link
         href={url}
         className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 p-3 sm:p-4'

@@ -18,7 +18,13 @@ export default function SeeMore({
           <h3 className='font-sans-special text-lg sm:text-xl font-semibold'>Related Links</h3>
           <div className='flex flex-row gap-2 flex-wrap items-center justify-center'>
             {links.map((link) => (
-              <LinkButton key={link.name} external variant={link.important ? 'default' : 'outline'} href={link.url}>
+              <LinkButton
+                key={link.name}
+                external
+                size='sm'
+                variant={link.important ? 'default' : 'outline'}
+                href={link.url}
+              >
                 {link.name}
               </LinkButton>
             ))}
