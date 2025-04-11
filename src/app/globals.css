@@ -6,6 +6,8 @@
 
 @theme inline {
   --color-main: var(--main-default);
+  --color-main-variant: var(--main-variant);
+  --color-main-text: var(--main-text);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-source-sans-3);
@@ -48,6 +50,9 @@
 :root {
   --radius: 0.625rem;
   --main: #007fff;
+  --main-light: #d6eaff;
+  --main-dark: #001428;
+  --main-text: oklch(0.985 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -116,11 +121,17 @@
 }
 
 html[data-accent-color='green'] {
-  --main: #00ff00;
+  --main: #6aff6a;
+  --main-light: #deffde;
+  --main-dark: #004000;
+  --main-text: black;
 }
 
 html[data-accent-color='yellow'] {
-  --main: #ffff00;
+  --main: #ffff80;
+  --main-light: #ffffde;
+  --main-dark: #6e6e00;
+  --main-text: black;
 }
 
 @layer base {

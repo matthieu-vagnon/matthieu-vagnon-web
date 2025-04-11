@@ -25,7 +25,7 @@ export default function TitleBox() {
                     </motion.span>
                     <TextRotate
                       texts={['Front-End Engineer', 'Digital Designer', 'React & Next.js Expert']}
-                      mainClassName='text-white px-2 sm:px-2 md:px-3 bg-[#007fff] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg'
+                      mainClassName={`text-white px-2 sm:px-2 md:px-3 bg-[var(--main)] text-[var(--main-text)] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
                       staggerFrom={'last'}
                       initial={{ y: '100%' }}
                       animate={{ y: 0 }}

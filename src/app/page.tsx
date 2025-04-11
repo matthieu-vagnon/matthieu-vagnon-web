@@ -41,9 +41,9 @@ export default function Home() {
           <TitleBox />
           <BlurFade delay={0.3} className='flex'>
             <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
-              The <Highlight color='blue'>magician</Highlight> you&apos;ve always needed to{' '}
-              <Highlight color='blue'>unlock the full potential</Highlight> of your SaaS or web app through{' '}
-              <Highlight color='blue'>user experience</Highlight>.
+              The <Highlight color='default'>magician</Highlight> you&apos;ve always needed to{' '}
+              <Highlight color='default'>unlock the full potential</Highlight> of your SaaS or web app through{' '}
+              <Highlight color='default'>user experience</Highlight>.
             </p>
           </BlurFade>
           <BlurFade delay={0.4} className='flex'>
