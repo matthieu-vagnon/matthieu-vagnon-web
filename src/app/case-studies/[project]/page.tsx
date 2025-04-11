@@ -7,7 +7,7 @@ import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { projects } from '@/data/projects'
 import { cn } from '@/lib/utils'
-import { BookOpen, Frown, LucideIcon, Package, Smile } from 'lucide-react'
+import { LucideIcon, Sparkle } from 'lucide-react'
 import React from 'react'
 
 function Block({
@@ -147,12 +147,12 @@ export default async function Project(props: { params: Params; searchParams: Pro
         )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={incrementBlurDelay()}>
-          <Block icon={BookOpen} title='Description of the Project' position='left'>
+          <Block icon={Sparkle} title='Description of the Project' position='left'>
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
               <div>{project.longDescription}</div>
               <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm font-medium text-gray-400'>Skills</span>
+                  <span className='text-sm font-semibold text-gray-400'>Skills</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.skills.map((skill, index) => (
                       <SkillTag key={index} technology={skill} />
@@ -160,7 +160,7 @@ export default async function Project(props: { params: Params; searchParams: Pro
                   </div>
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm font-medium text-gray-400'>Technologies</span>
+                  <span className='text-sm font-semibold text-gray-400'>Technologies</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.technologies.map((technology, index) => (
                       <SkillTag key={index} technology={technology} />
@@ -173,21 +173,21 @@ export default async function Project(props: { params: Params; searchParams: Pro
         </BlurFade>
         {project.problem && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Frown} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block icon={Sparkle} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.problem}
             </Block>
           </BlurFade>
         )}
         {project.solution && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Smile} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block icon={Sparkle} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.solution}
             </Block>
           </BlurFade>
         )}
         {project.results && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Package} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block icon={Sparkle} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
               {project.results}
             </Block>
           </BlurFade>
