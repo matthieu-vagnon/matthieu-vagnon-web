@@ -38,7 +38,7 @@ function Block({
 
 function Skill({ skill }: { skill: string }) {
   return (
-    <div className='text-xs sm:text-sm bg-gray-400 px-2 py-1 rounded-md text-white border border-gray-300 outline outline-gray-400'>
+    <div className='text-xs sm:text-sm bg-[var(--main-dark)] px-2 py-1 rounded-md text-white border border-[var(--main)]/50 outline outline-[var(--main-dark)]'>
       {skill}
     </div>
   )
