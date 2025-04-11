@@ -2,6 +2,7 @@ import AppsDock from '@/components/apps-dock'
 import { CardStack } from '@/components/ui/card-stack'
 import { testimonials } from '@/data/testimonials'
 import DockStatusProvider from '@/hooks/use-dock-status'
+import MagneticStatusProvider from '@/hooks/use-magnetic-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
@@ -56,14 +57,16 @@ export default function RootLayout({
     <html lang='en'>
       <TestimonialsStatusProvider>
         <DockStatusProvider>
-          <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-            <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
-            <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-              {children}
-              <CardStack items={testimonials} />
-              <AppsDock />
-            </div>
-          </body>
+          <MagneticStatusProvider>
+            <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
+              <NextTopLoader showSpinner={false} color='#007fff' zIndex={999} />
+              <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
+                {children}
+                <CardStack items={testimonials} />
+                <AppsDock />
+              </div>
+            </body>
+          </MagneticStatusProvider>
         </DockStatusProvider>
       </TestimonialsStatusProvider>
       <SpeedInsights />

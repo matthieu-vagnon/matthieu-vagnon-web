@@ -1,5 +1,6 @@
 'use client'
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { motion, useMotionValue, useSpring, type SpringOptions } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -24,12 +25,11 @@ export function Magnetic({
   springOptions = SPRING_CONFIG,
   className
 }: MagneticProps) {
+  const { isMagnetic } = useMagneticStatus()
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-
   const x = useMotionValue(0)
   const y = useMotionValue(0)
-
   const springX = useSpring(x, springOptions)
   const springY = useSpring(y, springOptions)
 
@@ -91,6 +91,10 @@ export function Magnetic({
       setIsHovered(true)
     }
   }, [actionArea])
+
+  if (!isMagnetic) {
+    return <div className={className}>{children}</div>
+  }
 
   const handleMouseEnter = () => {
     if (actionArea === 'self') {

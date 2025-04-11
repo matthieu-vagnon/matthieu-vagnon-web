@@ -1,11 +1,14 @@
 'use client'
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { Checkbox } from './ui/checkbox'
 import { Label } from './ui/label'
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/nested-dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 
 export function ConfigurationModal() {
+  const { isMagnetic, changeIsMagnetic } = useMagneticStatus()
+
   return (
     <DialogContent className='p-0'>
       <DialogHeader className='border-b p-4'>
@@ -41,7 +44,7 @@ export function ConfigurationModal() {
         </div>
         <div className='flex flex-col gap-2'>
           <Label>Magnetic Buttons</Label>
-          <Checkbox />
+          <Checkbox checked={isMagnetic} onCheckedChange={changeIsMagnetic} />
         </div>
       </div>
     </DialogContent>
