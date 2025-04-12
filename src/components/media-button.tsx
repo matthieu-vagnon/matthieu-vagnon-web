@@ -42,7 +42,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
             transition={{ duration: 0.5 }}
             className='inline-block'
           >
-            <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-scroll rounded-sm'>
+            <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-auto rounded-sm'>
               <VisuallyHidden asChild>
                 <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
               </VisuallyHidden>

@@ -27,8 +27,8 @@ function Block({
   return (
     <div className={cn('flex w-full', position === 'left' ? 'justify-start' : 'justify-end', className)}>
       <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 w-full md:w-2/3 xl:w-1/2'>
-        <div className='flex flex-row items-center gap-2 md:gap-3 w-full'>
-          <Icon className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7' />
+        <div className='flex flex-row items-center gap-1 md:gap-2 w-full'>
+          <Icon strokeWidth={0} fill='currentColor' className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7' />
           <h3 className='text-xl sm:text-2xl md:text-3xl font-sans-special font-bold'>{title}</h3>
         </div>
         <div className='text-base md:text-lg text-gray-500'>{children}</div>

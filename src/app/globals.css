@@ -129,4 +129,16 @@ html[data-accent-color='pink'] {
   ::-webkit-scrollbar-thumb {
     @apply bg-gray-300;
   }
+
+  ::-webkit-scrollbar-button {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-resizer {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply hidden;
+  }
 }
