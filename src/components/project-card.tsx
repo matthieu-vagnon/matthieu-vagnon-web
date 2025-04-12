@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { Magnetic } from './ui/magnetic'
 
 const typeVariants = {
-  'Web Application': 'bg-blue-500 border-1 border-blue-400/80 outline-1 outline-blue-500/60',
-  SaaS: 'bg-green-500 border-1 border-green-400/80 outline-1 outline-green-500/60',
-  Contribution: 'bg-yellow-500 border-1 border-yellow-400/80 outline-1 outline-yellow-500/60',
-  Other: 'bg-gray-500 border-1 border-gray-400/80 outline-1 outline-gray-500/60'
+  'Web Application': 'bg-blue-500',
+  SaaS: 'bg-green-500',
+  Contribution: 'bg-yellow-500',
+  Other: 'bg-gray-500'
 }
 
 export default function ProjectCard({
@@ -21,7 +21,7 @@ export default function ProjectCard({
         href={url}
         className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 p-3 sm:p-4'
       >
-        <div className={cn('rounded-sm px-2 py-1 text-xs font-medium z-2', typeVariants[project.type])}>
+        <div className={cn('rounded-full px-2 py-1 text-xs font-medium z-2', typeVariants[project.type])}>
           {project.type}
         </div>
         <div className='flex flex-row items-baseline gap-1 sm:gap-2 max-w-full'>
