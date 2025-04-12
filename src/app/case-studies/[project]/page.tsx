@@ -1,4 +1,5 @@
 import Header from '@/components/header'
+import { ScrollProgress } from '@/components/magicui/scroll-progress'
 import { MediaButton } from '@/components/media-button'
 import PageTitle from '@/components/page-title'
 import SeeMore from '@/components/see-more'
@@ -105,6 +106,7 @@ export default async function Project(props: { params: Params; searchParams: Pro
 
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
+      <ScrollProgress />
       <BlurFade>
         <Header />
       </BlurFade>
