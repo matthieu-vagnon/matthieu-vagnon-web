@@ -92,13 +92,7 @@ html[data-accent-color='green'] {
   --main-light: #deffde;
   --main-dark: #004000;
   --main-foreground: black;
-}
-
-html[data-accent-color='yellow'] {
-  --main: #ffff67;
-  --main-light: #ffffbe;
-  --main-dark: #505000;
-  --main-foreground: black;
+  --background: #fafafa;
 }
 
 html[data-accent-color='pink'] {
@@ -114,31 +108,5 @@ html[data-accent-color='pink'] {
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  ::-webkit-scrollbar {
-    @apply w-3;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300;
-  }
-
-  ::-webkit-scrollbar-button {
-    @apply hidden;
-  }
-
-  ::-webkit-scrollbar-resizer {
-    @apply hidden;
-  }
-
-  ::-webkit-scrollbar-corner {
-    @apply hidden;
   }
 }

@@ -52,7 +52,6 @@ export function ConfigurationModal() {
             <SelectContent>
               <SelectItem value='default'>Blue</SelectItem>
               <SelectItem value='green'>Green</SelectItem>
-              <SelectItem value='yellow'>Yellow</SelectItem>
               <SelectItem value='pink'>Pink</SelectItem>
             </SelectContent>
           </Select>

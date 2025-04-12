@@ -105,7 +105,7 @@ function Dock({
           isHovered.set(0)
           mouseX.set(Infinity)
         }}
-        className={cn('mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900', className)}
+        className={cn('mx-auto flex w-fit gap-4 rounded-2xl bg-accent px-4 dark:bg-neutral-900', className)}
         style={{ height: panelHeight }}
         role='toolbar'
         aria-label='Application dock'

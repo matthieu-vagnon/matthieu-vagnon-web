@@ -154,7 +154,7 @@ export default async function Project(props: { params: Params; searchParams: Pro
               <div>{project.longDescription}</div>
               <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm font-semibold text-gray-400'>Skills</span>
+                  <span className='text-sm text-gray-400'>Skills -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.skills.map((skill, index) => (
                       <SkillTag key={index} technology={skill} />
@@ -162,7 +162,7 @@ export default async function Project(props: { params: Params; searchParams: Pro
                   </div>
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm font-semibold text-gray-400'>Technologies</span>
+                  <span className='text-sm text-gray-400'>Technologies -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.technologies.map((technology, index) => (
                       <SkillTag key={index} technology={technology} />

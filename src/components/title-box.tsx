@@ -12,7 +12,7 @@ export default function TitleBox() {
       <motion.div layout>
         <BlurFade className='flex'>
           <motion.div layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
-            <Card variant='dots' className='h-fit w-fit bg-white'>
+            <Card variant='dots' className='h-fit w-fit bg-background'>
               <CardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
                 <BlurFade className='flex mb-2'>
                   <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
