@@ -58,7 +58,7 @@ export const CardStack = ({
         )}
       >
         <div className='h-full w-5'>
-          <Magnetic size='sm' className='w-full h-full'>
+          <Magnetic size='xs' className='w-full h-full'>
             <button
               onClick={isCollapsed ? handleExpand : handleCollapse}
               className='pointer-events-auto group h-full w-full flex items-center justify-center cursor-pointer rounded-full transition-all ease-in-out duration-200 hover:bg-neutral-200/50'
