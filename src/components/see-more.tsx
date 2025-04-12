@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
+import { HyperText } from './magicui/hyper-text'
 import { LinkButton } from './ui/button'
 import { Separator } from './ui/separator'
 
@@ -15,7 +16,16 @@ export default function SeeMore({
       <Separator className='my-10 sm:my-12 md:my-14' />
       <div className={cn('flex flex-col items-center justify-center mb-28 gap-5', className)}>
         <div className='flex flex-col items-center justify-center gap-2'>
-          <h3 className='font-sans-special text-lg sm:text-xl font-semibold'>Related Links</h3>
+          <HyperText
+            as='h3'
+            startOnView
+            delay={0}
+            duration={2000}
+            animateOnHover={false}
+            className='font-sans-special text-lg sm:text-xl font-semibold'
+          >
+            Related Links
+          </HyperText>
           <div className='flex flex-row gap-2 flex-wrap items-center justify-center'>
             {links.map((link) => (
               <LinkButton
