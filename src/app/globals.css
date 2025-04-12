@@ -116,3 +116,17 @@ html[data-accent-color='pink'] {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300;
+  }
+}
