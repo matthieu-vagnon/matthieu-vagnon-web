@@ -149,7 +149,7 @@ function DockItem({ children, className }: DockItemProps) {
       className={cn(
         'relative inline-flex items-center justify-center',
         isMagnetic && 'active:brightness-90',
-        !isMagnetic && 'hover:brightness-90',
+        !isMagnetic && 'hover:brightness-90 transition-brightness duration-200',
         className
       )}
       tabIndex={0}
