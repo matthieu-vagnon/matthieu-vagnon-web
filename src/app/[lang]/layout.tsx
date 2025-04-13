@@ -9,7 +9,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
-import './globals.css'
+import '../globals.css'
 
 const signikaNegative = Signika_Negative({
   variable: '--font-signika-negative',
