@@ -1,6 +1,7 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { BriefcaseBusiness, Cog, HomeIcon, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -51,9 +52,11 @@ const MODALS: App[] = [
 ]
 
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
+  const { isMagnetic } = useMagneticStatus()
+
   const content = (
     <DockItem className='aspect-square rounded-full bg-gray-200 cursor-pointer'>
-      <DockLabel>{app.title}</DockLabel>
+      {isMagnetic && <DockLabel>{app.title}</DockLabel>}
       <DockIcon>{app.icon}</DockIcon>
     </DockItem>
   )

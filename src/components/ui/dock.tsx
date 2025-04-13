@@ -11,7 +11,7 @@ import {
   useTransform,
   type SpringOptions
 } from 'framer-motion'
-import { Children, cloneElement, createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import React, { Children, cloneElement, createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 const DOCK_HEIGHT = 128
 const DEFAULT_MAGNIFICATION = 52
@@ -156,9 +156,14 @@ function DockItem({ children, className }: DockItemProps) {
       role='button'
       aria-haspopup='true'
     >
-      {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement<DockItemChildProps>, { width, isHovered })
-      )}
+      {Children.map(children, (child) => {
+        if (!child) return null
+
+        return cloneElement(child as React.ReactElement<DockItemChildProps>, {
+          width,
+          isHovered
+        })
+      })}
     </motion.div>
   )
 }
@@ -166,7 +171,6 @@ function DockItem({ children, className }: DockItemProps) {
 function DockLabel({ children, className, ...rest }: DockLabelProps) {
   const isHovered = rest.isHovered as MotionValue<number>
   const [isVisible, setIsVisible] = useState(false)
-  const { isMagnetic } = useMagneticStatus()
 
   useEffect(() => {
     if (!isHovered) return () => {}
@@ -177,8 +181,6 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
 
     return () => unsubscribe()
   }, [isHovered])
-
-  if (!isMagnetic) return
 
   return (
     <AnimatePresence>
