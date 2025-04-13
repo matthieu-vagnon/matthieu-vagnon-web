@@ -9,6 +9,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from '@/data/projects'
 import { cn, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
+import { Metadata } from 'next'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import React from 'react'
 
@@ -46,8 +47,12 @@ function SkillTag({ technology }: { technology: string }) {
   )
 }
 
-export async function generateMetadata({ params }: { params: { project: Promise<string> } }) {
-  const project = projects[await params.project]
+type Props = {
+  params: Promise<{ project: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = projects[(await params).project]
   const locale = await getLocale()
   const t = await getTranslations('caseStudies.project.metadata')
   const messages = (await getMessages()).caseStudies.project.metadata
