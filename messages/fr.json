@@ -1,5 +1,22 @@
 {
   "home": {
+    "metadata": {
+      "title": "Accueil",
+      "description": "Bonjour, je suis Matthieu Vagnon, développeur front-end et designer digital indépendant depuis 2022 pour fournir mes clients avec des SaaS et des sites web de pointe.",
+      "openGraph": {
+        "title": "Matthieu Vagnon, Développeur front-end et designer digital",
+        "description": "Bonjour, je suis Matthieu Vagnon, développeur front-end et designer digital indépendant depuis 2022 pour fournir mes clients avec des SaaS et des sites web de pointe."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Développeur front-end",
+        "3": "Designer digital",
+        "4": "SaaS",
+        "5": "Site web",
+        "6": "React",
+        "7": "Next.js"
+      }
+    },
     "title": "Accueil",
     "titleBox": {
       "name": "Bonjour, je suis <strong>Matthieu Vagnon</strong>,",
@@ -16,6 +33,21 @@
     "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>débloquer le plein potentiel</highlight> de votre SaaS ou de votre site web <highlight>grâce à l'expérience utilisateur</highlight>."
   },
   "caseStudies": {
+    "metadata": {
+      "title": "Cas pratiques",
+      "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
+      "openGraph": {
+        "title": "Cas pratiques",
+        "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+      },
+      "keywords": {
+        "1": "Cas pratiques",
+        "2": "Cas pratique",
+        "3": "SaaS",
+        "4": "AI",
+        "5": "Web3"
+      }
+    },
     "title": "Cas pratiques",
     "caseStudy": "Cas pratique {name}",
     "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",

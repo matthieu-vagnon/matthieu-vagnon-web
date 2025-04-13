@@ -1,7 +1,7 @@
 'use client'
 
 import { LayoutGroup, motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useMessages, useTranslations } from 'next-intl'
 import React from 'react'
 import Logo from './logo'
 import { BlurFade } from './ui/blur-fade'
@@ -10,6 +10,7 @@ import { TextRotate } from './ui/text-rotate'
 
 export default function TitleBox({ delay = 0 }: { delay?: number }) {
   const t = useTranslations('home.titleBox')
+  const messages = useMessages()
 
   return (
     <LayoutGroup>
@@ -36,7 +37,9 @@ export default function TitleBox({ delay = 0 }: { delay?: number }) {
                       {t('job.prefix')}
                     </motion.span>
                     <TextRotate
-                      texts={[t('job.skills.1'), t('job.skills.2'), t('job.skills.3')]}
+                      texts={Object.keys(messages.home.titleBox.job.skills).map(
+                        (key) => messages.home.titleBox.job.skills[key]
+                      )}
                       mainClassName={`text-white px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
                       staggerFrom={'last'}
                       initial={{ y: '100%' }}

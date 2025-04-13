@@ -1,5 +1,22 @@
 {
   "home": {
+    "metadata": {
+      "title": "Matthieu Vagnon, Front-End Engineer & Digital Designer",
+      "description": "React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.",
+      "openGraph": {
+        "title": "Matthieu Vagnon, Front-End Engineer & Digital Designer",
+        "description": "React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Front-End Engineer",
+        "3": "Digital Designer",
+        "4": "SaaS",
+        "5": "Web App",
+        "6": "React",
+        "7": "Next.js"
+      }
+    },
     "title": "Home",
     "titleBox": {
       "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
@@ -16,6 +33,22 @@
     "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>."
   },
   "caseStudies": {
+    "metadata": {
+      "title": "Matthieu Vagnon Case Studies",
+      "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.",
+      "openGraph": {
+        "title": "Matthieu Vagnon Case Studies",
+        "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, and more."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Case Studies",
+        "3": "Case Study",
+        "4": "SaaS",
+        "5": "AI",
+        "6": "Web3"
+      }
+    },
     "title": "Case Studies",
     "caseStudy": "{name} Case Study",
     "description": "Here are some of the projects I've worked on.",
