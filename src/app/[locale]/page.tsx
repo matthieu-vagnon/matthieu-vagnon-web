@@ -42,15 +42,15 @@ export default function Home() {
           <BlurFade className='absolute top-6 sm:top-8 md:top-10 right-6 sm:right-8 md:right-10'>
             <LanguageSwitch />
           </BlurFade>
-          <TitleBox />
-          <BlurFade delay={0.3} className='flex'>
+          <TitleBox delay={0.1} />
+          <BlurFade delay={0.4} className='flex'>
             <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
               The <Highlight color='default'>magician</Highlight> you&apos;ve always needed to{' '}
               <Highlight color='default'>unlock the full potential</Highlight> of your SaaS or web app through{' '}
               <Highlight color='default'>user experience</Highlight>.
             </p>
           </BlurFade>
-          <BlurFade delay={0.4} className='flex'>
+          <BlurFade delay={0.5} className='flex'>
             <div className='flex items-center justify-center gap-3 flex-wrap'>
               {SOCIAL_LINKS.map((link) => (
                 <LinkButton variant='secondary' size='sm' key={link.label} href={link.link} external>
