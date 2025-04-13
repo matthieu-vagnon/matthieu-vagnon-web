@@ -17,6 +17,7 @@
   },
   "caseStudies": {
     "title": "Cas pratiques",
+    "caseStudy": "Cas pratique {name}",
     "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
     "skills": "Compétences",
     "technologies": "Technologies",

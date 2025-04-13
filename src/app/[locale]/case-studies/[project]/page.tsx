@@ -123,7 +123,7 @@ export default function Project(props: { params: Params; searchParams: { video: 
       </BlurFade>
       <BlurFade delay={incrementBlurDelay()}>
         <PageTitle
-          title={`${project.title} Case Study \u2022 ${project.year}`}
+          title={`${t('caseStudies.caseStudy', { name: project.title })} \u2022 ${project.year}`}
           description={getTranslatedData(project.shortDescription, locale) as string}
           tags={getTranslatedData(project.tags, locale) as string[]}
         />

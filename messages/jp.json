@@ -17,6 +17,7 @@
   },
   "caseStudies": {
     "title": "ケーススタディ",
+    "caseStudy": "{name}ケーススタディ",
     "description": "これは私が作業したプロジェクトのいくつかです。",
     "skills": "スキル",
     "technologies": "テクノロジー",

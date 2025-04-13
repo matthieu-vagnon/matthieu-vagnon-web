@@ -17,6 +17,7 @@
   },
   "caseStudies": {
     "title": "Case Studies",
+    "caseStudy": "{name} Case Study",
     "description": "Here are some of the projects I've worked on.",
     "skills": "Skills",
     "technologies": "Technologies",
