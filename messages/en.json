@@ -1,6 +1,37 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "home": {
+    "title": "Home",
+    "titleBox": {
+      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
+      "job": {
+        "prefix": "Freelance ",
+        "skills": {
+          "1": "Front-End Engineer",
+          "2": "Digital Designer",
+          "3": "React & Next.js Expert"
+        },
+        "suffix": ""
+      }
+    },
+    "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Instagram Portfolio",
+      "github": "GitHub Portfolio",
+      "cv": "Curriculum Vitae"
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "description": "Here are some of the projects I've worked on."
+  },
+  "getInTouch": {
+    "title": "Get in Touch",
+    "description": "Please select your preferred contact method."
+  },
+  "configure": {
+    "title": "Configuration",
+    "description": "Please configure the app to your liking."
   }
 }
