@@ -5,9 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function returnIntPath(lang: string, pathname: string) {
-  const segments = pathname.split('/')
-  const path = segments.slice(2).join('/')
-
-  return `/${lang}/${path}`
+export function getTranslatedData(data: { [key: string]: React.ReactNode }, locale: string) {
+  if (Object.keys(data).includes(locale)) {
+    return data[locale]
+  } else {
+    return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as keyof typeof data]
+  }
 }

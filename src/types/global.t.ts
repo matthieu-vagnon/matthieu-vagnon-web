@@ -6,7 +6,10 @@ declare global {
     name: string
     company: string
     position: string
-    testimonial: React.ReactNode
+    testimonial: {
+      en: React.ReactNode
+      fr: React.ReactNode
+    }
     method?: string
     image: StaticImageData
   }
