@@ -28,7 +28,19 @@
   },
   "getInTouch": {
     "title": "Get in Touch",
-    "description": "Please select your preferred contact method."
+    "description": "Please select your preferred contact method.",
+    "meeting": {
+      "title": "Schedule a Meeting",
+      "description": "Schedule a meeting with me to discuss your project."
+    },
+    "email": {
+      "title": "Email",
+      "description": "Send me an email to discuss your project."
+    },
+    "phone": {
+      "title": "Phone ({number})",
+      "description": "Call me to discuss your project (in english or french)."
+    }
   },
   "configure": {
     "title": "Configuration",

@@ -28,7 +28,19 @@
   },
   "getInTouch": {
     "title": "お問い合わせ",
-    "description": "お好きな連絡方法を選択してください。"
+    "description": "お好きな連絡方法を選択してください。",
+    "meeting": {
+      "title": "会議を予約する",
+      "description": "私とあなたのプロジェクトについて話をしてください。"
+    },
+    "email": {
+      "title": "メール",
+      "description": "私にメールを送信して、あなたのプロジェクトについて話をしてください。"
+    },
+    "phone": {
+      "title": "電話 ({number})",
+      "description": "私とあなたのプロジェクトについて話をしてください（英語またはフランス語）。"
+    }
   },
   "configure": {
     "title": "設定",

@@ -28,7 +28,19 @@
   },
   "getInTouch": {
     "title": "Contact",
-    "description": "Veuillez sélectionner votre méthode de contact préférée."
+    "description": "Veuillez sélectionner votre méthode de contact préférée.",
+    "meeting": {
+      "title": "Planifier un rendez-vous",
+      "description": "Planifier un rendez-vous avec moi pour discuter de votre projet."
+    },
+    "email": {
+      "title": "Email",
+      "description": "Envoyer-moi un email pour discuter de votre projet."
+    },
+    "phone": {
+      "title": "Téléphone (au {number})",
+      "description": "Appeler-moi pour discuter de votre projet (en anglais ou en français)."
+    }
   },
   "configure": {
     "title": "Configuration",
