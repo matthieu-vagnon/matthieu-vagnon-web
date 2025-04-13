@@ -13,14 +13,7 @@
         "suffix": ""
       }
     },
-    "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>.",
-    "links": {
-      "linkedin": "LinkedIn",
-      "youtube": "YouTube",
-      "instagram": "Instagram Portfolio",
-      "github": "GitHub Portfolio",
-      "cv": "Curriculum Vitae"
-    }
+    "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>."
   },
   "caseStudies": {
     "title": "Case Studies",
@@ -33,5 +26,18 @@
   "configure": {
     "title": "Configuration",
     "description": "Please configure the app to your liking."
+  },
+  "utils": {
+    "links": {
+      "related": "Related Links",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Instagram Portfolio",
+      "github": "GitHub Portfolio",
+      "cv": "Curriculum Vitae"
+    },
+    "repo": "Check out public repo ",
+    "here": "here",
+    "madeWithLove": "Made with ❤️ by Matthieu Vagnon"
   }
 }

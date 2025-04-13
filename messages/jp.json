@@ -1,6 +1,43 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "home": {
+    "title": "ホーム",
+    "titleBox": {
+      "name": "こんにちは、私は<strong>ヴァンニョン・マチュ</strong>です。",
+      "job": {
+        "prefix": "フリーランス ",
+        "skills": {
+          "1": "フロントエンジニア",
+          "2": "デジタルデザイナー",
+          "3": "React & Next.js エキスパート"
+        },
+        "suffix": ""
+      }
+    },
+    "subtitle": "あなたのSaaSやウェブアプリを<highlight>ユーザーエクスペリエンス</highlight>を通じて<highlight>最大限のポテンシャル</highlight>に解放するために、あなたが必要としている<highlight>マジシャン</highlight>。"
+  },
+  "caseStudies": {
+    "title": "ケーススタディ",
+    "description": "これは私が作業したプロジェクトのいくつかです。"
+  },
+  "getInTouch": {
+    "title": "お問い合わせ",
+    "description": "お好きな連絡方法を選択してください。"
+  },
+  "configure": {
+    "title": "設定",
+    "description": "あなたの好みに合わせてアプリを設定してください。"
+  },
+  "utils": {
+    "links": {
+      "related": "関連リンク",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Instagramポートフォリオ",
+      "github": "GitHubポートフォリオ",
+      "cv": "履歴書"
+    },
+    "repo": "公開リポジトリをチェックしてください",
+    "here": "ここ",
+    "madeWithLove": "マチュ・ヴァンニョンによって作成されました"
   }
 }

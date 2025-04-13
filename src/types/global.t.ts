@@ -8,7 +8,8 @@ declare global {
     position: string
     testimonial: {
       en: React.ReactNode
-      fr: React.ReactNode
+      fr?: React.ReactNode
+      jp?: React.ReactNode
     }
     method?: string
     image: StaticImageData
@@ -17,21 +18,68 @@ declare global {
     title: string
     year: number
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
-    shortDescription: string
-    longDescription: React.ReactNode
-    tags: string[]
-    skills: string[]
+    shortDescription: {
+      en: string
+      fr?: string
+      jp?: string
+    }
+    longDescription: {
+      en: React.ReactNode
+      fr?: React.ReactNode
+      jp?: React.ReactNode
+    }
+    tags: {
+      en: string[]
+      fr?: string[]
+      jp?: string[]
+    }
+    skills: {
+      en: string[]
+      fr?: string[]
+      jp?: string[]
+    }
     technologies: string[]
     previewImg?: StaticImageData
     gallery?: {
-      img?: { title: string; image: StaticImageData }[]
-      video?: { title: string; src: string; previewImage: StaticImageData }[]
+      img?: {
+        title: {
+          en: string
+          fr?: string
+          jp?: string
+        }
+        image: StaticImageData
+      }[]
+      video?: {
+        title: {
+          en: string
+          fr?: string
+          jp?: string
+        }
+        src: string
+        previewImage: StaticImageData
+      }[]
     }
-    problem?: React.ReactNode
-    solution?: React.ReactNode
-    results?: React.ReactNode
+    problem?: {
+      en: React.ReactNode
+      fr?: React.ReactNode
+      jp?: React.ReactNode
+    }
+    solution?: {
+      en: React.ReactNode
+      fr?: React.ReactNode
+      jp?: React.ReactNode
+    }
+    results?: {
+      en: React.ReactNode
+      fr?: React.ReactNode
+      jp?: React.ReactNode
+    }
     relatedUrls?: {
-      name: string
+      name: {
+        en: string
+        fr?: string
+        jp?: string
+      }
       url: string
     }[]
   }

@@ -1,5 +1,7 @@
 import { Link } from '@/i18n/navigation'
+import { getTranslatedData } from '@/lib/server-utils'
 import { cn } from '@/lib/utils'
+import { useLocale } from 'next-intl'
 import Image, { StaticImageData } from 'next/image'
 import { Magnetic } from './ui/magnetic'
 
@@ -15,6 +17,8 @@ export default function ProjectCard({
   url,
   ...project
 }: Project & { coverImage: StaticImageData; url: string }) {
+  const locale = useLocale()
+
   return (
     <Magnetic size='lg' className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>
       <Link
@@ -30,7 +34,9 @@ export default function ProjectCard({
           </h3>
           <span className='text-xs sm:text-sm md:text-base text-white/50 font-bold z-1'>{project.year}</span>
         </div>
-        <p className='text-xs sm:text-sm md:text-base text-white z-1'>{project.shortDescription}</p>
+        <p className='text-xs sm:text-sm md:text-base text-white z-1'>
+          {getTranslatedData(project.shortDescription, locale)}
+        </p>
         {project.previewImg && (
           <div className='absolute w-full p-2 left-0 top-0 rounded-sm z-1'>
             <Image

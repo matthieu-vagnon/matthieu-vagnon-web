@@ -37,7 +37,7 @@ function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
 export default function AppsDock() {
   const { isDockOpen } = useDockStatus()
   const [activeModal, setActiveModal] = useState<number | undefined>(undefined)
-  const t = useTranslations('')
+  const t = useTranslations()
 
   const apps: App[] = [
     {

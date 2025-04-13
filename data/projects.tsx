@@ -18,36 +18,60 @@ export const projects: Record<string, Project> = {
     title: 'Matthieu Vagnon Web',
     year: 2025,
     type: 'Web Application',
-    shortDescription: 'The web application you are currently watching.',
-    longDescription: (
-      <span>
-        A simple <Highlight color='gray'>portfolio web application</Highlight> made with{' '}
-        <Highlight color='gray'>React and Next.js</Highlight> letting you watch my case studies, contact me and access
-        my links in a simple way on <Highlight color='gray'>mobile and desktop</Highlight>.
-      </span>
-    ),
-    tags: ['Web Application', 'Portfolio'],
-    skills: [
-      'Web Development',
-      'Web Design',
-      'Responsive Design',
-      'Web Project Management',
-      'Deployment',
-      'Web Maintenance'
-    ],
+    shortDescription: {
+      en: 'The web application you are currently watching.',
+      fr: "L'application web que vous regardez actuellement.",
+      jp: 'あなたが現在見ているウェブアプリケーション。'
+    },
+    longDescription: {
+      en: (
+        <span>
+          A simple <Highlight color='gray'>portfolio web application</Highlight> made with{' '}
+          <Highlight color='gray'>React and Next.js</Highlight> letting you watch my case studies, contact me and access
+          my links in a simple way on <Highlight color='gray'>mobile and desktop</Highlight>.
+        </span>
+      ),
+      fr: (
+        <span>
+          Une simple <Highlight color='gray'>application web de portfolio</Highlight> faite avec{' '}
+          <Highlight color='gray'>React et Next.js</Highlight> vous permettant de regarder mes études de cas, me
+          contacter et accéder à mes liens de manière simple sur <Highlight color='gray'>mobile et desktop</Highlight>.
+        </span>
+      ),
+      jp: (
+        <span>
+          <Highlight color='gray'>ReactとNext.js</Highlight>で作成されたシンプルな
+          <Highlight color='gray'>ポートフォリオウェブアプリケーション</Highlight>
+          で、私のケーススタディを見ることができ、私に連絡して私のリンクにアクセスすることができます。
+        </span>
+      )
+    },
+    tags: {
+      en: ['Web Application', 'Portfolio'],
+      fr: ['Application Web', 'Portfolio'],
+      jp: ['ウェブアプリケーション', 'ポートフォリオ']
+    },
+    skills: {
+      en: ['Web Design', 'Responsive Design', 'Web Project Management', 'Deployment', 'Web Maintenance'],
+      fr: ['Design Web', 'Responsive Design', 'Gestion de Projet Web', 'Déploiement', 'Maintenance Web'],
+      jp: ['ウェブデザイン', 'レスポンシブデザイン', 'Webプロジェクト管理', 'デプロイ', 'Webメンテナンス']
+    },
     technologies: ['Cursor IDE', 'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
     previewImg: mvWeb1,
     gallery: {
       img: [
-        { title: 'Home Page', image: mvWeb1 },
-        { title: 'Case Study Page', image: mvWeb2 },
-        { title: 'Video Player', image: mvWeb3 },
-        { title: 'Meeting Scheduler', image: mvWeb4 }
+        { title: { en: 'Home Page', fr: "Page d'accueil", jp: 'ホームページ' }, image: mvWeb1 },
+        { title: { en: 'Case Study Page', fr: "Page d'étude de cas", jp: 'ケーススタディページ' }, image: mvWeb2 },
+        { title: { en: 'Video Player', fr: 'Lecteur vidéo', jp: 'ビデオプレーヤー' }, image: mvWeb3 },
+        {
+          title: { en: 'Meeting Scheduler', fr: 'Planificateur de réunion', jp: 'ミーティングスケジューラー' },
+          image: mvWeb4
+        }
       ]
     },
     relatedUrls: [
       {
-        name: 'Matthieu Vagnon Web',
+        name: { en: 'Matthieu Vagnon Web', fr: 'Matthieu Vagnon Web', jp: 'マティュー・ヴァグノンのポートフォリオ' },
         url: process.env.URL!
       }
     ]
@@ -56,26 +80,60 @@ export const projects: Record<string, Project> = {
     title: 'Smart Interview',
     year: 2024,
     type: 'SaaS',
-    shortDescription: 'A platform to create AI-powered questionnaires and mass analyze responses.',
-    longDescription: (
-      <span>
-        A SaaS platform to create <Highlight color='gray'>AI-powered questionnaires</Highlight>. A questionnaire is
-        created by using the integrated <Highlight color='gray'>builder</Highlight> or by importing a{' '}
-        <Highlight color='gray'>JSON file</Highlight>. The questionnaire is then sent to the audience and the responses
-        can be analyzed in the same application to <Highlight color='gray'>target their optimal audience</Highlight>.
-        The AI automatically adds context-based questions to the questionnaire when the user answers a questionnaire to
-        add maximum details to the analysis.
-      </span>
-    ),
-    tags: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
-    skills: [
-      'Web Development',
-      'Web Design',
-      'Responsive Design',
-      'Web Project Management',
-      'Deployment',
-      'Web Maintenance'
-    ],
+    shortDescription: {
+      en: 'A platform to create AI-powered questionnaires and mass analyze responses.',
+      fr: "Une plateforme pour créer des questionnaires alimentés par l'IA et analyser les réponses en masse.",
+      jp: 'AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。'
+    },
+    longDescription: {
+      en: (
+        <span>
+          A SaaS platform to create <Highlight color='gray'>AI-powered questionnaires</Highlight>. A questionnaire is
+          created by using the integrated <Highlight color='gray'>builder</Highlight> or by importing a{' '}
+          <Highlight color='gray'>JSON file</Highlight>. The questionnaire is then sent to the audience and the
+          responses can be analyzed in the same application to{' '}
+          <Highlight color='gray'>target their optimal audience</Highlight>. The AI automatically adds context-based
+          questions to the questionnaire when the user answers a questionnaire to add maximum details to the analysis.
+        </span>
+      ),
+      fr: (
+        <span>
+          Une plateforme pour créer des questionnaires alimentés par l&apos;IA et analyser les réponses en masse.
+        </span>
+      ),
+      jp: <span>AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。</span>
+    },
+    tags: {
+      en: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
+      fr: ['IA', 'SaaS', 'Questionnaire', 'Analyse en masse'],
+      jp: ['AI', 'SaaS', 'アンケート', '大量分析']
+    },
+    skills: {
+      en: [
+        'Web Development',
+        'Web Design',
+        'Responsive Design',
+        'Web Project Management',
+        'Deployment',
+        'Web Maintenance'
+      ],
+      fr: [
+        'Développement Web',
+        'Design Web',
+        'Responsive Design',
+        'Gestion de Projet Web',
+        'Déploiement',
+        'Maintenance Web'
+      ],
+      jp: [
+        'ウェブ開発',
+        'ウェブデザイン',
+        'レスポンシブデザイン',
+        'ウェブプロジェクト管理',
+        'デプロイ',
+        'ウェブメンテナンス'
+      ]
+    },
     technologies: [
       'Cursor IDE',
       'React',
@@ -91,75 +149,112 @@ export const projects: Record<string, Project> = {
     gallery: {
       img: [
         {
-          title: 'Builder Editor',
+          title: { en: 'Builder Editor', fr: 'Éditeur de générateur', jp: 'ジェネレーターエディター' },
           image: smartInterviewBuilder2
         },
         {
-          title: 'Builder Preview',
+          title: { en: 'Builder Preview', fr: 'Aperçu du générateur', jp: 'ジェネレーターのプレビュー' },
           image: smartInterviewBuilder3
         },
         {
-          title: 'Builder JSON Editor',
+          title: { en: 'Builder JSON Editor', fr: 'Éditeur JSON du générateur', jp: 'ジェネレーターのJSONエディター' },
           image: smartInterviewBuilder4
         },
         {
-          title: 'Builder Presets',
+          title: { en: 'Builder Presets', fr: 'Présets du générateur', jp: 'ジェネレーターのプリセット' },
           image: smartInterviewBuilder5
         }
       ],
       video: [
         {
-          title: 'Builder Tour',
+          title: { en: 'Builder Tour', fr: 'Tour du générateur', jp: 'ジェネレーターのツアー' },
           src: 'https://www.youtube.com/embed/zy5hgYR-H74',
           previewImage: smartInterviewBuilder1
         }
       ]
     },
-    problem: (
-      <ol className='list-decimal list-inside'>
-        <li>
-          Users find it <Highlight color='red'>hard to create and manage questionnaires</Highlight> and may spend too
-          much time implementing simple questions.
-        </li>
-        <li>
-          Potential clients finding the application <Highlight color='red'>dated</Highlight>,{' '}
-          <Highlight color='red'>not intuitive</Highlight> and <Highlight color='red'>laggy</Highlight>.
-        </li>
-      </ol>
-    ),
-    solution: (
-      <ol className='list-decimal list-inside'>
-        <li>
-          Tweaking the UI to make it <Highlight color='emerald'>user-friendly</Highlight> (using icons, colors, better
-          spacing, ...).
-        </li>
-        <li>
-          Adding <Highlight color='emerald'>features</Highlight> to customize each created questionnaire (e.g. moving
-          questions around, creating tables, presets, ...).
-        </li>
-        <li>
-          Making the overall design <Highlight color='emerald'>more consistent</Highlight> and{' '}
-          <Highlight color='emerald'>aligned</Highlight> with the rest of the application.
-        </li>
-        <li>
-          Adding <Highlight color='emerald'>animations</Highlight> and{' '}
-          <Highlight color='emerald'>loading states</Highlight>.
-        </li>
-      </ol>
-    ),
-    results: (
-      <span>
-        The application is now more <Highlight color='gray'>user-friendly</Highlight>,{' '}
-        <Highlight color='gray'>intuitive</Highlight>,<Highlight color='gray'>consistent</Highlight> and let users{' '}
-        <Highlight color='gray'>save time</Highlight> and <Highlight color='gray'>resources</Highlight> while being able
-        to create <Highlight color='gray'>complex questionnaires</Highlight>. The{' '}
-        <Highlight color='gray'>UI was improved a bit</Highlight> but the time constraints didn&apos;t allow me to do
-        more.
-      </span>
-    ),
+    problem: {
+      en: (
+        <ol className='list-decimal list-inside'>
+          <li>
+            Users find it <Highlight color='red'>hard to create and manage questionnaires</Highlight> and may spend too
+            much time implementing simple questions.
+          </li>
+          <li>
+            Potential clients finding the application <Highlight color='red'>dated</Highlight>,{' '}
+            <Highlight color='red'>not intuitive</Highlight> and <Highlight color='red'>laggy</Highlight>.
+          </li>
+        </ol>
+      ),
+      fr: (
+        <ol className='list-decimal list-inside'>
+          <li>
+            Tweaking the UI to make it <Highlight color='emerald'>user-friendly</Highlight> (using icons, colors, better
+            spacing, ...).
+          </li>
+          <li>
+            Adding <Highlight color='emerald'>features</Highlight> to customize each created questionnaire (e.g. moving
+            questions around, creating tables, presets, ...).
+          </li>
+          <li>
+            Making the overall design <Highlight color='emerald'>more consistent</Highlight> and{' '}
+            <Highlight color='emerald'>aligned</Highlight> with the rest of the application.
+          </li>
+          <li>
+            Adding <Highlight color='emerald'>animations</Highlight> and{' '}
+            <Highlight color='emerald'>loading states</Highlight>.
+          </li>
+        </ol>
+      ),
+      jp: (
+        <ol className='list-decimal list-inside'>
+          <li>
+            UI を調整して<Highlight color='emerald'>ユーザーフレンドリー</Highlight>
+            にしました（アイコン、色、より良い間隔などを使用）。
+          </li>
+          <li>
+            <Highlight color='emerald'>機能</Highlight>
+            を追加して、各作成されたアンケートをカスタマイズしました（例：移動、テーブル、プリセットなど）。
+          </li>
+          <li>
+            <Highlight color='emerald'>アニメーション</Highlight>と
+            <Highlight color='emerald'>ローディング状態</Highlight>を追加しました。
+          </li>
+        </ol>
+      )
+    },
+    results: {
+      en: (
+        <span>
+          The application is now more <Highlight color='gray'>user-friendly</Highlight>,{' '}
+          <Highlight color='gray'>intuitive</Highlight>,<Highlight color='gray'>consistent</Highlight> and let users{' '}
+          <Highlight color='gray'>save time</Highlight> and <Highlight color='gray'>resources</Highlight> while being
+          able to create <Highlight color='gray'>complex questionnaires</Highlight>. The{' '}
+          <Highlight color='gray'>UI was improved a bit</Highlight> but the time constraints didn&apos;t allow me to do
+          more.
+        </span>
+      ),
+      fr: (
+        <span>
+          L&apos;application est maintenant plus <Highlight color='gray'>user-friendly</Highlight>,{' '}
+          <Highlight color='gray'>intuitive</Highlight>,<Highlight color='gray'>consistent</Highlight> et permet aux
+          utilisateurs de <Highlight color='gray'>gagner du temps</Highlight> et{' '}
+          <Highlight color='gray'>des ressources</Highlight> tout en créant des{' '}
+          <Highlight color='gray'>questionnaires complexes</Highlight>.
+        </span>
+      ),
+      jp: (
+        <span>
+          アプリケーションはより<Highlight color='gray'>ユーザーフレンドリー</Highlight>、
+          <Highlight color='gray'>直感的</Highlight>、<Highlight color='gray'>一貫性があり</Highlight>、 ユーザーが
+          <Highlight color='gray'>時間</Highlight>と<Highlight color='gray'>リソース</Highlight>
+          を節約できるようになりました。
+        </span>
+      )
+    },
     relatedUrls: [
       {
-        name: 'Pulse Partners',
+        name: { en: 'Pulse Partners', fr: 'Pulse Partners', jp: 'Pulse Partners' },
         url: 'https://pulse-partners.ch'
       }
     ]
@@ -168,35 +263,63 @@ export const projects: Record<string, Project> = {
     title: 'Koryori Ya Ozaki',
     year: 2024,
     type: 'Web Application',
-    shortDescription: 'A simple web application for a Japanese restaurant.',
-    longDescription: (
-      <span>
-        A simple single page web application for a <Highlight color='gray'>Japanese restaurant</Highlight> showcasing
-        their adress and letting people <Highlight color='gray'>call them</Highlight> via the push of a button.
-      </span>
-    ),
-    tags: ['Web Application', 'Japanese Restaurant'],
-    skills: [
-      'Web Development',
-      'Web Design',
-      'Responsive Design',
-      'Web Project Management',
-      'Deployment',
-      'Web Maintenance'
-    ],
+    shortDescription: {
+      en: 'A simple web application for a Japanese restaurant.',
+      fr: 'Une application web simple pour un restaurant japonais.',
+      jp: '日本料理店のためのシンプルなウェブアプリケーション。'
+    },
+    longDescription: {
+      en: (
+        <span>
+          A simple single page web application for a <Highlight color='gray'>Japanese restaurant</Highlight> showcasing
+          their adress and letting people <Highlight color='gray'>call them</Highlight> via the push of a button.
+        </span>
+      )
+    },
+    tags: {
+      en: ['Web Application', 'Japanese Restaurant'],
+      fr: ['Application Web', 'Restaurant Japonais'],
+      jp: ['ウェブアプリケーション', '日本料理店']
+    },
+    skills: {
+      en: [
+        'Web Development',
+        'Web Design',
+        'Responsive Design',
+        'Web Project Management',
+        'Deployment',
+        'Web Maintenance'
+      ],
+      fr: [
+        'Développement Web',
+        'Design Web',
+        'Responsive Design',
+        'Gestion de Projet Web',
+        'Déploiement',
+        'Maintenance Web'
+      ],
+      jp: [
+        'ウェブ開発',
+        'ウェブデザイン',
+        'レスポンシブデザイン',
+        'ウェブプロジェクト管理',
+        'デプロイ',
+        'ウェブメンテナンス'
+      ]
+    },
     technologies: ['React', 'TypeScript', 'CSS', 'NPM', 'Vercel'],
     previewImg: koryoriYa3,
     gallery: {
       img: [
-        { title: 'Loading Page', image: koryoriYa1 },
-        { title: 'Landing View', image: koryoriYa2 },
-        { title: 'Concept View', image: koryoriYa3 },
-        { title: 'Map', image: koryoriYa4 }
+        { title: { en: 'Loading Page', fr: 'Page de chargement', jp: 'ローディングページ' }, image: koryoriYa1 },
+        { title: { en: 'Landing View', fr: "Vue d'accueil", jp: 'ランディングビュー' }, image: koryoriYa2 },
+        { title: { en: 'Concept View', fr: 'Vue conceptuelle', jp: 'コンセプトビュー' }, image: koryoriYa3 },
+        { title: { en: 'Map', fr: 'Carte', jp: 'マップ' }, image: koryoriYa4 }
       ]
     },
     relatedUrls: [
       {
-        name: 'Koryori Ya Ozaki',
+        name: { en: 'Koryori Ya Ozaki', fr: 'Koryori Ya Ozaki', jp: 'Koryori Ya Ozaki' },
         url: 'https://koryoriyaozaki.uk'
       }
     ]
@@ -205,46 +328,125 @@ export const projects: Record<string, Project> = {
     title: 'Crystal',
     year: 2023,
     type: 'SaaS',
-    shortDescription: 'A platform to view and manage AI-powered trading tools.',
-    longDescription: (
-      <span>
-        A platform to view and manage <Highlight color='gray'>AI-powered trading tools</Highlight> initially made for
-        <Highlight color='gray'>Predictive Layer</Highlight> and now actively used by{' '}
-        <Highlight color='gray'>TotalEnergies</Highlight> as Predictive Layer is now part of them.
-      </span>
-    ),
-    tags: ['AI', 'SaaS', 'Trading', 'Analysis'],
-    skills: [
-      'Web Development',
-      'Web Design',
-      'Responsive Design',
-      'Web Project Management',
-      'Deployment',
-      'Web Maintenance'
-    ],
+    shortDescription: {
+      en: 'A platform to view and manage AI-powered trading tools.',
+      fr: "Une plateforme pour visualiser et gérer des outils de trading alimentés par l'IA.",
+      jp: 'AI駆動の取引ツールを表示および管理するプラットフォーム。'
+    },
+    longDescription: {
+      en: (
+        <span>
+          A platform to view and manage <Highlight color='gray'>AI-powered trading tools</Highlight> initially made for
+          <Highlight color='gray'>Predictive Layer</Highlight> and now actively used by{' '}
+          <Highlight color='gray'>TotalEnergies</Highlight> as Predictive Layer is now part of them.
+        </span>
+      ),
+      fr: <span>Une plateforme pour visualiser et gérer des outils de trading alimentés par l&apos;IA.</span>,
+      jp: <span>AI駆動の取引ツールを表示および管理するプラットフォーム。</span>
+    },
+    tags: {
+      en: ['AI', 'SaaS', 'Trading', 'Analysis'],
+      fr: ['IA', 'SaaS', 'Trading', 'Analyse'],
+      jp: ['AI', 'SaaS', '取引', '分析']
+    },
+    skills: {
+      en: [
+        'Web Development',
+        'Web Design',
+        'Responsive Design',
+        'Web Project Management',
+        'Deployment',
+        'Web Maintenance'
+      ],
+      fr: [
+        'Développement Web',
+        'Design Web',
+        'Responsive Design',
+        'Gestion de Projet Web',
+        'Déploiement',
+        'Maintenance Web'
+      ],
+      jp: [
+        'ウェブ開発',
+        'ウェブデザイン',
+        'レスポンシブデザイン',
+        'ウェブプロジェクト管理',
+        'デプロイ',
+        'ウェブメンテナンス'
+      ]
+    },
     technologies: ['React', 'JavaScript', 'NPM', 'React Router', 'Material UI', 'MUI-X'],
-    problem: (
-      <span>
-        The challenge of this project was to be able to display a <Highlight color='red'>lot of data</Highlight> in the
-        form of <Highlight color='red'>charts</Highlight> without{' '}
-        <Highlight color='red'>overloading the user</Highlight>
-        with too many options and information.
-      </span>
-    ),
-    solution: (
-      <span>
-        Create a tool with <Highlight color='emerald'>multiple pages</Highlight>,{' '}
-        <Highlight color='emerald'>clear navigation</Highlight>, <Highlight color='emerald'>managed spacing</Highlight>{' '}
-        and <Highlight color='emerald'>beautiful charts</Highlight> thanks to{' '}
-        <Highlight color='emerald'>MUI-X</Highlight>.
-      </span>
-    ),
-    results: (
-      <span>
-        The tool is now <Highlight color='gray'>used in production</Highlight> by TotalEnergies teams and is working
-        perfectly well. The <Highlight color='gray'>data loads well</Highlight> and the{' '}
-        <Highlight color='gray'>interface is clear</Highlight>.
-      </span>
-    )
+    problem: {
+      en: (
+        <span>
+          The challenge of this project was to be able to display a <Highlight color='red'>lot of data</Highlight> in
+          the form of <Highlight color='red'>charts</Highlight> without{' '}
+          <Highlight color='red'>overloading the user</Highlight>
+          with too many options and information.
+        </span>
+      ),
+      fr: (
+        <span>
+          The challenge of this project was to be able to display a <Highlight color='red'>lot of data</Highlight> in
+          the form of <Highlight color='red'>charts</Highlight> without{' '}
+          <Highlight color='red'>overloading the user</Highlight>
+        </span>
+      ),
+      jp: (
+        <span>
+          The challenge of this project was to be able to display a <Highlight color='red'>lot of data</Highlight> in
+          the form of <Highlight color='red'>charts</Highlight> without{' '}
+          <Highlight color='red'>overloading the user</Highlight>
+        </span>
+      )
+    },
+    solution: {
+      en: (
+        <span>
+          Create a tool with <Highlight color='emerald'>multiple pages</Highlight>,{' '}
+          <Highlight color='emerald'>clear navigation</Highlight>,{' '}
+          <Highlight color='emerald'>managed spacing</Highlight> and{' '}
+          <Highlight color='emerald'>beautiful charts</Highlight> thanks to <Highlight color='emerald'>MUI-X</Highlight>
+          .
+        </span>
+      ),
+      fr: (
+        <span>
+          Créer un outil avec <Highlight color='emerald'>plusieurs pages</Highlight>,{' '}
+          <Highlight color='emerald'>navigation claire</Highlight>,{' '}
+          <Highlight color='emerald'>espacement géré</Highlight> et{' '}
+          <Highlight color='emerald'>beaux graphiques</Highlight> grâce à <Highlight color='emerald'>MUI-X</Highlight>.
+        </span>
+      ),
+      jp: (
+        <span>
+          <Highlight color='emerald'>MUI-X</Highlight>を使用して、<Highlight color='emerald'>複数のページ</Highlight>、
+          <Highlight color='emerald'>明確なナビゲーション</Highlight>、
+          <Highlight color='emerald'>管理された間隔</Highlight>、<Highlight color='emerald'>美しいグラフ</Highlight>
+          を作成しました。
+        </span>
+      )
+    },
+    results: {
+      en: (
+        <span>
+          The tool is now <Highlight color='gray'>used in production</Highlight> by TotalEnergies teams and is working
+          perfectly well. The <Highlight color='gray'>data loads well</Highlight> and the{' '}
+          <Highlight color='gray'>interface is clear</Highlight>.
+        </span>
+      ),
+      fr: (
+        <span>
+          L&apos;outil est maintenant <Highlight color='gray'>utilisé dans la production</Highlight> par les équipes de
+          TotalEnergies et fonctionne parfaitement.
+        </span>
+      ),
+      jp: (
+        <span>
+          <Highlight color='gray'>データが正常に読み込まれ</Highlight>、
+          <Highlight color='gray'>インターフェースが明確</Highlight>です。
+        </span>
+      )
+    }
   }
 }

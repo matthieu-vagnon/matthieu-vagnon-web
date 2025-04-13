@@ -13,14 +13,7 @@
         "suffix": " indépendant"
       }
     },
-    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>débloquer le plein potentiel</highlight> de votre SaaS ou de votre site web <highlight>grâce à l'expérience utilisateur</highlight>.",
-    "links": {
-      "linkedin": "LinkedIn",
-      "youtube": "YouTube",
-      "instagram": "Portfolio Instagram",
-      "github": "Portflio GitHub",
-      "cv": "Curriculum Vitae"
-    }
+    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>débloquer le plein potentiel</highlight> de votre SaaS ou de votre site web <highlight>grâce à l'expérience utilisateur</highlight>."
   },
   "caseStudies": {
     "title": "Cas pratiques",
@@ -33,5 +26,18 @@
   "configure": {
     "title": "Configuration",
     "description": "Veuillez configurer l'application à votre goût."
+  },
+  "utils": {
+    "links": {
+      "related": "Liens associés",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Portfolio Instagram",
+      "github": "Portflio GitHub",
+      "cv": "Curriculum Vitae"
+    },
+    "repo": "Consultez le repo public ",
+    "here": "ici",
+    "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon"
   }
 }

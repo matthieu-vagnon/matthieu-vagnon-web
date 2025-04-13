@@ -8,29 +8,30 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export default function Home() {
-  const t = useTranslations('home')
+  const t = useTranslations()
+
   const socialLinks: {
     label: string
     link: string
   }[] = [
     {
-      label: t('links.linkedin'),
+      label: t('utils.links.linkedin'),
       link: 'https://linkedin.com/in/matthieu-vagnon'
     },
     {
-      label: t('links.youtube'),
+      label: t('utils.links.youtube'),
       link: 'https://www.youtube.com/@matthieu-vagnon'
     },
     {
-      label: t('links.instagram'),
+      label: t('utils.links.instagram'),
       link: 'https://instagram.com/matthieu.vagnon'
     },
     {
-      label: t('links.github'),
+      label: t('utils.links.github'),
       link: 'https://github.com/matthieu-vagnon'
     },
     {
-      label: t('links.cv'),
+      label: t('utils.links.cv'),
       link: '/profile.pdf'
     }
   ]
@@ -45,7 +46,7 @@ export default function Home() {
           <TitleBox delay={0.1} />
           <BlurFade delay={0.4} className='flex'>
             <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
-              {t.rich('subtitle', {
+              {t.rich('home.subtitle', {
                 highlight: (chunks: React.ReactNode) => <Highlight color='default'>{chunks}</Highlight>
               })}
             </p>
