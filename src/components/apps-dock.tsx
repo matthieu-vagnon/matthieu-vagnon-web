@@ -2,8 +2,8 @@
 
 import { useDockStatus } from '@/hooks/use-dock-status'
 import { useMagneticStatus } from '@/hooks/use-magnetic-status'
+import { Link } from '@/i18n/navigation'
 import { BriefcaseBusiness, Cog, HomeIcon, MessageCircle } from 'lucide-react'
-import Link from 'next/link'
 import React, { useState } from 'react'
 import { ConfigurationModal } from './configuration-modal'
 import { ContactModal } from './contact-modal'

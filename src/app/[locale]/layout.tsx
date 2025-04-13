@@ -5,9 +5,12 @@ import AccentColorProvider from '@/hooks/use-accent-color'
 import DockStatusProvider from '@/hooks/use-dock-status'
 import MagneticStatusProvider from '@/hooks/use-magnetic-status'
 import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status'
+import { routing } from '@/i18n/routing'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { Signika_Negative, Source_Sans_3 } from 'next/font/google'
+import { notFound } from 'next/navigation'
 import NextTopLoader from 'nextjs-toploader'
 import '../globals.css'
 
@@ -49,29 +52,39 @@ export const metadata: Metadata = {
   ]
 }
 
-export default function RootLayout({
-  children
+export default async function RootLayout({
+  children,
+  params
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
   return (
-    <html lang='en'>
-      <TestimonialsStatusProvider>
-        <DockStatusProvider>
-          <MagneticStatusProvider>
-            <AccentColorProvider>
-              <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
-                <NextTopLoader showSpinner={false} color='var(--main)' zIndex={999} />
-                <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-                  {children}
-                  <CardStack items={testimonials} />
-                  <AppsDock />
-                </div>
-              </body>
-            </AccentColorProvider>
-          </MagneticStatusProvider>
-        </DockStatusProvider>
-      </TestimonialsStatusProvider>
+    <html lang={locale}>
+      <NextIntlClientProvider>
+        <TestimonialsStatusProvider>
+          <DockStatusProvider>
+            <MagneticStatusProvider>
+              <AccentColorProvider>
+                <body className={`${signikaNegative.variable} ${sourceSans3.variable} font-sans antialiased`}>
+                  <NextTopLoader showSpinner={false} color='var(--main)' zIndex={999} />
+                  <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
+                    {children}
+                    <CardStack items={testimonials} />
+                    <AppsDock />
+                  </div>
+                </body>
+              </AccentColorProvider>
+            </MagneticStatusProvider>
+          </DockStatusProvider>
+        </TestimonialsStatusProvider>
+      </NextIntlClientProvider>
       <SpeedInsights />
     </html>
   )

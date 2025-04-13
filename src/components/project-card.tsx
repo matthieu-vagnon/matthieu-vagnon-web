@@ -1,6 +1,6 @@
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 import Image, { StaticImageData } from 'next/image'
-import Link from 'next/link'
 import { Magnetic } from './ui/magnetic'
 
 const typeVariants = {

@@ -1,7 +1,7 @@
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
-import Link, { LinkProps } from 'next/link'
 import * as React from 'react'
 import { Magnetic } from './magnetic'
 
@@ -75,16 +75,17 @@ function LinkButton({
   size,
   isInline = false,
   href,
+  locale,
   external = false,
   noExternalIndicator = false,
   noMagnetic = false,
   children,
   disabled = false,
   ...props
-}: LinkProps &
-  React.ComponentProps<'a'> &
+}: React.ComponentProps<'a'> &
   VariantProps<typeof buttonVariants> & {
     href: string
+    locale?: string
     external?: boolean
     noExternalIndicator?: boolean
     noMagnetic?: boolean
@@ -95,6 +96,7 @@ function LinkButton({
     <ButtonWrapper size={size} isInline={isInline} disabled={disabled || noMagnetic}>
       <Link
         href={href}
+        locale={locale}
         target={external ? '_blank' : '_self'}
         className={cn(
           'cursor-pointer',
