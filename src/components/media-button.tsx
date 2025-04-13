@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from '@/i18n/navigation'
-import { getTranslatedData } from '@/lib/utils'
+import { cn, getTranslatedData } from '@/lib/utils'
 import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import { motion } from 'framer-motion'
@@ -14,15 +14,22 @@ import { Button } from './ui/button'
 import { Magnetic } from './ui/magnetic'
 
 type Props =
-  | { img: NonNullable<NonNullable<Project['gallery']>['img']>[number]; video?: never; isOpen?: never; index?: never }
+  | {
+      img: NonNullable<NonNullable<Project['gallery']>['img']>[number]
+      video?: never
+      isOpen?: never
+      index?: never
+      className?: string
+    }
   | {
       video: NonNullable<NonNullable<Project['gallery']>['video']>[number]
       img?: never
       isOpen?: boolean
       index: number
+      className?: string
     }
 
-export function MediaButton({ img, video, isOpen = false, index }: Props) {
+export function MediaButton({ img, video, isOpen = false, index, className }: Props) {
   const [open, setOpen] = useState(isOpen)
   const locale = useLocale()
   const pathname = usePathname()
@@ -32,7 +39,12 @@ export function MediaButton({ img, video, isOpen = false, index }: Props) {
     <Dialog open={open} onOpenChange={setOpen}>
       <Magnetic size='md'>
         <DialogTrigger asChild>
-          <button className='relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 outline-none'>
+          <button
+            className={cn(
+              'relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 outline-none',
+              className
+            )}
+          >
             <Image
               src={img?.image ?? video!.previewImage}
               placeholder='blur'
