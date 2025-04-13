@@ -1,7 +1,6 @@
 import { StaticImageData } from 'next/image'
 
 declare global {
-  type Lang = 'en' | 'fr' | 'jp'
   type Testimonial = {
     id: number
     name: string

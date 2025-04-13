@@ -50,14 +50,12 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-  params
+  children
 }: Readonly<{
   children: React.ReactNode
-  params: { lang: Lang }
 }>) {
   return (
-    <html lang={params.lang}>
+    <html lang='en'>
       <TestimonialsStatusProvider>
         <DockStatusProvider>
           <MagneticStatusProvider>
