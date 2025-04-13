@@ -1,3 +1,4 @@
+import { getDictionary } from '@/app/[lang]/dictionaries'
 import Highlight from '@/components/highlight'
 import LanguageSwitch from '@/components/language-switch'
 import TitleBox from '@/components/title-box'
@@ -34,7 +35,11 @@ const SOCIAL_LINKS: SocialLink[] = [
   }
 ]
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: Lang } }) {
+  const dictionary = getDictionary(params.lang)
+
+  console.log(dictionary)
+
   return (
     <React.Fragment>
       <div className='min-h-svh w-full flex justify-center items-center pt-8 pb-22'>

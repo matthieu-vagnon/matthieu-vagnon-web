@@ -54,7 +54,7 @@ export default function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode
-  params: { lang: string }
+  params: { lang: Lang }
 }>) {
   return (
     <html lang={params.lang}>
