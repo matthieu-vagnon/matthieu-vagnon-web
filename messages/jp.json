@@ -44,7 +44,19 @@
   },
   "configure": {
     "title": "設定",
-    "description": "あなたの好みに合わせてアプリを設定してください。"
+    "description": "あなたの好みに合わせてアプリを設定してください。",
+    "accentColor": {
+      "title": "アクセントカラー",
+      "placeholder": "色を選択してください",
+      "blue": "青",
+      "green": "緑",
+      "pink": "ピンク"
+    },
+    "magnetic": {
+      "title": "磁性ボタン",
+      "tip": "タッチスクリーンでは推奨されません。"
+    },
+    "reset": "パラメータをリセット"
   },
   "utils": {
     "links": {

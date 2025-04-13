@@ -44,7 +44,19 @@
   },
   "configure": {
     "title": "Configuration",
-    "description": "Please configure the app to your liking."
+    "description": "Please configure the app to your liking.",
+    "accentColor": {
+      "title": "Accent Color",
+      "placeholder": "Select a color",
+      "blue": "Blue",
+      "green": "Green",
+      "pink": "Pink"
+    },
+    "magnetic": {
+      "title": "Magnetic Buttons",
+      "tip": "Not recommended on touch screens."
+    },
+    "reset": "Reset Parameters"
   },
   "utils": {
     "links": {

@@ -2,6 +2,7 @@
 
 import { useAccentColor } from '@/hooks/use-accent-color'
 import { useMagneticStatus } from '@/hooks/use-magnetic-status'
+import { useTranslations } from 'next-intl'
 import { Button } from './ui/button'
 import { Checkbox } from './ui/checkbox'
 import { Label } from './ui/label'
@@ -11,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus()
   const { accentColor, changeAccentColor } = useAccentColor()
+  const t = useTranslations('configure')
 
   const handleResetParameters = () => {
     changeAccentColor(undefined)
@@ -20,27 +22,27 @@ export function ConfigurationModal() {
   return (
     <DialogContent className='p-0'>
       <DialogHeader className='border-b p-4'>
-        <DialogTitle>Configuration</DialogTitle>
-        <DialogDescription>Please configure the app to your liking.</DialogDescription>
+        <DialogTitle>{t('title')}</DialogTitle>
+        <DialogDescription>{t('description')}</DialogDescription>
       </DialogHeader>
       <div className='flex flex-col gap-4 pl-4 pr-4 pb-4 pt-1'>
         <div className='flex flex-col gap-2'>
-          <Label>Accent Color</Label>
+          <Label>{t('accentColor.title')}</Label>
           <Select value={accentColor} onValueChange={changeAccentColor}>
             <SelectTrigger>
-              <SelectValue placeholder='Select a color' />
+              <SelectValue placeholder={t('accentColor.placeholder')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='default'>Blue</SelectItem>
-              <SelectItem value='green'>Green</SelectItem>
-              <SelectItem value='pink'>Pink</SelectItem>
+              <SelectItem value='default'>{t('accentColor.blue')}</SelectItem>
+              <SelectItem value='green'>{t('accentColor.green')}</SelectItem>
+              <SelectItem value='pink'>{t('accentColor.pink')}</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div className='flex flex-col gap-2'>
           <div className='flex flex-col gap-1 justify-between'>
-            <Label>Magnetic Buttons</Label>
-            <span className='text-xs text-gray-400'>Not recommended on touch screens.</span>
+            <Label>{t('magnetic.title')}</Label>
+            <span className='text-xs text-gray-400'>{t('magnetic.tip')}</span>
           </div>
           <Checkbox
             checked={isMagnetic}
@@ -49,7 +51,7 @@ export function ConfigurationModal() {
         </div>
         <div className='flex flex-row flex-wrap justify-end gap-2'>
           <Button variant='ghost' noMagnetic onClick={handleResetParameters}>
-            Reset Parameters
+            {t('reset')}
           </Button>
         </div>
       </div>

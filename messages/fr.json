@@ -44,7 +44,19 @@
   },
   "configure": {
     "title": "Configuration",
-    "description": "Veuillez configurer l'application à votre goût."
+    "description": "Veuillez configurer l'application à votre goût.",
+    "accentColor": {
+      "title": "Couleur d'accentuation",
+      "placeholder": "Sélectionnez une couleur",
+      "blue": "Bleu",
+      "green": "Vert",
+      "pink": "Rose"
+    },
+    "magnetic": {
+      "title": "Boutons magnétiques",
+      "tip": "Non recommandé sur les écrans tactiles."
+    },
+    "reset": "Réinitialiser les paramètres"
   },
   "utils": {
     "links": {
