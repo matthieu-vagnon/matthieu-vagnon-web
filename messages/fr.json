@@ -48,15 +48,33 @@
         "5": "Web3"
       }
     },
+    "project": {
+      "metadata": {
+        "title": "Cas pratique {name}",
+        "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
+        "openGraph": {
+          "title": "Cas pratique {name}",
+          "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+        },
+        "keywords": {
+          "1": "Matthieu Vagnon",
+          "2": "Cas pratique",
+          "3": "Cas pratique",
+          "4": "SaaS",
+          "5": "AI",
+          "6": "Web3"
+        }
+      },
+      "title": "Cas pratique {name}",
+      "projectDescription": "Description du projet",
+      "skills": "Compétences",
+      "technologies": "Technologies",
+      "problem": "Problème",
+      "solution": "Solution",
+      "results": "Résultats"
+    },
     "title": "Cas pratiques",
-    "caseStudy": "Cas pratique {name}",
-    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
-    "skills": "Compétences",
-    "technologies": "Technologies",
-    "projectDescription": "Description du projet",
-    "problem": "Problème",
-    "solution": "Solution",
-    "results": "Résultats"
+    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
   },
   "getInTouch": {
     "title": "Contact",

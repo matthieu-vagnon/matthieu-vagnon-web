@@ -48,15 +48,33 @@
         "5": "Web3"
       }
     },
+    "project": {
+      "metadata": {
+        "title": "{name}ケーススタディ",
+        "description": "これは私が作業したプロジェクトのいくつかです。",
+        "openGraph": {
+          "title": "{name}ケーススタディ",
+          "description": "これは私が作業したプロジェクトのいくつかです。"
+        },
+        "keywords": {
+          "1": "マチュ・ヴァンニョン",
+          "2": "ケーススタディ",
+          "3": "ケーススタディ",
+          "4": "SaaS",
+          "5": "AI",
+          "6": "Web3"
+        }
+      },
+      "title": "{name}ケーススタディ",
+      "projectDescription": "プロジェクトの説明",
+      "skills": "スキル",
+      "technologies": "テクノロジー",
+      "problem": "問題",
+      "solution": "解決策",
+      "results": "結果"
+    },
     "title": "ケーススタディ",
-    "caseStudy": "{name}ケーススタディ",
-    "description": "これは私が作業したプロジェクトのいくつかです。",
-    "skills": "スキル",
-    "technologies": "テクノロジー",
-    "projectDescription": "プロジェクトの説明",
-    "problem": "問題",
-    "solution": "解決策",
-    "results": "結果"
+    "description": "これは私が作業したプロジェクトのいくつかです。"
   },
   "getInTouch": {
     "title": "お問い合わせ",

@@ -10,6 +10,7 @@ import { projects } from '@/data/projects'
 import { cn, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
+import { getMessages, getTranslations } from 'next-intl/server'
 import React from 'react'
 
 function Block({
@@ -48,19 +49,21 @@ function SkillTag({ technology }: { technology: string }) {
 
 type Params = { project: string }
 
-export function generateMetadata(props: { params: Params; locale: string }) {
+export async function generateMetadata(props: { params: Params; locale: string }) {
   const params = props.params
   const project = projects[params.project]
   const locale = props.locale as keyof typeof project.tags
+  const t = await getTranslations('caseStudies.project.metadata')
+  const messages = (await getMessages()).caseStudies.project.metadata
 
   return {
-    title: `${project.title} Case Study by Matthieu Vagnon`,
-    description: project.longDescription,
+    title: t('title', { name: project.title }),
+    description: t('description', { name: project.title }),
     openGraph: {
       type: 'article',
       siteName: 'Matthieu Vagnon Web',
-      title: `${project.title} Case Study by Matthieu Vagnon`,
-      description: project.shortDescription,
+      title: t('openGraph.title', { name: project.title }),
+      description: t('openGraph.description', { name: project.title }),
       images: [
         ...(project.gallery?.img?.map((img) => ({
           url: `${process.env.NEXT_PUBLIC_URL!}${img.image.src}`
@@ -68,25 +71,12 @@ export function generateMetadata(props: { params: Params; locale: string }) {
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`
         }
-      ],
-      videos: [
-        ...(project.gallery?.video?.map((video) => ({
-          url: `${process.env.NEXT_PUBLIC_URL!}${video.src}`
-        })) || [])
       ]
     },
     keywords: [
-      'Matthieu Vagnon',
-      'Front-End Engineer',
-      'Digital Designer',
-      'SaaS',
-      'Web App',
-      'React',
-      'Next.js',
-      'Case Study',
-      'Case Study',
       `${project.title}`,
       `${project.year}`,
+      ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
       ...(project.tags[locale] || []),
       ...(project.skills[locale] || []),
       ...project.technologies
@@ -123,7 +113,7 @@ export default function Project(props: { params: Params; searchParams: { video: 
       </BlurFade>
       <BlurFade delay={incrementBlurDelay()}>
         <PageTitle
-          title={`${t('caseStudies.caseStudy', { name: project.title })} \u2022 ${project.year}`}
+          title={`${t('caseStudies.project.title', { name: project.title })} \u2022 ${project.year}`}
           description={getTranslatedData(project.shortDescription, locale) as string}
           tags={getTranslatedData(project.tags, locale) as string[]}
         />
@@ -160,12 +150,12 @@ export default function Project(props: { params: Params; searchParams: { video: 
         )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={incrementBlurDelay()}>
-          <Block icon={Sparkle} title={t('caseStudies.projectDescription')} position='left'>
+          <Block icon={Sparkle} title={t('caseStudies.project.projectDescription')} position='left'>
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
               <div>{getTranslatedData(project.longDescription, locale)}</div>
               <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>{t('caseStudies.skills')} -</span>
+                  <span className='text-sm text-gray-400'>{t('caseStudies.project.skills')} -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {(getTranslatedData(project.skills, locale) as string[]).map((skill, index) => (
                       <SkillTag key={index} technology={skill} />
@@ -173,7 +163,7 @@ export default function Project(props: { params: Params; searchParams: { video: 
                   </div>
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>{t('caseStudies.technologies')} -</span>
+                  <span className='text-sm text-gray-400'>{t('caseStudies.project.technologies')} -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.technologies.map((technology, index) => (
                       <SkillTag key={index} technology={technology} />
@@ -186,21 +176,33 @@ export default function Project(props: { params: Params; searchParams: { video: 
         </BlurFade>
         {project.problem && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title={t('caseStudies.problem')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block
+              icon={Sparkle}
+              title={t('caseStudies.project.problem')}
+              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+            >
               {getTranslatedData(project.problem, locale)}
             </Block>
           </BlurFade>
         )}
         {project.solution && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title={t('caseStudies.solution')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block
+              icon={Sparkle}
+              title={t('caseStudies.project.solution')}
+              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+            >
               {getTranslatedData(project.solution, locale)}
             </Block>
           </BlurFade>
         )}
         {project.results && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title={t('caseStudies.results')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+            <Block
+              icon={Sparkle}
+              title={t('caseStudies.project.results')}
+              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+            >
               {getTranslatedData(project.results, locale)}
             </Block>
           </BlurFade>
