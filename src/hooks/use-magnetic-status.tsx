@@ -1,11 +1,11 @@
 'use client'
 
-import { getCookie, setCookie } from '@/lib/server-utils'
+import { deleteCookie, getCookie, setCookie } from '@/lib/server-utils'
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const MagneticStatusContext = createContext<{
   isMagnetic: boolean
-  changeIsMagnetic: (isMagnetic: boolean) => void
+  changeIsMagnetic: (isMagnetic: boolean | undefined) => void
 }>({
   isMagnetic: false,
   changeIsMagnetic: () => {}
@@ -14,15 +14,30 @@ const MagneticStatusContext = createContext<{
 export default function MagneticStatusProvider({ children }: { children: React.ReactNode }) {
   const [isMagnetic, setIsMagnetic] = useState(false)
 
-  const changeIsMagnetic = (isMagnetic: boolean) => {
-    setIsMagnetic(isMagnetic)
-    setCookie('magnetic', isMagnetic.toString())
+  const getDefaultMagneticStatus = () => {
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  const changeIsMagnetic = (isMagnetic: boolean | undefined) => {
+    if (isMagnetic === undefined) {
+      setIsMagnetic(getDefaultMagneticStatus())
+      deleteCookie('magnetic')
+    } else {
+      setIsMagnetic(isMagnetic)
+      setCookie('magnetic', isMagnetic.toString())
+    }
   }
 
   useEffect(() => {
     getCookie('magnetic').then((cookie) => {
       if (cookie) {
         setIsMagnetic(cookie === 'true')
+      } else {
+        setIsMagnetic(getDefaultMagneticStatus())
       }
     })
   }, [])

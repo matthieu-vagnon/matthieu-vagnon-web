@@ -8,18 +8,13 @@ import { Label } from './ui/label'
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/nested-dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 
-const DEFAULT_PARAMETERS = {
-  accentColor: 'default',
-  isMagnetic: true
-}
-
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus()
   const { accentColor, changeAccentColor } = useAccentColor()
 
   const handleResetParameters = () => {
-    changeAccentColor(DEFAULT_PARAMETERS.accentColor)
-    changeIsMagnetic(DEFAULT_PARAMETERS.isMagnetic)
+    changeAccentColor(undefined)
+    changeIsMagnetic(undefined)
   }
 
   return (
@@ -47,7 +42,10 @@ export function ConfigurationModal() {
             <Label>Magnetic Buttons</Label>
             <span className='text-xs text-gray-400'>Not recommended on touch screens.</span>
           </div>
-          <Checkbox checked={isMagnetic} onCheckedChange={changeIsMagnetic} />
+          <Checkbox
+            checked={isMagnetic}
+            onCheckedChange={(checked) => changeIsMagnetic(checked === 'indeterminate' ? undefined : checked)}
+          />
         </div>
         <div className='flex flex-row flex-wrap justify-end gap-2'>
           <Button variant='ghost' noMagnetic onClick={handleResetParameters}>

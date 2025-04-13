@@ -17,3 +17,9 @@ export async function setCookie(name: string, value: string) {
     expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 365)
   })
 }
+
+export async function deleteCookie(name: string) {
+  const cookieStore = await cookies()
+
+  cookieStore.delete(name)
+}

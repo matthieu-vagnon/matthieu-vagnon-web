@@ -1,11 +1,11 @@
 'use client'
 
-import { getCookie, setCookie } from '@/lib/server-utils'
+import { deleteCookie, getCookie, setCookie } from '@/lib/server-utils'
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const AccentColorContext = createContext<{
   accentColor: string
-  changeAccentColor: (accentColor: string) => void
+  changeAccentColor: (accentColor: string | undefined) => void
 }>({
   accentColor: 'default',
   changeAccentColor: () => {}
@@ -14,10 +14,16 @@ const AccentColorContext = createContext<{
 export default function AccentColorProvider({ children }: { children: React.ReactNode }) {
   const [accentColor, setAccentColor] = useState<string>('default')
 
-  const changeAccentColor = (accentColor: string) => {
-    document.documentElement.setAttribute('data-accent-color', accentColor)
-    setCookie('accent-color', accentColor)
-    setAccentColor(accentColor)
+  const changeAccentColor = (accentColor: string | undefined) => {
+    if (accentColor) {
+      document.documentElement.setAttribute('data-accent-color', accentColor)
+      setCookie('accent-color', accentColor)
+      setAccentColor(accentColor)
+    } else {
+      document.documentElement.removeAttribute('data-accent-color')
+      deleteCookie('accent-color')
+      setAccentColor('default')
+    }
   }
 
   useEffect(() => {
