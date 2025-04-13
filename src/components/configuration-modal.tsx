@@ -59,7 +59,7 @@ export function ConfigurationModal() {
         <div className='flex flex-col gap-2'>
           <div className='flex flex-col gap-1 justify-between'>
             <Label>Magnetic Buttons</Label>
-            <span className='text-xs text-gray-400'>Not recommended for touch screens.</span>
+            <span className='text-xs text-gray-400'>Not recommended on touch screens.</span>
           </div>
           <Checkbox checked={isMagnetic} onCheckedChange={changeIsMagnetic} />
         </div>

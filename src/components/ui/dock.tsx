@@ -1,5 +1,6 @@
 'use client'
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { cn } from '@/lib/utils'
 import {
   AnimatePresence,
@@ -80,6 +81,7 @@ function Dock({
 }: DockProps) {
   const mouseX = useMotionValue(Infinity)
   const isHovered = useMotionValue(0)
+  const { isMagnetic } = useMagneticStatus()
 
   const maxHeight = useMemo(() => {
     return Math.max(DOCK_HEIGHT, magnification + magnification / 2 + 4)
@@ -98,12 +100,16 @@ function Dock({
     >
       <motion.div
         onMouseMove={({ pageX }) => {
-          isHovered.set(1)
-          mouseX.set(pageX)
+          if (isMagnetic) {
+            isHovered.set(1)
+            mouseX.set(pageX)
+          }
         }}
         onMouseLeave={() => {
-          isHovered.set(0)
-          mouseX.set(Infinity)
+          if (isMagnetic) {
+            isHovered.set(0)
+            mouseX.set(Infinity)
+          }
         }}
         className={cn('mx-auto flex w-fit gap-4 rounded-2xl bg-accent px-4 dark:bg-neutral-900', className)}
         style={{ height: panelHeight }}
@@ -118,7 +124,7 @@ function Dock({
 
 function DockItem({ children, className }: DockItemProps) {
   const ref = useRef<HTMLDivElement>(null)
-
+  const { isMagnetic } = useMagneticStatus()
   const { distance, magnification, mouseX, spring } = useDock()
 
   const isHovered = useMotionValue(0)
@@ -140,7 +146,12 @@ function DockItem({ children, className }: DockItemProps) {
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
-      className={cn('relative inline-flex items-center justify-center active:brightness-90', className)}
+      className={cn(
+        'relative inline-flex items-center justify-center',
+        isMagnetic && 'active:brightness-90',
+        !isMagnetic && 'hover:brightness-90',
+        className
+      )}
       tabIndex={0}
       role='button'
       aria-haspopup='true'
@@ -155,6 +166,7 @@ function DockItem({ children, className }: DockItemProps) {
 function DockLabel({ children, className, ...rest }: DockLabelProps) {
   const isHovered = rest.isHovered as MotionValue<number>
   const [isVisible, setIsVisible] = useState(false)
+  const { isMagnetic } = useMagneticStatus()
 
   useEffect(() => {
     if (!isHovered) return () => {}
@@ -165,6 +177,8 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
 
     return () => unsubscribe()
   }, [isHovered])
+
+  if (!isMagnetic) return
 
   return (
     <AnimatePresence>
