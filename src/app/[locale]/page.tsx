@@ -32,7 +32,7 @@ export default function Home() {
     },
     {
       label: t('utils.links.cv'),
-      link: '/profile.pdf'
+      link: '/cv.pdf'
     }
   ]
 
