@@ -71,7 +71,7 @@ export const projects: Record<string, Project> = {
     },
     relatedUrls: [
       {
-        name: { en: 'Matthieu Vagnon Web', fr: 'Matthieu Vagnon Web', jp: 'マティュー・ヴァグノンのポートフォリオ' },
+        name: { en: 'Matthieu Vagnon Web' },
         url: process.env.URL!
       }
     ]
@@ -167,7 +167,7 @@ export const projects: Record<string, Project> = {
       ],
       video: [
         {
-          title: { en: 'Builder Tour', fr: 'Tour du générateur', jp: 'ジェネレーターのツアー' },
+          title: { en: 'Builder Tour', fr: 'Tour du builder', jp: 'ジェネレーターのツアー' },
           src: 'https://www.youtube.com/embed/zy5hgYR-H74',
           previewImage: smartInterviewBuilder1
         }
@@ -254,7 +254,7 @@ export const projects: Record<string, Project> = {
     },
     relatedUrls: [
       {
-        name: { en: 'Pulse Partners', fr: 'Pulse Partners', jp: 'Pulse Partners' },
+        name: { en: 'Pulse Partners' },
         url: 'https://pulse-partners.ch'
       }
     ]
@@ -273,6 +273,19 @@ export const projects: Record<string, Project> = {
         <span>
           A simple single page web application for a <Highlight color='gray'>Japanese restaurant</Highlight> showcasing
           their adress and letting people <Highlight color='gray'>call them</Highlight> via the push of a button.
+        </span>
+      ),
+      fr: (
+        <span>
+          Une application web simple pour un <Highlight color='gray'>restaurant japonais</Highlight> montrant leur
+          adresse et permettant aux personnes de <Highlight color='gray'>les appeler</Highlight> en appuyant sur un
+          bouton.
+        </span>
+      ),
+      jp: (
+        <span>
+          <Highlight color='gray'>日本料理店</Highlight>のシンプルなウェブアプリケーションで、彼らの住所を表示し、
+          人々が<Highlight color='gray'>彼らに電話をかける</Highlight>ことができるようにします。
         </span>
       )
     },
@@ -319,7 +332,7 @@ export const projects: Record<string, Project> = {
     },
     relatedUrls: [
       {
-        name: { en: 'Koryori Ya Ozaki', fr: 'Koryori Ya Ozaki', jp: 'Koryori Ya Ozaki' },
+        name: { en: 'Koryori Ya Ozaki' },
         url: 'https://koryoriyaozaki.uk'
       }
     ]

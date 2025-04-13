@@ -1,6 +1,5 @@
 import { Link } from '@/i18n/navigation'
-import { getTranslatedData } from '@/lib/server-utils'
-import { cn } from '@/lib/utils'
+import { cn, getTranslatedData } from '@/lib/utils'
 import { useLocale } from 'next-intl'
 import Image, { StaticImageData } from 'next/image'
 import { Magnetic } from './ui/magnetic'

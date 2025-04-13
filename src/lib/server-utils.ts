@@ -23,11 +23,3 @@ export async function deleteCookie(name: string) {
 
   cookieStore.delete(name)
 }
-
-export async function getTranslatedData(data: { [key: string]: React.ReactNode }, locale: string) {
-  if (Object.keys(data).includes(locale)) {
-    return data[locale]
-  } else {
-    return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as keyof typeof data]
-  }
-}

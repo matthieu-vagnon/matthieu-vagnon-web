@@ -17,7 +17,13 @@
   },
   "caseStudies": {
     "title": "Cas pratiques",
-    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
+    "skills": "Compétences",
+    "technologies": "Technologies",
+    "projectDescription": "Description du projet",
+    "problem": "Problème",
+    "solution": "Solution",
+    "results": "Résultats"
   },
   "getInTouch": {
     "title": "Contact",

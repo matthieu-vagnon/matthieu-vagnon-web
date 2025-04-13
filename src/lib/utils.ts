@@ -5,10 +5,17 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function getTranslatedData(data: { [key: string]: React.ReactNode }, locale: string) {
-  if (Object.keys(data).includes(locale)) {
-    return data[locale]
+export function getTranslatedData(
+  data: Record<string, string | React.ReactNode | undefined> | undefined,
+  locale: string
+): string | React.ReactNode | undefined {
+  if (data) {
+    if (Object.keys(data).includes(locale)) {
+      return data[locale]
+    } else {
+      return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as string]
+    }
   } else {
-    return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as keyof typeof data]
+    return undefined
   }
 }

@@ -7,8 +7,9 @@ import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { projects } from '@/data/projects'
-import { cn } from '@/lib/utils'
+import { cn, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 
 function Block({
@@ -45,11 +46,12 @@ function SkillTag({ technology }: { technology: string }) {
   )
 }
 
-type Params = Promise<{ project: string }>
+type Params = { project: string }
 
-export async function generateMetadata(props: { params: Params }) {
-  const params = await props.params
+export function generateMetadata(props: { params: Params; locale: string }) {
+  const params = props.params
   const project = projects[params.project]
+  const locale = props.locale as keyof typeof project.tags
 
   return {
     title: `${project.title} Case Study by Matthieu Vagnon`,
@@ -85,19 +87,28 @@ export async function generateMetadata(props: { params: Params }) {
       'Case Study',
       `${project.title}`,
       `${project.year}`,
-      ...project.tags,
-      ...project.skills,
+      ...(project.tags[locale] || []),
+      ...(project.skills[locale] || []),
       ...project.technologies
     ]
   }
 }
 
-export default async function Project(props: { params: Params; searchParams: Promise<{ video: string }> }) {
-  const params = await props.params
-  const searchParams = await props.searchParams
+export default function Project(props: { params: Params; searchParams: { video: string } }) {
+  const params = props.params
+  const searchParams = props.searchParams
   const project = projects[params.project]
   const videoIndex = searchParams.video
+  const locale = useLocale()
+  const t = useTranslations()
   let blurDelay = 0
+
+  const relatedUrls =
+    project.relatedUrls?.map((url) => ({
+      ...url,
+      name: getTranslatedData(url.name, locale) as string,
+      important: true
+    })) || []
 
   const incrementBlurDelay = () => {
     blurDelay++
@@ -113,8 +124,8 @@ export default async function Project(props: { params: Params; searchParams: Pro
       <BlurFade delay={incrementBlurDelay()}>
         <PageTitle
           title={`${project.title} Case Study \u2022 ${project.year}`}
-          description={project.shortDescription}
-          tags={project.tags}
+          description={getTranslatedData(project.shortDescription, locale) as string}
+          tags={getTranslatedData(project.tags, locale) as string[]}
         />
       </BlurFade>
       {project.gallery &&
@@ -149,20 +160,20 @@ export default async function Project(props: { params: Params; searchParams: Pro
         )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={incrementBlurDelay()}>
-          <Block icon={Sparkle} title='Description of the Project' position='left'>
+          <Block icon={Sparkle} title={t('caseStudies.projectDescription')} position='left'>
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
-              <div>{project.longDescription}</div>
+              <div>{getTranslatedData(project.longDescription, locale)}</div>
               <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>Skills -</span>
+                  <span className='text-sm text-gray-400'>{t('caseStudies.skills')} -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
-                    {project.skills.map((skill, index) => (
+                    {(getTranslatedData(project.skills, locale) as string[]).map((skill, index) => (
                       <SkillTag key={index} technology={skill} />
                     ))}
                   </div>
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>Technologies -</span>
+                  <span className='text-sm text-gray-400'>{t('caseStudies.technologies')} -</span>
                   <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
                     {project.technologies.map((technology, index) => (
                       <SkillTag key={index} technology={technology} />
@@ -175,22 +186,22 @@ export default async function Project(props: { params: Params; searchParams: Pro
         </BlurFade>
         {project.problem && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title='Problem' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-              {project.problem}
+            <Block icon={Sparkle} title={t('caseStudies.problem')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {getTranslatedData(project.problem, locale)}
             </Block>
           </BlurFade>
         )}
         {project.solution && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title='Solution' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-              {project.solution}
+            <Block icon={Sparkle} title={t('caseStudies.solution')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {getTranslatedData(project.solution, locale)}
             </Block>
           </BlurFade>
         )}
         {project.results && (
           <BlurFade delay={incrementBlurDelay()}>
-            <Block icon={Sparkle} title='Results' position={blurDelay % 2 === 0 ? 'right' : 'left'}>
-              {project.results}
+            <Block icon={Sparkle} title={t('caseStudies.results')} position={blurDelay % 2 === 0 ? 'right' : 'left'}>
+              {getTranslatedData(project.results, locale)}
             </Block>
           </BlurFade>
         )}
@@ -198,10 +209,10 @@ export default async function Project(props: { params: Params; searchParams: Pro
       <BlurFade delay={incrementBlurDelay()}>
         <SeeMore
           links={[
-            ...(project.relatedUrls?.map((url) => ({ important: true, ...url })) || []),
-            { name: 'YouTube', url: 'https://www.youtube.com/@matthieu-vagnon' },
-            { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
-            { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
+            ...relatedUrls,
+            { name: t('utils.links.youtube'), url: 'https://www.youtube.com/@matthieu-vagnon' },
+            { name: t('utils.links.instagram'), url: 'https://www.instagram.com/matthieu.vagnon/' },
+            { name: t('utils.links.github'), url: 'https://github.com/matthieu-vagnon' }
           ]}
           className='mt-10 sm:mt-12 md:mt-14 mb-28'
         />

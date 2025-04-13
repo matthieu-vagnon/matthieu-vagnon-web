@@ -1,9 +1,11 @@
 'use client'
 
+import { getTranslatedData } from '@/lib/utils'
 import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog'
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 import { motion } from 'framer-motion'
 import { PlayIcon } from 'lucide-react'
+import { useLocale } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Magnetic } from './ui/magnetic'
@@ -14,6 +16,7 @@ type Props =
 
 export function MediaButton({ img, video, isOpen = false }: Props) {
   const [open, setOpen] = useState(isOpen)
+  const locale = useLocale()
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -23,7 +26,9 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
             <Image
               src={img?.image ?? video!.previewImage}
               placeholder='blur'
-              alt={img?.title ?? video!.title}
+              alt={
+                (getTranslatedData(img?.title, locale) as string) ?? (getTranslatedData(video!.title, locale) as string)
+              }
               className='rounded-lg'
             />
             {video && (
@@ -44,7 +49,10 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
           >
             <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-auto rounded-sm'>
               <VisuallyHidden asChild>
-                <DialogTitle>{img?.title ?? video!.title}</DialogTitle>
+                <DialogTitle>
+                  {(getTranslatedData(img?.title, locale) as string) ??
+                    (getTranslatedData(video!.title, locale) as string)}
+                </DialogTitle>
               </VisuallyHidden>
               {video && (
                 <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
@@ -61,7 +69,7 @@ export function MediaButton({ img, video, isOpen = false }: Props) {
                 <Image
                   src={img.image}
                   placeholder='blur'
-                  alt={img.title}
+                  alt={getTranslatedData(img.title, locale) as string}
                   className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
                 />
               )}

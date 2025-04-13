@@ -17,7 +17,13 @@
   },
   "caseStudies": {
     "title": "Case Studies",
-    "description": "Here are some of the projects I've worked on."
+    "description": "Here are some of the projects I've worked on.",
+    "skills": "Skills",
+    "technologies": "Technologies",
+    "projectDescription": "Description of the Project",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results"
   },
   "getInTouch": {
     "title": "Get in Touch",
