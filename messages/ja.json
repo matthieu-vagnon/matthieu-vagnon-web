@@ -19,13 +19,13 @@
     },
     "title": "ホーム",
     "titleBox": {
-      "name": "こんにちは、私は<strong>ヴァンニョン・マチュ</strong>です。",
+      "name": "私は<strong>ヴァンニョン・マチュ</strong>です。",
       "job": {
         "prefix": "フリーランス ",
         "skills": {
           "1": "フロントエンジニア",
           "2": "デジタルデザイナー",
-          "3": "React & Next.js エキスパート"
+          "3": "React/Next エキスパート"
         },
         "suffix": ""
       }
