@@ -9,7 +9,7 @@ declare global {
     testimonial: {
       en: React.ReactNode
       fr?: React.ReactNode
-      jp?: React.ReactNode
+      ja?: React.ReactNode
     }
     method?: string
     image: StaticImageData
@@ -21,22 +21,22 @@ declare global {
     shortDescription: {
       en: string
       fr?: string
-      jp?: string
+      ja?: string
     }
     longDescription: {
       en: React.ReactNode
       fr?: React.ReactNode
-      jp?: React.ReactNode
+      ja?: React.ReactNode
     }
     tags: {
       en: string[]
       fr?: string[]
-      jp?: string[]
+      ja?: string[]
     }
     skills: {
       en: string[]
       fr?: string[]
-      jp?: string[]
+      ja?: string[]
     }
     technologies: string[]
     previewImg?: StaticImageData
@@ -45,7 +45,7 @@ declare global {
         title: {
           en: string
           fr?: string
-          jp?: string
+          ja?: string
         }
         image: StaticImageData
       }[]
@@ -53,7 +53,7 @@ declare global {
         title: {
           en: string
           fr?: string
-          jp?: string
+          ja?: string
         }
         src: string
         previewImage: StaticImageData
@@ -62,23 +62,23 @@ declare global {
     problem?: {
       en: React.ReactNode
       fr?: React.ReactNode
-      jp?: React.ReactNode
+      ja?: React.ReactNode
     }
     solution?: {
       en: React.ReactNode
       fr?: React.ReactNode
-      jp?: React.ReactNode
+      ja?: React.ReactNode
     }
     results?: {
       en: React.ReactNode
       fr?: React.ReactNode
-      jp?: React.ReactNode
+      ja?: React.ReactNode
     }
     relatedUrls?: {
       name: {
         en: string
         fr?: string
-        jp?: string
+        ja?: string
       }
       url: string
     }[]

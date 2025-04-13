@@ -23,7 +23,7 @@ export default function LanguageSwitch({ className }: { className?: string }) {
       <span>-</span>
       <LanguageButton lang='fr' title='Français' />
       <span>-</span>
-      <LanguageButton lang='jp' title='日本語' />
+      <LanguageButton lang='ja' title='日本語' />
     </div>
   )
 }

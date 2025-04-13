@@ -21,7 +21,7 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'The web application you are currently watching.',
       fr: "L'application web que vous regardez actuellement.",
-      jp: 'あなたが現在見ているウェブアプリケーション。'
+      ja: 'あなたが現在見ているウェブアプリケーション。'
     },
     longDescription: {
       en: (
@@ -38,7 +38,7 @@ export const projects: Record<string, Project> = {
           contacter et accéder à mes liens de manière simple sur <Highlight color='gray'>mobile et desktop</Highlight>.
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           <Highlight color='gray'>ReactとNext.js</Highlight>で作成されたシンプルな
           <Highlight color='gray'>ポートフォリオウェブアプリケーション</Highlight>
@@ -49,22 +49,22 @@ export const projects: Record<string, Project> = {
     tags: {
       en: ['Web Application', 'Portfolio'],
       fr: ['Application Web', 'Portfolio'],
-      jp: ['ウェブアプリケーション', 'ポートフォリオ']
+      ja: ['ウェブアプリケーション', 'ポートフォリオ']
     },
     skills: {
       en: ['Web Design', 'Responsive Design', 'Web Project Management', 'Deployment', 'Web Maintenance'],
       fr: ['Design Web', 'Responsive Design', 'Gestion de Projet Web', 'Déploiement', 'Maintenance Web'],
-      jp: ['ウェブデザイン', 'レスポンシブデザイン', 'Webプロジェクト管理', 'デプロイ', 'Webメンテナンス']
+      ja: ['ウェブデザイン', 'レスポンシブデザイン', 'Webプロジェクト管理', 'デプロイ', 'Webメンテナンス']
     },
     technologies: ['Cursor IDE', 'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Shadcn UI', 'NPM', 'Vercel'],
     previewImg: mvWeb1,
     gallery: {
       img: [
-        { title: { en: 'Home Page', fr: "Page d'accueil", jp: 'ホームページ' }, image: mvWeb1 },
-        { title: { en: 'Case Study Page', fr: "Page d'étude de cas", jp: 'ケーススタディページ' }, image: mvWeb2 },
-        { title: { en: 'Video Player', fr: 'Lecteur vidéo', jp: 'ビデオプレーヤー' }, image: mvWeb3 },
+        { title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' }, image: mvWeb1 },
+        { title: { en: 'Case Study Page', fr: "Page d'étude de cas", ja: 'ケーススタディページ' }, image: mvWeb2 },
+        { title: { en: 'Video Player', fr: 'Lecteur vidéo', ja: 'ビデオプレーヤー' }, image: mvWeb3 },
         {
-          title: { en: 'Meeting Scheduler', fr: 'Planificateur de réunion', jp: 'ミーティングスケジューラー' },
+          title: { en: 'Meeting Scheduler', fr: 'Planificateur de réunion', ja: 'ミーティングスケジューラー' },
           image: mvWeb4
         }
       ]
@@ -83,7 +83,7 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'A platform to create AI-powered questionnaires and mass analyze responses.',
       fr: "Une plateforme pour créer des questionnaires alimentés par l'IA et analyser les réponses en masse.",
-      jp: 'AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。'
+      ja: 'AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。'
     },
     longDescription: {
       en: (
@@ -101,12 +101,12 @@ export const projects: Record<string, Project> = {
           Une plateforme pour créer des questionnaires alimentés par l&apos;IA et analyser les réponses en masse.
         </span>
       ),
-      jp: <span>AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。</span>
+      ja: <span>AI駆動のアンケートを作成し、回答を大量に分析するプラットフォーム。</span>
     },
     tags: {
       en: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
       fr: ['IA', 'SaaS', 'Questionnaire', 'Analyse en masse'],
-      jp: ['AI', 'SaaS', 'アンケート', '大量分析']
+      ja: ['AI', 'SaaS', 'アンケート', '大量分析']
     },
     skills: {
       en: [
@@ -125,7 +125,7 @@ export const projects: Record<string, Project> = {
         'Déploiement',
         'Maintenance Web'
       ],
-      jp: [
+      ja: [
         'ウェブ開発',
         'ウェブデザイン',
         'レスポンシブデザイン',
@@ -149,25 +149,25 @@ export const projects: Record<string, Project> = {
     gallery: {
       img: [
         {
-          title: { en: 'Builder Editor', fr: 'Éditeur de générateur', jp: 'ジェネレーターエディター' },
+          title: { en: 'Builder Editor', fr: 'Éditeur de générateur', ja: 'ジェネレーターエディター' },
           image: smartInterviewBuilder2
         },
         {
-          title: { en: 'Builder Preview', fr: 'Aperçu du générateur', jp: 'ジェネレーターのプレビュー' },
+          title: { en: 'Builder Preview', fr: 'Aperçu du générateur', ja: 'ジェネレーターのプレビュー' },
           image: smartInterviewBuilder3
         },
         {
-          title: { en: 'Builder JSON Editor', fr: 'Éditeur JSON du générateur', jp: 'ジェネレーターのJSONエディター' },
+          title: { en: 'Builder JSON Editor', fr: 'Éditeur JSON du générateur', ja: 'ジェネレーターのJSONエディター' },
           image: smartInterviewBuilder4
         },
         {
-          title: { en: 'Builder Presets', fr: 'Présets du générateur', jp: 'ジェネレーターのプリセット' },
+          title: { en: 'Builder Presets', fr: 'Présets du générateur', ja: 'ジェネレーターのプリセット' },
           image: smartInterviewBuilder5
         }
       ],
       video: [
         {
-          title: { en: 'Builder Tour', fr: 'Tour du builder', jp: 'ジェネレーターのツアー' },
+          title: { en: 'Builder Tour', fr: 'Tour du builder', ja: 'ジェネレーターのツアー' },
           src: 'https://www.youtube.com/embed/zy5hgYR-H74',
           previewImage: smartInterviewBuilder1
         }
@@ -206,7 +206,7 @@ export const projects: Record<string, Project> = {
           </li>
         </ol>
       ),
-      jp: (
+      ja: (
         <ol className='list-decimal list-inside'>
           <li>
             UI を調整して<Highlight color='emerald'>ユーザーフレンドリー</Highlight>
@@ -243,7 +243,7 @@ export const projects: Record<string, Project> = {
           <Highlight color='gray'>questionnaires complexes</Highlight>.
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           アプリケーションはより<Highlight color='gray'>ユーザーフレンドリー</Highlight>、
           <Highlight color='gray'>直感的</Highlight>、<Highlight color='gray'>一貫性があり</Highlight>、 ユーザーが
@@ -266,7 +266,7 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'A simple web application for a Japanese restaurant.',
       fr: 'Une application web simple pour un restaurant japonais.',
-      jp: '日本料理店のためのシンプルなウェブアプリケーション。'
+      ja: '日本料理店のためのシンプルなウェブアプリケーション。'
     },
     longDescription: {
       en: (
@@ -282,7 +282,7 @@ export const projects: Record<string, Project> = {
           bouton.
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           <Highlight color='gray'>日本料理店</Highlight>のシンプルなウェブアプリケーションで、彼らの住所を表示し、
           人々が<Highlight color='gray'>彼らに電話をかける</Highlight>ことができるようにします。
@@ -292,7 +292,7 @@ export const projects: Record<string, Project> = {
     tags: {
       en: ['Web Application', 'Japanese Restaurant'],
       fr: ['Application Web', 'Restaurant Japonais'],
-      jp: ['ウェブアプリケーション', '日本料理店']
+      ja: ['ウェブアプリケーション', '日本料理店']
     },
     skills: {
       en: [
@@ -311,7 +311,7 @@ export const projects: Record<string, Project> = {
         'Déploiement',
         'Maintenance Web'
       ],
-      jp: [
+      ja: [
         'ウェブ開発',
         'ウェブデザイン',
         'レスポンシブデザイン',
@@ -324,10 +324,10 @@ export const projects: Record<string, Project> = {
     previewImg: koryoriYa3,
     gallery: {
       img: [
-        { title: { en: 'Loading Page', fr: 'Page de chargement', jp: 'ローディングページ' }, image: koryoriYa1 },
-        { title: { en: 'Landing View', fr: "Vue d'accueil", jp: 'ランディングビュー' }, image: koryoriYa2 },
-        { title: { en: 'Concept View', fr: 'Vue conceptuelle', jp: 'コンセプトビュー' }, image: koryoriYa3 },
-        { title: { en: 'Map', fr: 'Carte', jp: 'マップ' }, image: koryoriYa4 }
+        { title: { en: 'Loading Page', fr: 'Page de chargement', ja: 'ローディングページ' }, image: koryoriYa1 },
+        { title: { en: 'Landing View', fr: "Vue d'accueil", ja: 'ランディングビュー' }, image: koryoriYa2 },
+        { title: { en: 'Concept View', fr: 'Vue conceptuelle', ja: 'コンセプトビュー' }, image: koryoriYa3 },
+        { title: { en: 'Map', fr: 'Carte', ja: 'マップ' }, image: koryoriYa4 }
       ]
     },
     relatedUrls: [
@@ -344,7 +344,7 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'A platform to view and manage AI-powered trading tools.',
       fr: "Une plateforme pour visualiser et gérer des outils de trading alimentés par l'IA.",
-      jp: 'AI駆動の取引ツールを表示および管理するプラットフォーム。'
+      ja: 'AI駆動の取引ツールを表示および管理するプラットフォーム。'
     },
     longDescription: {
       en: (
@@ -355,12 +355,12 @@ export const projects: Record<string, Project> = {
         </span>
       ),
       fr: <span>Une plateforme pour visualiser et gérer des outils de trading alimentés par l&apos;IA.</span>,
-      jp: <span>AI駆動の取引ツールを表示および管理するプラットフォーム。</span>
+      ja: <span>AI駆動の取引ツールを表示および管理するプラットフォーム。</span>
     },
     tags: {
       en: ['AI', 'SaaS', 'Trading', 'Analysis'],
       fr: ['IA', 'SaaS', 'Trading', 'Analyse'],
-      jp: ['AI', 'SaaS', '取引', '分析']
+      ja: ['AI', 'SaaS', '取引', '分析']
     },
     skills: {
       en: [
@@ -379,7 +379,7 @@ export const projects: Record<string, Project> = {
         'Déploiement',
         'Maintenance Web'
       ],
-      jp: [
+      ja: [
         'ウェブ開発',
         'ウェブデザイン',
         'レスポンシブデザイン',
@@ -405,7 +405,7 @@ export const projects: Record<string, Project> = {
           <Highlight color='red'>overloading the user</Highlight>
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           The challenge of this project was to be able to display a <Highlight color='red'>lot of data</Highlight> in
           the form of <Highlight color='red'>charts</Highlight> without{' '}
@@ -431,7 +431,7 @@ export const projects: Record<string, Project> = {
           <Highlight color='emerald'>beaux graphiques</Highlight> grâce à <Highlight color='emerald'>MUI-X</Highlight>.
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           <Highlight color='emerald'>MUI-X</Highlight>を使用して、<Highlight color='emerald'>複数のページ</Highlight>、
           <Highlight color='emerald'>明確なナビゲーション</Highlight>、
@@ -454,7 +454,7 @@ export const projects: Record<string, Project> = {
           TotalEnergies et fonctionne parfaitement.
         </span>
       ),
-      jp: (
+      ja: (
         <span>
           <Highlight color='gray'>データが正常に読み込まれ</Highlight>、
           <Highlight color='gray'>インターフェースが明確</Highlight>です。
