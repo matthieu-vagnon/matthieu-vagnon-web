@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
+import LanguageSwitch from './language-switch'
 import { HyperText } from './magicui/hyper-text'
 import { LinkButton } from './ui/button'
 import { Separator } from './ui/separator'
@@ -41,6 +42,7 @@ export default function SeeMore({
           </div>
         </div>
         <div className='text-xs text-gray-500'>Made with ❤️ by Matthieu Vagnon</div>
+        <LanguageSwitch />
       </div>
     </React.Fragment>
   )

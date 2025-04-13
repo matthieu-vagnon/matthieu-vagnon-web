@@ -1,4 +1,5 @@
 import Highlight from '@/components/highlight'
+import LanguageSwitch from '@/components/language-switch'
 import TitleBox from '@/components/title-box'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { LinkButton } from '@/components/ui/button'
@@ -38,6 +39,9 @@ export default function Home() {
     <React.Fragment>
       <div className='min-h-svh w-full flex justify-center items-center pt-8 pb-22'>
         <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
+          <BlurFade className='absolute top-6 sm:top-8 md:top-10 right-6 sm:right-8 md:right-10'>
+            <LanguageSwitch />
+          </BlurFade>
           <TitleBox />
           <BlurFade delay={0.3} className='flex'>
             <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>

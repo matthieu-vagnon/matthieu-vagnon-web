@@ -7,12 +7,12 @@ const MagneticStatusContext = createContext<{
   isMagnetic: boolean
   changeIsMagnetic: (isMagnetic: boolean) => void
 }>({
-  isMagnetic: true,
+  isMagnetic: false,
   changeIsMagnetic: () => {}
 })
 
 export default function MagneticStatusProvider({ children }: { children: React.ReactNode }) {
-  const [isMagnetic, setIsMagnetic] = useState(true)
+  const [isMagnetic, setIsMagnetic] = useState(false)
 
   const changeIsMagnetic = (isMagnetic: boolean) => {
     setIsMagnetic(isMagnetic)

@@ -79,6 +79,7 @@ function LinkButton({
   noExternalIndicator = false,
   noMagnetic = false,
   children,
+  disabled = false,
   ...props
 }: LinkProps &
   React.ComponentProps<'a'> &
@@ -88,13 +89,18 @@ function LinkButton({
     noExternalIndicator?: boolean
     noMagnetic?: boolean
     isInline?: boolean
+    disabled?: boolean
   }) {
   return (
-    <ButtonWrapper size={size} isInline={isInline} disabled={noMagnetic}>
+    <ButtonWrapper size={size} isInline={isInline} disabled={disabled || noMagnetic}>
       <Link
         href={href}
         target={external ? '_blank' : '_self'}
-        className={cn('cursor-pointer', buttonVariants({ variant, size, className }))}
+        className={cn(
+          'cursor-pointer',
+          disabled && 'pointer-events-none opacity-50',
+          buttonVariants({ variant, size, className })
+        )}
         {...props}
       >
         {children}

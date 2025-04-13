@@ -3,15 +3,15 @@ import Negotiator from 'negotiator'
 import { NextRequest, NextResponse } from 'next/server'
 
 const LOCALES = ['en', 'fr', 'jp']
-const DEFAULT_LOCALE = 'en'
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest) {
+  const defaultLocale = process.env.DEFAULT_LOCALE || 'en'
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
 
-  return match(languages, LOCALES, DEFAULT_LOCALE)
+  return match(languages, LOCALES, defaultLocale)
 }
 
 export function middleware(request: NextRequest) {
