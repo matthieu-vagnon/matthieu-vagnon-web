@@ -7,7 +7,7 @@ declare global {
     company: string
     position: string
     testimonial: {
-      en: React.ReactNode
+      en?: React.ReactNode
       fr?: React.ReactNode
       ja?: React.ReactNode
     }
@@ -19,22 +19,22 @@ declare global {
     year: number
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
     shortDescription: {
-      en: string
+      en?: string
       fr?: string
       ja?: string
     }
     longDescription: {
-      en: React.ReactNode
+      en?: React.ReactNode
       fr?: React.ReactNode
       ja?: React.ReactNode
     }
     tags: {
-      en: string[]
+      en?: string[]
       fr?: string[]
       ja?: string[]
     }
     skills: {
-      en: string[]
+      en?: string[]
       fr?: string[]
       ja?: string[]
     }
@@ -43,7 +43,7 @@ declare global {
     gallery?: {
       img?: {
         title: {
-          en: string
+          en?: string
           fr?: string
           ja?: string
         }
@@ -51,7 +51,7 @@ declare global {
       }[]
       video?: {
         title: {
-          en: string
+          en?: string
           fr?: string
           ja?: string
         }
@@ -60,23 +60,23 @@ declare global {
       }[]
     }
     problem?: {
-      en: React.ReactNode
+      en?: React.ReactNode
       fr?: React.ReactNode
       ja?: React.ReactNode
     }
     solution?: {
-      en: React.ReactNode
+      en?: React.ReactNode
       fr?: React.ReactNode
       ja?: React.ReactNode
     }
     results?: {
-      en: React.ReactNode
+      en?: React.ReactNode
       fr?: React.ReactNode
       ja?: React.ReactNode
     }
     relatedUrls?: {
       name: {
-        en: string
+        en?: string
         fr?: string
         ja?: string
       }
