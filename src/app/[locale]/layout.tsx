@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       'React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.',
     images: [
       {
-        url: `${process.env.URL!}/og-image.png`
+        url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`
       }
     ]
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Matthieu Vagnon',
-      url: process.env.URL!
+      url: process.env.NEXT_PUBLIC_URL!
     }
   ]
 }

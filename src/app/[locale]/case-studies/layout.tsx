@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.',
     images: [
       {
-        url: `${process.env.URL!}/og-image.png`
+        url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`
       }
     ]
   },

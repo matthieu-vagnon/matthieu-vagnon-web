@@ -72,7 +72,7 @@ export const projects: Record<string, Project> = {
     relatedUrls: [
       {
         name: { en: 'Matthieu Vagnon Web' },
-        url: process.env.URL!
+        url: process.env.NEXT_PUBLIC_URL!
       }
     ]
   },

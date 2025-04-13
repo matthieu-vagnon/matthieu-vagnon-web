@@ -63,15 +63,15 @@ export function generateMetadata(props: { params: Params; locale: string }) {
       description: project.shortDescription,
       images: [
         ...(project.gallery?.img?.map((img) => ({
-          url: `${process.env.URL!}${img.image.src}`
+          url: `${process.env.NEXT_PUBLIC_URL!}${img.image.src}`
         })) || []),
         {
-          url: `${process.env.URL!}/og-image.png`
+          url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`
         }
       ],
       videos: [
         ...(project.gallery?.video?.map((video) => ({
-          url: `${process.env.URL!}${video.src}`
+          url: `${process.env.NEXT_PUBLIC_URL!}${video.src}`
         })) || [])
       ]
     },
