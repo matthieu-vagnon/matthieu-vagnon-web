@@ -32,7 +32,7 @@ export default function TitleBox({ delay = 0 }: { delay?: number }) {
                   </motion.span>
                 </BlurFade>
                 <BlurFade delay={delay + 0.2} className='flex'>
-                  <span className='flex items-center mt-1 md:mt-2'>
+                  <span className='flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2'>
                     <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                       {t('job.prefix')}
                     </motion.span>
@@ -49,6 +49,7 @@ export default function TitleBox({ delay = 0 }: { delay?: number }) {
                       splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
                       transition={{ type: 'spring', damping: 30, stiffness: 400 }}
                       rotationInterval={3000}
+                      noWrap
                     />
                     <motion.span layout transition={{ type: 'spring', damping: 30, stiffness: 400 }}>
                       {t('job.suffix')}
