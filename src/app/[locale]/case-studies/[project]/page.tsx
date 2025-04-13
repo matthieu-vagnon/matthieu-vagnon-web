@@ -86,13 +86,13 @@ export async function generateMetadata({ params }: { params: Params }) {
 }
 
 type ProjectProps = {
-  params: Promise<Params>
-  searchParams: Promise<{ video: string }>
+  params: Params
+  searchParams: { video: string }
 }
 
 export default async function Project(props: ProjectProps) {
-  const params = await props.params
-  const searchParams = await props.searchParams
+  const params = props.params
+  const searchParams = props.searchParams
   const project = projects[params.project]
   const videoIndex = searchParams.video
   const locale = await getLocale()
