@@ -9,8 +9,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from '@/data/projects'
 import { cn, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
-import { useLocale, useTranslations } from 'next-intl'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import React from 'react'
 
 function Block({
@@ -84,18 +83,13 @@ export async function generateMetadata(props: { params: Params; locale: string }
   }
 }
 
-type ProjectProps = {
-  params: Params
-  searchParams: { video: string }
-}
-
-export default function Project(props: ProjectProps) {
+export default async function Project(props: { params: Params; searchParams: { video: string } }) {
   const params = props.params
   const searchParams = props.searchParams
   const project = projects[params.project]
   const videoIndex = searchParams.video
-  const locale = useLocale()
-  const t = useTranslations()
+  const locale = await getLocale()
+  const t = await getTranslations()
   let blurDelay = 0
 
   const relatedUrls =
