@@ -135,7 +135,7 @@ export default async function Project(props: ProjectProps) {
                     className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
                   >
                     <MediaButton
-                      className='active:cursor-grabbing'
+                      className='cursor-[inherit] active:cursor-[inherit]'
                       video={video}
                       isOpen={videoIndex === index.toString()}
                       index={index}
@@ -147,7 +147,7 @@ export default async function Project(props: ProjectProps) {
                     key={index}
                     className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
                   >
-                    <MediaButton className='active:cursor-grabbing' img={img} />
+                    <MediaButton className='cursor-[inherit] active:cursor-[inherit]' img={img} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
