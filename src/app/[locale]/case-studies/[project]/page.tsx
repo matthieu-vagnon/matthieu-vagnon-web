@@ -46,14 +46,9 @@ function SkillTag({ technology }: { technology: string }) {
   )
 }
 
-type Params = {
-  locale: string
-  project: string
-}
-
-export async function generateMetadata({ params }: { params: Params }) {
-  const project = projects[params.project]
-  const locale = params.locale as keyof typeof project.tags
+export async function generateMetadata({ params }: { params: { project: Promise<string> } }) {
+  const project = projects[await params.project]
+  const locale = await getLocale()
   const t = await getTranslations('caseStudies.project.metadata')
   const messages = (await getMessages()).caseStudies.project.metadata
 
@@ -78,22 +73,21 @@ export async function generateMetadata({ params }: { params: Params }) {
       `${project.title}`,
       `${project.year}`,
       ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
-      ...(project.tags[locale] || []),
-      ...(project.skills[locale] || []),
+      ...(project.tags[locale as keyof typeof project.tags] || []),
+      ...(project.skills[locale as keyof typeof project.skills] || []),
       ...project.technologies
     ]
   }
 }
 
 type ProjectProps = {
-  params: Params
-  searchParams: { video: string }
+  params: { project: Promise<string> }
+  searchParams: Promise<{ video: string }>
 }
 
 export default async function Project(props: ProjectProps) {
-  const params = props.params
-  const searchParams = props.searchParams
-  const project = projects[params.project]
+  const searchParams = await props.searchParams
+  const project = projects[await props.params.project]
   const videoIndex = searchParams.video
   const locale = await getLocale()
   const t = await getTranslations()
