@@ -46,12 +46,14 @@ function SkillTag({ technology }: { technology: string }) {
   )
 }
 
-type Params = { project: string }
+type Params = {
+  locale: string
+  project: string
+}
 
-export async function generateMetadata(props: { params: Params; locale: string }) {
-  const params = props.params
+export async function generateMetadata({ params }: { params: Params }) {
   const project = projects[params.project]
-  const locale = props.locale as keyof typeof project.tags
+  const locale = params.locale as keyof typeof project.tags
   const t = await getTranslations('caseStudies.project.metadata')
   const messages = (await getMessages()).caseStudies.project.metadata
 
