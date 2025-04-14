@@ -1,0 +1,149 @@
+{
+  "home": {
+    "metadata": {
+      "title": "Portfolio web de Matthieu Vagnon",
+      "description": "Expert React et Next.js, développeur front-end, designer numérique. Je propose à mes clients le développement de SaaS et d'applications web de pointe et leur enseigne comment internaliser ces compétences.",
+      "openGraph": {
+        "title": "Portfolio Web de Matthieu Vagnon",
+        "description": "Expert React/Next, développeur front-end, designer numérique. Je propose à mes clients le développement d'applications web de pointe et leur enseigne comment internaliser ces compétences."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Front-End",
+        "3": "Développeur",
+        "4": "Développement",
+        "5": "Digital",
+        "6": "Designer",
+        "7": "SEO",
+        "8": "Responsive",
+        "9": "UI",
+        "10": "UX",
+        "11": "Déploiement",
+        "12": "SaaS",
+        "13": "Web",
+        "14": "App",
+        "15": "React",
+        "16": "Next.js",
+        "17": "Figma",
+        "18": "AI",
+        "19": "Web3",
+        "20": "Enseignement",
+        "21": "Mentorat"
+      }
+    },
+    "title": "Accueil",
+    "titleBox": {
+      "name": "Bonjour, je suis <strong>Matthieu Vagnon</strong>",
+      "job": {
+        "prefix": "",
+        "skills": {
+          "1": "Développeur front-end",
+          "2": "Designer digital",
+          "3": "Expert React/Next",
+          "4": "Chef de projet",
+          "5": "Enseignant et mentor"
+        },
+        "suffix": " indépendant"
+      }
+    },
+    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
+  },
+  "caseStudies": {
+    "metadata": {
+      "title": "Cas pratiques ~ Matthieu Vagnon",
+      "description": "Quelques-uns des projets sur lesquels j'ai travaillé au cours de ma carrière. SaaS, IA, Web3, enseignement et plus encore.",
+      "openGraph": {
+        "title": "Cas pratiques de Matthieu Vagnon",
+        "description": "Quelques-uns des projets sur lesquels j'ai travaillé. SaaS, IA, Web3, enseignement..."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Front-End",
+        "3": "Ingénieur",
+        "4": "Numérique",
+        "5": "Designer",
+        "6": "SEO",
+        "7": "Responsive",
+        "8": "UI",
+        "9": "UX",
+        "10": "Déploiement",
+        "11": "SaaS",
+        "12": "Web",
+        "13": "App",
+        "14": "IA",
+        "15": "React",
+        "16": "Next.js",
+        "17": "Figma",
+        "18": "Enseignement",
+        "19": "Cas pratiques",
+        "20": "Cas pratique",
+        "21": "Web3"
+      }
+    },
+    "project": {
+      "metadata": {
+        "title": "Cas pratique {name} ~ Matthieu Vagnon",
+        "openGraph": {
+          "title": "Matthieu Vagnon: Cas pratique {name}"
+        }
+      },
+      "title": "Cas pratique {name}",
+      "projectDescription": "Description du projet",
+      "skills": "Compétences",
+      "technologies": "Technologies",
+      "problem": "Problème",
+      "solution": "Solution",
+      "results": "Résultat"
+    },
+    "title": "Cas pratiques",
+    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+  },
+  "getInTouch": {
+    "title": "Contact",
+    "description": "Veuillez sélectionner votre méthode de contact préférée.",
+    "meeting": {
+      "title": "Planifier une visioconférence",
+      "description": "Planifier une visioconférence avec moi pour discuter de votre projet."
+    },
+    "email": {
+      "title": "Email",
+      "description": "Envoyer-moi un email pour discuter de votre projet."
+    },
+    "phone": {
+      "title": "Téléphone",
+      "description": "Appeler-moi pour discuter de votre projet (en anglais ou en français)."
+    }
+  },
+  "configure": {
+    "title": "Configuration",
+    "description": "Veuillez configurer l'application à votre goût.",
+    "accentColor": {
+      "title": "Couleur d'accentuation",
+      "placeholder": "Sélectionnez une couleur",
+      "blue": "Bleu",
+      "green": "Vert",
+      "pink": "Rose"
+    },
+    "magnetic": {
+      "title": "Boutons magnétiques",
+      "tip": "Non recommandé sur les écrans tactiles."
+    },
+    "reset": "Réinitialiser les paramètres"
+  },
+  "utils": {
+    "links": {
+      "related": "Liens associés",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "instagram": "Portfolio Instagram",
+      "github": "Portflio GitHub",
+      "cv": "Curriculum Vitae"
+    },
+    "repo": "Consultez le repo public ",
+    "here": "ici",
+    "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon",
+    "copyLink": "Lien copié dans le presse-papiers !",
+    "copyPhone": "Numéro de téléphone copié dans le presse-papiers !",
+    "copyEmail": "Email copié dans le presse-papiers !"
+  }
+}

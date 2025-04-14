@@ -9,19 +9,22 @@ import cover2 from '@/public/project-card-cover/2.png'
 import cover3 from '@/public/project-card-cover/3.png'
 import cover4 from '@/public/project-card-cover/4.png'
 import cover5 from '@/public/project-card-cover/5.png'
+import { useTranslations } from 'next-intl'
 import { StaticImageData } from 'next/image'
-import { projects } from '../../../data/projects'
+import { projects } from '../../../../data/projects'
 
 const COVER_IMAGES: StaticImageData[] = [cover1, cover2, cover3, cover4, cover5]
 
 export default function CaseStudies() {
+  const t = useTranslations()
+
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
       <BlurFade>
         <Header />
       </BlurFade>
       <BlurFade delay={0.1}>
-        <PageTitle title='Case Studies' description="Here are some of the projects I've worked on." />
+        <PageTitle title={t('caseStudies.title')} description={t('caseStudies.description')} />
       </BlurFade>
       <div className='flex flex-row flex-wrap justify-center gap-3 sm:gap-5'>
         {Object.entries(projects).map(([key, project], index) => (
@@ -33,9 +36,9 @@ export default function CaseStudies() {
       <BlurFade delay={0.4 + Object.keys(projects).length * 0.1}>
         <SeeMore
           links={[
-            { name: 'Youtube Channel', url: 'https://www.youtube.com/@matthieu-vagnon' },
-            { name: 'Instagram Portfolio', url: 'https://www.instagram.com/matthieu.vagnon/' },
-            { name: 'GitHub Portfolio', url: 'https://github.com/matthieu-vagnon' }
+            { name: t('utils.links.youtube'), url: process.env.NEXT_PUBLIC_YOUTUBE_URL! },
+            { name: t('utils.links.instagram'), url: process.env.NEXT_PUBLIC_INSTAGRAM_URL! },
+            { name: t('utils.links.github'), url: process.env.NEXT_PUBLIC_GITHUB_URL! }
           ]}
         />
       </BlurFade>

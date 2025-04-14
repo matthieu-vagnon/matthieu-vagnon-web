@@ -1,35 +1,31 @@
 'use client'
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { motion, useMotionValue, useSpring, type SpringOptions } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 
 const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 }
 
+const SIZES_CONFIG = {
+  xs: 0.1,
+  sm: 0.09,
+  md: 0.06,
+  lg: 0.05
+}
+
 export type MagneticProps = {
   children: React.ReactNode
-  intensity?: number
-  range?: number
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   disabled?: boolean
-  actionArea?: 'self' | 'parent' | 'global'
   springOptions?: SpringOptions
   className?: string
 }
 
-export function Magnetic({
-  children,
-  intensity = 0.6,
-  range,
-  disabled = false,
-  actionArea = 'self',
-  springOptions = SPRING_CONFIG,
-  className
-}: MagneticProps) {
+function MagneticElement({ children, size = 'sm', springOptions = SPRING_CONFIG, className }: MagneticProps) {
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-
   const x = useMotionValue(0)
   const y = useMotionValue(0)
-
   const springX = useSpring(x, springOptions)
   const springY = useSpring(y, springOptions)
 
@@ -42,23 +38,9 @@ export function Magnetic({
         const distanceX = e.clientX - centerX
         const distanceY = e.clientY - centerY
 
-        const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
-
-        if (isHovered && !disabled) {
-          if (range) {
-            if (absoluteDistance <= range) {
-              const scale = 1 - absoluteDistance / range
-
-              x.set(distanceX * intensity * scale)
-              y.set(distanceY * intensity * scale)
-            } else {
-              x.set(0)
-              y.set(0)
-            }
-          } else {
-            x.set(distanceX * intensity)
-            y.set(distanceY * intensity)
-          }
+        if (isHovered) {
+          x.set(distanceX * SIZES_CONFIG[size])
+          y.set(distanceY * SIZES_CONFIG[size])
         } else {
           x.set(0)
           y.set(0)
@@ -71,46 +53,23 @@ export function Magnetic({
     return () => {
       document.removeEventListener('mousemove', calculateDistance)
     }
-  }, [ref, isHovered, intensity, range])
-
-  useEffect(() => {
-    if (actionArea === 'parent' && ref.current?.parentElement) {
-      const parent = ref.current.parentElement
-
-      const handleParentEnter = () => setIsHovered(true)
-      const handleParentLeave = () => setIsHovered(false)
-
-      parent.addEventListener('mouseenter', handleParentEnter)
-      parent.addEventListener('mouseleave', handleParentLeave)
-
-      return () => {
-        parent.removeEventListener('mouseenter', handleParentEnter)
-        parent.removeEventListener('mouseleave', handleParentLeave)
-      }
-    } else if (actionArea === 'global') {
-      setIsHovered(true)
-    }
-  }, [actionArea])
+  }, [ref, isHovered, size])
 
   const handleMouseEnter = () => {
-    if (actionArea === 'self') {
-      setIsHovered(true)
-    }
+    setIsHovered(true)
   }
 
   const handleMouseLeave = () => {
-    if (actionArea === 'self') {
-      setIsHovered(false)
-      x.set(0)
-      y.set(0)
-    }
+    setIsHovered(false)
+    x.set(0)
+    y.set(0)
   }
 
   return (
     <motion.div
       ref={ref}
-      onMouseEnter={actionArea === 'self' ? handleMouseEnter : undefined}
-      onMouseLeave={actionArea === 'self' ? handleMouseLeave : undefined}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         x: springX,
         y: springY
@@ -119,5 +78,15 @@ export function Magnetic({
     >
       {children}
     </motion.div>
+  )
+}
+
+export function Magnetic(props: MagneticProps) {
+  const { isMagnetic } = useMagneticStatus()
+
+  return !isMagnetic || props.disabled ? (
+    <div className={props.className}>{props.children}</div>
+  ) : (
+    <MagneticElement {...props}>{props.children}</MagneticElement>
   )
 }

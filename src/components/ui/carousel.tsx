@@ -133,7 +133,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
   const { carouselRef, orientation } = useCarousel()
 
   return (
-    <div ref={carouselRef} data-slot='carousel-content'>
+    <div ref={carouselRef} data-slot='carousel-content' className='cursor-grab active:cursor-grabbing'>
       <div className={cn('flex', orientation === 'horizontal' ? '-ml-4' : '-mt-4 flex-col', className)} {...props} />
     </div>
   )
@@ -147,7 +147,11 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
       role='group'
       aria-roledescription='slide'
       data-slot='carousel-item'
-      className={cn('min-w-0 shrink-0 grow-0 basis-full', orientation === 'horizontal' ? 'pl-4' : 'pt-4', className)}
+      className={cn(
+        'min-w-0 shrink-0 grow-0 basis-full cursor-[inherit] active:cursor-[inherit]',
+        orientation === 'horizontal' ? 'pl-4' : 'pt-4',
+        className
+      )}
       {...props}
     />
   )
@@ -156,7 +160,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
 function CarouselPrevious({
   className,
   variant = 'outline',
-  size = 'icon',
+  size = 'xs',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollPrev, canScrollPrev } = useCarousel()
@@ -177,12 +181,7 @@ function CarouselPrevious({
   )
 }
 
-function CarouselNext({
-  className,
-  variant = 'outline',
-  size = 'icon',
-  ...props
-}: React.ComponentProps<typeof Button>) {
+function CarouselNext({ className, variant = 'outline', size = 'xs', ...props }: React.ComponentProps<typeof Button>) {
   const { scrollNext, canScrollNext } = useCarousel()
 
   return (

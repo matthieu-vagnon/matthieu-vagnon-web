@@ -6,7 +6,11 @@ declare global {
     name: string
     company: string
     position: string
-    testimonial: React.ReactNode
+    testimonial: {
+      en?: React.ReactNode
+      fr?: React.ReactNode
+      ja?: React.ReactNode
+    }
     method?: string
     image: StaticImageData
   }
@@ -14,21 +18,68 @@ declare global {
     title: string
     year: number
     type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other'
-    shortDescription: string
-    longDescription: React.ReactNode
-    tags: string[]
-    skills: string[]
+    shortDescription: {
+      en?: string
+      fr?: string
+      ja?: string
+    }
+    longDescription: {
+      en?: React.ReactNode
+      fr?: React.ReactNode
+      ja?: React.ReactNode
+    }
+    tags: {
+      en?: string[]
+      fr?: string[]
+      ja?: string[]
+    }
+    skills: {
+      en?: string[]
+      fr?: string[]
+      ja?: string[]
+    }
     technologies: string[]
     previewImg?: StaticImageData
     gallery?: {
-      img?: { title: string; image: StaticImageData }[]
-      video?: { title: string; src: string; previewImage: StaticImageData }[]
+      img?: {
+        title: {
+          en?: string
+          fr?: string
+          ja?: string
+        }
+        image: StaticImageData
+      }[]
+      video?: {
+        title: {
+          en?: string
+          fr?: string
+          ja?: string
+        }
+        src: string
+        previewImage: StaticImageData
+      }[]
     }
-    problem?: React.ReactNode
-    solution?: React.ReactNode
-    results?: React.ReactNode
+    problem?: {
+      en?: React.ReactNode
+      fr?: React.ReactNode
+      ja?: React.ReactNode
+    }
+    solution?: {
+      en?: React.ReactNode
+      fr?: React.ReactNode
+      ja?: React.ReactNode
+    }
+    results?: {
+      en?: React.ReactNode
+      fr?: React.ReactNode
+      ja?: React.ReactNode
+    }
     relatedUrls?: {
-      name: string
+      name: {
+        en?: string
+        fr?: string
+        ja?: string
+      }
       url: string
     }[]
   }

@@ -22,6 +22,7 @@ interface TextRotateProps {
   mainClassName?: string
   splitLevelClassName?: string
   elementLevelClassName?: string
+  noWrap?: boolean // Whether to prevent text wrapping
 }
 
 export interface TextRotateRef {
@@ -56,6 +57,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
       mainClassName,
       splitLevelClassName,
       elementLevelClassName,
+      noWrap = false,
       ...props
     },
     ref
@@ -167,7 +169,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
 
     return (
       <motion.span
-        className={cn('flex flex-wrap whitespace-pre-wrap', mainClassName)}
+        className={cn('flex', !noWrap ? 'flex-wrap whitespace-pre-wrap' : 'whitespace-nowrap', mainClassName)}
         {...props}
         layout
         transition={transition}
@@ -177,7 +179,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
           <motion.div
             key={currentTextIndex}
-            className={cn('flex flex-wrap', splitBy === 'lines' && 'flex-col w-full')}
+            className={cn('flex', !noWrap && 'flex-wrap', splitBy === 'lines' && 'flex-col w-full')}
             layout
             aria-hidden='true'
           >

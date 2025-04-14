@@ -1,13 +1,17 @@
 'use client'
 
 import { useDockStatus } from '@/hooks/use-dock-status'
-import { BriefcaseBusiness, HomeIcon, MessageCircle } from 'lucide-react'
-import Link from 'next/link'
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
+import { Link } from '@/i18n/navigation'
+import { BriefcaseBusiness, Cog, HomeIcon, MessageCircle } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
+import { ConfigurationModal } from './configuration-modal'
 import { ContactModal } from './contact-modal'
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock'
 import { Dialog, DialogTrigger } from './ui/nested-dialog'
 import { ProgressiveBlur } from './ui/progressive-blur'
+import { Separator } from './ui/separator'
 
 type App = {
   title: string
@@ -17,38 +21,12 @@ type App = {
   testimonial?: boolean
 }
 
-const APPS: App[] = [
-  {
-    title: 'Home',
-    icon: <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    url: '/'
-  },
-  // {
-  //   title: 'Profile',
-  //   icon: <UserRound className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   url: '/profile'
-  // },
-  {
-    title: 'Case Studies',
-    icon: <BriefcaseBusiness className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    url: '/case-studies'
-  },
-  {
-    title: 'Get In Touch',
-    icon: <MessageCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    modal: <ContactModal />
-  }
-  // {
-  //   title: 'Configuration',
-  //   icon: <Cog className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-  //   modal: <ConfigurationModal />
-  // }
-]
-
 function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
+  const { isMagnetic } = useMagneticStatus()
+
   const content = (
-    <DockItem className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 cursor-pointer'>
-      <DockLabel>{app.title}</DockLabel>
+    <DockItem className='aspect-square rounded-full bg-gray-200 cursor-pointer'>
+      {isMagnetic && <DockLabel>{app.title}</DockLabel>}
       <DockIcon>{app.icon}</DockIcon>
     </DockItem>
   )
@@ -59,6 +37,38 @@ function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
 export default function AppsDock() {
   const { isDockOpen } = useDockStatus()
   const [activeModal, setActiveModal] = useState<number | undefined>(undefined)
+  const t = useTranslations()
+
+  const apps: App[] = [
+    {
+      title: t('home.title'),
+      icon: <HomeIcon className='h-full w-full text-neutral-600' />,
+      url: '/'
+    },
+    // {
+    //   title: 'Profile',
+    //   icon: <UserRound className='h-full w-full text-neutral-600' />,
+    //   url: '/profile'
+    // },
+    {
+      title: t('caseStudies.title'),
+      icon: <BriefcaseBusiness className='h-full w-full text-neutral-600' />,
+      url: '/case-studies'
+    }
+  ]
+
+  const modals: App[] = [
+    {
+      title: t('getInTouch.title'),
+      icon: <MessageCircle className='h-full w-full text-neutral-600' />,
+      modal: <ContactModal />
+    },
+    {
+      title: t('configure.title'),
+      icon: <Cog className='h-full w-full text-neutral-600' />,
+      modal: <ConfigurationModal />
+    }
+  ]
 
   return (
     <Dialog>
@@ -68,18 +78,18 @@ export default function AppsDock() {
         } transition-transform duration-300`}
       >
         <Dock className='items-end pb-3'>
-          {APPS.map((app, idx) =>
-            app.modal ? (
-              <DialogTrigger key={idx} asChild>
-                <DockElement app={app} onClick={() => setActiveModal(idx)} />
-              </DialogTrigger>
-            ) : (
-              <DockElement key={idx} app={app} />
-            )
-          )}
+          {apps.map((app, idx) => (
+            <DockElement key={idx} app={app} />
+          ))}
+          <Separator orientation='vertical' className='h-10' />
+          {modals.map((modal, idx) => (
+            <DialogTrigger key={idx} asChild>
+              <DockElement app={modal} onClick={() => setActiveModal(idx)} />
+            </DialogTrigger>
+          ))}
         </Dock>
       </div>
-      {activeModal !== undefined && APPS[activeModal].modal}
+      {activeModal !== undefined && modals[activeModal].modal}
       <ProgressiveBlur direction='bottom' className='pointer-events-none fixed bottom-0 left-0 h-24 w-full z-99' />
     </Dialog>
   )

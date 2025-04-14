@@ -1,5 +1,6 @@
 'use client'
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status'
 import { cn } from '@/lib/utils'
 import {
   AnimatePresence,
@@ -10,7 +11,7 @@ import {
   useTransform,
   type SpringOptions
 } from 'framer-motion'
-import { Children, cloneElement, createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import React, { Children, cloneElement, createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 const DOCK_HEIGHT = 128
 const DEFAULT_MAGNIFICATION = 52
@@ -80,6 +81,7 @@ function Dock({
 }: DockProps) {
   const mouseX = useMotionValue(Infinity)
   const isHovered = useMotionValue(0)
+  const { isMagnetic } = useMagneticStatus()
 
   const maxHeight = useMemo(() => {
     return Math.max(DOCK_HEIGHT, magnification + magnification / 2 + 4)
@@ -98,14 +100,18 @@ function Dock({
     >
       <motion.div
         onMouseMove={({ pageX }) => {
-          isHovered.set(1)
-          mouseX.set(pageX)
+          if (isMagnetic) {
+            isHovered.set(1)
+            mouseX.set(pageX)
+          }
         }}
         onMouseLeave={() => {
-          isHovered.set(0)
-          mouseX.set(Infinity)
+          if (isMagnetic) {
+            isHovered.set(0)
+            mouseX.set(Infinity)
+          }
         }}
-        className={cn('mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900', className)}
+        className={cn('mx-auto flex w-fit gap-4 rounded-2xl bg-accent px-4 dark:bg-neutral-900', className)}
         style={{ height: panelHeight }}
         role='toolbar'
         aria-label='Application dock'
@@ -118,7 +124,7 @@ function Dock({
 
 function DockItem({ children, className }: DockItemProps) {
   const ref = useRef<HTMLDivElement>(null)
-
+  const { isMagnetic } = useMagneticStatus()
   const { distance, magnification, mouseX, spring } = useDock()
 
   const isHovered = useMotionValue(0)
@@ -140,14 +146,24 @@ function DockItem({ children, className }: DockItemProps) {
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
-      className={cn('relative inline-flex items-center justify-center active:brightness-90', className)}
+      className={cn(
+        'relative inline-flex items-center justify-center',
+        isMagnetic && 'active:brightness-90',
+        !isMagnetic && 'hover:brightness-95 transition-brightness duration-200',
+        className
+      )}
       tabIndex={0}
       role='button'
       aria-haspopup='true'
     >
-      {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement<DockItemChildProps>, { width, isHovered })
-      )}
+      {Children.map(children, (child) => {
+        if (!child) return null
+
+        return cloneElement(child as React.ReactElement<DockItemChildProps>, {
+          width,
+          isHovered
+        })
+      })}
     </motion.div>
   )
 }
