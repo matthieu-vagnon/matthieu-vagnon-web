@@ -83,29 +83,6 @@
         "title": "{name} Case Study ~ Matthieu Vagnon",
         "openGraph": {
           "title": "Matthieu Vagnon: {name} Case Study"
-        },
-        "keywords": {
-          "1": "Matthieu Vagnon",
-          "2": "Front-End",
-          "3": "Engineer",
-          "4": "Digital",
-          "5": "Designer",
-          "6": "SEO",
-          "7": "Responsive",
-          "8": "UI",
-          "9": "UX",
-          "10": "Deployment",
-          "11": "SaaS",
-          "12": "Web",
-          "13": "App",
-          "14": "AI",
-          "15": "React",
-          "16": "Next.js",
-          "17": "Figma",
-          "18": "Teaching",
-          "19": "Case Studies",
-          "20": "Case Study",
-          "21": "Web3"
         }
       },
       "title": "{name} Case Study",

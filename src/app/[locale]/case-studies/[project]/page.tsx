@@ -9,8 +9,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from '@/data/projects'
 import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
-import { Metadata } from 'next'
-import { getLocale, getMessages, getTranslations } from 'next-intl/server'
+import { Metadata, ResolvingMetadata } from 'next'
+import { getLocale, getTranslations } from 'next-intl/server'
 import React from 'react'
 
 function Block({
@@ -51,11 +51,11 @@ type Props = {
   params: Promise<{ project: string }>
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const parentMetadata = await parent
   const project = projects[(await params).project]
   const locale = await getLocale()
   const t = await getTranslations('caseStudies.project.metadata')
-  const messages = (await getMessages()).caseStudies.project.metadata
 
   return {
     title: t('title', { name: project.title }),
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [
       `${project.title}`,
       `${project.year}`,
-      ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
+      ...(parentMetadata.keywords || []),
       ...(project.tags[locale as keyof typeof project.tags] || []),
       ...(project.skills[locale as keyof typeof project.skills] || []),
       ...project.technologies
