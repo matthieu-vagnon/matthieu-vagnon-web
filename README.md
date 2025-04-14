@@ -19,7 +19,6 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15.2.2-black)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 Personal web application developed with Next.js, React and TypeScript.
 
