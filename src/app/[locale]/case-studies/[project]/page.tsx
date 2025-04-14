@@ -7,7 +7,7 @@ import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { projects } from '@/data/projects'
-import { cn, getTranslatedData } from '@/lib/utils'
+import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils'
 import { LucideIcon, Sparkle } from 'lucide-react'
 import { Metadata } from 'next'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t('title', { name: project.title }),
-    description: getTranslatedData(project.shortDescription, locale) as string,
+    description: getFlattenedNode(getTranslatedData(project.longDescription, locale)),
     openGraph: {
       type: 'article',
       siteName: 'Matthieu Vagnon Web',

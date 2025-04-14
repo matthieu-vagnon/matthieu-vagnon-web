@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from 'clsx'
 import { Locale } from 'next-intl'
+import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -19,4 +20,27 @@ export function getTranslatedData(
   } else {
     return undefined
   }
+}
+
+export function getFlattenedNode(node: React.ReactNode): string {
+  if (!node) return ''
+
+  if (React.isValidElement(node)) {
+    const props = node.props as { children?: React.ReactNode }
+    const children = props.children
+
+    if (typeof children === 'string') {
+      return children
+    } else if (typeof children === 'number') {
+      return children.toString()
+    } else if (Array.isArray(children)) {
+      return children.map((child) => (typeof child === 'string' ? child : getFlattenedNode(child))).join('')
+    }
+  } else if (typeof node === 'string') {
+    return node
+  } else if (typeof node === 'number') {
+    return node.toString()
+  }
+
+  return ''
 }
