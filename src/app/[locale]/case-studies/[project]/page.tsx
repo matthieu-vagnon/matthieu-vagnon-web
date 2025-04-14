@@ -59,12 +59,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t('title', { name: project.title }),
-    description: t('description', { name: project.title }),
+    description: getTranslatedData(project.shortDescription, locale) as string,
     openGraph: {
       type: 'article',
       siteName: 'Matthieu Vagnon Web',
       title: t('openGraph.title', { name: project.title }),
-      description: t('openGraph.description', { name: project.title }),
+      description: getTranslatedData(project.shortDescription, locale) as string,
       images: [
         ...(project.gallery?.img?.map((img) => ({
           url: `${process.env.NEXT_PUBLIC_URL!}${img.image.src}`

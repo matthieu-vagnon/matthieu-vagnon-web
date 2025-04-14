@@ -1,31 +1,45 @@
 {
   "home": {
     "metadata": {
-      "title": "Matthieu Vagnon Web Portfolio | Home",
-      "description": "React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.",
+      "title": "Matthieu Vagnon Web Portfolio",
+      "description": "React and Next.js expert, front-end engineer, digital designer. I provide my clients with cutting-edge SaaS and web apps and teach them how to internalize those skills.",
       "openGraph": {
-        "title": "Matthieu Vagnon, Front-End Engineer & Digital Designer",
-        "description": "React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps."
+        "title": "Matthieu Vagnon Web Portfolio",
+        "description": "React/Next expert, front-end engineer, digital designer. I provide my clients with cutting-edge web apps and teach them how to internalize those skills."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
-        "2": "Front-End Engineer",
-        "3": "Digital Designer",
-        "4": "SaaS",
-        "5": "Web App",
-        "6": "React",
-        "7": "Next.js"
+        "2": "Front-End",
+        "3": "Engineer",
+        "4": "Digital",
+        "5": "Designer",
+        "6": "SEO",
+        "7": "Responsive",
+        "8": "UI",
+        "9": "UX",
+        "10": "Deployment",
+        "11": "SaaS",
+        "12": "Web",
+        "13": "App",
+        "14": "React",
+        "15": "Next.js",
+        "16": "Figma",
+        "17": "Teaching",
+        "18": "Web3",
+        "19": "AI"
       }
     },
     "title": "Home",
     "titleBox": {
-      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
+      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>",
       "job": {
         "prefix": "Freelance ",
         "skills": {
           "1": "Front-End Engineer",
           "2": "Digital Designer",
-          "3": "React & Next.js Expert"
+          "3": "React/Next Expert",
+          "4": "Project Manager",
+          "5": "Teacher & Mentor"
         },
         "suffix": ""
       }
@@ -34,45 +48,73 @@
   },
   "caseStudies": {
     "metadata": {
-      "title": "Matthieu Vagnon Case Studies",
-      "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, and more.",
+      "title": "Case Studies ~ Matthieu Vagnon",
+      "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, teachings and more.",
       "openGraph": {
         "title": "Matthieu Vagnon Case Studies",
-        "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, and more."
+        "description": "Some of the projects I have worked on. SaaS, AI, Web3, teachings..."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
-        "2": "Case Studies",
-        "3": "Case Study",
-        "4": "SaaS",
-        "5": "AI",
-        "6": "Web3"
+        "2": "Front-End",
+        "3": "Engineer",
+        "4": "Digital",
+        "5": "Designer",
+        "6": "SEO",
+        "7": "Responsive",
+        "8": "UI",
+        "9": "UX",
+        "10": "Deployment",
+        "11": "SaaS",
+        "12": "Web",
+        "13": "App",
+        "14": "AI",
+        "15": "React",
+        "16": "Next.js",
+        "17": "Figma",
+        "18": "Teaching",
+        "19": "Case Studies",
+        "20": "Case Study",
+        "21": "Web3"
       }
     },
     "project": {
       "metadata": {
-        "title": "{name} Case Study",
-        "description": "Here are some of the projects I've worked on.",
+        "title": "{name} Case Study ~ Matthieu Vagnon",
         "openGraph": {
-          "title": "{name} Case Study",
-          "description": "Here are some of the projects I've worked on."
+          "title": "Matthieu Vagnon: {name} Case Study"
         },
         "keywords": {
           "1": "Matthieu Vagnon",
-          "2": "Case Study",
-          "3": "Case Study",
-          "4": "SaaS",
-          "5": "AI",
-          "6": "Web3"
+          "2": "Front-End",
+          "3": "Engineer",
+          "4": "Digital",
+          "5": "Designer",
+          "6": "SEO",
+          "7": "Responsive",
+          "8": "UI",
+          "9": "UX",
+          "10": "Deployment",
+          "11": "SaaS",
+          "12": "Web",
+          "13": "App",
+          "14": "AI",
+          "15": "React",
+          "16": "Next.js",
+          "17": "Figma",
+          "18": "Teaching",
+          "19": "Case Studies",
+          "20": "Case Study",
+          "21": "Web3"
         }
       },
       "title": "{name} Case Study",
-      "projectDescription": "Description of the Project",
+      "projectDescription": "Project Description",
       "skills": "Skills",
       "technologies": "Technologies",
       "problem": "Problem",
       "solution": "Solution",
-      "results": "Results"
+      "results": "Result"
     },
     "title": "Case Studies",
     "description": "Here are some of the projects I've worked on."

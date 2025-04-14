@@ -1,68 +1,113 @@
 {
   "home": {
     "metadata": {
-      "title": "Portfolio web Matthieu Vagnon | Accueil",
-      "description": "Bonjour, je suis Matthieu Vagnon, développeur front-end et designer digital indépendant depuis 2022 pour fournir mes clients avec des SaaS et des sites web de pointe.",
+      "title": "Portfolio web de Matthieu Vagnon",
+      "description": "Expert React et Next.js, développeur front-end, designer numérique. Je propose à mes clients le développement de SaaS et d'applications web de pointe et leur enseigne comment internaliser ces compétences.",
       "openGraph": {
-        "title": "Matthieu Vagnon, Développeur front-end et designer digital",
-        "description": "Bonjour, je suis Matthieu Vagnon, développeur front-end et designer digital indépendant depuis 2022 pour fournir mes clients avec des SaaS et des sites web de pointe."
+        "title": "Portfolio Web de Matthieu Vagnon",
+        "description": "Expert React/Next, développeur front-end, designer numérique. Je propose à mes clients le développement d'applications web de pointe et leur enseigne comment internaliser ces compétences."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
-        "2": "Développeur front-end",
-        "3": "Designer digital",
-        "4": "SaaS",
-        "5": "Site web",
-        "6": "React",
-        "7": "Next.js"
+        "2": "Front-End",
+        "3": "Développeur",
+        "4": "Développement",
+        "5": "Digital",
+        "6": "Designer",
+        "7": "SEO",
+        "8": "Responsive",
+        "9": "UI",
+        "10": "UX",
+        "11": "Déploiement",
+        "12": "SaaS",
+        "13": "Web",
+        "14": "App",
+        "15": "React",
+        "16": "Next.js",
+        "17": "Figma",
+        "18": "AI",
+        "19": "Web3",
+        "20": "Enseignement",
+        "21": "Mentorat"
       }
     },
     "title": "Accueil",
     "titleBox": {
-      "name": "Bonjour, je suis <strong>Matthieu Vagnon</strong>,",
+      "name": "Bonjour, je suis <strong>Matthieu Vagnon</strong>",
       "job": {
         "prefix": "",
         "skills": {
           "1": "Développeur front-end",
           "2": "Designer digital",
-          "3": "Expert React & Next.js"
+          "3": "Expert React/Next",
+          "4": "Chef de projet",
+          "5": "Enseignant et mentor"
         },
         "suffix": " indépendant"
       }
     },
-    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>débloquer le plein potentiel</highlight> de votre SaaS ou de votre site web <highlight>grâce à l'expérience utilisateur</highlight>."
+    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
   },
   "caseStudies": {
     "metadata": {
-      "title": "Cas pratiques",
-      "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
+      "title": "Cas pratiques ~ Matthieu Vagnon",
+      "description": "Quelques-uns des projets sur lesquels j'ai travaillé au cours de ma carrière. SaaS, IA, Web3, enseignement et plus encore.",
       "openGraph": {
-        "title": "Cas pratiques",
-        "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+        "title": "Cas pratiques de Matthieu Vagnon",
+        "description": "Quelques-uns des projets sur lesquels j'ai travaillé. SaaS, IA, Web3, enseignement..."
       },
       "keywords": {
-        "1": "Cas pratiques",
-        "2": "Cas pratique",
-        "3": "SaaS",
-        "4": "AI",
-        "5": "Web3"
+        "1": "Matthieu Vagnon",
+        "2": "Front-End",
+        "3": "Ingénieur",
+        "4": "Numérique",
+        "5": "Designer",
+        "6": "SEO",
+        "7": "Responsive",
+        "8": "UI",
+        "9": "UX",
+        "10": "Déploiement",
+        "11": "SaaS",
+        "12": "Web",
+        "13": "App",
+        "14": "IA",
+        "15": "React",
+        "16": "Next.js",
+        "17": "Figma",
+        "18": "Enseignement",
+        "19": "Cas pratiques",
+        "20": "Cas pratique",
+        "21": "Web3"
       }
     },
     "project": {
       "metadata": {
-        "title": "Cas pratique {name}",
-        "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé.",
+        "title": "Cas pratique {name} ~ Matthieu Vagnon",
         "openGraph": {
-          "title": "Cas pratique {name}",
-          "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+          "title": "Matthieu Vagnon: Cas pratique {name}"
         },
         "keywords": {
           "1": "Matthieu Vagnon",
-          "2": "Cas pratique",
-          "3": "Cas pratique",
-          "4": "SaaS",
-          "5": "AI",
-          "6": "Web3"
+          "2": "Front-End",
+          "3": "Ingénieur",
+          "4": "Numérique",
+          "5": "Designer",
+          "6": "SEO",
+          "7": "Responsive",
+          "8": "UI",
+          "9": "UX",
+          "10": "Déploiement",
+          "11": "SaaS",
+          "12": "Web",
+          "13": "App",
+          "14": "IA",
+          "15": "React",
+          "16": "Next.js",
+          "17": "Figma",
+          "18": "Enseignement",
+          "19": "Cas pratiques",
+          "20": "Cas pratique",
+          "21": "Web3"
         }
       },
       "title": "Cas pratique {name}",
@@ -71,7 +116,7 @@
       "technologies": "Technologies",
       "problem": "Problème",
       "solution": "Solution",
-      "results": "Résultats"
+      "results": "Résultat"
     },
     "title": "Cas pratiques",
     "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
@@ -80,8 +125,8 @@
     "title": "Contact",
     "description": "Veuillez sélectionner votre méthode de contact préférée.",
     "meeting": {
-      "title": "Planifier un rendez-vous",
-      "description": "Planifier un rendez-vous avec moi pour discuter de votre projet."
+      "title": "Planifier une visioconférence",
+      "description": "Planifier une visioconférence avec moi pour discuter de votre projet."
     },
     "email": {
       "title": "Email",
