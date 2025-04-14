@@ -222,9 +222,9 @@ export default async function Project(props: ProjectProps) {
         <SeeMore
           links={[
             ...relatedUrls,
-            { name: t('utils.links.youtube'), url: 'https://www.youtube.com/@matthieu-vagnon' },
-            { name: t('utils.links.instagram'), url: 'https://www.instagram.com/matthieu.vagnon/' },
-            { name: t('utils.links.github'), url: 'https://github.com/matthieu-vagnon' }
+            { name: t('utils.links.youtube'), url: process.env.NEXT_PUBLIC_YOUTUBE_URL! },
+            { name: t('utils.links.instagram'), url: process.env.NEXT_PUBLIC_INSTAGRAM_URL! },
+            { name: t('utils.links.github'), url: process.env.NEXT_PUBLIC_GITHUB_URL! }
           ]}
           className='mt-10 sm:mt-12 md:mt-14 mb-28'
         />

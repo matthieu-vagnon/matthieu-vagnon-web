@@ -36,9 +36,9 @@ export default function CaseStudies() {
       <BlurFade delay={0.4 + Object.keys(projects).length * 0.1}>
         <SeeMore
           links={[
-            { name: t('utils.links.youtube'), url: 'https://www.youtube.com/@matthieu-vagnon' },
-            { name: t('utils.links.instagram'), url: 'https://www.instagram.com/matthieu.vagnon/' },
-            { name: t('utils.links.github'), url: 'https://github.com/matthieu-vagnon' }
+            { name: t('utils.links.youtube'), url: process.env.NEXT_PUBLIC_YOUTUBE_URL! },
+            { name: t('utils.links.instagram'), url: process.env.NEXT_PUBLIC_INSTAGRAM_URL! },
+            { name: t('utils.links.github'), url: process.env.NEXT_PUBLIC_GITHUB_URL! }
           ]}
         />
       </BlurFade>

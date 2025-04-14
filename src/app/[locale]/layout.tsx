@@ -13,6 +13,7 @@ import { getMessages, getTranslations } from 'next-intl/server'
 import { Noto_Sans_JP, Signika_Negative, Source_Sans_3, Zen_Antique } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import NextTopLoader from 'nextjs-toploader'
+import { Toaster } from 'sonner'
 import '../globals.css'
 
 const signikaNegative = Signika_Negative({
@@ -88,6 +89,7 @@ export default function RootLayout({
                   className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} antialiased`}
                 >
                   <NextTopLoader showSpinner={false} color='var(--main)' zIndex={999} />
+                  <Toaster />
                   <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
                     {children}
                     <CardStack items={testimonials} />

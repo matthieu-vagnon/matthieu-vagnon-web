@@ -1,7 +1,7 @@
 {
   "home": {
     "metadata": {
-      "title": "Matthieu Vagnon, Front-End Engineer & Digital Designer",
+      "title": "Matthieu Vagnon Web Portfolio | Home",
       "description": "React and Next.js expert, front-end engineer, digital designer and application deployment expert. I provide my clients with cutting-edge SaaS and web apps.",
       "openGraph": {
         "title": "Matthieu Vagnon, Front-End Engineer & Digital Designer",
@@ -89,7 +89,7 @@
       "description": "Send me an email to discuss your project."
     },
     "phone": {
-      "title": "Phone ({number})",
+      "title": "Phone",
       "description": "Call me to discuss your project (in english or french)."
     }
   },
@@ -121,6 +121,8 @@
     "repo": "Check out public repo ",
     "here": "here",
     "madeWithLove": "Made with ❤️ by Matthieu Vagnon",
-    "copyLink": "Link copied to clipboard!"
+    "copyLink": "Link copied to clipboard!",
+    "copyPhone": "Phone number copied to clipboard!",
+    "copyEmail": "Email copied to clipboard!"
   }
 }

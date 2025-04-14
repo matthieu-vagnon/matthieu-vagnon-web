@@ -16,19 +16,19 @@ export default function Home() {
   }[] = [
     {
       label: t('utils.links.linkedin'),
-      link: 'https://linkedin.com/in/matthieu-vagnon'
+      link: process.env.NEXT_PUBLIC_LINKEDIN_URL!
     },
     {
       label: t('utils.links.youtube'),
-      link: 'https://www.youtube.com/@matthieu-vagnon'
+      link: process.env.NEXT_PUBLIC_YOUTUBE_URL!
     },
     {
       label: t('utils.links.instagram'),
-      link: 'https://instagram.com/matthieu.vagnon'
+      link: process.env.NEXT_PUBLIC_INSTAGRAM_URL!
     },
     {
       label: t('utils.links.github'),
-      link: 'https://github.com/matthieu-vagnon'
+      link: process.env.NEXT_PUBLIC_GITHUB_URL!
     },
     {
       label: t('utils.links.cv'),

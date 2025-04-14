@@ -1,7 +1,7 @@
 {
   "home": {
     "metadata": {
-      "title": "Accueil",
+      "title": "Portfolio web Matthieu Vagnon | Accueil",
       "description": "Bonjour, je suis Matthieu Vagnon, développeur front-end et designer digital indépendant depuis 2022 pour fournir mes clients avec des SaaS et des sites web de pointe.",
       "openGraph": {
         "title": "Matthieu Vagnon, Développeur front-end et designer digital",
@@ -88,7 +88,7 @@
       "description": "Envoyer-moi un email pour discuter de votre projet."
     },
     "phone": {
-      "title": "Téléphone (au {number})",
+      "title": "Téléphone",
       "description": "Appeler-moi pour discuter de votre projet (en anglais ou en français)."
     }
   },
@@ -120,6 +120,8 @@
     "repo": "Consultez le repo public ",
     "here": "ici",
     "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon",
-    "copyLink": "Lien copié dans le presse-papiers !"
+    "copyLink": "Lien copié dans le presse-papiers !",
+    "copyPhone": "Numéro de téléphone copié dans le presse-papiers !",
+    "copyEmail": "Email copié dans le presse-papiers !"
   }
 }
