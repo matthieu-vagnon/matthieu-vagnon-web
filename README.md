@@ -46,7 +46,7 @@ Further explaination of the project as well as images from the software are avai
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/your-username/matthieu-vagnon-web.git
+   git clone https://github.com/matthieu-vagnon/matthieu-vagnon-web.git
    cd matthieu-vagnon-web
    ```
 
