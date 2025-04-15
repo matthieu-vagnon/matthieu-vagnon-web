@@ -24,10 +24,6 @@ Personal portfolio web application developed with React, Next.js, TypeScript, Ta
 
 Further explaination of the project as well as images from the software are available [here](https://www.mvagnon.dev/case-studies/matthieu-vagnon).
 
-Videos:
-
-- **None at the moment**
-
 ## 🚀 Features
 
 - **Modern Interface** - Responsive design with Tailwind CSS
