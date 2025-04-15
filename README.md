@@ -1,4 +1,5 @@
 - [Matthieu Vagnon Web - Personal Website](#matthieu-vagnon-web---personal-website)
+  - [💻 Gallery](#-gallery)
   - [🚀 Features](#-features)
   - [🛠️ Installation](#️-installation)
     - [Prerequisites](#prerequisites)
@@ -18,6 +19,14 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 
 Personal portfolio web application developed with React, Next.js, TypeScript, Tailwind CSS and Framer Motion. The goal is to let people watch my case studies, my profile, contact me and access my links in a simple way on mobile and desktop. This app is deployed on Vercel.
+
+## 💻 Gallery
+
+Further explaination of the project as well as images from the software are available [here](https://www.mvagnon.dev/case-studies/matthieu-vagnon).
+
+Videos:
+
+- **None at the moment**
 
 ## 🚀 Features
 
