@@ -226,37 +226,35 @@ export const projects: Record<string, Project> = {
         <span>
           To begin with, we had to start with the fundamentals. Knowing that Matthieu S., the project manager, was
           already presenting the product for sales purposes, I first focused on UI and UX. I added{' '}
-          <Highlight color='emerald'>pages and loading indicators</Highlight>, added some{' '}
-          <Highlight color='emerald'>animations for more dynamism</Highlight> and{' '}
-          <Highlight color='emerald'>fixed several front-end bugs</Highlight> that were already present and frequently
-          caused issues during presentations. Then, I was able to focus on implementing{' '}
-          <Highlight color='emerald'>secondary features</Highlight> and{' '}
-          <Highlight color='emerald'>secondary design elements</Highlight> (spacings, colors, ...).
+          <Highlight>pages and loading indicators</Highlight>, added some{' '}
+          <Highlight>animations for more dynamism</Highlight> and <Highlight>fixed several front-end bugs</Highlight>{' '}
+          that were already present and frequently caused issues during presentations. Then, I was able to focus on
+          implementing <Highlight>secondary features</Highlight> and <Highlight>secondary design elements</Highlight>{' '}
+          (spacings, colors, ...).
         </span>
       ),
       fr: (
         <span>
           Pour commencer, il a fallu commencer par les fondamentaux. Sachant que Matthieu S., le responsable du projet
           présentait déjà le produit à des fins de vente, je me suis d&apos;abord concentré sur l&apos;UI et l&apos;UX.
-          J&apos;ai ajouté des <Highlight color='emerald'>pages et indicateurs de chargement</Highlight>, ajouté
-          quelques
-          <Highlight color='emerald'>animations pour plus de dynamisme</Highlight> et{' '}
-          <Highlight color='emerald'>corrigé certains bugs front-end</Highlight> déjà présents et qui posaient
-          fréquemment problème lors de présentations. Ensuite, j&apos;ai pu me concentrer sur l&apos;implémentation de
-          <Highlight color='emerald'>fonctionnalités secondaires</Highlight> et sur les{' '}
-          <Highlight color='emerald'>éléments de design secondaires</Highlight> (spacings, couleurs, ...).
+          J&apos;ai ajouté des <Highlight>pages et indicateurs de chargement</Highlight>, ajouté quelques
+          <Highlight>animations pour plus de dynamisme</Highlight> et{' '}
+          <Highlight>corrigé certains bugs front-end</Highlight> déjà présents et qui posaient fréquemment problème lors
+          de présentations. Ensuite, j&apos;ai pu me concentrer sur l&apos;implémentation de
+          <Highlight>fonctionnalités secondaires</Highlight> et sur les{' '}
+          <Highlight>éléments de design secondaires</Highlight> (spacings, couleurs, ...).
         </span>
       ),
       ja: (
         <span>
           まず、基本的なところから始める必要がありました。プロジェクトマネージャーのMatthieu
           S.が販売目的で製品をすでにプレゼンテーションしていたため、最初にUIとUXに焦点を当てました。
-          <Highlight color='emerald'>ページとローディングインジケーター</Highlight>を追加し、
-          <Highlight color='emerald'>よりダイナミックなアニメーション</Highlight>
+          <Highlight>ページとローディングインジケーター</Highlight>を追加し、
+          <Highlight>よりダイナミックなアニメーション</Highlight>
           を加え、プレゼンテーション中によく問題を引き起こしていた
-          <Highlight color='emerald'>フロントエンドのバグを修正</Highlight>しました。その後、
-          <Highlight color='emerald'>二次的な機能</Highlight>と
-          <Highlight color='emerald'>二次的なデザイン要素</Highlight>（間隔、色など）の実装に集中することができました。
+          <Highlight>フロントエンドのバグを修正</Highlight>しました。その後、
+          <Highlight>二次的な機能</Highlight>と<Highlight>二次的なデザイン要素</Highlight>
+          （間隔、色など）の実装に集中することができました。
         </span>
       )
     },
@@ -404,32 +402,31 @@ export const projects: Record<string, Project> = {
     solution: {
       en: (
         <span>
-          The solution was to create a <Highlight color='emerald'>React app</Highlight> to meet the need for{' '}
-          <Highlight color='emerald'>interactivity</Highlight> without overloading the project with various frameworks
-          to get straight to the point as quickly as possible. The mockups were produced in{' '}
-          <Highlight color='emerald'>record time on Figma</Highlight> thanks to a few sleepless nights and the
-          development was also <Highlight color='emerald'>fast</Highlight> since it&apos;s a simple page (and therefore
-          no need to manage too many libraries like react-router).
+          The solution was to create a <Highlight>React app</Highlight> to meet the need for{' '}
+          <Highlight>interactivity</Highlight> without overloading the project with various frameworks to get straight
+          to the point as quickly as possible. The mockups were produced in <Highlight>record time on Figma</Highlight>{' '}
+          thanks to a few sleepless nights and the development was also <Highlight>fast</Highlight> since it&apos;s a
+          simple page (and therefore no need to manage too many libraries like react-router).
         </span>
       ),
       fr: (
         <span>
-          La solution à été de créer une <Highlight color='emerald'>app React</Highlight> pour répondre au besoin
-          d&apos;<Highlight color='emerald'>interactivité</Highlight> sans pour autant surcharger le projet en
-          frameworks divers pour aller droit au but le plus vite possible. Les maquettes ont été produites en un{' '}
-          <Highlight color='emerald'>temps record sur Figma</Highlight> grâce à quelques nuits sans sommeil et le
-          développement a été lui aussi <Highlight color='emerald'>rapide</Highlight> étant donné que c&apos;est une
-          simple page (et donc pas besoin de gérer des trop de librairies comme react-router).
+          La solution à été de créer une <Highlight>app React</Highlight> pour répondre au besoin d&apos;
+          <Highlight>interactivité</Highlight> sans pour autant surcharger le projet en frameworks divers pour aller
+          droit au but le plus vite possible. Les maquettes ont été produites en un{' '}
+          <Highlight>temps record sur Figma</Highlight> grâce à quelques nuits sans sommeil et le développement a été
+          lui aussi <Highlight>rapide</Highlight> étant donné que c&apos;est une simple page (et donc pas besoin de
+          gérer des trop de librairies comme react-router).
         </span>
       ),
       ja: (
         <span>
-          解決策として、<Highlight color='emerald'>インタラクティブ性</Highlight>
+          解決策として、<Highlight>インタラクティブ性</Highlight>
           のニーズに応えるため、様々なフレームワークでプロジェクトを過負荷にすることなく、できるだけ早く目的を達成するために
-          <Highlight color='emerald'>Reactアプリ</Highlight>を作成しました。徹夜を重ねることで
-          <Highlight color='emerald'>Figmaで記録的な速さ</Highlight>
+          <Highlight>Reactアプリ</Highlight>を作成しました。徹夜を重ねることで
+          <Highlight>Figmaで記録的な速さ</Highlight>
           でモックアップを作成し、シンプルなページであるため（react-routerなどのライブラリを多く管理する必要がない）、開発も
-          <Highlight color='emerald'>迅速</Highlight>に進めることができました。
+          <Highlight>迅速</Highlight>に進めることができました。
         </span>
       )
     },
@@ -565,28 +562,24 @@ export const projects: Record<string, Project> = {
     solution: {
       en: (
         <span>
-          Create a tool with <Highlight color='emerald'>multiple pages</Highlight>,{' '}
-          <Highlight color='emerald'>clear navigation</Highlight>,{' '}
-          <Highlight color='emerald'>managed spacing</Highlight> and{' '}
-          <Highlight color='emerald'>beautiful charts</Highlight> thanks to <Highlight color='emerald'>MUI-X</Highlight>
-          .
+          Create a tool with <Highlight>multiple pages</Highlight>, <Highlight>clear navigation</Highlight>,{' '}
+          <Highlight>managed spacing</Highlight> and <Highlight>beautiful charts</Highlight> thanks to{' '}
+          <Highlight>MUI-X</Highlight>.
         </span>
       ),
       fr: (
         <span>
-          Create a tool with <Highlight color='emerald'>multiple pages</Highlight>,{' '}
-          <Highlight color='emerald'>clear navigation</Highlight>,{' '}
-          <Highlight color='emerald'>managed spacing</Highlight> and{' '}
-          <Highlight color='emerald'>beautiful charts</Highlight> thanks to <Highlight color='emerald'>MUI-X</Highlight>
-          .
+          Create a tool with <Highlight>multiple pages</Highlight>, <Highlight>clear navigation</Highlight>,{' '}
+          <Highlight>managed spacing</Highlight> and <Highlight>beautiful charts</Highlight> thanks to{' '}
+          <Highlight>MUI-X</Highlight>.
         </span>
       ),
       ja: (
         <span>
-          <Highlight color='emerald'>複数のページ</Highlight>、
-          <Highlight color='emerald'>明確なナビゲーション</Highlight>、<Highlight color='emerald'>適切な間隔</Highlight>
-          、そして<Highlight color='emerald'>MUI-X</Highlight>による
-          <Highlight color='emerald'>美しいグラフ</Highlight>を備えたツールを作成しました。
+          <Highlight>複数のページ</Highlight>、<Highlight>明確なナビゲーション</Highlight>、
+          <Highlight>適切な間隔</Highlight>
+          、そして<Highlight>MUI-X</Highlight>による
+          <Highlight>美しいグラフ</Highlight>を備えたツールを作成しました。
         </span>
       )
     },
