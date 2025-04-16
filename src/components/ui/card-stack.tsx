@@ -55,7 +55,7 @@ export const CardStack = ({
     <BlurFade delay={1} className={cn('fixed bottom-25 right-10 z-99', isCollapsed && 'pointer-events-none')}>
       <div
         className={cn(
-          'w-120 h-60 justify-center items-center gap-2 hidden md:flex transition-all ease-[cubic-bezier(.17,.67,.49,1.32)] duration-400',
+          'w-120 h-57 justify-center items-center gap-2 hidden md:flex transition-all ease-[cubic-bezier(.17,.67,.49,1.32)] duration-400',
           isCollapsed && 'translate-x-108'
         )}
       >
@@ -84,7 +84,7 @@ export const CardStack = ({
                   zIndex: cards.length - index
                 }}
               >
-                <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200'>
+                <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200 overflow-hidden text-ellipsis line-clamp-7'>
                   {getTranslatedData(card.testimonial, locale)}
                 </div>
                 <div className='flex items-center justify-start gap-3'>

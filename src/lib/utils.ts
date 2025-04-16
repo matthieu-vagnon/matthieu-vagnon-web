@@ -14,8 +14,10 @@ export function getTranslatedData(
   if (data) {
     if (Object.keys(data).includes(locale)) {
       return data[locale]
-    } else {
+    } else if (data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as Locale]) {
       return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as Locale]
+    } else {
+      return Object.values(data).find((value) => value !== undefined && value !== null)
     }
   } else {
     return undefined

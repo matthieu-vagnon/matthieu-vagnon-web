@@ -28,14 +28,16 @@ export const testimonials: Testimonial[] = [
     company: 'Predictive Layer',
     position: 'CEO and Chairman',
     testimonial: {
-      en: (
+      fr: (
         <p>
-          Matthieu has distinguished himself by his <Highlight>technical expertise</Highlight>, his
-          <Highlight>creativity</Highlight> and his <Highlight>commitment</Highlight> to the success of the projects
-          entrusted to him. He has notably demonstrated a<Highlight>perfect mastery</Highlight> of technologies as well
-          as the ability to <Highlight>adapt rapidly</Highlight> to our tools and processes. Matthieu has also
-          demonstrated a real talent for developing <Highlight>ergonomic</Highlight> and{' '}
-          <Highlight>performant</Highlight> user interfaces.
+          En tant que développeur front-end freelance, Matthieu s&apos;est distingué par son{' '}
+          <Highlight>expertise technique</Highlight>, sa
+          <Highlight>créativité</Highlight> et son <Highlight>engagement</Highlight> envers la réussite des projets qui
+          lui ont été confiés. Il a notamment démontré une <Highlight>parfaite maîtrise</Highlight> des technologies
+          telles que TypeScript, Next.js, Git, Figma, React, ainsi qu&apos;une
+          <Highlight>capacité à s&apos;adapter rapidement</Highlight> à nos outils et processus. Matthieu a aussi
+          démontré un <Highlight>vrai talent</Highlight> pour développer des interfaces utilisateurs ergonomiques et
+          performants, en concevant et intégrant également des visuels plaisants et adaptés.
         </p>
       )
     },
