@@ -54,7 +54,14 @@ export default function Home() {
           <BlurFade delay={0.5} className='flex'>
             <div className='flex items-center justify-center gap-3 flex-wrap'>
               {socialLinks.map((link) => (
-                <LinkButton variant='secondary' size='sm' key={link.label} href={link.link} external>
+                <LinkButton
+                  variant='secondary'
+                  size='sm'
+                  key={link.label}
+                  href={link.link}
+                  external
+                  className='hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1'
+                >
                   {link.label}
                 </LinkButton>
               ))}
