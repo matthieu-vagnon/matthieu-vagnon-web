@@ -85,6 +85,10 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html[data-accent-color='green'] {
   --main: #88ff88;
   --main-light: #deffde;

@@ -145,6 +145,7 @@
     "madeWithLove": "Made with ❤️ by Matthieu Vagnon",
     "copyLink": "Link copied to clipboard!",
     "copyPhone": "Phone number copied to clipboard!",
-    "copyEmail": "Email copied to clipboard!"
+    "copyEmail": "Email copied to clipboard!",
+    "separator": ", "
   }
 }

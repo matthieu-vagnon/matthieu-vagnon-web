@@ -147,6 +147,7 @@
     "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon",
     "copyLink": "Lien copié dans le presse-papiers !",
     "copyPhone": "Numéro de téléphone copié dans le presse-papiers !",
-    "copyEmail": "Email copié dans le presse-papiers !"
+    "copyEmail": "Email copié dans le presse-papiers !",
+    "separator": ", "
   }
 }
