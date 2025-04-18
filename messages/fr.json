@@ -48,6 +48,9 @@
     },
     "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
   },
+  "profile": {
+    "title": "Profil"
+  },
   "caseStudies": {
     "metadata": {
       "title": "Cas pratiques ~ Matthieu Vagnon",
