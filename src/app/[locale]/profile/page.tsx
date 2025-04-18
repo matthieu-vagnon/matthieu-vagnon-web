@@ -4,11 +4,16 @@ import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Separator } from '@/components/ui/separator';
 import { useTranslations } from 'next-intl';
 
 const DATA = {
+  name: 'Matt Vigneri',
+  description:
+    'I am a software engineer with a passion for building scalable and efficient systems.',
+  avatarUrl: 'https://via.placeholder.com/150',
   work: [
     {
       company: 'Company 1',
@@ -49,6 +54,20 @@ export default function Profile() {
         />
       </BlurFade>
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16'>
+        <BlurFade delay={blurDelay++ / 10}>
+          <div className='gap-8 flex justify-start'>
+            <Avatar className='size-28 border'>
+              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <AvatarFallback>{DATA.name[0]}</AvatarFallback>
+            </Avatar>
+            <div className='flex-col flex space-y-1.5'>
+              <div className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'>{`Hi, I'm ${
+                DATA.name.split(' ')[0]
+              } 👋`}</div>
+              <div className='max-w-[600px] md:text-xl'>{DATA.description}</div>
+            </div>
+          </div>
+        </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t('profile.about')} />
           This is a summary...
