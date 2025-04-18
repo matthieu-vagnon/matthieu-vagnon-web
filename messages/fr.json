@@ -49,7 +49,11 @@
     "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
   },
   "profile": {
-    "title": "Profil"
+    "title": "Profil",
+    "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications.",
+    "about": "À propos",
+    "work": "Expériences",
+    "education": "Formations"
   },
   "caseStudies": {
     "metadata": {

@@ -47,7 +47,11 @@
     "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>."
   },
   "profile": {
-    "title": "Profile"
+    "title": "Profile",
+    "description": "A summary of my skills, work and education.",
+    "about": "About",
+    "work": "Work",
+    "education": "Education"
   },
   "caseStudies": {
     "metadata": {

@@ -47,7 +47,11 @@
     "subtitle": "あなたが持っているSaaSやウェブアプリの<highlight>最大のポテンシャル</highlight>を<highlight>ユーザーエクスペリエンス</highlight>を通じて<highlight>解き放つ</highlight>ために、あなたが必要としていた<highlight>魔法使い</highlight>。"
   },
   "profile": {
-    "title": "プロフィール"
+    "title": "プロフィール",
+    "description": "私のスキル、仕事、教育の要約。",
+    "about": "私について",
+    "work": "仕事",
+    "education": "教育"
   },
   "caseStudies": {
     "metadata": {

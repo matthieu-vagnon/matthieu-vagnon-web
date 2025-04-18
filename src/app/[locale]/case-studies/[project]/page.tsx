@@ -2,6 +2,7 @@ import Header from '@/components/header';
 import { ScrollProgress } from '@/components/magicui/scroll-progress';
 import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
+import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { BlurFade } from '@/components/ui/blur-fade';
@@ -14,19 +15,16 @@ import {
 } from '@/components/ui/carousel';
 import { projects } from '@/data/projects';
 import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils';
-import { LucideIcon, Sparkle } from 'lucide-react';
 import { Metadata, ResolvingMetadata } from 'next';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React from 'react';
 
 function Block({
-  icon: Icon,
   title,
   position,
   children,
   className,
 }: {
-  icon: LucideIcon;
   title: string;
   position: 'left' | 'right';
   children: React.ReactNode;
@@ -40,17 +38,8 @@ function Block({
         className
       )}
     >
-      <div className='flex flex-col gap-2 sm:gap-3 md:gap-4 w-full md:w-2/3 xl:w-1/2'>
-        <div className='flex flex-row items-center gap-1 md:gap-2 w-full'>
-          <Icon
-            strokeWidth={0}
-            fill='currentColor'
-            className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7'
-          />
-          <h3 className='text-xl sm:text-2xl md:text-3xl font-sans-special font-bold'>
-            {title}
-          </h3>
-        </div>
+      <div className='flex flex-col w-full md:w-2/3 xl:w-1/2'>
+        <SectionTitle title={title} />
         <div className='text-base md:text-lg text-gray-500'>{children}</div>
       </div>
     </div>
@@ -130,11 +119,6 @@ export default async function Project(props: ProjectProps) {
       important: true,
     })) || [];
 
-  const incrementBlurDelay = () => {
-    blurDelay++;
-    return blurDelay / 10;
-  };
-
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
       <ScrollProgress />
@@ -142,7 +126,7 @@ export default async function Project(props: ProjectProps) {
         <Header />
       </BlurFade>
       <BlurFade
-        delay={incrementBlurDelay()}
+        delay={blurDelay++ / 10}
         className='flex flex-col justify-center items-center gap-0'
       >
         <PageTitle
@@ -168,7 +152,7 @@ export default async function Project(props: ProjectProps) {
       {project.gallery &&
         ((project.gallery.img && project.gallery.img?.length > 0) ||
           (project.gallery.video && project.gallery.video?.length > 0)) && (
-          <BlurFade delay={incrementBlurDelay()}>
+          <BlurFade delay={blurDelay++ / 10}>
             <Carousel
               opts={{ align: 'start' }}
               className='w-full flex flex-col'
@@ -207,9 +191,8 @@ export default async function Project(props: ProjectProps) {
           </BlurFade>
         )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
-        <BlurFade delay={incrementBlurDelay()}>
+        <BlurFade delay={blurDelay++ / 10}>
           <Block
-            icon={Sparkle}
             title={t('caseStudies.project.projectDescription')}
             position='left'
           >
@@ -243,9 +226,8 @@ export default async function Project(props: ProjectProps) {
           </Block>
         </BlurFade>
         {project.problem && (
-          <BlurFade delay={incrementBlurDelay()}>
+          <BlurFade delay={blurDelay++ / 10}>
             <Block
-              icon={Sparkle}
               title={t('caseStudies.project.problem')}
               position={blurDelay % 2 === 0 ? 'right' : 'left'}
             >
@@ -254,9 +236,8 @@ export default async function Project(props: ProjectProps) {
           </BlurFade>
         )}
         {project.solution && (
-          <BlurFade delay={incrementBlurDelay()}>
+          <BlurFade delay={blurDelay++ / 10}>
             <Block
-              icon={Sparkle}
               title={t('caseStudies.project.solution')}
               position={blurDelay % 2 === 0 ? 'right' : 'left'}
             >
@@ -265,9 +246,8 @@ export default async function Project(props: ProjectProps) {
           </BlurFade>
         )}
         {project.results && (
-          <BlurFade delay={incrementBlurDelay()}>
+          <BlurFade delay={blurDelay++ / 10}>
             <Block
-              icon={Sparkle}
               title={t('caseStudies.project.results')}
               position={blurDelay % 2 === 0 ? 'right' : 'left'}
             >
@@ -276,7 +256,7 @@ export default async function Project(props: ProjectProps) {
           </BlurFade>
         )}
       </div>
-      <BlurFade delay={incrementBlurDelay()}>
+      <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
           id='see-more'
           links={[
