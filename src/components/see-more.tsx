@@ -1,24 +1,31 @@
-import { cn } from '@/lib/utils'
-import { useTranslations } from 'next-intl'
-import React from 'react'
-import LanguageSwitch from './language-switch'
-import { HyperText } from './magicui/hyper-text'
-import { LinkButton } from './ui/button'
-import { Separator } from './ui/separator'
+import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
+import React from 'react';
+import LanguageSwitch from './language-switch';
+import { HyperText } from './magicui/hyper-text';
+import { LinkButton } from './ui/button';
+import { Separator } from './ui/separator';
 
 export default function SeeMore({
+  id,
   links,
-  className
+  className,
 }: {
-  links: { important?: boolean; name: string; url: string }[]
-  className?: string
+  id?: string;
+  links: { important?: boolean; name: string; url: string }[];
+  className?: string;
 }) {
-  const t = useTranslations('utils')
+  const t = useTranslations('utils');
 
   return (
     <React.Fragment>
-      <Separator className='my-10 sm:my-12 md:my-14' />
-      <div className={cn('flex flex-col items-center justify-center mb-28 gap-5', className)}>
+      <Separator id={id} className='my-10 sm:my-12 md:my-14' />
+      <div
+        className={cn(
+          'flex flex-col items-center justify-center mb-28 gap-5',
+          className
+        )}
+      >
         <div className='flex flex-col items-center justify-center gap-2'>
           <HyperText
             as='h3'
@@ -48,5 +55,5 @@ export default function SeeMore({
         <LanguageSwitch />
       </div>
     </React.Fragment>
-  )
+  );
 }

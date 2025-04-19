@@ -48,6 +48,18 @@
     },
     "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
   },
+  "profile": {
+    "title": "Profil",
+    "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications.",
+    "hello": "Bonjour, je suis Matthieu Vagnon 👋",
+    "me": "Je suis un <highlight>développeur front-end</highlight>, <highlight>designer numérique</highlight> et <highlight>conseiller en programmation</highlight> indépendant, dont le but est de faire de votre SaaS ou de votre application web un succès en mettant en avant <highlight>l'expérience utilisateur</highlight>.",
+    "about": "À propos",
+    "frontendStack": "Stack front-end",
+    "deploymentStack": "Stack déploiement",
+    "designStack": "Stack design",
+    "work": "Expériences",
+    "education": "Formations"
+  },
   "caseStudies": {
     "metadata": {
       "title": "Cas pratiques ~ Matthieu Vagnon",
@@ -144,6 +156,7 @@
     "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon",
     "copyLink": "Lien copié dans le presse-papiers !",
     "copyPhone": "Numéro de téléphone copié dans le presse-papiers !",
-    "copyEmail": "Email copié dans le presse-papiers !"
+    "copyEmail": "Email copié dans le presse-papiers !",
+    "separator": ", "
   }
 }

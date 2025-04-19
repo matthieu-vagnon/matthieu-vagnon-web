@@ -39,12 +39,24 @@
           "2": "デジタルデザイナー",
           "3": "React/Nextのエキスパート",
           "4": "プロジェクトマネージャー",
-          "5": "教師とメンター"
+          "5": "プログラミングアドバイザー"
         },
         "suffix": ""
       }
     },
     "subtitle": "あなたが持っているSaaSやウェブアプリの<highlight>最大のポテンシャル</highlight>を<highlight>ユーザーエクスペリエンス</highlight>を通じて<highlight>解き放つ</highlight>ために、あなたが必要としていた<highlight>魔法使い</highlight>。"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "description": "私のスキル、仕事、教育の要約。",
+    "hello": "こんにちは、私はヴァンニョン・マチュです👋",
+    "me": "私はフリーランスの<highlight>フロントエンジニア</highlight>、<highlight>デジタルデザイナー</highlight>、<highlight>プログラミングアドバイザー</highlight>です。あなたのSaaSやウェブアプリを成功に導くために、あなたが必要としていた<highlight>魔法使い</highlight>です。",
+    "about": "私について",
+    "frontendStack": "フロントエンドスタック",
+    "deploymentStack": "デプロイスタック",
+    "designStack": "デザインスタック",
+    "work": "仕事",
+    "education": "教育"
   },
   "caseStudies": {
     "metadata": {
@@ -142,6 +154,7 @@
     "madeWithLove": "マチュ・ヴァンニョンによって作成されました",
     "copyLink": "リンクがクリップボードにコピーされました。",
     "copyPhone": "電話番号がクリップボードにコピーされました。",
-    "copyEmail": "メールがクリップボードにコピーされました。"
+    "copyEmail": "メールがクリップボードにコピーされました。",
+    "separator": "、"
   }
 }

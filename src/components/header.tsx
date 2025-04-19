@@ -1,9 +1,9 @@
-import { useTranslations } from 'next-intl'
-import Logo from './logo'
-import { LinkButton } from './ui/button'
+import { useTranslations } from 'next-intl';
+import Logo from './icons/logo';
+import { LinkButton } from './ui/button';
 
 export default function Header() {
-  const t = useTranslations('utils')
+  const t = useTranslations('utils');
 
   return (
     <div className='flex flex-nowrap gap-2 justify-between items-center w-full pb-8 sm:pb-10 pt-6 sm:pt-8 md:pt-10'>
@@ -22,5 +22,5 @@ export default function Header() {
         </LinkButton>
       </div>
     </div>
-  )
+  );
 }
