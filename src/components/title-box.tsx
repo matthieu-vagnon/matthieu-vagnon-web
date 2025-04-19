@@ -3,7 +3,7 @@
 import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
-import Logo from './logo';
+import Logo from './icons/logo';
 import { BlurFade } from './ui/blur-fade';
 import { MainCard, MainCardContent } from './ui/main-card';
 import { TextRotate } from './ui/text-rotate';

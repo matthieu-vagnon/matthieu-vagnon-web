@@ -7,6 +7,7 @@ import SeeMore from '@/components/see-more';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
+import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
@@ -48,10 +49,13 @@ export default function Profile() {
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
+          <LogoCarousel columnCount={4} logos={profile.stackLogos} />
+        </BlurFade>
+        <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t('profile.about')} />
-          <div className='text-base md:text-lg text-gray-500'>
+          <span className='text-base md:text-lg text-gray-500'>
             {getTranslatedData(profile.about, locale)}
-          </div>
+          </span>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>

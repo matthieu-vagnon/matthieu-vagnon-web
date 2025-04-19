@@ -16,6 +16,11 @@ declare global {
   };
   type Profile = {
     avatarUrl?: StaticImageData;
+    stackLogos: {
+      id: number;
+      name: string;
+      img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    }[];
     about: {
       en?: React.ReactNode;
       fr?: React.ReactNode;

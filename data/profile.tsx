@@ -1,3 +1,11 @@
+import CssIcon from '@/components/icons/css';
+import HtmlIcon from '@/components/icons/html';
+import JavaScriptIcon from '@/components/icons/javascript';
+import MuiIcon from '@/components/icons/mui';
+import NextjsIcon from '@/components/icons/nextjs';
+import ReactIcon from '@/components/icons/react';
+import TailwindIcon from '@/components/icons/tailwind';
+import TypeScriptIcon from '@/components/icons/typescript';
 import freelance from '@/public/profile/freelance.png';
 import google from '@/public/profile/google.jpg';
 import influactive from '@/public/profile/influactive.jpeg';
@@ -12,6 +20,48 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 
 export const profile: Profile = {
   avatarUrl: me,
+  stackLogos: [
+    {
+      id: 1,
+      name: 'React',
+      img: ReactIcon,
+    },
+    {
+      id: 2,
+      name: 'Next.js',
+      img: NextjsIcon,
+    },
+    {
+      id: 3,
+      name: 'JavaScript',
+      img: JavaScriptIcon,
+    },
+    {
+      id: 4,
+      name: 'TypeScript',
+      img: TypeScriptIcon,
+    },
+    {
+      id: 5,
+      name: 'HTML',
+      img: HtmlIcon,
+    },
+    {
+      id: 6,
+      name: 'CSS',
+      img: CssIcon,
+    },
+    {
+      id: 7,
+      name: 'Tailwind CSS',
+      img: TailwindIcon,
+    },
+    {
+      id: 8,
+      name: 'Material UI',
+      img: MuiIcon,
+    },
+  ],
   about: {
     en: (
       <div className='flex flex-col gap-3'>
