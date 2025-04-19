@@ -16,9 +16,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t('openGraph.description'),
       images: [
         {
-          url: '',
-        },
-        {
           url: profile.avatarUrl
             ? `${process.env.NEXT_PUBLIC_URL!}${profile.avatarUrl?.src}`
             : '',
