@@ -49,6 +49,40 @@
     "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
   },
   "profile": {
+    "metadata": {
+      "title": "Profil ~ Matthieu Vagnon",
+      "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
+      "openGraph": {
+        "title": "Profil de Matthieu Vagnon",
+        "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications."
+      },
+      "keywords": {
+        "1": "Matthieu Vagnon",
+        "2": "Front-end",
+        "3": "Développeur",
+        "4": "Digital",
+        "5": "Design",
+        "6": "Designer",
+        "7": "SEO",
+        "8": "Responsive",
+        "9": "UI",
+        "10": "UX",
+        "11": "Déploiement",
+        "12": "SaaS",
+        "13": "Web",
+        "14": "App",
+        "15": "IA",
+        "16": "React",
+        "17": "Next.js",
+        "18": "Figma",
+        "19": "Enseignement",
+        "20": "Web3",
+        "21": "Profil",
+        "22": "CV",
+        "23": "Curriculum",
+        "24": "Vitae"
+      }
+    },
     "title": "Profil",
     "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications.",
     "hello": "Bonjour, je suis Matthieu Vagnon 👋",
