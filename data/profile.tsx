@@ -1,7 +1,14 @@
 import freelance from '@/public/profile/freelance.png';
+import google from '@/public/profile/google.jpg';
 import influactive from '@/public/profile/influactive.jpeg';
 import me from '@/public/profile/me.png';
+import meta from '@/public/profile/meta.jpeg';
+import polytech from '@/public/profile/polytech.webp';
 import predictiveLayer from '@/public/profile/predictive-layer.png';
+import saintThomas from '@/public/profile/saint-thomas.png';
+import toeic from '@/public/profile/toeic.webp';
+import univLyon1 from '@/public/profile/univ-lyon1.png';
+import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 
 export const profile: Profile = {
   avatarUrl: me,
@@ -115,6 +122,7 @@ export const profile: Profile = {
         'Tailwind CSS',
         'Material UI',
         'Motion',
+        'Vercel',
         'Figma',
       ],
       position: {
@@ -149,7 +157,14 @@ export const profile: Profile = {
     {
       company: 'Predictive Layer',
       logo: predictiveLayer,
-      technologies: ['React', 'JavaScript', 'Material UI', 'Vite.js', 'Figma'],
+      technologies: [
+        'React',
+        'JavaScript',
+        'Material UI',
+        'Auth0',
+        'Vite.js',
+        'Figma',
+      ],
       position: {
         en: 'Principal Front-end Developer & Digital Designer',
         fr: 'Développeur front-end principal & designer digital',
@@ -210,19 +225,114 @@ export const profile: Profile = {
   ],
   education: [
     {
-      responsible: 'University of California, Los Angeles',
-      timeline: '2018 - Present',
+      responsible: 'Google',
+      logo: google,
+      timeline: '2024',
+      type: {
+        en: 'Certification',
+        fr: 'Certification',
+        ja: '証明書',
+      },
+      degree: {
+        en: 'Build Dynamic User Interfaces (UI) for Websites',
+        fr: 'Créer des interfaces utilisateur dynamiques (UI) pour les sites web',
+        ja: 'ウェブサイトの動的なユーザーインターフェース（UI）を作成する',
+      },
+      href: 'https://www.coursera.org/account/accomplishments/records/LDRSN31COO2V',
+    },
+    {
+      responsible: 'TOEIC',
+      logo: toeic,
+      timeline: '2024',
+      type: {
+        en: 'Certification',
+        fr: 'Certification',
+        ja: '証明書',
+      },
+      degree: {
+        en: 'TOEIC 900/990',
+      },
+      href: 'https://www.etsglobal.org/fr/en/digital-score-report/5AA1E19F84CC89EFC16E4F71685037D641B0632E2719CA4678679C72FA045A1BMjg0YTF4dHlOeUtTbEsycGpUd2dReUJWRk02UkhBUEZMNGVvMHF4YmI1SnJ1Qkxj',
+    },
+    {
+      responsible: 'Meta',
+      logo: meta,
+      timeline: '2024',
+      type: {
+        en: 'Certification',
+        fr: 'Certification',
+        ja: '証明書',
+      },
+      degree: {
+        en: 'Advanced React',
+        fr: 'React avancé',
+        ja: 'Reactの高度な使用',
+      },
+      href: 'https://www.coursera.org/account/accomplishments/records/DPKTBAHV6WDS',
+    },
+    {
+      responsible: 'Université Lumière Lyon 2',
+      logo: univLyon2,
+      timeline: '2021 - 2022',
       type: {
         en: 'School',
         fr: 'École',
         ja: '学校',
       },
       degree: {
-        en: 'Bachelor of Science',
-        fr: 'Bachelor de Science',
-        ja: 'バイオリンサイエンス士',
+        en: 'Web Project Management',
+        fr: 'Gestion de projet web',
+        ja: 'ウェブプロジェクト管理',
       },
-      href: 'https://www.ucla.edu/',
+      href: 'https://www.univ-lyon2.fr',
+    },
+    {
+      responsible: 'Université Claude Bernard Lyon 1',
+      logo: univLyon1,
+      timeline: '2020 - 2021',
+      type: {
+        en: 'Diploma',
+        fr: 'Diplôme',
+        ja: '学位',
+      },
+      degree: {
+        en: 'IT Associate Degree',
+        fr: 'DUT Informatique',
+        ja: 'IT専門学校',
+      },
+      href: 'https://www.univ-lyon1.fr',
+    },
+    {
+      responsible: 'Polytech Lyon',
+      logo: polytech,
+      timeline: '2018 - 2020',
+      type: {
+        en: 'School',
+        fr: 'École',
+        ja: '学校',
+      },
+      degree: {
+        en: 'Preparatory Classes',
+        fr: 'École préparatoire aux grandes écoles',
+        ja: '高等専門学校',
+      },
+      href: 'https://polytech.univ-lyon1.fr',
+    },
+    {
+      responsible: "Saint-Thomas d'Aquin-Veritas",
+      logo: saintThomas,
+      timeline: '2011 - 2018',
+      type: {
+        en: 'Diploma',
+        fr: 'Diplôme',
+        ja: '学位',
+      },
+      degree: {
+        en: 'High School Diploma',
+        fr: 'Baccalauréat',
+        ja: '高校卒業',
+      },
+      href: 'https://www.saint-thom.fr',
     },
   ],
 };

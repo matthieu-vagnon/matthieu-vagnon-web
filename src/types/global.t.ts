@@ -37,24 +37,22 @@ declare global {
       }[];
       technologies: string[];
     }[];
-    education: [
-      {
-        responsible: string;
-        logo?: StaticImageData;
-        timeline: string;
-        type: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        degree: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        href: string;
-      }
-    ];
+    education: {
+      responsible: string;
+      logo?: StaticImageData;
+      timeline: string;
+      type: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      };
+      degree: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      };
+      href: string;
+    }[];
   };
   type Project = {
     title: string;

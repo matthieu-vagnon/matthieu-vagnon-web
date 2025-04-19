@@ -79,7 +79,7 @@ export const CardStack = ({
             </button>
           </Magnetic>
         </div>
-        <div className='relative h-full w-full'>
+        <div className='relative pointer-events-auto transition-opacity ease-in-out duration-200 hover:opacity-25 cursor-default h-full w-full'>
           {cards.map((card, index) => {
             return (
               <motion.div
