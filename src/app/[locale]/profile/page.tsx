@@ -9,7 +9,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
-import { useTranslations } from 'next-intl';
+import { getTranslatedData } from '@/lib/utils';
+import { useLocale, useTranslations } from 'next-intl';
 
 const DATA = {
   work: [
@@ -38,6 +39,7 @@ const DATA = {
 
 export default function Profile() {
   const t = useTranslations();
+  const locale = useLocale();
   let blurDelay = 0;
 
   return (
@@ -72,7 +74,9 @@ export default function Profile() {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t('profile.about')} />
-          This is a summary...
+          <div className='text-base md:text-lg text-gray-500'>
+            {getTranslatedData(profile.about, locale)}
+          </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>

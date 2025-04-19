@@ -16,6 +16,11 @@ declare global {
   };
   type Profile = {
     avatarUrl?: StaticImageData;
+    about: {
+      en?: React.ReactNode;
+      fr?: React.ReactNode;
+      ja?: React.ReactNode;
+    };
   };
   type Project = {
     title: string;
