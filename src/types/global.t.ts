@@ -21,6 +21,42 @@ declare global {
       fr?: React.ReactNode;
       ja?: React.ReactNode;
     };
+    experience: [
+      {
+        company: string;
+        logo?: StaticImageData;
+        timeline: string;
+        technologies: string[];
+        position: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+        description: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+      }
+    ];
+    education: [
+      {
+        responsible: string;
+        logo?: StaticImageData;
+        timeline: string;
+        type: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+        degree: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+        href: string;
+      }
+    ];
   };
   type Project = {
     title: string;

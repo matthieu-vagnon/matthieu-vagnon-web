@@ -101,4 +101,47 @@ export const profile: Profile = {
       </div>
     ),
   },
+  experience: [
+    {
+      company: 'Freelance',
+      technologies: [
+        'React',
+        'Next.js',
+        'Tailwind CSS',
+        'TypeScript',
+        'Figma',
+        'Adobe XD',
+        'Adobe Photoshop',
+        'Adobe Illustrator',
+      ],
+      position: {
+        en: 'Front-end Developer',
+        fr: 'Développeur Front-end',
+        ja: 'フロントエンド開発者',
+      },
+      description: {
+        en: 'I have been working as a front-end developer for over 5 years. I have a strong passion for creating beautiful and functional user interfaces.',
+        fr: "Je travaille comme développeur front-end depuis plus de 5 ans. J'ai une passion forte pour la création de interfaces utilisateur esthétiques et fonctionnelles.",
+        ja: '私は5年以上のフロントエンド開発者として働いています。美しいユーザーインターフェースを作成することに情熱を持っています。',
+      },
+      timeline: '2018 - Present',
+    },
+  ],
+  education: [
+    {
+      responsible: 'University of California, Los Angeles',
+      timeline: '2018 - Present',
+      type: {
+        en: 'School',
+        fr: 'École',
+        ja: '学校',
+      },
+      degree: {
+        en: 'Bachelor of Science',
+        fr: 'Bachelor de Science',
+        ja: 'バイオリンサイエンス士',
+      },
+      href: 'https://www.ucla.edu/',
+    },
+  ],
 };

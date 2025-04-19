@@ -12,31 +12,6 @@ import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
 import { useLocale, useTranslations } from 'next-intl';
 
-const DATA = {
-  work: [
-    {
-      company: 'Company 1',
-      title: 'Job Title 1',
-      start: '2020-01-01',
-      end: '2021-01-01',
-      description: 'Description 1',
-      logoUrl: 'https://via.placeholder.com/150',
-      href: 'https://www.company1.com',
-      badges: ['Badge 1', 'Badge 2'],
-    },
-  ],
-  education: [
-    {
-      school: 'School 1',
-      degree: 'Degree 1',
-      start: '2020-01-01',
-      end: '2021-01-01',
-      href: 'https://www.school1.com',
-      logoUrl: 'https://via.placeholder.com/150',
-    },
-  ],
-};
-
 export default function Profile() {
   const t = useTranslations();
   const locale = useLocale();
@@ -82,18 +57,24 @@ export default function Profile() {
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>
             <div className='flex min-h-0 flex-col gap-y-3 basis-full md:basis-[calc(50%-2rem)]'>
               <SectionTitle title={t('profile.work')} />
-              {DATA.work.map((work) => (
-                <BlurFade key={work.company} delay={blurDelay++ / 10}>
+              {profile.experience.map((experience, index) => (
+                <BlurFade key={index} delay={blurDelay++ / 10}>
                   <ResumeCard
-                    key={work.company}
-                    logoUrl={work.logoUrl}
-                    altText={work.company}
-                    title={work.company}
-                    subtitle={work.title}
-                    href={work.href}
-                    badges={work.badges}
-                    period={`${work.start} - ${work.end ?? 'Present'}`}
-                    description={work.description}
+                    key={experience.company}
+                    logoUrl={experience.logo?.src}
+                    altText={experience.company}
+                    title={experience.company}
+                    subtitle={
+                      getTranslatedData(experience.position, locale) as string
+                    }
+                    badges={experience.technologies}
+                    period={experience.timeline}
+                    description={
+                      getTranslatedData(
+                        experience.description,
+                        locale
+                      ) as string
+                    }
                   />
                 </BlurFade>
               ))}
@@ -104,16 +85,21 @@ export default function Profile() {
             />
             <div className='flex min-h-0 flex-col gap-y-3 basis-full md:basis-[calc(50%-2rem)]'>
               <SectionTitle title={t('profile.education')} />
-              {DATA.education.map((education) => (
-                <BlurFade key={education.school} delay={blurDelay++ / 10}>
+              {profile.education.map((education, index) => (
+                <BlurFade key={index} delay={blurDelay++ / 10}>
                   <ResumeCard
-                    key={education.school}
+                    key={education.responsible}
                     href={education.href}
-                    logoUrl={education.logoUrl}
-                    altText={education.school}
-                    title={education.school}
-                    subtitle={education.degree}
-                    period={`${education.start} - ${education.end}`}
+                    logoUrl={education.logo?.src}
+                    altText={education.responsible}
+                    title={education.responsible}
+                    subtitle={
+                      getTranslatedData(education.degree, locale) as string
+                    }
+                    badges={[
+                      getTranslatedData(education.type, locale) as string,
+                    ]}
+                    period={education.timeline}
                   />
                 </BlurFade>
               ))}
