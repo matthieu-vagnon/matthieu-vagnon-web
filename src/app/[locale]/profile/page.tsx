@@ -11,7 +11,24 @@ import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
+import { Sparkle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+
+function StackBox({ title, stack }: { title: string; stack: string[] }) {
+  return (
+    <div className='flex flex-col gap-3 bg-accent p-4 rounded-lg flex-auto'>
+      <span className='text-sm font-bold flex flex-row items-center gap-1'>
+        <Sparkle strokeWidth={0} className='size-4 fill-black' />
+        {title}
+      </span>
+      <div className='flex flex-col gap-1'>
+        {stack.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Profile() {
   const t = useTranslations();
@@ -56,6 +73,22 @@ export default function Profile() {
           <span className='text-base md:text-lg text-gray-500'>
             {getTranslatedData(profile.about, locale)}
           </span>
+        </BlurFade>
+        <BlurFade delay={blurDelay++ / 10}>
+          <div className='flex flex-row gap-2 flex-wrap'>
+            <StackBox
+              title={t('profile.frontendStack')}
+              stack={profile.frontendStack}
+            />
+            <StackBox
+              title={t('profile.deploymentStack')}
+              stack={profile.deploymentStack}
+            />
+            <StackBox
+              title={t('profile.designStack')}
+              stack={profile.designStack}
+            />
+          </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>

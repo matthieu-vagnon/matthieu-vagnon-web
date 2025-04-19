@@ -21,6 +21,9 @@ declare global {
       name: string;
       img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     }[];
+    frontendStack: string[];
+    deploymentStack: string[];
+    designStack: string[];
     about: {
       en?: React.ReactNode;
       fr?: React.ReactNode;

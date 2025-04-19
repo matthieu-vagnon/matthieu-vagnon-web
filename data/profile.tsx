@@ -62,6 +62,19 @@ export const profile: Profile = {
       img: MuiIcon,
     },
   ],
+  frontendStack: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'JavaScript',
+    'Tailwind CSS',
+    'Material UI',
+    'HTML',
+    'CSS',
+    'Motion',
+  ],
+  deploymentStack: ['Vercel', 'Node.js'],
+  designStack: ['Figma'],
   about: {
     en: (
       <div className='flex flex-col gap-3'>

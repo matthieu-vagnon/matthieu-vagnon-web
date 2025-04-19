@@ -54,6 +54,9 @@
     "hello": "Bonjour, je suis Matthieu Vagnon 👋",
     "me": "Je suis un <highlight>développeur front-end</highlight>, <highlight>designer numérique</highlight> et <highlight>conseiller en programmation</highlight> indépendant, dont le but est de faire de votre SaaS ou de votre application web un succès en mettant en avant <highlight>l'expérience utilisateur</highlight>.",
     "about": "À propos",
+    "frontendStack": "Stack front-end",
+    "deploymentStack": "Stack déploiement",
+    "designStack": "Stack design",
     "work": "Expériences",
     "education": "Formations"
   },
