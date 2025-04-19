@@ -51,6 +51,8 @@
   "profile": {
     "title": "Profil",
     "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications.",
+    "hello": "Bonjour, je suis Matthieu Vagnon 👋",
+    "me": "Je suis un <highlight>développeur front-end</highlight>, <highlight>designer numérique</highlight> et <highlight>conseiller en programmation</highlight> indépendant, dont le but est de faire de votre SaaS ou de votre application web un succès en mettant en avant <highlight>l'expérience utilisateur</highlight>.",
     "about": "À propos",
     "work": "Expériences",
     "education": "Formations"

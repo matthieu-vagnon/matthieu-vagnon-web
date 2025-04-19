@@ -14,6 +14,9 @@ declare global {
     method?: string;
     image?: StaticImageData;
   };
+  type Profile = {
+    avatarUrl?: StaticImageData;
+  };
   type Project = {
     title: string;
     year: number;

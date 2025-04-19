@@ -49,6 +49,8 @@
   "profile": {
     "title": "プロフィール",
     "description": "私のスキル、仕事、教育の要約。",
+    "hello": "こんにちは、私はヴァンニョン・マチュです👋",
+    "me": "私はフリーランスの<highlight>フロントエンジニア</highlight>、<highlight>デジタルデザイナー</highlight>、<highlight>プログラミングアドバイザー</highlight>です。あなたのSaaSやウェブアプリを成功に導くために、あなたが必要としていた<highlight>魔法使い</highlight>です。",
     "about": "私について",
     "work": "仕事",
     "education": "教育"

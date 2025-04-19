@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import Highlight from '@/components/highlight';
 import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
@@ -7,13 +8,10 @@ import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { Separator } from '@/components/ui/separator';
+import { profile } from '@/data/profile';
 import { useTranslations } from 'next-intl';
 
 const DATA = {
-  name: 'Matt Vigneri',
-  description:
-    'I am a software engineer with a passion for building scalable and efficient systems.',
-  avatarUrl: 'https://via.placeholder.com/150',
   work: [
     {
       company: 'Company 1',
@@ -55,16 +53,20 @@ export default function Profile() {
       </BlurFade>
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16'>
         <BlurFade delay={blurDelay++ / 10}>
-          <div className='gap-8 flex justify-start'>
-            <Avatar className='size-28 border'>
-              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-              <AvatarFallback>{DATA.name[0]}</AvatarFallback>
+          <div className='gap-4 sm:gap-6 md:gap-8 flex flex-col sm:flex-row text-center sm:text-left items-center justify-start'>
+            <Avatar className='size-15 sm:size-20 md:size-28 border text-xl sm:text-3xl md:text-5xl'>
+              <AvatarImage alt='MV' src={profile.avatarUrl?.src} />
+              <AvatarFallback>MV</AvatarFallback>
             </Avatar>
-            <div className='flex-col flex space-y-1.5'>
-              <div className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'>{`Hi, I'm ${
-                DATA.name.split(' ')[0]
-              } 👋`}</div>
-              <div className='max-w-[600px] md:text-xl'>{DATA.description}</div>
+            <div className='flex-col flex space-y-3 md:space-y-5'>
+              <div className='font-sans-special text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter'>
+                {t('profile.hello')}
+              </div>
+              <div className='md:text-xl'>
+                {t.rich('profile.me', {
+                  highlight: (chunks) => <Highlight>{chunks}</Highlight>,
+                })}
+              </div>
             </div>
           </div>
         </BlurFade>
