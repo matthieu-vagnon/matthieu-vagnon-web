@@ -21,8 +21,9 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: React.ReactNode;
   indicator?: LucideIcon;
+  secondaryBadges?: readonly string[];
 }
 
 const ResumeCardContent = ({
@@ -30,9 +31,16 @@ const ResumeCardContent = ({
   indicator: Indicator = ChevronRightIcon,
   ...props
 }: ResumeCardProps & { isExpanded: boolean }) => {
-  const { logoUrl, altText, title, subtitle, badges, period, description } =
-    props;
-
+  const {
+    logoUrl,
+    altText,
+    title,
+    subtitle,
+    badges,
+    period,
+    description,
+    secondaryBadges,
+  } = props;
   return (
     <Card className='flex'>
       <div className='flex-none'>
@@ -84,9 +92,22 @@ const ResumeCardContent = ({
               duration: 0.7,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className='mt-2 text-xs sm:text-sm'
+            className='mt-2 text-xs sm:text-sm flex flex-col gap-2'
           >
-            {description}
+            <span>{description}</span>
+            {secondaryBadges && (
+              <div className='flex flex-wrap gap-1'>
+                {secondaryBadges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant='secondary'
+                    className='align-middle text-xs'
+                  >
+                    {badge}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </motion.div>
         )}
       </div>

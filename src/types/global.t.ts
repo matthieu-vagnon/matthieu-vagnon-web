@@ -21,24 +21,22 @@ declare global {
       fr?: React.ReactNode;
       ja?: React.ReactNode;
     };
-    experience: [
-      {
-        company: string;
-        logo?: StaticImageData;
-        timeline: string;
-        technologies: string[];
-        position: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        description: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-      }
-    ];
+    experience: {
+      company: string;
+      logo?: StaticImageData;
+      timeline: string;
+      position: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      };
+      description: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      }[];
+      technologies: string[];
+    }[];
     education: [
       {
         responsible: string;

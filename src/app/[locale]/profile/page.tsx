@@ -57,27 +57,32 @@ export default function Profile() {
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>
             <div className='flex min-h-0 flex-col gap-y-3 basis-full md:basis-[calc(50%-2rem)]'>
               <SectionTitle title={t('profile.work')} />
-              {profile.experience.map((experience, index) => (
-                <BlurFade key={index} delay={blurDelay++ / 10}>
-                  <ResumeCard
-                    key={experience.company}
-                    logoUrl={experience.logo?.src}
-                    altText={experience.company}
-                    title={experience.company}
-                    subtitle={
-                      getTranslatedData(experience.position, locale) as string
-                    }
-                    badges={experience.technologies}
-                    period={experience.timeline}
-                    description={
-                      getTranslatedData(
-                        experience.description,
-                        locale
-                      ) as string
-                    }
-                  />
-                </BlurFade>
-              ))}
+              <div className='flex flex-col gap-y-5'>
+                {profile.experience.map((experience, index) => (
+                  <BlurFade key={index} delay={blurDelay++ / 10}>
+                    <ResumeCard
+                      key={experience.company}
+                      logoUrl={experience.logo?.src}
+                      altText={experience.company}
+                      title={experience.company}
+                      subtitle={
+                        getTranslatedData(experience.position, locale) as string
+                      }
+                      period={experience.timeline}
+                      description={
+                        <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
+                          {experience.description.map((point, index) => (
+                            <li key={index}>
+                              {getTranslatedData(point, locale)}
+                            </li>
+                          ))}
+                        </ul>
+                      }
+                      secondaryBadges={experience.technologies}
+                    />
+                  </BlurFade>
+                ))}
+              </div>
             </div>
             <Separator
               orientation='vertical'
@@ -85,24 +90,26 @@ export default function Profile() {
             />
             <div className='flex min-h-0 flex-col gap-y-3 basis-full md:basis-[calc(50%-2rem)]'>
               <SectionTitle title={t('profile.education')} />
-              {profile.education.map((education, index) => (
-                <BlurFade key={index} delay={blurDelay++ / 10}>
-                  <ResumeCard
-                    key={education.responsible}
-                    href={education.href}
-                    logoUrl={education.logo?.src}
-                    altText={education.responsible}
-                    title={education.responsible}
-                    subtitle={
-                      getTranslatedData(education.degree, locale) as string
-                    }
-                    badges={[
-                      getTranslatedData(education.type, locale) as string,
-                    ]}
-                    period={education.timeline}
-                  />
-                </BlurFade>
-              ))}
+              <div className='flex flex-col gap-y-5'>
+                {profile.education.map((education, index) => (
+                  <BlurFade key={index} delay={blurDelay++ / 10}>
+                    <ResumeCard
+                      key={education.responsible}
+                      href={education.href}
+                      logoUrl={education.logo?.src}
+                      altText={education.responsible}
+                      title={education.responsible}
+                      subtitle={
+                        getTranslatedData(education.degree, locale) as string
+                      }
+                      badges={[
+                        getTranslatedData(education.type, locale) as string,
+                      ]}
+                      period={education.timeline}
+                    />
+                  </BlurFade>
+                ))}
+              </div>
             </div>
           </div>
         </BlurFade>
