@@ -92,7 +92,7 @@ const ResumeCardContent = ({
               duration: 0.7,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className='mt-2 text-xs sm:text-sm flex flex-col gap-2'
+            className='mt-2 text-xs sm:text-sm flex flex-col gap-2 pointer-events-none'
           >
             <span>{description}</span>
             {secondaryBadges && (

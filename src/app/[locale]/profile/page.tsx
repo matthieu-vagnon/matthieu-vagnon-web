@@ -90,7 +90,7 @@ export default function Profile() {
             />
             <div className='flex min-h-0 flex-col gap-y-3 basis-full md:basis-[calc(50%-2rem)]'>
               <SectionTitle title={t('profile.education')} />
-              <div className='flex flex-col gap-y-5'>
+              <div className='flex flex-col gap-y-6'>
                 {profile.education.map((education, index) => (
                   <BlurFade key={index} delay={blurDelay++ / 10}>
                     <ResumeCard
