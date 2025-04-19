@@ -15,15 +15,18 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t('openGraph.title'),
       description: t('openGraph.description'),
       images: [
-        profile.avatarUrl
-          ? {
-              url: `${process.env.NEXT_PUBLIC_URL!}${profile.avatarUrl.src}`,
-            }
-          : null,
+        {
+          url: '',
+        },
+        {
+          url: profile.avatarUrl
+            ? `${process.env.NEXT_PUBLIC_URL!}${profile.avatarUrl?.src}`
+            : '',
+        },
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
         },
-      ].filter(Boolean) as Array<{ url: string }>,
+      ],
     },
     keywords: Object.keys(messages.keywords).map(
       (key) => messages.keywords[key]
