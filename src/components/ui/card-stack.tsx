@@ -79,7 +79,12 @@ export const CardStack = ({
             </button>
           </Magnetic>
         </div>
-        <div className='relative pointer-events-auto transition-opacity ease-in-out duration-200 hover:opacity-25 cursor-default h-full w-full'>
+        <div
+          className={cn(
+            'relative transition-opacity ease-in-out duration-200 h-full w-full',
+            isCollapsed && 'hover:opacity-25 pointer-events-auto cursor-default'
+          )}
+        >
           {cards.map((card, index) => {
             return (
               <motion.div
