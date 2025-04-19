@@ -154,7 +154,7 @@
     },
     "phone": {
       "title": "Phone",
-      "description": "Call me to discuss your project (in english or french)."
+      "description": "Call me to discuss your project."
     }
   },
   "configure": {
@@ -188,6 +188,8 @@
     "copyLink": "Link copied to clipboard!",
     "copyPhone": "Phone number copied to clipboard!",
     "copyEmail": "Email copied to clipboard!",
-    "separator": ", "
+    "separator": ", ",
+
+    "tel": "+817090997140"
   }
 }

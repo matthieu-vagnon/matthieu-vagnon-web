@@ -157,7 +157,7 @@
     },
     "phone": {
       "title": "Téléphone",
-      "description": "Appeler-moi pour discuter de votre projet (en anglais ou en français)."
+      "description": "Appeler-moi pour discuter de votre projet."
     }
   },
   "configure": {
@@ -191,6 +191,8 @@
     "copyLink": "Lien copié dans le presse-papiers !",
     "copyPhone": "Numéro de téléphone copié dans le presse-papiers !",
     "copyEmail": "Email copié dans le presse-papiers !",
-    "separator": ", "
+    "separator": ", ",
+
+    "tel": "+817090997140"
   }
 }
