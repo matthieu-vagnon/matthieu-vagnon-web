@@ -21,6 +21,34 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 
 export const profile: Profile = {
   avatarUrl: me,
+  description: {
+    en: (
+      <span>
+        As a freelance <strong>front-end engineer</strong>,{' '}
+        <strong>digital designer</strong>, and{' '}
+        <strong>programming advisor</strong>, I help make your SaaS or web app a
+        success through outstanding <strong>user experience</strong>.
+      </span>
+    ),
+    fr: (
+      <span>
+        Je suis un <strong>développeur front-end</strong>,{' '}
+        <strong>designer numérique</strong> et{' '}
+        <strong>conseiller en programmation</strong> indépendant, dont le but
+        est de faire de votre SaaS ou de votre application web un succès en
+        mettant en avant <strong>l&apos;expérience utilisateur</strong>.
+      </span>
+    ),
+    ja: (
+      <span>
+        私はフリーランスの<strong>フロントエンジニア</strong>、
+        <strong>デジタルデザイナー</strong>、
+        <strong>プログラミングアドバイザー</strong>
+        です。あなたのSaaSやウェブアプリを成功に導くために、あなたが必要としていた
+        <strong>魔法使い</strong>です。
+      </span>
+    ),
+  },
   stackLogos: [
     {
       id: 1,
@@ -78,23 +106,28 @@ export const profile: Profile = {
   designStack: ['Figma'],
   about: {
     en: (
-      <div className='flex flex-col gap-3'>
+      <span className='flex flex-col gap-3'>
         <span>
-          🪄 I’m not just a developer — I’m a <Highlight>magician</Highlight>{' '}
-          who:
-          <ul className='list-[upper-roman] list-inside'>
-            <li>Increases your customer loyalty</li>
-            <li>Unlocks the full potential of your SaaS or web app</li>
-            <li>Makes you stand out from the competition</li>
-            <li>Teach you how to internalize my competences</li>
-          </ul>
+          I’m not just a developer — I’m a <Highlight>magician</Highlight> who:
         </span>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>Increases</Highlight> your customer loyalty
+          </li>
+          <li>
+            <Highlight>Unlocks the full potential</Highlight> of your SaaS or
+            web app
+          </li>
+          <li>
+            Makes you <Highlight>stand out</Highlight> from the competition
+          </li>
+          <li>
+            Teaches you how to <Highlight>internalize</Highlight> my competences
+          </li>
+        </ul>
         <span>
-          📌 I’m a{' '}
-          <Highlight>
-            front-end developer (React & Next.js expert) and digital designer
-          </Highlight>{' '}
-          with a strong belief: No matter how great your product is,{' '}
+          I’m a front-end developer (React & Next.js expert) and digital
+          designer with a strong belief: No matter how great your product is,{' '}
           <Highlight>
             it’s worth nothing without a high-quality user interface
           </Highlight>
@@ -102,43 +135,52 @@ export const profile: Profile = {
           even more than advanced features.
         </span>
         <span>
-          👆 The truth? User experience often matters more than raw
-          functionality.
+          The truth? User experience often matters more than raw functionality.
         </span>
         <span>
-          👨‍💻 As a hybrid developer-designer,{' '}
+          As a hybrid developer-designer,{' '}
           <Highlight>
             I merge design and development into a single smooth process
           </Highlight>
           , which leads to:
-          <ul className='list-[upper-roman] list-inside'>
-            <li>Faster delivery</li>
-            <li>Pixel-perfect implementation</li>
-            <li>Lower development costs</li>
-          </ul>
         </span>
-      </div>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>Faster</Highlight> delivery
+          </li>
+          <li>
+            <Highlight>Pixel-perfect</Highlight> implementation
+          </li>
+          <li>
+            <Highlight>Lower</Highlight> development costs
+          </li>
+        </ul>
+      </span>
     ),
     fr: (
-      <div className='flex flex-col gap-3'>
+      <span className='flex flex-col gap-3'>
         <span>
-          🪄 Je ne suis pas un simple développeur, je suis un{' '}
+          Je ne suis pas un simple développeur, je suis un
           <Highlight>magicien</Highlight> qui :
-          <ul className='list-[upper-roman] list-inside'>
-            <li>Améliore la fidélité de vos clients</li>
-            <li>Booste le potentiel de vos SaaS/applications</li>
-            <li>Vous fait briller face à la concurrence</li>
-            <li>Vous apprend à internaliser mes compétences</li>
-          </ul>
         </span>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>Améliore</Highlight> la fidélité de vos clients
+          </li>
+          <li>
+            <Highlight>Booste</Highlight> le potentiel de vos SaaS/applications
+          </li>
+          <li>
+            Vous fait <Highlight>briller</Highlight> face à la concurrence
+          </li>
+          <li>
+            Vous apprend à <Highlight>internaliser</Highlight> mes compétences
+          </li>
+        </ul>
         <span>
-          📌 Je suis un{' '}
-          <Highlight>
-            développeur front-end, expert en React et Next.js et designer
-            digital
-          </Highlight>
-          , dont la conviction est qu&apos;une application web, peu importe ce
-          qu&apos;elle apporte,{' '}
+          Je suis développeur front-end, expert en React et Next.js et designer
+          digital, dont la conviction est qu&apos;une application web, peu
+          importe ce qu&apos;elle apporte,{' '}
           <Highlight>
             ne vaut rien sans une interface utilisateur de qualité
           </Highlight>{' '}
@@ -146,58 +188,76 @@ export const profile: Profile = {
           features avancées.
         </span>
         <span>
-          👆 La réalité c&apos;est que l&apos;expérience de l&apos;utilisateur
+          La réalité c&apos;est que l&apos;expérience de l&apos;utilisateur
           prévaut bien souvent sur les fonctionnalités brutes.
         </span>
         <span>
-          👨‍💻 En tant que développeur-designer, j&apos;apporte une{' '}
+          En tant que développeur-designer, j&apos;apporte une{' '}
           <Highlight>
             unification des processus de design et développement
           </Highlight>
           , ce qui résulte en :
-          <ul className='list-[upper-roman] list-inside'>
-            <li>Une livraison plus rapide</li>
-            <li>Un rendu 100% fidèle à vos maquettes</li>
-            <li>Une mise en œuvre moins coûteuse</li>
-          </ul>
         </span>
-      </div>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            Une livraison plus <Highlight>rapide</Highlight>
+          </li>
+          <li>
+            Un rendu <Highlight>100% fidèle</Highlight> à vos maquettes
+          </li>
+          <li>
+            Une mise en œuvre <Highlight>moins coûteuse</Highlight>
+          </li>
+        </ul>
+      </span>
     ),
     ja: (
-      <div className='flex flex-col gap-3'>
+      <span className='flex flex-col gap-3'>
         <span>
-          🪄 私はただの開発者ではありません。私は<Highlight>魔法使い</Highlight>
+          私はただの開発者ではありません。私は<Highlight>魔法使い</Highlight>
           です。
-          <ul className='list-[upper-roman] list-inside'>
-            <li>ユーザーのロイヤリティを高め</li>
-            <li>あなたのSaaSやWebアプリのポテンシャルを最大化し</li>
-            <li>競合との差別化を実現します</li>
-            <li>私の能力を内面化する方法を教える</li>
-          </ul>
         </span>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>ユーザーのロイヤリティ</Highlight>を高める
+          </li>
+          <li>
+            <Highlight>あなたのSaaSやWebアプリのポテンシャル</Highlight>
+            を最大化する
+          </li>
+          <li>
+            <Highlight>競合との差別化</Highlight>を実現する
+          </li>
+          <li>
+            <Highlight>私の能力を内面化</Highlight>する方法を教える
+          </li>
+        </ul>
         <span>
-          📌 私は
-          <Highlight>
-            React・Next.jsのエキスパートであり、デジタルデザイナーでもあるフロントエンド開発者
-          </Highlight>
+          私は
+          React・Next.jsのエキスパートであり、デジタルデザイナーでもあるフロントエンド開発者
           です。 どれだけ優れたサービスでも、
           <Highlight>質の高いUIがなければ価値はありません</Highlight>。
           なぜなら、UI/UXこそが最も強力なコンバージョンのレバーだからです。高度な機能よりも、まずは体験。
         </span>
         <span>
-          👆
           実際、ユーザーが感じる「体験」は、機能そのものよりも重要になることが多いのです。
         </span>
         <span>
-          👨‍💻 デザインと開発の両方を担える私だからこそ、
+          デザインと開発の両方を担える私だからこそ、
           <Highlight>プロセスを統一</Highlight>でき、
-          <ul className='list-[upper-roman] list-inside'>
-            <li>開発スピードの向上</li>
-            <li>デザイン通りの忠実な実装</li>
-            <li>コスト削減</li>
-          </ul>
         </span>
-      </div>
+        <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>開発スピードの向上</Highlight>
+          </li>
+          <li>
+            <Highlight>デザイン通りの忠実な実装</Highlight>
+          </li>
+          <li>
+            <Highlight>コスト削減</Highlight>
+          </li>
+        </ul>
+      </span>
     ),
   },
   experience: [

@@ -1,5 +1,4 @@
 import Header from '@/components/header';
-import Highlight from '@/components/highlight';
 import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
@@ -54,20 +53,10 @@ export default function Profile() {
               <AvatarImage alt='MV' src={profile.avatarUrl?.src} />
               <AvatarFallback>MV</AvatarFallback>
             </Avatar>
-            <div className='flex-col flex space-y-3 md:space-y-5'>
-              <div className='font-sans-special text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter'>
-                {t('profile.hello')}
-              </div>
-              <div className='md:text-xl'>
-                {t.rich('profile.me', {
-                  highlight: (chunks) => <Highlight>{chunks}</Highlight>,
-                })}
-              </div>
+            <div className='text-lg md:text-xl'>
+              {getTranslatedData(profile.description, locale)}
             </div>
           </div>
-        </BlurFade>
-        <BlurFade delay={blurDelay++ / 10}>
-          <LogoCarousel columnCount={4} logos={profile.stackLogos} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t('profile.about')} />
@@ -90,6 +79,9 @@ export default function Profile() {
               stack={profile.designStack}
             />
           </div>
+        </BlurFade>
+        <BlurFade delay={blurDelay++ / 10}>
+          <LogoCarousel columnCount={4} logos={profile.stackLogos} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16'>

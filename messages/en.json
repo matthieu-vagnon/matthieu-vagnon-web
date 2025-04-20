@@ -82,8 +82,6 @@
     },
     "title": "Profile",
     "description": "A summary of my skills, work and education.",
-    "hello": "Hi, I'm Matthieu Vagnon 👋",
-    "me": "As a freelance <highlight>front-end engineer</highlight>, <highlight>digital designer</highlight>, and <highlight>programming advisor</highlight>, I help make your SaaS or web app a success through outstanding <highlight>user experience</highlight>.",
     "about": "About",
     "frontendStack": "Front-End Stack",
     "deploymentStack": "Deployment Stack",

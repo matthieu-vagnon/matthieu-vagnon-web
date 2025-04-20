@@ -1,14 +1,18 @@
 import { profile } from '@/data/profile';
+import { getFlattenedNode, getTranslatedData } from '@/lib/utils';
 import { Metadata } from 'next';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('profile.metadata');
   const messages = (await getMessages()).profile.metadata;
+  const locale = await getLocale();
 
   return {
     title: t('title'),
-    description: t('description'),
+    description: getFlattenedNode(
+      getTranslatedData(profile.description, locale)
+    ),
     openGraph: {
       type: 'website',
       siteName: 'Matthieu Vagnon Web',
