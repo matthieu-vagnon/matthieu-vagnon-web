@@ -3,7 +3,7 @@ import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
-import SkillTag from '@/components/skill-tag';
+import SkillBox from '@/components/skill-box';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
@@ -11,24 +11,7 @@ import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
-import { Sparkle } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-
-function StackBox({ title, stack }: { title: string; stack: string[] }) {
-  return (
-    <div className='flex flex-col gap-3 bg-accent p-4 rounded-lg flex-auto'>
-      <span className='text-sm font-bold flex flex-row items-center gap-1'>
-        <Sparkle strokeWidth={0} className='size-4 fill-black' />
-        {title}
-      </span>
-      <div className='flex flex-row flex-wrap gap-2'>
-        {stack.map((item) => (
-          <SkillTag key={item} technology={item} />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Profile() {
   const t = useTranslations();
@@ -65,18 +48,21 @@ export default function Profile() {
           </span>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
-          <div className='flex flex-row gap-2 flex-wrap'>
-            <StackBox
+          <div className='flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap'>
+            <SkillBox
               title={t('profile.frontendStack')}
-              stack={profile.frontendStack}
+              items={profile.frontendStack}
+              className='flex-auto'
             />
-            <StackBox
+            <SkillBox
               title={t('profile.deploymentStack')}
-              stack={profile.deploymentStack}
+              items={profile.deploymentStack}
+              className='flex-auto'
             />
-            <StackBox
+            <SkillBox
               title={t('profile.designStack')}
-              stack={profile.designStack}
+              items={profile.designStack}
+              className='flex-auto'
             />
           </div>
         </BlurFade>

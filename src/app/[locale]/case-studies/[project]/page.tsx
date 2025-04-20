@@ -4,7 +4,7 @@ import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
-import SkillTag from '@/components/skill-tag';
+import { default as SkillBox } from '@/components/skill-box';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { BlurFade } from '@/components/ui/blur-fade';
 import {
@@ -191,29 +191,17 @@ export default async function Project(props: ProjectProps) {
           >
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
               <div>{getTranslatedData(project.longDescription, locale)}</div>
-              <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
-                <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>
-                    {t('caseStudies.project.skills')} -
-                  </span>
-                  <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
-                    {(
-                      getTranslatedData(project.skills, locale) as string[]
-                    ).map((skill, index) => (
-                      <SkillTag key={index} technology={skill} />
-                    ))}
-                  </div>
-                </div>
-                <div className='flex flex-col gap-1'>
-                  <span className='text-sm text-gray-400'>
-                    {t('caseStudies.project.technologies')} -
-                  </span>
-                  <div className='flex flex-row flex-wrap gap-2 items-center justify-start'>
-                    {project.technologies.map((technology, index) => (
-                      <SkillTag key={index} technology={technology} />
-                    ))}
-                  </div>
-                </div>
+              <div className='flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4'>
+                <SkillBox
+                  title={t('caseStudies.project.skills')}
+                  items={getTranslatedData(project.skills, locale) as string[]}
+                  className='flex-auto'
+                />
+                <SkillBox
+                  title={t('caseStudies.project.technologies')}
+                  items={project.technologies}
+                  className='flex-auto'
+                />
               </div>
             </div>
           </Block>
