@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
         <p>
           En tant que développeur front-end freelance, Matthieu s&apos;est
           distingué par son{' '}
-          <Highlight color='emerald'>expertise technique</Highlight>, sa
+          <Highlight color='emerald'>expertise technique</Highlight>, sa{' '}
           <Highlight color='emerald'>créativité</Highlight> et son{' '}
           <Highlight color='emerald'>engagement</Highlight> envers la réussite
           des projets qui lui ont été confiés. Il a notamment démontré une{' '}
