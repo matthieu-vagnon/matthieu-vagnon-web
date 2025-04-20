@@ -149,15 +149,15 @@
     "description": "Veuillez sélectionner votre méthode de contact préférée.",
     "meeting": {
       "title": "Planifier une visioconférence",
-      "description": "Planifier une visioconférence avec moi pour discuter de votre projet."
+      "description": "Planifiez une visioconférence avec moi pour discuter de votre projet."
     },
     "email": {
       "title": "Email",
-      "description": "Envoyer-moi un email pour discuter de votre projet."
+      "description": "Envoyez-moi un email pour discuter de votre projet."
     },
     "phone": {
       "title": "Téléphone",
-      "description": "Appeler-moi pour discuter de votre projet."
+      "description": "Appelez-moi pour discuter de votre projet."
     }
   },
   "configure": {
