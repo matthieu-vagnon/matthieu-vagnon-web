@@ -4,6 +4,7 @@ import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
+import SkillTag from '@/components/skill-tag';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { BlurFade } from '@/components/ui/blur-fade';
 import {
@@ -42,14 +43,6 @@ function Block({
         <SectionTitle title={title} />
         <div className='text-base md:text-lg text-gray-500'>{children}</div>
       </div>
-    </div>
-  );
-}
-
-function SkillTag({ technology }: { technology: string }) {
-  return (
-    <div className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white border border-gray-400 outline outline-gray-500'>
-      {technology}
     </div>
   );
 }

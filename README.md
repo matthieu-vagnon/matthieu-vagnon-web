@@ -13,7 +13,7 @@
 
 # Matthieu Vagnon Web - Personal Website
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.2.2-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)

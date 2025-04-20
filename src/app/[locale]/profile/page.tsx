@@ -4,6 +4,7 @@ import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
+import SkillTag from '@/components/skill-tag';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
@@ -21,9 +22,9 @@ function StackBox({ title, stack }: { title: string; stack: string[] }) {
         <Sparkle strokeWidth={0} className='size-4 fill-black' />
         {title}
       </span>
-      <div className='flex flex-col gap-1'>
+      <div className='flex flex-row flex-wrap gap-2'>
         {stack.map((item) => (
-          <span key={item}>{item}</span>
+          <SkillTag key={item} technology={item} />
         ))}
       </div>
     </div>

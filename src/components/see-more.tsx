@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import React from 'react';
+import packageJson from '../../package.json';
 import LanguageSwitch from './language-switch';
 import { HyperText } from './magicui/hyper-text';
 import { LinkButton } from './ui/button';
@@ -51,7 +52,9 @@ export default function SeeMore({
             ))}
           </div>
         </div>
-        <div className='text-xs text-gray-500'>{t('madeWithLove')}</div>
+        <div className='text-xs text-gray-500'>
+          {t('madeWithLove')} - v{packageJson.version}
+        </div>
         <LanguageSwitch />
       </div>
     </React.Fragment>
