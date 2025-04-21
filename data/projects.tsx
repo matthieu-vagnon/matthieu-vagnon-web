@@ -83,11 +83,12 @@ export const projects: Record<string, Project> = {
       'Cursor IDE',
       'React',
       'Next.js',
-      'Tailwind CSS',
       'TypeScript',
-      'Shadcn UI',
       'NPM',
+      'Tailwind CSS',
+      'Shadcn UI',
       'Vercel',
+      'Figma',
     ],
     previewImg: mvWeb1,
     gallery: {
@@ -215,11 +216,11 @@ export const projects: Record<string, Project> = {
       'React',
       'Next.js',
       'TypeScript',
+      'NPM',
       'Tailwind CSS',
       'Shadcn UI',
-      'NPM',
       'Vercel',
-      'Supabase',
+      'Figma',
     ],
     previewImg: smartInterviewBuilder5,
     gallery: {
@@ -468,7 +469,15 @@ export const projects: Record<string, Project> = {
         'ウェブメンテナンス',
       ],
     },
-    technologies: ['React', 'TypeScript', 'CSS', 'NPM', 'Vercel'],
+    technologies: [
+      'React',
+      'Vite.js',
+      'TypeScript',
+      'CSS',
+      'NPM',
+      'Vercel',
+      'Figma',
+    ],
     previewImg: koryoriYa3,
     gallery: {
       img: [
@@ -691,11 +700,14 @@ export const projects: Record<string, Project> = {
     },
     technologies: [
       'React',
+      'Vite.js',
       'JavaScript',
       'NPM',
-      'React Router',
       'Material UI',
       'MUI-X',
+      'React Router',
+      'Auth0',
+      'Figma',
     ],
     problem: {
       en: (

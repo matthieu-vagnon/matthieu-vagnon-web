@@ -94,13 +94,16 @@ export const profile: Profile = {
   frontendStack: [
     'React',
     'Next.js',
+    'Vite.js',
     'TypeScript',
     'JavaScript',
-    'Tailwind CSS',
-    'Material UI',
     'HTML',
     'CSS',
+    'NPM',
+    'Tailwind CSS',
+    'Material UI',
     'Motion',
+    'Auth0',
   ],
   deploymentStack: ['Vercel', 'Node.js'],
   designStack: ['Figma'],
@@ -275,9 +278,9 @@ export const profile: Profile = {
         'Figma',
       ],
       position: {
-        en: 'Front-end Engineer, Digital Designer and Programming Advisor',
-        fr: 'Développeur front-end, designer digital et mentor en programmation',
-        ja: 'フロントエンジニア、デジタルデザイナー、プログラミングアドバイザー',
+        en: 'Front-end Engineer & Digital Designer',
+        fr: 'Développeur front-end & designer digital',
+        ja: 'フロントエンジニア&デジタルデザイナー',
       },
       description: [
         {
@@ -308,10 +311,10 @@ export const profile: Profile = {
       logo: predictiveLayer,
       technologies: [
         'React',
+        'Vite.js',
         'JavaScript',
         'Material UI',
         'Auth0',
-        'Vite.js',
         'Figma',
       ],
       position: {
@@ -446,7 +449,7 @@ export const profile: Profile = {
       },
       degree: {
         en: 'IT Associate Degree',
-        fr: 'DUT Informatique',
+        fr: 'DUT informatique',
         ja: 'IT専門学校',
       },
       href: 'https://www.univ-lyon1.fr',
@@ -477,9 +480,9 @@ export const profile: Profile = {
         ja: '学位',
       },
       degree: {
-        en: 'High School Diploma',
-        fr: 'Baccalauréat',
-        ja: '高校卒業',
+        en: 'Scientific High School Diploma with Honors',
+        fr: 'Baccalauréat scientifique avec mention',
+        ja: '優等で科学高校卒業',
       },
       href: 'https://www.saint-thom.fr',
     },
