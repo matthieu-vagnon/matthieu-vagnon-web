@@ -1,9 +1,10 @@
-import { Metadata } from 'next'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { projects } from '@/data/projects';
+import { Metadata } from 'next';
+import { getMessages, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('caseStudies.metadata')
-  const messages = (await getMessages()).caseStudies.metadata
+  const t = await getTranslations('caseStudies.metadata');
+  const messages = (await getMessages()).caseStudies.metadata;
 
   return {
     title: t('title'),
@@ -15,14 +16,21 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t('openGraph.description'),
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`
-        }
-      ]
+          url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
+        },
+      ],
     },
-    keywords: Object.keys(messages.keywords).map((key) => messages.keywords[key])
-  }
+    keywords: [
+      ...(Object.values(projects).map((project) => project.title) || []),
+      ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
+    ],
+  };
 }
 
-export default function CaseStudiesLayout({ children }: { children: React.ReactNode }) {
-  return children
+export default function CaseStudiesLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }

@@ -33,6 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       ...(profile.frontendStack || []),
       ...(profile.deploymentStack || []),
       ...(profile.designStack || []),
+      ...(profile.experience.map((experience) => experience.company) || []),
+      ...(profile.education.map((education) => education.responsible) || []),
       ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
     ],
   };
