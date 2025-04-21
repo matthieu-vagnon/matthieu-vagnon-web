@@ -133,11 +133,11 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <div className='min-h-svh w-full flex justify-center items-center pt-18 pb-22'>
-        <div className='flex flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
-          <BlurFade className='z-1 absolute top-6 sm:top-8 md:top-10 right-6 sm:right-8 md:right-10'>
-            <LanguageSwitch />
-          </BlurFade>
+      <div className='min-h-svh w-full flex flex-col gap-y-4 items-center pt-4 sm:pt-6 md:pt-8 pb-22'>
+        <BlurFade className='w-full flex justify-end'>
+          <LanguageSwitch />
+        </BlurFade>
+        <div className='flex flex-auto flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
           <TitleBox delay={0.1} />
           <BlurFade delay={0.4} className='flex'>
             <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
