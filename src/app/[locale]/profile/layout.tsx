@@ -29,9 +29,12 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
     },
-    keywords: Object.keys(messages.keywords).map(
-      (key) => messages.keywords[key]
-    ),
+    keywords: [
+      ...(profile.frontendStack || []),
+      ...(profile.deploymentStack || []),
+      ...(profile.designStack || []),
+      ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
+    ],
   };
 }
 
