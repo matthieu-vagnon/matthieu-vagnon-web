@@ -92,6 +92,7 @@ export const profile: Profile = {
     },
   ],
   frontendStack: [
+    'Cursor IDE',
     'git',
     'npm',
     'React',
@@ -270,6 +271,7 @@ export const profile: Profile = {
       company: 'Matthieu Vagnon',
       logo: freelance,
       technologies: [
+        'Cursor IDE',
         'git',
         'npm',
         'React',
