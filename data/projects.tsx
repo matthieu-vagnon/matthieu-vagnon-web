@@ -80,7 +80,6 @@ export const projects: Record<string, Project> = {
       ],
     },
     technologies: [
-      'Cursor IDE',
       'git',
       'npm',
       'React',
@@ -214,7 +213,6 @@ export const projects: Record<string, Project> = {
       ],
     },
     technologies: [
-      'Cursor IDE',
       'git',
       'npm',
       'React',
