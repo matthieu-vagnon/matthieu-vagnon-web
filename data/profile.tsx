@@ -101,7 +101,6 @@ export const profile: Profile = {
     'JavaScript',
     'Tailwind CSS',
     'Material UI',
-    'HTML',
     'CSS',
     'Motion',
     'Payload CMS',
