@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
+import Highlight from './highlight';
 
 export default function SkillBox({
   title,
@@ -20,12 +21,9 @@ export default function SkillBox({
       </span>
       <div className='flex flex-row flex-wrap gap-2'>
         {items.map((item) => (
-          <div
-            key={item}
-            className='text-xs sm:text-sm bg-gray-500 px-2 py-1 rounded-md text-white border border-gray-400 outline outline-gray-500'
-          >
+          <Highlight key={item} color='gray'>
             {item}
-          </div>
+          </Highlight>
         ))}
       </div>
     </div>

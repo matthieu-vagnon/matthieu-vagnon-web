@@ -12,7 +12,7 @@ const Highlight = ({
   const colorVariants: Record<string, string> = {
     default: 'bg-main-light text-main-dark',
     emerald: 'bg-emerald-100 text-emerald-700',
-    gray: 'bg-gray-100 text-gray-700',
+    gray: 'bg-gray-200 text-gray-700',
   };
 
   return (

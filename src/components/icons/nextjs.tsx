@@ -5,7 +5,7 @@ import { SVGProps } from 'react';
 export default function NextjsIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      fill='#000000'
+      fill='var(--foreground)'
       width='800px'
       height='800px'
       viewBox='0 0 32 32'

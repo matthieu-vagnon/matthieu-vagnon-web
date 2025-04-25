@@ -89,7 +89,7 @@ export const CardStack = ({
             return (
               <motion.div
                 key={card.id}
-                className='absolute dark:bg-black bg-white w-full h-full rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between'
+                className='absolute bg-white w-full h-full rounded-3xl p-4 shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between'
                 style={{
                   transformOrigin: 'top center',
                 }}
@@ -99,11 +99,11 @@ export const CardStack = ({
                   zIndex: cards.length - index,
                 }}
               >
-                <div className='font-normal text-sm text-neutral-700 dark:text-neutral-200 overflow-hidden text-ellipsis line-clamp-7'>
+                <div className='font-normal text-sm text-neutral-700 overflow-hidden text-ellipsis line-clamp-7'>
                   {getTranslatedData(card.testimonial, locale)}
                 </div>
                 <div className='flex items-center justify-start gap-3'>
-                  <Avatar className='border size-9 bg-muted-background dark:bg-foreground'>
+                  <Avatar className='border size-9 bg-muted-background'>
                     <AvatarImage
                       src={card.image?.src ?? undefined}
                       alt={card.name}
@@ -112,10 +112,10 @@ export const CardStack = ({
                     <AvatarFallback>{card.name[0]}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className='text-neutral-500 text-md font-medium dark:text-white'>
+                    <p className='text-neutral-500 text-md font-medium'>
                       {`${card.name}${card.method ? ` (${card.method})` : ''}`}
                     </p>
-                    <p className='text-neutral-400 text-sm font-normal dark:text-neutral-200'>
+                    <p className='text-neutral-400 text-sm font-normal'>
                       {card.company} - {card.position}
                     </p>
                   </div>

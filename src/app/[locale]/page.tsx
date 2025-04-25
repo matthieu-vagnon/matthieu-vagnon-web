@@ -140,7 +140,7 @@ export default function Home() {
         <div className='flex flex-auto flex-col gap-6 sm:gap-8 md:gap-10 justify-center items-center'>
           <TitleBox delay={0.1} />
           <BlurFade delay={0.4} className='flex'>
-            <p className='text-center text-sm sm:text-base md:text-lg text-gray-500'>
+            <p className='text-center text-sm sm:text-base md:text-lg text-foreground-secondary!'>
               {t.rich('home.subtitle', {
                 highlight: (chunks: React.ReactNode) => (
                   <Highlight>{chunks}</Highlight>
