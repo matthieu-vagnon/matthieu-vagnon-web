@@ -124,38 +124,44 @@ export const CardStack = ({
                     />
                     <AvatarFallback>{card.name[0]}</AvatarFallback>
                   </Avatar>
-                  <div>
-                    <p className='text-foreground-secondary text-md font-medium overflow-hidden text-ellipsis line-clamp-1'>
-                      {`${card.name}${card.method ? ` (${card.method})` : ''}`}
-                    </p>
-                    <p className='text-muted-foreground text-sm font-normal overflow-hidden text-ellipsis line-clamp-1'>
-                      {card.company} - {card.position}
-                    </p>
+                  <div className='flex items-center justify-between w-full'>
+                    <div>
+                      <p className='text-foreground-secondary text-md font-medium overflow-hidden text-ellipsis line-clamp-1'>
+                        {`${card.name}${
+                          card.method ? ` (${card.method})` : ''
+                        }`}
+                      </p>
+                      <p className='text-muted-foreground text-sm font-normal overflow-hidden text-ellipsis line-clamp-1'>
+                        {card.company} - {card.position}
+                      </p>
+                    </div>
+                    {card.testimonial[
+                      locale as keyof typeof card.testimonial
+                    ] &&
+                      card.testimonial.original !== locale && (
+                        <div className='ml-2 mb-1 mt-1'>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Button
+                                variant='ghost'
+                                size='xs'
+                                onClick={handleOriginal}
+                                className='gap-2 p-2 rounded-full text-muted-foreground'
+                              >
+                                {original ? (
+                                  <Languages className='size-4' />
+                                ) : (
+                                  <Signature className='size-4' />
+                                )}
+                              </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              {original ? t('translate') : t('original')}
+                            </TooltipContent>
+                          </Tooltip>
+                        </div>
+                      )}
                   </div>
-                  {card.testimonial[locale as keyof typeof card.testimonial] &&
-                    card.testimonial.original !== locale && (
-                      <div className='ml-2 mb-1 mt-1'>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Button
-                              variant='ghost'
-                              size='xs'
-                              onClick={handleOriginal}
-                              className='gap-2 p-2 rounded-full text-muted-foreground'
-                            >
-                              {original ? (
-                                <Languages className='size-4' />
-                              ) : (
-                                <Signature className='size-4' />
-                              )}
-                            </Button>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            {original ? t('translate') : t('original')}
-                          </TooltipContent>
-                        </Tooltip>
-                      </div>
-                    )}
                 </div>
               </motion.div>
             );
