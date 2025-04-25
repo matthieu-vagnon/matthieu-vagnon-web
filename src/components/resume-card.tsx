@@ -1,7 +1,6 @@
 'use client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardHeader } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -12,6 +11,8 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+import Highlight from './highlight';
+import { Badge } from './ui/badge';
 
 interface ResumeCardProps {
   logoUrl?: string;
@@ -95,19 +96,15 @@ const ResumeCardContent = ({
               duration: 0.7,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className='mt-2 text-xs sm:text-sm flex flex-col gap-2 pointer-events-none text-foreground-secondary'
+            className='mt-2 text-xs sm:text-sm flex flex-col gap-3 pointer-events-none text-foreground-secondary'
           >
             <span>{description}</span>
             {secondaryBadges && (
               <div className='flex flex-wrap gap-1'>
                 {secondaryBadges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant='secondary'
-                    className='align-middle text-xs'
-                  >
+                  <Highlight color='gray' key={index}>
                     {badge}
-                  </Badge>
+                  </Highlight>
                 ))}
               </div>
             )}
