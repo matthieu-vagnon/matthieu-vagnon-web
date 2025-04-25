@@ -41,7 +41,9 @@ function Block({
     >
       <div className='flex flex-col w-full md:w-2/3 xl:w-1/2'>
         <SectionTitle title={title} />
-        <div className='text-base md:text-lg text-gray-500'>{children}</div>
+        <div className='text-base md:text-lg text-foreground-secondary'>
+          {children}
+        </div>
       </div>
     </div>
   );

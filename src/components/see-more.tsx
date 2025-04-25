@@ -52,7 +52,7 @@ export default function SeeMore({
             ))}
           </div>
         </div>
-        <div className='text-xs text-gray-500'>
+        <div className='text-xs text-foreground-secondary'>
           {t('madeWithLove')} - v{packageJson.version}
         </div>
         <LanguageSwitch />

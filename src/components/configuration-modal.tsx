@@ -53,7 +53,9 @@ export function ConfigurationModal() {
         <div className='flex flex-col gap-2'>
           <div className='flex flex-col gap-1 justify-between'>
             <Label>{t('magnetic.title')}</Label>
-            <span className='text-xs text-gray-400'>{t('magnetic.tip')}</span>
+            <span className='text-xs text-muted-foreground'>
+              {t('magnetic.tip')}
+            </span>
           </div>
           <Checkbox
             checked={isMagnetic}

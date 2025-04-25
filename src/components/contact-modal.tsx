@@ -18,7 +18,6 @@ import {
   InnerDialogTitle,
   InnerDialogTrigger,
 } from './ui/nested-dialog';
-import { Separator } from './ui/separator';
 export function ContactModal() {
   const t = useTranslations();
 
@@ -113,7 +112,6 @@ export function ContactModal() {
             </div>
           </div>
         </LinkButton>
-        <Separator />
         <div className='flex flex-row gap-2'>
           <Button
             variant='secondary'
@@ -125,7 +123,7 @@ export function ContactModal() {
             }}
           >
             <span>{process.env.NEXT_PUBLIC_EMAIL!}</span>
-            <Copy className='size-3 text-gray-400' />
+            <Copy className='size-3 text-muted-foreground' />
           </Button>
           <Button
             variant='secondary'
@@ -137,7 +135,7 @@ export function ContactModal() {
             }}
           >
             <span>{t('utils.tel')}</span>
-            <Copy className='size-3 text-gray-400' />
+            <Copy className='size-3 text-muted-foreground' />
           </Button>
         </div>
       </div>
