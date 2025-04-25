@@ -3,12 +3,14 @@
 import { useTestimonialsStatus } from '@/hooks/use-testimonials-status';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import { ChevronLeft, ChevronRight, Languages, Signature } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
 import { BlurFade } from './blur-fade';
+import { Button } from './button';
 import { Magnetic } from './magnetic';
+import { Tooltip, TooltipContent, TooltipTrigger } from './tooltip';
 
 let interval: NodeJS.Timeout;
 
@@ -26,6 +28,8 @@ export const CardStack = ({
   const [cards, setCards] = useState<Testimonial[]>(items);
   const { isCollapsed, setIsCollapsed } = useTestimonialsStatus();
   const locale = useLocale();
+  const t = useTranslations('utils');
+  const [original, setOriginal] = useState<boolean>(false);
 
   const startFlipping = () => {
     interval = setInterval(() => {
@@ -43,6 +47,10 @@ export const CardStack = ({
 
   const handleExpand = () => {
     setIsCollapsed(false);
+  };
+
+  const handleOriginal = () => {
+    setOriginal(!original);
   };
 
   useEffect(() => {
@@ -99,9 +107,38 @@ export const CardStack = ({
                   zIndex: cards.length - index,
                 }}
               >
-                <div className='font-normal text-sm text-neutral-700 overflow-hidden text-ellipsis line-clamp-7'>
-                  {getTranslatedData(card.testimonial, locale)}
-                </div>
+                <span className='font-normal text-sm text-foreground-secondary text-justify overflow-hidden text-ellipsis line-clamp-7'>
+                  {card.testimonial[locale as keyof typeof card.testimonial] &&
+                    card.testimonial.original !== locale && (
+                      <div className='float-end ml-2 mb-1 mt-1 text-muted-foreground'>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <Button
+                              variant='ghost'
+                              size='xs'
+                              onClick={handleOriginal}
+                              className='gap-2 p-2 rounded-full'
+                            >
+                              {original ? (
+                                <Languages className='size-4' />
+                              ) : (
+                                <Signature className='size-4' />
+                              )}
+                            </Button>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            {original ? t('translate') : t('original')}
+                          </TooltipContent>
+                        </Tooltip>
+                      </div>
+                    )}
+                  {original
+                    ? card.testimonial[
+                        card.testimonial
+                          .original as keyof typeof card.testimonial
+                      ]
+                    : getTranslatedData(card.testimonial, locale)}
+                </span>
                 <div className='flex items-center justify-start gap-3'>
                   <Avatar className='border size-9 bg-muted-background'>
                     <AvatarImage
@@ -112,10 +149,10 @@ export const CardStack = ({
                     <AvatarFallback>{card.name[0]}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className='text-neutral-500 text-md font-medium'>
+                    <p className='text-foreground-secondary text-md font-medium'>
                       {`${card.name}${card.method ? ` (${card.method})` : ''}`}
                     </p>
-                    <p className='text-neutral-400 text-sm font-normal'>
+                    <p className='text-muted-foreground text-sm font-normal'>
                       {card.company} - {card.position}
                     </p>
                   </div>

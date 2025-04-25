@@ -187,6 +187,8 @@
     "copyPhone": "Phone number copied to clipboard!",
     "copyEmail": "Email copied to clipboard!",
     "separator": ", ",
+    "translate": "Translate",
+    "original": "See original",
 
     "tel": "+817090997140"
   }

@@ -7,6 +7,7 @@ declare global {
     company: string;
     position: string;
     testimonial: {
+      original: string;
       en?: React.ReactNode;
       fr?: React.ReactNode;
       ja?: React.ReactNode;

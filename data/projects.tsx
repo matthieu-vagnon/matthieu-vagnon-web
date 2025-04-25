@@ -12,6 +12,7 @@ import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png';
 import smartInterviewBuilder4 from '@/public/smart-interview/builder-4.png';
 import smartInterviewBuilder5 from '@/public/smart-interview/builder-5.png';
+import React from 'react';
 
 export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
@@ -25,30 +26,30 @@ export const projects: Record<string, Project> = {
     },
     longDescription: {
       en: (
-        <span>
+        <React.Fragment>
           A simple <Highlight>portfolio web application</Highlight> made with{' '}
           <Highlight>React and Next.js</Highlight> letting you watch my case
           studies, my profile, contact me and access my links in a simple way on{' '}
           <Highlight>mobile and desktop</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Une <Highlight>application web portfolio</Highlight> faite avec{' '}
           <Highlight>React et Next.js</Highlight> vous permettant de regarder
           mes études de cas, mon profil, me contacter et accéder à mes liens de
           manière simple sur <Highlight>mobile et desktop</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           <Highlight>React et Next.js</Highlight>
           で作られたシンプルな
           <Highlight>ポートフォリオウェブアプリケーション</Highlight>
           で、私のケーススタディ、プロフィールの閲覧、連絡先やリンクへのアクセスが
           <Highlight>モバイルとデスクトップ</Highlight>
           で簡単にできます。
-        </span>
+        </React.Fragment>
       ),
     },
     tags: {
@@ -142,7 +143,7 @@ export const projects: Record<string, Project> = {
     },
     longDescription: {
       en: (
-        <span>
+        <React.Fragment>
           A SaaS platform to create{' '}
           <Highlight>AI-powered questionnaires</Highlight>. A questionnaire is
           created by using the integrated <Highlight>builder</Highlight> or by
@@ -153,10 +154,10 @@ export const projects: Record<string, Project> = {
           automatically adds context-based questions to the questionnaire when
           the user answers a questionnaire to add maximum details to the
           analysis.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Une plateforme pour créer des{' '}
           <Highlight>questionnaires alimentés par l&apos;IA</Highlight>. Un
           questionnaire est créé en utilisant le <Highlight>builder</Highlight>{' '}
@@ -167,10 +168,10 @@ export const projects: Record<string, Project> = {
           automatiquement des questions contextuelles au questionnaire lorsque
           l&apos;utilisateur répond pour ajouter un maximum de détails à
           l&apos;analyse.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           <Highlight>AI駆動のアンケート</Highlight>
           を作成するためのプラットフォーム。統合された
           <Highlight>ビルダー</Highlight>を使用するか、
@@ -178,7 +179,7 @@ export const projects: Record<string, Project> = {
           をインポートしてアンケートを作成します。アンケートは対象者に送信され、
           <Highlight>最適な対象者を特定する</Highlight>
           ために同じアプリケーションで回答を分析できます。AIは分析に最大限の詳細を追加するため、ユーザーがアンケートに回答する際に文脈に基づいた質問を自動的に追加します。
-        </span>
+        </React.Fragment>
       ),
     },
     tags: {
@@ -274,7 +275,7 @@ export const projects: Record<string, Project> = {
     },
     problem: {
       en: (
-        <span>
+        <React.Fragment>
           The challenge of this project was to make the user experience
           pleasant. Having reached a stage where the core features were already
           in production, it naturally took me some time to get familiar with the
@@ -283,10 +284,10 @@ export const projects: Record<string, Project> = {
           <Highlight>missing essential front-end features</Highlight> but huge
           potential (talented back-end engineers had already been recruited for
           the application and were doing good work).
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Le défi de ce projet était de rendre l&apos;expérience
           d&apos;utilisation agréable. Étant arrivé à un stade où les
           fonctionnalités de base étaient déjà en production, il m&apos;a
@@ -297,21 +298,21 @@ export const projects: Record<string, Project> = {
           <Highlight>fonctionnalités front essentielles manquantes</Highlight>{' '}
           mais un potentiel énorme (des ingénieurs back-end talentueux avaient
           déjà été recrutés pour l&apos;application et faisaient du bon boulot).
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           このプロジェクトの課題は、ユーザー体験を快適にすることでした。基本機能がすでに本番環境にある段階で参加したため、コードに慣れるのに自然と時間がかかりました。状況は以下の通りでした：
           <Highlight>改善が必要なUX</Highlight>、
           <Highlight>シンプルで少し時代遅れなUI</Highlight>、
           <Highlight>重要なフロントエンド機能の不足</Highlight>
           がありましたが、（優秀なバックエンドエンジニアがすでに採用され、良い仕事をしていた）大きな可能性を秘めていました。
-        </span>
+        </React.Fragment>
       ),
     },
     solution: {
       en: (
-        <span>
+        <React.Fragment>
           To begin with, we had to start with the fundamentals. Knowing that
           Matthieu S., the project manager, was already presenting the product
           for sales purposes, I first focused on UI and UX. I added{' '}
@@ -323,10 +324,10 @@ export const projects: Record<string, Project> = {
           <Highlight>secondary features</Highlight> and{' '}
           <Highlight>secondary design elements</Highlight> (spacings, colors,
           ...).
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Pour commencer, il a fallu commencer par les fondamentaux. Sachant que
           Matthieu S., le responsable du projet présentait déjà le produit à des
           fins de vente, je me suis d&apos;abord concentré sur l&apos;UI et
@@ -340,10 +341,10 @@ export const projects: Record<string, Project> = {
           <Highlight>fonctionnalités secondaires</Highlight> et sur les{' '}
           <Highlight>éléments de design secondaires</Highlight> (spacings,
           couleurs, ...).
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           まず、基本的なところから始める必要がありました。プロジェクトマネージャーのMatthieu
           S.が販売目的で製品をすでにプレゼンテーションしていたため、最初にUIとUXに焦点を当てました。
           <Highlight>ページとローディングインジケーター</Highlight>を追加し、
@@ -353,12 +354,12 @@ export const projects: Record<string, Project> = {
           <Highlight>二次的な機能</Highlight>と
           <Highlight>二次的なデザイン要素</Highlight>
           （間隔、色など）の実装に集中することができました。
-        </span>
+        </React.Fragment>
       ),
     },
     results: {
       en: (
-        <span>
+        <React.Fragment>
           The application is now more <Highlight>user-friendly</Highlight>,{' '}
           <Highlight>intuitive</Highlight>, <Highlight>consistent</Highlight>{' '}
           and lets users <Highlight>save time</Highlight> and{' '}
@@ -367,10 +368,10 @@ export const projects: Record<string, Project> = {
           <Highlight>fewer bugs</Highlight>, a{' '}
           <Highlight>better appearance</Highlight> and a{' '}
           <Highlight>better perceived UX</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           L&apos;application est maintenant plus{' '}
           <Highlight>user-friendly</Highlight>, <Highlight>intuitive</Highlight>
           , <Highlight>consistante</Highlight> et permet aux utilisateurs de{' '}
@@ -380,10 +381,10 @@ export const projects: Record<string, Project> = {
           stimulées par <Highlight>moins de bugs</Highlight>, une{' '}
           <Highlight>meilleure apparence</Highlight> et une{' '}
           <Highlight>meilleure UX perçue</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           アプリケーションはより
           <Highlight>ユーザーフレンドリー</Highlight>で、
           <Highlight>直感的</Highlight>で、
@@ -394,7 +395,7 @@ export const projects: Record<string, Project> = {
           <Highlight>バグが少なく</Highlight>、
           <Highlight>見た目が改善され</Highlight>、
           <Highlight>UXの体験が向上した</Highlight>ことで 売上も伸びました。
-        </span>
+        </React.Fragment>
       ),
     },
     relatedUrls: [
@@ -415,29 +416,29 @@ export const projects: Record<string, Project> = {
     },
     longDescription: {
       en: (
-        <span>
+        <React.Fragment>
           A simple single page web application for a{' '}
           <Highlight>Japanese restaurant</Highlight> showcasing their adress
           thanks to a <Highlight>map</Highlight> and letting people{' '}
           <Highlight>call them</Highlight> easily.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Une application web simple pour un{' '}
           <Highlight>restaurant japonais</Highlight> présentant leur adresse
           grâce à une <Highlight>carte</Highlight> et permettant aux personnes
           de <Highlight>les appeler</Highlight> facilement.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           <Highlight>日本料理店</Highlight>
           のシンプルなウェブアプリケーションで、
           <Highlight>地図</Highlight>で住所を表示し、 簡単に
           <Highlight>電話をかける</Highlight>
           ことができるようにしました。
-        </span>
+        </React.Fragment>
       ),
     },
     tags: {
@@ -514,7 +515,7 @@ export const projects: Record<string, Project> = {
     },
     problem: {
       en: (
-        <span>
+        <React.Fragment>
           The challenge of this project was clearly to design a clean interface
           and develop a dynamic and interactive page in a{' '}
           <Highlight>
@@ -522,10 +523,10 @@ export const projects: Record<string, Project> = {
           </Highlight>{' '}
           while needing to <Highlight>limit infrastructure costs</Highlight>{' '}
           (and thus without using &quot;drag and drop&quot; tools).
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Le défi de ce projet à clairement été de concevoir un design propre et
           de développer une page dynamique et interractive en un{' '}
           <Highlight>
@@ -534,10 +535,10 @@ export const projects: Record<string, Project> = {
           tout avec le besoin de
           <Highlight>limiter les dépenses d&apos;infrastructure</Highlight> (et
           donc sans l&apos;utilisation d&apos;outils &quot;drag and drop&quot;).
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           このプロジェクトの課題は、
           <Highlight>
             非常に短い期間（レストランのオープン前の約1週間）
@@ -545,12 +546,12 @@ export const projects: Record<string, Project> = {
           でクリーンなインターフェースを設計し、ダイナミックでインタラクティブなページを開発することでした。また、
           <Highlight>インフラコストを抑える必要があり</Highlight>
           （そのため「ドラッグ＆ドロップ」ツールは使用できませんでした）。
-        </span>
+        </React.Fragment>
       ),
     },
     solution: {
       en: (
-        <span>
+        <React.Fragment>
           The solution was to create a <Highlight>React app</Highlight> to meet
           the need for <Highlight>interactivity</Highlight> without overloading
           the project with various frameworks to get straight to the point as
@@ -559,10 +560,10 @@ export const projects: Record<string, Project> = {
           nights and the development was also <Highlight>fast</Highlight> since
           it&apos;s a simple page (and therefore no need to manage too many
           libraries like react-router).
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           La solution à été de créer une <Highlight>app React</Highlight> pour
           répondre au besoin d&apos;
           <Highlight>interactivité</Highlight> sans pour autant surcharger le
@@ -573,22 +574,22 @@ export const projects: Record<string, Project> = {
           <Highlight>rapide</Highlight> étant donné que c&apos;est une simple
           page (et donc pas besoin de gérer des trop de librairies comme
           react-router).
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           解決策として、<Highlight>インタラクティブ性</Highlight>
           のニーズに応えるため、様々なフレームワークでプロジェクトを過負荷にすることなく、できるだけ早く目的を達成するために
           <Highlight>Reactアプリ</Highlight>を作成しました。徹夜を重ねることで
           <Highlight>Figmaで記録的な速さ</Highlight>
           でモックアップを作成し、シンプルなページであるため（react-routerなどのライブラリを多く管理する必要がない）、開発も
           <Highlight>迅速</Highlight>に進めることができました。
-        </span>
+        </React.Fragment>
       ),
     },
     results: {
       en: (
-        <span>
+        <React.Fragment>
           The application is now <Highlight>used in production</Highlight> and
           works perfectly well. The <Highlight>menu loads properly</Highlight>{' '}
           and the
@@ -596,10 +597,10 @@ export const projects: Record<string, Project> = {
           <Highlight>call to action is clear</Highlight> and the
           <Highlight>UX is pleasant</Highlight>, all in record time. The site is
           public so feel free to visit it (link below).
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           L&apos;application est maintenant{' '}
           <Highlight>utilisée dans la production</Highlight> et fonctionne
           parfaitement. La <Highlight>carte charge bien</Highlight> et l&apos;
@@ -608,10 +609,10 @@ export const projects: Record<string, Project> = {
           <Highlight>UX est agréable</Highlight>, tout cela en un temps record.
           Le site est public donc n&apos;hésitez pas à le visiter (lien
           ci-dessous).
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           アプリケーションは現在
           <Highlight>本番環境で使用され</Highlight>
           、完璧に動作しています。
@@ -620,7 +621,7 @@ export const projects: Record<string, Project> = {
           <Highlight>行動喚起が明確</Highlight>で、
           <Highlight>UXは快適</Highlight>
           で、すべてが記録的な速さで実現されました。サイトは公開されているので、ぜひご覧ください（リンクは下記）。
-        </span>
+        </React.Fragment>
       ),
     },
     relatedUrls: [
@@ -641,26 +642,26 @@ export const projects: Record<string, Project> = {
     },
     longDescription: {
       en: (
-        <span>
+        <React.Fragment>
           A platform to view and manage{' '}
           <Highlight>AI-powered trading tools</Highlight> initially made for
           <Highlight>Predictive Layer</Highlight> and now actively used by
           <Highlight>TotalEnergies</Highlight> as Predictive Layer was bought in
           2023~2024.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Une plateforme pour visualiser et gérer des{' '}
           <Highlight>outils de trading alimentés par l&apos;IA</Highlight>{' '}
           initialement créée pour
           <Highlight>Predictive Layer</Highlight> et maintenant activement
           utilisée par <Highlight>TotalEnergies</Highlight> suite au rachat de
           Predictive Layer en 2023~2024.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           Predictive Layer 向けに最初に作成され、2023年〜2024年に
           <Highlight>Predictive Layer</Highlight>
           が買収されたことにより、現在は
@@ -668,7 +669,7 @@ export const projects: Record<string, Project> = {
           が積極的に使用している
           <Highlight>AI駆動の取引ツール</Highlight>
           を表示および管理するプラットフォーム。
-        </span>
+        </React.Fragment>
       ),
     },
     tags: {
@@ -716,87 +717,87 @@ export const projects: Record<string, Project> = {
     ],
     problem: {
       en: (
-        <span>
+        <React.Fragment>
           The challenge of this project was to be able to display a{' '}
           <Highlight>lot of data</Highlight> in the form of{' '}
           <Highlight>charts</Highlight> without{' '}
           <Highlight>overloading the user</Highlight>
           with too many options and information.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Le défi de ce projet était de pouvoir afficher une{' '}
           <Highlight>grande quantité de données</Highlight> sous forme de{' '}
           <Highlight>graphiques</Highlight> sans{' '}
           <Highlight>surcharger l&apos;utilisateur</Highlight>
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           このプロジェクトの課題は、
           <Highlight>大量のデータ</Highlight>を<Highlight>グラフ</Highlight>
           の形で表示しながら、ユーザーに
           <Highlight>過度な負担をかけない</Highlight>
           ようにすることでした。
-        </span>
+        </React.Fragment>
       ),
     },
     solution: {
       en: (
-        <span>
+        <React.Fragment>
           Create a tool with <Highlight>multiple pages</Highlight>,{' '}
           <Highlight>clear navigation</Highlight>,{' '}
           <Highlight>managed spacing</Highlight> and{' '}
           <Highlight>beautiful charts</Highlight> thanks to{' '}
           <Highlight>MUI-X</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           Create a tool with <Highlight>multiple pages</Highlight>,{' '}
           <Highlight>clear navigation</Highlight>,{' '}
           <Highlight>managed spacing</Highlight> and{' '}
           <Highlight>beautiful charts</Highlight> thanks to{' '}
           <Highlight>MUI-X</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           <Highlight>複数のページ</Highlight>、
           <Highlight>明確なナビゲーション</Highlight>、
           <Highlight>適切な間隔</Highlight>
           、そして<Highlight>MUI-X</Highlight>による
           <Highlight>美しいグラフ</Highlight>を備えたツールを作成しました。
-        </span>
+        </React.Fragment>
       ),
     },
     results: {
       en: (
-        <span>
+        <React.Fragment>
           The tool is now <Highlight>used in production</Highlight> by
           TotalEnergies teams and is working perfectly well. The{' '}
           <Highlight>data loads well</Highlight> and the{' '}
           <Highlight>interface is clear</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       fr: (
-        <span>
+        <React.Fragment>
           L&apos;outil est maintenant{' '}
           <Highlight>utilisé dans la production</Highlight> par les équipes de
           TotalEnergies et fonctionne parfaitement bien. Les{' '}
           <Highlight>données se chargent bien</Highlight> et l&apos;
           <Highlight>interface est claire</Highlight>.
-        </span>
+        </React.Fragment>
       ),
       ja: (
-        <span>
+        <React.Fragment>
           このツールは現在TotalEnergiesのチームによって
           <Highlight>本番環境で使用されており</Highlight>
           、完璧に動作しています。
           <Highlight>データが正常に読み込まれ</Highlight>、
           <Highlight>インターフェースが明確</Highlight>です。
-        </span>
+        </React.Fragment>
       ),
     },
   },

@@ -1,5 +1,6 @@
 import AppsDock from '@/components/apps-dock';
 import { CardStack } from '@/components/ui/card-stack';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { testimonials } from '@/data/testimonials';
 import AccentColorProvider from '@/hooks/use-accent-color';
 import DockStatusProvider from '@/hooks/use-dock-status';
@@ -92,21 +93,23 @@ export default function RootLayout({
           <DockStatusProvider>
             <MagneticStatusProvider>
               <AccentColorProvider>
-                <body
-                  className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} antialiased`}
-                >
-                  <NextTopLoader
-                    showSpinner={false}
-                    color='var(--main)'
-                    zIndex={999}
-                  />
-                  <Toaster />
-                  <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
-                    {children}
-                    <CardStack items={testimonials} />
-                    <AppsDock />
-                  </div>
-                </body>
+                <TooltipProvider>
+                  <body
+                    className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} antialiased`}
+                  >
+                    <NextTopLoader
+                      showSpinner={false}
+                      color='var(--main)'
+                      zIndex={999}
+                    />
+                    <Toaster />
+                    <div className='max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden'>
+                      {children}
+                      <CardStack items={testimonials} />
+                      <AppsDock />
+                    </div>
+                  </body>
+                </TooltipProvider>
               </AccentColorProvider>
             </MagneticStatusProvider>
           </DockStatusProvider>

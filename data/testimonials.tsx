@@ -1,6 +1,7 @@
 import Highlight from '@/components/highlight';
 import bibimouneImage from '@/public/testimonials/bibimoune.jpeg';
 import rigoriImage from '@/public/testimonials/rigori.jpeg';
+import React from 'react';
 
 export const testimonials: Testimonial[] = [
   {
@@ -9,8 +10,9 @@ export const testimonials: Testimonial[] = [
     company: 'TotalEnergies',
     position: 'Head of Gas&Power Predictive Department',
     testimonial: {
+      original: 'en',
       en: (
-        <p>
+        <React.Fragment>
           Matthieu provided Predictive Layer with{' '}
           <Highlight color='emerald'>high standard quality</Highlight> product
           from front-end point of view. He developed{' '}
@@ -21,7 +23,34 @@ export const testimonials: Testimonial[] = [
           account our requirements. I would
           <Highlight color='emerald'>highly recommend him</Highlight> as a
           service provider for any front application needed.
-        </p>
+        </React.Fragment>
+      ),
+      fr: (
+        <React.Fragment>
+          Matthieu a fourni Predictive Layer avec{' '}
+          <Highlight color='emerald'>une qualité élevée</Highlight> du point de
+          vue front-end. Il a développé{' '}
+          <Highlight color='emerald'>plusieurs produits</Highlight> utilisés en
+          direct par nos clients pour consommer les prévisions produites par
+          notre entreprise. Il est{' '}
+          <Highlight color='emerald'>sérieux</Highlight> et toujours
+          <Highlight color='emerald'>livre à temps</Highlight>, prenant en
+          compte nos exigences. Je{' '}
+          <Highlight color='emerald'>recommande</Highlight> vivement son service
+          pour toutes les applications front-end nécessaires.
+        </React.Fragment>
+      ),
+      ja: (
+        <React.Fragment>
+          マチューはPredictive Layerに
+          <Highlight color='emerald'>高品質な</Highlight>
+          フロントエンド製品を提供しました。彼は当社が生成した予測を顧客が利用するための
+          <Highlight color='emerald'>複数の製品</Highlight>を開発しました。彼は
+          <Highlight color='emerald'>真面目で</Highlight>常に
+          <Highlight color='emerald'>期限通りに納品し</Highlight>
+          、私たちの要件を考慮してくれます。必要なフロントエンドアプリケーションのサービスプロバイダーとして
+          <Highlight color='emerald'>強くお勧めします</Highlight>。
+        </React.Fragment>
       ),
     },
     method: 'LinkedIn',
@@ -33,8 +62,25 @@ export const testimonials: Testimonial[] = [
     company: 'Predictive Layer',
     position: 'CEO and Chairman',
     testimonial: {
+      original: 'fr',
+      en: (
+        <React.Fragment>
+          As a freelance front-end developer, Matthieu distinguished himself
+          through his <Highlight color='emerald'>technical expertise</Highlight>
+          , his <Highlight color='emerald'>creativity</Highlight> and his{' '}
+          <Highlight color='emerald'>commitment</Highlight> to the success of
+          the projects entrusted to him. He notably demonstrated{' '}
+          <Highlight color='emerald'>perfect mastery</Highlight> of technologies
+          such as TypeScript, Next.js, Git, Figma, React, as well as a{' '}
+          <Highlight color='emerald'>capacity to adapt quickly</Highlight> to
+          our tools and processes. Matthieu also demonstrated a{' '}
+          <Highlight color='emerald'>true talent</Highlight> for developing
+          ergonomic and high-performing user interfaces, designing and
+          integrating pleasant and appropriate visuals.
+        </React.Fragment>
+      ),
       fr: (
-        <p>
+        <React.Fragment>
           En tant que développeur front-end freelance, Matthieu s&apos;est
           distingué par son{' '}
           <Highlight color='emerald'>expertise technique</Highlight>, sa{' '}
@@ -51,7 +97,24 @@ export const testimonials: Testimonial[] = [
           <Highlight color='emerald'>vrai talent</Highlight> pour développer des
           interfaces utilisateurs ergonomiques et performants, en concevant et
           intégrant également des visuels plaisants et adaptés.
-        </p>
+        </React.Fragment>
+      ),
+      ja: (
+        <React.Fragment>
+          フリーランスのフロントエンド開発者として、マチューは
+          <Highlight color='emerald'>技術的専門知識</Highlight>、
+          <Highlight color='emerald'>創造性</Highlight>、そして彼に任された
+          プロジェクトの成功への
+          <Highlight color='emerald'>コミットメント</Highlight>によって
+          際立っていました。彼はTypeScript、Next.js、Git、Figma、Reactなどの技術の
+          <Highlight color='emerald'>完璧な習熟度</Highlight>
+          と、私たちのツールとプロセスに
+          <Highlight color='emerald'>素早く適応する能力</Highlight>
+          を示しました。
+          マチューはまた、人間工学に基づいた高性能なユーザーインターフェースを開発し、
+          魅力的で適切なビジュアルをデザインおよび統合する
+          <Highlight color='emerald'>真の才能</Highlight>を発揮しました。
+        </React.Fragment>
       ),
     },
     image: rigoriImage,
