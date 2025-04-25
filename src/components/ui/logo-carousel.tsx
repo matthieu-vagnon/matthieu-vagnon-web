@@ -85,7 +85,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
               },
             }}
           >
-            <CurrentLogo className='h-20 w-20 max-h-[80%] max-w-[80%] object-contain object-center md:h-32 md:w-32' />
+            <CurrentLogo className='object-contain object-center h-14 w-14 sm:h-16 sm:w-16 md:h-18 md:w-18' />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -118,7 +118,7 @@ export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
   }, [logos, columnCount]);
 
   return (
-    <div className='flex justify-center space-x-4'>
+    <div className='flex justify-center space-x-4 py-5 overflow-visible'>
       {logoSets.map((logos, index) => (
         <LogoColumn
           key={index}

@@ -2,6 +2,9 @@
 
 @plugin "tailwindcss-animate";
 
+/* Disabling dark mode detection */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-main: var(--main);
   --color-main-light: var(--main-light);
