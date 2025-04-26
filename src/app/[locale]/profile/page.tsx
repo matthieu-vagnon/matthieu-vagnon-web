@@ -105,28 +105,26 @@ export default function Profile() {
               <SectionTitle title={t('profile.work')} />
               <div className='flex flex-col gap-y-5'>
                 {profile.experience.map((experience, index) => (
-                  <BlurFade key={index} delay={blurDelay++ / 10}>
-                    <ResumeCard
-                      key={experience.company}
-                      logoUrl={experience.logo?.src}
-                      altText={experience.company}
-                      title={experience.company}
-                      subtitle={
-                        getTranslatedData(experience.position, locale) as string
-                      }
-                      period={experience.timeline}
-                      description={
-                        <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
-                          {experience.description.map((point, index) => (
-                            <li key={index}>
-                              {getTranslatedData(point, locale)}
-                            </li>
-                          ))}
-                        </ul>
-                      }
-                      secondaryBadges={experience.technologies}
-                    />
-                  </BlurFade>
+                  <ResumeCard
+                    key={index}
+                    logoUrl={experience.logo?.src}
+                    altText={experience.company}
+                    title={experience.company}
+                    subtitle={
+                      getTranslatedData(experience.position, locale) as string
+                    }
+                    period={experience.timeline}
+                    description={
+                      <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
+                        {experience.description.map((point, index) => (
+                          <li key={index}>
+                            {getTranslatedData(point, locale)}
+                          </li>
+                        ))}
+                      </ul>
+                    }
+                    secondaryBadges={experience.technologies}
+                  />
                 ))}
               </div>
             </div>
@@ -138,22 +136,20 @@ export default function Profile() {
               <SectionTitle title={t('profile.education')} />
               <div className='flex flex-col gap-y-6'>
                 {profile.education.map((education, index) => (
-                  <BlurFade key={index} delay={blurDelay++ / 10}>
-                    <ResumeCard
-                      key={education.responsible}
-                      href={education.href}
-                      logoUrl={education.logo?.src}
-                      altText={education.responsible}
-                      title={education.responsible}
-                      subtitle={
-                        getTranslatedData(education.degree, locale) as string
-                      }
-                      badges={[
-                        getTranslatedData(education.type, locale) as string,
-                      ]}
-                      period={education.timeline}
-                    />
-                  </BlurFade>
+                  <ResumeCard
+                    key={index}
+                    href={education.href}
+                    logoUrl={education.logo?.src}
+                    altText={education.responsible}
+                    title={education.responsible}
+                    subtitle={
+                      getTranslatedData(education.degree, locale) as string
+                    }
+                    badges={[
+                      getTranslatedData(education.type, locale) as string,
+                    ]}
+                    period={education.timeline}
+                  />
                 ))}
               </div>
             </div>
