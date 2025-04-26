@@ -107,9 +107,11 @@ export const profile: Profile = {
     'Motion',
     'Payload CMS',
     'Auth0',
+    'ChatGPT',
+    'Cursor IDE',
   ],
   deploymentStack: ['Vercel', 'Node.js', 'Docker'],
-  designStack: ['Figma', 'Pixelmator'],
+  designStack: ['Figma', 'Pixelmator', 'ChatGPT'],
   about: {
     en: (
       <span className='flex flex-col gap-3'>
@@ -284,6 +286,8 @@ export const profile: Profile = {
         'Docker',
         'Figma',
         'Pixelmator',
+        'ChatGPT',
+        'Cursor IDE',
       ],
       position: {
         en: 'Freelance Front-end Engineer & Digital Designer',

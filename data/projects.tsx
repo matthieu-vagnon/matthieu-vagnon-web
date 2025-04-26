@@ -91,6 +91,8 @@ export const projects: Record<string, Project> = {
       'Vercel',
       'Node.js',
       'Figma',
+      'ChatGPT',
+      'Cursor IDE',
     ],
     previewImg: mvWeb1,
     gallery: {
@@ -225,6 +227,7 @@ export const projects: Record<string, Project> = {
       'Node.js',
       'Docker',
       'Figma',
+      'Cursor IDE',
     ],
     previewImg: smartInterviewBuilder5,
     gallery: {
