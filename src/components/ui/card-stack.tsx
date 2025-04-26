@@ -10,7 +10,6 @@ import { Avatar, AvatarFallback, AvatarImage } from './avatar';
 import { BlurFade } from './blur-fade';
 import { Button } from './button';
 import { Magnetic } from './magnetic';
-import { Tooltip, TooltipContent, TooltipTrigger } from './tooltip';
 
 let interval: NodeJS.Timeout;
 
@@ -140,25 +139,24 @@ export const CardStack = ({
                     ] &&
                       card.testimonial.original !== locale && (
                         <div className='ml-2 mb-1 mt-1'>
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <Button
-                                variant='ghost'
-                                size='xs'
-                                onClick={handleOriginal}
-                                className='gap-2 p-2 rounded-full text-muted-foreground'
-                              >
-                                {original ? (
-                                  <Languages className='size-4' />
-                                ) : (
-                                  <Signature className='size-4' />
-                                )}
-                              </Button>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              {original ? t('translate') : t('original')}
-                            </TooltipContent>
-                          </Tooltip>
+                          <Button
+                            variant='ghost'
+                            size='xs'
+                            onClick={handleOriginal}
+                            className='gap-2 p-2 text-muted-foreground'
+                          >
+                            {original ? (
+                              <span className='flex items-center gap-2 whitespace-nowrap'>
+                                {t('translate')}
+                                <Languages className='size-4' />
+                              </span>
+                            ) : (
+                              <span className='flex items-center gap-2 whitespace-nowrap'>
+                                {t('original')}
+                                <Signature className='size-4' />
+                              </span>
+                            )}
+                          </Button>
                         </div>
                       )}
                   </div>
