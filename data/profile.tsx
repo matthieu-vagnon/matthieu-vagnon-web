@@ -122,7 +122,7 @@ export const profile: Profile = {
           <li>
             Leverage <Highlight>AI tools</Highlight> to enhance development and
             design processes&apos;{' '}
-            <Highlight>speed, quality and cost-efficiency</Highlight>.
+            <Highlight>speed, quality and cost-efficiency</Highlight>
           </li>
           <li>
             <Highlight>Increases</Highlight> your customer loyalty
@@ -180,7 +180,7 @@ export const profile: Profile = {
           <li>
             Exploite les <Highlight>outils d&apos;IA</Highlight> pour améliorer
             les processus de développement et de design en termes de{' '}
-            <Highlight>rapidité, qualité et rentabilité</Highlight>.
+            <Highlight>rapidité, qualité et rentabilité</Highlight>
           </li>
           <li>
             <Highlight>Améliore</Highlight> la fidélité de vos clients
