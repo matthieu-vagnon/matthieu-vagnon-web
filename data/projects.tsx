@@ -223,6 +223,7 @@ export const projects: Record<string, Project> = {
       'Shadcn UI',
       'Vercel',
       'Node.js',
+      'Docker',
       'Figma',
     ],
     previewImg: smartInterviewBuilder5,
@@ -482,6 +483,7 @@ export const projects: Record<string, Project> = {
       'Vercel',
       'Node.js',
       'Figma',
+      'Pixelmator',
     ],
     previewImg: koryoriYa3,
     gallery: {
@@ -713,6 +715,7 @@ export const projects: Record<string, Project> = {
       'React Router',
       'Auth0',
       'Node.js',
+      'Docker',
       'Figma',
     ],
     problem: {

@@ -107,8 +107,8 @@ export const profile: Profile = {
     'Payload CMS',
     'Auth0',
   ],
-  deploymentStack: ['Vercel', 'Node.js'],
-  designStack: ['Figma'],
+  deploymentStack: ['Vercel', 'Node.js', 'Docker'],
+  designStack: ['Figma', 'Pixelmator'],
   about: {
     en: (
       <span className='flex flex-col gap-3'>
@@ -279,7 +279,10 @@ export const profile: Profile = {
         'Tailwind CSS',
         'Motion',
         'Vercel',
+        'Node.js',
+        'Docker',
         'Figma',
+        'Pixelmator',
       ],
       position: {
         en: 'Front-end Engineer & Digital Designer',
@@ -322,7 +325,10 @@ export const profile: Profile = {
         'Material UI',
         'React Router',
         'Auth0',
+        'Node.js',
+        'Docker',
         'Figma',
+        'Pixelmator',
       ],
       position: {
         en: 'Principal Front-end Developer & Digital Designer',
