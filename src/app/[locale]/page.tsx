@@ -125,10 +125,6 @@ export default function Home() {
         </svg>
       ),
     },
-    {
-      label: t('utils.links.cv'),
-      link: '/cv.pdf',
-    },
   ];
 
   return (
