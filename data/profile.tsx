@@ -1,12 +1,15 @@
 import Highlight from '@/components/highlight';
-import CssIcon from '@/components/icons/css';
-import HtmlIcon from '@/components/icons/html';
-import JavaScriptIcon from '@/components/icons/javascript';
-import MuiIcon from '@/components/icons/mui';
-import NextjsIcon from '@/components/icons/nextjs';
-import ReactIcon from '@/components/icons/react';
-import TailwindIcon from '@/components/icons/tailwind';
-import TypeScriptIcon from '@/components/icons/typescript';
+import CssIcon from '@/components/svg/css';
+import HtmlIcon from '@/components/svg/html';
+import JavaScriptIcon from '@/components/svg/javascript';
+import MuiIcon from '@/components/svg/mui';
+import NextjsIcon from '@/components/svg/nextjs';
+import ReactIcon from '@/components/svg/react';
+import TailwindIcon from '@/components/svg/tailwind';
+import TypeScriptIcon from '@/components/svg/typescript';
+import businessCardEn from '@/public/en/business-card.png';
+import businessCardFr from '@/public/fr/business-card.png';
+import businessCardJa from '@/public/ja/business-card.png';
 import freelance from '@/public/profile/freelance.png';
 import google from '@/public/profile/google.jpg';
 import influactive from '@/public/profile/influactive.jpeg';
@@ -22,6 +25,11 @@ import React from 'react';
 
 export const profile: Profile = {
   avatarUrl: me,
+  businessCard: {
+    ja: businessCardJa,
+    en: businessCardEn,
+    fr: businessCardFr,
+  },
   description: {
     en: (
       <React.Fragment>

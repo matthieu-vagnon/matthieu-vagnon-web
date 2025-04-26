@@ -17,6 +17,11 @@ declare global {
   };
   type Profile = {
     avatarUrl?: StaticImageData;
+    businessCard: {
+      en?: StaticImageData;
+      fr?: StaticImageData;
+      ja?: StaticImageData;
+    };
     description: {
       en?: React.ReactNode;
       fr?: React.ReactNode;

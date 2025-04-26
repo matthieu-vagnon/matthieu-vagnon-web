@@ -9,9 +9,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
+import { Tilt } from '@/components/ui/tilt';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function Profile() {
   const t = useTranslations();
@@ -36,8 +38,36 @@ export default function Profile() {
               <AvatarImage alt='MV' src={profile.avatarUrl?.src} />
               <AvatarFallback>MV</AvatarFallback>
             </Avatar>
-            <div className='text-lg md:text-xl'>
-              {getTranslatedData(profile.description, locale)}
+            <div className='flex flex-row flex-nowrap gap-x-6 md:gap-x-8 justify-between items-center w-full'>
+              <div className='text-lg md:text-xl'>
+                {getTranslatedData(profile.description, locale)}
+              </div>
+              {getTranslatedData(profile.businessCard, locale) && (
+                <div className='hidden sm:block min-w-[175px] max-w-[403px]'>
+                  <Tilt
+                    rotationFactor={10}
+                    isRevese
+                    style={{
+                      transformOrigin: 'center center',
+                    }}
+                    springOptions={{
+                      stiffness: 26.7,
+                      damping: 4.1,
+                      mass: 0.2,
+                    }}
+                    className='group'
+                  >
+                    <Image
+                      src={getTranslatedData(profile.businessCard, locale)}
+                      placeholder='blur'
+                      alt='Business Card'
+                      width={403}
+                      height={244}
+                      className='rounded-sm object-cover grayscale duration-700 group-hover:grayscale-0'
+                    />
+                  </Tilt>
+                </div>
+              )}
             </div>
           </div>
         </BlurFade>

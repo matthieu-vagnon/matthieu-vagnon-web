@@ -7,12 +7,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Disabling eslint error for this specific function as it is widely used for different types now and in the future
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export function getTranslatedData(
-  data: Record<string, string | React.ReactNode | undefined> | undefined,
+  data: Record<string, any> | undefined,
   locale: Locale
-): string | React.ReactNode | undefined {
+): any {
   if (data) {
-    if (Object.keys(data).includes(locale)) {
+    if (data[locale]) {
       return data[locale];
     } else if (data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as Locale]) {
       return data[process.env.NEXT_PUBLIC_DEFAULT_LOCALE as Locale];
