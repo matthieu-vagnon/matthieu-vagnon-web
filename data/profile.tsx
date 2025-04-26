@@ -120,6 +120,11 @@ export const profile: Profile = {
         </span>
         <ul className='list-[upper-roman] list-inside'>
           <li>
+            Leverage <Highlight>AI tools</Highlight> to enhance development and
+            design processes&apos;{' '}
+            <Highlight>speed, quality and cost-efficiency</Highlight>.
+          </li>
+          <li>
             <Highlight>Increases</Highlight> your customer loyalty
           </li>
           <li>
@@ -172,6 +177,11 @@ export const profile: Profile = {
           <Highlight>magicien</Highlight> qui :
         </span>
         <ul className='list-[upper-roman] list-inside'>
+          <li>
+            Exploite les <Highlight>outils d&apos;IA</Highlight> pour améliorer
+            les processus de développement et de design en termes de{' '}
+            <Highlight>rapidité, qualité et rentabilité</Highlight>.
+          </li>
           <li>
             <Highlight>Améliore</Highlight> la fidélité de vos clients
           </li>
@@ -226,6 +236,10 @@ export const profile: Profile = {
           です。
         </span>
         <ul className='list-[upper-roman] list-inside'>
+          <li>
+            <Highlight>AIツール</Highlight>を活用して開発とデザインのプロセスの
+            <Highlight>スピード、品質、コスト効率</Highlight>を向上させる
+          </li>
           <li>
             <Highlight>ユーザーのロイヤリティ</Highlight>を高める
           </li>
