@@ -141,7 +141,7 @@ export const CardStack = ({
                         <div className='ml-2 mb-1 mt-1'>
                           <Button
                             variant='ghost'
-                            size='xs'
+                            size='sm'
                             onClick={handleOriginal}
                             className='gap-2 p-2 text-muted-foreground'
                           >
