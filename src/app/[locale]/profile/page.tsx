@@ -135,7 +135,7 @@ export default function Profile() {
           links={[
             {
               name: t('utils.links.linkedin'),
-              url: process.env.LINKEDIN_URL!,
+              url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
             },
           ]}
         />
