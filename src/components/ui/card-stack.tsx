@@ -3,7 +3,7 @@
 import { useTestimonialsStatus } from '@/hooks/use-testimonials-status';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Languages, Signature } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Languages } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
@@ -143,7 +143,7 @@ export const CardStack = ({
                             variant='ghost'
                             size='sm'
                             onClick={handleOriginal}
-                            className='gap-2 p-2 text-muted-foreground'
+                            className='group gap-2 p-1 text-muted-foreground'
                           >
                             {original ? (
                               <span className='flex items-center gap-2 whitespace-nowrap'>
@@ -152,7 +152,9 @@ export const CardStack = ({
                               </span>
                             ) : (
                               <span className='flex items-center gap-2 whitespace-nowrap'>
-                                <Signature className='size-4' />
+                                <span className='px-1 border border-muted-foreground group-hover:border-foreground transition-border duration-200 rounded-sm text-xs'>
+                                  {card.testimonial.original.toUpperCase()}
+                                </span>
                                 {t('original')}
                               </span>
                             )}
