@@ -147,13 +147,13 @@ export const CardStack = ({
                           >
                             {original ? (
                               <span className='flex items-center gap-2 whitespace-nowrap'>
-                                {t('translate')}
                                 <Languages className='size-4' />
+                                {t('translate')}
                               </span>
                             ) : (
                               <span className='flex items-center gap-2 whitespace-nowrap'>
-                                {t('original')}
                                 <Signature className='size-4' />
+                                {t('original')}
                               </span>
                             )}
                           </Button>
