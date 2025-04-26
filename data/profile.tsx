@@ -285,9 +285,9 @@ export const profile: Profile = {
         'Pixelmator',
       ],
       position: {
-        en: 'Front-end Engineer & Digital Designer',
-        fr: 'Développeur front-end & designer digital',
-        ja: 'フロントエンジニア&デジタルデザイナー',
+        en: 'Freelance Front-end Engineer & Digital Designer',
+        fr: 'Développeur front-end & designer digital indépendant',
+        ja: 'フリーランスのフロントエンジニア&デジタルデザイナー',
       },
       description: [
         {
@@ -331,9 +331,9 @@ export const profile: Profile = {
         'Pixelmator',
       ],
       position: {
-        en: 'Principal Front-end Developer & Digital Designer',
-        fr: 'Développeur front-end principal & designer digital',
-        ja: 'プリンシパルフロントエンド開発者&デジタルデザイナー',
+        en: 'Freelance Principal Front-end Developer & Digital Designer',
+        fr: 'Développeur front-end principal & designer digital indépendant',
+        ja: 'フリーランスのプリンシパルフロントエンド開発者＆デジタルデザイナー',
       },
       description: [
         {
