@@ -7,6 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('profile.metadata');
   const messages = (await getMessages()).profile.metadata;
   const locale = await getLocale();
+  const businessCard = getTranslatedData(profile.businessCard, locale);
 
   return {
     title: t('title'),
@@ -22,6 +23,11 @@ export async function generateMetadata(): Promise<Metadata> {
         {
           url: profile.avatarUrl
             ? `${process.env.NEXT_PUBLIC_URL!}${profile.avatarUrl?.src}`
+            : '',
+        },
+        {
+          url: businessCard
+            ? `${process.env.NEXT_PUBLIC_URL!}${businessCard.coverUrl?.src}`
             : '',
         },
         {
