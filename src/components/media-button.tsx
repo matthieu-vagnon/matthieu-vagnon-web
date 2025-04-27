@@ -84,7 +84,7 @@ export function MediaButton({
                   src={img!}
                   placeholder='blur'
                   alt={title}
-                  className='rounded-lg group-hover:scale-105 transition-all duration-300'
+                  className='rounded-lg group-hover:scale-105 group-hover:shadow-lg transition-all duration-300'
                 />
               </Tilt>
             ) : (

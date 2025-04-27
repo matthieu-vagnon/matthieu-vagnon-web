@@ -47,7 +47,7 @@ export default function Profile() {
                   img={businessCard.image}
                   title={businessCard.title}
                   isTilt
-                  className='hidden sm:block min-w-[175px] max-w-[500px]'
+                  className='hidden sm:block min-w-[175px] max-w-[450px]'
                 />
               )}
             </div>
