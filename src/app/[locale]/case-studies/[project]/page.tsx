@@ -159,10 +159,12 @@ export default async function Project(props: ProjectProps) {
                     className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
                   >
                     <MediaButton
-                      className='cursor-[inherit] active:cursor-[inherit]'
-                      video={video}
+                      title={getTranslatedData(video.title, locale)}
+                      video={video.src}
+                      previewImage={video.previewImage}
                       isOpen={videoIndex === index.toString()}
                       index={index}
+                      className='cursor-[inherit] active:cursor-[inherit]'
                     />
                   </CarouselItem>
                 ))}
@@ -173,7 +175,8 @@ export default async function Project(props: ProjectProps) {
                   >
                     <MediaButton
                       className='cursor-[inherit] active:cursor-[inherit]'
-                      img={img}
+                      title={getTranslatedData(img.title, locale)}
+                      img={img.image}
                     />
                   </CarouselItem>
                 ))}
