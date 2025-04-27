@@ -26,9 +26,18 @@ import React from 'react';
 export const profile: Profile = {
   avatarUrl: me,
   businessCard: {
-    ja: businessCardJa,
-    en: businessCardEn,
-    fr: businessCardFr,
+    en: {
+      image: businessCardEn,
+      title: 'Business Card',
+    },
+    fr: {
+      image: businessCardFr,
+      title: 'Carte de visite',
+    },
+    ja: {
+      image: businessCardJa,
+      title: 'ビジネスカード',
+    },
   },
   description: {
     en: (

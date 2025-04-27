@@ -1,39 +1,61 @@
-'use client'
+'use client';
 
-import { usePathname } from '@/i18n/navigation'
-import { cn, getTranslatedData } from '@/lib/utils'
-import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger } from '@radix-ui/react-dialog'
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
-import { motion } from 'framer-motion'
-import { Copy, PlayIcon } from 'lucide-react'
-import { useLocale, useTranslations } from 'next-intl'
-import Image from 'next/image'
-import { useState } from 'react'
-import { toast } from 'sonner'
-import { Button } from './ui/button'
-import { Magnetic } from './ui/magnetic'
+import { usePathname } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+} from '@radix-ui/react-dialog';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { motion } from 'framer-motion';
+import { Copy, PlayIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Image, { StaticImageData } from 'next/image';
+import { useState } from 'react';
+import { toast } from 'sonner';
+import { Button } from './ui/button';
+import { Magnetic } from './ui/magnetic';
+import { Tilt } from './ui/tilt';
 
 type Props =
   | {
-      img: NonNullable<NonNullable<Project['gallery']>['img']>[number]
-      video?: never
-      isOpen?: never
-      index?: never
-      className?: string
+      title: string;
+      img: StaticImageData;
+      previewImage?: never;
+      video?: never;
+      isOpen?: never;
+      index?: never;
+      isTilt?: boolean;
+      className?: string;
     }
   | {
-      video: NonNullable<NonNullable<Project['gallery']>['video']>[number]
-      img?: never
-      isOpen?: boolean
-      index: number
-      className?: string
-    }
+      title: string;
+      previewImage: StaticImageData;
+      video: string;
+      img?: never;
+      isOpen?: boolean;
+      index: number;
+      isTilt?: never;
+      className?: string;
+    };
 
-export function MediaButton({ img, video, isOpen = false, index, className }: Props) {
-  const [open, setOpen] = useState(isOpen)
-  const locale = useLocale()
-  const pathname = usePathname()
-  const t = useTranslations('utils')
+export function MediaButton({
+  title,
+  img,
+  previewImage,
+  video,
+  isTilt = false,
+  isOpen = false,
+  index,
+  className,
+}: Props) {
+  const [open, setOpen] = useState(isOpen);
+  const pathname = usePathname();
+  const t = useTranslations('utils');
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -41,18 +63,38 @@ export function MediaButton({ img, video, isOpen = false, index, className }: Pr
         <DialogTrigger asChild>
           <button
             className={cn(
-              'relative group rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 outline-none',
+              'group relative cursor-pointer transition-all duration-300 outline-none',
               className
             )}
           >
-            <Image
-              src={img?.image ?? video!.previewImage}
-              placeholder='blur'
-              alt={
-                (getTranslatedData(img?.title, locale) as string) ?? (getTranslatedData(video!.title, locale) as string)
-              }
-              className='rounded-lg'
-            />
+            {isTilt ? (
+              <Tilt
+                rotationFactor={10}
+                isRevese
+                style={{
+                  transformOrigin: 'center center',
+                }}
+                springOptions={{
+                  stiffness: 150,
+                  damping: 15,
+                  mass: 0.2,
+                }}
+              >
+                <Image
+                  src={img!}
+                  placeholder='blur'
+                  alt={title}
+                  className='rounded-lg group-hover:scale-105 transition-all duration-300'
+                />
+              </Tilt>
+            ) : (
+              <Image
+                src={img ?? previewImage}
+                placeholder='blur'
+                alt={title}
+                className='rounded-lg group-hover:shadow-lg transition-all duration-300'
+              />
+            )}
             {video && (
               <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
                 <PlayIcon className='w-4 h-4 text-white' />
@@ -71,10 +113,7 @@ export function MediaButton({ img, video, isOpen = false, index, className }: Pr
           >
             <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-auto rounded-sm'>
               <VisuallyHidden asChild>
-                <DialogTitle>
-                  {(getTranslatedData(img?.title, locale) as string) ??
-                    (getTranslatedData(video!.title, locale) as string)}
-                </DialogTitle>
+                <DialogTitle>{title}</DialogTitle>
               </VisuallyHidden>
               {video && (
                 <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
@@ -84,15 +123,18 @@ export function MediaButton({ img, video, isOpen = false, index, className }: Pr
                       size='xs'
                       className='rounded-full p-3'
                       onClick={() => {
-                        navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_URL!}${pathname}?video=${index}`)
-                        toast.success(t('copyLink'))
+                        navigator.clipboard.writeText(
+                          `${process.env
+                            .NEXT_PUBLIC_URL!}${pathname}?video=${index}`
+                        );
+                        toast.success(t('copyLink'));
                       }}
                     >
                       <Copy className='size-4' />
                     </Button>
                   </div>
                   <iframe
-                    src={video.src}
+                    src={video}
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                     referrerPolicy='strict-origin-when-cross-origin'
                     allowFullScreen
@@ -102,9 +144,9 @@ export function MediaButton({ img, video, isOpen = false, index, className }: Pr
               )}
               {img && (
                 <Image
-                  src={img.image}
+                  src={img}
                   placeholder='blur'
-                  alt={getTranslatedData(img.title, locale) as string}
+                  alt={title}
                   className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
                 />
               )}
@@ -113,5 +155,5 @@ export function MediaButton({ img, video, isOpen = false, index, className }: Pr
         </DialogOverlay>
       </DialogPortal>
     </Dialog>
-  )
+  );
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import {
   motion,
   MotionStyle,
@@ -11,7 +12,6 @@ import {
 } from 'framer-motion';
 import React, { useRef } from 'react';
 import { Spotlight } from './spotlight';
-
 type TiltProps = {
   children: React.ReactNode;
   className?: string;
@@ -76,7 +76,7 @@ export function Tilt({
   };
 
   return (
-    <div>
+    <div className='overflow-visible!'>
       <Spotlight
         className='z-10 from-white/50 via-white/20 to-white/10 blur-2xl'
         size={100}
@@ -84,7 +84,7 @@ export function Tilt({
       />
       <motion.div
         ref={ref}
-        className={className}
+        className={cn('overflow-visible', className)}
         style={{
           transformStyle: 'preserve-3d',
           ...style,

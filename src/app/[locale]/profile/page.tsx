@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
@@ -9,15 +10,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
-import { Tilt } from '@/components/ui/tilt';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
 import { useLocale, useTranslations } from 'next-intl';
-import Image from 'next/image';
 
 export default function Profile() {
   const t = useTranslations();
   const locale = useLocale();
+  const businessCard = getTranslatedData(profile.businessCard, locale);
   let blurDelay = 0;
 
   return (
@@ -42,30 +42,13 @@ export default function Profile() {
               <div className='text-lg md:text-xl'>
                 {getTranslatedData(profile.description, locale)}
               </div>
-              {getTranslatedData(profile.businessCard, locale) && (
-                <div className='hidden sm:block min-w-[175px] max-w-[403px]'>
-                  <Tilt
-                    rotationFactor={10}
-                    isRevese
-                    style={{
-                      transformOrigin: 'center center',
-                    }}
-                    springOptions={{
-                      stiffness: 150,
-                      damping: 15,
-                      mass: 0.2,
-                    }}
-                  >
-                    <Image
-                      src={getTranslatedData(profile.businessCard, locale)}
-                      placeholder='blur'
-                      alt='Business Card'
-                      width={403}
-                      height={244}
-                      className='rounded-sm'
-                    />
-                  </Tilt>
-                </div>
+              {businessCard && (
+                <MediaButton
+                  img={businessCard.image}
+                  title={businessCard.title}
+                  isTilt
+                  className='hidden sm:block min-w-[175px] max-w-[500px]'
+                />
               )}
             </div>
           </div>
