@@ -51,11 +51,10 @@ export default function Profile() {
                       transformOrigin: 'center center',
                     }}
                     springOptions={{
-                      stiffness: 26.7,
-                      damping: 4.1,
+                      stiffness: 150,
+                      damping: 15,
                       mass: 0.2,
                     }}
-                    className='group'
                   >
                     <Image
                       src={getTranslatedData(profile.businessCard, locale)}
@@ -63,7 +62,7 @@ export default function Profile() {
                       alt='Business Card'
                       width={403}
                       height={244}
-                      className='rounded-sm object-cover grayscale duration-700 group-hover:grayscale-0'
+                      className='rounded-sm'
                     />
                   </Tilt>
                 </div>

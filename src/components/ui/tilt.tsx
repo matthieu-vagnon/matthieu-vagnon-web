@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useRef } from 'react';
 import {
   motion,
+  MotionStyle,
+  SpringOptions,
   useMotionTemplate,
   useMotionValue,
   useSpring,
   useTransform,
-  MotionStyle,
-  SpringOptions,
 } from 'framer-motion';
+import React, { useRef } from 'react';
+import { Spotlight } from './spotlight';
 
 type TiltProps = {
   children: React.ReactNode;
@@ -75,18 +76,25 @@ export function Tilt({
   };
 
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      style={{
-        transformStyle: 'preserve-3d',
-        ...style,
-        transform,
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {children}
-    </motion.div>
+    <div>
+      <Spotlight
+        className='z-10 from-white/50 via-white/20 to-white/10 blur-2xl'
+        size={100}
+        springOptions={springOptions}
+      />
+      <motion.div
+        ref={ref}
+        className={className}
+        style={{
+          transformStyle: 'preserve-3d',
+          ...style,
+          transform,
+        }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }
