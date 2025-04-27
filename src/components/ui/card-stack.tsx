@@ -152,7 +152,7 @@ export const CardStack = ({
                               </span>
                             ) : (
                               <span className='flex items-center gap-2 whitespace-nowrap'>
-                                <span className='px-1 border border-muted-foreground group-hover:border-foreground transition-border duration-200 rounded-sm text-xs'>
+                                <span className='px-1 border border-muted-foreground group-hover:border-foreground transition-border duration-200 rounded-sm text-[10px]'>
                                   {card.testimonial.original.toUpperCase()}
                                 </span>
                                 {t('original')}
