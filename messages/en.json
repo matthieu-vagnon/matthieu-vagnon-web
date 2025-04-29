@@ -166,8 +166,8 @@
       "pink": "Pink"
     },
     "magnetic": {
-      "title": "Magnetic Buttons",
-      "tip": "Not recommended on touch screens."
+      "title": "Magnetic Cursor",
+      "tip": "Not recommended on touch screens. May alter performances."
     },
     "reset": "Reset Parameters"
   },

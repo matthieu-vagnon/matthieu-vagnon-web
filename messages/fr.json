@@ -169,8 +169,8 @@
       "pink": "Rose"
     },
     "magnetic": {
-      "title": "Boutons magnétiques",
-      "tip": "Non recommandé sur les écrans tactiles."
+      "title": "Curseur magnétique",
+      "tip": "Non recommandé sur les écrans tactiles. Peut altérer les performances."
     },
     "reset": "Réinitialiser les paramètres"
   },
