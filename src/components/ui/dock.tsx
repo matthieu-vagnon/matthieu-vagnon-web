@@ -160,7 +160,7 @@ function DockItem({ children, className }: DockItemProps) {
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       className={cn(
-        'relative inline-flex items-center justify-center',
+        'relative inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer',
         className
       )}
       tabIndex={0}

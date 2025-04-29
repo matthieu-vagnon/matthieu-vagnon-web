@@ -1,7 +1,6 @@
 'use client';
 
 import { useDockStatus } from '@/hooks/use-dock-status';
-import { useMagneticStatus } from '@/hooks/use-magnetic-status';
 import { Link } from '@/i18n/navigation';
 import {
   BriefcaseBusiness,
@@ -19,28 +18,18 @@ import { Dialog, DialogTrigger } from './ui/nested-dialog';
 import { ProgressiveBlur } from './ui/progressive-blur';
 import { Separator } from './ui/separator';
 
-type App = {
+function DockElement({
+  title,
+  icon,
+}: {
   title: string;
   icon: React.ReactNode;
-  url?: string;
-  modal?: React.ReactNode;
-  testimonial?: boolean;
-};
-
-function DockElement({ app, onClick }: { app: App; onClick?: () => void }) {
-  const { isMagnetic } = useMagneticStatus();
-
-  const content = (
-    <DockItem className='aspect-square rounded-full bg-gray-200 cursor-pointer'>
-      {isMagnetic && <DockLabel>{app.title}</DockLabel>}
-      <DockIcon>{app.icon}</DockIcon>
+}) {
+  return (
+    <DockItem>
+      <DockLabel>{title}</DockLabel>
+      <DockIcon>{icon}</DockIcon>
     </DockItem>
-  );
-
-  return app.url ? (
-    <Link href={app.url}>{content}</Link>
-  ) : (
-    <button onClick={onClick}>{content}</button>
   );
 }
 
@@ -49,7 +38,7 @@ export default function AppsDock() {
   const [activeModal, setActiveModal] = useState<number | undefined>(undefined);
   const t = useTranslations();
 
-  const apps: App[] = [
+  const apps = [
     {
       title: t('home.title'),
       icon: <HomeIcon className='h-full w-full text-neutral-600' />,
@@ -67,7 +56,7 @@ export default function AppsDock() {
     },
   ];
 
-  const modals: App[] = [
+  const modals = [
     {
       title: t('getInTouch.title'),
       icon: <MessageCircle className='h-full w-full text-neutral-600' />,
@@ -89,12 +78,16 @@ export default function AppsDock() {
       >
         <Dock className='items-end pb-3'>
           {apps.map((app, idx) => (
-            <DockElement key={idx} app={app} />
+            <Link key={idx} href={app.url}>
+              <DockElement title={app.title} icon={app.icon} />
+            </Link>
           ))}
           <Separator orientation='vertical' className='h-10' />
           {modals.map((modal, idx) => (
             <DialogTrigger key={idx} asChild>
-              <DockElement app={modal} onClick={() => setActiveModal(idx)} />
+              <button onClick={() => setActiveModal(idx)}>
+                <DockElement title={modal.title} icon={modal.icon} />
+              </button>
             </DialogTrigger>
           ))}
         </Dock>
