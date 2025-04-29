@@ -34,8 +34,8 @@ export function ContactModal() {
         <DialogTitle>{t('getInTouch.title')}</DialogTitle>
         <DialogDescription>{t('getInTouch.description')}</DialogDescription>
       </DialogHeader>
-      <div className='flex flex-col gap-6 pt-1 pr-4 pb-4 pl-4'>
-        <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-5 pt-1 pr-4 pb-4 pl-4'>
+        <div className='flex flex-col gap-3'>
           <InnerDialog>
             <InnerDialogTrigger asChild>
               <Button
