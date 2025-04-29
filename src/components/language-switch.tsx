@@ -1,19 +1,25 @@
-'use client'
+'use client';
 
-import { usePathname } from '@/i18n/navigation'
-import { cn } from '@/lib/utils'
-import { useLocale } from 'next-intl'
-import { LinkButton } from './ui/button'
+import { usePathname } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+import { useLocale } from 'next-intl';
+import { LinkButton } from './ui/button';
 
 function LanguageButton({ lang, title }: { lang: string; title: string }) {
-  const pathname = usePathname()
-  const currentLang = useLocale()
+  const pathname = usePathname();
+  const currentLang = useLocale();
 
   return (
-    <LinkButton href={pathname} locale={lang} disabled={lang === currentLang} variant='link' size='xs'>
+    <LinkButton
+      href={pathname}
+      locale={lang}
+      disabled={lang === currentLang}
+      variant='link'
+      size='xs'
+    >
       {title}
     </LinkButton>
-  )
+  );
 }
 
 export default function LanguageSwitch({ className }: { className?: string }) {
@@ -25,5 +31,5 @@ export default function LanguageSwitch({ className }: { className?: string }) {
       <span>-</span>
       <LanguageButton lang='ja' title='日本語' />
     </div>
-  )
+  );
 }

@@ -42,7 +42,7 @@ export default function CaseStudies() {
             <ProjectCard
               coverImage={COVER_IMAGES[index % 5]}
               url={`/case-studies/${key}`}
-              {...project}
+              project={project}
             />
           </BlurFade>
         ))}

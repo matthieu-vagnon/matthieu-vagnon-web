@@ -14,7 +14,7 @@ import React from 'react';
 import Highlight from './highlight';
 import { Badge } from './ui/badge';
 
-interface ResumeCardProps {
+type ResumeCardProps = {
   logoUrl?: string;
   altText: string;
   title: string;
@@ -25,7 +25,7 @@ interface ResumeCardProps {
   description?: React.ReactNode;
   indicator?: LucideIcon;
   secondaryBadges?: readonly string[];
-}
+};
 
 const ResumeCardContent = ({
   isExpanded,

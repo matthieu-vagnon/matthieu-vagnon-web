@@ -4,19 +4,25 @@ import { useLocale } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import Magnetic from './ui/magnetic';
 
-const typeVariants = {
-  'Web Application': 'bg-blue-500',
-  SaaS: 'bg-green-500',
-  Contribution: 'bg-yellow-500',
-  Other: 'bg-gray-500',
+type ProjectCardProps = {
+  coverImage: StaticImageData;
+  url: string;
+  project: Project;
 };
 
 export default function ProjectCard({
   coverImage,
   url,
-  ...project
-}: Project & { coverImage: StaticImageData; url: string }) {
+  project,
+}: ProjectCardProps) {
   const locale = useLocale();
+
+  const typeVariants = {
+    'Web Application': 'bg-blue-500',
+    SaaS: 'bg-green-500',
+    Contribution: 'bg-yellow-500',
+    Other: 'bg-gray-500',
+  };
 
   return (
     <Magnetic size='lg' className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>

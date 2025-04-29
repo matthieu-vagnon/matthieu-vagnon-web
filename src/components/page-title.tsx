@@ -2,13 +2,7 @@ import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { LinkButton } from './ui/button';
 
-export default function PageTitle({
-  title,
-  description,
-  className,
-  tags,
-  link,
-}: {
+type PageTitleProps = {
   title: string;
   description: string;
   className?: string;
@@ -17,7 +11,15 @@ export default function PageTitle({
     name: string;
     url: string;
   };
-}) {
+};
+
+export default function PageTitle({
+  title,
+  description,
+  className,
+  tags,
+  link,
+}: PageTitleProps) {
   const t = useTranslations('utils');
 
   return (

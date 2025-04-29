@@ -2,15 +2,13 @@ import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
 import Highlight from './highlight';
 
-export default function SkillBox({
-  title,
-  items,
-  className,
-}: {
+type SkillBoxProps = {
   title: string;
   items: string[];
   className?: string;
-}) {
+};
+
+export default function SkillBox({ title, items, className }: SkillBoxProps) {
   return (
     <div
       className={cn('flex flex-col gap-3 bg-accent p-4 rounded-lg', className)}

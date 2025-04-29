@@ -1,14 +1,16 @@
 import { cn } from '@/lib/utils';
 
+type HighlightProps = {
+  children: React.ReactNode;
+  className?: string;
+  color?: string;
+};
+
 const Highlight = ({
   children,
   className,
   color = 'default',
-}: {
-  children: React.ReactNode;
-  className?: string;
-  color?: string;
-}) => {
+}: HighlightProps) => {
   const colorVariants: Record<string, string> = {
     default: 'bg-main-light text-main-dark',
     emerald: 'bg-emerald-100 text-emerald-700',

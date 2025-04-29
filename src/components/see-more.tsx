@@ -7,15 +7,13 @@ import { HyperText } from './magicui/hyper-text';
 import { LinkButton } from './ui/button';
 import { Separator } from './ui/separator';
 
-export default function SeeMore({
-  id,
-  links,
-  className,
-}: {
+type SeeMoreProps = {
   id?: string;
   links: { important?: boolean; name: string; url: string }[];
   className?: string;
-}) {
+};
+
+export default function SeeMore({ id, links, className }: SeeMoreProps) {
   const t = useTranslations('utils');
 
   return (
