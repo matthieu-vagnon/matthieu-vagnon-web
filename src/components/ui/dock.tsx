@@ -179,6 +179,12 @@ function DockItem({ children, className }: DockItemProps) {
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
+      // Prevent hover state from getting stuck on touch devices
+      onPointerDown={(e) => {
+        if (e.pointerType === 'touch') {
+          setTimeout(() => isHovered.set(0), 1500);
+        }
+      }}
       className={cn(
         'relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer',
         className
@@ -222,7 +228,7 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            'pointer-events-none absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700',
+            'pointer-events-none absolute bottom-13 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700',
             className
           )}
           role='tooltip'
