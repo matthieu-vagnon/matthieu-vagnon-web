@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from './avatar';
 import { BlurFade } from './blur-fade';
 import { Button } from './button';
-import { Magnetic } from './magnetic';
+import Magnetic from './magnetic';
 
 let interval: NodeJS.Timeout;
 

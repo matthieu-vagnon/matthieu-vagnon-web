@@ -42,6 +42,7 @@ const ResumeCardContent = ({
     description,
     secondaryBadges,
   } = props;
+
   return (
     <Card className='flex'>
       <div className='flex-none'>

@@ -1,5 +1,6 @@
 'use client';
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status';
 import { cn } from '@/lib/utils';
 import {
   AnimatePresence,
@@ -89,6 +90,7 @@ function Dock({
   distance = DEFAULT_DISTANCE,
   panelHeight = DEFAULT_PANEL_HEIGHT,
 }: DockProps) {
+  const { isMagnetic } = useMagneticStatus();
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
 
@@ -98,6 +100,24 @@ function Dock({
 
   const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
   const height = useSpring(heightRow, spring);
+
+  if (!isMagnetic) {
+    return (
+      <div
+        className={cn(
+          'mx-auto flex w-fit gap-4 rounded-2xl bg-accent px-4',
+          className
+        )}
+        style={{ height: panelHeight }}
+        role='toolbar'
+        aria-label='Application dock'
+      >
+        <DockProvider value={{ mouseX, spring, distance, magnification }}>
+          {children}
+        </DockProvider>
+      </div>
+    );
+  }
 
   return (
     <motion.div
@@ -135,11 +155,11 @@ function Dock({
 function DockItem({ children, className }: DockItemProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { distance, magnification, mouseX, spring } = useDock();
-
   const isHovered = useMotionValue(0);
 
   const mouseDistance = useTransform(mouseX, (val) => {
     const domRect = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+
     return val - domRect.x - domRect.width / 2;
   });
 
@@ -160,7 +180,7 @@ function DockItem({ children, className }: DockItemProps) {
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       className={cn(
-        'relative inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer',
+        'relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer',
         className
       )}
       tabIndex={0}
@@ -217,7 +237,6 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
 
 function DockIcon({ children, className, ...rest }: DockIconProps) {
   const width = rest.width as MotionValue<number>;
-
   const widthTransform = useTransform(width, (val) => val / 2);
 
   return (

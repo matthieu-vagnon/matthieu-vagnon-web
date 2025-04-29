@@ -9,15 +9,6 @@ import {
 } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
-const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 };
-
-const SIZES_CONFIG = {
-  xs: 0.1,
-  sm: 0.07,
-  md: 0.05,
-  lg: 0.03,
-};
-
 export type MagneticSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export type MagneticProps = {
@@ -28,9 +19,19 @@ export type MagneticProps = {
   className?: string;
 };
 
-function MagneticElement({
+const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 };
+
+const SIZES_CONFIG: Record<MagneticSize, number> = {
+  xs: 0.1,
+  sm: 0.07,
+  md: 0.05,
+  lg: 0.03,
+};
+
+export default function Magnetic({
   children,
   size = 'sm',
+  disabled = false,
   springOptions = SPRING_CONFIG,
   className,
 }: MagneticProps) {
@@ -40,6 +41,7 @@ function MagneticElement({
   const y = useMotionValue(0);
   const springX = useSpring(x, springOptions);
   const springY = useSpring(y, springOptions);
+  const { isMagnetic } = useMagneticStatus();
 
   useEffect(() => {
     const calculateDistance = (e: MouseEvent) => {
@@ -67,6 +69,10 @@ function MagneticElement({
     };
   }, [ref, isHovered, size]);
 
+  if (!isMagnetic || disabled) {
+    return <div className={className}>{children}</div>;
+  }
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -90,15 +96,5 @@ function MagneticElement({
     >
       {children}
     </motion.div>
-  );
-}
-
-export function Magnetic(props: MagneticProps) {
-  const { isMagnetic } = useMagneticStatus();
-
-  return !isMagnetic || props.disabled ? (
-    <div className={props.className}>{props.children}</div>
-  ) : (
-    <MagneticElement {...props}>{props.children}</MagneticElement>
   );
 }

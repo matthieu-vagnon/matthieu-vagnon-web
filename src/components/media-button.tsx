@@ -18,10 +18,10 @@ import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Button } from './ui/button';
-import { Magnetic, MagneticSize } from './ui/magnetic';
+import Magnetic, { MagneticSize } from './ui/magnetic';
 import { Tilt } from './ui/tilt';
 
-type Props =
+type MediaButtonProps =
   | {
       title: string;
       img: StaticImageData;
@@ -55,7 +55,7 @@ export function MediaButton({
   isOpen = false,
   index,
   className,
-}: Props) {
+}: MediaButtonProps) {
   const [open, setOpen] = useState(isOpen);
   const pathname = usePathname();
   const t = useTranslations('utils');
