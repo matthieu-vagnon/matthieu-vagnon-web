@@ -1,5 +1,6 @@
 'use client';
 
+import { useMagneticStatus } from '@/hooks/use-magnetic-status';
 import { cn } from '@/lib/utils';
 import {
   motion,
@@ -12,6 +13,7 @@ import {
 } from 'framer-motion';
 import React, { useRef } from 'react';
 import { Spotlight } from './spotlight';
+
 type TiltProps = {
   children: React.ReactNode;
   className?: string;
@@ -21,7 +23,7 @@ type TiltProps = {
   springOptions?: SpringOptions;
 };
 
-export function Tilt({
+export function TiltElement({
   children,
   className,
   style,
@@ -96,5 +98,15 @@ export function Tilt({
         {children}
       </motion.div>
     </div>
+  );
+}
+
+export function Tilt({ ...props }: TiltProps) {
+  const { isMagnetic } = useMagneticStatus();
+
+  return !isMagnetic ? (
+    <div className={props.className}>{props.children}</div>
+  ) : (
+    <TiltElement {...props}>{props.children}</TiltElement>
   );
 }

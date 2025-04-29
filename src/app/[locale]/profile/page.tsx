@@ -46,6 +46,7 @@ export default function Profile() {
                 <MediaButton
                   img={businessCard.image}
                   title={businessCard.title}
+                  size='md'
                   isTilt
                   className='hidden sm:block min-w-[175px] max-w-[450px]'
                 />

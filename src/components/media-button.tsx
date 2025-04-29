@@ -18,7 +18,7 @@ import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Button } from './ui/button';
-import { Magnetic } from './ui/magnetic';
+import { Magnetic, MagneticSize } from './ui/magnetic';
 import { Tilt } from './ui/tilt';
 
 type Props =
@@ -27,6 +27,7 @@ type Props =
       img: StaticImageData;
       previewImage?: never;
       video?: never;
+      size?: MagneticSize;
       isOpen?: never;
       index?: never;
       isTilt?: boolean;
@@ -37,6 +38,7 @@ type Props =
       previewImage: StaticImageData;
       video: string;
       img?: never;
+      size?: MagneticSize;
       isOpen?: boolean;
       index: number;
       isTilt?: never;
@@ -48,6 +50,7 @@ export function MediaButton({
   img,
   previewImage,
   video,
+  size = 'lg',
   isTilt = false,
   isOpen = false,
   index,
@@ -59,7 +62,7 @@ export function MediaButton({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <Magnetic size='md'>
+      <Magnetic size={size}>
         <DialogTrigger asChild>
           <button
             className={cn(
