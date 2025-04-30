@@ -30,7 +30,7 @@ export default function SeeMore({ id, links, className }: SeeMoreProps) {
             as='h3'
             startOnView
             delay={0}
-            duration={2000}
+            duration={1500}
             animateOnHover={false}
             className='font-sans-special text-lg sm:text-xl font-semibold'
           >

@@ -1,27 +1,23 @@
 import { profile } from '@/data/profile';
-import { getFlattenedNode, getTranslatedData } from '@/lib/utils';
+import { getTranslatedData } from '@/lib/utils';
 import { Metadata } from 'next';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations();
+  const t = await getTranslations('profile.metadata');
   const homeMessages = (await getMessages()).home.metadata;
   const messages = (await getMessages()).profile.metadata;
   const locale = await getLocale();
   const businessCard = getTranslatedData(profile.businessCard, locale);
 
   return {
-    title: t('profile.metadata.title'),
-    description: getFlattenedNode(
-      t.rich('home.subtitle', {
-        highlight: (chunks) => chunks,
-      })
-    ),
+    title: t('title'),
+    description: getTranslatedData(profile.description, locale),
     openGraph: {
       type: 'website',
       siteName: 'Matthieu Vagnon Web',
-      title: t('profile.metadata.openGraph.title'),
-      description: t('profile.metadata.openGraph.description'),
+      title: t('openGraph.title'),
+      description: t('openGraph.description'),
       images: [
         {
           url: profile.avatarUrl

@@ -17,6 +17,11 @@ declare global {
   };
   type Profile = {
     avatarUrl?: StaticImageData;
+    description: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    };
     businessCard: {
       en?: {
         title: string;

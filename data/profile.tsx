@@ -24,6 +24,11 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 
 export const profile: Profile = {
   avatarUrl: me,
+  description: {
+    en: 'Since 2022, I strive to scale my clients by designing and developing custom front-end solutions. Leveraging design and development, I put in place unified processes to accelerate delivery times and reduce costs.',
+    fr: "Depuis 2022, je m'efforce de faire scaler mes clients en concevant et développant des solutions front-end sur mesure. Alliant design et développement, je mets en place des processus unifiés pour accélérer les délais de livraison et réduire les coûts.",
+    ja: '2022年から、私はクライアントを拡大するために、カスタマイズされたフロントエンドソリューションを設計および開発することを努力しています。デザインと開発を統合し、フロントエンド開発のプロセスを統一することで、迅速な納品とコスト削減を実現します。',
+  },
   businessCard: {
     en: {
       image: businessCardEn,
