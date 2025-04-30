@@ -7,7 +7,6 @@
 
 @theme inline {
   --color-main: var(--main);
-  --color-main-light: var(--main-light);
   --color-main-dark: var(--main-dark);
   --color-main-foreground: var(--main-foreground);
   --color-background: var(--background);
@@ -52,7 +51,6 @@
 
 :root {
   --main: #007fff;
-  --main-light: #d6eaff;
   --main-dark: #001428;
   --main-foreground: oklch(0.985 0 0);
   --background: #fafafa;
@@ -93,14 +91,12 @@
 
 html[data-accent-color='green'] {
   --main: #88ff88;
-  --main-light: #deffde;
   --main-dark: #004000;
   --main-foreground: black;
 }
 
 html[data-accent-color='pink'] {
   --main: #ff88ff;
-  --main-light: #ffdeff;
   --main-dark: #400040;
   --main-foreground: black;
 }

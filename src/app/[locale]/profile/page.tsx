@@ -12,6 +12,7 @@ import { LogoCarousel } from '@/components/ui/logo-carousel';
 import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
+import { Quote } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
 export default function Profile() {
@@ -39,7 +40,11 @@ export default function Profile() {
               <AvatarFallback>MV</AvatarFallback>
             </Avatar>
             <div className='flex flex-row flex-nowrap gap-x-6 md:gap-x-8 justify-between items-center w-full'>
-              <div className='text-lg lg:text-xl italic'>
+              <div className='relative text-lg lg:text-xl italic'>
+                <Quote
+                  strokeWidth={0}
+                  className='hidden sm:block size-20 -z-1 fill-black/4 absolute -top-6 -left-7'
+                />
                 {getTranslatedData(profile.description, locale)}
               </div>
               {businessCard && (
