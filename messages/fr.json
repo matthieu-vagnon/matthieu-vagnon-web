@@ -2,17 +2,16 @@
   "home": {
     "metadata": {
       "title": "Portfolio web de Matthieu Vagnon",
-      "description": "Expert React et Next.js, développeur front-end, designer numérique. Je propose à mes clients le développement de SaaS et d'applications web de pointe et leur enseigne comment internaliser ces compétences.",
+      "description": "Je suis expert React et Next.js, développeur front-end, designer UI/UX et chef de projet. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
       "openGraph": {
         "title": "Portfolio Web de Matthieu Vagnon",
-        "description": "Expert React/Next, développeur front-end, designer numérique. Je propose à mes clients le développement d'applications web de pointe et leur enseigne comment internaliser ces compétences."
+        "description": "Expert React/Next, développeur front-end, designer UI/UX et chef de projet. Je propose à mes clients le développement d'applications web fidélisantes."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
         "2": "Front-End",
         "3": "Développeur",
         "4": "Développement",
-        "5": "Digital",
         "6": "Designer",
         "7": "SEO",
         "8": "Responsive",
@@ -38,49 +37,28 @@
         "prefix": "",
         "skills": {
           "1": "Développeur front-end",
-          "2": "Designer digital",
+          "2": "Designer UI/UX",
           "3": "Expert React/Next",
-          "4": "Chef de projet",
-          "5": "Enseignant et mentor"
+          "4": "Chef de projet"
         },
         "suffix": " indépendant"
       }
     },
-    "subtitle": "Le <highlight>magicien</highlight> dont vous avez toujours eu besoin pour <highlight>déverrouiller le plein potentiel</highlight> de votre SaaS ou de votre application web grâce à <highlight>l'expérience utilisateur</highlight>."
+    "subtitle": "Je propose à mes clients la <highlight>conception et le développement</highlight> d'interfaces <highlight>fidélisantes</highlight> pour <highlight>débloquer le potentiel</highlight> de leurs SaaS ou applications web grâce à <highlight>l'UI et l'UX</highlight>."
   },
   "profile": {
     "metadata": {
-      "title": "Profil ~ Matthieu Vagnon",
+      "title": "Profil | Matthieu Vagnon",
       "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
       "openGraph": {
         "title": "Profil de Matthieu Vagnon",
         "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications."
       },
       "keywords": {
-        "1": "Matthieu Vagnon",
-        "2": "Front-end",
-        "3": "Développeur",
-        "4": "Digital",
-        "5": "Design",
-        "6": "Designer",
-        "7": "SEO",
-        "8": "Responsive",
-        "9": "UI",
-        "10": "UX",
-        "11": "Déploiement",
-        "12": "SaaS",
-        "13": "Web",
-        "14": "App",
-        "15": "IA",
-        "16": "React",
-        "17": "Next.js",
-        "18": "Figma",
-        "19": "Enseignement",
-        "20": "Web3",
-        "21": "Profil",
-        "22": "CV",
-        "23": "Curriculum",
-        "24": "Vitae"
+        "1": "Profil",
+        "2": "CV",
+        "3": "Curriculum",
+        "4": "Vitae"
       }
     },
     "title": "Profil",
@@ -94,41 +72,22 @@
   },
   "caseStudies": {
     "metadata": {
-      "title": "Cas pratiques ~ Matthieu Vagnon",
+      "title": "Cas pratiques | Matthieu Vagnon",
       "description": "Quelques-uns des projets sur lesquels j'ai travaillé au cours de ma carrière. SaaS, IA, Web3, enseignement et plus encore.",
       "openGraph": {
         "title": "Cas pratiques de Matthieu Vagnon",
         "description": "Quelques-uns des projets sur lesquels j'ai travaillé. SaaS, IA, Web3, enseignement..."
       },
       "keywords": {
-        "1": "Matthieu Vagnon",
-        "2": "Front-End",
-        "3": "Ingénieur",
-        "4": "Numérique",
-        "5": "Designer",
-        "6": "SEO",
-        "7": "Responsive",
-        "8": "UI",
-        "9": "UX",
-        "10": "Déploiement",
-        "11": "SaaS",
-        "12": "Web",
-        "13": "App",
-        "14": "IA",
-        "15": "React",
-        "16": "Next.js",
-        "17": "Figma",
-        "18": "Enseignement",
-        "19": "Cas pratiques",
-        "20": "Cas pratique",
-        "21": "Web3"
+        "1": "Cas pratiques",
+        "2": "Cas pratique"
       }
     },
     "project": {
       "metadata": {
-        "title": "Cas pratique {name} ~ Matthieu Vagnon",
+        "title": "{name} | Matthieu Vagnon",
         "openGraph": {
-          "title": "Matthieu Vagnon: Cas pratique {name}"
+          "title": "{name} - Matthieu Vagnon"
         }
       },
       "title": "Cas pratique {name}",

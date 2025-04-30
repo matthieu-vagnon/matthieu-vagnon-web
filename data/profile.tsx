@@ -21,7 +21,6 @@ import saintThomas from '@/public/profile/saint-thomas.png';
 import toeic from '@/public/profile/toeic.webp';
 import univLyon1 from '@/public/profile/univ-lyon1.png';
 import univLyon2 from '@/public/profile/univ-lyon2.jpg';
-import React from 'react';
 
 export const profile: Profile = {
   avatarUrl: me,
@@ -38,34 +37,6 @@ export const profile: Profile = {
       image: businessCardJa,
       title: 'ビジネスカード',
     },
-  },
-  description: {
-    en: (
-      <React.Fragment>
-        As a freelance <strong>front-end engineer</strong>,{' '}
-        <strong>digital designer</strong>, and{' '}
-        <strong>programming advisor</strong>, I help make your SaaS or web app a
-        success through outstanding <strong>user experience</strong>.
-      </React.Fragment>
-    ),
-    fr: (
-      <React.Fragment>
-        Je suis un <strong>développeur front-end</strong>,{' '}
-        <strong>designer numérique</strong> et{' '}
-        <strong>conseiller en programmation</strong> indépendant, dont le but
-        est de faire de votre SaaS ou de votre application web un succès en
-        mettant en avant <strong>l&apos;expérience utilisateur</strong>.
-      </React.Fragment>
-    ),
-    ja: (
-      <React.Fragment>
-        私はフリーランスの<strong>フロントエンジニア</strong>、
-        <strong>デジタルデザイナー</strong>、
-        <strong>プログラミングアドバイザー</strong>
-        です。あなたのSaaSやウェブアプリを成功に導くために、あなたが必要としていた
-        <strong>魔法使い</strong>です。
-      </React.Fragment>
-    ),
   },
   stackLogos: [
     {

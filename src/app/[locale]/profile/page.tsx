@@ -40,7 +40,11 @@ export default function Profile() {
             </Avatar>
             <div className='flex flex-row flex-nowrap gap-x-6 md:gap-x-8 justify-between items-center w-full'>
               <div className='text-lg md:text-xl'>
-                {getTranslatedData(profile.description, locale)}
+                {t.rich('home.subtitle', {
+                  highlight: (chunks) => (
+                    <strong className='text-primary'>{chunks}</strong>
+                  ),
+                })}
               </div>
               {businessCard && (
                 <MediaButton
@@ -48,7 +52,7 @@ export default function Profile() {
                   title={businessCard.title}
                   size='md'
                   isTilt
-                  className='hidden sm:block min-w-[175px] max-w-[450px]'
+                  className='hidden sm:block min-w-[175px] max-w-[400px]'
                 />
               )}
             </div>

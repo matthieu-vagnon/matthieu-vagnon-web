@@ -31,11 +31,6 @@ declare global {
         image: StaticImageData;
       };
     };
-    description: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
-    };
     stackLogos: {
       id: number;
       name: string;

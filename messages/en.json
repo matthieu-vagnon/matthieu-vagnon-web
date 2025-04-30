@@ -1,11 +1,11 @@
 {
   "home": {
     "metadata": {
-      "title": "Matthieu Vagnon Web Portfolio",
-      "description": "React and Next.js expert, front-end engineer, digital designer. I provide my clients with cutting-edge SaaS and web apps and teach them how to internalize those skills.",
+      "title": "Matthieu Vagnon's Web Portfolio",
+      "description": "I am a React and Next.js expert, front-end engineer, UI/UX designer and project manager. I provide my clients with engaging SaaS and web applications.",
       "openGraph": {
         "title": "Matthieu Vagnon's Web Portfolio",
-        "description": "React/Next expert, front-end engineer, digital designer. I provide my clients with cutting-edge web apps and teach them how to internalize those skills."
+        "description": "React/Next expert, front-end engineer, UI/UX designer, project manager. I provide my clients with engaging web apps."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
@@ -24,7 +24,6 @@
         "14": "React",
         "15": "Next.js",
         "16": "Figma",
-        "17": "Teaching",
         "18": "Web3",
         "19": "AI"
       }
@@ -36,48 +35,28 @@
         "prefix": "Freelance ",
         "skills": {
           "1": "Front-End Engineer",
-          "2": "Digital Designer",
+          "2": "UI/UX Designer",
           "3": "React/Next Expert",
-          "4": "Project Manager",
-          "5": "Teacher & Mentor"
+          "4": "Project Manager"
         },
         "suffix": ""
       }
     },
-    "subtitle": "The <highlight>magician</highlight> you've always needed to <highlight>unlock the full potential</highlight> of your SaaS or web app through <highlight>user experience</highlight>."
+    "subtitle": "I provide my clients with <highlight>engaging</highlight> applications <highlight>conception and development</highlight> to <highlight>unlock the full potential</highlight> of their SaaS or web app through <highlight>UI and UX</highlight>."
   },
   "profile": {
     "metadata": {
-      "title": "Profile ~ Matthieu Vagnon",
+      "title": "Profile | Matthieu Vagnon",
       "description": "A complete summary of my skills, work and education.",
       "openGraph": {
         "title": "Matthieu Vagnon's Profile",
         "description": "A summary of my skills, work and education."
       },
       "keywords": {
-        "1": "Matthieu Vagnon",
-        "2": "Front-End",
-        "3": "Engineer",
-        "4": "Digital",
-        "5": "Designer",
-        "6": "SEO",
-        "7": "Responsive",
-        "8": "UI",
-        "9": "UX",
-        "10": "Deployment",
-        "11": "SaaS",
-        "12": "Web",
-        "13": "App",
-        "14": "AI",
-        "15": "React",
-        "16": "Next.js",
-        "17": "Figma",
-        "18": "Teaching",
-        "19": "Web3",
-        "20": "Profile",
-        "21": "CV",
-        "22": "Curriculum",
-        "23": "Vitae"
+        "1": "Profile",
+        "2": "CV",
+        "3": "Curriculum",
+        "4": "Vitae"
       }
     },
     "title": "Profile",
@@ -91,41 +70,22 @@
   },
   "caseStudies": {
     "metadata": {
-      "title": "Case Studies ~ Matthieu Vagnon",
+      "title": "Case Studies | Matthieu Vagnon",
       "description": "Some of the projects I have worked on during my career. SaaS, AI, Web3, teachings and more.",
       "openGraph": {
         "title": "Matthieu Vagnon's Case Studies",
         "description": "Some of the projects I have worked on. SaaS, AI, Web3, teachings..."
       },
       "keywords": {
-        "1": "Matthieu Vagnon",
-        "2": "Front-End",
-        "3": "Engineer",
-        "4": "Digital",
-        "5": "Designer",
-        "6": "SEO",
-        "7": "Responsive",
-        "8": "UI",
-        "9": "UX",
-        "10": "Deployment",
-        "11": "SaaS",
-        "12": "Web",
-        "13": "App",
-        "14": "AI",
-        "15": "React",
-        "16": "Next.js",
-        "17": "Figma",
-        "18": "Teaching",
-        "19": "Case Studies",
-        "20": "Case Study",
-        "21": "Web3"
+        "1": "Case Studies",
+        "2": "Case Study"
       }
     },
     "project": {
       "metadata": {
-        "title": "{name} Case Study ~ Matthieu Vagnon",
+        "title": "{name} | Matthieu Vagnon",
         "openGraph": {
-          "title": "Matthieu Vagnon: {name} Case Study"
+          "title": "{name} - Matthieu Vagnon"
         }
       },
       "title": "{name} Case Study",

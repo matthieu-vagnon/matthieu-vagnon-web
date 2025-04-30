@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('caseStudies.metadata');
+  const homeMessages = (await getMessages()).home.metadata;
   const messages = (await getMessages()).caseStudies.metadata;
 
   return {
@@ -22,7 +23,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     keywords: [
       ...(Object.values(projects).map((project) => project.title) || []),
-      ...Object.keys(messages.keywords).map((key) => messages.keywords[key]),
+      ...Object.values(homeMessages.keywords).map(
+        (keyword) => keyword as string
+      ),
+      ...Object.values(messages.keywords).map((keyword) => keyword as string),
     ],
   };
 }
