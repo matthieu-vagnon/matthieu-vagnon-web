@@ -25,9 +25,9 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 export const profile: Profile = {
   avatarUrl: me,
   description: {
-    en: 'Ever since 2022, I help my clients scale by designing and developing custom reliable and engaging front-end solutions. Leveraging design and development, I put in place unified processes to accelerate delivery times and reduce costs.',
-    fr: "Depuis 2022, j'aide mes clients à scaler en concevant et développant des solutions front-end sur mesure fiables et fidélisantes. Alliant design et développement, je mets en place des processus unifiés pour accélérer les délais de livraison et réduire les coûts.",
-    ja: '2022年以来、カスタムで信頼性が高く魅力的なフロントエンドソリューションを設計・開発することで、クライアントの成長を支援しています。デザインと開発を活用し、納期を短縮しコストを削減するための統一されたプロセスを導入しています。',
+    en: 'Ever since 2022, I help my clients scale by designing and developing custom, reliable and engaging front-end solutions. Leveraging design and development, I put in place unified processes to accelerate delivery times and reduce costs.',
+    fr: "Depuis 2022, j'aide mes clients à scaler en concevant et développant des solutions front-end sur mesure, fiables et fidélisantes. Alliant design et développement, je mets en place des processus unifiés pour accélérer les délais de livraison et réduire les coûts.",
+    ja: '2022年以来、カスタムで信頼性が高く、魅力的なフロントエンドソリューションを設計・開発することで、クライアントの成長を支援しています。デザインと開発を組み合わせ、納期を短縮しコストを削減するための統一されたプロセスを導入しています。',
   },
   businessCard: {
     en: {
