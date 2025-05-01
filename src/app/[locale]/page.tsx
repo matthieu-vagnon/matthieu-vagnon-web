@@ -167,7 +167,7 @@ export default function Home() {
         className='fixed inset-0 -z-1'
         quantity={100}
         ease={80}
-        color='black'
+        color='var(--foreground)'
         refresh
       />
     </React.Fragment>

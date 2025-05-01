@@ -58,7 +58,7 @@ export default function TitleBox({ delay = 0 }: { delay?: number }) {
                       texts={Object.keys(messages.home.titleBox.job.skills).map(
                         (key) => messages.home.titleBox.job.skills[key]
                       )}
-                      mainClassName={`text-white px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
+                      mainClassName={`px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
                       staggerFrom={'last'}
                       initial={{ y: '100%' }}
                       animate={{ y: 0 }}

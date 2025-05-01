@@ -66,7 +66,7 @@ export function Spotlight({
     <motion.div
       ref={containerRef}
       className={cn(
-        'pointer-events-none absolute rounded-full bg-white/33 blur-xl transition-opacity duration-200',
+        'pointer-events-none absolute rounded-full bg-white/33 z-1 from-white/50 via-white/20 to-white/10 blur-2xl transition-opacity duration-200',
         isHovered ? 'opacity-100' : 'opacity-0',
         className
       )}

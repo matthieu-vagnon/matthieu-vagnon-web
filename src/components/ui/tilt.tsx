@@ -79,11 +79,7 @@ export function TiltElement({
 
   return (
     <div className='overflow-visible!'>
-      <Spotlight
-        className='z-10 from-white/50 via-white/20 to-white/10 blur-2xl'
-        size={100}
-        springOptions={springOptions}
-      />
+      <Spotlight size={100} springOptions={springOptions} />
       <motion.div
         ref={ref}
         className={cn('overflow-visible', className)}

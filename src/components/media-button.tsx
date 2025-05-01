@@ -99,8 +99,8 @@ export function MediaButton({
               />
             )}
             {video && (
-              <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-black/25 backdrop-blur-md rounded-md p-2'>
-                <PlayIcon className='w-4 h-4 text-white' />
+              <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-foreground/25 backdrop-blur-md rounded-md p-2'>
+                <PlayIcon className='w-4 h-4 text-background' />
               </div>
             )}
           </button>

@@ -43,7 +43,7 @@ export default function Profile() {
               <div className='relative text-lg lg:text-xl italic'>
                 <Quote
                   strokeWidth={0}
-                  className='hidden sm:block size-20 -z-1 fill-black/4 absolute -top-6 -left-7'
+                  className='hidden sm:block size-20 -z-1 fill-foreground/5 absolute -top-6 -left-7'
                 />
                 {getTranslatedData(profile.description, locale)}
               </div>

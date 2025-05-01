@@ -5,7 +5,7 @@ import * as React from 'react';
 const mainCardVariants = cva('w-full relative', {
   variants: {
     variant: {
-      default: ['border rounded-lg', 'border-zinc-200', 'bg-white'],
+      default: ['border rounded-lg', 'border-zinc-200', 'bg-background'],
       dots: [
         'relative mx-auto w-full',
         'rounded-lg border border-dashed',
@@ -116,7 +116,7 @@ const MainCard = React.forwardRef<HTMLDivElement, MainCardProps>(
           height={24}
           strokeWidth='1'
           stroke='currentColor'
-          className='text-black size-6 absolute -top-3 -left-3'
+          className='text-foreground size-6 absolute -top-3 -left-3'
         >
           <path
             strokeLinecap='round'
@@ -132,7 +132,7 @@ const MainCard = React.forwardRef<HTMLDivElement, MainCardProps>(
           height={24}
           strokeWidth='1'
           stroke='currentColor'
-          className='text-black size-6 absolute -top-3 -right-3'
+          className='text-foreground size-6 absolute -top-3 -right-3'
         >
           <path
             strokeLinecap='round'
@@ -148,7 +148,7 @@ const MainCard = React.forwardRef<HTMLDivElement, MainCardProps>(
           height={24}
           strokeWidth='1'
           stroke='currentColor'
-          className='text-black size-6 absolute -bottom-3 -left-3'
+          className='text-foreground size-6 absolute -bottom-3 -left-3'
         >
           <path
             strokeLinecap='round'
@@ -164,7 +164,7 @@ const MainCard = React.forwardRef<HTMLDivElement, MainCardProps>(
           height={24}
           strokeWidth='1'
           stroke='currentColor'
-          className='text-black size-6 absolute -bottom-3 -right-3'
+          className='text-foreground size-6 absolute -bottom-3 -right-3'
         >
           <path
             strokeLinecap='round'
@@ -233,7 +233,7 @@ const MainCard = React.forwardRef<HTMLDivElement, MainCardProps>(
           className={cn(mainCardVariants({ variant, className }))}
           {...props}
         >
-          <div className='border rounded-sm bg-gradient-to-br from-white to-zinc-200/60 border-zinc-300 shadow-[2px_0_8px_rgba(0,_0,_0,_0.15)]'>
+          <div className='border rounded-sm bg-gradient-to-br from-background to-foreground/5 border-zinc-300 shadow-[2px_0_8px_rgba(0,_0,_0,_0.15)]'>
             {content}
           </div>
         </div>
