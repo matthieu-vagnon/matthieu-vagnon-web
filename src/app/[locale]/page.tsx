@@ -16,7 +16,7 @@ export default function Home() {
     icon?: React.ReactNode;
   }[] = [
     {
-      label: t('utils.links.linkedin'),
+      label: 'LinkedIn',
       link: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
       icon: (
         <svg
@@ -48,7 +48,7 @@ export default function Home() {
       ),
     },
     {
-      label: t('utils.links.youtube'),
+      label: 'YouTube',
       link: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
       icon: (
         <svg
@@ -74,7 +74,7 @@ export default function Home() {
       ),
     },
     {
-      label: t('utils.links.instagram'),
+      label: 'Instagram',
       link: process.env.NEXT_PUBLIC_INSTAGRAM_URL!,
       icon: (
         <svg
@@ -104,7 +104,7 @@ export default function Home() {
       ),
     },
     {
-      label: t('utils.links.github'),
+      label: 'GitHub',
       link: process.env.NEXT_PUBLIC_GITHUB_URL!,
       icon: (
         <svg

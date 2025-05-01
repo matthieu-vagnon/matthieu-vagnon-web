@@ -51,15 +51,15 @@ export default function CaseStudies() {
         <SeeMore
           links={[
             {
-              name: t('utils.links.youtube'),
+              name: 'YouTube',
               url: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
             },
             {
-              name: t('utils.links.instagram'),
+              name: 'Instagram',
               url: process.env.NEXT_PUBLIC_INSTAGRAM_URL!,
             },
             {
-              name: t('utils.links.github'),
+              name: 'GitHub',
               url: process.env.NEXT_PUBLIC_GITHUB_URL!,
             },
           ]}

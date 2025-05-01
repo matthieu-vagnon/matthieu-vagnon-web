@@ -148,7 +148,7 @@ export default function Profile() {
         <SeeMore
           links={[
             {
-              name: t('utils.links.linkedin'),
+              name: 'LinkedIn',
               url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
             },
           ]}

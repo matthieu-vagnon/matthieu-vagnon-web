@@ -134,13 +134,7 @@
     "reset": "Réinitialiser les paramètres"
   },
   "utils": {
-    "links": {
-      "related": "Liens associés",
-      "linkedin": "LinkedIn",
-      "youtube": "YouTube",
-      "instagram": "Portfolio Instagram",
-      "github": "Portflio GitHub"
-    },
+    "related": "Liens associés",
     "repo": "Consultez le repo public ",
     "here": "ici",
     "madeWithLove": "Fait avec ❤️ par Matthieu Vagnon",
