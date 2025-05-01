@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Sparkle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { LinkButton } from './ui/button';
 
@@ -29,9 +30,17 @@ export default function PageTitle({
         className
       )}
     >
-      <h1 className='text-center text-2xl sm:text-3xl md:text-4xl font-bold font-sans-special'>
-        {title}
-      </h1>
+      <div className='flex flex-row items-center justify-center gap-x-2'>
+        <Sparkle strokeWidth={0} className='size-3 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-5 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-7 fill-foreground/5' />
+        <h1 className='text-center text-2xl sm:text-3xl md:text-4xl font-bold font-sans-special'>
+          {title}
+        </h1>
+        <Sparkle strokeWidth={0} className='size-7 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-5 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-3 fill-foreground/5' />
+      </div>
       <h2 className='text-base md:text-lg text-center text-foreground-secondary'>
         {description}
       </h2>
