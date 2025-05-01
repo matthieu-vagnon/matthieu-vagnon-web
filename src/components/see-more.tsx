@@ -34,7 +34,7 @@ export default function SeeMore({ id, links, className }: SeeMoreProps) {
             animateOnHover={false}
             className='font-sans-special text-lg sm:text-xl font-semibold'
           >
-            {t('links.related')}
+            {t('related')}
           </HyperText>
           <div className='flex flex-row gap-2 flex-wrap items-center justify-center'>
             {links.map((link) => (
