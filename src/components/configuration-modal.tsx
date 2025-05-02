@@ -3,22 +3,22 @@
 import { useAccentColor } from '@/hooks/use-accent-color';
 import { useMagneticStatus } from '@/hooks/use-magnetic-status';
 import { useTranslations } from 'next-intl';
-import { Button } from './ui/button';
-import { Checkbox } from './ui/checkbox';
-import { Label } from './ui/label';
+import { Button } from './button';
+import { Checkbox } from './checkbox';
+import { Label } from './label';
 import {
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from './ui/nested-dialog';
+} from './nested-dialog';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from './ui/select';
+} from './select';
 
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus();

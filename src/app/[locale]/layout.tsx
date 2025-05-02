@@ -1,5 +1,5 @@
 import AppsDock from '@/components/apps-dock';
-import { CardStack } from '@/components/ui/card-stack';
+import { CardStack } from '@/components/card-stack';
 import { testimonials } from '@/data/testimonials';
 import AccentColorProvider from '@/hooks/use-accent-color';
 import DockStatusProvider from '@/hooks/use-dock-status';

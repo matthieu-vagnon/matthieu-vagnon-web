@@ -1,20 +1,20 @@
-import Header from '@/components/header';
-import { ScrollProgress } from '@/components/magicui/scroll-progress';
-import { MediaButton } from '@/components/media-button';
-import PageTitle from '@/components/page-title';
-import SectionTitle from '@/components/section-title';
-import SeeMore from '@/components/see-more';
-import { default as SkillBox } from '@/components/skill-box';
-import PageDecoration from '@/components/svg/page-decoration';
-import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
-import { BlurFade } from '@/components/ui/blur-fade';
+import { BlurFade } from '@/components/blur-fade';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from '@/components/carousel';
+import Header from '@/components/header';
+import { MediaButton } from '@/components/media-button';
+import PageTitle from '@/components/page-title';
+import { ScrollProgress } from '@/components/scroll-progress';
+import SectionTitle from '@/components/section-title';
+import SeeMore from '@/components/see-more';
+import { default as SkillBox } from '@/components/skill-box';
+import PageDecoration from '@/components/svg/page-decoration';
+import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { projects } from '@/data/projects';
 import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils';
 import { Metadata, ResolvingMetadata } from 'next';

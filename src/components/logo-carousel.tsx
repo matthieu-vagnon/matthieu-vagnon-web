@@ -3,17 +3,22 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-interface Logo {
+type Logo = {
   name: string;
   id: number;
   img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
+};
 
-interface LogoColumnProps {
+type LogoColumnProps = {
   logos: Logo[];
   index: number;
   currentTime: number;
-}
+};
+
+type LogoCarouselProps = {
+  columnCount?: number;
+  logos: Logo[];
+};
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -33,6 +38,7 @@ const distributeLogos = (allLogos: Logo[], columnCount: number): Logo[][] => {
   });
 
   const maxLength = Math.max(...columns.map((col) => col.length));
+
   columns.forEach((col) => {
     while (col.length < maxLength) {
       col.push(shuffled[Math.floor(Math.random() * shuffled.length)]);
@@ -46,9 +52,12 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
   ({ logos, index, currentTime }) => {
     const cycleInterval = 2000;
     const columnDelay = index * 200;
+
     const adjustedTime =
       (currentTime + columnDelay) % (cycleInterval * logos.length);
+
     const currentIndex = Math.floor(adjustedTime / cycleInterval);
+
     const CurrentLogo = useMemo(
       () => logos[currentIndex].img,
       [logos, currentIndex]
@@ -93,11 +102,6 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
   }
 );
 LogoColumn.displayName = 'LogoColumn';
-
-interface LogoCarouselProps {
-  columnCount?: number;
-  logos: Logo[];
-}
 
 export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
   const [logoSets, setLogoSets] = useState<Logo[][]>([]);

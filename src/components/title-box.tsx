@@ -3,10 +3,10 @@
 import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
+import { BlurFade } from './blur-fade';
+import { MainCard, MainCardContent } from './main-card';
 import Logo from './svg/logo';
-import { BlurFade } from './ui/blur-fade';
-import { MainCard, MainCardContent } from './ui/main-card';
-import { TextRotate } from './ui/text-rotate';
+import { TextRotate } from './text-rotate';
 
 export default function TitleBox({ delay = 0 }: { delay?: number }) {
   const t = useTranslations('home.titleBox');

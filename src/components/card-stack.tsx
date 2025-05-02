@@ -11,24 +11,29 @@ import { BlurFade } from './blur-fade';
 import { Button } from './button';
 import Magnetic from './magnetic';
 
-let interval: NodeJS.Timeout;
-
-export const CardStack = ({
-  items,
-  offset,
-  scaleFactor,
-}: {
+type CardStackProps = {
   items: Testimonial[];
   offset?: number;
   scaleFactor?: number;
-}) => {
-  const CARD_OFFSET = offset || 10;
-  const SCALE_FACTOR = scaleFactor || 0.06;
+};
+
+let interval: NodeJS.Timeout;
+
+export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
   const [cards, setCards] = useState<Testimonial[]>(items);
   const { isCollapsed, setIsCollapsed } = useTestimonialsStatus();
   const locale = useLocale();
   const t = useTranslations('utils');
   const [original, setOriginal] = useState<boolean>(false);
+
+  useEffect(() => {
+    startFlipping();
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const cardOffset = offset || 10;
+  const cardScaleFactor = scaleFactor || 0.06;
 
   const startFlipping = () => {
     interval = setInterval(() => {
@@ -51,12 +56,6 @@ export const CardStack = ({
   const handleOriginal = () => {
     setOriginal(!original);
   };
-
-  useEffect(() => {
-    startFlipping();
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <BlurFade
@@ -101,8 +100,8 @@ export const CardStack = ({
                   transformOrigin: 'top center',
                 }}
                 animate={{
-                  top: index * -CARD_OFFSET,
-                  scale: 1 - index * SCALE_FACTOR,
+                  top: index * -cardOffset,
+                  scale: 1 - index * cardScaleFactor,
                   zIndex: cards.length - index,
                 }}
               >

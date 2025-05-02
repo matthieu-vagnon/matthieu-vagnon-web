@@ -1,9 +1,9 @@
+import { BlurFade } from '@/components/blur-fade';
+import { LinkButton } from '@/components/button';
 import Highlight from '@/components/highlight';
 import LanguageSwitch from '@/components/language-switch';
+import { Particles } from '@/components/particles';
 import TitleBox from '@/components/title-box';
-import { BlurFade } from '@/components/ui/blur-fade';
-import { LinkButton } from '@/components/ui/button';
-import { Particles } from '@/components/ui/particles';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
@@ -128,7 +128,7 @@ export default function Home() {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <div className='min-h-svh w-full flex flex-col gap-y-4 items-center pt-4 sm:pt-6 md:pt-8 pb-22'>
         <BlurFade className='w-full flex justify-end'>
           <LanguageSwitch />
@@ -170,6 +170,6 @@ export default function Home() {
         color='var(--foreground)'
         refresh
       />
-    </React.Fragment>
+    </>
   );
 }

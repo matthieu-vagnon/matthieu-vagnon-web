@@ -1,11 +1,10 @@
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
-import React from 'react';
 import packageJson from '../../package.json';
+import { LinkButton } from './button';
+import { HyperText } from './hyper-text';
 import LanguageSwitch from './language-switch';
-import { HyperText } from './magicui/hyper-text';
-import { LinkButton } from './ui/button';
-import { Separator } from './ui/separator';
+import { Separator } from './separator';
 
 type SeeMoreProps = {
   id?: string;
@@ -17,7 +16,7 @@ export default function SeeMore({ id, links, className }: SeeMoreProps) {
   const t = useTranslations('utils');
 
   return (
-    <React.Fragment>
+    <>
       <Separator id={id} className='my-10 sm:my-12 md:my-14' />
       <div
         className={cn(
@@ -55,6 +54,6 @@ export default function SeeMore({ id, links, className }: SeeMoreProps) {
         </div>
         <LanguageSwitch />
       </div>
-    </React.Fragment>
+    </>
   );
 }

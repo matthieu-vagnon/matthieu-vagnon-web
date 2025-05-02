@@ -1,9 +1,9 @@
+import { BlurFade } from '@/components/blur-fade';
 import Header from '@/components/header';
 import PageTitle from '@/components/page-title';
 import ProjectCard from '@/components/project-card';
 import SeeMore from '@/components/see-more';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
-import { BlurFade } from '@/components/ui/blur-fade';
 import cover1 from '@/public/project-card-cover/1.png';
 import cover2 from '@/public/project-card-cover/2.png';
 import cover3 from '@/public/project-card-cover/3.png';

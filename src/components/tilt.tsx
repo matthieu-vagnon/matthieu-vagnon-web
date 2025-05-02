@@ -32,10 +32,8 @@ export function TiltElement({
   springOptions,
 }: TiltProps) {
   const ref = useRef<HTMLDivElement>(null);
-
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-
   const xSpring = useSpring(x, springOptions);
   const ySpring = useSpring(y, springOptions);
 
@@ -46,6 +44,7 @@ export function TiltElement({
       ? [rotationFactor, -rotationFactor]
       : [-rotationFactor, rotationFactor]
   );
+
   const rotateY = useTransform(
     xSpring,
     [-0.5, 0.5],
@@ -64,7 +63,6 @@ export function TiltElement({
     const height = rect.height;
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
-
     const xPos = mouseX / width - 0.5;
     const yPos = mouseY / height - 0.5;
 

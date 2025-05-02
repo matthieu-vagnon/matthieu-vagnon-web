@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { LinkButton } from './ui/button';
+import { LinkButton } from './button';
 
 type PageTitleProps = {
   title: string;

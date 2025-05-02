@@ -5,7 +5,7 @@ import { Calendar, Copy, Mail, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { toast } from 'sonner';
-import { Button, LinkButton } from './ui/button';
+import { Button, LinkButton } from './button';
 import {
   DialogContent,
   DialogDescription,
@@ -17,7 +17,7 @@ import {
   InnerDialogHeader,
   InnerDialogTitle,
   InnerDialogTrigger,
-} from './ui/nested-dialog';
+} from './nested-dialog';
 
 export function ContactModal() {
   const t = useTranslations();

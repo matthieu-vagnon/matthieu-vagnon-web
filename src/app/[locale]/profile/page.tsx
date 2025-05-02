@@ -1,15 +1,15 @@
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
+import { BlurFade } from '@/components/blur-fade';
 import Header from '@/components/header';
+import { LogoCarousel } from '@/components/logo-carousel';
 import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
+import { Separator } from '@/components/separator';
 import SkillBox from '@/components/skill-box';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { BlurFade } from '@/components/ui/blur-fade';
-import { LogoCarousel } from '@/components/ui/logo-carousel';
-import { Separator } from '@/components/ui/separator';
 import { profile } from '@/data/profile';
 import { getTranslatedData } from '@/lib/utils';
 import { Quote } from 'lucide-react';
@@ -18,6 +18,7 @@ import { useLocale, useTranslations } from 'next-intl';
 export default function Profile() {
   const t = useTranslations();
   const locale = useLocale();
+
   const businessCard = getTranslatedData(profile.businessCard, locale);
   let blurDelay = 0;
 

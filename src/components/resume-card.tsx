@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Card, CardHeader } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
+import { Card, CardHeader } from '@/components/card';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import {
@@ -11,8 +11,8 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+import { Badge } from './badge';
 import Highlight from './highlight';
-import { Badge } from './ui/badge';
 
 type ResumeCardProps = {
   logoUrl?: string;

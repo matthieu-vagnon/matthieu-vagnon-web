@@ -22,11 +22,6 @@ import React, {
   useState,
 } from 'react';
 
-const DOCK_HEIGHT = 128;
-const DEFAULT_MAGNIFICATION = 52;
-const DEFAULT_DISTANCE = 150;
-const DEFAULT_PANEL_HEIGHT = 64;
-
 type DockProps = {
   children: React.ReactNode;
   className?: string;
@@ -35,15 +30,16 @@ type DockProps = {
   magnification?: number;
   spring?: SpringOptions;
 };
+
 type DockItemProps = {
   className?: string;
   children: React.ReactNode;
 };
 
-interface DockItemChildProps {
+type DockItemChildProps = {
   width?: MotionValue<number>;
   isHovered?: MotionValue<number>;
-}
+};
 
 type DockLabelProps = {
   className?: string;
@@ -61,11 +57,16 @@ type DocContextType = {
   magnification: number;
   distance: number;
 };
+
 type DockProviderProps = {
   children: React.ReactNode;
   value: DocContextType;
 };
 
+const DOCK_HEIGHT = 128;
+const DEFAULT_MAGNIFICATION = 52;
+const DEFAULT_DISTANCE = 150;
+const DEFAULT_PANEL_HEIGHT = 64;
 const DockContext = createContext<DocContextType | undefined>(undefined);
 
 function DockProvider({ children, value }: DockProviderProps) {

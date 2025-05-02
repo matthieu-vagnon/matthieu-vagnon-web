@@ -18,5 +18,5 @@ export default function TestimonialsStatusWrapper({
     setIsCollapsed(shouldCollapse);
   }, [setIsCollapsed, shouldCollapse]);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <>{children}</>;
 }

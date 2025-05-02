@@ -17,9 +17,9 @@ import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { Button } from './ui/button';
-import Magnetic, { MagneticSize } from './ui/magnetic';
-import { Tilt } from './ui/tilt';
+import { Button } from './button';
+import Magnetic, { MagneticSize } from './magnetic';
+import { Tilt } from './tilt';
 
 type MediaButtonProps =
   | {
