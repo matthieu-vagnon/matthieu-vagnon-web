@@ -34,7 +34,7 @@ export default function Profile() {
       </BlurFade>
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16'>
         <BlurFade delay={blurDelay++ / 10}>
-          <div className='gap-4 sm:gap-6 md:gap-8 flex flex-col-reverse sm:flex-row text-center sm:text-left items-center justify-start'>
+          <div className='gap-4 sm:gap-6 md:gap-8 flex flex-col-reverse sm:flex-row text-center sm:text-left items-center justify-between'>
             <Avatar className='hidden sm:block size-15 sm:size-20 md:size-28 border text-xl sm:text-3xl md:text-5xl'>
               <AvatarImage alt='MV' src={profile.avatarUrl?.src} />
               <AvatarFallback>MV</AvatarFallback>
