@@ -4,6 +4,7 @@ import { SocialLink } from '@/app/[locale]/page';
 import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
+import { BlurFade } from './blur-fade';
 import { LinkButton } from './button';
 import Highlight from './highlight';
 import { MainCard, MainCardContent } from './main-card';
@@ -24,7 +25,7 @@ export default function TitleBox({
         layout
         transition={{ type: 'spring', damping: 30, stiffness: 400 }}
       >
-        <div className='flex w-full justify-center items-center flex-col gap-6 sm:gap-8 md:gap-10'>
+        <div className='flex w-full justify-center items-center flex-col gap-8 md:gap-10'>
           <motion.span
             layout
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
@@ -109,18 +110,20 @@ export default function TitleBox({
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
           >
             <div className='flex items-center justify-center gap-3 flex-wrap'>
-              {socialLinks.map((link) => (
-                <LinkButton
-                  variant='secondary'
-                  size='sm'
-                  key={link.label}
-                  href={link.link}
-                  external
-                  className='hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1'
-                >
-                  {link.icon ?? link.icon}
-                  {link.label}
-                </LinkButton>
+              {socialLinks.map((link, index) => (
+                <BlurFade delay={index * 0.3} key={link.label}>
+                  <LinkButton
+                    variant='secondary'
+                    size='sm'
+                    key={link.label}
+                    href={link.link}
+                    external
+                    className='hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1'
+                  >
+                    {link.icon ?? link.icon}
+                    {link.label}
+                  </LinkButton>
+                </BlurFade>
               ))}
             </div>
           </motion.span>
