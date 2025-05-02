@@ -34,29 +34,27 @@ export default function Profile() {
       </BlurFade>
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16'>
         <BlurFade delay={blurDelay++ / 10}>
-          <div className='gap-4 sm:gap-6 md:gap-8 flex flex-col sm:flex-row text-center sm:text-left items-center justify-start'>
-            <Avatar className='size-15 sm:size-20 md:size-28 border text-xl sm:text-3xl md:text-5xl'>
+          <div className='gap-4 sm:gap-6 md:gap-8 flex flex-col-reverse sm:flex-row text-center sm:text-left items-center justify-start'>
+            <Avatar className='hidden sm:block size-15 sm:size-20 md:size-28 border text-xl sm:text-3xl md:text-5xl'>
               <AvatarImage alt='MV' src={profile.avatarUrl?.src} />
               <AvatarFallback>MV</AvatarFallback>
             </Avatar>
-            <div className='flex flex-row flex-nowrap gap-x-6 md:gap-x-8 justify-between items-center w-full'>
-              <div className='relative text-lg lg:text-xl italic'>
-                <Quote
-                  strokeWidth={0}
-                  className='hidden sm:block size-20 -z-1 fill-foreground/5 absolute -top-6 -left-7'
-                />
-                {getTranslatedData(profile.description, locale)}
-              </div>
-              {businessCard && (
-                <MediaButton
-                  img={businessCard.image}
-                  title={businessCard.title}
-                  size='md'
-                  isTilt
-                  className='hidden sm:block w-50 md:w-56 lg:w-64'
-                />
-              )}
+            <div className='relative text-lg lg:text-xl italic'>
+              <Quote
+                strokeWidth={0}
+                className='hidden sm:block size-20 -z-1 fill-foreground/5 absolute -top-6 -left-7'
+              />
+              {getTranslatedData(profile.description, locale)}
             </div>
+            {businessCard && (
+              <MediaButton
+                img={businessCard.image}
+                title={businessCard.title}
+                size='md'
+                isTilt
+                className='w-50 md:w-56 lg:w-64'
+              />
+            )}
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
