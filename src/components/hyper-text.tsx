@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion, MotionProps } from 'motion/react';
+import { useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
 type CharacterSet = string[] | readonly string[];
@@ -25,10 +26,6 @@ type HyperTextProps = MotionProps & {
   characterSet?: CharacterSet;
 };
 
-const DEFAULT_CHARACTER_SET = Object.freeze(
-  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-) as readonly string[];
-
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 
 export function HyperText({
@@ -39,19 +36,28 @@ export function HyperText({
   as: Component = 'div',
   startOnView = false,
   animateOnHover = true,
-  characterSet = DEFAULT_CHARACTER_SET,
   ...props
 }: HyperTextProps) {
-  const MotionComponent = motion.create(Component, {
-    forwardMotionProps: true,
-  });
-
   const [displayText, setDisplayText] = useState<string[]>(() =>
     children.split('')
   );
+
+  const locale = useLocale();
   const [isAnimating, setIsAnimating] = useState(false);
   const iterationCount = useRef(0);
   const elementRef = useRef<HTMLElement>(null);
+
+  const characterSet = Object.freeze(
+    locale === 'ja'
+      ? 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん'.split(
+          ''
+        )
+      : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+  ) as readonly string[];
+
+  const MotionComponent = motion.create(Component, {
+    forwardMotionProps: true,
+  });
 
   const handleAnimationTrigger = () => {
     if (animateOnHover && !isAnimating) {
@@ -119,7 +125,10 @@ export function HyperText({
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn('overflow-hidden py-2 text-4xl font-bold', className)}
+      className={cn(
+        'overflow-hidden py-2 text-4xl font-bold text-shadow-2xs text-shadow-main',
+        className
+      )}
       onMouseEnter={handleAnimationTrigger}
       {...props}
     >

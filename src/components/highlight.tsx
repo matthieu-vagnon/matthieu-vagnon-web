@@ -12,15 +12,15 @@ const Highlight = ({
   color = 'default',
 }: HighlightProps) => {
   const colorVariants: Record<string, string> = {
-    default: 'bg-main/15 text-main-dark',
-    emerald: 'bg-emerald-100/50 text-emerald-700',
-    gray: 'bg-gray-200/66 text-gray-700',
+    default: 'shadow-main/15 text-main-dark',
+    emerald: 'shadow-emerald-100/50 text-emerald-700',
+    gray: 'shadow-gray-200/66 text-gray-700',
   };
 
   return (
     <span
       className={cn(
-        `font-bold px-1 py-0 rounded-sm`,
+        `font-bold px-1 py-0 shadow-[inset_0_-0.7em]`,
         colorVariants[color],
         className
       )}
