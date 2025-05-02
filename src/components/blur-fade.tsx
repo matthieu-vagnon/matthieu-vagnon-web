@@ -24,6 +24,7 @@ type BlurFadeProps = {
   inView?: boolean;
   inViewMargin?: MarginType;
   blur?: string;
+  dynamic?: boolean;
 };
 
 export function BlurFade({
@@ -36,14 +37,25 @@ export function BlurFade({
   inView = false,
   inViewMargin = '-50px',
   blur = '6px',
+  dynamic = false,
 }: BlurFadeProps) {
   const ref = useRef(null);
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
 
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
-    hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
+    hidden: {
+      y: yOffset,
+      opacity: 0,
+      filter: `blur(${blur})`,
+      ...(dynamic && { display: 'none' }),
+    },
+    visible: {
+      y: -yOffset,
+      opacity: 1,
+      filter: `blur(0px)`,
+      ...(dynamic && { display: 'block' }),
+    },
   };
   const combinedVariants = variant || defaultVariants;
 
