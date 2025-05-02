@@ -5,6 +5,7 @@ import PageTitle from '@/components/page-title';
 import SectionTitle from '@/components/section-title';
 import SeeMore from '@/components/see-more';
 import { default as SkillBox } from '@/components/skill-box';
+import PageDecoration from '@/components/svg/page-decoration';
 import TestimonialsStatusWrapper from '@/components/testimonials-status-wrapper';
 import { BlurFade } from '@/components/ui/blur-fade';
 import {
@@ -34,8 +35,8 @@ function Block({
   return (
     <div
       className={cn(
-        'flex w-full',
-        position === 'left' ? 'justify-start' : 'justify-end',
+        'flex w-full gap-x-20',
+        position === 'right' && 'flex-row-reverse',
         className
       )}
     >
@@ -44,6 +45,15 @@ function Block({
         <div className='text-base md:text-lg text-foreground-secondary'>
           {children}
         </div>
+      </div>
+      <div
+        className={cn(
+          'relative hidden md:block w-33',
+          position === 'right' && '-scale-x-100'
+        )}
+      >
+        <div className='absolute inset-y-0 right-0 w-11 bg-gradient-to-l from-background to-transparent' />
+        <PageDecoration className='h-full w-full' />
       </div>
     </div>
   );
@@ -127,7 +137,7 @@ export default async function Project(props: ProjectProps) {
         <PageTitle
           title={`${t('caseStudies.project.title', {
             name: project.title,
-          })} \u2022 ${project.year}`}
+          })} (${project.year})`}
           description={
             getTranslatedData(project.shortDescription, locale) as string
           }

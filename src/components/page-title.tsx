@@ -31,15 +31,15 @@ export default function PageTitle({
       )}
     >
       <div className='flex flex-row items-center justify-center gap-x-2'>
-        <Sparkle strokeWidth={0} className='size-3 fill-foreground/5' />
-        <Sparkle strokeWidth={0} className='size-5 fill-foreground/5' />
-        <Sparkle strokeWidth={0} className='size-7 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-3 fill-foreground/6' />
+        <Sparkle strokeWidth={0} className='size-5 fill-foreground/7' />
+        <Sparkle strokeWidth={0} className='size-7 fill-foreground/8' />
         <h1 className='text-center text-2xl sm:text-3xl md:text-4xl font-bold font-sans-special'>
           {title}
         </h1>
-        <Sparkle strokeWidth={0} className='size-7 fill-foreground/5' />
-        <Sparkle strokeWidth={0} className='size-5 fill-foreground/5' />
-        <Sparkle strokeWidth={0} className='size-3 fill-foreground/5' />
+        <Sparkle strokeWidth={0} className='size-7 fill-foreground/8' />
+        <Sparkle strokeWidth={0} className='size-5 fill-foreground/7' />
+        <Sparkle strokeWidth={0} className='size-3 fill-foreground/6' />
       </div>
       <h2 className='text-base md:text-lg text-center text-foreground-secondary'>
         {description}
