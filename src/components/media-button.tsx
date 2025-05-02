@@ -27,6 +27,7 @@ type MediaButtonProps =
       img: StaticImageData;
       previewImage?: never;
       video?: never;
+      noCopy?: never;
       size?: MagneticSize;
       isOpen?: never;
       index?: never;
@@ -38,6 +39,7 @@ type MediaButtonProps =
       previewImage: StaticImageData;
       video: string;
       img?: never;
+      noCopy?: boolean;
       size?: MagneticSize;
       isOpen?: boolean;
       index: number;
@@ -50,6 +52,7 @@ export function MediaButton({
   img,
   previewImage,
   video,
+  noCopy = false,
   size = 'lg',
   isTilt = false,
   isOpen = false,
@@ -120,22 +123,24 @@ export function MediaButton({
               </VisuallyHidden>
               {video && (
                 <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
-                  <div className='absolute z-1 bottom-3 right-3'>
-                    <Button
-                      variant='default'
-                      size='xs'
-                      className='rounded-full p-3'
-                      onClick={() => {
-                        navigator.clipboard.writeText(
-                          `${process.env
-                            .NEXT_PUBLIC_URL!}${pathname}?video=${index}`
-                        );
-                        toast.success(t('copyLink'));
-                      }}
-                    >
-                      <Copy className='size-4' />
-                    </Button>
-                  </div>
+                  {!noCopy && (
+                    <div className='absolute z-1 bottom-3 right-3'>
+                      <Button
+                        variant='default'
+                        size='xs'
+                        className='rounded-full p-3'
+                        onClick={() => {
+                          navigator.clipboard.writeText(
+                            `${process.env
+                              .NEXT_PUBLIC_URL!}${pathname}?video=${index}`
+                          );
+                          toast.success(t('copyLink'));
+                        }}
+                      >
+                        <Copy className='size-4' />
+                      </Button>
+                    </div>
+                  )}
                   <iframe
                     src={video}
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
