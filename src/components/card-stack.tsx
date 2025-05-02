@@ -59,7 +59,7 @@ export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
 
   return (
     <BlurFade
-      delay={1}
+      delay={5}
       className={cn(
         'fixed bottom-25 right-10 z-99',
         isCollapsed && 'pointer-events-none'

@@ -1,94 +1,130 @@
 'use client';
 
+import { SocialLink } from '@/app/[locale]/page';
 import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
-import { BlurFade } from './blur-fade';
+import { LinkButton } from './button';
+import Highlight from './highlight';
 import { MainCard, MainCardContent } from './main-card';
 import Logo from './svg/logo';
 import { TextRotate } from './text-rotate';
 
-export default function TitleBox({ delay = 0 }: { delay?: number }) {
+export default function TitleBox({
+  socialLinks,
+}: {
+  socialLinks: SocialLink[];
+}) {
   const t = useTranslations('home.titleBox');
   const messages = useMessages();
 
   return (
     <LayoutGroup>
-      <motion.div layout>
-        <BlurFade delay={delay} className='flex'>
-          <motion.div
+      <motion.div
+        layout
+        transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+      >
+        <div className='flex w-full justify-center items-center flex-col gap-6 sm:gap-8 md:gap-10'>
+          <motion.span
             layout
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
           >
             <MainCard variant='dots' className='h-fit w-fit bg-background'>
               <MainCardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
-                <BlurFade delay={delay} className='flex mb-2'>
+                <motion.span
+                  layout
+                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                  className='flex mb-2'
+                >
+                  <Logo />
+                </motion.span>
+                <motion.span
+                  layout
+                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                >
+                  {t.rich('name', {
+                    strong: (chunks: React.ReactNode) => (
+                      <span className='font-bold'>{chunks}</span>
+                    ),
+                  })}
+                </motion.span>
+                <span className='flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2'>
                   <motion.span
                     layout
-                    transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                    transition={{
+                      type: 'spring',
+                      damping: 30,
+                      stiffness: 400,
+                    }}
                   >
-                    <Logo />
+                    {t('job.prefix')}
                   </motion.span>
-                </BlurFade>
-                <BlurFade delay={delay + 0.1} className='flex'>
+                  <TextRotate
+                    texts={Object.keys(messages.home.titleBox.job.skills).map(
+                      (key) => messages.home.titleBox.job.skills[key]
+                    )}
+                    mainClassName={`px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
+                    staggerFrom={'last'}
+                    initial={{ y: '100%' }}
+                    animate={{ y: 0 }}
+                    exit={{ y: '-120%' }}
+                    staggerDuration={0.025}
+                    splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
+                    transition={{
+                      type: 'spring',
+                      damping: 30,
+                      stiffness: 400,
+                    }}
+                    rotationInterval={3000}
+                    noWrap
+                  />
                   <motion.span
                     layout
-                    transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                    transition={{
+                      type: 'spring',
+                      damping: 30,
+                      stiffness: 400,
+                    }}
                   >
-                    {t.rich('name', {
-                      strong: (chunks: React.ReactNode) => (
-                        <span className='font-bold'>{chunks}</span>
-                      ),
-                    })}
+                    {t('job.suffix')}
                   </motion.span>
-                </BlurFade>
-                <BlurFade delay={delay + 0.2} className='flex'>
-                  <span className='flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2'>
-                    <motion.span
-                      layout
-                      transition={{
-                        type: 'spring',
-                        damping: 30,
-                        stiffness: 400,
-                      }}
-                    >
-                      {t('job.prefix')}
-                    </motion.span>
-                    <TextRotate
-                      texts={Object.keys(messages.home.titleBox.job.skills).map(
-                        (key) => messages.home.titleBox.job.skills[key]
-                      )}
-                      mainClassName={`px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
-                      staggerFrom={'last'}
-                      initial={{ y: '100%' }}
-                      animate={{ y: 0 }}
-                      exit={{ y: '-120%' }}
-                      staggerDuration={0.025}
-                      splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
-                      transition={{
-                        type: 'spring',
-                        damping: 30,
-                        stiffness: 400,
-                      }}
-                      rotationInterval={3000}
-                      noWrap
-                    />
-                    <motion.span
-                      layout
-                      transition={{
-                        type: 'spring',
-                        damping: 30,
-                        stiffness: 400,
-                      }}
-                    >
-                      {t('job.suffix')}
-                    </motion.span>
-                  </span>
-                </BlurFade>
+                </span>
               </MainCardContent>
             </MainCard>
-          </motion.div>
-        </BlurFade>
+          </motion.span>
+          <motion.span
+            layout
+            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+          >
+            <p className='text-center text-sm sm:text-base md:text-lg text-foreground-secondary!'>
+              {t.rich('subtitle', {
+                highlight: (chunks: React.ReactNode) => (
+                  <Highlight>{chunks}</Highlight>
+                ),
+              })}
+            </p>
+          </motion.span>
+          <motion.span
+            layout
+            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+          >
+            <div className='flex items-center justify-center gap-3 flex-wrap'>
+              {socialLinks.map((link) => (
+                <LinkButton
+                  variant='secondary'
+                  size='sm'
+                  key={link.label}
+                  href={link.link}
+                  external
+                  className='hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1'
+                >
+                  {link.icon ?? link.icon}
+                  {link.label}
+                </LinkButton>
+              ))}
+            </div>
+          </motion.span>
+        </div>
       </motion.div>
     </LayoutGroup>
   );
