@@ -117,6 +117,8 @@ export default async function Project(props: ProjectProps) {
   const locale = await getLocale();
   const t = await getTranslations();
   let blurDelay = 0;
+  let blockIndex = 0;
+
   const relatedUrls =
     project.relatedUrls?.map((url) => ({
       ...url,
@@ -202,7 +204,7 @@ export default async function Project(props: ProjectProps) {
         <BlurFade delay={blurDelay++ / 10}>
           <Block
             title={t('caseStudies.project.projectDescription')}
-            position='left'
+            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
           >
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
               <div>{getTranslatedData(project.longDescription, locale)}</div>
@@ -225,7 +227,7 @@ export default async function Project(props: ProjectProps) {
           <BlurFade delay={blurDelay++ / 10}>
             <Block
               title={t('caseStudies.project.problem')}
-              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
               {getTranslatedData(project.problem, locale)}
             </Block>
@@ -235,7 +237,7 @@ export default async function Project(props: ProjectProps) {
           <BlurFade delay={blurDelay++ / 10}>
             <Block
               title={t('caseStudies.project.solution')}
-              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
               {getTranslatedData(project.solution, locale)}
             </Block>
@@ -245,7 +247,7 @@ export default async function Project(props: ProjectProps) {
           <BlurFade delay={blurDelay++ / 10}>
             <Block
               title={t('caseStudies.project.results')}
-              position={blurDelay % 2 === 0 ? 'right' : 'left'}
+              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
               {getTranslatedData(project.results, locale)}
             </Block>
