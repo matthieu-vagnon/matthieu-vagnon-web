@@ -805,5 +805,11 @@ export const projects: Record<string, Project> = {
         </>
       ),
     },
+    relatedUrls: [
+      {
+        name: { en: 'TotalEnergies' },
+        url: 'https://totalenergies.com',
+      },
+    ],
   },
 };
