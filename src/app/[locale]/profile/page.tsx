@@ -132,9 +132,7 @@ export default function Profile() {
                     subtitle={
                       getTranslatedData(education.degree, locale) as string
                     }
-                    badges={[
-                      getTranslatedData(education.type, locale) as string,
-                    ]}
+                    badges={getTranslatedData(education.type, locale)}
                     period={education.timeline}
                   />
                 ))}

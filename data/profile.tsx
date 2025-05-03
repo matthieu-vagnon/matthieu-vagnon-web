@@ -109,56 +109,36 @@ export const profile: Profile = {
     en: (
       <span className='flex flex-col gap-3'>
         <span>
-          I’m not just a developer — I’m a <Highlight>magician</Highlight> who:
-        </span>
-        <ul className='list-[upper-roman] list-inside'>
-          <li>
-            Leverage <Highlight>AI tools</Highlight> to enhance development and
-            design processes&apos;{' '}
-            <Highlight>speed, quality and cost-efficiency</Highlight>
-          </li>
-          <li>
-            <Highlight>Increases</Highlight> your customer loyalty
-          </li>
-          <li>
-            <Highlight>Unlocks the full potential</Highlight> of your SaaS or
-            web app
-          </li>
-          <li>
-            Makes you <Highlight>stand out</Highlight> from the competition
-          </li>
-          <li>
-            Teaches you how to <Highlight>internalize</Highlight> my competences
-          </li>
-        </ul>
-        <span>
-          I’m a front-end developer (React & Next.js expert) and digital
-          designer with a strong belief: No matter how great your product is,{' '}
-          <Highlight>
-            it’s worth nothing without a high-quality user interface
-          </Highlight>
-          . Because UI/UX is the first and most powerful lever for conversion —
-          even more than advanced features.
+          I design web and SaaS applications that are{' '}
+          <Highlight>performant, aesthetic and intuitive</Highlight>.
         </span>
         <span>
-          The truth? User experience often matters more than raw functionality.
+          Where many developers deliver &quot;functional&quot; interfaces, I go
+          further by creating experiences that make users{' '}
+          <Highlight>want to use your product</Highlight> — and come back to it.
         </span>
         <span>
-          As a hybrid developer-designer,{' '}
-          <Highlight>
-            I merge design and development into a single smooth process
-          </Highlight>
-          , which leads to:
+          I am a front-end developer, expert in React and Next.js, UI/UX
+          designer and project manager, whose conviction is that a web
+          application, regardless of what it offers,{' '}
+          <Highlight>is worthless without a quality user interface</Highlight>{' '}
+          because that&apos;s the first lever of conversion, well before
+          advanced features.
         </span>
-        <ul className='list-[upper-roman] list-inside'>
+        <span>
+          As a developer-designer, I bring a{' '}
+          <Highlight>unification of design and development processes</Highlight>
+          , which results in:
+        </span>
+        <ul className='list-decimal list-inside'>
           <li>
-            <Highlight>Faster</Highlight> delivery
+            A <Highlight>faster</Highlight> delivery
           </li>
           <li>
-            <Highlight>Pixel-perfect</Highlight> implementation
+            A <Highlight>100% faithful</Highlight> rendering of your mockups
           </li>
           <li>
-            <Highlight>Lower</Highlight> development costs
+            A <Highlight>less costly</Highlight> implementation
           </li>
         </ul>
       </span>
@@ -166,41 +146,24 @@ export const profile: Profile = {
     fr: (
       <span className='flex flex-col gap-3'>
         <span>
-          Je ne suis pas un simple développeur, je suis un
-          <Highlight>magicien</Highlight> qui :
+          Je conçois des applications web et SaaS{' '}
+          <Highlight>performantes, esthétiques et intuitives</Highlight>.
         </span>
-        <ul className='list-[upper-roman] list-inside'>
-          <li>
-            Exploite les <Highlight>outils d&apos;IA</Highlight> pour améliorer
-            les processus de développement et de design en termes de{' '}
-            <Highlight>rapidité, qualité et rentabilité</Highlight>
-          </li>
-          <li>
-            <Highlight>Améliore</Highlight> la fidélité de vos clients
-          </li>
-          <li>
-            <Highlight>Booste</Highlight> le potentiel de vos SaaS/applications
-          </li>
-          <li>
-            Vous fait <Highlight>briller</Highlight> face à la concurrence
-          </li>
-          <li>
-            Vous apprend à <Highlight>internaliser</Highlight> mes compétences
-          </li>
-        </ul>
         <span>
-          Je suis développeur front-end, expert en React et Next.js et designer
-          digital, dont la conviction est qu&apos;une application web, peu
-          importe ce qu&apos;elle apporte,{' '}
+          Là où beaucoup de développeurs livrent des interfaces
+          “fonctionnelles”, je vais plus loin en créant des expériences qui
+          donnent <Highlight>envie d’utiliser votre produit</Highlight> — et d’y
+          revenir.
+        </span>
+        <span>
+          Je suis développeur front-end, expert en React et Next.js, designer
+          UI/UX et chef de projet, dont la conviction est qu&apos;une
+          application web, peu importe ce qu&apos;elle apporte,{' '}
           <Highlight>
             ne vaut rien sans une interface utilisateur de qualité
           </Highlight>{' '}
           car c&apos;est là le premier levier de conversion, bien avant les
           features avancées.
-        </span>
-        <span>
-          La réalité c&apos;est que l&apos;expérience de l&apos;utilisateur
-          prévaut bien souvent sur les fonctionnalités brutes.
         </span>
         <span>
           En tant que développeur-designer, j&apos;apporte une{' '}
@@ -209,7 +172,7 @@ export const profile: Profile = {
           </Highlight>
           , ce qui résulte en :
         </span>
-        <ul className='list-[upper-roman] list-inside'>
+        <ul className='list-decimal list-inside'>
           <li>
             Une livraison plus <Highlight>rapide</Highlight>
           </li>
@@ -225,51 +188,35 @@ export const profile: Profile = {
     ja: (
       <span className='flex flex-col gap-3'>
         <span>
-          私はただの開発者ではありません。私は<Highlight>魔法使い</Highlight>
-          です。
-        </span>
-        <ul className='list-[upper-roman] list-inside'>
-          <li>
-            <Highlight>AIツール</Highlight>を活用して開発とデザインのプロセスの
-            <Highlight>スピード、品質、コスト効率</Highlight>を向上させる
-          </li>
-          <li>
-            <Highlight>ユーザーのロイヤリティ</Highlight>を高める
-          </li>
-          <li>
-            <Highlight>あなたのSaaSやWebアプリのポテンシャル</Highlight>
-            を最大化する
-          </li>
-          <li>
-            <Highlight>競合との差別化</Highlight>を実現する
-          </li>
-          <li>
-            <Highlight>私の能力を内面化</Highlight>する方法を教える
-          </li>
-        </ul>
-        <span>
-          私は
-          React・Next.jsのエキスパートであり、デジタルデザイナーでもあるフロントエンド開発者
-          です。 どれだけ優れたサービスでも、
-          <Highlight>質の高いUIがなければ価値はありません</Highlight>。
-          なぜなら、UI/UXこそが最も強力なコンバージョンのレバーだからです。高度な機能よりも、まずは体験。
+          <Highlight>高性能で美しく直感的な</Highlight>
+          ウェブアプリケーションとSaaSを設計しています。
         </span>
         <span>
-          実際、ユーザーが感じる「体験」は、機能そのものよりも重要になることが多いのです。
+          多くの開発者が「機能する」インターフェースを提供する中、私はさらに一歩進んで、ユーザーに
+          <Highlight>製品を使いたくなる</Highlight>体験を創り出します —
+          そして、また戻ってきたくなる体験を。
         </span>
         <span>
-          デザインと開発の両方を担える私だからこそ、
-          <Highlight>プロセスを統一</Highlight>でき、
+          私はReactとNext.jsに精通したフロントエンド開発者であり、UI/UXデザイナー、そしてプロジェクトマネージャーでもあります。私の信念は、ウェブアプリケーションがどんな機能を持っていても、
+          <Highlight>
+            質の高いユーザーインターフェースなしでは価値がない
+          </Highlight>
+          ということです。それは高度な機能よりもはるかに重要な、最初の顧客獲得の鍵だからです。
         </span>
-        <ul className='list-[upper-roman] list-inside'>
+        <span>
+          開発者兼デザイナーとして、私は
+          <Highlight>デザインと開発プロセスの統合</Highlight>
+          をもたらし、その結果：
+        </span>
+        <ul className='list-decimal list-inside'>
           <li>
-            <Highlight>開発スピードの向上</Highlight>
+            <Highlight>より迅速な</Highlight>納品
           </li>
           <li>
-            <Highlight>デザイン通りの忠実な実装</Highlight>
+            デザインモックアップに<Highlight>100%忠実な</Highlight>実装
           </li>
           <li>
-            <Highlight>コスト削減</Highlight>
+            <Highlight>コスト効率の良い</Highlight>実装
           </li>
         </ul>
       </span>
@@ -297,30 +244,30 @@ export const profile: Profile = {
         'Cursor IDE',
       ],
       position: {
-        en: 'Freelance Front-end Engineer & Digital Designer',
-        fr: 'Développeur front-end & designer digital indépendant',
-        ja: 'フリーランスのフロントエンジニア&デジタルデザイナー',
+        en: 'Front-end Engineer & Digital Designer (self-employed)',
+        fr: 'Développeur front-end & designer digital (EI)',
+        ja: 'フロントエンジニア&デジタルデザイナー（自営業）',
       },
       description: [
         {
-          en: 'Designed and developed React.js and Next.js SaaS, bringing a strong added value on user experience and less delivery time due to unified design and front-end development processes.',
-          fr: 'Conception et développement de solutions SaaS en React.js et Next.js, apportant une forte valeur ajoutée en termes d’expérience utilisateur et réduisant les délais de livraison grâce à l’unification du design et des processus de développement front-end.',
-          ja: 'React.jsとNext.jsのSaaSを設計および開発し、ユーザーエクスペリエンスの向上と、デザインとフロントエンド開発プロセスの統一による迅速な納品を実現します。',
+          en: 'Design and development of high-performance React and Next.js SaaS solutions and web applications for diverse clients ranging from local businesses to enterprise corporations across multiple industries including AI, data analytics, and more.',
+          fr: "Conception et développement de solutions SaaS et applications web en React et Next.js pour divers clients allant des entreprises locales aux grandes sociétés dans plusieurs secteurs, notamment l'IA, l'analyse de données, et plus encore.",
+          ja: 'AIやデータ分析など様々な業界の地元企業から大企業まで、多様なクライアントのためにReactとNext.jsを使用した高性能なSaaSソリューションとWebアプリケーションを設計・開発しました。',
         },
         {
-          en: 'Implemented innovative solutions to enhance user experience and optimize performance on complex projects.',
-          fr: 'Mise en œuvre de solutions innovantes pour améliorer l’expérience utilisateur et optimiser les performances sur des projets complexes.',
-          ja: '複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なソリューションを実装します。',
+          en: 'Implementation of various features in existing and complex projects.',
+          fr: 'Implémentation de fonctionalités diverses dans des projets existants et complexes.',
+          ja: '既存の複雑なプロジェクトで様々な機能を実装しました。',
         },
         {
-          en: 'Collaborated with cross-functional teams to deliver high-quality digital products that exceeded client expectations.',
-          fr: 'Collaboration avec des équipes pluridisciplinaires pour livrer des produits digitaux de haute qualité, dépassant les attentes des clients.',
-          ja: 'クロスファンクショナルチームと協力して、クライアントの期待を超える高品質なデジタルプロダクトを提供します。',
+          en: 'Implementation of innovative solutions to enhance user experience and optimize performance on existing complex projects.',
+          fr: "Mise en œuvre de solutions innovantes pour améliorer l'expérience utilisateur et optimiser les performances de projets existants.",
+          ja: '既存の複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なソリューションを実装しました。',
         },
         {
-          en: 'Worked on AI-based web applications, multiple SaaS, ...',
-          fr: 'Contribution à des applications web basées sur l’IA ainsi qu’à plusieurs solutions SaaS, etc.',
-          ja: 'AIベースのウェブアプリケーション、複数のSaaS、...の開発に貢献しました。',
+          en: 'Collaboration with and management of cross-functional teams to deliver high-quality products that exceeded client expectations.',
+          fr: "Collaboration et management d'équipes pluridisciplinaires pour livrer des produits de haute qualité, dépassant les attentes des clients.",
+          ja: '多機能チームと協力し管理して、クライアントの期待を超える高品質な製品を提供しました。',
         },
       ],
       timeline: `2024 - ${new Date().getFullYear()}`,
@@ -349,24 +296,19 @@ export const profile: Profile = {
       },
       description: [
         {
-          en: 'Developed multiple React.js web applications to display AI-generated data for Predictive Layer (now owned by TotalEnergies).',
-          fr: 'Développement de plusieurs applications web en React.js pour afficher des données générées par l’IA pour Predictive Layer (désormais propriété de TotalEnergies).',
-          ja: 'Predictive Layer（現在はTotalEnergiesの所有）によって生成されたAIデータを表示するためのReact.jsのWebアプリケーションを開発しました。',
+          en: "Development of multiple React.js web applications to display AI-generated data for Predictive Layer (TotalEnergies' property).",
+          fr: 'Développement de plusieurs applications web en React.js pour afficher des données générées par l’IA pour Predictive Layer (propriété de TotalEnergies).',
+          ja: 'Predictive Layer（TotalEnergiesの所有）のためにAIで生成されたデータを表示する複数のReact.jsウェブアプリケーションを開発しました。',
         },
         {
-          en: 'Was involved in both design and development processes and collaborated with a back-end engineer.',
+          en: 'Participation in both design and development processes and collaboration with a back-end engineer.',
           fr: 'Participation aux processus de design et de développement, en collaboration avec un ingénieur back-end.',
           ja: 'デザインと開発の両方に関与し、バックエンドエンジニアと協力しました。',
         },
         {
-          en: 'Utilized skills in front-end development and digital design to create visually appealing and functional interfaces.',
-          fr: 'Mise à profit des compétences en développement front-end et en design digital pour créer des interfaces à la fois esthétiques et fonctionnelles.',
-          ja: 'フロントエンド開発とデジタルデザインのスキルを活用して、視覚的に魅力的で機能的なインターフェースを作成しました。',
-        },
-        {
-          en: 'Worked as an independent with an exclusivity contract with Predictive Layer.',
-          fr: 'Travail en tant qu’indépendant sous contrat d’exclusivité avec Predictive Layer.',
-          ja: 'Predictive Layerとの独占契約で独立して働きました。',
+          en: 'Utilization of advanced skills in front-end development and UI/UX design to create visually appealing and functional interfaces.',
+          fr: 'Utilisation de compétences avancées en développement front-end et en design UI/UX pour créer des interfaces à la fois esthétiques et fonctionnelles.',
+          ja: 'フロントエンド開発とUI/UXデザインのスキルを活用して、視覚的に魅力的で機能的なインターフェースを作成しました。',
         },
       ],
       timeline: '2022 - 2024',
@@ -382,19 +324,14 @@ export const profile: Profile = {
       },
       description: [
         {
-          en: 'Developed fully customized themes on WordPress websites for Influactive in Lyon, France.',
-          fr: 'Développement de thèmes WordPress entièrement personnalisés pour Influactive à Lyon, France.',
-          ja: 'Lyon, FranceのInfluactiveのWordPressサイトに完全にカスタマイズされたテーマを開発しました。',
+          en: 'Development of fully customized themes on WordPress websites.',
+          fr: 'Développement de thèmes WordPress entièrement personnalisés.',
+          ja: '完全にカスタマイズされたテーマをWordPressサイトに開発しました。',
         },
         {
-          en: 'Integrated and maintained various JavaScript functionalities to enhance user experience.',
-          fr: 'Intégration et maintenance de diverses fonctionnalités JavaScript pour améliorer l’expérience utilisateur.',
-          ja: 'JavaScriptのさまざまな機能を統合し、ユーザーエクスペリエンスを向上させました。',
-        },
-        {
-          en: 'Implemented cookie management, user tracking, and form submission features to optimize website performance.',
-          fr: 'Mise en place de la gestion des cookies, du suivi des utilisateurs et des fonctionnalités de soumission de formulaires pour optimiser les performances des sites web.',
-          ja: 'Cookie管理、ユーザートラッキング、およびフォーム送信機能を実装して、ウェブサイトのパフォーマンスを最適化しました。',
+          en: 'Integration and maintenance of various JavaScript functionalities to enhance user experience and tracking such as cookie management, admin dashboards, and more.',
+          fr: "Intégration et maintenance de diverses fonctionnalités JavaScript pour améliorer l'expérience et le suivi utilisateur, telles que des gestionnaires de cookies, des tableaux de bord, et plus encore.",
+          ja: 'クッキー管理、管理ダッシュボードなど、ユーザーエクスペリエンスとトラッキングを向上させるためのさまざまなJavaScript機能を統合し、維持しました。',
         },
       ],
       timeline: '2021 - 2022',
@@ -406,9 +343,9 @@ export const profile: Profile = {
       logo: google,
       timeline: '2024',
       type: {
-        en: 'Certification',
-        fr: 'Certification',
-        ja: '証明書',
+        en: ['Certification'],
+        fr: ['Certification'],
+        ja: ['証明書'],
       },
       degree: {
         en: 'Build Dynamic User Interfaces (UI) for Websites',
@@ -422,9 +359,9 @@ export const profile: Profile = {
       logo: toeic,
       timeline: '2024',
       type: {
-        en: 'Certification',
-        fr: 'Certification',
-        ja: '証明書',
+        en: ['Certification'],
+        fr: ['Certification'],
+        ja: ['証明書'],
       },
       degree: {
         en: 'TOEIC 900/990',
@@ -436,9 +373,9 @@ export const profile: Profile = {
       logo: meta,
       timeline: '2024',
       type: {
-        en: 'Certification',
-        fr: 'Certification',
-        ja: '証明書',
+        en: ['Certification'],
+        fr: ['Certification'],
+        ja: ['証明書'],
       },
       degree: {
         en: 'Advanced React',
@@ -452,9 +389,9 @@ export const profile: Profile = {
       logo: univLyon2,
       timeline: '2021 - 2022',
       type: {
-        en: 'School',
-        fr: 'École',
-        ja: '学校',
+        en: ['School'],
+        fr: ['École'],
+        ja: ['学校'],
       },
       degree: {
         en: 'Web Project Management',
@@ -468,9 +405,9 @@ export const profile: Profile = {
       logo: univLyon1,
       timeline: '2020 - 2021',
       type: {
-        en: 'Diploma',
-        fr: 'Diplôme',
-        ja: '学位',
+        en: ['School', 'Diploma'],
+        fr: ['École', 'Diplôme'],
+        ja: ['学校', '学位'],
       },
       degree: {
         en: 'IT Associate Degree',
@@ -484,9 +421,9 @@ export const profile: Profile = {
       logo: polytech,
       timeline: '2018 - 2020',
       type: {
-        en: 'School',
-        fr: 'École',
-        ja: '学校',
+        en: ['School'],
+        fr: ['École'],
+        ja: ['学校'],
       },
       degree: {
         en: 'Preparatory Classes',
@@ -500,9 +437,9 @@ export const profile: Profile = {
       logo: saintThomas,
       timeline: '2011 - 2018',
       type: {
-        en: 'Diploma',
-        fr: 'Diplôme',
-        ja: '学位',
+        en: ['School', 'Diploma'],
+        fr: ['École', 'Diplôme'],
+        ja: ['学校', '学位'],
       },
       degree: {
         en: 'Scientific High School Diploma with Honors',

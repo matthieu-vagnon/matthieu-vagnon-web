@@ -70,9 +70,9 @@ declare global {
       logo?: StaticImageData;
       timeline: string;
       type: {
-        en?: string;
-        fr?: string;
-        ja?: string;
+        en?: string[];
+        fr?: string[];
+        ja?: string[];
       };
       degree: {
         en?: string;
