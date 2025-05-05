@@ -9,6 +9,10 @@ import mvWeb1 from '@/public/matthieu-vagnon/web-1.png';
 import mvWeb2 from '@/public/matthieu-vagnon/web-2.png';
 import mvWeb3 from '@/public/matthieu-vagnon/web-3.png';
 import mvWeb4 from '@/public/matthieu-vagnon/web-4.png';
+import mvWeb5 from '@/public/matthieu-vagnon/web-5.png';
+import mvWeb6 from '@/public/matthieu-vagnon/web-6.png';
+import mvWeb7 from '@/public/matthieu-vagnon/web-7.png';
+import mvWeb8 from '@/public/matthieu-vagnon/web-8.png';
 import smartInterviewBuilder1 from '@/public/smart-interview/builder-1.png';
 import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png';
@@ -121,19 +125,43 @@ export const projects: Record<string, Project> = {
         },
         {
           title: {
-            en: 'Case Study Page',
-            fr: "Page d'étude de cas",
-            ja: 'ケーススタディページ',
+            en: 'Home Green',
+            fr: 'Accueil vert',
+            ja: 'ホーム緑',
           },
           image: mvWeb2,
         },
         {
           title: {
-            en: 'Video Player',
-            fr: 'Lecteur vidéo',
-            ja: 'ビデオプレーヤー',
+            en: 'Profile Page',
+            fr: 'Page de profil',
+            ja: 'プロフィールページ',
           },
           image: mvWeb3,
+        },
+        {
+          title: {
+            en: 'Image Popup',
+            fr: 'Pop-up d&apos;image',
+            ja: '画像ポップアップ',
+          },
+          image: mvWeb4,
+        },
+        {
+          title: {
+            en: 'Case Study',
+            fr: 'Étude de cas',
+            ja: 'ケーススタディ',
+          },
+          image: mvWeb5,
+        },
+        {
+          title: {
+            en: 'Contact Modal',
+            fr: 'Modale de contact',
+            ja: 'コンタクトモーダル',
+          },
+          image: mvWeb6,
         },
         {
           title: {
@@ -141,7 +169,15 @@ export const projects: Record<string, Project> = {
             fr: 'Planificateur de réunion',
             ja: 'ミーティングスケジューラー',
           },
-          image: mvWeb4,
+          image: mvWeb7,
+        },
+        {
+          title: {
+            en: 'Configuration Modal',
+            fr: 'Modale de configuration',
+            ja: '設定モーダル',
+          },
+          image: mvWeb8,
         },
       ],
     },
