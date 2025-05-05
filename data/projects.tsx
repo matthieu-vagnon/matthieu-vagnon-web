@@ -17,7 +17,7 @@ export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
     title: 'Matthieu Vagnon Web',
     year: 2025,
-    type: 'Web Application',
+    type: 'webApplication',
     shortDescription: {
       en: 'Web portfolio for Matthieu Vagnon.',
       fr: 'Portfolio web pour Matthieu Vagnon.',
@@ -136,7 +136,7 @@ export const projects: Record<string, Project> = {
   'smart-interview': {
     title: 'Smart Interview',
     year: 2024,
-    type: 'SaaS',
+    type: 'saas',
     shortDescription: {
       en: 'A platform to create AI-powered questionnaires and mass analyze responses.',
       fr: "Une plateforme pour créer des questionnaires alimentés par l'IA et analyser les réponses en masse.",
@@ -411,7 +411,7 @@ export const projects: Record<string, Project> = {
   'koryori-ya': {
     title: 'Koryori Ya Ozaki',
     year: 2024,
-    type: 'Web Application',
+    type: 'webApplication',
     shortDescription: {
       en: 'A simple web application for a Japanese restaurant.',
       fr: 'Une application web simple pour un restaurant japonais.',
@@ -638,7 +638,7 @@ export const projects: Record<string, Project> = {
   crystal: {
     title: 'Crystal',
     year: 2023,
-    type: 'SaaS',
+    type: 'saas',
     shortDescription: {
       en: 'A platform to view and manage AI-powered trading tools.',
       fr: "Une plateforme pour visualiser et gérer des outils de trading alimentés par l'IA.",

@@ -88,6 +88,13 @@
           "title": "{name} - Matthieu Vagnon"
         }
       },
+      "type": {
+        "webApplication": "Web Application",
+        "saas": "SaaS",
+        "website": "Website",
+        "contribution": "Contribution",
+        "other": "Other"
+      },
       "title": "{name} Case Study",
       "projectDescription": "Project Description",
       "skills": "Skills",

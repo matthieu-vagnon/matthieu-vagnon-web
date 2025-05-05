@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/navigation';
 import { cn, getTranslatedData } from '@/lib/utils';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import Magnetic from './magnetic';
 
@@ -10,19 +10,21 @@ type ProjectCardProps = {
   project: Project;
 };
 
+export const typeVariants = {
+  webApplication: 'bg-blue-500',
+  saas: 'bg-green-500',
+  website: 'bg-pink-500',
+  contribution: 'bg-yellow-500',
+  other: 'bg-gray-500',
+};
+
 export default function ProjectCard({
   coverImage,
   url,
   project,
 }: ProjectCardProps) {
   const locale = useLocale();
-
-  const typeVariants = {
-    'Web Application': 'bg-blue-500',
-    SaaS: 'bg-green-500',
-    Contribution: 'bg-yellow-500',
-    Other: 'bg-gray-500',
-  };
+  const t = useTranslations('caseStudies.project.type');
 
   return (
     <Magnetic size='lg' className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>
@@ -33,10 +35,10 @@ export default function ProjectCard({
         <div
           className={cn(
             'rounded-full px-2 py-1 text-xs font-medium z-2',
-            typeVariants[project.type]
+            typeVariants[project.type as keyof typeof typeVariants]
           )}
         >
-          {project.type}
+          {t(project.type)}
         </div>
         <div className='flex flex-row items-baseline gap-1 sm:gap-2 max-w-full'>
           <h3 className='text-md sm:text-xl md:text-2xl font-bold text-white z-1 font-sans-special overflow-x-hidden text-ellipsis whitespace-nowrap'>

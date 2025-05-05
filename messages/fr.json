@@ -90,6 +90,13 @@
           "title": "{name} - Matthieu Vagnon"
         }
       },
+      "type": {
+        "webApplication": "Application web",
+        "saas": "SaaS",
+        "website": "Site web",
+        "contribution": "Contribution",
+        "other": "Autre"
+      },
       "title": "Cas pratique {name}",
       "projectDescription": "Description du projet",
       "skills": "Compétences",

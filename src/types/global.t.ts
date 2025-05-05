@@ -1,3 +1,4 @@
+import { typeVariants } from '@/components/project-card';
 import { StaticImageData } from 'next/image';
 
 declare global {
@@ -85,7 +86,7 @@ declare global {
   type Project = {
     title: string;
     year: number;
-    type: 'Web Application' | 'SaaS' | 'Contribution' | 'Other';
+    type: keyof typeof typeVariants;
     shortDescription: {
       en?: string;
       fr?: string;

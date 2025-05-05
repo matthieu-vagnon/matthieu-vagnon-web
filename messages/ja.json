@@ -88,6 +88,13 @@
           "title": "{name} - ヴァンニョン・マチュ"
         }
       },
+      "type": {
+        "webApplication": "Webアプリケーション",
+        "saas": "SaaS",
+        "website": "ウェブサイト",
+        "contribution": "貢献",
+        "other": "その他"
+      },
       "title": "{name}ケーススタディ",
       "projectDescription": "プロジェクトの説明",
       "skills": "スキル",
