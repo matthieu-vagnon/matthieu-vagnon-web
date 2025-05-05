@@ -13,6 +13,7 @@ import mvWeb5 from '@/public/matthieu-vagnon/web-5.png';
 import mvWeb6 from '@/public/matthieu-vagnon/web-6.png';
 import mvWeb7 from '@/public/matthieu-vagnon/web-7.png';
 import mvWeb8 from '@/public/matthieu-vagnon/web-8.png';
+import mvWebPreview1 from '@/public/matthieu-vagnon/web-preview-1.png';
 import smartInterviewBuilder1 from '@/public/smart-interview/builder-1.png';
 import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png';
@@ -118,6 +119,13 @@ export const projects: Record<string, Project> = {
     ],
     previewImg: mvWeb1,
     gallery: {
+      video: [
+        {
+          title: { en: 'Tour', fr: 'Tour', ja: 'ツアー' },
+          src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
+          previewImage: mvWebPreview1,
+        },
+      ],
       img: [
         {
           title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
