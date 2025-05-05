@@ -1,3 +1,5 @@
+import { LinkButton } from '@/components/button';
+import Code from '@/components/code';
 import Highlight from '@/components/highlight';
 import koryoriYa1 from '@/public/koryori-ya/web-1.png';
 import koryoriYa2 from '@/public/koryori-ya/web-2.png';
@@ -15,7 +17,7 @@ import smartInterviewBuilder5 from '@/public/smart-interview/builder-5.png';
 
 export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
-    title: 'Matthieu Vagnon Web',
+    title: 'Matthieu Vagnon',
     year: 2025,
     type: 'webApplication',
     shortDescription: {
@@ -26,28 +28,42 @@ export const projects: Record<string, Project> = {
     longDescription: {
       en: (
         <>
-          A simple <Highlight>portfolio web application</Highlight> made with{' '}
-          <Highlight>React and Next.js</Highlight> letting you watch my case
-          studies, my profile, contact me and access my links in a simple way on{' '}
-          <Highlight>mobile and desktop</Highlight>.
+          This is a <Highlight>React and Next.js</Highlight> web application
+          that allows me to present my <Highlight>profile</Highlight>, including
+          education, degrees, experiences and skills, several of my{' '}
+          <Highlight>past projects</Highlight> as well as their respective{' '}
+          <Highlight>case studies</Highlight>. This application also allows you
+          to <Highlight>schedule appointments or contact</Highlight> me in a few
+          clicks while offering a{' '}
+          <Highlight>pleasant experience on mobile and desktop</Highlight>.
         </>
       ),
       fr: (
         <>
-          Une <Highlight>application web portfolio</Highlight> faite avec{' '}
-          <Highlight>React et Next.js</Highlight> vous permettant de regarder
-          mes études de cas, mon profil, me contacter et accéder à mes liens de
-          manière simple sur <Highlight>mobile et desktop</Highlight>.
+          Il s&apos;agit d&apos;une application web{' '}
+          <Highlight>React et Next.js</Highlight> qui me permet de présenter mon{' '}
+          <Highlight>profil</Highlight>, incluant éducation, diplômes,
+          expériences et compétences, plusieurs de mes{' '}
+          <Highlight>projets passés</Highlight> ainsi que leur{' '}
+          <Highlight>étude de cas</Highlight> respectives. Cette application
+          permets également de{' '}
+          <Highlight>prendre rendez-vous ou de prendre contact</Highlight> avec
+          moi en quelques clics tout en proposant une{' '}
+          <Highlight>expérience agréable sur mobile et desktop</Highlight>.
         </>
       ),
       ja: (
         <>
-          <Highlight>React et Next.js</Highlight>
-          で作られたシンプルな
-          <Highlight>ポートフォリオウェブアプリケーション</Highlight>
-          で、私のケーススタディ、プロフィールの閲覧、連絡先やリンクへのアクセスが
-          <Highlight>モバイルとデスクトップ</Highlight>
-          で簡単にできます。
+          これは<Highlight>ReactとNext.js</Highlight>を使用した
+          <Highlight>ウェブアプリケーション</Highlight>
+          で、教育、学位、経験、スキルなどの
+          <Highlight>プロフィール</Highlight>、
+          <Highlight>過去のプロジェクト</Highlight>、 およびそれぞれの
+          <Highlight>ケーススタディ</Highlight>を紹介することができます。
+          このアプリケーションでは、数回クリックするだけで
+          <Highlight>予約や連絡</Highlight>
+          ができ、<Highlight>モバイルとデスクトップで快適な体験</Highlight>
+          を提供します。
         </>
       ),
     },
@@ -59,6 +75,7 @@ export const projects: Record<string, Project> = {
     skills: {
       en: [
         'Web Design',
+        'UI/UX Design',
         'Responsive Design',
         'Web Project Management',
         'Deployment',
@@ -66,6 +83,7 @@ export const projects: Record<string, Project> = {
       ],
       fr: [
         'Design web',
+        'Design UI/UX',
         'Responsive design',
         'Gestion de projet web',
         'Déploiement',
@@ -73,6 +91,7 @@ export const projects: Record<string, Project> = {
       ],
       ja: [
         'ウェブデザイン',
+        'UI/UXデザイン',
         'レスポンシブデザイン',
         'Webプロジェクト管理',
         'デプロイ',
@@ -86,12 +105,12 @@ export const projects: Record<string, Project> = {
       'Next.js',
       'TypeScript',
       'Tailwind CSS',
-      'Shadcn UI',
+      'Motion',
+      'ChatGPT',
+      'Cursor IDE',
       'Vercel',
       'Node.js',
       'Figma',
-      'ChatGPT',
-      'Cursor IDE',
     ],
     previewImg: mvWeb1,
     gallery: {
@@ -126,9 +145,187 @@ export const projects: Record<string, Project> = {
         },
       ],
     },
+    problem: {
+      en: [
+        <>
+          Need to produce a <Highlight>dynamic and performant</Highlight> React
+          application to demonstrate my skills with public source code while
+          maintaining <Highlight>high-quality SEO</Highlight>.
+        </>,
+        <>
+          <Highlight>Limited time</Highlight> to work on this application in
+          parallel with my other projects.
+        </>,
+        <>
+          <Highlight>No back-end infrastructure</Highlight> to host the data
+          (profile, projects, ...).
+        </>,
+      ],
+      fr: [
+        <>
+          Nécessité de produire une application React{' '}
+          <Highlight>dynamique et performante</Highlight> pour démontrer mes
+          compétences avec un code source publique tout en maintenant un{' '}
+          <Highlight>SEO de haute qualité</Highlight>.
+        </>,
+        <>
+          <Highlight>Peu de temps</Highlight> pour travailler sur cette
+          application en parallèle de mes autres projets.
+        </>,
+        <>
+          <Highlight>Pas d&apos;infrastructure back-end</Highlight> pour
+          héberger les données (profil, projets, ...).
+        </>,
+      ],
+      ja: [
+        <>
+          <Highlight>動的でパフォーマンスの高い</Highlight>
+          Reactアプリケーションを制作し、<Highlight>高品質なSEO</Highlight>
+          を維持しながら、公開ソースコードで私のスキルを実証する必要がありました。
+        </>,
+        <>
+          <Highlight>限られた時間</Highlight>
+          で他のプロジェクトと並行してこのアプリケーションに取り組む必要がありました。
+        </>,
+        <>
+          データ（プロフィール、プロジェクトなど）をホストするための
+          <Highlight>
+            バックエンドインフラストラクチャがありませんでした
+          </Highlight>
+          。
+        </>,
+      ],
+    },
+    solution: {
+      en: [
+        <>
+          Decision to use <Highlight>Next.js</Highlight> as a framework to{' '}
+          <Highlight>ensure SEO</Highlight> while leveraging the app router to
+          manage multiple pages.
+        </>,
+        <>
+          Use of component libraries like{' '}
+          <LinkButton external href='https://www.shadcn.net'>
+            ShadCN
+          </LinkButton>{' '}
+          whose strength is <Highlight>customization</Highlight> to accelerate
+          development while ensuring{' '}
+          <Highlight>high code quality and performance optimization</Highlight>.
+        </>,
+        <>
+          In order to <Highlight>properly manage application data</Highlight>{' '}
+          without having to develop a complete back-end infrastructure, I
+          created a <Code>/data</Code> folder in which I stored the data needed
+          for the application.
+        </>,
+      ],
+      fr: [
+        <>
+          Décision d&apos;utiliser <Highlight>Next.js</Highlight> comme
+          framework afin de <Highlight>garantir le SEO</Highlight> tout en
+          tirant profit de l&apos;app router pour gérer les pages multiples.
+        </>,
+        <>
+          Utilisation de librairies de composants comme{' '}
+          <LinkButton external href='https://www.shadcn.net'>
+            ShadCN
+          </LinkButton>{' '}
+          dont la force est la
+          <Highlight>customisation</Highlight> pour accélérer le développement
+          tout en garantissant{' '}
+          <Highlight>
+            une qualité de code élevée et une optimisation des performances
+          </Highlight>
+          .
+        </>,
+        <>
+          Afin de{' '}
+          <Highlight>
+            gérer les données de l&apos;application proprement
+          </Highlight>{' '}
+          sans avoir à développer une infrastructure back-end complète,
+          j&apos;ai créé un dossier <Code>/data</Code> dans lequel j&apos;ai
+          stocké les données nécessaires à l&apos;application.
+        </>,
+      ],
+      ja: [
+        <>
+          <Highlight>Next.js</Highlight>
+          をフレームワークとして使用することを決定し、
+          複数ページを管理するためにアプリルーターを活用しながら
+          <Highlight>SEOを確保</Highlight>しました。
+        </>,
+        <>
+          <Highlight>カスタマイズ性</Highlight>が強みである
+          <LinkButton external href='https://www.shadcn.net'>
+            ShadCN
+          </LinkButton>
+          などのコンポーネントライブラリを使用して、開発を加速させながら
+          <Highlight>高品質なコードとパフォーマンスの最適化</Highlight>
+          を確保しました。
+        </>,
+        <>
+          完全なバックエンドインフラストラクチャを開発することなく
+          <Highlight>アプリケーションデータを適切に管理する</Highlight>ために、
+          <Code>/data</Code>
+          フォルダを作成し、アプリケーションに必要なデータを格納しました。
+        </>,
+      ],
+    },
+    results: {
+      en: (
+        <>
+          The application is available and presents all essential information
+          about my <Highlight>profile and experiences</Highlight>. The
+          application is{' '}
+          <Highlight>pleasant to use and visually beautiful</Highlight>.
+          Visitors can easily schedule appointments thanks to a successful
+          implementation of{' '}
+          <LinkButton external href='https://cal.com'>
+            Cal.com
+          </LinkButton>
+          . The integration of{' '}
+          <Highlight>recommendations from previous clients</Highlight> is also{' '}
+          <Highlight>successful and non-invasive</Highlight>.
+        </>
+      ),
+      fr: (
+        <>
+          L&apos;application est disponible et présente toutes les informations
+          essentielles sur mon <Highlight>profil et mes expériences</Highlight>.
+          L&apos;application est{' '}
+          <Highlight>
+            agréable d&apos;utilisation est visuellement belle
+          </Highlight>
+          . Les visiteurs peuvent facilement prendre rendez-vous grâce à une
+          implémentation réussie de{' '}
+          <LinkButton external href='https://cal.com'>
+            Cal.com
+          </LinkButton>
+          . L&apos;intégration des{' '}
+          <Highlight>recommendations de précédents clients</Highlight> est
+          également <Highlight>réussie et non invasive</Highlight>.
+        </>
+      ),
+      ja: (
+        <>
+          アプリケーションは利用可能で、私の
+          <Highlight>プロフィールと経験</Highlight>
+          に関する全ての重要な情報を提示しています。アプリケーションは
+          <Highlight>使いやすく視覚的に美しい</Highlight>
+          ものになっています。訪問者は
+          <LinkButton external href='https://cal.com'>
+            Cal.com
+          </LinkButton>
+          の成功した実装のおかげで、簡単に予約を取ることができます。
+          <Highlight>以前のクライアントからの推薦</Highlight>の統合も
+          <Highlight>成功しており、押し付けがましくありません</Highlight>。
+        </>
+      ),
+    },
     relatedUrls: [
       {
-        name: { en: 'Matthieu Vagnon Web' },
+        name: { en: 'Matthieu Vagnon' },
         url: process.env.NEXT_PUBLIC_URL!,
       },
     ],

@@ -25,20 +25,20 @@ type LinkButtonProps = React.ComponentProps<'a'> &
   };
 
 const buttonVariants = cva(
-  "hover:cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
+  "hover:cursor-pointer inline-flex items-center justify-center rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
         default:
-          'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
+          'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 text-sm',
         destructive:
-          'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20',
+          'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 text-sm',
         outline:
-          'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground',
+          'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground text-sm',
         secondary:
-          'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'hover:bg-transparent hover:text-accent-foreground underline underline-offset-4 hover:opacity-80',
+          'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80 text-sm',
+        ghost: 'hover:bg-accent hover:text-accent-foreground text-sm',
+        link: 'underline underline-offset-4 hover:opacity-80',
       },
       size: {
         xs: 'gap-1',
@@ -46,10 +46,6 @@ const buttonVariants = cva(
         md: 'min-h-9 px-2 sm:px-4 py-2 gap-2',
         lg: 'min-h-10 py-2 rounded-md px-4 sm:px-6 gap-2',
       },
-    },
-    defaultVariants: {
-      variant: 'default',
-      size: 'sm',
     },
   }
 );
@@ -77,8 +73,8 @@ function ButtonWrapper({
 
 function Button({
   className,
-  variant,
-  size,
+  variant = 'default',
+  size = 'sm',
   isInline = false,
   asChild = false,
   noMagnetic = false,
@@ -103,9 +99,9 @@ function Button({
 
 function LinkButton({
   className,
-  variant,
-  size,
-  isInline = false,
+  variant = 'link',
+  size = 'xs',
+  isInline = true,
   href,
   locale,
   external = false,
@@ -126,7 +122,7 @@ function LinkButton({
         locale={locale}
         target={external ? '_blank' : '_self'}
         className={cn(
-          'cursor-pointer',
+          'cursor-pointer ml-0.5',
           disabled && 'pointer-events-none opacity-50',
           buttonVariants({ variant, size, className })
         )}

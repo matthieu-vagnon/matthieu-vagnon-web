@@ -24,7 +24,7 @@ function LanguageButton({ lang, title }: { lang: string; title: string }) {
 
 export default function LanguageSwitch({ className }: { className?: string }) {
   return (
-    <div className={cn('flex flex-row gap-2', className)}>
+    <div className={cn('flex flex-row gap-2 text-sm', className)}>
       <LanguageButton lang='en' title='English' />
       <span>-</span>
       <LanguageButton lang='fr' title='Français' />

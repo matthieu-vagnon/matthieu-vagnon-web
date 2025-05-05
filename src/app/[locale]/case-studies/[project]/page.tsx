@@ -230,7 +230,7 @@ export default async function Project(props: ProjectProps) {
               title={t('caseStudies.project.problem')}
               position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
-              <Ul gap='md'>
+              <Ul gap='sm'>
                 {getTranslatedData(project.problem, locale).map(
                   (item: React.ReactNode, index: number) => (
                     <Li key={index}>{item}</Li>
@@ -246,7 +246,7 @@ export default async function Project(props: ProjectProps) {
               title={t('caseStudies.project.solution')}
               position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
-              <Ul gap='md'>
+              <Ul gap='sm'>
                 {getTranslatedData(project.solution, locale).map(
                   (item: React.ReactNode, index: number) => (
                     <Li key={index}>{item}</Li>

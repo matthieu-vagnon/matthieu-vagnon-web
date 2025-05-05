@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import {
+  Courier_Prime,
   Noto_Sans_JP,
   Signika_Negative,
   Source_Sans_3,
@@ -38,6 +39,12 @@ const notoSansJP = Noto_Sans_JP({
 
 const zenAntique = Zen_Antique({
   variable: '--font-zen-antique',
+  subsets: ['latin'],
+  weight: '400',
+});
+
+const courierPrime = Courier_Prime({
+  variable: '--font-courier-prime',
   subsets: ['latin'],
   weight: '400',
 });
@@ -93,7 +100,7 @@ export default function RootLayout({
             <MagneticStatusProvider>
               <AccentColorProvider>
                 <body
-                  className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} antialiased`}
+                  className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} antialiased`}
                 >
                   <NextTopLoader
                     showSpinner={false}
