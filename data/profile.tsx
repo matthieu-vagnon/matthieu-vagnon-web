@@ -1,4 +1,5 @@
 import Highlight from '@/components/highlight';
+import { Li, Ul } from '@/components/list';
 import CssIcon from '@/components/svg/css';
 import HtmlIcon from '@/components/svg/html';
 import JavaScriptIcon from '@/components/svg/javascript';
@@ -130,17 +131,17 @@ export const profile: Profile = {
           <Highlight>unification of design and development processes</Highlight>
           , which results in:
         </span>
-        <ul className='list-decimal list-inside'>
-          <li>
+        <Ul>
+          <Li>
             A <Highlight>faster</Highlight> delivery
-          </li>
-          <li>
+          </Li>
+          <Li>
             A <Highlight>100% faithful</Highlight> rendering of your mockups
-          </li>
-          <li>
+          </Li>
+          <Li>
             A <Highlight>less costly</Highlight> implementation
-          </li>
-        </ul>
+          </Li>
+        </Ul>
       </>
     ),
     fr: (
@@ -172,17 +173,17 @@ export const profile: Profile = {
           </Highlight>
           , ce qui résulte en :
         </span>
-        <ul className='list-decimal list-inside'>
-          <li>
+        <Ul>
+          <Li>
             Une livraison plus <Highlight>rapide</Highlight>
-          </li>
-          <li>
+          </Li>
+          <Li>
             Un rendu <Highlight>100% fidèle</Highlight> à vos maquettes
-          </li>
-          <li>
+          </Li>
+          <Li>
             Une mise en œuvre <Highlight>moins coûteuse</Highlight>
-          </li>
-        </ul>
+          </Li>
+        </Ul>
       </>
     ),
     ja: (
@@ -208,17 +209,17 @@ export const profile: Profile = {
           <Highlight>デザインと開発プロセスの統合</Highlight>
           をもたらし、その結果：
         </span>
-        <ul className='list-decimal list-inside'>
-          <li>
+        <Ul>
+          <Li>
             <Highlight>より迅速な</Highlight>納品
-          </li>
-          <li>
+          </Li>
+          <Li>
             デザインモックアップに<Highlight>100%忠実な</Highlight>実装
-          </li>
-          <li>
+          </Li>
+          <Li>
             <Highlight>コスト効率の良い</Highlight>実装
-          </li>
-        </ul>
+          </Li>
+        </Ul>
       </>
     ),
   },
