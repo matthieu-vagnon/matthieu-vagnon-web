@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from '@/components/carousel';
 import Header from '@/components/header';
+import { Li, Ul } from '@/components/list';
 import { MediaButton } from '@/components/media-button';
 import PageTitle from '@/components/page-title';
 import { ScrollProgress } from '@/components/scroll-progress';
@@ -229,7 +230,13 @@ export default async function Project(props: ProjectProps) {
               title={t('caseStudies.project.problem')}
               position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
-              {getTranslatedData(project.problem, locale)}
+              <Ul gap='md'>
+                {getTranslatedData(project.problem, locale).map(
+                  (item: React.ReactNode, index: number) => (
+                    <Li key={index}>{item}</Li>
+                  )
+                )}
+              </Ul>
             </Block>
           </BlurFade>
         )}
@@ -239,7 +246,13 @@ export default async function Project(props: ProjectProps) {
               title={t('caseStudies.project.solution')}
               position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
             >
-              {getTranslatedData(project.solution, locale)}
+              <Ul gap='md'>
+                {getTranslatedData(project.solution, locale).map(
+                  (item: React.ReactNode, index: number) => (
+                    <Li key={index}>{item}</Li>
+                  )
+                )}
+              </Ul>
             </Block>
           </BlurFade>
         )}

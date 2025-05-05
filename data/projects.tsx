@@ -277,7 +277,7 @@ export const projects: Record<string, Project> = {
       ],
     },
     problem: {
-      en: (
+      en: [
         <>
           The challenge of this project was to make the user experience
           pleasant. Having reached a stage where the core features were already
@@ -287,9 +287,9 @@ export const projects: Record<string, Project> = {
           <Highlight>missing essential front-end features</Highlight> but huge
           potential (talented back-end engineers had already been recruited for
           the application and were doing good work).
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           Le défi de ce projet était de rendre l&apos;expérience
           d&apos;utilisation agréable. Étant arrivé à un stade où les
@@ -301,20 +301,20 @@ export const projects: Record<string, Project> = {
           <Highlight>fonctionnalités front essentielles manquantes</Highlight>{' '}
           mais un potentiel énorme (des ingénieurs back-end talentueux avaient
           déjà été recrutés pour l&apos;application et faisaient du bon boulot).
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           このプロジェクトの課題は、ユーザー体験を快適にすることでした。基本機能がすでに本番環境にある段階で参加したため、コードに慣れるのに自然と時間がかかりました。状況は以下の通りでした：
           <Highlight>改善が必要なUX</Highlight>、
           <Highlight>シンプルで少し時代遅れなUI</Highlight>、
           <Highlight>重要なフロントエンド機能の不足</Highlight>
           がありましたが、（優秀なバックエンドエンジニアがすでに採用され、良い仕事をしていた）大きな可能性を秘めていました。
-        </>
-      ),
+        </>,
+      ],
     },
     solution: {
-      en: (
+      en: [
         <>
           To begin with, we had to start with the fundamentals. Knowing that
           Matthieu S., the project manager, was already presenting the product
@@ -327,9 +327,9 @@ export const projects: Record<string, Project> = {
           <Highlight>secondary features</Highlight> and{' '}
           <Highlight>secondary design elements</Highlight> (spacings, colors,
           ...).
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           Pour commencer, il a fallu commencer par les fondamentaux. Sachant que
           Matthieu S., le responsable du projet présentait déjà le produit à des
@@ -344,9 +344,9 @@ export const projects: Record<string, Project> = {
           <Highlight>fonctionnalités secondaires</Highlight> et sur les{' '}
           <Highlight>éléments de design secondaires</Highlight> (spacings,
           couleurs, ...).
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           まず、基本的なところから始める必要がありました。プロジェクトマネージャーのMatthieu
           S.が販売目的で製品をすでにプレゼンテーションしていたため、最初にUIとUXに焦点を当てました。
@@ -357,8 +357,8 @@ export const projects: Record<string, Project> = {
           <Highlight>二次的な機能</Highlight>と
           <Highlight>二次的なデザイン要素</Highlight>
           （間隔、色など）の実装に集中することができました。
-        </>
-      ),
+        </>,
+      ],
     },
     results: {
       en: (
@@ -518,7 +518,7 @@ export const projects: Record<string, Project> = {
       ],
     },
     problem: {
-      en: (
+      en: [
         <>
           The challenge of this project was clearly to design a clean interface
           and develop a dynamic and interactive page in a{' '}
@@ -527,9 +527,9 @@ export const projects: Record<string, Project> = {
           </Highlight>{' '}
           while needing to <Highlight>limit infrastructure costs</Highlight>{' '}
           (and thus without using &quot;drag and drop&quot; tools).
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           Le défi de ce projet à clairement été de concevoir un design propre et
           de développer une page dynamique et interractive en un{' '}
@@ -539,9 +539,9 @@ export const projects: Record<string, Project> = {
           tout avec le besoin de
           <Highlight>limiter les dépenses d&apos;infrastructure</Highlight> (et
           donc sans l&apos;utilisation d&apos;outils &quot;drag and drop&quot;).
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           このプロジェクトの課題は、
           <Highlight>
@@ -550,11 +550,11 @@ export const projects: Record<string, Project> = {
           でクリーンなインターフェースを設計し、ダイナミックでインタラクティブなページを開発することでした。また、
           <Highlight>インフラコストを抑える必要があり</Highlight>
           （そのため「ドラッグ＆ドロップ」ツールは使用できませんでした）。
-        </>
-      ),
+        </>,
+      ],
     },
     solution: {
-      en: (
+      en: [
         <>
           The solution was to create a <Highlight>React app</Highlight> to meet
           the need for <Highlight>interactivity</Highlight> without overloading
@@ -564,9 +564,9 @@ export const projects: Record<string, Project> = {
           nights and the development was also <Highlight>fast</Highlight> since
           it&apos;s a simple page (and therefore no need to manage too many
           libraries like react-router).
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           La solution à été de créer une <Highlight>app React</Highlight> pour
           répondre au besoin d&apos;
@@ -578,9 +578,9 @@ export const projects: Record<string, Project> = {
           <Highlight>rapide</Highlight> étant donné que c&apos;est une simple
           page (et donc pas besoin de gérer des trop de librairies comme
           react-router).
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           解決策として、<Highlight>インタラクティブ性</Highlight>
           のニーズに応えるため、様々なフレームワークでプロジェクトを過負荷にすることなく、できるだけ早く目的を達成するために
@@ -588,8 +588,8 @@ export const projects: Record<string, Project> = {
           <Highlight>Figmaで記録的な速さ</Highlight>
           でモックアップを作成し、シンプルなページであるため（react-routerなどのライブラリを多く管理する必要がない）、開発も
           <Highlight>迅速</Highlight>に進めることができました。
-        </>
-      ),
+        </>,
+      ],
     },
     results: {
       en: (
@@ -721,61 +721,61 @@ export const projects: Record<string, Project> = {
       'Figma',
     ],
     problem: {
-      en: (
+      en: [
         <>
           The challenge of this project was to be able to display a{' '}
           <Highlight>lot of data</Highlight> in the form of{' '}
           <Highlight>charts</Highlight> without{' '}
           <Highlight>overloading the user</Highlight>
           with too many options and information.
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           Le défi de ce projet était de pouvoir afficher une{' '}
           <Highlight>grande quantité de données</Highlight> sous forme de{' '}
           <Highlight>graphiques</Highlight> sans{' '}
           <Highlight>surcharger l&apos;utilisateur</Highlight>
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           このプロジェクトの課題は、
           <Highlight>大量のデータ</Highlight>を<Highlight>グラフ</Highlight>
           の形で表示しながら、ユーザーに
           <Highlight>過度な負担をかけない</Highlight>
           ようにすることでした。
-        </>
-      ),
+        </>,
+      ],
     },
     solution: {
-      en: (
+      en: [
         <>
           Create a tool with <Highlight>multiple pages</Highlight>,{' '}
           <Highlight>clear navigation</Highlight>,{' '}
           <Highlight>managed spacing</Highlight> and{' '}
           <Highlight>beautiful charts</Highlight> thanks to{' '}
           <Highlight>MUI-X</Highlight>.
-        </>
-      ),
-      fr: (
+        </>,
+      ],
+      fr: [
         <>
           Create a tool with <Highlight>multiple pages</Highlight>,{' '}
           <Highlight>clear navigation</Highlight>,{' '}
           <Highlight>managed spacing</Highlight> and{' '}
           <Highlight>beautiful charts</Highlight> thanks to{' '}
           <Highlight>MUI-X</Highlight>.
-        </>
-      ),
-      ja: (
+        </>,
+      ],
+      ja: [
         <>
           <Highlight>複数のページ</Highlight>、
           <Highlight>明確なナビゲーション</Highlight>、
           <Highlight>適切な間隔</Highlight>
           、そして<Highlight>MUI-X</Highlight>による
           <Highlight>美しいグラフ</Highlight>を備えたツールを作成しました。
-        </>
-      ),
+        </>,
+      ],
     },
     results: {
       en: (

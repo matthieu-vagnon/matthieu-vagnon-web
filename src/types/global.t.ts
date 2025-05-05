@@ -129,14 +129,14 @@ declare global {
       }[];
     };
     problem?: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
+      en?: React.ReactNode[];
+      fr?: React.ReactNode[];
+      ja?: React.ReactNode[];
     };
     solution?: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
+      en?: React.ReactNode[];
+      fr?: React.ReactNode[];
+      ja?: React.ReactNode[];
     };
     results?: {
       en?: React.ReactNode;
