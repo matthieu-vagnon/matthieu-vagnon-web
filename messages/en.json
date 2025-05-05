@@ -60,7 +60,7 @@
       }
     },
     "title": "Profile",
-    "description": "A summary of my skills, work and education.",
+    "description": "A complete summary of my skills, work and education.",
     "about": "About",
     "frontendStack": "Front-End Stack",
     "deploymentStack": "Deployment Stack",
@@ -97,7 +97,7 @@
       "results": "Result"
     },
     "title": "Case Studies",
-    "description": "Here are some of the projects I've worked on."
+    "description": "Here are some of the projects I've worked on as a freelancer."
   },
   "getInTouch": {
     "title": "Get in Touch",

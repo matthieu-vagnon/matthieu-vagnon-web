@@ -107,7 +107,7 @@ export const profile: Profile = {
   designStack: ['Figma', 'Pixelmator', 'ChatGPT'],
   about: {
     en: (
-      <span className='flex flex-col gap-3'>
+      <>
         <span>
           I design web and SaaS applications that are{' '}
           <Highlight>performant, aesthetic and intuitive</Highlight>.
@@ -141,10 +141,10 @@ export const profile: Profile = {
             A <Highlight>less costly</Highlight> implementation
           </li>
         </ul>
-      </span>
+      </>
     ),
     fr: (
-      <span className='flex flex-col gap-3'>
+      <>
         <span>
           Je conçois des applications web et SaaS{' '}
           <Highlight>performantes, esthétiques et intuitives</Highlight>.
@@ -183,10 +183,10 @@ export const profile: Profile = {
             Une mise en œuvre <Highlight>moins coûteuse</Highlight>
           </li>
         </ul>
-      </span>
+      </>
     ),
     ja: (
-      <span className='flex flex-col gap-3'>
+      <>
         <span>
           <Highlight>高性能で美しく直感的な</Highlight>
           ウェブアプリケーションとSaaSを設計しています。
@@ -219,7 +219,7 @@ export const profile: Profile = {
             <Highlight>コスト効率の良い</Highlight>実装
           </li>
         </ul>
-      </span>
+      </>
     ),
   },
   experience: [

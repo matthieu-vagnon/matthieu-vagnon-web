@@ -61,7 +61,7 @@
       }
     },
     "title": "プロフィール",
-    "description": "私のスキル、仕事、教育の要約。",
+    "description": "私のスキル、仕事、教育の完全な要約。",
     "about": "私について",
     "frontendStack": "フロントエンドスタック",
     "deploymentStack": "デプロイスタック",
@@ -97,7 +97,7 @@
       "results": "結果"
     },
     "title": "ケーススタディ",
-    "description": "私が行ったプロジェクトのいくつか。"
+    "description": "これはフリーランスとして私が取り組んだプロジェクトの一部です。"
   },
   "getInTouch": {
     "title": "お問い合わせ",

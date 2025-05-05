@@ -60,7 +60,7 @@ export default function Profile() {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t('profile.about')} />
-          <span className='text-base md:text-lg text-foreground-secondary'>
+          <span className='text-base md:text-lg text-foreground-secondary flex flex-col gap-3'>
             {getTranslatedData(profile.about, locale)}
           </span>
         </BlurFade>

@@ -62,7 +62,7 @@
       }
     },
     "title": "Profil",
-    "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications.",
+    "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
     "frontendStack": "Stack front-end",
     "deploymentStack": "Stack déploiement",
@@ -99,7 +99,7 @@
       "results": "Résultat"
     },
     "title": "Cas pratiques",
-    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé."
+    "description": "Voici quelques-uns des projets sur lesquels j'ai travaillé en tant qu'indépendant."
   },
   "getInTouch": {
     "title": "Contact",
