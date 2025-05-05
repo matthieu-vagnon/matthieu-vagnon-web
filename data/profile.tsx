@@ -310,6 +310,11 @@ export const profile: Profile = {
           fr: 'Utilisation de compétences avancées en développement front-end et en design UI/UX pour créer des interfaces à la fois esthétiques et fonctionnelles.',
           ja: 'フロントエンド開発とUI/UXデザインのスキルを活用して、視覚的に魅力的で機能的なインターフェースを作成しました。',
         },
+        {
+          en: 'Remotely employed contractor through an umbrella company.',
+          fr: 'Portage salarial à distance.',
+          ja: 'リモートで働く契約者として、傘下会社を通じて働いていました。',
+        },
       ],
       timeline: '2022 - 2024',
     },
