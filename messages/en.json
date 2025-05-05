@@ -128,9 +128,12 @@
     "accentColor": {
       "title": "Accent Color",
       "placeholder": "Select a color",
-      "blue": "Blue",
-      "green": "Green",
-      "pink": "Pink"
+      "colors": {
+        "default": "Blue",
+        "green": "Green",
+        "pink": "Pink",
+        "purple": "Purple"
+      }
     },
     "magnetic": {
       "title": "Magnetic Cursor",

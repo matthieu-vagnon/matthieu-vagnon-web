@@ -101,6 +101,12 @@ html[data-accent-color='pink'] {
   --main-foreground: black;
 }
 
+html[data-accent-color='purple'] {
+  --main: #8888ff;
+  --main-dark: #000040;
+  --main-foreground: black;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -2,7 +2,7 @@
 
 import { useAccentColor } from '@/hooks/use-accent-color';
 import { useMagneticStatus } from '@/hooks/use-magnetic-status';
-import { useTranslations } from 'next-intl';
+import { useMessages, useTranslations } from 'next-intl';
 import { Button } from './button';
 import { Checkbox } from './checkbox';
 import { Label } from './label';
@@ -24,6 +24,7 @@ export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus();
   const { accentColor, changeAccentColor } = useAccentColor();
   const t = useTranslations('configure');
+  const messages = useMessages();
 
   const handleResetParameters = () => {
     changeAccentColor(undefined);
@@ -44,9 +45,13 @@ export function ConfigurationModal() {
               <SelectValue placeholder={t('accentColor.placeholder')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='default'>{t('accentColor.blue')}</SelectItem>
-              <SelectItem value='green'>{t('accentColor.green')}</SelectItem>
-              <SelectItem value='pink'>{t('accentColor.pink')}</SelectItem>
+              {Object.entries(messages.configure.accentColor.colors).map(
+                ([key, value]) => (
+                  <SelectItem key={key} value={key}>
+                    {value ? value.toString() : ''}
+                  </SelectItem>
+                )
+              )}
             </SelectContent>
           </Select>
         </div>

@@ -128,9 +128,12 @@
     "accentColor": {
       "title": "アクセントカラー",
       "placeholder": "色を選択してください",
-      "blue": "青",
-      "green": "緑",
-      "pink": "ピンク"
+      "colors": {
+        "default": "青",
+        "green": "緑",
+        "pink": "ピンク",
+        "purple": "紫色"
+      }
     },
     "magnetic": {
       "title": "磁性カーソル",

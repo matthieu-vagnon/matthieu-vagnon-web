@@ -130,9 +130,12 @@
     "accentColor": {
       "title": "Couleur d'accentuation",
       "placeholder": "Sélectionnez une couleur",
-      "blue": "Bleu",
-      "green": "Vert",
-      "pink": "Rose"
+      "colors": {
+        "default": "Bleu",
+        "green": "Vert",
+        "pink": "Rose",
+        "purple": "Violet"
+      }
     },
     "magnetic": {
       "title": "Curseur magnétique",
