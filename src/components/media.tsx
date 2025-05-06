@@ -103,7 +103,7 @@ export function MediaButton({
       <button
         onClick={onClick}
         className={cn(
-          'group relative cursor-pointer transition-all duration-300 outline-none',
+          'group relative cursor-pointer transition-all duration-300',
           className
         )}
       >

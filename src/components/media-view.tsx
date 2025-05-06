@@ -52,7 +52,7 @@ export default function MediaView({
           transition={{ duration: 0.5 }}
           className='inline-block'
         >
-          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible flex flex-col gap-y-3'>
+          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible flex flex-col gap-y-3 outline-none'>
             <VisuallyHidden asChild>
               <DialogTitle>{title}</DialogTitle>
             </VisuallyHidden>
