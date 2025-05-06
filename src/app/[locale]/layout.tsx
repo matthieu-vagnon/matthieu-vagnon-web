@@ -79,14 +79,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();

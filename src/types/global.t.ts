@@ -1,3 +1,4 @@
+import { Media } from '@/components/media';
 import { typeVariants } from '@/components/project-card';
 import { Locale } from 'next-intl';
 import { StaticImageData } from 'next/image';
@@ -25,17 +26,17 @@ declare global {
       ja?: string;
     };
     businessCard: {
-      en?: {
-        title: string;
+      en: {
         image: StaticImageData;
+        title: string;
       };
-      fr?: {
-        title: string;
+      fr: {
         image: StaticImageData;
+        title: string;
       };
-      ja?: {
-        title: string;
+      ja: {
         image: StaticImageData;
+        title: string;
       };
     };
     stackLogos: {
@@ -110,28 +111,7 @@ declare global {
     };
     technologies: string[];
     previewImg?: StaticImageData;
-    gallery?: ((
-      | {
-          image: StaticImageData;
-          src?: never;
-          previewImage?: never;
-          audio?: never;
-          subtitle?: never;
-        }
-      | {
-          image?: never;
-          src: string;
-          previewImage: StaticImageData;
-          audio?: Locale;
-          subtitle?: Locale[];
-        }
-    ) & {
-      title: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
-    })[];
+    gallery?: Media[];
     problem?: {
       en?: React.ReactNode[];
       fr?: React.ReactNode[];

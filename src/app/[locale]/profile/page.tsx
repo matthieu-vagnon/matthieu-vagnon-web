@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
 import { BlurFade } from '@/components/blur-fade';
 import Header from '@/components/header';
 import { LogoCarousel } from '@/components/logo-carousel';
-import { MediaButton } from '@/components/media-button';
+import Media from '@/components/media';
 import PageTitle from '@/components/page-title';
 import { ResumeCard } from '@/components/resume-card';
 import SectionTitle from '@/components/section-title';
@@ -48,11 +48,13 @@ export default function Profile() {
               {getTranslatedData(profile.description, locale)}
             </div>
             {businessCard && (
-              <MediaButton
-                image={businessCard.image}
-                title={businessCard.title}
-                size='md'
+              <Media
+                media={{
+                  image: businessCard.image,
+                  title: businessCard.title,
+                }}
                 isTilt
+                size='md'
                 className='w-50 md:w-56 lg:w-64'
               />
             )}

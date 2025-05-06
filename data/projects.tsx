@@ -124,10 +124,12 @@ export const projects: Record<string, Project> = {
         src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
         previewImage: mvWebPreview1,
         audio: 'fr',
+        slug: 'tour',
       },
       {
         title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
         image: mvWeb1,
+        slug: 'home-page',
       },
       {
         title: {
@@ -136,6 +138,7 @@ export const projects: Record<string, Project> = {
           ja: 'ホーム緑',
         },
         image: mvWeb2,
+        slug: 'home-green',
       },
       {
         title: {
@@ -144,6 +147,7 @@ export const projects: Record<string, Project> = {
           ja: 'プロフィールページ',
         },
         image: mvWeb3,
+        slug: 'profile-page',
       },
       {
         title: {
@@ -152,6 +156,7 @@ export const projects: Record<string, Project> = {
           ja: '画像ポップアップ',
         },
         image: mvWeb4,
+        slug: 'image-popup',
       },
       {
         title: {
@@ -160,6 +165,7 @@ export const projects: Record<string, Project> = {
           ja: 'ケーススタディ',
         },
         image: mvWeb5,
+        slug: 'case-study',
       },
       {
         title: {
@@ -168,6 +174,7 @@ export const projects: Record<string, Project> = {
           ja: 'コンタクトモーダル',
         },
         image: mvWeb6,
+        slug: 'contact-modal',
       },
       {
         title: {
@@ -176,6 +183,7 @@ export const projects: Record<string, Project> = {
           ja: 'ミーティングスケジューラー',
         },
         image: mvWeb7,
+        slug: 'meeting-scheduler',
       },
       {
         title: {
@@ -184,6 +192,7 @@ export const projects: Record<string, Project> = {
           ja: '設定モーダル',
         },
         image: mvWeb8,
+        slug: 'configuration-modal',
       },
     ],
     problem: {
@@ -469,6 +478,7 @@ export const projects: Record<string, Project> = {
           ja: 'ジェネレーターエディター',
         },
         image: smartInterviewBuilder2,
+        slug: 'builder-editor',
       },
       {
         title: {
@@ -477,6 +487,7 @@ export const projects: Record<string, Project> = {
           ja: 'ジェネレーターのプレビュー',
         },
         image: smartInterviewBuilder3,
+        slug: 'builder-preview',
       },
       {
         title: {
@@ -485,6 +496,7 @@ export const projects: Record<string, Project> = {
           ja: 'ジェネレーターのJSONエディター',
         },
         image: smartInterviewBuilder4,
+        slug: 'builder-json-editor',
       },
       {
         title: {
@@ -493,6 +505,7 @@ export const projects: Record<string, Project> = {
           ja: 'ジェネレーターのプリセット',
         },
         image: smartInterviewBuilder5,
+        slug: 'builder-presets',
       },
       {
         title: {
@@ -502,6 +515,7 @@ export const projects: Record<string, Project> = {
         },
         src: 'https://www.youtube.com/embed/zy5hgYR-H74',
         previewImage: smartInterviewBuilder1,
+        slug: 'builder-tour',
       },
     ],
     problem: {
@@ -724,6 +738,7 @@ export const projects: Record<string, Project> = {
           ja: 'ローディングページ',
         },
         image: koryoriYa1,
+        slug: 'loading-page',
       },
       {
         title: {
@@ -732,6 +747,7 @@ export const projects: Record<string, Project> = {
           ja: 'ランディングビュー',
         },
         image: koryoriYa2,
+        slug: 'landing-view',
       },
       {
         title: {
@@ -740,8 +756,13 @@ export const projects: Record<string, Project> = {
           ja: 'コンセプトビュー',
         },
         image: koryoriYa3,
+        slug: 'concept-view',
       },
-      { title: { en: 'Map', fr: 'Carte', ja: 'マップ' }, image: koryoriYa4 },
+      {
+        title: { en: 'Map', fr: 'Carte', ja: 'マップ' },
+        image: koryoriYa4,
+        slug: 'map',
+      },
     ],
     problem: {
       en: [

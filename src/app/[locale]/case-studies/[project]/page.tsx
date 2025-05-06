@@ -1,14 +1,7 @@
 import { BlurFade } from '@/components/blur-fade';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/carousel';
 import Header from '@/components/header';
 import { Li, Ul } from '@/components/list';
-import { MediaButton } from '@/components/media-button';
+import { MediaCarousel } from '@/components/media-carousel';
 import PageTitle from '@/components/page-title';
 import { ScrollProgress } from '@/components/scroll-progress';
 import SectionTitle from '@/components/section-title';
@@ -110,13 +103,13 @@ export async function generateMetadata(
 
 type ProjectProps = {
   params: Promise<{ project: string }>;
-  searchParams: Promise<{ video: string }>;
+  searchParams: Promise<{ media: string }>;
 };
 
 export default async function Project(props: ProjectProps) {
   const searchParams = await props.searchParams;
   const project = projects[(await props.params).project];
-  const videoIndex = searchParams.video;
+  const isOpenSlug = searchParams.media;
   const locale = await getLocale();
   const t = await getTranslations();
   let blurDelay = 0;
@@ -151,27 +144,7 @@ export default async function Project(props: ProjectProps) {
       </BlurFade>
       {project.gallery && project.gallery.length > 0 && (
         <BlurFade delay={blurDelay++ / 10}>
-          <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
-            <CarouselContent>
-              {project.gallery.map((element, index) => (
-                <CarouselItem
-                  key={index}
-                  className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
-                >
-                  <MediaButton
-                    index={index}
-                    isOpen={videoIndex === index.toString()}
-                    className='cursor-[inherit] active:cursor-[inherit]'
-                    {...element}
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className='flex flex-row gap-x-3 flex-nowrap items-center justify-start'>
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </Carousel>
+          <MediaCarousel medias={project.gallery} isOpenSlug={isOpenSlug} />
         </BlurFade>
       )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
