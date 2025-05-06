@@ -67,14 +67,17 @@ export default function Magnetic({
     return () => {
       document.removeEventListener('mousemove', calculateDistance);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref, isHovered, size]);
 
-  if (!isMagnetic || disabled) {
+  if (!isMagnetic) {
     return <div className={className}>{children}</div>;
   }
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (!disabled) {
+      setIsHovered(true);
+    }
   };
 
   const handleMouseLeave = () => {

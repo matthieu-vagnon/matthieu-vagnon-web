@@ -173,8 +173,6 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
 
 function CarouselPrevious({
   className,
-  variant = 'outline',
-  size = 'xs',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollPrev, canScrollPrev } = useCarousel();
@@ -182,23 +180,20 @@ function CarouselPrevious({
   return (
     <Button
       data-slot='carousel-previous'
-      variant={variant}
-      size={size}
+      variant='outline'
+      size='xs'
       className={cn('size-8 rounded-full', className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
       <ArrowLeft />
-      <span className='sr-only'>Previous slide</span>
     </Button>
   );
 }
 
 function CarouselNext({
   className,
-  variant = 'outline',
-  size = 'xs',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollNext, canScrollNext } = useCarousel();
@@ -206,15 +201,14 @@ function CarouselNext({
   return (
     <Button
       data-slot='carousel-next'
-      variant={variant}
-      size={size}
+      variant='outline'
+      size='xs'
       className={cn('size-8 rounded-full', className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
       <ArrowRight />
-      <span className='sr-only'>Next slide</span>
     </Button>
   );
 }
