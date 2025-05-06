@@ -12,7 +12,14 @@ import {
 } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { motion } from 'framer-motion';
-import { Copy, PlayIcon, Subtitles, Volume1 } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Copy,
+  PlayIcon,
+  Subtitles,
+  Volume1,
+} from 'lucide-react';
 import { Locale, useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
@@ -22,35 +29,37 @@ import Magnetic, { MagneticSize } from './magnetic';
 import { Separator } from './separator';
 import { Tilt } from './tilt';
 
-type MediaButtonProps =
+type MediaButtonProps = (
   | {
-      title: string;
       img: StaticImageData;
       previewImage?: never;
       video?: never;
       audio?: never;
       subtitle?: never;
       noCopy?: never;
-      size?: MagneticSize;
       isOpen?: never;
       index?: never;
-      isTilt?: boolean;
-      className?: string;
     }
   | {
-      title: string;
       previewImage: StaticImageData;
       video: string;
       audio?: Locale;
       subtitle?: Locale[];
       img?: never;
       noCopy?: boolean;
-      size?: MagneticSize;
       isOpen?: boolean;
       index: number;
-      isTilt?: never;
-      className?: string;
-    };
+    }
+) & {
+  title: string;
+  size?: MagneticSize;
+  isTilt?: boolean;
+  className?: string;
+  navigation?: {
+    index: number;
+    changeMedia: (newIndex: number) => void;
+  };
+};
 
 export function MediaButton({
   title,
@@ -59,6 +68,7 @@ export function MediaButton({
   video,
   audio,
   subtitle,
+  navigation,
   noCopy = false,
   size = 'lg',
   isTilt = false,
@@ -178,12 +188,29 @@ export function MediaButton({
                 )}
               </div>
               <div className='flex justify-end gap-x-2 flex-nowrap'>
+                {navigation && (
+                  <div className='flex items-center gap-x-2 flex-nowrap mr-auto'>
+                    <Button
+                      variant='default'
+                      size='xs'
+                      className='rounded-full p-3'
+                    >
+                      <ChevronLeft className='size-4' />
+                    </Button>
+                    <Button
+                      variant='default'
+                      size='xs'
+                      className='rounded-full p-3'
+                    >
+                      <ChevronRight className='size-4' />
+                    </Button>
+                  </div>
+                )}
                 {!noCopy && video && (
                   <Button
                     variant='default'
                     size='xs'
                     className='rounded-full p-3 flex items-center gap-x-2'
-                    isInline
                     onClick={() => {
                       navigator.clipboard.writeText(
                         `${process.env
@@ -192,7 +219,9 @@ export function MediaButton({
                       toast.success(t('copyLink'));
                     }}
                   >
-                    {t('copyLinkButton')}
+                    <span className='hidden sm:block text-xs'>
+                      {t('copyLinkButton')}
+                    </span>
                     <Copy className='size-4' />
                   </Button>
                 )}

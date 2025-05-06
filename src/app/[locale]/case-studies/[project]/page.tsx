@@ -159,7 +159,7 @@ export default async function Project(props: ProjectProps) {
                 {project.gallery.video?.map((video, index) => (
                   <CarouselItem
                     key={index}
-                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
+                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
                   >
                     <MediaButton
                       title={getTranslatedData(video.title, locale)}
@@ -176,7 +176,7 @@ export default async function Project(props: ProjectProps) {
                 {project.gallery.img?.map((img, index) => (
                   <CarouselItem
                     key={index}
-                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-8 flex items-center justify-center'
+                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
                   >
                     <MediaButton
                       className='cursor-[inherit] active:cursor-[inherit]'
