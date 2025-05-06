@@ -152,47 +152,50 @@ export function MediaButton({
             transition={{ duration: 0.5 }}
             className='inline-block'
           >
-            <DialogContent className='inline-block max-h-[calc(100dvh-40px)] overflow-y-auto rounded-sm'>
+            <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible flex flex-col gap-y-3'>
               <VisuallyHidden asChild>
                 <DialogTitle>{title}</DialogTitle>
               </VisuallyHidden>
-              {video && (
-                <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
-                  {!noCopy && (
-                    <div className='absolute z-1 bottom-3 right-3'>
-                      <Button
-                        variant='default'
-                        size='xs'
-                        className='rounded-full p-3'
-                        onClick={() => {
-                          navigator.clipboard.writeText(
-                            `${process.env
-                              .NEXT_PUBLIC_URL!}${pathname}?video=${index}`
-                          );
-                          toast.success(t('copyLink'));
-                        }}
-                      >
-                        <Copy className='size-4' />
-                      </Button>
-                    </div>
-                  )}
-                  <iframe
-                    src={video}
-                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                    referrerPolicy='strict-origin-when-cross-origin'
-                    allowFullScreen
-                    className='absolute top-0 left-0 w-full h-full border-0 rounded-xl'
+              <div className='overflow-y-auto rounded-xs'>
+                {video && (
+                  <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
+                    <iframe
+                      src={video}
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                      referrerPolicy='strict-origin-when-cross-origin'
+                      allowFullScreen
+                      className='absolute inset-0 w-full h-full rounded-xl'
+                    />
+                  </div>
+                )}
+                {img && (
+                  <Image
+                    src={img}
+                    placeholder='blur'
+                    alt={title}
+                    className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
                   />
-                </div>
-              )}
-              {img && (
-                <Image
-                  src={img}
-                  placeholder='blur'
-                  alt={title}
-                  className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
-                />
-              )}
+                )}
+              </div>
+              <div className='flex justify-end gap-x-2 flex-nowrap'>
+                {!noCopy && video && (
+                  <Button
+                    variant='default'
+                    size='xs'
+                    className='rounded-full p-3'
+                    isInline
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        `${process.env
+                          .NEXT_PUBLIC_URL!}${pathname}?video=${index}`
+                      );
+                      toast.success(t('copyLink'));
+                    }}
+                  >
+                    <Copy className='size-4' />
+                  </Button>
+                )}
+              </div>
             </DialogContent>
           </motion.div>
         </DialogOverlay>
