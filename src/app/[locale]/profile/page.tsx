@@ -49,7 +49,7 @@ export default function Profile() {
             </div>
             {businessCard && (
               <MediaButton
-                img={businessCard.image}
+                image={businessCard.image}
                 title={businessCard.title}
                 size='md'
                 isTilt

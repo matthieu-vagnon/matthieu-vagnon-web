@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from '@/i18n/navigation';
-import { cn } from '@/lib/utils';
+import { cn, getTranslatedData } from '@/lib/utils';
 import {
   Dialog,
   DialogContent,
@@ -20,8 +20,8 @@ import {
   Subtitles,
   Volume1,
 } from 'lucide-react';
-import { Locale, useTranslations } from 'next-intl';
-import Image, { StaticImageData } from 'next/image';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Button } from './button';
@@ -29,46 +29,22 @@ import Magnetic, { MagneticSize } from './magnetic';
 import { Separator } from './separator';
 import { Tilt } from './tilt';
 
-type MediaButtonProps = (
-  | {
-      img: StaticImageData;
-      previewImage?: never;
-      video?: never;
-      audio?: never;
-      subtitle?: never;
-      noCopy?: never;
-      isOpen?: never;
-      index?: never;
-    }
-  | {
-      previewImage: StaticImageData;
-      video: string;
-      audio?: Locale;
-      subtitle?: Locale[];
-      img?: never;
-      noCopy?: boolean;
-      isOpen?: boolean;
-      index: number;
-    }
-) & {
-  title: string;
+type MediaButtonProps = NonNullable<Project['gallery']>[number] & {
+  noCopy?: boolean;
+  isOpen?: boolean;
+  index?: number;
   size?: MagneticSize;
   isTilt?: boolean;
   className?: string;
-  navigation?: {
-    index: number;
-    changeMedia: (newIndex: number) => void;
-  };
 };
 
 export function MediaButton({
-  title,
-  img,
+  title: rawTitle,
+  image,
   previewImage,
-  video,
+  src,
   audio,
   subtitle,
-  navigation,
   noCopy = false,
   size = 'lg',
   isTilt = false,
@@ -79,6 +55,8 @@ export function MediaButton({
   const [open, setOpen] = useState(isOpen);
   const pathname = usePathname();
   const t = useTranslations('utils');
+  const locale = useLocale();
+  const title = getTranslatedData(rawTitle, locale);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -104,7 +82,7 @@ export function MediaButton({
                 }}
               >
                 <Image
-                  src={img!}
+                  src={image!}
                   placeholder='blur'
                   alt={title}
                   className='rounded-lg group-hover:shadow-lg transition-all duration-300'
@@ -112,13 +90,13 @@ export function MediaButton({
               </Tilt>
             ) : (
               <Image
-                src={img ?? previewImage}
+                src={image ?? previewImage}
                 placeholder='blur'
                 alt={title}
                 className='rounded-lg group-hover:shadow-lg transition-all duration-300'
               />
             )}
-            {video && (
+            {src && (
               <div className='absolute bg-foreground/20 group-hover:bg-foreground/40 transition-all duration-300 right-2 bottom-2 backdrop-blur-md rounded-md p-2 flex items-center gap-x-2'>
                 {audio && (
                   <>
@@ -139,7 +117,7 @@ export function MediaButton({
                     <div className='flex items-center gap-x-1'>
                       <Subtitles className='w-4 h-4 text-background' />
                       <span className='text-[10px] text-background'>
-                        {subtitle.join(', ').toUpperCase()}
+                        {subtitle.join(' · ').toUpperCase()}
                       </span>
                     </div>
                     <Separator
@@ -167,10 +145,10 @@ export function MediaButton({
                 <DialogTitle>{title}</DialogTitle>
               </VisuallyHidden>
               <div className='overflow-y-auto rounded-xs'>
-                {video && (
+                {src && (
                   <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
                     <iframe
-                      src={video}
+                      src={src}
                       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                       referrerPolicy='strict-origin-when-cross-origin'
                       allowFullScreen
@@ -178,9 +156,9 @@ export function MediaButton({
                     />
                   </div>
                 )}
-                {img && (
+                {image && (
                   <Image
-                    src={img}
+                    src={image}
                     placeholder='blur'
                     alt={title}
                     className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
@@ -188,7 +166,7 @@ export function MediaButton({
                 )}
               </div>
               <div className='flex justify-end gap-x-2 flex-nowrap'>
-                {navigation && (
+                {false && (
                   <div className='flex items-center gap-x-2 flex-nowrap mr-auto'>
                     <Button
                       variant='default'
@@ -206,7 +184,7 @@ export function MediaButton({
                     </Button>
                   </div>
                 )}
-                {!noCopy && video && (
+                {!noCopy && src && (
                   <Button
                     variant='default'
                     size='xs'

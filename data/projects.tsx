@@ -118,78 +118,74 @@ export const projects: Record<string, Project> = {
       'Figma',
     ],
     previewImg: mvWeb1,
-    gallery: {
-      video: [
-        {
-          title: { en: 'Tour', fr: 'Tour', ja: 'ツアー' },
-          src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
-          previewImage: mvWebPreview1,
-          audio: 'fr',
+    gallery: [
+      {
+        title: { en: 'Tour', fr: 'Tour', ja: 'ツアー' },
+        src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
+        previewImage: mvWebPreview1,
+        audio: 'fr',
+      },
+      {
+        title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
+        image: mvWeb1,
+      },
+      {
+        title: {
+          en: 'Home Green',
+          fr: 'Accueil vert',
+          ja: 'ホーム緑',
         },
-      ],
-      img: [
-        {
-          title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
-          image: mvWeb1,
+        image: mvWeb2,
+      },
+      {
+        title: {
+          en: 'Profile Page',
+          fr: 'Page de profil',
+          ja: 'プロフィールページ',
         },
-        {
-          title: {
-            en: 'Home Green',
-            fr: 'Accueil vert',
-            ja: 'ホーム緑',
-          },
-          image: mvWeb2,
+        image: mvWeb3,
+      },
+      {
+        title: {
+          en: 'Image Popup',
+          fr: 'Pop-up d&apos;image',
+          ja: '画像ポップアップ',
         },
-        {
-          title: {
-            en: 'Profile Page',
-            fr: 'Page de profil',
-            ja: 'プロフィールページ',
-          },
-          image: mvWeb3,
+        image: mvWeb4,
+      },
+      {
+        title: {
+          en: 'Case Study',
+          fr: 'Étude de cas',
+          ja: 'ケーススタディ',
         },
-        {
-          title: {
-            en: 'Image Popup',
-            fr: 'Pop-up d&apos;image',
-            ja: '画像ポップアップ',
-          },
-          image: mvWeb4,
+        image: mvWeb5,
+      },
+      {
+        title: {
+          en: 'Contact Modal',
+          fr: 'Modale de contact',
+          ja: 'コンタクトモーダル',
         },
-        {
-          title: {
-            en: 'Case Study',
-            fr: 'Étude de cas',
-            ja: 'ケーススタディ',
-          },
-          image: mvWeb5,
+        image: mvWeb6,
+      },
+      {
+        title: {
+          en: 'Meeting Scheduler',
+          fr: 'Planificateur de réunion',
+          ja: 'ミーティングスケジューラー',
         },
-        {
-          title: {
-            en: 'Contact Modal',
-            fr: 'Modale de contact',
-            ja: 'コンタクトモーダル',
-          },
-          image: mvWeb6,
+        image: mvWeb7,
+      },
+      {
+        title: {
+          en: 'Configuration Modal',
+          fr: 'Modale de configuration',
+          ja: '設定モーダル',
         },
-        {
-          title: {
-            en: 'Meeting Scheduler',
-            fr: 'Planificateur de réunion',
-            ja: 'ミーティングスケジューラー',
-          },
-          image: mvWeb7,
-        },
-        {
-          title: {
-            en: 'Configuration Modal',
-            fr: 'Modale de configuration',
-            ja: '設定モーダル',
-          },
-          image: mvWeb8,
-        },
-      ],
-    },
+        image: mvWeb8,
+      },
+    ],
     problem: {
       en: [
         <>
@@ -465,53 +461,49 @@ export const projects: Record<string, Project> = {
       'Cursor IDE',
     ],
     previewImg: smartInterviewBuilder5,
-    gallery: {
-      img: [
-        {
-          title: {
-            en: 'Builder Editor',
-            fr: 'Éditeur de générateur',
-            ja: 'ジェネレーターエディター',
-          },
-          image: smartInterviewBuilder2,
+    gallery: [
+      {
+        title: {
+          en: 'Builder Editor',
+          fr: 'Éditeur de générateur',
+          ja: 'ジェネレーターエディター',
         },
-        {
-          title: {
-            en: 'Builder Preview',
-            fr: 'Aperçu du générateur',
-            ja: 'ジェネレーターのプレビュー',
-          },
-          image: smartInterviewBuilder3,
+        image: smartInterviewBuilder2,
+      },
+      {
+        title: {
+          en: 'Builder Preview',
+          fr: 'Aperçu du générateur',
+          ja: 'ジェネレーターのプレビュー',
         },
-        {
-          title: {
-            en: 'Builder JSON Editor',
-            fr: 'Éditeur JSON du générateur',
-            ja: 'ジェネレーターのJSONエディター',
-          },
-          image: smartInterviewBuilder4,
+        image: smartInterviewBuilder3,
+      },
+      {
+        title: {
+          en: 'Builder JSON Editor',
+          fr: 'Éditeur JSON du générateur',
+          ja: 'ジェネレーターのJSONエディター',
         },
-        {
-          title: {
-            en: 'Builder Presets',
-            fr: 'Présets du générateur',
-            ja: 'ジェネレーターのプリセット',
-          },
-          image: smartInterviewBuilder5,
+        image: smartInterviewBuilder4,
+      },
+      {
+        title: {
+          en: 'Builder Presets',
+          fr: 'Présets du générateur',
+          ja: 'ジェネレーターのプリセット',
         },
-      ],
-      video: [
-        {
-          title: {
-            en: 'Builder Tour',
-            fr: 'Tour du builder',
-            ja: 'ジェネレーターのツアー',
-          },
-          src: 'https://www.youtube.com/embed/zy5hgYR-H74',
-          previewImage: smartInterviewBuilder1,
+        image: smartInterviewBuilder5,
+      },
+      {
+        title: {
+          en: 'Builder Tour',
+          fr: 'Tour du builder',
+          ja: 'ジェネレーターのツアー',
         },
-      ],
-    },
+        src: 'https://www.youtube.com/embed/zy5hgYR-H74',
+        previewImage: smartInterviewBuilder1,
+      },
+    ],
     problem: {
       en: [
         <>
@@ -724,35 +716,33 @@ export const projects: Record<string, Project> = {
       'Pixelmator',
     ],
     previewImg: koryoriYa3,
-    gallery: {
-      img: [
-        {
-          title: {
-            en: 'Loading Page',
-            fr: 'Page de chargement',
-            ja: 'ローディングページ',
-          },
-          image: koryoriYa1,
+    gallery: [
+      {
+        title: {
+          en: 'Loading Page',
+          fr: 'Page de chargement',
+          ja: 'ローディングページ',
         },
-        {
-          title: {
-            en: 'Landing View',
-            fr: "Vue d'accueil",
-            ja: 'ランディングビュー',
-          },
-          image: koryoriYa2,
+        image: koryoriYa1,
+      },
+      {
+        title: {
+          en: 'Landing View',
+          fr: "Vue d'accueil",
+          ja: 'ランディングビュー',
         },
-        {
-          title: {
-            en: 'Concept View',
-            fr: 'Vue conceptuelle',
-            ja: 'コンセプトビュー',
-          },
-          image: koryoriYa3,
+        image: koryoriYa2,
+      },
+      {
+        title: {
+          en: 'Concept View',
+          fr: 'Vue conceptuelle',
+          ja: 'コンセプトビュー',
         },
-        { title: { en: 'Map', fr: 'Carte', ja: 'マップ' }, image: koryoriYa4 },
-      ],
-    },
+        image: koryoriYa3,
+      },
+      { title: { en: 'Map', fr: 'Carte', ja: 'マップ' }, image: koryoriYa4 },
+    ],
     problem: {
       en: [
         <>

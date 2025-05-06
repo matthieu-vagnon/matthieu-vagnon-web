@@ -110,27 +110,28 @@ declare global {
     };
     technologies: string[];
     previewImg?: StaticImageData;
-    gallery?: {
-      img?: {
-        title: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        image: StaticImageData;
-      }[];
-      video?: {
-        title: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        src: string;
-        previewImage: StaticImageData;
-        audio?: Locale;
-        subtitle?: Locale[];
-      }[];
-    };
+    gallery?: ((
+      | {
+          image: StaticImageData;
+          src?: never;
+          previewImage?: never;
+          audio?: never;
+          subtitle?: never;
+        }
+      | {
+          image?: never;
+          src: string;
+          previewImage: StaticImageData;
+          audio?: Locale;
+          subtitle?: Locale[];
+        }
+    ) & {
+      title: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      };
+    })[];
     problem?: {
       en?: React.ReactNode[];
       fr?: React.ReactNode[];

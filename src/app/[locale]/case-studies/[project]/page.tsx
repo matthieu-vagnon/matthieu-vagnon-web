@@ -87,9 +87,11 @@ export async function generateMetadata(
         locale
       ) as string,
       images: [
-        ...(project.gallery?.img?.map((img) => ({
-          url: `${process.env.NEXT_PUBLIC_URL!}${img.image.src}`,
-        })) || []),
+        ...(project.gallery
+          ?.filter((media) => media.image)
+          .map((image) => ({
+            url: `${process.env.NEXT_PUBLIC_URL!}${image.image!.src}`,
+          })) || []),
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
         },
@@ -147,52 +149,31 @@ export default async function Project(props: ProjectProps) {
           tags={getTranslatedData(project.tags, locale) as string[]}
         />
       </BlurFade>
-      {project.gallery &&
-        ((project.gallery.img && project.gallery.img?.length > 0) ||
-          (project.gallery.video && project.gallery.video?.length > 0)) && (
-          <BlurFade delay={blurDelay++ / 10}>
-            <Carousel
-              opts={{ align: 'start' }}
-              className='w-full flex flex-col'
-            >
-              <CarouselContent>
-                {project.gallery.video?.map((video, index) => (
-                  <CarouselItem
-                    key={index}
-                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
-                  >
-                    <MediaButton
-                      title={getTranslatedData(video.title, locale)}
-                      video={video.src}
-                      audio={video.audio}
-                      subtitle={video.subtitle}
-                      previewImage={video.previewImage}
-                      isOpen={videoIndex === index.toString()}
-                      index={index}
-                      className='cursor-[inherit] active:cursor-[inherit]'
-                    />
-                  </CarouselItem>
-                ))}
-                {project.gallery.img?.map((img, index) => (
-                  <CarouselItem
-                    key={index}
-                    className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
-                  >
-                    <MediaButton
-                      className='cursor-[inherit] active:cursor-[inherit]'
-                      title={getTranslatedData(img.title, locale)}
-                      img={img.image}
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className='flex flex-row gap-x-3 flex-nowrap items-center justify-start'>
-                <CarouselPrevious />
-                <CarouselNext />
-              </div>
-            </Carousel>
-          </BlurFade>
-        )}
+      {project.gallery && project.gallery.length > 0 && (
+        <BlurFade delay={blurDelay++ / 10}>
+          <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
+            <CarouselContent>
+              {project.gallery.map((element, index) => (
+                <CarouselItem
+                  key={index}
+                  className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
+                >
+                  <MediaButton
+                    index={index}
+                    isOpen={videoIndex === index.toString()}
+                    className='cursor-[inherit] active:cursor-[inherit]'
+                    {...element}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className='flex flex-row gap-x-3 flex-nowrap items-center justify-start'>
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
+        </BlurFade>
+      )}
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
         <BlurFade delay={blurDelay++ / 10}>
           <Block

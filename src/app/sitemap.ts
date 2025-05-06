@@ -16,7 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...Object.entries(projects).flatMap(([project, data]) =>
       getEntries(
         `/case-studies/${project}`,
-        data.gallery?.img?.map((img) => img.image.src)
+        data.gallery
+          ?.filter((media) => media.image)
+          .map((image) => image.image!.src)
       )
     ),
   ];
