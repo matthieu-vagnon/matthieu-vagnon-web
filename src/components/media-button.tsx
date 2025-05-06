@@ -182,7 +182,7 @@ export function MediaButton({
                   <Button
                     variant='default'
                     size='xs'
-                    className='rounded-full p-3'
+                    className='rounded-full p-3 flex items-center gap-x-2'
                     isInline
                     onClick={() => {
                       navigator.clipboard.writeText(
@@ -192,6 +192,7 @@ export function MediaButton({
                       toast.success(t('copyLink'));
                     }}
                   >
+                    {t('copyLinkButton')}
                     <Copy className='size-4' />
                   </Button>
                 )}
