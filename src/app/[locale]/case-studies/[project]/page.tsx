@@ -196,7 +196,7 @@ export default async function Project(props: ProjectProps) {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className='flex flex-row gap-x-2 flex-nowrap items-center justify-start'>
+              <div className='flex flex-row gap-x-3 flex-nowrap items-center justify-start'>
                 <CarouselPrevious />
                 <CarouselNext />
               </div>
