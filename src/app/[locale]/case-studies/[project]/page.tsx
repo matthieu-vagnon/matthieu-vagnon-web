@@ -174,6 +174,8 @@ export default async function Project(props: ProjectProps) {
                     <MediaButton
                       title={getTranslatedData(video.title, locale)}
                       video={video.src}
+                      audio={video.audio}
+                      subtitle={video.subtitle}
                       previewImage={video.previewImage}
                       isOpen={videoIndex === index.toString()}
                       index={index}

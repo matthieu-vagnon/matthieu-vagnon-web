@@ -124,6 +124,7 @@ export const projects: Record<string, Project> = {
           title: { en: 'Tour', fr: 'Tour', ja: 'ツアー' },
           src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
           previewImage: mvWebPreview1,
+          audio: 'fr',
         },
       ],
       img: [

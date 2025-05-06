@@ -12,13 +12,14 @@ import {
 } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { motion } from 'framer-motion';
-import { Copy, PlayIcon } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Copy, PlayIcon, Subtitles, Volume1 } from 'lucide-react';
+import { Locale, useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Button } from './button';
 import Magnetic, { MagneticSize } from './magnetic';
+import { Separator } from './separator';
 import { Tilt } from './tilt';
 
 type MediaButtonProps =
@@ -27,6 +28,8 @@ type MediaButtonProps =
       img: StaticImageData;
       previewImage?: never;
       video?: never;
+      audio?: never;
+      subtitle?: never;
       noCopy?: never;
       size?: MagneticSize;
       isOpen?: never;
@@ -38,6 +41,8 @@ type MediaButtonProps =
       title: string;
       previewImage: StaticImageData;
       video: string;
+      audio?: Locale;
+      subtitle?: Locale[];
       img?: never;
       noCopy?: boolean;
       size?: MagneticSize;
@@ -52,6 +57,8 @@ export function MediaButton({
   img,
   previewImage,
   video,
+  audio,
+  subtitle,
   noCopy = false,
   size = 'lg',
   isTilt = false,
@@ -102,7 +109,35 @@ export function MediaButton({
               />
             )}
             {video && (
-              <div className='absolute group-hover:scale-110 transition-all duration-300 right-2 bottom-2 bg-foreground/25 backdrop-blur-md rounded-md p-2'>
+              <div className='absolute bg-foreground/20 group-hover:bg-foreground/40 transition-all duration-300 right-2 bottom-2 backdrop-blur-md rounded-md p-2 flex items-center gap-x-2'>
+                {audio && (
+                  <>
+                    <div className='flex items-center gap-x-1'>
+                      <Volume1 className='w-4 h-4 text-background' />
+                      <span className='text-[10px] text-background'>
+                        {audio.toUpperCase()}
+                      </span>
+                    </div>
+                    <Separator
+                      orientation='vertical'
+                      className='h-4 bg-background/25'
+                    />
+                  </>
+                )}
+                {subtitle && (
+                  <>
+                    <div className='flex items-center gap-x-1'>
+                      <Subtitles className='w-4 h-4 text-background' />
+                      <span className='text-[10px] text-background'>
+                        {subtitle.join(', ').toUpperCase()}
+                      </span>
+                    </div>
+                    <Separator
+                      orientation='vertical'
+                      className='h-4 bg-background/25'
+                    />
+                  </>
+                )}
                 <PlayIcon className='w-4 h-4 text-background' />
               </div>
             )}

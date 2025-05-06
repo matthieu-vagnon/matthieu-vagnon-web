@@ -1,4 +1,5 @@
 import { typeVariants } from '@/components/project-card';
+import { Locale } from 'next-intl';
 import { StaticImageData } from 'next/image';
 
 declare global {
@@ -8,7 +9,7 @@ declare global {
     company: string;
     position: string;
     testimonial: {
-      original: string;
+      original: Locale;
       en?: React.ReactNode;
       fr?: React.ReactNode;
       ja?: React.ReactNode;
@@ -126,6 +127,8 @@ declare global {
         };
         src: string;
         previewImage: StaticImageData;
+        audio?: Locale;
+        subtitle?: Locale[];
       }[];
     };
     problem?: {
