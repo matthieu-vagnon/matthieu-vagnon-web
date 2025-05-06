@@ -13,6 +13,7 @@ import mvWeb5 from '@/public/matthieu-vagnon/web-5.png';
 import mvWeb6 from '@/public/matthieu-vagnon/web-6.png';
 import mvWeb7 from '@/public/matthieu-vagnon/web-7.png';
 import mvWeb8 from '@/public/matthieu-vagnon/web-8.png';
+import mvWeb9 from '@/public/matthieu-vagnon/web-9.png';
 import mvWebPreview1 from '@/public/matthieu-vagnon/web-preview-1.png';
 import smartInterviewBuilder1 from '@/public/smart-interview/builder-1.png';
 import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
@@ -120,11 +121,15 @@ export const projects: Record<string, Project> = {
     previewImg: mvWeb1,
     gallery: [
       {
-        title: { en: 'Tour', fr: 'Tour', ja: 'ツアー' },
+        title: {
+          en: 'Presentation',
+          fr: 'Présentation',
+          ja: 'プレゼンテーション',
+        },
         src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
         previewImage: mvWebPreview1,
         audio: 'fr',
-        slug: 'tour',
+        slug: 'presentation',
       },
       {
         title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
@@ -133,30 +138,12 @@ export const projects: Record<string, Project> = {
       },
       {
         title: {
-          en: 'Home Green',
-          fr: 'Accueil vert',
-          ja: 'ホーム緑',
-        },
-        image: mvWeb2,
-        slug: 'home-green',
-      },
-      {
-        title: {
           en: 'Profile Page',
           fr: 'Page de profil',
           ja: 'プロフィールページ',
         },
-        image: mvWeb3,
+        image: mvWeb2,
         slug: 'profile-page',
-      },
-      {
-        title: {
-          en: 'Image Popup',
-          fr: 'Pop-up d&apos;image',
-          ja: '画像ポップアップ',
-        },
-        image: mvWeb4,
-        slug: 'image-popup',
       },
       {
         title: {
@@ -164,17 +151,17 @@ export const projects: Record<string, Project> = {
           fr: 'Étude de cas',
           ja: 'ケーススタディ',
         },
-        image: mvWeb5,
-        slug: 'case-study',
+        image: mvWeb3,
+        slug: 'case-studies',
       },
       {
         title: {
-          en: 'Contact Modal',
-          fr: 'Modale de contact',
-          ja: 'コンタクトモーダル',
+          en: 'Image Popup',
+          fr: "Pop-up d'image",
+          ja: '画像ポップアップ',
         },
-        image: mvWeb6,
-        slug: 'contact-modal',
+        image: mvWeb4,
+        slug: 'image-popup',
       },
       {
         title: {
@@ -182,7 +169,7 @@ export const projects: Record<string, Project> = {
           fr: 'Planificateur de réunion',
           ja: 'ミーティングスケジューラー',
         },
-        image: mvWeb7,
+        image: mvWeb5,
         slug: 'meeting-scheduler',
       },
       {
@@ -191,8 +178,35 @@ export const projects: Record<string, Project> = {
           fr: 'Modale de configuration',
           ja: '設定モーダル',
         },
-        image: mvWeb8,
+        image: mvWeb6,
         slug: 'configuration-modal',
+      },
+      {
+        title: {
+          en: 'Home Green',
+          fr: 'Accueil vert',
+          ja: 'ホーム緑',
+        },
+        image: mvWeb7,
+        slug: 'home-green',
+      },
+      {
+        title: {
+          en: 'Home Pink',
+          fr: 'Accueil rose',
+          ja: 'ホームピンク',
+        },
+        image: mvWeb8,
+        slug: 'home-pink',
+      },
+      {
+        title: {
+          en: 'Home Purple',
+          fr: 'Accueil violet',
+          ja: 'ホーム紫',
+        },
+        image: mvWeb9,
+        slug: 'home-purple',
       },
     ],
     problem: {
