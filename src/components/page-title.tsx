@@ -1,17 +1,11 @@
 import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { LinkButton } from './button';
 
 type PageTitleProps = {
   title: string;
   description: string;
   className?: string;
   tags?: string[];
-  link?: {
-    name: string;
-    url: string;
-  };
 };
 
 export default function PageTitle({
@@ -19,10 +13,7 @@ export default function PageTitle({
   description,
   className,
   tags,
-  link,
 }: PageTitleProps) {
-  const t = useTranslations('utils');
-
   return (
     <div
       className={cn(
@@ -48,13 +39,6 @@ export default function PageTitle({
         <p className='text-sm text-center text-muted-foreground'>
           {tags.join(' \u2022 ')}
         </p>
-      )}
-      {link && (
-        <LinkButton href={link.url} variant='link' size='xs' isInline>
-          {link.name}
-          {t('separator')}
-          ...
-        </LinkButton>
       )}
     </div>
   );

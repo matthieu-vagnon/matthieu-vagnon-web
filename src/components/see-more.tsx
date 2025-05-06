@@ -7,17 +7,16 @@ import LanguageSwitch from './language-switch';
 import { Separator } from './separator';
 
 type SeeMoreProps = {
-  id?: string;
   links: { important?: boolean; name: string; url: string }[];
   className?: string;
 };
 
-export default function SeeMore({ id, links, className }: SeeMoreProps) {
+export default function SeeMore({ links, className }: SeeMoreProps) {
   const t = useTranslations('utils');
 
   return (
     <>
-      <Separator id={id} className='my-10 sm:my-12 md:my-14' />
+      <Separator className='my-10 sm:my-12 md:my-14' />
       <div
         className={cn(
           'flex flex-col items-center justify-center mb-28 gap-5',

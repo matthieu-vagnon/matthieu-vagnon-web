@@ -145,16 +145,6 @@ export default async function Project(props: ProjectProps) {
             getTranslatedData(project.shortDescription, locale) as string
           }
           tags={getTranslatedData(project.tags, locale) as string[]}
-          link={
-            project.relatedUrls && project.relatedUrls.length > 0
-              ? {
-                  name: project.relatedUrls
-                    .map((el) => getTranslatedData(el.name, locale) as string)
-                    .join(t('utils.separator')),
-                  url: '#see-more',
-                }
-              : undefined
-          }
         />
       </BlurFade>
       {project.gallery &&
@@ -271,7 +261,6 @@ export default async function Project(props: ProjectProps) {
       </div>
       <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
-          id='see-more'
           links={[
             ...relatedUrls,
             {

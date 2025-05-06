@@ -368,12 +368,6 @@ export const projects: Record<string, Project> = {
         </>
       ),
     },
-    relatedUrls: [
-      {
-        name: { en: 'Matthieu Vagnon' },
-        url: process.env.NEXT_PUBLIC_URL!,
-      },
-    ],
   },
   'smart-interview': {
     title: 'Smart Interview',
@@ -872,7 +866,11 @@ export const projects: Record<string, Project> = {
     },
     relatedUrls: [
       {
-        name: { en: 'Koryori Ya Ozaki' },
+        name: {
+          en: 'Access App',
+          fr: "Accéder à l'application",
+          ja: 'アプリケーションにアクセス',
+        },
         url: 'https://koryoriyaozaki.uk',
       },
     ],
