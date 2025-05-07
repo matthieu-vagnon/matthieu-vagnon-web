@@ -34,6 +34,7 @@ export function MediaCarousel({ medias, isOpenSlug }: MediaCarouselProps) {
               className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
             >
               <MediaButton
+                quality={60}
                 onClick={() => {
                   setCurrentIndex(index);
                   setIsOpen(true);

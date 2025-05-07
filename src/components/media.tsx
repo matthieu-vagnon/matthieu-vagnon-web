@@ -39,6 +39,9 @@ type MediaProps = {
   media: Media;
   isTilt?: boolean;
   size?: MagneticSize;
+  width?: number;
+  height?: number;
+  quality?: number;
   isOpen?: boolean;
   noCopy?: boolean;
   className?: string;
@@ -48,6 +51,9 @@ type MediaButtonProps = {
   media: Media;
   isTilt?: boolean;
   size?: MagneticSize;
+  width?: number;
+  height?: number;
+  quality?: number;
   className?: string;
   onClick?: () => void;
 };
@@ -56,6 +62,9 @@ export default function Media({
   media,
   isTilt = false,
   size,
+  width,
+  height,
+  quality,
   isOpen: initialOpenStatus = false,
   className,
 }: MediaProps) {
@@ -71,6 +80,9 @@ export default function Media({
         media={media}
         isTilt={isTilt}
         size={size}
+        width={width}
+        height={height}
+        quality={quality}
         className={className}
         onClick={() => setIsOpen(true)}
       />
@@ -83,6 +95,9 @@ export function MediaButton({
   media,
   isTilt = false,
   size = 'lg',
+  width,
+  height,
+  quality = 50,
   onClick,
   className,
 }: MediaButtonProps) {
@@ -94,6 +109,9 @@ export function MediaButton({
       src={media.image ?? media.previewImage}
       placeholder='blur'
       alt={title}
+      width={width}
+      height={height}
+      quality={quality}
       className='rounded-lg group-hover:shadow-lg transition-all duration-300'
     />
   );

@@ -56,6 +56,9 @@ export default function ProjectCard({
             <Image
               className='pointer-events-none w-full rounded-sm shadow-lg'
               placeholder='blur'
+              quality={40}
+              width={320}
+              height={320}
               src={project.previewImg}
               alt={project.title}
             />
