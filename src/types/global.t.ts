@@ -18,6 +18,7 @@ declare global {
     method?: string;
     image?: StaticImageData;
   };
+
   type Profile = {
     avatarUrl?: StaticImageData;
     description: {
@@ -85,6 +86,7 @@ declare global {
       href: string;
     }[];
   };
+
   type Project = {
     title: string;
     year: number;
@@ -110,14 +112,14 @@ declare global {
       ja?: string[];
     };
     technologies: string[];
-    previewImg?: StaticImageData;
-    gallery?: Media[];
-    problem?: {
+    previewImg: StaticImageData;
+    gallery: Media[];
+    problem: {
       en?: React.ReactNode[];
       fr?: React.ReactNode[];
       ja?: React.ReactNode[];
     };
-    solution?: {
+    solution: {
       en?: React.ReactNode[];
       fr?: React.ReactNode[];
       ja?: React.ReactNode[];

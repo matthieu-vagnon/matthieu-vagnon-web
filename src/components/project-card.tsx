@@ -27,7 +27,7 @@ export default function ProjectCard({
   const t = useTranslations('caseStudies.project.type');
 
   return (
-    <Magnetic size='lg' className='h-70 sm:h-90 md:h-100 w-45 sm:w-70 md:w-80'>
+    <Magnetic size='lg' className='h-67 sm:h-90 md:h-102 w-45 sm:w-70 md:w-80'>
       <Link
         href={url}
         className='relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 p-3 sm:p-4'
@@ -48,17 +48,18 @@ export default function ProjectCard({
             {project.year}
           </span>
         </div>
-        <p className='text-xs sm:text-sm md:text-base text-white z-1'>
+        <p className='text-xs sm:text-sm md:text-base text-white z-1 line-clamp-4 overflow-hidden text-ellipsis'>
           {getTranslatedData(project.shortDescription, locale)}
         </p>
         {project.previewImg && (
-          <div className='absolute w-full p-3 sm:p-4 group-hover:p-0 transition-all duration-300 left-0 top-0 rounded-sm z-1'>
+          <div className='absolute w-full h-[200px] p-3 sm:p-4 group-hover:p-0 transition-all duration-300 left-0 top-0 rounded-sm z-1'>
             <Image
-              className='pointer-events-none w-full rounded-sm group-hover:rounded-b-none transition-all duration-300 shadow-lg'
               placeholder='blur'
-              width={320}
+              width={288}
+              height={183}
               src={project.previewImg}
               alt={project.title}
+              className='pointer-events-none w-full h-full object-cover object-center rounded-sm group-hover:rounded-b-none transition-all duration-300 shadow-lg'
             />
           </div>
         )}

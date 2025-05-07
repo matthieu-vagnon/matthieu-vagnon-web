@@ -80,11 +80,11 @@ export async function generateMetadata(
         locale
       ) as string,
       images: [
-        ...(project.gallery
+        ...project.gallery
           ?.filter((media) => media.image)
           .map((image) => ({
             url: `${process.env.NEXT_PUBLIC_URL!}${image.image!.src}`,
-          })) || []),
+          })),
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
         },
@@ -170,38 +170,34 @@ export default async function Project(props: ProjectProps) {
             </div>
           </Block>
         </BlurFade>
-        {project.problem && (
-          <BlurFade delay={blurDelay++ / 10}>
-            <Block
-              title={t('caseStudies.project.problem')}
-              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
-            >
-              <Ul gap='sm'>
-                {getTranslatedData(project.problem, locale).map(
-                  (item: React.ReactNode, index: number) => (
-                    <Li key={index}>{item}</Li>
-                  )
-                )}
-              </Ul>
-            </Block>
-          </BlurFade>
-        )}
-        {project.solution && (
-          <BlurFade delay={blurDelay++ / 10}>
-            <Block
-              title={t('caseStudies.project.solution')}
-              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
-            >
-              <Ul gap='sm'>
-                {getTranslatedData(project.solution, locale).map(
-                  (item: React.ReactNode, index: number) => (
-                    <Li key={index}>{item}</Li>
-                  )
-                )}
-              </Ul>
-            </Block>
-          </BlurFade>
-        )}
+        <BlurFade delay={blurDelay++ / 10}>
+          <Block
+            title={t('caseStudies.project.problem')}
+            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+          >
+            <Ul gap='sm'>
+              {getTranslatedData(project.problem, locale).map(
+                (item: React.ReactNode, index: number) => (
+                  <Li key={index}>{item}</Li>
+                )
+              )}
+            </Ul>
+          </Block>
+        </BlurFade>
+        <BlurFade delay={blurDelay++ / 10}>
+          <Block
+            title={t('caseStudies.project.solution')}
+            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+          >
+            <Ul gap='sm'>
+              {getTranslatedData(project.solution, locale).map(
+                (item: React.ReactNode, index: number) => (
+                  <Li key={index}>{item}</Li>
+                )
+              )}
+            </Ul>
+          </Block>
+        </BlurFade>
         {project.results && (
           <BlurFade delay={blurDelay++ / 10}>
             <Block
