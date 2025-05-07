@@ -20,6 +20,8 @@ import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
 import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png';
 import smartInterviewBuilder4 from '@/public/smart-interview/builder-4.png';
 import smartInterviewBuilder5 from '@/public/smart-interview/builder-5.png';
+import smartInterviewBuilder6 from '@/public/smart-interview/builder-6.png';
+import smartInterviewBuilderPreview1 from '@/public/smart-interview/builder-preview-1.png';
 
 export const projects: Record<string, Project> = {
   'matthieu-vagnon': {
@@ -483,53 +485,72 @@ export const projects: Record<string, Project> = {
       'Figma',
       'Cursor IDE',
     ],
-    previewImg: smartInterviewBuilder5,
+    previewImg: smartInterviewBuilder6,
     gallery: [
+      {
+        title: {
+          en: 'Presentation',
+          fr: 'Présentation',
+          ja: 'プレゼンテーション',
+        },
+        previewImage: smartInterviewBuilderPreview1,
+        src: 'https://www.youtube.com/embed/-toDAGtxVpQ',
+        audio: 'fr',
+        slug: 'presentation',
+      },
       {
         title: {
           en: 'Builder Editor',
           fr: 'Éditeur de générateur',
           ja: 'ジェネレーターエディター',
         },
-        image: smartInterviewBuilder2,
+        image: smartInterviewBuilder1,
         slug: 'builder-editor',
       },
       {
         title: {
-          en: 'Builder Preview',
-          fr: 'Aperçu du générateur',
-          ja: 'ジェネレーターのプレビュー',
+          en: 'Table Editor',
+          fr: 'Éditeur de table',
+          ja: 'テーブルエディター',
         },
-        image: smartInterviewBuilder3,
+        image: smartInterviewBuilder2,
         slug: 'builder-preview',
       },
       {
         title: {
-          en: 'Builder JSON Editor',
-          fr: 'Éditeur JSON du générateur',
-          ja: 'ジェネレーターのJSONエディター',
+          en: 'Table Editor 2',
+          fr: 'Éditeur de table 2',
+          ja: 'テーブルエディター2',
+        },
+        image: smartInterviewBuilder3,
+        slug: 'table-editor-2',
+      },
+      {
+        title: {
+          en: 'Tooltip',
+          fr: 'Tooltip',
+          ja: 'ツールチップ',
         },
         image: smartInterviewBuilder4,
-        slug: 'builder-json-editor',
+        slug: 'tooltip',
       },
       {
         title: {
-          en: 'Builder Presets',
-          fr: 'Présets du générateur',
-          ja: 'ジェネレーターのプリセット',
+          en: 'JSON Editor',
+          fr: 'Éditeur JSON',
+          ja: 'JSONエディター',
         },
         image: smartInterviewBuilder5,
-        slug: 'builder-presets',
+        slug: 'json-editor',
       },
       {
         title: {
-          en: 'Builder Tour',
-          fr: 'Tour du builder',
-          ja: 'ジェネレーターのツアー',
+          en: 'New Question',
+          fr: 'Nouvelle question',
+          ja: '新しい質問',
         },
-        src: 'https://www.youtube.com/embed/zy5hgYR-H74',
-        previewImage: smartInterviewBuilder1,
-        slug: 'builder-tour',
+        image: smartInterviewBuilder6,
+        slug: 'new-question',
       },
     ],
     problem: {
@@ -743,7 +764,7 @@ export const projects: Record<string, Project> = {
       'Figma',
       'Pixelmator',
     ],
-    previewImg: koryoriYa3,
+    previewImg: koryoriYa1,
     gallery: [
       {
         title: {
@@ -766,16 +787,16 @@ export const projects: Record<string, Project> = {
       {
         title: {
           en: 'Concept View',
-          fr: 'Vue conceptuelle',
+          fr: 'Vue Concept',
           ja: 'コンセプトビュー',
         },
         image: koryoriYa3,
         slug: 'concept-view',
       },
       {
-        title: { en: 'Map', fr: 'Carte', ja: 'マップ' },
+        title: { en: 'Gallery', fr: 'Galerie', ja: 'ギャラリー' },
         image: koryoriYa4,
-        slug: 'map',
+        slug: 'gallery',
       },
     ],
     problem: {

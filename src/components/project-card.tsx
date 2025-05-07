@@ -52,9 +52,9 @@ export default function ProjectCard({
           {getTranslatedData(project.shortDescription, locale)}
         </p>
         {project.previewImg && (
-          <div className='absolute w-full p-3 sm:p-4 group-hover:p-1 transition-all duration-300 left-0 top-0 rounded-sm z-1'>
+          <div className='absolute w-full p-3 sm:p-4 group-hover:p-0 transition-all duration-300 left-0 top-0 rounded-sm z-1'>
             <Image
-              className='pointer-events-none w-full rounded-sm shadow-lg'
+              className='pointer-events-none w-full rounded-sm group-hover:rounded-b-none transition-all duration-300 shadow-lg'
               placeholder='blur'
               width={320}
               src={project.previewImg}
