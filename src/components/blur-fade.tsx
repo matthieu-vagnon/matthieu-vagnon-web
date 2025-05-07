@@ -43,6 +43,7 @@ export function BlurFade({
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
 
   const isInView = !inView || inViewResult;
+
   const defaultVariants: Variants = {
     hidden: {
       y: yOffset,
@@ -57,6 +58,7 @@ export function BlurFade({
       ...(dynamic && { display: 'block' }),
     },
   };
+
   const combinedVariants = variant || defaultVariants;
 
   return (

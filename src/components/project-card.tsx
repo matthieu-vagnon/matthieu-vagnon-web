@@ -59,7 +59,7 @@ export default function ProjectCard({
               height={203}
               src={project.previewImg}
               alt={project.title}
-              className='pointer-events-none w-full h-full object-cover object-center rounded-sm group-hover:rounded-b-none transition-all duration-300 shadow-lg'
+              className='pointer-events-none w-full h-full object-cover object-center rounded-sm group-hover:rounded-b-none transition-all duration-300'
             />
           </div>
         )}
