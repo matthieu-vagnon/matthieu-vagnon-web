@@ -64,12 +64,12 @@ export default function MediaView({
           transition={{ duration: 0.5 }}
           className='inline-block'
         >
-          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible outline-none flex'>
+          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible outline-none'>
             <AnimatePresence mode='popLayout' custom={direction}>
               {medias.map((media, index) => {
-                const title = getTranslatedData(media.title, locale) as string;
-
                 if (index !== currentIndex) return null;
+
+                const title = getTranslatedData(media.title, locale) as string;
 
                 return (
                   <motion.div
