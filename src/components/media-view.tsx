@@ -144,25 +144,27 @@ export default function MediaView({
                         </div>
                       )}
                       {media.slug && (
-                        <Button
-                          variant='default'
-                          size='xs'
-                          className='my-2 sm:my-3 mr-2 sm:mr-3 rounded-full p-2 sm:p-3 flex items-center gap-x-2'
-                          onClick={() => {
-                            navigator.clipboard.writeText(
-                              `${process.env
-                                .NEXT_PUBLIC_URL!}${pathname}?media=${
-                                media.slug
-                              }`
-                            );
-                            toast.success(t('copyLink'));
-                          }}
-                        >
-                          <span className='hidden sm:block text-xs'>
-                            {t('copyLinkButton')}
-                          </span>
-                          <Copy className='size-4' />
-                        </Button>
+                        <div className='my-2 sm:my-3 mr-2 sm:mr-3'>
+                          <Button
+                            variant='default'
+                            size='xs'
+                            onClick={() => {
+                              navigator.clipboard.writeText(
+                                `${process.env
+                                  .NEXT_PUBLIC_URL!}${pathname}?media=${
+                                  media.slug
+                                }`
+                              );
+                              toast.success(t('copyLink'));
+                            }}
+                            className='rounded-full p-2 sm:p-3 flex items-center gap-x-2'
+                          >
+                            <span className='hidden sm:block text-xs'>
+                              {t('copyLinkButton')}
+                            </span>
+                            <Copy className='size-4' />
+                          </Button>
+                        </div>
                       )}
                     </div>
                   </motion.div>
