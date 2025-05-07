@@ -64,7 +64,7 @@ export default function MediaView({
           transition={{ duration: 0.5 }}
           className='inline-block'
         >
-          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible outline-none'>
+          <DialogContent className='outline-none'>
             <AnimatePresence mode='popLayout' custom={direction}>
               {medias.map((media, index) => {
                 if (index !== currentIndex) return null;
@@ -94,7 +94,7 @@ export default function MediaView({
                     animate='center'
                     exit='exit'
                     transition={{ duration: 0.5, ease: 'circInOut' }}
-                    className='flex flex-col gap-y-3'
+                    className='flex flex-col gap-y-3 max-h-[calc(100dvh-40px)]'
                   >
                     <VisuallyHidden asChild>
                       <DialogTitle>{title}</DialogTitle>
