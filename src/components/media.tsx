@@ -86,7 +86,7 @@ export default function Media({
         className={className}
         onClick={() => setIsOpen(true)}
       />
-      <MediaView medias={[media]} index={0} />
+      <MediaView medias={[media]} index={0} isOpen={isOpen} />
     </Dialog>
   );
 }

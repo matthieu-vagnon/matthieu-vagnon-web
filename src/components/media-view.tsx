@@ -9,10 +9,11 @@ import {
   DialogTitle,
 } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Copy } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import { Button } from './button';
 import { Media } from './media';
@@ -21,27 +22,38 @@ type MediaViewProps = {
   medias: Media[];
   index: number;
   setCurrentIndex?: (index: number) => void;
+  isOpen: boolean;
 };
 
 export default function MediaView({
   medias,
-  index,
+  index: currentIndex,
   setCurrentIndex = () => {},
+  isOpen,
 }: MediaViewProps) {
+  const [direction, setDirection] = useState<'next' | 'prev' | undefined>(
+    undefined
+  );
+
   const pathname = usePathname();
   const t = useTranslations('utils');
   const locale = useLocale();
 
-  const currentMedia = medias[index];
-  const title = getTranslatedData(currentMedia.title, locale) as string;
-
   const handleNextButton = () => {
-    setCurrentIndex(index + 1);
+    setDirection('next');
+    setCurrentIndex(currentIndex + 1);
   };
 
   const handlePreviousButton = () => {
-    setCurrentIndex(index - 1);
+    setDirection('prev');
+    setCurrentIndex(currentIndex - 1);
   };
+
+  useEffect(() => {
+    if (!isOpen) {
+      setDirection(undefined);
+    }
+  }, [isOpen]);
 
   return (
     <DialogPortal>
@@ -52,75 +64,111 @@ export default function MediaView({
           transition={{ duration: 0.5 }}
           className='inline-block'
         >
-          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible flex flex-col gap-y-3 outline-none'>
-            <VisuallyHidden asChild>
-              <DialogTitle>{title}</DialogTitle>
-            </VisuallyHidden>
-            <div className='overflow-y-auto rounded-xs'>
-              {currentMedia.src && (
-                <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
-                  <iframe
-                    src={currentMedia.src}
-                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                    referrerPolicy='strict-origin-when-cross-origin'
-                    allowFullScreen
-                    className='absolute inset-0 w-full h-full rounded-xl'
-                  />
-                </div>
-              )}
-              {currentMedia.image && (
-                <Image
-                  src={currentMedia.image}
-                  placeholder='blur'
-                  alt={title}
-                  className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
-                />
-              )}
-            </div>
-            <div className='flex justify-end gap-x-2 flex-nowrap bg-black/10 p-2 sm:p-3 rounded-full'>
-              {medias.length > 1 && (
-                <div className='flex items-center gap-x-2 flex-nowrap mr-auto'>
-                  <Button
-                    variant='default'
-                    size='xs'
-                    className='rounded-full p-2 sm:p-3'
-                    disabled={index === 0}
-                    onClick={handlePreviousButton}
+          <DialogContent className='max-h-[calc(100dvh-40px)] overflow-visible outline-none flex'>
+            <AnimatePresence mode='popLayout' custom={direction}>
+              {medias.map((media, index) => {
+                const title = getTranslatedData(media.title, locale) as string;
+
+                if (index !== currentIndex) return null;
+
+                return (
+                  <motion.div
+                    key={index}
+                    custom={direction}
+                    variants={{
+                      enter: (direction) => ({
+                        x:
+                          direction &&
+                          (direction === 'next' ? '100vw' : '-100vw'),
+                      }),
+                      center: {
+                        x: 0,
+                      },
+                      exit: (direction) => ({
+                        x:
+                          direction &&
+                          (direction === 'next' ? '-100vw' : '100vw'),
+                      }),
+                    }}
+                    initial='enter'
+                    animate='center'
+                    exit='exit'
+                    transition={{ duration: 0.5, ease: 'circInOut' }}
+                    className='flex flex-col gap-y-3'
                   >
-                    <ChevronLeft className='size-4' />
-                  </Button>
-                  <Button
-                    variant='default'
-                    size='xs'
-                    className='rounded-full p-2 sm:p-3'
-                    disabled={index === medias.length - 1}
-                    onClick={handleNextButton}
-                  >
-                    <ChevronRight className='size-4' />
-                  </Button>
-                </div>
-              )}
-              {currentMedia.slug && (
-                <Button
-                  variant='default'
-                  size='xs'
-                  className='rounded-full p-2 sm:p-3 flex items-center gap-x-2'
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      `${process.env.NEXT_PUBLIC_URL!}${pathname}?media=${
-                        currentMedia.slug
-                      }`
-                    );
-                    toast.success(t('copyLink'));
-                  }}
-                >
-                  <span className='hidden sm:block text-xs'>
-                    {t('copyLinkButton')}
-                  </span>
-                  <Copy className='size-4' />
-                </Button>
-              )}
-            </div>
+                    <VisuallyHidden asChild>
+                      <DialogTitle>{title}</DialogTitle>
+                    </VisuallyHidden>
+                    <div className='overflow-y-auto rounded-xs'>
+                      {media.src && (
+                        <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
+                          <iframe
+                            src={media.src}
+                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                            referrerPolicy='strict-origin-when-cross-origin'
+                            allowFullScreen
+                            className='absolute inset-0 w-full h-full rounded-xl'
+                          />
+                        </div>
+                      )}
+                      {media.image && (
+                        <Image
+                          src={media.image}
+                          placeholder='blur'
+                          alt={title}
+                          className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
+                        />
+                      )}
+                    </div>
+                    <div className='flex justify-end gap-x-2 flex-nowrap bg-black/10 rounded-full'>
+                      {medias.length > 1 && (
+                        <div className='my-2 sm:my-3 ml-2 sm:ml-3 flex items-center gap-x-2 flex-nowrap mr-auto'>
+                          <Button
+                            variant='default'
+                            size='xs'
+                            className='rounded-full p-2 sm:p-3'
+                            disabled={index === 0}
+                            onClick={handlePreviousButton}
+                          >
+                            <ChevronLeft className='size-4' />
+                          </Button>
+                          <Button
+                            variant='default'
+                            size='xs'
+                            className='rounded-full p-2 sm:p-3'
+                            disabled={index === medias.length - 1}
+                            onClick={handleNextButton}
+                          >
+                            <ChevronRight className='size-4' />
+                          </Button>
+                        </div>
+                      )}
+                      {media.slug && (
+                        <Button
+                          variant='default'
+                          size='xs'
+                          className='my-2 sm:my-3 mr-2 sm:mr-3 rounded-full p-2 sm:p-3 flex items-center gap-x-2'
+                          onClick={() => {
+                            navigator.clipboard.writeText(
+                              `${process.env
+                                .NEXT_PUBLIC_URL!}${pathname}?media=${
+                                media.slug
+                              }`
+                            );
+                            toast.success(t('copyLink'));
+                          }}
+                        >
+                          <span className='hidden sm:block text-xs'>
+                            {t('copyLinkButton')}
+                          </span>
+                          <Copy className='size-4' />
+                        </Button>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
           </DialogContent>
         </motion.div>
       </DialogOverlay>

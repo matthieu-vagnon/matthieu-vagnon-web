@@ -55,6 +55,7 @@ export function MediaCarousel({ medias, isOpenSlug }: MediaCarouselProps) {
           medias={medias}
           index={currentIndex}
           setCurrentIndex={setCurrentIndex}
+          isOpen={isOpen}
         />
       </Dialog>
     </>
