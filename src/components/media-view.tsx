@@ -77,13 +77,13 @@ export default function MediaView({
                 />
               )}
             </div>
-            <div className='flex justify-end gap-x-2 flex-nowrap'>
+            <div className='flex justify-end gap-x-2 flex-nowrap bg-black/10 p-2 sm:p-3 rounded-full'>
               {medias.length > 1 && (
                 <div className='flex items-center gap-x-2 flex-nowrap mr-auto'>
                   <Button
                     variant='default'
                     size='xs'
-                    className='rounded-full p-3'
+                    className='rounded-full p-2 sm:p-3'
                     disabled={index === 0}
                     onClick={handlePreviousButton}
                   >
@@ -92,7 +92,7 @@ export default function MediaView({
                   <Button
                     variant='default'
                     size='xs'
-                    className='rounded-full p-3'
+                    className='rounded-full p-2 sm:p-3'
                     disabled={index === medias.length - 1}
                     onClick={handleNextButton}
                   >
@@ -104,7 +104,7 @@ export default function MediaView({
                 <Button
                   variant='default'
                   size='xs'
-                  className='rounded-full p-3 flex items-center gap-x-2'
+                  className='rounded-full p-2 sm:p-3 flex items-center gap-x-2'
                   onClick={() => {
                     navigator.clipboard.writeText(
                       `${process.env.NEXT_PUBLIC_URL!}${pathname}?media=${
