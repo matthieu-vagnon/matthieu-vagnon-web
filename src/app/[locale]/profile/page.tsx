@@ -50,7 +50,6 @@ export default function Profile() {
             {businessCard && (
               <Media
                 width={256}
-                height={256}
                 media={{
                   image: businessCard.image,
                   title: businessCard.title,
