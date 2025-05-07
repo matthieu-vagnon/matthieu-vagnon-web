@@ -80,11 +80,9 @@ export async function generateMetadata(
         locale
       ) as string,
       images: [
-        ...project.gallery
-          ?.filter((media) => media.image)
-          .map((image) => ({
-            url: `${process.env.NEXT_PUBLIC_URL!}${image.image!.src}`,
-          })),
+        {
+          url: `${process.env.NEXT_PUBLIC_URL!}${project.previewImg.src}`,
+        },
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
         },
