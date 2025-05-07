@@ -3,6 +3,7 @@
 import { usePathname } from '@/i18n/navigation';
 import { getTranslatedData } from '@/lib/utils';
 import {
+  DialogClose,
   DialogContent,
   DialogOverlay,
   DialogPortal,
@@ -10,7 +11,7 @@ import {
 } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Copy } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Copy, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -57,7 +58,7 @@ export default function MediaView({
 
   return (
     <DialogPortal>
-      <DialogOverlay className='fixed inset-0 z-100 px-2 sm:px-5 md:px-10 flex items-center justify-center bg-black/75 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
+      <DialogOverlay className='fixed inset-0 z-100 flex items-center justify-center bg-black/75 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -94,14 +95,14 @@ export default function MediaView({
                     animate='center'
                     exit='exit'
                     transition={{ duration: 0.5, ease: 'circInOut' }}
-                    className='flex flex-col gap-y-3 max-h-[calc(100dvh-40px)]'
+                    className='flex flex-col gap-y-3 max-h-[calc(100dvh-16px)]'
                   >
                     <VisuallyHidden asChild>
                       <DialogTitle>{title}</DialogTitle>
                     </VisuallyHidden>
                     <div className='overflow-y-auto rounded-xs'>
                       {media.src && (
-                        <div className='relative w-[calc(100dvw-40px)] max-w-4xl pt-[56.25%]'>
+                        <div className='relative w-[calc(100dvw-24px)] max-w-4xl pt-[56.25%]'>
                           <iframe
                             src={media.src}
                             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
@@ -116,13 +117,13 @@ export default function MediaView({
                           src={media.image}
                           placeholder='blur'
                           alt={title}
-                          className='w-[calc(100dvw-40px)] max-w-4xl rounded-xl'
+                          className='w-[calc(100dvw-24px)] max-w-4xl rounded-xl'
                         />
                       )}
                     </div>
-                    <div className='flex justify-end gap-x-2 flex-nowrap bg-black/10 rounded-full'>
+                    <div className='flex justify-end gap-x-2 flex-nowrap bg-black/10 rounded-full p-2 sm:p-3'>
                       {medias.length > 1 && (
-                        <div className='my-2 sm:my-3 ml-2 sm:ml-3 flex items-center gap-x-2 flex-nowrap mr-auto'>
+                        <div className='flex items-center gap-x-2 flex-nowrap mr-auto'>
                           <Button
                             variant='default'
                             size='xs'
@@ -143,8 +144,8 @@ export default function MediaView({
                           </Button>
                         </div>
                       )}
-                      {media.slug && (
-                        <div className='my-2 sm:my-3 mr-2 sm:mr-3'>
+                      <div className='flex items-center gap-x-2 flex-nowrap'>
+                        {media.slug && (
                           <Button
                             variant='default'
                             size='xs'
@@ -164,8 +165,17 @@ export default function MediaView({
                             </span>
                             <Copy className='size-4' />
                           </Button>
-                        </div>
-                      )}
+                        )}
+                        <DialogClose asChild>
+                          <Button
+                            variant='default'
+                            size='xs'
+                            className='rounded-full p-2 sm:p-3'
+                          >
+                            <X className='size-4' />
+                          </Button>
+                        </DialogClose>
+                      </div>
                     </div>
                   </motion.div>
                 );
