@@ -55,8 +55,8 @@ export default function ProjectCard({
           <div className='absolute w-full h-[114px] sm:h-[178px] md:h-[203px] p-3 sm:p-4 group-hover:p-0 transition-all duration-300 left-0 top-0 rounded-sm z-1'>
             <Image
               placeholder='blur'
-              width={288}
-              height={183}
+              width={320}
+              height={203}
               src={project.previewImg}
               alt={project.title}
               className='pointer-events-none w-full h-full object-cover object-center rounded-sm group-hover:rounded-b-none transition-all duration-300 shadow-lg'
