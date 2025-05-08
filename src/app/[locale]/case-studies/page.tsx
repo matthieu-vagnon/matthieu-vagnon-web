@@ -36,7 +36,7 @@ export default function CaseStudies() {
           description={t('caseStudies.description')}
         />
       </BlurFade>
-      <div className='flex flex-row flex-wrap justify-center gap-3 sm:gap-5'>
+      <div className='flex flex-row flex-wrap justify-center gap-2 sm:gap-4'>
         {Object.entries(projects).map(([key, project], index) => (
           <BlurFade key={key} delay={blurDelay++ / 10}>
             <ProjectCard

@@ -58,7 +58,7 @@ export default function ProjectCard({
               width={320}
               src={project.previewImg}
               alt={project.title}
-              className='pointer-events-none w-full h-full object-cover object-center sm:rounded-sm sm:group-hover:rounded-b-none transition-[border-radius] duration-600'
+              className='mask-radial-at-top mask-radial-from-100% mask-radial-[100%_100%] sm:mask-none pointer-events-none w-full h-full object-cover object-center sm:rounded-sm sm:group-hover:rounded-b-none transition-[border-radius] duration-600'
             />
           </div>
         )}
