@@ -1,6 +1,7 @@
 import Highlight from '@/components/highlight';
 import bibimouneImage from '@/public/testimonials/bibimoune.jpeg';
 import rigoriImage from '@/public/testimonials/rigori.jpeg';
+import saussayeImage from '@/public/testimonials/saussaye.jpeg';
 
 export const testimonials: Testimonial[] = [
   {
@@ -117,5 +118,43 @@ export const testimonials: Testimonial[] = [
       ),
     },
     image: rigoriImage,
+  },
+  {
+    id: 3,
+    name: 'Matthieu Saussaye',
+    company: 'Pulse Partners',
+    position: 'CEO',
+    testimonial: {
+      original: 'fr',
+      en: (
+        <>
+          I hired Matthieu for our{' '}
+          <Highlight color='emerald'>SmartInterview interface</Highlight>.
+          Thanks to his skills, we were able to greatly improve the{' '}
+          <Highlight color='emerald'>design and ease of use</Highlight> for our
+          users. Thank you for everything!
+        </>
+      ),
+      fr: (
+        <>
+          J’ai fait appel à Matthieu pour notre{' '}
+          <Highlight color='emerald'>interface SmartInterview</Highlight>. Grâce
+          à ses compétences, nous avons pu améliorer énormément le{' '}
+          <Highlight color='emerald'>
+            design et faciliter l&apos;usage
+          </Highlight>{' '}
+          pour nos utilisateurs. Merci pour tout !
+        </>
+      ),
+      ja: (
+        <>
+          私はMatthieuに私たちの
+          <Highlight color='emerald'>SmartInterviewインターフェース</Highlight>
+          を雇った。彼のスキルにより、私たちはユーザーの使用を大幅に改善することができました。
+          ありがとうございました！
+        </>
+      ),
+    },
+    image: saussayeImage,
   },
 ];
