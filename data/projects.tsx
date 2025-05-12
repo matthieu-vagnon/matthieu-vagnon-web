@@ -947,6 +947,14 @@ export const projects: Record<string, Project> = {
         },
         url: 'https://koryoriyaozaki.uk',
       },
+      {
+        name: {
+          en: 'GitHub Repository',
+          fr: 'Répertoire GitHub',
+          ja: 'GitHubリポジトリ',
+        },
+        url: 'https://github.com/matthieu-vagnon/koryori-ya-website',
+      },
     ],
   },
 };
