@@ -390,6 +390,16 @@ export const projects: Record<string, Project> = {
         </>
       ),
     },
+    relatedUrls: [
+      {
+        name: {
+          en: 'GitHub Repository',
+          fr: 'Répertoire GitHub',
+          ja: 'GitHubリポジトリ',
+        },
+        url: 'https://github.com/matthieu-vagnon/matthieu-vagnon-web',
+      },
+    ],
   },
   'smart-interview': {
     title: 'Smart Interview',
