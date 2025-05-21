@@ -263,7 +263,7 @@ export const profile: Profile = {
         {
           en: 'Implementation of innovative solutions to enhance user experience and optimize performance on existing complex projects.',
           fr: "Mise en œuvre de solutions innovantes pour améliorer l'expérience utilisateur et optimiser les performances de projets existants.",
-          ja: '既存の複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なソリューションを実装しました。',
+          ja: '既存の複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なアイデアを実装しました。',
         },
         {
           en: 'Collaboration with and management of cross-functional teams to deliver high-quality products that exceeded client expectations.',
@@ -293,7 +293,7 @@ export const profile: Profile = {
       position: {
         en: 'Freelance Principal Front-end Developer & Digital Designer',
         fr: 'Développeur front-end principal & designer digital indépendant',
-        ja: 'フリーランスのプリンシパルフロントエンド開発者＆デジタルデザイナー',
+        ja: 'フリーランスの主要なフロントエンド開発者＆デジタルデザイナー',
       },
       description: [
         {
@@ -337,7 +337,7 @@ export const profile: Profile = {
         {
           en: 'Integration and maintenance of various JavaScript functionalities to enhance user experience and tracking such as cookie management, admin dashboards, and more.',
           fr: "Intégration et maintenance de diverses fonctionnalités JavaScript pour améliorer l'expérience et le suivi utilisateur, telles que des gestionnaires de cookies, des tableaux de bord, et plus encore.",
-          ja: 'クッキー管理、管理ダッシュボードなど、ユーザーエクスペリエンスとトラッキングを向上させるためのさまざまなJavaScript機能を統合し、維持しました。',
+          ja: 'クッキー管理、管理ダッシュボードなど、UXとトラッキングを向上させるためのさまざまなJavaScript機能を統合し、維持しました。',
         },
       ],
       timeline: '2021 - 2022',
@@ -397,7 +397,7 @@ export const profile: Profile = {
       type: {
         en: ['School'],
         fr: ['École'],
-        ja: ['学校'],
+        ja: ['大学'],
       },
       degree: {
         en: 'Web Project Management',
@@ -413,7 +413,7 @@ export const profile: Profile = {
       type: {
         en: ['School', 'Diploma'],
         fr: ['École', 'Diplôme'],
-        ja: ['学校', '学位'],
+        ja: ['大学', '学位'],
       },
       degree: {
         en: 'IT Associate Degree',
@@ -429,12 +429,12 @@ export const profile: Profile = {
       type: {
         en: ['School'],
         fr: ['École'],
-        ja: ['学校'],
+        ja: ['大学'],
       },
       degree: {
         en: 'Preparatory Classes',
         fr: 'École préparatoire aux grandes écoles',
-        ja: '高等専門学校',
+        ja: '専門学校',
       },
       href: 'https://polytech.univ-lyon1.fr',
     },
@@ -445,7 +445,7 @@ export const profile: Profile = {
       type: {
         en: ['School', 'Diploma'],
         fr: ['École', 'Diplôme'],
-        ja: ['学校', '学位'],
+        ja: ['中学校', '高校', '学位'],
       },
       degree: {
         en: 'Scientific High School Diploma with Honors',

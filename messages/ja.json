@@ -2,10 +2,10 @@
   "home": {
     "metadata": {
       "title": "ヴァンニョン・マチュのWebポートフォリオ",
-      "description": "ReactとNext.jsのエキスパート、フロントエンジニア、UI/UXデザイナー。私は私のクライアントにSaaSと最先端のウェブアプリを開発し、それらのスキルを内部化する方法を教えます。",
+      "description": "ReactとNext.jsのエキスパート、フロントエンジニア、UI/UXデザイナー。私は私のクライアントにSaaSと最先端のウェブアプリを開発します。",
       "openGraph": {
         "title": "ヴァンニョン・マチュのWebポートフォリオ",
-        "description": "React/Nextのエキスパート、フロントエンジニア、UI/UXデザイナー。私は私のクライアントに最先端のウェブアプリを開発し、それらのスキルを内部化する方法を教えます。"
+        "description": "React/Nextのエキスパート、フロントエンジニア、UI/UXデザイナー。私は私のクライアントに最先端のウェブアプリを開発します。"
       },
       "keywords": {
         "1": "ヴァンニョン・マチュ",
@@ -48,20 +48,18 @@
   "profile": {
     "metadata": {
       "title": "プロフィール | ヴァンニョン・マチュ",
-      "description": "私のスキル、仕事、教育の要約。",
+      "description": "私のスキル、仕事、教育について。",
       "openGraph": {
         "title": "ヴァンニョン・マチュのプロフィール",
-        "description": "私のスキル、仕事、教育の要約。"
+        "description": "私のスキル、仕事、教育について。"
       },
       "keywords": {
         "1": "プロフィール",
-        "2": "履歴書",
-        "3": "カリキュラム",
-        "4": "ヴァイタ"
+        "2": "履歴書"
       }
     },
     "title": "プロフィール",
-    "description": "私のスキル、仕事、教育の完全な要約。",
+    "description": "私のスキル、仕事、教育の完全なについて。",
     "about": "私について",
     "frontendStack": "フロントエンドスタック",
     "deploymentStack": "デプロイスタック",
@@ -71,14 +69,14 @@
   },
   "caseStudies": {
     "metadata": {
-      "title": "ケーススタディ | ヴァンニョン・マチュ",
+      "title": "実例 | ヴァンニョン・マチュ",
       "description": "私のキャリアで行ったプロジェクトのいくつか。SaaS、AI、Web3、教師ともっと。",
       "openGraph": {
-        "title": "ヴァンニョン・マチュのケーススタディ",
+        "title": "ヴァンニョン・マチュの実例",
         "description": "私が行ったプロジェクトのいくつか。SaaS、AI、Web3、教師ともっと。"
       },
       "keywords": {
-        "1": "ケーススタディ"
+        "1": "実例"
       }
     },
     "project": {
@@ -95,7 +93,7 @@
         "contribution": "貢献",
         "other": "その他"
       },
-      "title": "{name}ケーススタディ",
+      "title": "{name}の実例",
       "projectDescription": "プロジェクトの説明",
       "skills": "スキル",
       "technologies": "技術",
@@ -103,7 +101,7 @@
       "solution": "解決策",
       "results": "結果"
     },
-    "title": "ケーススタディ",
+    "title": "実例",
     "description": "これはフリーランスとして私が取り組んだプロジェクトの一部です。"
   },
   "getInTouch": {
@@ -111,15 +109,15 @@
     "description": "お好きな連絡方法を選択してください。",
     "meeting": {
       "title": "会議を予約する",
-      "description": "私とあなたのプロジェクトについて話をしてください。"
+      "description": "私とあなたのプロジェクトについて話してください。"
     },
     "email": {
       "title": "メール",
-      "description": "私にメールを送信して、あなたのプロジェクトについて話をしてください。"
+      "description": "私にメールを送信して、あなたのプロジェクトについて話してください。"
     },
     "phone": {
       "title": "電話",
-      "description": "私とあなたのプロジェクトについて話をしてください。"
+      "description": "私とあなたのプロジェクトについて話してください。"
     }
   },
   "configure": {
@@ -143,9 +141,9 @@
   },
   "utils": {
     "related": "関連リンク",
-    "repo": "公開リポジトリをチェックしてください",
-    "here": "ここ",
-    "madeWithLove": "マチュ・ヴァンニョンによる❤️入りの作品です",
+    "repo": "公開リポジトリは",
+    "here": "こちら",
+    "madeWithLove": "ヴァンニョン・マチュにより作成されました❤️",
     "copyLink": "リンクがクリップボードにコピーされました。",
     "copyLinkButton": "リンクをコピー",
     "copyPhone": "電話番号がクリップボードにコピーされました。",

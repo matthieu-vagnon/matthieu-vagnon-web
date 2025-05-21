@@ -152,7 +152,7 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Case Study',
           fr: 'Étude de cas',
-          ja: 'ケーススタディ',
+          ja: '実例',
         },
         image: mvWeb3,
         slug: 'case-studies',
@@ -170,7 +170,7 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Meeting Scheduler',
           fr: 'Planificateur de réunion',
-          ja: 'ミーティングスケジューラー',
+          ja: 'ミーティングスケジュール',
         },
         image: mvWeb5,
         slug: 'meeting-scheduler',
@@ -179,7 +179,7 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Configuration Modal',
           fr: 'Modale de configuration',
-          ja: '設定モーダル',
+          ja: '設定',
         },
         image: mvWeb6,
         slug: 'configuration-modal',
@@ -386,7 +386,7 @@ export const projects: Record<string, Project> = {
           </LinkButton>
           の成功した実装のおかげで、簡単に予約を取ることができます。
           <Highlight>以前のクライアントからの推薦</Highlight>の統合も
-          <Highlight>成功しており、押し付けがましくありません</Highlight>。
+          <Highlight>成功しており、快適です</Highlight>。
         </>
       ),
     },
@@ -616,7 +616,7 @@ export const projects: Record<string, Project> = {
           <Highlight>コードの読みやすさ</Highlight>を改善する。
         </>,
         <>
-          <Highlight>4から5週間以内</Highlight>で完了する。
+          <Highlight>4〜5週間以内</Highlight>で完了する。
         </>,
       ],
     },
