@@ -6,6 +6,7 @@ import Instagram from '@/components/svg/instagram';
 import Linkedin from '@/components/svg/linkedin';
 import Youtube from '@/components/svg/youtube';
 import TitleBox from '@/components/title-box';
+import { FileIcon } from 'lucide-react';
 import React from 'react';
 
 export type SocialLink = {
@@ -34,6 +35,11 @@ const SOCIAL_LINKS: SocialLink[] = [
     label: 'GitHub',
     link: process.env.NEXT_PUBLIC_GITHUB_URL!,
     icon: <Github />,
+  },
+  {
+    label: 'Resume',
+    link: 'resume.pdf',
+    icon: <FileIcon />,
   },
 ];
 
