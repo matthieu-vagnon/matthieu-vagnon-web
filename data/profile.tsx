@@ -147,20 +147,26 @@ export const profile: Profile = {
     en: (
       <>
         <span>
-          As a front-end engineer, I don&apos;t just build cutting-edge,
-          accessible and scalable web applications — I craft experiences that
-          drive engagement, reduce friction and build user trust from Himeji,
-          Hyōgo, Japan 🇯🇵
+          As a front-end engineer, I don&apos;t just build{' '}
+          <Highlight>cutting-edge</Highlight>, <Highlight>accessible</Highlight>
+          , and <Highlight>scalable</Highlight> web applications — I craft{' '}
+          <Highlight>
+            experiences that drive engagement, reduce friction and build user
+            trust
+          </Highlight>{' '}
+          from Himeji, Hyōgo, Japan 🇯🇵
         </span>
         <span>
-          Combining my developer skills with a strong background in design, I
-          bridge the gap between design and implementation — ensuring
-          pixel-perfect, seamless user experiences.
+          Combining my developer skills with a{' '}
+          <Highlight>strong background in design</Highlight>, I bridge the gap
+          between design and implementation — ensuring{' '}
+          <Highlight>pixel-perfect, seamless user experiences</Highlight>.
         </span>
         <span>
-          From early-stage startups to global companies like TotalEnergies, I’ve
-          helped teams turn complex product ideas into smooth, high-impact web
-          experiences.
+          From early-stage startups to global companies like{' '}
+          <Highlight>TotalEnergies</Highlight>, I’ve helped teams turn complex
+          product ideas into{' '}
+          <Highlight>smooth, high-impact web experiences</Highlight>.
         </span>
       </>
     ),
@@ -168,21 +174,31 @@ export const profile: Profile = {
       <>
         <span>
           En tant que développeur front-end, je ne me contente pas de créer des
-          applications web performantes, accessibles et évolutives — je conçois
-          des expériences qui renforcent l’engagement, réduisent les frictions
-          et instaurent la confiance des utilisateurs depuis Himeji, Hyōgo au
-          Japon 🇯🇵
+          applications web <Highlight>performantes</Highlight>,{' '}
+          <Highlight>accessibles</Highlight> et{' '}
+          <Highlight>évolutives</Highlight> — je conçois des{' '}
+          <Highlight>
+            expériences qui renforcent l’engagement, réduisent les frictions et
+            instaurent la confiance des utilisateurs
+          </Highlight>{' '}
+          depuis Himeji, Hyōgo au Japon 🇯🇵
         </span>
         <span>
-          Grâce à ma double compétence en développement et en design, je fais le
-          lien entre intention graphique et implémentation technique — pour
-          livrer des interfaces soignées, pixel-perfect, prêtes pour la
-          production, et pensées pour l’utilisateur.
+          Grâce à ma double compétence en{' '}
+          <Highlight>développement et en design</Highlight>, je fais le lien
+          entre intention graphique et implémentation technique — pour livrer
+          des interfaces soignées,{' '}
+          <Highlight>
+            pixel-perfect, prêtes pour la production, et pensées pour
+            l’utilisateur
+          </Highlight>
+          .
         </span>
         <span>
           Des startups en phase de lancement aux grandes entreprises comme
-          TotalEnergies, j’ai aidé des équipes à transformer des idées complexes
-          en expériences web fluides et à fort impact.
+          <Highlight>TotalEnergies</Highlight>, j’ai aidé des équipes à
+          transformer des idées complexes en{' '}
+          <Highlight>expériences web fluides et à fort impact</Highlight>.
         </span>
       </>
     ),

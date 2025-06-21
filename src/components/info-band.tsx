@@ -9,11 +9,11 @@ export default function InfoBand({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'w-full h-10 flex items-center justify-center rounded-lg bg-main',
+        'w-full p-2 flex items-center justify-center rounded-lg bg-main',
         className
       )}
     >
-      <span className='text-main-foreground font-medium italic text-md'>
+      <span className='text-main-foreground font-medium italic text-md text-center'>
         {t('infoBand')}
       </span>
     </div>
