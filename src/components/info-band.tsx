@@ -13,7 +13,7 @@ export default function InfoBand({ className }: { className?: string }) {
         className
       )}
     >
-      <span className='text-main-foreground font-medium italic text-md text-center'>
+      <span className='text-main-foreground font-medium italic text-sm sm:text-md text-center'>
         {t('infoBand')}
       </span>
     </div>
