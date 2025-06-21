@@ -1,4 +1,5 @@
 import { BlurFade } from '@/components/blur-fade';
+import InfoBand from '@/components/info-band';
 import LanguageSwitch from '@/components/language-switch';
 import { Particles } from '@/components/particles';
 import Github from '@/components/svg/github';
@@ -46,10 +47,15 @@ const SOCIAL_LINKS: SocialLink[] = [
 export default function Home() {
   return (
     <>
-      <div className='min-h-svh w-full flex flex-col gap-y-4 items-center pt-4 sm:pt-6 md:pt-8 pb-22'>
-        <BlurFade className='w-full flex justify-end'>
-          <LanguageSwitch />
-        </BlurFade>
+      <div className='min-h-svh w-full flex flex-col gap-y-4 items-center pb-22'>
+        <div className='flex flex-col gap-y-5 w-full mt-2'>
+          <BlurFade className='w-full'>
+            <InfoBand className='mt-4' />
+          </BlurFade>
+          <BlurFade className='w-full flex justify-end'>
+            <LanguageSwitch />
+          </BlurFade>
+        </div>
         <div className='flex-auto flex justify-center items-center'>
           <BlurFade delay={0.1} className='flex'>
             <TitleBox socialLinks={SOCIAL_LINKS} />

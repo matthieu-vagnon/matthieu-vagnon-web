@@ -1,4 +1,5 @@
 {
+  "infoBand": "❗️ Open to opportunities in full remote or hybrid work in Japan. Let's build something meaningful together.",
   "home": {
     "metadata": {
       "title": "Matthieu Vagnon's Web Portfolio",
@@ -30,18 +31,17 @@
     },
     "title": "Home",
     "titleBox": {
-      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>",
+      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
       "job": {
-        "prefix": "Freelance ",
+        "prefix": "UX-Driven ",
         "skills": {
           "1": "Front-End Engineer",
-          "2": "UI/UX Designer",
-          "3": "React/Next Expert",
-          "4": "Project Manager"
+          "2": "React/Next Expert",
+          "3": "Designer"
         },
         "suffix": ""
       },
-      "subtitle": "I transform my clients' visions into <highlight>captivating, reliable and engaging interfaces</highlight> by unifying <highlight>front-end development and UI/UX design</highlight>."
+      "subtitle": "I don’t just build interfaces — I craft <highlight>lasting and engaging experiences</highlight> since 2021."
     }
   },
   "profile": {
