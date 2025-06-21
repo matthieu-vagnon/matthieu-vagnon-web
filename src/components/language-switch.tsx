@@ -28,8 +28,8 @@ export default function LanguageSwitch({ className }: { className?: string }) {
       <LanguageButton lang='en' title='English' />
       <span>-</span>
       <LanguageButton lang='fr' title='Français' />
-      <span>-</span>
-      <LanguageButton lang='ja' title='日本語' />
+      {/* <span>-</span>
+      <LanguageButton lang='ja' title='日本語' /> */}
     </div>
   );
 }
