@@ -195,7 +195,7 @@ export const profile: Profile = {
           .
         </span>
         <span>
-          Des startups en phase de lancement aux grandes entreprises comme
+          Des startups en phase de lancement aux grandes entreprises comme{' '}
           <Highlight>TotalEnergies</Highlight>, j’ai aidé des équipes à
           transformer des idées complexes en{' '}
           <Highlight>expériences web fluides et à fort impact</Highlight>.
