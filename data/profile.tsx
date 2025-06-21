@@ -26,9 +26,9 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 export const profile: Profile = {
   avatarUrl: me,
   description: {
-    en: 'Ever since 2022, I help my clients scale by designing and developing custom, reliable and engaging front-end solutions. Leveraging UI/UX design and development, I put in place unified processes to accelerate delivery times and reduce costs.',
-    fr: "Depuis 2022, j'aide mes clients à scaler en concevant et développant des solutions front-end sur mesure, fiables et fidélisantes. Alliant design UI/UX et développement, je mets en place des processus unifiés pour accélérer les délais de livraison et réduire les coûts.",
-    ja: '2022年以来、カスタム、信頼性の高い、魅力的なフロントエンドソリューションを設計・開発することで、クライアントの成長を支援しています。UI/UXデザインと開発を活用し、納期を短縮しコストを削減するための統一されたプロセスを導入しています。',
+    en: 'The most overlooked skill in front-end development is empathy.',
+    fr: "La compétence la plus sous-estimée dans le développement front-end, c'est l'empathie.",
+    ja: '2021年以来、カスタム、信頼性の高い、魅力的なフロントエンドソリューションを設計・開発することで、クライアントの成長を支援しています。UI/UXデザインと開発を活用し、納期を短縮しコストを削減するための統一されたプロセスを導入しています。',
   },
   businessCard: {
     en: {
@@ -87,103 +87,103 @@ export const profile: Profile = {
     },
   ],
   frontendStack: [
-    'git',
-    'npm',
-    'React',
+    'React.js',
     'Next.js',
-    'Vite',
     'TypeScript',
     'JavaScript',
-    'Tailwind CSS',
-    'Material UI',
+    'JSX',
     'HTML',
+    'TailwindCSS',
     'CSS',
-    'Motion',
-    'Payload CMS',
-    'Auth0',
-    'ChatGPT',
+    'MaterialUI',
+    'Framer Motion',
+    'Redux',
+    'Cypress',
+    'ESLint',
+    'NPM',
+    'Git',
     'Cursor IDE',
   ],
-  deploymentStack: ['Vercel', 'Node.js', 'Docker'],
-  designStack: ['Figma', 'Pixelmator', 'ChatGPT'],
+  skills: [
+    {
+      en: 'UX-Driven Front-End Engineer',
+      fr: 'Développeur front-end UX-first',
+      ja: 'UXファーストのフロントエンドエンジニア',
+    },
+    {
+      en: 'React/Next.js Expert',
+      fr: 'Expert React/Next.js',
+      ja: 'React/Next.jsの専門家',
+    },
+    {
+      en: 'Designer',
+      fr: 'Designer',
+      ja: 'デザイナー',
+    },
+  ],
+  softSkills: [
+    {
+      en: 'Adaptable',
+      fr: 'Adaptable',
+      ja: '適応性',
+    },
+    {
+      en: 'Continuous Learner',
+      fr: 'Apprentissage continu',
+      ja: '継続的な学習',
+    },
+    {
+      en: 'Autonomous',
+      fr: 'Autonome',
+      ja: '独立',
+    },
+    {
+      en: 'Detail-Oriented',
+      fr: 'Méticuleux',
+      ja: '丁寧',
+    },
+  ],
   about: {
     en: (
       <>
         <span>
-          I design web and SaaS applications that are{' '}
-          <Highlight>performant, aesthetic and intuitive</Highlight>.
+          As a front-end engineer, I don&apos;t just build cutting-edge,
+          accessible and scalable web applications — I craft experiences that
+          drive engagement, reduce friction and build user trust from Himeji,
+          Hyōgo, Japan 🇯🇵
         </span>
         <span>
-          Where many developers deliver &quot;functional&quot; interfaces, I go
-          further by creating experiences that make users{' '}
-          <Highlight>want to use your product</Highlight> — and come back to it.
+          Combining my developer skills with a strong background in design, I
+          bridge the gap between design and implementation — ensuring
+          pixel-perfect, seamless user experiences.
         </span>
         <span>
-          I am a front-end developer, expert in React and Next.js, UI/UX
-          designer and project manager, whose conviction is that a web
-          application, regardless of what it offers,{' '}
-          <Highlight>is worthless without a quality user interface</Highlight>{' '}
-          because that&apos;s the first lever of conversion, well before
-          advanced features.
+          From early-stage startups to global companies like TotalEnergies, I’ve
+          helped teams turn complex product ideas into smooth, high-impact web
+          experiences.
         </span>
-        <span>
-          As a developer-designer, I bring a{' '}
-          <Highlight>unification of design and development processes</Highlight>
-          , which results in:
-        </span>
-        <Ul>
-          <Li>
-            A <Highlight>faster</Highlight> delivery
-          </Li>
-          <Li>
-            A <Highlight>100% faithful</Highlight> rendering of your mockups
-          </Li>
-          <Li>
-            A <Highlight>less costly</Highlight> implementation
-          </Li>
-        </Ul>
       </>
     ),
     fr: (
       <>
         <span>
-          Je conçois des applications web et SaaS{' '}
-          <Highlight>performantes, esthétiques et intuitives</Highlight>.
+          En tant que développeur front-end, je ne me contente pas de créer des
+          applications web performantes, accessibles et évolutives — je conçois
+          des expériences qui renforcent l’engagement, réduisent les frictions
+          et instaurent la confiance des utilisateurs depuis Himeji, Hyōgo au
+          Japon 🇯🇵
         </span>
         <span>
-          Là où beaucoup de développeurs livrent des interfaces
-          “fonctionnelles”, je vais plus loin en créant des expériences qui
-          donnent <Highlight>envie d’utiliser votre produit</Highlight> — et d’y
-          revenir.
+          Grâce à ma double compétence en développement et en design, je fais le
+          lien entre intention graphique et implémentation technique — pour
+          livrer des interfaces soignées, pixel-perfect, prêtes pour la
+          production, et pensées pour l’utilisateur.
         </span>
         <span>
-          Je suis développeur front-end, expert en React et Next.js, designer
-          UI/UX et chef de projet, dont la conviction est qu&apos;une
-          application web, peu importe ce qu&apos;elle apporte,{' '}
-          <Highlight>
-            ne vaut rien sans une interface utilisateur de qualité
-          </Highlight>{' '}
-          car c&apos;est là le premier levier de conversion, bien avant les
-          features avancées.
+          Des startups en phase de lancement aux grandes entreprises comme
+          TotalEnergies, j’ai aidé des équipes à transformer des idées complexes
+          en expériences web fluides et à fort impact.
         </span>
-        <span>
-          En tant que développeur-designer, j&apos;apporte une{' '}
-          <Highlight>
-            unification des processus de design et développement
-          </Highlight>
-          , ce qui résulte en :
-        </span>
-        <Ul>
-          <Li>
-            Une livraison plus <Highlight>rapide</Highlight>
-          </Li>
-          <Li>
-            Un rendu <Highlight>100% fidèle</Highlight> à vos maquettes
-          </Li>
-          <Li>
-            Une mise en œuvre <Highlight>moins coûteuse</Highlight>
-          </Li>
-        </Ul>
       </>
     ),
     ja: (
@@ -228,46 +228,49 @@ export const profile: Profile = {
       company: 'Matthieu Vagnon',
       logo: freelance,
       technologies: [
-        'git',
-        'npm',
         'React',
         'Next.js',
+        'Next-intl',
         'Vite',
+        'React Router',
         'TypeScript',
-        'Tailwind CSS',
-        'Motion',
+        'JavaScript',
+        'TailwindCSS',
+        'MaterialUI',
+        'Framer Motion',
+        'Cypress',
+        'ESLint',
         'Vercel',
-        'Node.js',
         'Docker',
-        'Figma',
-        'Pixelmator',
-        'ChatGPT',
+        'NPM',
+        'Git',
         'Cursor IDE',
+        'Figma',
       ],
       position: {
-        en: 'Front-end Engineer & Digital Designer (self-employed)',
-        fr: 'Développeur front-end & designer digital (EI)',
-        ja: 'フロントエンジニア&デジタルデザイナー（自営業）',
+        en: 'Front-end Engineer',
+        fr: 'Développeur front-end',
+        ja: 'フロントエンジニア',
       },
       description: [
         {
-          en: 'Design and development of high-performance React and Next.js SaaS solutions and web applications for diverse clients ranging from local businesses to enterprise corporations across multiple industries including AI, data analytics, and more.',
-          fr: "Conception et développement de solutions SaaS et applications web en React et Next.js pour divers clients allant des entreprises locales aux grandes sociétés dans plusieurs secteurs, notamment l'IA, l'analyse de données, et plus encore.",
+          en: 'Built an AI-powered React web trading tool for TotalEnergies Predictive Department, in close collaboration with a back-end engineer.',
+          fr: "Développement d'un outil de trading web basé sur l'IA (React) pour le Predictive Department de TotalEnergies, en étroite collaboration avec un développeur back-end.",
           ja: 'AIやデータ分析など様々な業界の地元企業から大企業まで、多様なクライアントのためにReactとNext.jsを使用した高性能なSaaSソリューションとWebアプリケーションを設計・開発しました。',
         },
         {
-          en: 'Implementation of various features in existing and complex projects.',
-          fr: 'Implémentation de fonctionalités diverses dans des projets existants et complexes.',
+          en: 'Delivered scalable SaaS and web apps using React/Next.js for clients across industries like AI, analytics, and e-commerce.',
+          fr: "Création d'applications SaaS et de solutions web évolutives avec React/Next.js pour des clients de secteurs variés (IA, data analytics, e-commerce, etc.).",
           ja: '既存の複雑なプロジェクトで様々な機能を実装しました。',
         },
         {
-          en: 'Implementation of innovative solutions to enhance user experience and optimize performance on existing complex projects.',
-          fr: "Mise en œuvre de solutions innovantes pour améliorer l'expérience utilisateur et optimiser les performances de projets existants.",
+          en: 'Shipped key features and UX improvements on complex legacy projects with strong focus on performance.',
+          fr: 'Ajout de nouvelles fonctionnalités et amélioration de l’expérience utilisateur sur des projets complexes existants, avec un fort accent sur la performance.',
           ja: '既存の複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なアイデアを実装しました。',
         },
         {
-          en: 'Collaboration with and management of cross-functional teams to deliver high-quality products that exceeded client expectations.',
-          fr: "Collaboration et management d'équipes pluridisciplinaires pour livrer des produits de haute qualité, dépassant les attentes des clients.",
+          en: 'Collaborated closely with cross-functional teams to turn product ideas into real, user-centered solutions.',
+          fr: 'Collaboration étroite avec des équipes pluridisciplinaires (design, produit, développement) pour transformer les besoins métiers en solutions concrètes et centrées utilisateur.',
           ja: '多機能チームと協力し管理して、クライアントの期待を超える高品質な製品を提供しました。',
         },
       ],
@@ -277,43 +280,48 @@ export const profile: Profile = {
       company: 'Predictive Layer',
       logo: predictiveLayer,
       technologies: [
-        'git',
-        'npm',
         'React',
         'Vite',
-        'JavaScript',
-        'Material UI',
         'React Router',
+        'JavaScript',
+        'MaterialUI',
         'Auth0',
-        'Node.js',
         'Docker',
+        'Cypress',
+        'ESLint',
+        'NPM',
+        'Git',
         'Figma',
-        'Pixelmator',
       ],
       position: {
-        en: 'Freelance Principal Front-end Developer & Digital Designer',
-        fr: 'Développeur front-end principal & designer digital indépendant',
+        en: 'Principal Front-end Developer & Designer',
+        fr: 'Développeur front-end principal & designer',
         ja: 'フリーランスの主要なフロントエンド開発者＆デジタルデザイナー',
       },
       description: [
         {
-          en: "Development of multiple React.js web applications to display AI-generated data for Predictive Layer (TotalEnergies' property).",
-          fr: 'Développement de plusieurs applications web en React.js pour afficher des données générées par l’IA pour Predictive Layer (propriété de TotalEnergies).',
+          en: 'Built multiple React applications to visualize AI-generated data for Predictive Layer.',
+          fr: 'Développement de plusieurs applications web React pour visualiser des données générées par l’IA pour Predictive Layer.',
           ja: 'Predictive Layer（TotalEnergiesの所有）のためにAIで生成されたデータを表示する複数のReact.jsウェブアプリケーションを開発しました。',
         },
         {
-          en: 'Participation in both design and development processes and collaboration with a back-end engineer.',
-          fr: 'Participation aux processus de design et de développement, en collaboration avec un ingénieur back-end.',
+          en: 'Actively contributed to both design and front-end development, in close collaboration with a back-end engineer.',
+          fr: 'Contribution active aux phases de design et de développement front-end, en étroite collaboration avec un développeur back-end.',
           ja: 'デザインと開発の両方に関与し、バックエンドエンジニアと協力しました。',
         },
         {
-          en: 'Utilization of advanced skills in front-end development and UI/UX design to create visually appealing and functional interfaces.',
-          fr: 'Utilisation de compétences avancées en développement front-end et en design UI/UX pour créer des interfaces à la fois esthétiques et fonctionnelles.',
+          en: 'Delivered polished, user-friendly interfaces by combining UI/UX principles with advanced front-end techniques.',
+          fr: 'Création d’interfaces soignées et intuitives grâce à la combinaison de principes UI/UX et de techniques avancées en développement front-end.',
           ja: 'フロントエンド開発とUI/UXデザインのスキルを活用して、視覚的に魅力的で機能的なインターフェースを作成しました。',
         },
         {
-          en: 'Remotely employed contractor through an umbrella company.',
-          fr: 'Portage salarial à distance.',
+          en: 'Full redesign of the company’s graphic design and branding.',
+          fr: 'Refonte totale de la charte graphique et de l’identité visuelle de l’entreprise.',
+          ja: '企業のグラフィックデザインとブランディングを完全に刷新しました。',
+        },
+        {
+          en: 'Worked remotely as a contractor via an umbrella company.',
+          fr: 'Travail en tant que prestataire à distance via une société de portage.',
           ja: 'リモートで働く契約者として、傘下会社を通じて働いていました。',
         },
       ],
@@ -322,7 +330,16 @@ export const profile: Profile = {
     {
       company: 'Influactive',
       logo: influactive,
-      technologies: ['git', 'JavaScript', 'HTML', 'CSS'],
+      technologies: [
+        'JavaScript',
+        'JSX',
+        'HTML',
+        'CSS',
+        'WordPress',
+        'PHP',
+        'SQL',
+        'Git',
+      ],
       position: {
         en: 'Full-Stack Engineer',
         fr: 'Développeur full-stack',
@@ -330,13 +347,13 @@ export const profile: Profile = {
       },
       description: [
         {
-          en: 'Development of fully customized themes on WordPress websites.',
-          fr: 'Développement de thèmes WordPress entièrement personnalisés.',
+          en: 'Developed bespoke WordPress themes tailored to specific client requirements.',
+          fr: 'Développement de thèmes WordPress sur mesure, adaptés aux besoins spécifiques des clients.',
           ja: '完全にカスタマイズされたテーマをWordPressサイトに開発しました。',
         },
         {
-          en: 'Integration and maintenance of various JavaScript functionalities to enhance user experience and tracking such as cookie management, admin dashboards, and more.',
-          fr: "Intégration et maintenance de diverses fonctionnalités JavaScript pour améliorer l'expérience et le suivi utilisateur, telles que des gestionnaires de cookies, des tableaux de bord, et plus encore.",
+          en: 'Implemented and maintained JavaScript features to improve UX and tracking, including cookie consent tools, admin dashboards, and more.',
+          fr: 'Intégration et maintenance de fonctionnalités JavaScript pour améliorer l’expérience utilisateur et le suivi des données, notamment la gestion des cookies, des tableaux de bord d’administration, etc.',
           ja: 'クッキー管理、管理ダッシュボードなど、UXとトラッキングを向上させるためのさまざまなJavaScript機能を統合し、維持しました。',
         },
       ],

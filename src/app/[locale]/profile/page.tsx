@@ -75,13 +75,17 @@ export default function Profile() {
               className='flex-auto'
             />
             <SkillBox
-              title={t('profile.deploymentStack')}
-              items={profile.deploymentStack}
+              title={t('profile.skills')}
+              items={profile.skills.map((skill) =>
+                getTranslatedData(skill, locale)
+              )}
               className='flex-auto'
             />
             <SkillBox
-              title={t('profile.designStack')}
-              items={profile.designStack}
+              title={t('profile.softSkills')}
+              items={profile.softSkills.map((skill) =>
+                getTranslatedData(skill, locale)
+              )}
               className='flex-auto'
             />
           </div>

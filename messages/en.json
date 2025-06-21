@@ -41,7 +41,7 @@
         },
         "suffix": ""
       },
-      "subtitle": "I don’t just build interfaces — I craft <highlight>lasting and engaging experiences</highlight> since 2021."
+      "subtitle": "I don’t just build interfaces — I craft <highlight>lasting and engaging experiences</highlight> since 2021. Based in Himeji, Japan."
     }
   },
   "profile": {
@@ -62,9 +62,9 @@
     "title": "Profile",
     "description": "A complete summary of my skills, work and education.",
     "about": "About",
-    "frontendStack": "Front-End Stack",
-    "deploymentStack": "Deployment Stack",
-    "designStack": "Design Stack",
+    "frontendStack": "Main Front-End Stack",
+    "skills": "Skills",
+    "softSkills": "Soft Skills",
     "work": "Work",
     "education": "Education"
   },
@@ -111,15 +111,15 @@
     "description": "Please select your preferred contact method.",
     "meeting": {
       "title": "Schedule a Meeting",
-      "description": "Schedule a meeting with me to discuss your project."
+      "description": "Schedule a meeting with me."
     },
     "email": {
       "title": "Email",
-      "description": "Send me an email to discuss your project."
+      "description": "Send me an email."
     },
     "phone": {
       "title": "Phone",
-      "description": "Call me to discuss your project."
+      "description": "Call me."
     }
   },
   "configure": {

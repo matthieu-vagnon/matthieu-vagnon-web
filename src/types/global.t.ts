@@ -46,8 +46,16 @@ declare global {
       img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     }[];
     frontendStack: string[];
-    deploymentStack: string[];
-    designStack: string[];
+    skills: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    }[];
+    softSkills: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    }[];
     about: {
       en?: React.ReactNode;
       fr?: React.ReactNode;

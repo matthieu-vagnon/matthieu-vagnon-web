@@ -62,9 +62,9 @@
     "title": "プロフィール",
     "description": "私のスキル、仕事、教育の完全なについて。",
     "about": "私について",
-    "frontendStack": "フロントエンドスタック",
-    "deploymentStack": "デプロイスタック",
-    "designStack": "デザインスタック",
+    "frontendStack": "メインフロントエンドスタック",
+    "skills": "スキル",
+    "softSkills": "ソフトスキル",
     "work": "仕事",
     "education": "教育"
   },
@@ -110,15 +110,15 @@
     "description": "お好きな連絡方法を選択してください。",
     "meeting": {
       "title": "会議を予約する",
-      "description": "私とあなたのプロジェクトについて話してください。"
+      "description": "私と会議を予約してください。"
     },
     "email": {
       "title": "メール",
-      "description": "私にメールを送信して、あなたのプロジェクトについて話してください。"
+      "description": "私にメールを送信してください。"
     },
     "phone": {
       "title": "電話",
-      "description": "私とあなたのプロジェクトについて話してください。"
+      "description": "私に電話をかけてください。"
     }
   },
   "configure": {

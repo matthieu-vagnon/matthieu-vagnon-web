@@ -43,7 +43,7 @@
         },
         "suffix": " UX-first."
       },
-      "subtitle": "Je ne développe pas que des interfaces : je façonne des <highlight>expériences durables et engageantes</highlight> depuis 2021."
+      "subtitle": "Je ne développe pas que des interfaces : je façonne des <highlight>expériences durables et engageantes</highlight> depuis 2021. Basé à Himeji, Japon."
     }
   },
   "profile": {
@@ -64,9 +64,9 @@
     "title": "Profil",
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
-    "frontendStack": "Stack front-end",
-    "deploymentStack": "Stack déploiement",
-    "designStack": "Stack design",
+    "frontendStack": "Stack front-end principal",
+    "skills": "Compétences",
+    "softSkills": "Soft Skills",
     "work": "Expériences",
     "education": "Formations"
   },
@@ -113,15 +113,15 @@
     "description": "Veuillez sélectionner votre méthode de contact préférée.",
     "meeting": {
       "title": "Planifier une visioconférence",
-      "description": "Planifiez une visioconférence avec moi pour discuter de votre projet."
+      "description": "Planifiez une visioconférence avec moi."
     },
     "email": {
       "title": "Email",
-      "description": "Envoyez-moi un email pour discuter de votre projet."
+      "description": "Envoyez-moi un email."
     },
     "phone": {
       "title": "Téléphone",
-      "description": "Appelez-moi pour discuter de votre projet."
+      "description": "Appelez-moi."
     }
   },
   "configure": {
