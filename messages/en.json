@@ -3,30 +3,32 @@
   "home": {
     "metadata": {
       "title": "Matthieu Vagnon's Web Portfolio",
-      "description": "I am a React and Next.js expert, front-end engineer, UI/UX designer and project manager. I provide my clients with engaging SaaS and web applications.",
+      "description": "I am a full-stack web engineer and React/Next.js expert. I provide my clients with engaging SaaS and web applications.",
       "openGraph": {
         "title": "Matthieu Vagnon's Web Portfolio",
-        "description": "React/Next expert, front-end engineer, UI/UX designer, project manager. I provide my clients with engaging web apps."
+        "description": "Full-stack web engineer and React/Next.js expert. I provide my clients with engaging web apps."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
         "2": "Front-End",
-        "3": "Engineer",
-        "4": "Digital",
-        "5": "Designer",
+        "3": "Back-End",
+        "4": "Full-Stack",
+        "5": "Engineer",
         "6": "SEO",
         "7": "Responsive",
         "8": "UI",
         "9": "UX",
-        "10": "Deployment",
-        "11": "SaaS",
-        "12": "Web",
+        "10": "SaaS",
+        "11": "Web",
+        "12": "Application",
         "13": "App",
         "14": "React",
         "15": "Next.js",
         "16": "Figma",
         "18": "Web3",
-        "19": "AI"
+        "19": "AI",
+        "20": "Node.js",
+        "21": "Developer"
       }
     },
     "title": "Home",
@@ -35,8 +37,8 @@
       "job": {
         "prefix": "UX-Driven ",
         "skills": {
-          "1": "Front-End Engineer",
-          "2": "React/Next Expert",
+          "1": "Full-Stack Engineer",
+          "2": "React/Next.js Expert",
           "3": "Designer"
         },
         "suffix": ""
@@ -62,8 +64,9 @@
     "title": "Profile",
     "description": "A complete summary of my skills, work and education.",
     "about": "About",
-    "frontendStack": "Main Front-End Stack",
-    "skills": "Skills",
+    "frontendStack": "Front-End Stack",
+    "backendStack": "Back-End Stack",
+    "otherStack": "Others",
     "softSkills": "Soft Skills",
     "work": "Work",
     "education": "Education"

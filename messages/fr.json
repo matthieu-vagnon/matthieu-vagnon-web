@@ -3,32 +3,31 @@
   "home": {
     "metadata": {
       "title": "Portfolio web de Matthieu Vagnon",
-      "description": "Je suis expert React et Next.js, développeur front-end, designer UI/UX et chef de projet. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
+      "description": "Je suis développeur web full-stack UX-first et expert React/Next.js. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
       "openGraph": {
         "title": "Portfolio Web de Matthieu Vagnon",
-        "description": "Expert React/Next, développeur front-end, designer UI/UX et chef de projet. Je propose à mes clients le développement d'applications web fidélisantes."
+        "description": "Développeur full-stack et expert React/Next. Je propose à mes clients le développement d'applications web fidélisantes."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
-        "2": "Front-End",
-        "3": "Développeur",
-        "4": "Développement",
-        "6": "Designer",
-        "7": "SEO",
-        "8": "Responsive",
-        "9": "UI",
-        "10": "UX",
-        "11": "Déploiement",
-        "12": "SaaS",
-        "13": "Web",
-        "14": "App",
-        "15": "React",
-        "16": "Next.js",
-        "17": "Figma",
-        "18": "AI",
-        "19": "Web3",
-        "20": "Enseignement",
-        "21": "Mentorat"
+        "2": "Front-end",
+        "3": "Back-end",
+        "4": "Full-stack",
+        "5": "Développeur",
+        "6": "SEO",
+        "7": "Responsive",
+        "8": "UI",
+        "9": "UX",
+        "10": "SaaS",
+        "11": "Web",
+        "12": "Application",
+        "13": "App",
+        "14": "React",
+        "15": "Next.js",
+        "16": "Figma",
+        "18": "Web3",
+        "19": "AI",
+        "20": "Node.js"
       }
     },
     "title": "Accueil",
@@ -37,7 +36,7 @@
       "job": {
         "prefix": "",
         "skills": {
-          "1": "Développeur front-end",
+          "1": "Développeur full-stack",
           "2": "Expert React/Next.js",
           "3": "Designer"
         },
@@ -64,8 +63,9 @@
     "title": "Profil",
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
-    "frontendStack": "Stack front-end principal",
-    "skills": "Compétences",
+    "frontendStack": "Stack front-end",
+    "backendStack": "Stack back-end",
+    "otherStack": "Autres",
     "softSkills": "Soft Skills",
     "work": "Expériences",
     "education": "Formations"

@@ -36,8 +36,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     keywords: [
       ...(profile.frontendStack || []),
-      ...(profile.skills.map((skill) => getTranslatedData(skill, locale)) ||
-        []),
+      ...(profile.backendStack || []),
+      ...(profile.otherStack || []),
       ...(profile.softSkills.map((skill) => getTranslatedData(skill, locale)) ||
         []),
       ...(profile.experience.map((experience) => experience.company) || []),

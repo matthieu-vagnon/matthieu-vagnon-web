@@ -70,10 +70,13 @@ export default function Profile() {
               className='flex-auto'
             />
             <SkillBox
-              title={t('profile.skills')}
-              items={profile.skills.map((skill) =>
-                getTranslatedData(skill, locale)
-              )}
+              title={t('profile.backendStack')}
+              items={profile.backendStack}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.otherStack')}
+              items={profile.otherStack}
               className='flex-auto'
             />
             <SkillBox
