@@ -33,12 +33,12 @@
     },
     "title": "Home",
     "titleBox": {
-      "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
+      "name": "Hi, I'm <strong>Matthieu Vagnon</strong>,",
       "job": {
         "prefix": "",
         "skills": {
           "1": "Full-Stack Engineer",
-          "2": "Designer UI/UX"
+          "2": "UI/UX Designer"
         },
         "suffix": " since 2021."
       },
