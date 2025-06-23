@@ -3,10 +3,10 @@
   "home": {
     "metadata": {
       "title": "Matthieu Vagnon's Web Portfolio",
-      "description": "I am a full-stack web engineer and React/Next.js expert. I provide my clients with engaging SaaS and web applications.",
+      "description": "I am a full-stack web engineer and UI/UX Designer. I provide my clients with engaging SaaS and web applications.",
       "openGraph": {
         "title": "Matthieu Vagnon's Web Portfolio",
-        "description": "Full-stack web engineer and React/Next.js expert. I provide my clients with engaging web apps."
+        "description": "UX-driven full-stack engineer. I provide my clients with engaging web apps."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
@@ -35,13 +35,12 @@
     "titleBox": {
       "name": "Hello, I'm <strong>Matthieu Vagnon</strong>,",
       "job": {
-        "prefix": "UX-Driven ",
+        "prefix": "",
         "skills": {
           "1": "Full-Stack Engineer",
-          "2": "React/Next.js Expert",
-          "3": "Designer"
+          "2": "Designer UI/UX"
         },
-        "suffix": ""
+        "suffix": " since 2021."
       },
       "subtitle": "I don’t just build interfaces — I craft <highlight>lasting and engaging experiences</highlight> since 2021. Based in Himeji, Japan 🇯🇵"
     }

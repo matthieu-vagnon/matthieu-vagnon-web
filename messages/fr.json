@@ -3,10 +3,10 @@
   "home": {
     "metadata": {
       "title": "Portfolio web de Matthieu Vagnon",
-      "description": "Je suis développeur web full-stack UX-first et expert React/Next.js. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
+      "description": "Je suis développeur web full-stack et designer UI/UX. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
       "openGraph": {
         "title": "Portfolio Web de Matthieu Vagnon",
-        "description": "Développeur full-stack et expert React/Next. Je propose à mes clients le développement d'applications web fidélisantes."
+        "description": "Développeur full-stack UX-first. Je propose à mes clients le développement d'applications web fidélisantes."
       },
       "keywords": {
         "1": "Matthieu Vagnon",
@@ -37,10 +37,9 @@
         "prefix": "",
         "skills": {
           "1": "Développeur full-stack",
-          "2": "Expert React/Next.js",
-          "3": "Designer"
+          "2": "Designer UI/UX"
         },
-        "suffix": " UX-first."
+        "suffix": " depuis 2021."
       },
       "subtitle": "Je ne développe pas que des interfaces : je façonne des <highlight>expériences durables et engageantes</highlight> depuis 2021. Basé à Himeji, Japon 🇯🇵"
     }

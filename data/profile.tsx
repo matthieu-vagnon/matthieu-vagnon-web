@@ -26,9 +26,9 @@ import univLyon2 from '@/public/profile/univ-lyon2.jpg';
 export const profile: Profile = {
   avatarUrl: me,
   description: {
-    en: 'The most overlooked skill in front-end development is empathy.',
-    fr: "La compétence la plus sous-estimée dans le développement front-end, c'est l'empathie.",
-    ja: '2021年以来、カスタム、信頼性の高い、魅力的なフロントエンドソリューションを設計・開発することで、クライアントの成長を支援しています。UI/UXデザインと開発を活用し、納期を短縮しコストを削減するための統一されたプロセスを導入しています。',
+    en: `"The most overlooked skill in web development is empathy." — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
+    fr: `La compétence la plus sous-estimée dans le développement web, c'est l'empathie. — Matthieu Vagnon, Développeur full-stack UX-first`,
+    ja: `「ウェブ開発における最も見落とされているスキルは、共感力です。」 — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
   },
   businessCard: {
     en: {
@@ -110,15 +110,7 @@ export const profile: Profile = {
     'Node.js',
     'SQL',
   ],
-  otherStack: [
-    'Vercel',
-    'Supabase',
-    'Railway',
-    'Docker',
-    'Git',
-    'Cursor IDE',
-    'Figma',
-  ],
+  otherStack: ['Vercel', 'Supabase', 'Docker', 'Git', 'Cursor IDE', 'Figma'],
   softSkills: [
     {
       en: 'Adaptable',
