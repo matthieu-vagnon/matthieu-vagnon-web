@@ -153,6 +153,10 @@ export default function Profile() {
               name: 'LinkedIn',
               url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
             },
+            {
+              name: 'Findy',
+              url: 'https://findy-code.io/share_profiles/TCXixmT7ylwpK',
+            },
           ]}
         />
       </BlurFade>
