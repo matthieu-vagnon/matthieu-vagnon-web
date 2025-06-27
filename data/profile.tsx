@@ -18,6 +18,7 @@ import me from '@/public/profile/me.png';
 import meta from '@/public/profile/meta.jpeg';
 import polytech from '@/public/profile/polytech.webp';
 import predictiveLayer from '@/public/profile/predictive-layer.png';
+import pulsePartners from '@/public/profile/pulse-partners.png';
 import saintThomas from '@/public/profile/saint-thomas.png';
 import toeic from '@/public/profile/toeic.webp';
 import univLyon1 from '@/public/profile/univ-lyon1.png';
@@ -28,7 +29,6 @@ export const profile: Profile = {
   description: {
     en: `"The most overlooked skill in web development is empathy." — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
     fr: `La compétence la plus sous-estimée dans le développement web, c'est l'empathie. — Matthieu Vagnon, Développeur full-stack UX-first`,
-    ja: `「ウェブ開発における最も見落とされているスキルは、共感力です。」 — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
   },
   businessCard: {
     en: {
@@ -115,22 +115,18 @@ export const profile: Profile = {
     {
       en: 'Adaptable',
       fr: 'Adaptable',
-      ja: '適応性',
     },
     {
       en: 'Continuous Learner',
       fr: 'Apprentissage continu',
-      ja: '継続的な学習',
     },
     {
       en: 'Autonomous',
       fr: 'Autonome',
-      ja: '独立',
     },
     {
       en: 'Detail-Oriented',
       fr: 'Méticuleux',
-      ja: '丁寧',
     },
   ],
   about: {
@@ -262,28 +258,59 @@ export const profile: Profile = {
       position: {
         en: 'Full-Stack Engineer',
         fr: 'Développeur full-stack',
-        ja: 'フルスタックエンジニア',
       },
       description: [
         {
-          en: 'Built an AI-powered React web trading tool for TotalEnergies Predictive Department.',
-          fr: "Développement d'un outil de trading web basé sur l'IA (React) pour le Predictive Department de TotalEnergies.",
-          ja: 'TotalEnergiesのPredictive DepartmentのためにAIでデータ分析を行うReactのWebトレードツールを開発しました。',
+          en: 'Providing full-stack development services to companies ranging from startups to big international clients (e.g., Pulse Partners, TotalEnergies).',
+          fr: 'Prestations de développement full-stack pour des clients allant de startups à des entreprises internationales (ex. : Pulse Partners, TotalEnergies).',
         },
         {
-          en: 'Delivered scalable SaaS and web apps using React/Next.js for clients across industries like AI, analytics, and e-commerce.',
-          fr: "Création d'applications SaaS et de solutions web évolutives avec React/Next.js pour des clients de secteurs variés (IA, data analytics, e-commerce, etc.).",
-          ja: '既存の複雑なプロジェクトで様々な機能を実装しました。',
+          en: 'Focusing on the user experience (UX) to promote a strong user-first approach.',
+          fr: 'Accent mis sur l’expérience utilisateur (UX) afin de garantir une approche centrée sur l’utilisateur.',
+        },
+      ],
+      timeline: `2024 - ${new Date().getFullYear()}`,
+    },
+    {
+      company: 'Pulse Partners',
+      logo: pulsePartners,
+      technologies: [
+        'React.js',
+        'Next.js',
+        'TypeScript',
+        'TailwindCSS',
+        'MaterialUI',
+        'Framer Motion',
+        'Cypress',
+        'ESLint',
+        'Node.js',
+        'Vercel',
+        'Supabase',
+        'Docker',
+        'Git',
+        'Cursor IDE',
+        'Figma',
+      ],
+      position: {
+        en: 'Front-end Engineer & Designer',
+        fr: 'Développeur front-end & designer',
+      },
+      description: [
+        {
+          en: 'Worked on the SmartInterview web application.',
+          fr: 'Travail sur l’application web SmartInterview.',
         },
         {
-          en: 'Shipped key features and UX improvements on complex legacy projects with strong focus on performance.',
-          fr: 'Ajout de nouvelles fonctionnalités et amélioration de l’expérience utilisateur sur des projets complexes existants, avec un fort accent sur la performance.',
-          ja: '既存の複雑なプロジェクトでユーザーエクスペリエンスを向上させ、パフォーマンスを最適化するための革新的なアイデアを実装しました。',
+          en: 'Development of new features to enhance experience: question order drag & drop, question presets, unification of the builder and analytics into one single app, and more.',
+          fr: "Développement de nouvelles features pour améliorer l'expérience globale : drag & drop des questions, presets de question, unification du builder et des analytics en une application unique, et plus.",
         },
         {
-          en: 'Collaborated closely with cross-functional teams to turn product ideas into real, user-centered solutions.',
-          fr: 'Collaboration étroite avec des équipes pluridisciplinaires (design, produit, développement) pour transformer les besoins métiers en solutions concrètes et centrées utilisateur.',
-          ja: '多機能チームと協力し管理して、クライアントの期待を超える高品質な製品を提供しました。',
+          en: 'Development of new fully customizable builder elements (via JSONForms): matrix, table, slider, radio button and more.',
+          fr: 'Développement de plusieurs éléments hautement personnalisables au sein du builder (via JSONForms) : matrice, tableau, slider, bouton radio, et plus.',
+        },
+        {
+          en: 'UI/UX enhancements: visual loaders, responsive design, graphical cohesion, and more.',
+          fr: "Améliorations UI/UX : loaders visuels, design responsive, cohésion graphique de l'interface, et plus.",
         },
       ],
       timeline: `2024 - ${new Date().getFullYear()}`,
@@ -307,33 +334,47 @@ export const profile: Profile = {
       position: {
         en: 'Principal Front-end Developer & Designer',
         fr: 'Développeur front-end principal & designer',
-        ja: 'フリーランスの主要なフロントエンド開発者＆デジタルデザイナー',
       },
       description: [
         {
-          en: 'Built multiple React applications to visualize AI-generated data for Predictive Layer.',
-          fr: 'Développement de plusieurs applications web React pour visualiser des données générées par l’IA pour Predictive Layer.',
-          ja: 'Predictive Layer（TotalEnergiesの所有）のためにAIで生成されたデータを表示する複数のReact.jsウェブアプリケーションを開発しました。',
+          en: 'Worked on the Crystal web application.',
+          fr: 'Travail sur l’application web Crystal.',
         },
         {
-          en: 'Actively contributed to both design and front-end development, in close collaboration with a back-end engineer.',
-          fr: 'Contribution active aux phases de design et de développement front-end, en étroite collaboration avec un développeur back-end.',
-          ja: 'デザインと開発の両方に関与し、バックエンドエンジニアと協力しました。',
+          en: 'Design of the whole application (10+ pages) via Figma.',
+          fr: 'Conception complète de l’interface de l’application (10+ pages) via Figma.',
         },
         {
-          en: 'Delivered polished, user-friendly interfaces by combining UI/UX principles with advanced front-end techniques.',
-          fr: 'Création d’interfaces soignées et intuitives grâce à la combinaison de principes UI/UX et de techniques avancées en développement front-end.',
-          ja: 'フロントエンド開発とUI/UXデザインのスキルを活用して、視覚的に魅力的で機能的なインターフェースを作成しました。',
+          en: 'Front-end development from scratch mainly using React, Vite, MaterialUI and React Router.',
+          fr: 'Développement front-end from scratch avec React, Vite, Material UI et React Router.',
         },
         {
-          en: 'Full redesign of the company’s graphic design and branding.',
-          fr: 'Refonte totale de la charte graphique et de l’identité visuelle de l’entreprise.',
-          ja: '企業のグラフィックデザインとブランディングを完全に刷新しました。',
+          en: 'Implementation of complex charts using MaterialUI-X.',
+          fr: 'Implémentation de graphiques complexes avec Material UI-X.',
         },
         {
-          en: 'Worked remotely as a contractor via an umbrella company.',
-          fr: 'Travail en tant que prestataire à distance via une société de portage.',
-          ja: 'リモートで働く契約者として、傘下会社を通じて働いていました。',
+          en: 'Close collaboration with a back-end engineer providing the API to ensure seamless integration.',
+          fr: 'Collaboration étroite avec l’ingénieur back-end en charge de l’API pour assurer une intégration fluide.',
+        },
+        {
+          en: 'Worked on the demo web application.',
+          fr: 'Travail sur l’application web de démonstration.',
+        },
+        {
+          en: 'Design from scratch of various demo web applications using Figma.',
+          fr: 'Conception des interfaces de multiples démos des produits de Predictive Layer from scratch avec Figma.',
+        },
+        {
+          en: 'Front-end implementation of those applications in React, using Vite.',
+          fr: 'Développement front-end de ces démos en React et Vite.',
+        },
+        {
+          en: 'User account implementation using Auth0 and unification of the demos user accounts.',
+          fr: 'Implémentation d’un système de comptes utilisateurs via Auth0 et unification des diverses démos.',
+        },
+        {
+          en: 'Led the creation of a new modern visual branding system for the company (flat design, vivid color palette, streamlined components) using Figma.',
+          fr: 'Refonte complète de l’identité visuelle de l’entreprise : flat design, palette de couleurs vives, composants UI modernisés — réalisée sous Figma.',
         },
       ],
       timeline: '2022 - 2024',
@@ -345,18 +386,31 @@ export const profile: Profile = {
       position: {
         en: 'Full-Stack Engineer',
         fr: 'Développeur full-stack',
-        ja: 'フルスタックエンジニア',
       },
       description: [
         {
-          en: 'Developed bespoke WordPress themes tailored to specific client requirements.',
-          fr: 'Développement de thèmes WordPress sur mesure, adaptés aux besoins spécifiques des clients.',
-          ja: '完全にカスタマイズされたテーマをWordPressサイトに開発しました。',
+          en: 'Work on WordPress themes integration.',
+          fr: 'Travail sur l’intégration de thèmes WordPress.',
         },
         {
-          en: 'Implemented and maintained JavaScript features to improve UX and tracking, including cookie consent tools, admin dashboards, and more.',
-          fr: 'Intégration et maintenance de fonctionnalités JavaScript pour améliorer l’expérience utilisateur et le suivi des données, notamment la gestion des cookies, des tableaux de bord d’administration, etc.',
-          ja: 'クッキー管理、管理ダッシュボードなど、UXとトラッキングを向上させるためのさまざまなJavaScript機能を統合し、維持しました。',
+          en: 'Development of fully customized WordPress themes tailored to specific client requirements.',
+          fr: 'Développement de thèmes WordPress entièrement personnalisés selon les besoins spécifiques des clients.',
+        },
+        {
+          en: 'Maintenance and development of JavaScript features (e.g., video players).',
+          fr: 'Maintenance et développement de fonctionnalités JavaScript (ex. : lecteurs vidéo).',
+        },
+        {
+          en: 'Work on the cookie management panel.',
+          fr: 'Travail sur le panneau de gestion des cookies.',
+        },
+        {
+          en: 'Development of a custom HTML, CSS and JavaScript panel from scratch, enabling site admins to add, remove and configure multiple cookies which are then suggested to visitors via a consent banner.',
+          fr: 'Développement d’un panneau de gestion en HTML, CSS et JavaScript sur mesure, permettant aux administrateurs d’ajouter, supprimer et configurer plusieurs cookies, ensuite proposés aux visiteurs via une bannière de consentement.',
+        },
+        {
+          en: 'Integration of user tracking tools such as Google Analytics, Matomo, and others into the panel.',
+          fr: 'Intégration d’outils de suivi tels que Google Analytics, Matomo, et d’autres solutions de tracking.',
         },
       ],
       timeline: '2021 - 2022',
@@ -370,12 +424,10 @@ export const profile: Profile = {
       type: {
         en: ['Certification'],
         fr: ['Certification'],
-        ja: ['証明書'],
       },
       degree: {
         en: 'Build Dynamic User Interfaces (UI) for Websites',
         fr: 'Créer des interfaces utilisateur dynamiques (UI) pour les sites web',
-        ja: 'ウェブサイトの動的なユーザーインターフェース（UI）を作成する',
       },
       href: 'https://www.coursera.org/account/accomplishments/records/LDRSN31COO2V',
     },
@@ -386,7 +438,6 @@ export const profile: Profile = {
       type: {
         en: ['Certification'],
         fr: ['Certification'],
-        ja: ['証明書'],
       },
       degree: {
         en: 'TOEIC 900/990',
@@ -400,12 +451,10 @@ export const profile: Profile = {
       type: {
         en: ['Certification'],
         fr: ['Certification'],
-        ja: ['証明書'],
       },
       degree: {
         en: 'Advanced React',
         fr: 'React avancé',
-        ja: 'Reactの高度な使用',
       },
       href: 'https://www.coursera.org/account/accomplishments/records/DPKTBAHV6WDS',
     },
@@ -416,12 +465,10 @@ export const profile: Profile = {
       type: {
         en: ['School'],
         fr: ['École'],
-        ja: ['大学'],
       },
       degree: {
         en: 'Web Project Management',
         fr: 'Gestion de projet web',
-        ja: 'ウェブプロジェクト管理',
       },
       href: 'https://www.univ-lyon2.fr',
     },
@@ -432,12 +479,10 @@ export const profile: Profile = {
       type: {
         en: ['School', 'Diploma'],
         fr: ['École', 'Diplôme'],
-        ja: ['大学', '学位'],
       },
       degree: {
         en: 'IT Associate Degree',
         fr: 'DUT informatique',
-        ja: 'IT専門学校',
       },
       href: 'https://www.univ-lyon1.fr',
     },
@@ -448,12 +493,10 @@ export const profile: Profile = {
       type: {
         en: ['School'],
         fr: ['École'],
-        ja: ['大学'],
       },
       degree: {
         en: 'Preparatory Classes',
         fr: 'École préparatoire aux grandes écoles',
-        ja: '専門学校',
       },
       href: 'https://polytech.univ-lyon1.fr',
     },
@@ -464,12 +507,10 @@ export const profile: Profile = {
       type: {
         en: ['School', 'Diploma'],
         fr: ['École', 'Diplôme'],
-        ja: ['中学校', '高校', '学位'],
       },
       degree: {
         en: 'Scientific High School Diploma with Honors',
         fr: 'Baccalauréat scientifique avec mention',
-        ja: '優等で科学高校卒業',
       },
       href: 'https://www.saint-thom.fr',
     },
