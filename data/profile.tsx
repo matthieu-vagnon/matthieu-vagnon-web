@@ -227,7 +227,7 @@ export const profile: Profile = {
   },
   experience: [
     {
-      company: 'Matthieu Vagnon',
+      company: 'Matthieu Vagnon (Freelance)',
       logo: freelance,
       technologies: [
         'React.js',
