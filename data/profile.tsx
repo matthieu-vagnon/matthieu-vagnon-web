@@ -144,7 +144,7 @@ export const profile: Profile = {
             experiences that drive engagement, reduce friction and build user
             trust
           </Highlight>{' '}
-          from Himeji, Hyōgo, Japan 🇯🇵
+          from Japan 🇯🇵
         </span>
         <span>
           Combining my developer skills with a{' '}
@@ -171,7 +171,7 @@ export const profile: Profile = {
             expériences qui renforcent l’engagement, réduisent les frictions et
             instaurent la confiance des utilisateurs
           </Highlight>{' '}
-          depuis Himeji, Hyōgo au Japon 🇯🇵
+          depuis le Japon 🇯🇵
         </span>
         <span>
           Grâce à ma double compétence en{' '}
