@@ -332,7 +332,7 @@ export const profile: Profile = {
         'Figma',
       ],
       position: {
-        en: 'Principal Front-end Developer & Designer',
+        en: 'Principal Front-end Engineer & Designer',
         fr: 'Développeur front-end principal & designer',
       },
       description: [
