@@ -18,7 +18,7 @@ import me from '@/public/profile/me.png';
 import meta from '@/public/profile/meta.jpeg';
 import polytech from '@/public/profile/polytech.webp';
 import predictiveLayer from '@/public/profile/predictive-layer.png';
-import pulsePartners from '@/public/profile/pulse-partners.png';
+import pulsePartners from '@/public/profile/pulse-partners.jpeg';
 import saintThomas from '@/public/profile/saint-thomas.png';
 import toeic from '@/public/profile/toeic.webp';
 import univLyon1 from '@/public/profile/univ-lyon1.png';
