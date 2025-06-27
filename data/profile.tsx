@@ -313,7 +313,7 @@ export const profile: Profile = {
           fr: "Améliorations UI/UX : loaders visuels, design responsive, cohésion graphique de l'interface, et plus.",
         },
       ],
-      timeline: `2024 - ${new Date().getFullYear()}`,
+      timeline: '2024 - 2025',
     },
     {
       company: 'Predictive Layer',
