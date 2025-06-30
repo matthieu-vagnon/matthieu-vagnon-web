@@ -113,9 +113,11 @@ const ResumeCardContent = ({
           >
             {projects.map((project, index) => (
               <div key={index} className='flex flex-col gap-y-2'>
-                <h3 className='text-base font-medium font-sans-special'>
-                  {getTranslatedData(project.title, locale) as string}
-                </h3>
+                <span>
+                  <Highlight>
+                    {getTranslatedData(project.title, locale) as string}
+                  </Highlight>
+                </span>
                 {project.description && (
                   <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
                     {project.description.map((element, i) => {
@@ -125,7 +127,9 @@ const ResumeCardContent = ({
                     })}
                   </ul>
                 )}
-                <h4 className='font-medium italic'>{t('responsibilities')}</h4>
+                <span className='font-medium italic'>
+                  {t('responsibilities')}
+                </span>
                 <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
                   {project.responsibilities.map((element, i) => {
                     return (
