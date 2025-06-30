@@ -93,7 +93,6 @@ export async function generateMetadata(
       `${project.year}`,
       ...(parentMetadata.keywords || []),
       ...(project.tags[locale as keyof typeof project.tags] || []),
-      ...(project.skills[locale as keyof typeof project.skills] || []),
       ...project.technologies,
     ],
   };
@@ -154,11 +153,6 @@ export default async function Project(props: ProjectProps) {
             <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
               <div>{getTranslatedData(project.longDescription, locale)}</div>
               <div className='flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4'>
-                <SkillBox
-                  title={t('caseStudies.project.skills')}
-                  items={getTranslatedData(project.skills, locale) as string[]}
-                  className='flex-auto'
-                />
                 <SkillBox
                   title={t('caseStudies.project.technologies')}
                   items={project.technologies}

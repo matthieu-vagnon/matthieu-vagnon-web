@@ -2,13 +2,14 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
 import { Card, CardHeader } from '@/components/card';
-import { cn } from '@/lib/utils';
+import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import {
   ChevronRightIcon,
   LucideIcon,
   SquareArrowOutUpRight,
 } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import { Badge } from './badge';
@@ -22,9 +23,27 @@ type ResumeCardProps = {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: React.ReactNode;
   indicator?: LucideIcon;
   secondaryBadges?: readonly string[];
+  projects?: {
+    title: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    };
+    description?: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    }[];
+    responsibilities: {
+      en?: string;
+      fr?: string;
+      ja?: string;
+    }[];
+    technologies: string[];
+  }[];
+  open?: boolean;
 };
 
 const ResumeCardContent = ({
@@ -32,16 +51,9 @@ const ResumeCardContent = ({
   indicator: Indicator = ChevronRightIcon,
   ...props
 }: ResumeCardProps & { isExpanded: boolean }) => {
-  const {
-    logoUrl,
-    altText,
-    title,
-    subtitle,
-    badges,
-    period,
-    description,
-    secondaryBadges,
-  } = props;
+  const { logoUrl, altText, title, subtitle, badges, period, projects } = props;
+  const t = useTranslations('profile');
+  const locale = useLocale();
 
   return (
     <Card className='flex'>
@@ -86,7 +98,7 @@ const ResumeCardContent = ({
             </div>
           )}
         </CardHeader>
-        {description && (
+        {projects && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{
@@ -97,18 +109,41 @@ const ResumeCardContent = ({
               duration: 0.7,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className='mt-2 text-xs sm:text-sm flex flex-col gap-3 pointer-events-none text-foreground-secondary'
+            className='mt-2 text-xs sm:text-sm flex flex-col gap-y-5 pointer-events-none text-foreground-secondary'
           >
-            <span>{description}</span>
-            {secondaryBadges && (
-              <div className='flex flex-wrap gap-1'>
-                {secondaryBadges.map((badge, index) => (
-                  <Highlight color='gray' key={index}>
-                    {badge}
-                  </Highlight>
-                ))}
+            {projects.map((project, index) => (
+              <div key={index} className='flex flex-col gap-y-2'>
+                <h3 className='text-base font-medium font-sans-special'>
+                  {getTranslatedData(project.title, locale) as string}
+                </h3>
+                {project.description && (
+                  <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
+                    {project.description.map((element, i) => {
+                      return (
+                        <li key={i}>{getTranslatedData(element, locale)}</li>
+                      );
+                    })}
+                  </ul>
+                )}
+                <h4 className='font-medium italic'>{t('responsibilities')}</h4>
+                <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
+                  {project.responsibilities.map((element, i) => {
+                    return (
+                      <li key={i}>{getTranslatedData(element, locale)}</li>
+                    );
+                  })}
+                </ul>
+                {project.technologies && (
+                  <div className='flex flex-wrap gap-1'>
+                    {project.technologies.map((badge, index) => (
+                      <Highlight color='gray' key={index}>
+                        {badge}
+                      </Highlight>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </motion.div>
         )}
       </div>
@@ -117,11 +152,11 @@ const ResumeCardContent = ({
 };
 
 export const ResumeCard = (props: ResumeCardProps) => {
-  const { href, description } = props;
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const { href, projects, open } = props;
+  const [isExpanded, setIsExpanded] = React.useState(open ?? false);
 
   const handleClick = () => {
-    if (description) {
+    if (projects && projects.length > 0) {
       setIsExpanded(!isExpanded);
     }
   };

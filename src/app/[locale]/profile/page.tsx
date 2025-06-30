@@ -161,16 +161,8 @@ export default function Profile() {
                       getTranslatedData(experience.position, locale) as string
                     }
                     period={experience.timeline}
-                    description={
-                      <ul className='list-[upper-roman] list-outside flex flex-col gap-y-1'>
-                        {experience.description.map((point, index) => (
-                          <li key={index}>
-                            {getTranslatedData(point, locale)}
-                          </li>
-                        ))}
-                      </ul>
-                    }
-                    secondaryBadges={experience.technologies}
+                    projects={experience.projects}
+                    open={index === 0}
                   />
                 ))}
               </div>

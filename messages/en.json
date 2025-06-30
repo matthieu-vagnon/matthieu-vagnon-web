@@ -80,7 +80,8 @@
     "other": "Others",
     "softSkills": "Soft Skills",
     "work": "Work",
-    "education": "Education"
+    "education": "Education",
+    "responsibilities": "My roles and responsibilities"
   },
   "caseStudies": {
     "metadata": {
@@ -111,7 +112,6 @@
       },
       "title": "{name} Case Study",
       "projectDescription": "Project Description",
-      "skills": "Skills",
       "technologies": "Technologies",
       "problem": "Problems and Challenges",
       "solution": "Solutions",

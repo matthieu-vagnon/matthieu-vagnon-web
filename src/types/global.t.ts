@@ -78,12 +78,24 @@ declare global {
         fr?: string;
         ja?: string;
       };
-      description: {
-        en?: string;
-        fr?: string;
-        ja?: string;
+      projects: {
+        title: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+        description?: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        }[];
+        responsibilities: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        }[];
+        technologies: string[];
       }[];
-      technologies: string[];
     }[];
     education: {
       responsible: string;
@@ -118,11 +130,6 @@ declare global {
       ja?: React.ReactNode;
     };
     tags: {
-      en?: string[];
-      fr?: string[];
-      ja?: string[];
-    };
-    skills: {
       en?: string[];
       fr?: string[];
       ja?: string[];

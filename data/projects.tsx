@@ -31,7 +31,6 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'Web portfolio for Matthieu Vagnon.',
       fr: 'Portfolio web pour Matthieu Vagnon.',
-      ja: 'ヴァンニョン・マチュのウェブポートフォリオ。',
     },
     longDescription: {
       en: (
@@ -60,60 +59,26 @@ export const projects: Record<string, Project> = {
           <Highlight>expérience agréable sur mobile et desktop</Highlight>.
         </>
       ),
-      ja: (
-        <>
-          これは<Highlight>ReactとNext.js</Highlight>を使用した
-          <Highlight>ウェブアプリケーション</Highlight>
-          で、教育、学位、経験、スキルなどの
-          <Highlight>プロフィール</Highlight>、
-          <Highlight>過去のプロジェクト</Highlight>、 およびそれぞれの
-          <Highlight>ケーススタディ</Highlight>を紹介することができます。
-          このアプリケーションでは、数回クリックするだけで
-          <Highlight>予約や連絡</Highlight>
-          ができ、<Highlight>モバイルとデスクトップで快適な体験</Highlight>
-          を提供します。
-        </>
-      ),
     },
     tags: {
       en: ['Web Application', 'Portfolio', 'Matthieu Vagnon'],
       fr: ['Application Web', 'Portfolio', 'Matthieu Vagnon'],
-      ja: ['ウェブアプリケーション', 'ポートフォリオ', 'ヴァンニョン・マチュ'],
-    },
-    skills: {
-      en: [
-        'Web Development',
-        'Front-End Development',
-        'UX Design',
-        'Web Maintenance',
-        'SEO',
-      ],
-      fr: [
-        'Développement web',
-        'Développement front-end',
-        'Design UX',
-        'Maintenance web',
-        'SEO',
-      ],
-      ja: [
-        'ウェブ開発',
-        'フロントエンド開発',
-        'UXデザイン',
-        'ウェブメンテナンス',
-        'SEO',
-      ],
     },
     technologies: [
       'React.js',
       'Next.js',
-      'Next-intl',
       'TypeScript',
-      'TailwindCSS',
+      'JSX',
+      'CSS3',
+      'Context API',
+      'Next-intl',
       'Framer Motion',
-      'ESLint',
-      'Vercel',
-      'Git',
-      'Cursor IDE',
+      'Tailwind CSS',
+      'ShadCN UI',
+      'Radix UI',
+      'Webpack',
+      'npm',
+      'Node.js',
       'Figma',
     ],
     previewImg: mvWeb1,
@@ -122,7 +87,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Presentation',
           fr: 'Présentation',
-          ja: 'プレゼンテーション',
         },
         src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
         previewImage: mvWebPreview1,
@@ -130,7 +94,7 @@ export const projects: Record<string, Project> = {
         slug: 'presentation',
       },
       {
-        title: { en: 'Home Page', fr: "Page d'accueil", ja: 'ホームページ' },
+        title: { en: 'Home Page', fr: "Page d'accueil" },
         image: mvWeb1,
         slug: 'home-page',
       },
@@ -138,7 +102,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Profile Page',
           fr: 'Page de profil',
-          ja: 'プロフィールページ',
         },
         image: mvWeb2,
         slug: 'profile-page',
@@ -147,7 +110,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Case Study',
           fr: 'Étude de cas',
-          ja: '実例',
         },
         image: mvWeb3,
         slug: 'case-studies',
@@ -156,7 +118,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Image Popup',
           fr: "Pop-up d'image",
-          ja: '画像ポップアップ',
         },
         image: mvWeb4,
         slug: 'image-popup',
@@ -165,7 +126,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Meeting Scheduler',
           fr: 'Planificateur de réunion',
-          ja: 'ミーティングスケジュール',
         },
         image: mvWeb5,
         slug: 'meeting-scheduler',
@@ -174,7 +134,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Configuration Modal',
           fr: 'Modale de configuration',
-          ja: '設定',
         },
         image: mvWeb6,
         slug: 'configuration-modal',
@@ -183,7 +142,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Home Green',
           fr: 'Accueil vert',
-          ja: 'ホーム緑',
         },
         image: mvWeb7,
         slug: 'home-green',
@@ -192,7 +150,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Home Pink',
           fr: 'Accueil rose',
-          ja: 'ホームピンク',
         },
         image: mvWeb8,
         slug: 'home-pink',
@@ -201,7 +158,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Home Purple',
           fr: 'Accueil violet',
-          ja: 'ホーム紫',
         },
         image: mvWeb9,
         slug: 'home-purple',
@@ -237,24 +193,6 @@ export const projects: Record<string, Project> = {
         <>
           <Highlight>Pas d&apos;infrastructure back-end</Highlight> pour
           héberger les données (profil, projets, ...).
-        </>,
-      ],
-      ja: [
-        <>
-          <Highlight>動的でパフォーマンスの高い</Highlight>
-          Reactアプリケーションを制作し、<Highlight>高品質なSEO</Highlight>
-          を維持しながら、公開ソースコードで私のスキルを実証する必要がありました。
-        </>,
-        <>
-          <Highlight>限られた時間</Highlight>
-          で他のプロジェクトと並行してこのアプリケーションに取り組む必要がありました。
-        </>,
-        <>
-          データ（プロフィール、プロジェクトなど）をホストするための
-          <Highlight>
-            バックエンドインフラストラクチャがありませんでした
-          </Highlight>
-          。
         </>,
       ],
     },
@@ -310,29 +248,6 @@ export const projects: Record<string, Project> = {
           stocké les données nécessaires à l&apos;application.
         </>,
       ],
-      ja: [
-        <>
-          <Highlight>Next.js</Highlight>
-          をフレームワークとして使用することを決定し、
-          複数ページを管理するためにアプリルーターを活用しながら
-          <Highlight>SEOを確保</Highlight>しました。
-        </>,
-        <>
-          <Highlight>カスタマイズ性</Highlight>が強みである
-          <LinkButton external href='https://www.shadcn.net'>
-            ShadCN
-          </LinkButton>
-          などのコンポーネントライブラリを使用して、開発を加速させながら
-          <Highlight>高品質なコードとパフォーマンスの最適化</Highlight>
-          を確保しました。
-        </>,
-        <>
-          完全なバックエンドインフラストラクチャを開発することなく
-          <Highlight>アプリケーションデータを適切に管理する</Highlight>ために、
-          <Code>/data</Code>
-          フォルダを作成し、アプリケーションに必要なデータを格納しました。
-        </>,
-      ],
     },
     results: {
       en: (
@@ -369,28 +284,12 @@ export const projects: Record<string, Project> = {
           également <Highlight>réussie et non invasive</Highlight>.
         </>
       ),
-      ja: (
-        <>
-          アプリケーションは利用可能で、私の
-          <Highlight>プロフィールと経験</Highlight>
-          に関する全ての重要な情報を提示しています。アプリケーションは
-          <Highlight>使いやすく視覚的に美しい</Highlight>
-          ものになっています。訪問者は
-          <LinkButton external href='https://cal.com'>
-            Cal.com
-          </LinkButton>
-          の成功した実装のおかげで、簡単に予約を取ることができます。
-          <Highlight>以前のクライアントからの推薦</Highlight>の統合も
-          <Highlight>成功しており、快適です</Highlight>。
-        </>
-      ),
     },
     relatedUrls: [
       {
         name: {
           en: 'GitHub Repository',
           fr: 'Répertoire GitHub',
-          ja: 'GitHubリポジトリ',
         },
         url: 'https://github.com/matthieu-vagnon/matthieu-vagnon-web',
       },
@@ -403,7 +302,6 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'A platform to create and send AI-powered questionnaires and analyze responses.',
       fr: "Une plateforme pour créer et envoyer des questionnaires alimentés par l'IA et analyser les réponses.",
-      ja: 'AIを活用したアンケートを作成して送信し、回答を分析するプラットフォーム。',
     },
     longDescription: {
       en: (
@@ -432,60 +330,31 @@ export const projects: Record<string, Project> = {
           <Highlight>maximum de détails</Highlight> à l&apos;analyse.
         </>
       ),
-      ja: (
-        <>
-          SmartInterviewは<Highlight>AI駆動のアンケート</Highlight>
-          を作成して送信するために設計されたSaaSプラットフォームです。アンケートは統合された
-          ビルダーを使用するか、 JSONファイル
-          をインポートして作成できます。アンケートは対象者に送信され、
-          <Highlight>最適な対象者を特定する</Highlight>
-          ために同じアプリケーション内で回答を分析することができます。SmartInterviewのAIは、ユーザーがアンケートに回答する際に、分析に
-          <Highlight>最大限の詳細</Highlight>
-          を追加するために、文脈に基づいた質問を自動的に追加します。
-        </>
-      ),
     },
     tags: {
       en: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
       fr: ['IA', 'SaaS', 'Questionnaire', 'Analyse de masse'],
-      ja: ['AI', 'SaaS', 'アンケート', '大量分析'],
-    },
-    skills: {
-      en: [
-        'Web Development',
-        'Front-End Development',
-        'UX Design',
-        'Web Maintenance',
-      ],
-      fr: [
-        'Développement web',
-        'Développement front-end',
-        'Design UX',
-        'Maintenance web',
-      ],
-      ja: [
-        'ウェブ開発',
-        'フロントエンド開発',
-        'UXデザイン',
-        'ウェブメンテナンス',
-      ],
     },
     technologies: [
       'React.js',
       'Next.js',
-      'Next-intl',
       'TypeScript',
-      'TailwindCSS',
-      'MaterialUI',
+      'JSX',
+      'CSS3',
+      'SQL',
+      'Redux',
+      'Context API',
       'Framer Motion',
-      'JSONForms',
+      'Next-intl',
+      'Tailwind CSS',
+      'Material UI',
+      'ShadCN UI',
+      'Radix UI',
       'Cypress',
-      'ESLint',
-      'Vercel',
-      'Supabase',
-      'Docker',
-      'Git',
-      'Cursor IDE',
+      'Webpack',
+      'npm',
+      'Next.js API Routes',
+      'Node.js',
       'Figma',
     ],
     previewImg: smartInterviewBuilder6,
@@ -494,7 +363,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Presentation',
           fr: 'Présentation',
-          ja: 'プレゼンテーション',
         },
         previewImage: smartInterviewBuilderPreview1,
         src: 'https://www.youtube.com/embed/-toDAGtxVpQ',
@@ -505,7 +373,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Builder Editor',
           fr: 'Éditeur de générateur',
-          ja: 'ジェネレーターエディター',
         },
         image: smartInterviewBuilder1,
         slug: 'builder-editor',
@@ -514,7 +381,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Table Editor',
           fr: 'Éditeur de table',
-          ja: 'テーブルエディター',
         },
         image: smartInterviewBuilder2,
         slug: 'builder-preview',
@@ -523,7 +389,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Table Editor 2',
           fr: 'Éditeur de table 2',
-          ja: 'テーブルエディター2',
         },
         image: smartInterviewBuilder3,
         slug: 'table-editor-2',
@@ -532,7 +397,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Tooltip',
           fr: 'Tooltip',
-          ja: 'ツールチップ',
         },
         image: smartInterviewBuilder4,
         slug: 'tooltip',
@@ -541,7 +405,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'JSON Editor',
           fr: 'Éditeur JSON',
-          ja: 'JSONエディター',
         },
         image: smartInterviewBuilder5,
         slug: 'json-editor',
@@ -550,7 +413,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'New Question',
           fr: 'Nouvelle question',
-          ja: '新しい質問',
         },
         image: smartInterviewBuilder6,
         slug: 'new-question',
@@ -593,23 +455,6 @@ export const projects: Record<string, Project> = {
         <>
           Tout cela en un temps réduit de{' '}
           <Highlight>4 à 5 semaines maximum</Highlight>.
-        </>,
-      ],
-      ja: [
-        <>
-          <Highlight>体験</Highlight>と<Highlight>インターフェース</Highlight>
-          を向上させる。
-        </>,
-        <>
-          非技術的なユーザーに力を与えるために
-          <Highlight>高度で直感的な機能を統合</Highlight>する。
-        </>,
-        <>
-          <Highlight>バグ</Highlight>を修正し、
-          <Highlight>コードの読みやすさ</Highlight>を改善する。
-        </>,
-        <>
-          <Highlight>4〜5週間以内</Highlight>で完了する。
         </>,
       ],
     },
@@ -665,27 +510,6 @@ export const projects: Record<string, Project> = {
           meilleure maintenabilité.
         </>,
       ],
-      ja: [
-        <>
-          <Highlight>ローディングインジケーター</Highlight>や
-          <Highlight>質問の並べ替え</Highlight>
-          などの重要なUX改善を実装しました。アンケートの保存や新しい質問の追加時の確認ワークフローのために、インタラクティブな
-          <Highlight>モーダルウィンドウ</Highlight>を統合しました。
-        </>,
-        <>
-          アンケート要素のための包括的な
-          <Highlight>カスタマイズオプション</Highlight>
-          を開発し、<Highlight>最小値と最大値</Highlight>の制約、
-          <Highlight>スライダー</Highlight>、<Highlight>テーブル</Highlight>
-          、およびユーザーがJSONファイルを編集する必要がないようにするための多数の追加設定オプションを備えています。
-        </>,
-        <>
-          <Highlight>バグの体系的な修正</Highlight>、
-          コードリファクタリングによるアプリケーションパフォーマンスの
-          <Highlight>最適化</Highlight>、および保守性向上のための
-          <Highlight>コード可読性の大幅な改善</Highlight>を行いました。
-        </>,
-      ],
     },
     results: {
       en: (
@@ -713,20 +537,6 @@ export const projects: Record<string, Project> = {
           <Highlight>meilleure UX perçue</Highlight>.
         </>
       ),
-      ja: (
-        <>
-          アプリケーションはより
-          <Highlight>ユーザーフレンドリー</Highlight>で、
-          <Highlight>直感的</Highlight>で、
-          <Highlight>一貫性があり</Highlight>、ユーザーは
-          <Highlight>複雑なアンケート</Highlight>を作成しながら
-          <Highlight>時間</Highlight>と<Highlight>リソース</Highlight>
-          を節約できるようになりました。
-          <Highlight>バグが少なく</Highlight>、
-          <Highlight>見た目が改善され</Highlight>、
-          <Highlight>UXの体験が向上した</Highlight>ことで 売上も伸びました。
-        </>
-      ),
     },
     relatedUrls: [
       {
@@ -742,7 +552,6 @@ export const projects: Record<string, Project> = {
     shortDescription: {
       en: 'A simple web application for a Japanese restaurant.',
       fr: 'Une application web simple pour un restaurant japonais.',
-      ja: '日本料理店のためのシンプルなウェブアプリケーション。',
     },
     longDescription: {
       en: (
@@ -761,51 +570,19 @@ export const projects: Record<string, Project> = {
           de <Highlight>les appeler</Highlight> facilement.
         </>
       ),
-      ja: (
-        <>
-          <Highlight>日本料理店</Highlight>
-          のシンプルなウェブアプリケーションで、
-          <Highlight>地図</Highlight>で住所を表示し、 簡単に
-          <Highlight>電話をかける</Highlight>
-          ことができるようにしました。
-        </>
-      ),
     },
     tags: {
       en: ['Web Application', 'Japanese', 'Restaurant'],
       fr: ['Application Web', 'Japonais', 'Restaurant'],
-      ja: ['ウェブアプリケーション', '日本語', 'レストラン'],
-    },
-    skills: {
-      en: [
-        'Web Development',
-        'Front-End Development',
-        'UX Design',
-        'Web Maintenance',
-        'SEO',
-      ],
-      fr: [
-        'Développement web',
-        'Développement front-end',
-        'Design UX',
-        'Maintenance web',
-        'SEO',
-      ],
-      ja: [
-        'ウェブ開発',
-        'フロントエンド開発',
-        'UXデザイン',
-        'ウェブメンテナンス',
-        'SEO',
-      ],
     },
     technologies: [
       'React.js',
-      'Vite',
       'TypeScript',
-      'CSS',
-      'Vercel',
-      'Git',
+      'JSX',
+      'CSS3',
+      'Vite',
+      'npm',
+      'Node.js',
       'Figma',
     ],
     previewImg: koryoriYa1,
@@ -814,7 +591,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Loading Page',
           fr: 'Page de chargement',
-          ja: 'ローディングページ',
         },
         image: koryoriYa1,
         slug: 'loading-page',
@@ -823,7 +599,6 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Landing View',
           fr: "Vue d'accueil",
-          ja: 'ランディングビュー',
         },
         image: koryoriYa2,
         slug: 'landing-view',
@@ -832,13 +607,12 @@ export const projects: Record<string, Project> = {
         title: {
           en: 'Concept View',
           fr: 'Vue Concept',
-          ja: 'コンセプトビュー',
         },
         image: koryoriYa3,
         slug: 'concept-view',
       },
       {
-        title: { en: 'Gallery', fr: 'Galerie', ja: 'ギャラリー' },
+        title: { en: 'Gallery', fr: 'Galerie' },
         image: koryoriYa4,
         slug: 'gallery',
       },
@@ -862,17 +636,6 @@ export const projects: Record<string, Project> = {
         <>
           Faire face à <Highlight>un délai très court</Highlight> (~ 1 semaine
           avant l&apos;ouverture du restaurant).
-        </>,
-      ],
-      ja: [
-        <>
-          <Highlight>シンプルでクリーンなインターフェース</Highlight>
-          を作成しながら、
-          <Highlight>インフラコストを抑える</Highlight>必要がありました。
-        </>,
-        <>
-          <Highlight>非常に短い期間</Highlight>
-          （レストランのオープン前の約1週間）での対応が必要でした。
         </>,
       ],
     },
@@ -909,28 +672,12 @@ export const projects: Record<string, Project> = {
           <Highlight>performance et une fiabilité maximales</Highlight>.
         </>,
       ],
-      ja: [
-        <>
-          <Highlight>プロジェクトの制御</Highlight>
-          のニーズに応え、外部サービスの使用に関連する
-          <Highlight>インフラコスト</Highlight>
-          を削減するためにReact/Viteアプリを作成しました。
-        </>,
-        <>
-          <LinkButton external href='https://vercel.com'>
-            Vercel
-          </LinkButton>
-          を使用して、<Highlight>最大限のパフォーマンスと信頼性</Highlight>
-          でアプリケーションをホスティングしました。
-        </>,
-      ],
     },
     relatedUrls: [
       {
         name: {
           en: 'Access App',
           fr: "Accéder à l'application",
-          ja: 'アプリケーションにアクセス',
         },
         url: 'https://koryoriyaozaki.uk',
       },
@@ -938,7 +685,6 @@ export const projects: Record<string, Project> = {
         name: {
           en: 'GitHub Repository',
           fr: 'Répertoire GitHub',
-          ja: 'GitHubリポジトリ',
         },
         url: 'https://github.com/matthieu-vagnon/koryori-ya-website',
       },

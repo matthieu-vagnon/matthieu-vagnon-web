@@ -79,7 +79,8 @@
     "other": "Autres",
     "softSkills": "Soft Skills",
     "work": "Expériences",
-    "education": "Formations"
+    "education": "Formations",
+    "responsibilities": "Mes rôles et responsabilités"
   },
   "caseStudies": {
     "metadata": {
@@ -110,7 +111,6 @@
       },
       "title": "Cas pratique {name}",
       "projectDescription": "Description du projet",
-      "skills": "Compétences",
       "technologies": "Technologies",
       "problem": "Problèmes et enjeux",
       "solution": "Solutions",
