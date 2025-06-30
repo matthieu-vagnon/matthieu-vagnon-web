@@ -27,15 +27,15 @@ declare global {
       ja?: string;
     };
     businessCard: {
-      en: {
+      en?: {
         image: StaticImageData;
         title: string;
       };
-      fr: {
+      fr?: {
         image: StaticImageData;
         title: string;
       };
-      ja: {
+      ja?: {
         image: StaticImageData;
         title: string;
       };

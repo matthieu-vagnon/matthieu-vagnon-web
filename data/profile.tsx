@@ -10,7 +10,6 @@ import TailwindIcon from '@/components/svg/tailwind';
 import TypeScriptIcon from '@/components/svg/typescript';
 import businessCardEn from '@/public/en/business-card.png';
 import businessCardFr from '@/public/fr/business-card.png';
-import businessCardJa from '@/public/ja/business-card.png';
 import freelance from '@/public/profile/freelance.png';
 import google from '@/public/profile/google.jpg';
 import ikm from '@/public/profile/ikm.jpeg';
@@ -39,10 +38,6 @@ export const profile: Profile = {
     fr: {
       image: businessCardFr,
       title: 'Carte de visite',
-    },
-    ja: {
-      image: businessCardJa,
-      title: 'ビジネスカード',
     },
   },
   stackLogos: [
@@ -307,7 +302,7 @@ export const profile: Profile = {
         {
           title: {
             en: 'Deliver Software Development Services for a Diverse Range of Clients',
-            fr: 'Prestations de développement full-stack pour des clients allant de startups à des entreprises internationales (ex. : Pulse Partners, TotalEnergies).',
+            fr: 'Prestations de développement full-stack pour divers clients',
           },
           responsibilities: [
             {
