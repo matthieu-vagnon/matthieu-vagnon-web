@@ -13,6 +13,7 @@ import businessCardFr from '@/public/fr/business-card.png';
 import businessCardJa from '@/public/ja/business-card.png';
 import freelance from '@/public/profile/freelance.png';
 import google from '@/public/profile/google.jpg';
+import ikm from '@/public/profile/ikm.jpeg';
 import influactive from '@/public/profile/influactive.jpeg';
 import me from '@/public/profile/me.png';
 import meta from '@/public/profile/meta.jpeg';
@@ -86,31 +87,53 @@ export const profile: Profile = {
       img: MuiIcon,
     },
   ],
-  frontendStack: [
-    'React.js',
-    'Next.js',
+  languages: [
+    'JavaScript (ES6+)',
     'TypeScript',
-    'JavaScript',
-    'JSX',
-    'HTML',
-    'TailwindCSS',
-    'CSS',
-    'MaterialUI',
-    'Framer Motion',
-    'Redux',
-    'Zod',
-    'Cypress',
-    'ESLint',
-  ],
-  backendStack: [
-    'PostgreSQL',
-    'Prisma',
-    'Next.js API Routes',
-    'Fastify',
-    'Node.js',
+    'HTML5/JSX',
+    'CSS3/SCSS/LESS',
     'SQL',
+    'PHP',
   ],
-  otherStack: ['Vercel', 'Supabase', 'Docker', 'Git', 'Cursor IDE', 'Figma'],
+  frontendFrameworks: ['React.js', 'Next.js'],
+  stateManagement: ['Redux', 'Context API'],
+  frontendLibraries: ['Framer Motion', 'React Router', 'Zod', 'Plotly.js'],
+  uiLibraries: [
+    'Tailwind CSS',
+    'Material UI',
+    'Chakra UI',
+    'Bootstrap',
+    'Ant Design',
+    'Shadcn UI',
+    'Radix UI',
+  ],
+  testing: ['React Testing Library', 'Cypress'],
+  buildTools: ['Webpack', 'Vite', 'npm', 'Yarn'],
+  backend: ['PostgreSQL', 'Prisma', 'Fastify', 'Next.js API Routes', 'Node.js'],
+  performance: ['Lighthouse', 'Web Vitals', 'Code Splitting', 'Lazy Loading'],
+  accessibility: [
+    'WCAG 2.1 Standards',
+    'Aria Attributes',
+    'Screen Reader Compatibility',
+  ],
+  devops: ['GitHub Actions', 'Vercel', 'Docker'],
+  bestPractices: [
+    'Responsive Design',
+    'Cross-Browser Compatibility',
+    'Atomic Design',
+    'Component-Driven Development',
+    'SEO Optimization',
+  ],
+  design: ['Figma'],
+  other: [
+    'Git',
+    'Supabase',
+    'ChatGPT',
+    'Cursor IDE',
+    'Visual Studio Code',
+    'ESLint',
+    'Prettier',
+  ],
   softSkills: [
     {
       en: 'Adaptable',
@@ -417,6 +440,20 @@ export const profile: Profile = {
     },
   ],
   education: [
+    {
+      responsible: 'IKM TeckChek',
+      logo: ikm,
+      timeline: '2025',
+      type: {
+        en: ['Certification'],
+        fr: ['Certification'],
+      },
+      degree: {
+        en: 'JavaScript Proficiency Profile',
+        fr: 'Profil de compétence JavaScript',
+      },
+      href: '/ikm1.pdf',
+    },
     {
       responsible: 'Google',
       logo: google,

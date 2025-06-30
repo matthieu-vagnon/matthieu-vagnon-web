@@ -65,18 +65,73 @@ export default function Profile() {
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap'>
             <SkillBox
-              title={t('profile.frontendStack')}
-              items={profile.frontendStack}
+              title={t('profile.languages')}
+              items={profile.languages}
               className='flex-auto'
             />
             <SkillBox
-              title={t('profile.backendStack')}
-              items={profile.backendStack}
+              title={t('profile.frontendFrameworks')}
+              items={profile.frontendFrameworks}
               className='flex-auto'
             />
             <SkillBox
-              title={t('profile.otherStack')}
-              items={profile.otherStack}
+              title={t('profile.stateManagement')}
+              items={profile.stateManagement}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.frontendLibraries')}
+              items={profile.frontendLibraries}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.uiLibraries')}
+              items={profile.uiLibraries}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.testing')}
+              items={profile.testing}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.buildTools')}
+              items={profile.buildTools}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.backend')}
+              items={profile.backend}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.performance')}
+              items={profile.performance}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.accessibility')}
+              items={profile.accessibility}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.devops')}
+              items={profile.devops}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.bestPractices')}
+              items={profile.bestPractices}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.design')}
+              items={profile.design}
+              className='flex-auto'
+            />
+            <SkillBox
+              title={t('profile.other')}
+              items={profile.other}
               className='flex-auto'
             />
             <SkillBox

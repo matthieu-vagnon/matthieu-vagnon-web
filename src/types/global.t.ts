@@ -45,9 +45,20 @@ declare global {
       name: string;
       img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     }[];
-    frontendStack: string[];
-    backendStack: string[];
-    otherStack: string[];
+    languages: string[];
+    frontendFrameworks: string[];
+    stateManagement: string[];
+    frontendLibraries: string[];
+    uiLibraries: string[];
+    testing: string[];
+    buildTools: string[];
+    backend: string[];
+    performance: string[];
+    accessibility: string[];
+    devops: string[];
+    bestPractices: string[];
+    design: string[];
+    other: string[];
     softSkills: {
       en?: string;
       fr?: string;
