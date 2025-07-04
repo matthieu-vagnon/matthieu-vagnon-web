@@ -344,6 +344,7 @@ export const projects: Record<string, Project> = {
       'SQL',
       'Redux',
       'Context API',
+      'TanStack Query',
       'Framer Motion',
       'Next-intl',
       'Tailwind CSS',
