@@ -8,7 +8,7 @@ import { BlurFade } from './BlurFade';
 import { LinkButton } from './Button';
 import Highlight from './Highlight';
 import { MainCard, MainCardContent } from './MainCard';
-import Logo from './svg/logo';
+import Logo from './svg/Logo';
 import { TextRotate } from './TextRotate';
 
 export default function TitleBox({

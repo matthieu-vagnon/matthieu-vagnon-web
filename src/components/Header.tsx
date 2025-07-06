@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { LinkButton } from './Button';
-import Logo from './svg/logo';
+import Logo from './svg/Logo';
 
 export default function Header() {
   const t = useTranslations('utils');

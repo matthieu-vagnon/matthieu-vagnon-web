@@ -7,7 +7,7 @@ import { ScrollProgress } from '@/components/ScrollProgress';
 import SectionTitle from '@/components/SectionTitle';
 import SeeMore from '@/components/SeeMore';
 import { default as SkillBox } from '@/components/SkillBox';
-import PageDecoration from '@/components/svg/page-decoration';
+import PageDecoration from '@/components/svg/PageDecoration';
 import TestimonialsStatusWrapper from '@/components/TestimonialsStatusWrapper';
 import { projects } from '@/data/projects';
 import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils';
