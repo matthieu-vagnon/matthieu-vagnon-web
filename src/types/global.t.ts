@@ -46,6 +46,7 @@ declare global {
       img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     }[];
     languages: string[];
+    aiTools: string[];
     frontendFrameworks: string[];
     stateManagement: string[];
     frontendLibraries: string[];

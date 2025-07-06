@@ -64,6 +64,7 @@
     "title": "Profile",
     "description": "A complete summary of my skills, work and education.",
     "about": "About",
+    "aiTools": "AI Tools",
     "languages": "Languages",
     "frontendFrameworks": "Front-End Frameworks",
     "stateManagement": "State Management",

@@ -128,7 +128,7 @@ export function MediaButton({
         {isTilt ? (
           <Tilt
             rotationFactor={10}
-            isRevese
+            isReverse
             style={{
               transformOrigin: 'center center',
             }}

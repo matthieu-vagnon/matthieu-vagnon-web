@@ -65,6 +65,12 @@ export default function Profile() {
         <BlurFade delay={blurDelay++ / 10}>
           <div className='flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap'>
             <SkillBox
+              title={t('profile.aiTools')}
+              items={profile.aiTools}
+              aiEffect
+              className='flex-auto'
+            />
+            <SkillBox
               title={t('profile.languages')}
               items={profile.languages}
               className='flex-auto'
