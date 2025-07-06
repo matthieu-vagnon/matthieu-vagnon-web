@@ -16,8 +16,8 @@ import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
-import { Button } from './button';
-import { Media } from './media';
+import { Button } from './Button';
+import { Media } from './Media';
 
 type MediaViewProps = {
   medias: Media[];

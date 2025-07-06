@@ -1,5 +1,5 @@
-import { Media } from '@/components/media';
-import { typeVariants } from '@/components/project-card';
+import { Media } from '@/components/Media';
+import { typeVariants } from '@/components/ProjectCard';
 import { Locale } from 'next-intl';
 import { StaticImageData } from 'next/image';
 

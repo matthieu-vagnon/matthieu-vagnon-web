@@ -1,6 +1,6 @@
 'use client';
 
-import { useMagneticStatus } from '@/hooks/use-magnetic-status';
+import { useMagneticStatus } from '@/hooks/useMagneticStatus';
 import { cn } from '@/lib/utils';
 import {
   AnimatePresence,

@@ -1,10 +1,10 @@
-import AppsDock from '@/components/apps-dock';
-import { CardStack } from '@/components/card-stack';
+import AppsDock from '@/components/AppsDock';
+import { CardStack } from '@/components/CardStack';
 import { testimonials } from '@/data/testimonials';
-import AccentColorProvider from '@/hooks/use-accent-color';
-import DockStatusProvider from '@/hooks/use-dock-status';
-import MagneticStatusProvider from '@/hooks/use-magnetic-status';
-import { TestimonialsStatusProvider } from '@/hooks/use-testimonials-status';
+import AccentColorProvider from '@/hooks/useAccentColor';
+import DockStatusProvider from '@/hooks/useDockStatus';
+import MagneticStatusProvider from '@/hooks/useMagneticStatus';
+import { TestimonialsStatusProvider } from '@/hooks/useTestimonialsStatus';
 import { routing } from '@/i18n/routing';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';

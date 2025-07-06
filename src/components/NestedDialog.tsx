@@ -1,6 +1,6 @@
 'use client';
 
-import { useDockStatus } from '@/hooks/use-dock-status';
+import { useDockStatus } from '@/hooks/useDockStatus';
 import { cn } from '@/lib/utils';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';

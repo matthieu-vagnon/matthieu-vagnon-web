@@ -1,6 +1,6 @@
-import { LinkButton } from '@/components/button';
-import Code from '@/components/code';
-import Highlight from '@/components/highlight';
+import { LinkButton } from '@/components/Button';
+import Code from '@/components/Code';
+import Highlight from '@/components/Highlight';
 import koryoriYa1 from '@/public/koryori-ya/web-1.png';
 import koryoriYa2 from '@/public/koryori-ya/web-2.png';
 import koryoriYa3 from '@/public/koryori-ya/web-3.png';

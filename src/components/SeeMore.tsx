@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import packageJson from '../../package.json';
-import { LinkButton } from './button';
-import { HyperText } from './hyper-text';
-import LanguageSwitch from './language-switch';
-import { Separator } from './separator';
+import { LinkButton } from './Button';
+import { HyperText } from './HyperText';
+import LanguageSwitch from './LanguageSwitch';
+import { Separator } from './Separator';
 
 type SeeMoreProps = {
   links: { important?: boolean; name: string; url: string }[];

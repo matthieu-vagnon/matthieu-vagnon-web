@@ -1,6 +1,6 @@
 'use client';
 
-import { useTestimonialsStatus } from '@/hooks/use-testimonials-status';
+import { useTestimonialsStatus } from '@/hooks/useTestimonialsStatus';
 import React, { useEffect } from 'react';
 
 type TestimonialsStatusWrapperProps = {

@@ -1,24 +1,24 @@
 'use client';
 
-import { useAccentColor } from '@/hooks/use-accent-color';
-import { useMagneticStatus } from '@/hooks/use-magnetic-status';
+import { useAccentColor } from '@/hooks/useAccentColor';
+import { useMagneticStatus } from '@/hooks/useMagneticStatus';
 import { useMessages, useTranslations } from 'next-intl';
-import { Button } from './button';
-import { Checkbox } from './checkbox';
-import { Label } from './label';
+import { Button } from './Button';
+import { Checkbox } from './Checkbox';
+import { Label } from './Label';
 import {
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from './nested-dialog';
+} from './NestedDialog';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from './select';
+} from './Select';
 
 export function ConfigurationModal() {
   const { isMagnetic, changeIsMagnetic } = useMagneticStatus();

@@ -4,7 +4,7 @@ import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { ArrowUpRight } from 'lucide-react';
 import * as React from 'react';
-import Magnetic from './magnetic';
+import Magnetic from './Magnetic';
 
 type ButtonProps = React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {

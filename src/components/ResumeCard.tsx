@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
-import { Card, CardHeader } from '@/components/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/Avatar';
+import { Card, CardHeader } from '@/components/Card';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import {
@@ -12,8 +12,8 @@ import {
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
-import { Badge } from './badge';
-import Highlight from './highlight';
+import { Badge } from './Badge';
+import Highlight from './Highlight';
 
 type ResumeCardProps = {
   logoUrl?: string;

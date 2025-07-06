@@ -1,5 +1,5 @@
-import Highlight from '@/components/highlight';
-import { Li, Ul } from '@/components/list';
+import Highlight from '@/components/Highlight';
+import { Li, Ul } from '@/components/List';
 import CssIcon from '@/components/svg/css';
 import HtmlIcon from '@/components/svg/html';
 import JavaScriptIcon from '@/components/svg/javascript';

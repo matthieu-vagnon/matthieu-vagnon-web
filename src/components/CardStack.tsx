@@ -1,15 +1,15 @@
 'use client';
 
-import { useTestimonialsStatus } from '@/hooks/use-testimonials-status';
+import { useTestimonialsStatus } from '@/hooks/useTestimonialsStatus';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Languages } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from './avatar';
-import { BlurFade } from './blur-fade';
-import { Button } from './button';
-import Magnetic from './magnetic';
+import { Avatar, AvatarFallback, AvatarImage } from './Avatar';
+import { BlurFade } from './BlurFade';
+import { Button } from './Button';
+import Magnetic from './Magnetic';
 
 type CardStackProps = {
   items: Testimonial[];

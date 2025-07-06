@@ -1,6 +1,6 @@
 'use client';
 
-import { useMagneticStatus } from '@/hooks/use-magnetic-status';
+import { useMagneticStatus } from '@/hooks/useMagneticStatus';
 import { cn } from '@/lib/utils';
 import {
   motion,
@@ -12,7 +12,7 @@ import {
   useTransform,
 } from 'framer-motion';
 import React, { useRef } from 'react';
-import { Spotlight } from './spotlight';
+import { Spotlight } from './Spotlight';
 
 type TiltProps = {
   children: React.ReactNode;

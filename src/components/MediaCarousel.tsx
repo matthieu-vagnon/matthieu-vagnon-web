@@ -8,9 +8,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './carousel';
-import { MediaButton, Media as MediaType } from './media';
-import MediaView from './media-view';
+} from './Carousel';
+import { MediaButton, Media as MediaType } from './Media';
+import MediaView from './MediaView';
 
 type MediaCarouselProps = {
   medias: MediaType[];

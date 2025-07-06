@@ -4,12 +4,12 @@ import { SocialLink } from '@/app/[locale]/page';
 import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
-import { BlurFade } from './blur-fade';
-import { LinkButton } from './button';
-import Highlight from './highlight';
-import { MainCard, MainCardContent } from './main-card';
+import { BlurFade } from './BlurFade';
+import { LinkButton } from './Button';
+import Highlight from './Highlight';
+import { MainCard, MainCardContent } from './MainCard';
 import Logo from './svg/logo';
-import { TextRotate } from './text-rotate';
+import { TextRotate } from './TextRotate';
 
 export default function TitleBox({
   socialLinks,

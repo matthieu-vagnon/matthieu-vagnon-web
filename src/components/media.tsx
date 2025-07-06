@@ -6,10 +6,10 @@ import { PlayIcon, Subtitles, Volume1 } from 'lucide-react';
 import { Locale, useLocale } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
-import Magnetic, { MagneticSize } from './magnetic';
-import MediaView from './media-view';
-import { Separator } from './separator';
-import { Tilt } from './tilt';
+import Magnetic, { MagneticSize } from './Magnetic';
+import MediaView from './MediaView';
+import { Separator } from './Separator';
+import { Tilt } from './Tilt';
 
 export type Media = (
   | {

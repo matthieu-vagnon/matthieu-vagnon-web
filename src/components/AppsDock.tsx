@@ -1,6 +1,6 @@
 'use client';
 
-import { useDockStatus } from '@/hooks/use-dock-status';
+import { useDockStatus } from '@/hooks/useDockStatus';
 import { Link } from '@/i18n/navigation';
 import {
   BriefcaseBusiness,
@@ -11,12 +11,12 @@ import {
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-import { ConfigurationModal } from './configuration-modal';
-import { ContactModal } from './contact-modal';
-import { Dock, DockIcon, DockItem, DockLabel } from './dock';
-import { Dialog, DialogTrigger } from './nested-dialog';
-import { ProgressiveBlur } from './progressive-blur';
-import { Separator } from './separator';
+import { ConfigurationModal } from './ConfigurationModal';
+import { ContactModal } from './ContactModal';
+import { Dock, DockIcon, DockItem, DockLabel } from './Dock';
+import { Dialog, DialogTrigger } from './NestedDialog';
+import { ProgressiveBlur } from './ProgressiveBlur';
+import { Separator } from './Separator';
 
 function DockElement({
   title,

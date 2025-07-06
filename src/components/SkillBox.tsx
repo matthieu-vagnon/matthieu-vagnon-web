@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
-import Highlight from './highlight';
+import Highlight from './Highlight';
 
 type SkillBoxProps = {
   title: string;

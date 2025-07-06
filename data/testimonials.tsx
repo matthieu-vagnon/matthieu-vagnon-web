@@ -1,4 +1,4 @@
-import Highlight from '@/components/highlight';
+import Highlight from '@/components/Highlight';
 import bibimouneImage from '@/public/testimonials/bibimoune.jpeg';
 import rigoriImage from '@/public/testimonials/rigori.jpeg';
 import saussayeImage from '@/public/testimonials/saussaye.jpeg';

@@ -1,12 +1,12 @@
-import { BlurFade } from '@/components/blur-fade';
-import InfoBand from '@/components/info-band';
-import LanguageSwitch from '@/components/language-switch';
-import { Particles } from '@/components/particles';
+import { BlurFade } from '@/components/BlurFade';
+import InfoBand from '@/components/InfoBand';
+import LanguageSwitch from '@/components/LanguageSwitch';
+import { Particles } from '@/components/Particules';
 import Github from '@/components/svg/github';
 import Instagram from '@/components/svg/instagram';
 import Linkedin from '@/components/svg/linkedin';
 import Youtube from '@/components/svg/youtube';
-import TitleBox from '@/components/title-box';
+import TitleBox from '@/components/TitleBox';
 import React from 'react';
 
 export type SocialLink = {
