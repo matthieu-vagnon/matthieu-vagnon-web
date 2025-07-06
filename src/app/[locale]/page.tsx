@@ -2,10 +2,10 @@ import { BlurFade } from '@/components/BlurFade';
 import InfoBand from '@/components/InfoBand';
 import LanguageSwitch from '@/components/LanguageSwitch';
 import { Particles } from '@/components/Particules';
-import Github from '@/components/svg/github';
-import Instagram from '@/components/svg/instagram';
-import Linkedin from '@/components/svg/linkedin';
-import Youtube from '@/components/svg/youtube';
+import Github from '@/components/svg/Github';
+import Instagram from '@/components/svg/Instagram';
+import Linkedin from '@/components/svg/Linkedin';
+import Youtube from '@/components/svg/Youtube';
 import TitleBox from '@/components/TitleBox';
 import React from 'react';
 

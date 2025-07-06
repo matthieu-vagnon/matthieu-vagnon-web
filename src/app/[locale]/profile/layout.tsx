@@ -35,6 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     keywords: [
+      ...(profile.aiTools || []),
       ...(profile.languages || []),
       ...(profile.frontendFrameworks || []),
       ...(profile.stateManagement || []),
