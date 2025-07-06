@@ -82,7 +82,7 @@ export const profile: Profile = {
       img: MuiIcon,
     },
   ],
-  aiTools: ['ChatGPT', 'Cursor IDE'],
+  aiTools: ['ChatGPT', 'Claude', 'Cursor IDE', 'GitHub Copilot'],
   languages: [
     'JavaScript (ES6+)',
     'TypeScript',
