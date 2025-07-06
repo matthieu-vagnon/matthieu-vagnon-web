@@ -5,7 +5,7 @@ import { Calendar, Copy, Mail, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { toast } from 'sonner';
-import { Button, LinkButton } from './button';
+import { Button, LinkButton } from './Button';
 import {
   DialogContent,
   DialogDescription,

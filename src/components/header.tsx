@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { LinkButton } from './button';
+import { LinkButton } from './Button';
 import Logo from './svg/logo';
 
 export default function Header() {

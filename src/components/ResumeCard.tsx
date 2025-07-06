@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/Avatar';
 import { Card, CardHeader } from '@/components/Card';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { motion } from 'framer-motion';
