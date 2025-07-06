@@ -1,4 +1,5 @@
 import { BlurFade } from '@/components/BlurFade';
+import { Separator } from '@/components/deparator';
 import Header from '@/components/Header';
 import { LogoCarousel } from '@/components/LogoCarousel';
 import Media from '@/components/Media';
@@ -6,7 +7,6 @@ import PageTitle from '@/components/PageTitle';
 import { ResumeCard } from '@/components/ResumeCard';
 import SectionTitle from '@/components/SectionTitle';
 import SeeMore from '@/components/SeeMore';
-import { Separator } from '@/components/Separator';
 import SkillBox from '@/components/SkillBox';
 import TestimonialsStatusWrapper from '@/components/TestimonialsStatusWrapper';
 import { profile } from '@/data/profile';

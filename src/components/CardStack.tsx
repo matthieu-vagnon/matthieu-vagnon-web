@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Languages } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from './Avatar';
+import { Avatar, AvatarFallback, AvatarImage } from './avatar';
 import { BlurFade } from './BlurFade';
-import { Button } from './Button';
-import Magnetic from './Magnetic';
+import { Button } from './button';
+import Magnetic from './magnetic';
 
 type CardStackProps = {
   items: Testimonial[];

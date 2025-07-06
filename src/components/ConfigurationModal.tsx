@@ -3,7 +3,7 @@
 import { useAccentColor } from '@/hooks/useAccentColor';
 import { useMagneticStatus } from '@/hooks/useMagneticStatus';
 import { useMessages, useTranslations } from 'next-intl';
-import { Button } from './Button';
+import { Button } from './button';
 import { Checkbox } from './Checkbox';
 import { Label } from './Label';
 import {

@@ -13,10 +13,10 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import { ConfigurationModal } from './ConfigurationModal';
 import { ContactModal } from './ContactModal';
-import { Dock, DockIcon, DockItem, DockLabel } from './Dock';
+import { Dock, DockIcon, DockItem, DockLabel } from './dock';
 import { Dialog, DialogTrigger } from './NestedDialog';
 import { ProgressiveBlur } from './ProgressiveBlur';
-import { Separator } from './Separator';
+import { Separator } from './separator';
 
 function DockElement({
   title,

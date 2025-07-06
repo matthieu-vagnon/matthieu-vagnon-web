@@ -5,7 +5,7 @@ import { LayoutGroup, motion } from 'framer-motion';
 import { useMessages, useTranslations } from 'next-intl';
 import React from 'react';
 import { BlurFade } from './BlurFade';
-import { LinkButton } from './Button';
+import { LinkButton } from './button';
 import Highlight from './Highlight';
 import { MainCard, MainCardContent } from './MainCard';
 import Logo from './svg/logo';

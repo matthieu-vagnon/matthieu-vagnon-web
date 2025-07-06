@@ -3,7 +3,7 @@
 import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useLocale } from 'next-intl';
-import { LinkButton } from './Button';
+import { LinkButton } from './button';
 
 function LanguageButton({ lang, title }: { lang: string; title: string }) {
   const pathname = usePathname();

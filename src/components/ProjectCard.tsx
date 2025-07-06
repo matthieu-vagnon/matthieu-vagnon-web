@@ -2,7 +2,7 @@ import { Link } from '@/i18n/navigation';
 import { cn, getTranslatedData } from '@/lib/utils';
 import { useLocale, useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
-import Magnetic from './Magnetic';
+import Magnetic from './magnetic';
 
 type ProjectCardProps = {
   coverImage: StaticImageData;
