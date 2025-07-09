@@ -1,30 +1,43 @@
 - [Matthieu Vagnon Web - Personal Website](#matthieu-vagnon-web---personal-website)
-  - [💻 Gallery](#-gallery)
-  - [🚀 Features](#-features)
-  - [🛠️ Installation](#️-installation)
+  - [Type of Project](#type-of-project)
+  - [Features](#features)
+  - [Dependencies](#dependencies)
+  - [Features](#features-1)
+  - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Set Up Local Repository](#set-up-local-repository)
     - [Run the App](#run-the-app)
-  - [🔧 Available Scripts](#-available-scripts)
-  - [📦 Project Structure](#-project-structure)
-  - [🌐 Internationalization](#-internationalization)
-  - [🎨 Styling](#-styling)
-  - [👨‍💻 Author](#-author)
+  - [Available Scripts](#available-scripts)
+  - [Author](#author)
 
 # Matthieu Vagnon Web - Personal Website
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.2.2-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 
-Personal portfolio web application developed with React, Next.js, TypeScript, Tailwind CSS and Framer Motion. The goal is to let people watch my case studies, my profile, contact me and access my links in a simple way on mobile and desktop. This app is deployed on Vercel.
+_Personal portfolio web application developed with React, Next.js, TypeScript, Tailwind CSS and Framer Motion. The goal is to let people watch my case studies, my profile, contact me and access my links in a simple way on mobile and desktop. This app is deployed on Vercel._
 
-## 💻 Gallery
+## Type of Project
 
-Further explaination of the project as well as images from the software are available [here](https://www.mvagnon.dev/case-studies/matthieu-vagnon).
+- [ ] Freelance project
+- [ ] Hobby project
+- [x] Other project
 
-## 🚀 Features
+## Features
+
+- **Memo** - Ability to create, delete, edit memos in an auto generated session
+- **Accessibility** - Accessible application for mobile, tablet and desktop
+- **Performance** - Optimized API fetching with React Query (using full potential of cache and refresh management)
+
+## Dependencies
+
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Framer Motion](https://motion.dev) for smooth animations
+- [Next-intl](https://next-intl.dev) for internatiolization
+- [Next.js Toploader](https://www.npmjs.com/package/nextjs-toploader) for visible loading states
+
+## Features
 
 - **Modern Interface** - Responsive design with Tailwind CSS
 - **Multi-language** - Support for multiple languages with next-intl
@@ -34,7 +47,7 @@ Further explaination of the project as well as images from the software are avai
 - **Performance** - Optimized with Vercel Speed Insights
 - **SEO** - Excellent SEO using Next.js metadatas management
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -76,27 +89,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## 🔧 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Starts the development server with Turbopack
 - `npm run build` - Builds the application for production
 - `npm run start` - Starts the application in production mode
 - `npm run lint` - Runs ESLint to check code quality
 
-## 📦 Project Structure
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## 🌐 Internationalization
-
-This project uses `next-intl` for translation management. Translation files are located in the `messages/` folder.
-
-## 🎨 Styling
-
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Tailwind Merge](https://github.com/dcastil/tailwind-merge) for conditional class management
-- [Class Variance Authority](https://cva.style/docs) for components with variants
-
-## 👨‍💻 Author
+## Author
 
 - [Matthieu Vagnon](https://mvagnon.dev)
