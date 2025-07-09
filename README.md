@@ -36,6 +36,7 @@ _Personal portfolio web application developed with React, Next.js, TypeScript, T
 - [Framer Motion](https://motion.dev) for smooth animations
 - [Next-intl](https://next-intl.dev) for internatiolization
 - [Next.js Toploader](https://www.npmjs.com/package/nextjs-toploader) for visible loading states
+- [ESLint](https://eslint.org) for code linting
 
 ## Features
 
