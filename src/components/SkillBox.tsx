@@ -19,8 +19,7 @@ export default function SkillBox({
     <div
       className={cn(
         'flex flex-col gap-3 bg-accent p-4 hover:shadow-sm rounded-lg cursor-default overflow-hidden transition-all duration-300',
-        aiEffect &&
-          'bg-gradient-to-tr from-teal-400/25 to-yellow-200/25 hover:shadow-lg shadow-green-100/75',
+        aiEffect && 'bg-gradient-to-tr from-teal-400/15 to-yellow-200/20',
         className
       )}
     >
@@ -31,9 +30,9 @@ export default function SkillBox({
       <div className='flex flex-row flex-wrap gap-2'>
         {items.map((item) =>
           aiEffect ? (
-            <div key={item} className='bg-background/33 rounded-full px-2'>
-              <span className='font-bold'>{item}</span>
-            </div>
+            <Highlight key={item} color='green'>
+              {item}
+            </Highlight>
           ) : (
             <Highlight key={item} color='gray'>
               {item}
