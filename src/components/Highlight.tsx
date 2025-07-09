@@ -15,7 +15,6 @@ const Highlight = ({
     default: 'shadow-main/15 text-main-dark',
     emerald: 'shadow-emerald-100/50 text-emerald-700',
     gray: 'shadow-gray-200/66 text-gray-700',
-    green: 'shadow-green-400/10 text-green-900',
   };
 
   return (

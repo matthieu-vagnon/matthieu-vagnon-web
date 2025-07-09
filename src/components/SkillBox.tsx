@@ -5,21 +5,21 @@ import Highlight from './Highlight';
 type SkillBoxProps = {
   title: string;
   items: string[];
-  aiEffect?: boolean;
+  accent?: boolean;
   className?: string;
 };
 
 export default function SkillBox({
   title,
   items,
-  aiEffect,
+  accent,
   className,
 }: SkillBoxProps) {
   return (
     <div
       className={cn(
         'flex flex-col gap-3 bg-accent p-4 hover:shadow-sm rounded-lg cursor-default overflow-hidden transition-all duration-300',
-        aiEffect && 'bg-gradient-to-tr from-teal-400/15 to-yellow-200/20',
+        accent && 'bg-main/10',
         className
       )}
     >
@@ -28,17 +28,11 @@ export default function SkillBox({
         {title}
       </span>
       <div className='flex flex-row flex-wrap gap-2'>
-        {items.map((item) =>
-          aiEffect ? (
-            <Highlight key={item} color='green'>
-              {item}
-            </Highlight>
-          ) : (
-            <Highlight key={item} color='gray'>
-              {item}
-            </Highlight>
-          )
-        )}
+        {items.map((item) => (
+          <Highlight key={item} color={!accent ? 'gray' : undefined}>
+            {item}
+          </Highlight>
+        ))}
       </div>
     </div>
   );

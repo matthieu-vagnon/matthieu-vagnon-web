@@ -67,85 +67,54 @@ export default function Profile() {
             <SkillBox
               title={t('profile.aiTools')}
               items={profile.aiTools}
-              aiEffect
-              className='flex-auto'
+              accent
             />
             <SkillBox
               title={t('profile.languages')}
               items={profile.languages}
-              className='flex-auto'
             />
             <SkillBox
               title={t('profile.frontendFrameworks')}
               items={profile.frontendFrameworks}
-              className='flex-auto'
             />
             <SkillBox
               title={t('profile.stateManagement')}
               items={profile.stateManagement}
-              className='flex-auto'
             />
             <SkillBox
               title={t('profile.frontendLibraries')}
               items={profile.frontendLibraries}
-              className='flex-auto'
             />
             <SkillBox
               title={t('profile.uiLibraries')}
               items={profile.uiLibraries}
-              className='flex-auto'
             />
-            <SkillBox
-              title={t('profile.testing')}
-              items={profile.testing}
-              className='flex-auto'
-            />
+            <SkillBox title={t('profile.testing')} items={profile.testing} />
             <SkillBox
               title={t('profile.buildTools')}
               items={profile.buildTools}
-              className='flex-auto'
             />
-            <SkillBox
-              title={t('profile.backend')}
-              items={profile.backend}
-              className='flex-auto'
-            />
+            <SkillBox title={t('profile.backend')} items={profile.backend} />
             <SkillBox
               title={t('profile.performance')}
               items={profile.performance}
-              className='flex-auto'
             />
             <SkillBox
               title={t('profile.accessibility')}
               items={profile.accessibility}
-              className='flex-auto'
             />
-            <SkillBox
-              title={t('profile.devops')}
-              items={profile.devops}
-              className='flex-auto'
-            />
+            <SkillBox title={t('profile.devops')} items={profile.devops} />
             <SkillBox
               title={t('profile.bestPractices')}
               items={profile.bestPractices}
-              className='flex-auto'
             />
-            <SkillBox
-              title={t('profile.design')}
-              items={profile.design}
-              className='flex-auto'
-            />
-            <SkillBox
-              title={t('profile.other')}
-              items={profile.other}
-              className='flex-auto'
-            />
+            <SkillBox title={t('profile.design')} items={profile.design} />
+            <SkillBox title={t('profile.other')} items={profile.other} />
             <SkillBox
               title={t('profile.softSkills')}
               items={profile.softSkills.map((skill) =>
                 getTranslatedData(skill, locale)
               )}
-              className='flex-auto'
             />
           </div>
         </BlurFade>
