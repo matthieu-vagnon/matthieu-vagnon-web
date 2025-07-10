@@ -699,8 +699,8 @@ export const profile: Profile = {
         fr: ['École'],
       },
       degree: {
-        en: 'Preparatory Classes',
-        fr: 'École préparatoire aux grandes écoles',
+        en: 'Intensive Preparatory Program',
+        fr: 'École préparatoire',
       },
       href: 'https://polytech.univ-lyon1.fr',
     },
