@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getEntries('/'),
     ...getEntries('/profile', [
       profile.avatarUrl?.src,
-      ...Object.values(profile.businessCard).map((img) => img.image.src),
+      profile.businessCard.image.src,
     ]),
     ...getEntries('/case-studies'),
     ...Object.entries(projects).flatMap(([project, data]) =>
