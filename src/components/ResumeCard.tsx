@@ -43,7 +43,6 @@ type ResumeCardProps = {
     }[];
     technologies: string[];
   }[];
-  open?: boolean;
 };
 
 const ResumeCardContent = ({
@@ -156,8 +155,8 @@ const ResumeCardContent = ({
 };
 
 export const ResumeCard = (props: ResumeCardProps) => {
-  const { href, projects, open } = props;
-  const [isExpanded, setIsExpanded] = React.useState(open ?? false);
+  const { href, projects } = props;
+  const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = () => {
     if (projects && projects.length > 0) {

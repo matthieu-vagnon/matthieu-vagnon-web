@@ -134,7 +134,6 @@ export default function Profile() {
                     }
                     period={experience.timeline}
                     projects={experience.projects}
-                    open={index === 0}
                   />
                 ))}
               </div>
