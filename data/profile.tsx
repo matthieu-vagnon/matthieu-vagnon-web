@@ -163,7 +163,7 @@ export const profile: Profile = {
         <span>
           As a full-stack engineer, I don&apos;t just build{' '}
           <Highlight>cutting-edge</Highlight>, <Highlight>accessible</Highlight>
-          , and <Highlight>scalable</Highlight> web applications — I craft{' '}
+          , and <Highlight>scalable</Highlight> web applications: I craft{' '}
           <Highlight>
             experiences that drive engagement, reduce friction and build user
             trust
@@ -173,14 +173,13 @@ export const profile: Profile = {
         <span>
           Combining my developer skills with a{' '}
           <Highlight>strong background in design</Highlight>, I bridge the gap
-          between design and implementation — ensuring{' '}
+          between design and implementation, ensuring{' '}
           <Highlight>pixel-perfect, seamless user experiences</Highlight>.
         </span>
         <span>
-          From early-stage startups to global companies like{' '}
-          <Highlight>TotalEnergies</Highlight>, I’ve helped teams turn complex
-          product ideas into{' '}
-          <Highlight>smooth, high-impact web experiences</Highlight>.
+          I worked with entities from early-stage startups like{' '}
+          <Highlight>Pulse Partners</Highlight> to global companies like{' '}
+          <Highlight>TotalEnergies</Highlight>.
         </span>
       </>
     ),
@@ -190,7 +189,7 @@ export const profile: Profile = {
           En tant que développeur full-stack, je ne me contente pas de créer des
           applications web <Highlight>performantes</Highlight>,{' '}
           <Highlight>accessibles</Highlight> et{' '}
-          <Highlight>évolutives</Highlight> — je conçois des{' '}
+          <Highlight>évolutives</Highlight> : je conçois des{' '}
           <Highlight>
             expériences qui renforcent l’engagement, réduisent les frictions et
             instaurent la confiance des utilisateurs
@@ -200,8 +199,8 @@ export const profile: Profile = {
         <span>
           Grâce à ma double compétence en{' '}
           <Highlight>développement et en design</Highlight>, je fais le lien
-          entre intention graphique et implémentation technique — pour livrer
-          des interfaces soignées,{' '}
+          entre intention graphique et implémentation technique pour livrer des
+          interfaces soignées,{' '}
           <Highlight>
             pixel-perfect, prêtes pour la production, et pensées pour
             l’utilisateur
@@ -209,10 +208,9 @@ export const profile: Profile = {
           .
         </span>
         <span>
-          Des startups en phase de lancement aux grandes entreprises comme{' '}
-          <Highlight>TotalEnergies</Highlight>, j’ai aidé des équipes à
-          transformer des idées complexes en{' '}
-          <Highlight>expériences web fluides et à fort impact</Highlight>.
+          J’ai travaillé avec des startups en phase de lancement comme{' '}
+          <Highlight>Pulse Partners</Highlight> jusqu&apos;à de grandes
+          entreprises comme <Highlight>TotalEnergies</Highlight>.
         </span>
       </>
     ),
