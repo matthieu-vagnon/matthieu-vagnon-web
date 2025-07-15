@@ -103,6 +103,7 @@ const ResumeCardContent = ({
             animate={{
               opacity: isExpanded ? 1 : 0,
               height: isExpanded ? 'auto' : 0,
+              overflow: isExpanded ? 'visible' : 'hidden',
             }}
             transition={{
               duration: 0.7,
