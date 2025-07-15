@@ -51,9 +51,9 @@ declare global {
     stateManagement: string[];
     frontendLibraries: string[];
     uiLibraries: string[];
-    testing: string[];
     buildTools: string[];
     backend: string[];
+    testing: string[];
     performance: string[];
     accessibility: string[];
     devops: string[];

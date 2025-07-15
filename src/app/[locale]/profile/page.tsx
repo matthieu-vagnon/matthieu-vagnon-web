@@ -89,12 +89,12 @@ export default function Profile() {
               title={t('profile.uiLibraries')}
               items={profile.uiLibraries}
             />
-            <SkillBox title={t('profile.testing')} items={profile.testing} />
             <SkillBox
               title={t('profile.buildTools')}
               items={profile.buildTools}
             />
             <SkillBox title={t('profile.backend')} items={profile.backend} />
+            <SkillBox title={t('profile.testing')} items={profile.testing} />
             <SkillBox
               title={t('profile.performance')}
               items={profile.performance}
