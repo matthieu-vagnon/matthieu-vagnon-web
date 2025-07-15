@@ -8,8 +8,7 @@ import NextjsIcon from '@/components/svg/Nextjs';
 import ReactIcon from '@/components/svg/React';
 import TailwindIcon from '@/components/svg/Tailwind';
 import TypeScriptIcon from '@/components/svg/TypeScript';
-import businessCardEn from '@/public/en/business-card.png';
-import businessCardFr from '@/public/fr/business-card.png';
+import businessCard from '@/public/profile/business-card.png';
 import freelance from '@/public/profile/freelance.png';
 import google from '@/public/profile/google.jpg';
 import ikm from '@/public/profile/ikm.jpeg';
@@ -31,13 +30,11 @@ export const profile: Profile = {
     fr: `La compétence la plus sous-estimée dans le développement web, c'est l'empathie. — Matthieu Vagnon, Développeur full-stack UX-first`,
   },
   businessCard: {
-    en: {
-      image: businessCardEn,
-      title: 'Business Card',
-    },
-    fr: {
-      image: businessCardFr,
-      title: 'Carte de visite',
+    image: businessCard,
+    title: {
+      en: 'Business Card',
+      fr: 'Carte de visite',
+      ja: 'ビジネスカード',
     },
   },
   stackLogos: [

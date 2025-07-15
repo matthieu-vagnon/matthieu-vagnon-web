@@ -18,7 +18,6 @@ export default function Profile() {
   const t = useTranslations();
   const locale = useLocale();
 
-  const businessCard = getTranslatedData(profile.businessCard, locale);
   let blurDelay = 0;
 
   return (
@@ -35,18 +34,16 @@ export default function Profile() {
       <div className='flex flex-col gap-12 sm:gap-14 md:gap-16'>
         <BlurFade delay={blurDelay++ / 10}>
           <div className='gap-8 sm:gap-12 md:gap-18 flex flex-col sm:flex-row text-center sm:text-left items-center justify-start'>
-            {businessCard && (
-              <Media
-                width={256}
-                media={{
-                  image: businessCard.image,
-                  title: businessCard.title,
-                }}
-                isTilt
-                size='md'
-                className='w-50 md:w-56 lg:w-64'
-              />
-            )}
+            <Media
+              width={256}
+              media={{
+                image: profile.businessCard.image,
+                title: profile.businessCard.title,
+              }}
+              isTilt
+              size='md'
+              className='w-50 md:w-56 lg:w-64'
+            />
             <div className='relative text-lg lg:text-xl italic'>
               <Quote
                 strokeWidth={0}
