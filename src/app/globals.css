@@ -120,4 +120,12 @@ html {
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  *:focus {
+    outline: none !important;
+  }
+
+  *:focus-visible {
+    outline: none !important;
+  }
 }
