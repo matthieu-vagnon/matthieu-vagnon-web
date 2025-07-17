@@ -20,10 +20,20 @@ const DialogPortal = DialogPrimitive.Portal;
 const DialogClose = DialogPrimitive.Close;
 const InnerDialogTrigger = DialogPrimitive.Trigger;
 
-function Dialog({ children }: { children: React.ReactNode }) {
+function Dialog({
+  children,
+  defaultOpen,
+}: {
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}) {
   const { setIsDockOpen } = useDockStatus();
   const [outerOpen, setOuterOpen] = React.useState(false);
   const [innerOpen, setInnerOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    setOuterOpen(defaultOpen ?? false);
+  }, [defaultOpen]);
 
   React.useEffect(() => {
     setIsDockOpen(!outerOpen);

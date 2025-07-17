@@ -10,7 +10,8 @@ import {
   UserRound,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 import { ConfigurationModal } from './ConfigurationModal';
 import { ContactModal } from './ContactModal';
 import { Dock, DockIcon, DockItem, DockLabel } from './Dock';
@@ -35,8 +36,16 @@ function DockElement({
 
 export default function AppsDock() {
   const { isDockOpen } = useDockStatus();
-  const [activeModal, setActiveModal] = useState<number | undefined>(undefined);
+  const searchParams = useSearchParams();
+  const modalParam = searchParams.get('action');
+  const [activeModal, setActiveModal] = useState<string | undefined>(undefined);
   const t = useTranslations();
+
+  useEffect(() => {
+    if (modalParam) {
+      setActiveModal(modalParam);
+    }
+  }, [modalParam]);
 
   const apps = [
     {
@@ -58,11 +67,13 @@ export default function AppsDock() {
 
   const modals = [
     {
+      action: 'contact',
       title: t('getInTouch.title'),
       icon: <MessageCircle className='h-full w-full text-neutral-600' />,
       modal: <ContactModal />,
     },
     {
+      action: 'configure',
       title: t('configure.title'),
       icon: <Cog className='h-full w-full text-neutral-600' />,
       modal: <ConfigurationModal />,
@@ -70,7 +81,7 @@ export default function AppsDock() {
   ];
 
   return (
-    <Dialog>
+    <Dialog defaultOpen={!!modalParam}>
       <div
         className={`fixed bottom-2 left-1/2 w-full -translate-x-1/2 z-100 ${
           isDockOpen ? 'translate-y-0' : 'translate-y-full'
@@ -85,14 +96,15 @@ export default function AppsDock() {
           <Separator orientation='vertical' className='h-10' />
           {modals.map((modal, idx) => (
             <DialogTrigger key={idx} asChild>
-              <button onClick={() => setActiveModal(idx)}>
+              <button onClick={() => setActiveModal(modal.action)}>
                 <DockElement title={modal.title} icon={modal.icon} />
               </button>
             </DialogTrigger>
           ))}
         </Dock>
       </div>
-      {activeModal !== undefined && modals[activeModal].modal}
+      {activeModal !== undefined &&
+        modals.find((modal) => modal.action === activeModal)?.modal}
       <ProgressiveBlur
         direction='bottom'
         className='pointer-events-none fixed bottom-0 left-0 h-24 w-full z-99'
