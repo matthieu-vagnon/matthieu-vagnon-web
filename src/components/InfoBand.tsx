@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { LinkButton } from "./Button";
 
 export default function InfoBand({ className }: { className?: string }) {
   const t = useTranslations();
 
-  if (t("infoBand") === "") return null;
+  if (!t.has("infoBand") || !t.has("infoBand.text") || !t.has("infoBand.url"))
+    return null;
 
   return (
     <div
@@ -14,7 +16,19 @@ export default function InfoBand({ className }: { className?: string }) {
       )}
     >
       <span className="text-main-foreground font-medium text-md sm:text-lg text-center">
-        {t("infoBand")}
+        {t.rich("infoBand.text", {
+          a: (chunks) => (
+            <LinkButton
+              external
+              noMagnetic
+              href={t("infoBand.url")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {chunks}
+            </LinkButton>
+          ),
+        })}
       </span>
     </div>
   );

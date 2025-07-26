@@ -1,5 +1,8 @@
 {
-  "infoBand": "Official member of the France-Japan Chamber of Commerce and Industry (CCIFJ) since June 2025.",
+  "infoBand": {
+    "text": "Official member of the <a>France-Japan Chamber of Commerce and Industry (CCIFJ)</a> since June 2025.",
+    "url": "https://www.ccifj.or.jp/en/membership/members-directory.html"
+  },
   "home": {
     "metadata": {
       "title": "Matthieu Vagnon's Web Portfolio",
