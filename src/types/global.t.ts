@@ -1,7 +1,7 @@
-import { Media } from '@/components/Media';
-import { typeVariants } from '@/components/ProjectCard';
-import { Locale } from 'next-intl';
-import { StaticImageData } from 'next/image';
+import { Media } from "@/components/Media";
+import { typeVariants } from "@/components/ProjectCard";
+import { Locale } from "next-intl";
+import { StaticImageData } from "next/image";
 
 declare global {
   type Testimonial = {
@@ -54,11 +54,6 @@ declare global {
     bestPractices: string[];
     design: string[];
     other: string[];
-    softSkills: {
-      en?: string;
-      fr?: string;
-      ja?: string;
-    }[];
     about: {
       en?: React.ReactNode;
       fr?: React.ReactNode;
