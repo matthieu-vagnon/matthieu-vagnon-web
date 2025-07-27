@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { BadgeCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LinkButton } from "./Button";
 
@@ -15,8 +16,9 @@ export default function InfoBand({ className }: { className?: string }) {
         className
       )}
     >
-      <span className="text-main-foreground font-medium text-md sm:text-lg text-center">
+      <span className="text-main-foreground font-medium text-md sm:text-lg text-center flex items-center gap-2">
         {t.rich("infoBand.text", {
+          verif: () => <BadgeCheck className="w-4 h-4" />,
           a: (chunks) => (
             <LinkButton
               external
