@@ -16,9 +16,9 @@ export default function InfoBand({ className }: { className?: string }) {
         className
       )}
     >
-      <span className="text-main-foreground font-medium text-md sm:text-lg text-center flex items-center gap-2">
+      <span className="text-main-foreground font-medium text-md sm:text-lg text-center gap-2">
         {t.rich("infoBand.text", {
-          verif: () => <BadgeCheck className="w-4 h-4" />,
+          verif: () => <BadgeCheck className="inline mr-1 mb-0.5 w-4 h-4" />,
           a: (chunks) => (
             <LinkButton
               external

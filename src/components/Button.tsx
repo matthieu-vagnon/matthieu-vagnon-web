@@ -1,19 +1,19 @@
-import { Link } from '@/i18n/navigation';
-import { cn } from '@/lib/utils';
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { ArrowUpRight } from 'lucide-react';
-import * as React from 'react';
-import Magnetic from './Magnetic';
+import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { ArrowUpRight } from "lucide-react";
+import * as React from "react";
+import Magnetic from "./Magnetic";
 
-type ButtonProps = React.ComponentProps<'button'> &
+type ButtonProps = React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
     noMagnetic?: boolean;
     isInline?: boolean;
   };
 
-type LinkButtonProps = React.ComponentProps<'a'> &
+type LinkButtonProps = React.ComponentProps<"a"> &
   VariantProps<typeof buttonVariants> & {
     href: string;
     locale?: string;
@@ -30,21 +30,21 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 text-sm',
+          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 text-sm",
         destructive:
-          'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 text-sm',
+          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 text-sm",
         outline:
-          'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground text-sm',
+          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground text-sm",
         secondary:
-          'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80 text-sm',
-        ghost: 'hover:bg-accent hover:text-accent-foreground text-sm',
-        link: 'underline underline-offset-4 hover:opacity-80',
+          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80 text-sm",
+        ghost: "hover:bg-accent hover:text-accent-foreground text-sm",
+        link: "underline underline-offset-4 hover:opacity-80 block",
       },
       size: {
-        xs: 'gap-1',
-        sm: 'min-h-8 py-2 rounded-md gap-1.5 px-2 sm:px-3 gap-2',
-        md: 'min-h-9 px-2 sm:px-4 py-2 gap-2',
-        lg: 'min-h-10 py-2 rounded-md px-4 sm:px-6 gap-2',
+        xs: "gap-1",
+        sm: "min-h-8 py-2 rounded-md gap-1.5 px-2 sm:px-3 gap-2",
+        md: "min-h-9 px-2 sm:px-4 py-2 gap-2",
+        lg: "min-h-10 py-2 rounded-md px-4 sm:px-6 gap-2",
       },
     },
   }
@@ -64,7 +64,7 @@ function ButtonWrapper({
     <Magnetic
       disabled={disabled}
       size={size ?? undefined}
-      className={cn(isInline && 'inline-block')}
+      className={cn(isInline && "inline-block")}
     >
       {children}
     </Magnetic>
@@ -73,14 +73,14 @@ function ButtonWrapper({
 
 function Button({
   className,
-  variant = 'default',
-  size = 'sm',
+  variant = "default",
+  size = "sm",
   isInline = false,
   asChild = false,
   noMagnetic = false,
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : 'button';
+  const Comp = asChild ? Slot : "button";
 
   return (
     <ButtonWrapper
@@ -89,7 +89,7 @@ function Button({
       disabled={props.disabled || noMagnetic}
     >
       <Comp
-        data-slot='button'
+        data-slot="button"
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       />
@@ -99,8 +99,8 @@ function Button({
 
 function LinkButton({
   className,
-  variant = 'link',
-  size = 'xs',
+  variant = "link",
+  size = "xs",
   isInline = true,
   href,
   locale,
@@ -120,16 +120,18 @@ function LinkButton({
       <Link
         href={href}
         locale={locale}
-        target={external ? '_blank' : '_self'}
+        target={external ? "_blank" : "_self"}
         className={cn(
-          'cursor-pointer ml-0.5',
-          disabled && 'pointer-events-none opacity-50',
+          "cursor-pointer",
+          disabled && "pointer-events-none opacity-50",
           buttonVariants({ variant, size, className })
         )}
         {...props}
       >
         {children}
-        {external && !noExternalIndicator && <ArrowUpRight />}
+        {external && !noExternalIndicator && (
+          <ArrowUpRight className="size-4 ml-0.5 inline align-text-baseline" />
+        )}
       </Link>
     </ButtonWrapper>
   );
