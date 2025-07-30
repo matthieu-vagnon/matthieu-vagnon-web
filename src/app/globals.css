@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "tailwindcss-animate";
 
@@ -90,19 +90,19 @@
   --radius: 0.625rem;
 }
 
-html[data-accent-color='green'] {
+html[data-accent-color="green"] {
   --main: #88ff88;
   --main-dark: #004000;
   --main-foreground: black;
 }
 
-html[data-accent-color='pink'] {
+html[data-accent-color="pink"] {
   --main: #ff88ff;
   --main-dark: #400040;
   --main-foreground: black;
 }
 
-html[data-accent-color='purple'] {
+html[data-accent-color="purple"] {
   --main: #8888ff;
   --main-dark: #000040;
   --main-foreground: black;

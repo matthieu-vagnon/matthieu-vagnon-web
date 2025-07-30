@@ -8,6 +8,7 @@ import Linkedin from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
 import Youtube from "@/components/svg/Youtube";
 import TitleBox from "@/components/TitleBox";
+import { File } from "lucide-react";
 import React from "react";
 
 export type SocialLink = {
@@ -45,7 +46,7 @@ const SOCIAL_LINKS: SocialLink[] = [
   {
     label: "Resume",
     link: "resume.pdf",
-    icon: undefined,
+    icon: <File />,
   },
 ];
 
