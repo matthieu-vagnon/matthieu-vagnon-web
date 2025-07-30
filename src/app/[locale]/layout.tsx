@@ -52,6 +52,7 @@ const courierPrime = Courier_Prime({
   variable: "--font-courier-prime",
   subsets: ["latin"],
   weight: "400",
+  preload: false,
 });
 
 export async function generateMetadata(): Promise<Metadata> {
