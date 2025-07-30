@@ -1,19 +1,19 @@
-import { BlurFade } from '@/components/BlurFade';
-import Header from '@/components/Header';
-import { Li, Ul } from '@/components/List';
-import { MediaCarousel } from '@/components/MediaCarousel';
-import PageTitle from '@/components/PageTitle';
-import { ScrollProgress } from '@/components/ScrollProgress';
-import SectionTitle from '@/components/SectionTitle';
-import SeeMore from '@/components/SeeMore';
-import { default as SkillBox } from '@/components/SkillBox';
-import PageDecoration from '@/components/svg/PageDecoration';
-import TestimonialsStatusWrapper from '@/components/TestimonialsStatusWrapper';
-import { projects } from '@/data/projects';
-import { cn, getFlattenedNode, getTranslatedData } from '@/lib/utils';
-import { Metadata, ResolvingMetadata } from 'next';
-import { getLocale, getTranslations } from 'next-intl/server';
-import React from 'react';
+import { BlurFade } from "@/components/BlurFade";
+import Header from "@/components/Header";
+import { Li, Ul } from "@/components/List";
+import { MediaCarousel } from "@/components/MediaCarousel";
+import PageTitle from "@/components/PageTitle";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import SectionTitle from "@/components/SectionTitle";
+import SeeMore from "@/components/SeeMore";
+import { default as SkillBox } from "@/components/SkillBox";
+import PageDecoration from "@/components/svg/PageDecoration";
+import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
+import { projects } from "@/data/projects";
+import { cn, getFlattenedNode, getTranslatedData } from "@/lib/utils";
+import { Metadata, ResolvingMetadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+import React from "react";
 
 function Block({
   title,
@@ -22,32 +22,32 @@ function Block({
   className,
 }: {
   title: string;
-  position: 'left' | 'right';
+  position: "left" | "right";
   children: React.ReactNode;
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        'flex w-full gap-x-20',
-        position === 'right' && 'flex-row-reverse',
+        "flex w-full gap-x-20",
+        position === "right" && "flex-row-reverse",
         className
       )}
     >
-      <div className='flex flex-col w-full md:w-2/3 xl:w-1/2'>
+      <div className="flex flex-col w-full md:w-2/3 xl:w-1/2">
         <SectionTitle title={title} />
-        <div className='text-base md:text-lg text-foreground-secondary'>
+        <div className="text-base md:text-lg text-foreground-secondary">
           {children}
         </div>
       </div>
       <div
         className={cn(
-          'relative hidden md:block w-33',
-          position === 'right' && '-scale-x-100'
+          "relative hidden md:block w-33",
+          position === "right" && "-scale-x-100"
         )}
       >
-        <div className='absolute inset-y-0 right-0 w-11 bg-gradient-to-l from-background to-transparent' />
-        <PageDecoration className='h-full w-full' />
+        <div className="absolute inset-y-0 right-0 w-11 bg-gradient-to-l from-background to-transparent" />
+        <PageDecoration className="h-full w-full" />
       </div>
     </div>
   );
@@ -64,17 +64,17 @@ export async function generateMetadata(
   const parentMetadata = await parent;
   const project = projects[(await params).project];
   const locale = await getLocale();
-  const t = await getTranslations('caseStudies.project.metadata');
+  const t = await getTranslations("caseStudies.project.metadata");
 
   return {
-    title: t('title', { name: project.title }),
+    title: t("title", { name: project.title }),
     description: getFlattenedNode(
       getTranslatedData(project.longDescription, locale)
     ),
     openGraph: {
-      type: 'article',
-      siteName: 'Matthieu Vagnon Web',
-      title: t('openGraph.title', { name: project.title }),
+      type: "article",
+      siteName: "Matthieu Vagnon Web",
+      title: t("openGraph.title", { name: project.title }),
       description: getTranslatedData(
         project.shortDescription,
         locale
@@ -127,10 +127,10 @@ export default async function Project(props: ProjectProps) {
       </BlurFade>
       <BlurFade
         delay={blurDelay++ / 10}
-        className='flex flex-col justify-center items-center gap-0'
+        className="flex flex-col justify-center items-center gap-0"
       >
         <PageTitle
-          title={`${t('caseStudies.project.title', {
+          title={`${t("caseStudies.project.title", {
             name: project.title,
           })} (${project.year})`}
           description={
@@ -144,19 +144,19 @@ export default async function Project(props: ProjectProps) {
           <MediaCarousel medias={project.gallery} isOpenSlug={isOpenSlug} />
         </BlurFade>
       )}
-      <div className='flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14'>
+      <div className="flex flex-col gap-12 sm:gap-14 md:gap-16 mt-10 sm:mt-12 md:mt-14">
         <BlurFade delay={blurDelay++ / 10}>
           <Block
-            title={t('caseStudies.project.projectDescription')}
-            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+            title={t("caseStudies.project.projectDescription")}
+            position={blockIndex++ % 2 === 0 ? "left" : "right"}
           >
-            <div className='flex flex-col gap-3 sm:gap-4 md:gap-5'>
+            <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
               <div>{getTranslatedData(project.longDescription, locale)}</div>
-              <div className='flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4'>
+              <div className="flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <SkillBox
-                  title={t('caseStudies.project.technologies')}
+                  title={t("caseStudies.project.technologies")}
                   items={project.technologies}
-                  className='flex-auto'
+                  className="flex-auto"
                 />
               </div>
             </div>
@@ -164,10 +164,10 @@ export default async function Project(props: ProjectProps) {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <Block
-            title={t('caseStudies.project.problem')}
-            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+            title={t("caseStudies.project.problem")}
+            position={blockIndex++ % 2 === 0 ? "left" : "right"}
           >
-            <Ul gap='sm'>
+            <Ul gap="sm">
               {getTranslatedData(project.problem, locale).map(
                 (item: React.ReactNode, index: number) => (
                   <Li key={index}>{item}</Li>
@@ -178,10 +178,10 @@ export default async function Project(props: ProjectProps) {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <Block
-            title={t('caseStudies.project.solution')}
-            position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+            title={t("caseStudies.project.solution")}
+            position={blockIndex++ % 2 === 0 ? "left" : "right"}
           >
-            <Ul gap='sm'>
+            <Ul gap="sm">
               {getTranslatedData(project.solution, locale).map(
                 (item: React.ReactNode, index: number) => (
                   <Li key={index}>{item}</Li>
@@ -193,8 +193,8 @@ export default async function Project(props: ProjectProps) {
         {project.results && (
           <BlurFade delay={blurDelay++ / 10}>
             <Block
-              title={t('caseStudies.project.results')}
-              position={blockIndex++ % 2 === 0 ? 'left' : 'right'}
+              title={t("caseStudies.project.results")}
+              position={blockIndex++ % 2 === 0 ? "left" : "right"}
             >
               {getTranslatedData(project.results, locale)}
             </Block>
@@ -206,19 +206,15 @@ export default async function Project(props: ProjectProps) {
           links={[
             ...relatedUrls,
             {
-              name: 'YouTube',
+              name: "YouTube",
               url: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
             },
             {
-              name: 'Instagram',
-              url: process.env.NEXT_PUBLIC_INSTAGRAM_URL!,
-            },
-            {
-              name: 'GitHub',
+              name: "GitHub",
               url: process.env.NEXT_PUBLIC_GITHUB_URL!,
             },
           ]}
-          className='mt-10 sm:mt-12 md:mt-14 mb-28'
+          className="mt-10 sm:mt-12 md:mt-14 mb-28"
         />
       </BlurFade>
     </TestimonialsStatusWrapper>

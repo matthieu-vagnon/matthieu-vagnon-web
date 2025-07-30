@@ -167,8 +167,12 @@ export default function Profile() {
               url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
             },
             {
+              name: "Malt",
+              url: process.env.NEXT_PUBLIC_MALT_URL!,
+            },
+            {
               name: "Findy",
-              url: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
+              url: process.env.NEXT_PUBLIC_FINDY_URL!,
             },
           ]}
         />
