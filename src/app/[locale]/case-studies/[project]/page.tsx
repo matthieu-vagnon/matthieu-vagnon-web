@@ -9,8 +9,10 @@ import SeeMore from "@/components/SeeMore";
 import { default as SkillBox } from "@/components/SkillBox";
 import PageDecoration from "@/components/svg/PageDecoration";
 import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
+import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { cn, getFlattenedNode, getTranslatedData } from "@/lib/utils";
+import { Globe } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
@@ -114,8 +116,9 @@ export default async function Project(props: ProjectProps) {
 
   const relatedUrls =
     project.relatedUrls?.map((url) => ({
-      ...url,
-      name: getTranslatedData(url.name, locale) as string,
+      title: getTranslatedData(url.title, locale) as string,
+      img: <Globe />,
+      link: url.link,
       important: true,
     })) || [];
 
@@ -203,16 +206,10 @@ export default async function Project(props: ProjectProps) {
       </div>
       <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
-          links={[
+          socials={[
             ...relatedUrls,
-            {
-              name: "YouTube",
-              url: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
-            },
-            {
-              name: "GitHub",
-              url: process.env.NEXT_PUBLIC_GITHUB_URL!,
-            },
+            profile.socials.youtube,
+            profile.socials.github,
           ]}
           className="mt-10 sm:mt-12 md:mt-14 mb-28"
         />

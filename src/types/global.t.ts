@@ -20,6 +20,19 @@ declare global {
   };
 
   type Profile = {
+    socials: Record<
+      string,
+      {
+        title: string;
+        img?: React.ReactNode;
+        link: {
+          en?: string;
+          fr?: string;
+          ja?: string;
+        };
+      }
+    >;
+    contact: Record<string, string>;
     avatarUrl?: StaticImageData;
     description: {
       en?: string;
@@ -143,12 +156,16 @@ declare global {
       ja?: React.ReactNode;
     };
     relatedUrls?: {
-      name: {
+      title: {
         en?: string;
         fr?: string;
         ja?: string;
       };
-      url: string;
+      link: {
+        en?: string;
+        fr?: string;
+        ja?: string;
+      };
     }[];
   };
 }

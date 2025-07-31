@@ -17,7 +17,6 @@ import { useLocale, useTranslations } from "next-intl";
 export default function Profile() {
   const t = useTranslations();
   const locale = useLocale();
-
   let blurDelay = 0;
 
   return (
@@ -161,19 +160,10 @@ export default function Profile() {
       </div>
       <BlurFade delay={blurDelay++ / 10}>
         <SeeMore
-          links={[
-            {
-              name: "LinkedIn",
-              url: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
-            },
-            {
-              name: "Malt",
-              url: process.env.NEXT_PUBLIC_MALT_URL!,
-            },
-            {
-              name: "Findy",
-              url: process.env.NEXT_PUBLIC_FINDY_URL!,
-            },
+          socials={[
+            profile.socials.linkedin,
+            profile.socials.malt,
+            profile.socials.findy,
           ]}
         />
       </BlurFade>

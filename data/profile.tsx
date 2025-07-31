@@ -1,13 +1,17 @@
 import Highlight from "@/components/Highlight";
-import { Li, Ul } from "@/components/List";
 import CssIcon from "@/components/svg/Css";
+import Findy from "@/components/svg/Findy";
+import Github from "@/components/svg/Github";
 import HtmlIcon from "@/components/svg/Html";
 import JavaScriptIcon from "@/components/svg/JavaScript";
+import LinkedIn from "@/components/svg/Linkedin";
+import Malt from "@/components/svg/Malt";
 import MuiIcon from "@/components/svg/Mui";
 import NextjsIcon from "@/components/svg/Nextjs";
 import ReactIcon from "@/components/svg/React";
 import TailwindIcon from "@/components/svg/Tailwind";
 import TypeScriptIcon from "@/components/svg/TypeScript";
+import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
 import freelance from "@/public/profile/freelance.png";
 import google from "@/public/profile/google.jpg";
@@ -22,8 +26,59 @@ import saintThomas from "@/public/profile/saint-thomas.png";
 import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
+import { File } from "lucide-react";
 
 export const profile: Profile = {
+  socials: {
+    linkedin: {
+      title: "LinkedIn",
+      img: <LinkedIn />,
+      link: {
+        en: "https://www.linkedin.com/in/matthieu-vagnon/",
+        fr: "https://www.linkedin.com/in/matthieu-vagnon/?locale=fr_FR",
+      },
+    },
+    malt: {
+      title: "Malt",
+      img: <Malt />,
+      link: {
+        fr: "https://www.malt.fr/profile/matthieuvagnon1",
+      },
+    },
+    findy: {
+      title: "Findy",
+      img: <Findy />,
+      link: {
+        ja: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
+      },
+    },
+    youtube: {
+      title: "YouTube",
+      img: <Youtube />,
+      link: {
+        fr: "https://www.youtube.com/@matthieu-vagnon",
+      },
+    },
+    github: {
+      title: "GitHub",
+      img: <Github />,
+      link: {
+        en: "https://github.com/matthieu-vagnon",
+      },
+    },
+    pdf: {
+      title: "PDF",
+      img: <File />,
+      link: {
+        en: "resume-en.pdf",
+        ja: "resume-ja.pdf",
+      },
+    },
+  },
+  contact: {
+    email: "mvagnon@icloud.com",
+    phone: "+817090997140",
+  },
   avatarUrl: me,
   description: {
     en: `"The most overlooked skill in web development is empathy." — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
@@ -34,7 +89,6 @@ export const profile: Profile = {
     title: {
       en: "Business Card",
       fr: "Carte de visite",
-      ja: "ビジネスカード",
     },
   },
   stackLogos: [
@@ -191,42 +245,6 @@ export const profile: Profile = {
           <Highlight>Pulse Partners</Highlight> jusqu&apos;à de grandes
           entreprises comme <Highlight>TotalEnergies</Highlight>.
         </span>
-      </>
-    ),
-    ja: (
-      <>
-        <span>
-          <Highlight>高性能で美しく直感的な</Highlight>
-          ウェブアプリケーションとSaaSを設計しています。
-        </span>
-        <span>
-          多くの開発者が「機能する」インターフェースを提供する中、私はさらに一歩進んで、ユーザーに
-          <Highlight>製品を使いたくなる</Highlight>体験を創り出します —
-          そして、また戻ってきたくなる体験を。
-        </span>
-        <span>
-          私はReactとNext.jsに精通したフロントエンド開発者であり、UI/UXデザイナー、そしてプロジェクトマネージャーでもあります。私の信念は、ウェブアプリケーションがどんな機能を持っていても、
-          <Highlight>
-            質の高いユーザーインターフェースなしでは価値がない
-          </Highlight>
-          ということです。それは高度な機能よりもはるかに重要な、最初の顧客獲得の鍵だからです。
-        </span>
-        <span>
-          開発者兼デザイナーとして、私は
-          <Highlight>デザインと開発プロセスの統合</Highlight>
-          をもたらし、その結果：
-        </span>
-        <Ul>
-          <Li>
-            <Highlight>より迅速な</Highlight>納品
-          </Li>
-          <Li>
-            デザインモックアップに<Highlight>100%忠実な</Highlight>実装
-          </Li>
-          <Li>
-            <Highlight>コスト効率の良い</Highlight>実装
-          </Li>
-        </Ul>
       </>
     ),
   },

@@ -1,164 +1,164 @@
-import { LinkButton } from '@/components/Button';
-import Code from '@/components/Code';
-import Highlight from '@/components/Highlight';
-import koryoriYa1 from '@/public/koryori-ya/web-1.png';
-import koryoriYa2 from '@/public/koryori-ya/web-2.png';
-import koryoriYa3 from '@/public/koryori-ya/web-3.png';
-import koryoriYa4 from '@/public/koryori-ya/web-4.png';
-import mvWeb1 from '@/public/matthieu-vagnon/web-1.png';
-import mvWeb2 from '@/public/matthieu-vagnon/web-2.png';
-import mvWeb3 from '@/public/matthieu-vagnon/web-3.png';
-import mvWeb4 from '@/public/matthieu-vagnon/web-4.png';
-import mvWeb5 from '@/public/matthieu-vagnon/web-5.png';
-import mvWeb6 from '@/public/matthieu-vagnon/web-6.png';
-import mvWeb7 from '@/public/matthieu-vagnon/web-7.png';
-import mvWeb8 from '@/public/matthieu-vagnon/web-8.png';
-import mvWeb9 from '@/public/matthieu-vagnon/web-9.png';
-import mvWebPreview1 from '@/public/matthieu-vagnon/web-preview-1.png';
-import smartInterviewBuilder1 from '@/public/smart-interview/builder-1.png';
-import smartInterviewBuilder2 from '@/public/smart-interview/builder-2.png';
-import smartInterviewBuilder3 from '@/public/smart-interview/builder-3.png';
-import smartInterviewBuilder4 from '@/public/smart-interview/builder-4.png';
-import smartInterviewBuilder5 from '@/public/smart-interview/builder-5.png';
-import smartInterviewBuilder6 from '@/public/smart-interview/builder-6.png';
-import smartInterviewBuilderPreview1 from '@/public/smart-interview/builder-preview-1.png';
+import { LinkButton } from "@/components/Button";
+import Code from "@/components/Code";
+import Highlight from "@/components/Highlight";
+import koryoriYa1 from "@/public/koryori-ya/web-1.png";
+import koryoriYa2 from "@/public/koryori-ya/web-2.png";
+import koryoriYa3 from "@/public/koryori-ya/web-3.png";
+import koryoriYa4 from "@/public/koryori-ya/web-4.png";
+import mvWeb1 from "@/public/matthieu-vagnon/web-1.png";
+import mvWeb2 from "@/public/matthieu-vagnon/web-2.png";
+import mvWeb3 from "@/public/matthieu-vagnon/web-3.png";
+import mvWeb4 from "@/public/matthieu-vagnon/web-4.png";
+import mvWeb5 from "@/public/matthieu-vagnon/web-5.png";
+import mvWeb6 from "@/public/matthieu-vagnon/web-6.png";
+import mvWeb7 from "@/public/matthieu-vagnon/web-7.png";
+import mvWeb8 from "@/public/matthieu-vagnon/web-8.png";
+import mvWeb9 from "@/public/matthieu-vagnon/web-9.png";
+import mvWebPreview1 from "@/public/matthieu-vagnon/web-preview-1.png";
+import smartInterviewBuilder1 from "@/public/smart-interview/builder-1.png";
+import smartInterviewBuilder2 from "@/public/smart-interview/builder-2.png";
+import smartInterviewBuilder3 from "@/public/smart-interview/builder-3.png";
+import smartInterviewBuilder4 from "@/public/smart-interview/builder-4.png";
+import smartInterviewBuilder5 from "@/public/smart-interview/builder-5.png";
+import smartInterviewBuilder6 from "@/public/smart-interview/builder-6.png";
+import smartInterviewBuilderPreview1 from "@/public/smart-interview/builder-preview-1.png";
 
 export const projects: Record<string, Project> = {
-  'matthieu-vagnon': {
-    title: 'Matthieu Vagnon',
+  "matthieu-vagnon": {
+    title: "Matthieu Vagnon",
     year: 2025,
-    type: 'webApplication',
+    type: "webApplication",
     shortDescription: {
-      en: 'Web portfolio for Matthieu Vagnon.',
-      fr: 'Portfolio web pour Matthieu Vagnon.',
+      en: "Web portfolio for Matthieu Vagnon.",
+      fr: "Portfolio web pour Matthieu Vagnon.",
     },
     longDescription: {
       en: (
         <>
           This is a <Highlight>React and Next.js</Highlight> web application
           that allows me to present my <Highlight>profile</Highlight>, including
-          education, degrees, experiences and skills, several of my{' '}
-          <Highlight>past projects</Highlight> as well as their respective{' '}
+          education, degrees, experiences and skills, several of my{" "}
+          <Highlight>past projects</Highlight> as well as their respective{" "}
           <Highlight>case studies</Highlight>. This application also allows you
           to <Highlight>schedule appointments or contact</Highlight> me in a few
-          clicks while offering a{' '}
+          clicks while offering a{" "}
           <Highlight>pleasant experience on mobile and desktop</Highlight>.
         </>
       ),
       fr: (
         <>
-          Il s&apos;agit d&apos;une application web{' '}
-          <Highlight>React et Next.js</Highlight> qui me permet de présenter mon{' '}
+          Il s&apos;agit d&apos;une application web{" "}
+          <Highlight>React et Next.js</Highlight> qui me permet de présenter mon{" "}
           <Highlight>profil</Highlight>, incluant éducation, diplômes,
-          expériences et compétences, plusieurs de mes{' '}
-          <Highlight>projets passés</Highlight> ainsi que leur{' '}
+          expériences et compétences, plusieurs de mes{" "}
+          <Highlight>projets passés</Highlight> ainsi que leur{" "}
           <Highlight>étude de cas</Highlight> respectives. Cette application
-          permets également de{' '}
+          permets également de{" "}
           <Highlight>prendre rendez-vous ou de prendre contact</Highlight> avec
-          moi en quelques clics tout en proposant une{' '}
+          moi en quelques clics tout en proposant une{" "}
           <Highlight>expérience agréable sur mobile et desktop</Highlight>.
         </>
       ),
     },
     tags: {
-      en: ['Web Application', 'Portfolio', 'Matthieu Vagnon'],
-      fr: ['Application Web', 'Portfolio', 'Matthieu Vagnon'],
+      en: ["Web Application", "Portfolio", "Matthieu Vagnon"],
+      fr: ["Application Web", "Portfolio", "Matthieu Vagnon"],
     },
     technologies: [
-      'React.js',
-      'Next.js',
-      'TypeScript',
-      'JSX',
-      'Context API',
-      'Next-intl',
-      'Framer Motion',
-      'Tailwind CSS',
-      'ShadCN UI',
-      'Radix UI',
-      'Webpack',
-      'npm',
-      'Figma',
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JSX",
+      "Context API",
+      "Next-intl",
+      "Framer Motion",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Radix UI",
+      "Webpack",
+      "npm",
+      "Figma",
     ],
     previewImg: mvWeb1,
     gallery: [
       {
         title: {
-          en: 'Presentation',
-          fr: 'Présentation',
+          en: "Presentation",
+          fr: "Présentation",
         },
-        src: 'https://www.youtube.com/embed/ItIo2Pu0plQ',
+        src: "https://www.youtube.com/embed/ItIo2Pu0plQ",
         previewImage: mvWebPreview1,
-        audio: 'fr',
-        slug: 'presentation',
+        audio: "fr",
+        slug: "presentation",
       },
       {
-        title: { en: 'Home Page', fr: "Page d'accueil" },
+        title: { en: "Home Page", fr: "Page d'accueil" },
         image: mvWeb1,
-        slug: 'home-page',
+        slug: "home-page",
       },
       {
         title: {
-          en: 'Profile Page',
-          fr: 'Page de profil',
+          en: "Profile Page",
+          fr: "Page de profil",
         },
         image: mvWeb2,
-        slug: 'profile-page',
+        slug: "profile-page",
       },
       {
         title: {
-          en: 'Case Study',
-          fr: 'Étude de cas',
+          en: "Case Study",
+          fr: "Étude de cas",
         },
         image: mvWeb3,
-        slug: 'case-studies',
+        slug: "case-studies",
       },
       {
         title: {
-          en: 'Image Popup',
+          en: "Image Popup",
           fr: "Pop-up d'image",
         },
         image: mvWeb4,
-        slug: 'image-popup',
+        slug: "image-popup",
       },
       {
         title: {
-          en: 'Meeting Scheduler',
-          fr: 'Planificateur de réunion',
+          en: "Meeting Scheduler",
+          fr: "Planificateur de réunion",
         },
         image: mvWeb5,
-        slug: 'meeting-scheduler',
+        slug: "meeting-scheduler",
       },
       {
         title: {
-          en: 'Configuration Modal',
-          fr: 'Modale de configuration',
+          en: "Configuration Modal",
+          fr: "Modale de configuration",
         },
         image: mvWeb6,
-        slug: 'configuration-modal',
+        slug: "configuration-modal",
       },
       {
         title: {
-          en: 'Home Green',
-          fr: 'Accueil vert',
+          en: "Home Green",
+          fr: "Accueil vert",
         },
         image: mvWeb7,
-        slug: 'home-green',
+        slug: "home-green",
       },
       {
         title: {
-          en: 'Home Pink',
-          fr: 'Accueil rose',
+          en: "Home Pink",
+          fr: "Accueil rose",
         },
         image: mvWeb8,
-        slug: 'home-pink',
+        slug: "home-pink",
       },
       {
         title: {
-          en: 'Home Purple',
-          fr: 'Accueil violet',
+          en: "Home Purple",
+          fr: "Accueil violet",
         },
         image: mvWeb9,
-        slug: 'home-purple',
+        slug: "home-purple",
       },
     ],
     problem: {
@@ -179,9 +179,9 @@ export const projects: Record<string, Project> = {
       ],
       fr: [
         <>
-          Nécessité de produire une application React{' '}
+          Nécessité de produire une application React{" "}
           <Highlight>dynamique et performante</Highlight> pour démontrer mes
-          compétences avec un code source publique tout en maintenant un{' '}
+          compétences avec un code source publique tout en maintenant un{" "}
           <Highlight>SEO de haute qualité</Highlight>.
         </>,
         <>
@@ -197,21 +197,21 @@ export const projects: Record<string, Project> = {
     solution: {
       en: [
         <>
-          Decision to use <Highlight>Next.js</Highlight> as a framework to{' '}
+          Decision to use <Highlight>Next.js</Highlight> as a framework to{" "}
           <Highlight>ensure SEO</Highlight> while leveraging the app router to
           manage multiple pages.
         </>,
         <>
-          Use of component libraries like{' '}
-          <LinkButton external href='https://www.shadcn.net'>
+          Use of component libraries like{" "}
+          <LinkButton external href="https://www.shadcn.net">
             ShadCN
-          </LinkButton>{' '}
+          </LinkButton>{" "}
           whose strength is <Highlight>customization</Highlight> to accelerate
-          development while ensuring{' '}
+          development while ensuring{" "}
           <Highlight>high code quality and performance optimization</Highlight>.
         </>,
         <>
-          In order to <Highlight>properly manage application data</Highlight>{' '}
+          In order to <Highlight>properly manage application data</Highlight>{" "}
           without having to develop a complete back-end infrastructure, I
           created a <Code>/data</Code> folder in which I stored the data needed
           for the application.
@@ -224,23 +224,23 @@ export const projects: Record<string, Project> = {
           tirant profit de l&apos;app router pour gérer les pages multiples.
         </>,
         <>
-          Utilisation de librairies de composants comme{' '}
-          <LinkButton external href='https://www.shadcn.net'>
+          Utilisation de librairies de composants comme{" "}
+          <LinkButton external href="https://www.shadcn.net">
             ShadCN
-          </LinkButton>{' '}
+          </LinkButton>{" "}
           dont la force est la
           <Highlight>customisation</Highlight> pour accélérer le développement
-          tout en garantissant{' '}
+          tout en garantissant{" "}
           <Highlight>
             une qualité de code élevée et une optimisation des performances
           </Highlight>
           .
         </>,
         <>
-          Afin de{' '}
+          Afin de{" "}
           <Highlight>
             gérer les données de l&apos;application proprement
-          </Highlight>{' '}
+          </Highlight>{" "}
           sans avoir à développer une infrastructure back-end complète,
           j&apos;ai créé un dossier <Code>/data</Code> dans lequel j&apos;ai
           stocké les données nécessaires à l&apos;application.
@@ -252,15 +252,15 @@ export const projects: Record<string, Project> = {
         <>
           The application is available and presents all essential information
           about my <Highlight>profile and experiences</Highlight>. The
-          application is{' '}
+          application is{" "}
           <Highlight>pleasant to use and visually beautiful</Highlight>.
           Visitors can easily schedule appointments thanks to a successful
-          implementation of{' '}
-          <LinkButton external href='https://cal.com'>
+          implementation of{" "}
+          <LinkButton external href="https://cal.com">
             Cal.com
           </LinkButton>
-          . The integration of{' '}
-          <Highlight>recommendations from previous clients</Highlight> is also{' '}
+          . The integration of{" "}
+          <Highlight>recommendations from previous clients</Highlight> is also{" "}
           <Highlight>successful and non-invasive</Highlight>.
         </>
       ),
@@ -268,16 +268,16 @@ export const projects: Record<string, Project> = {
         <>
           L&apos;application est disponible et présente toutes les informations
           essentielles sur mon <Highlight>profil et mes expériences</Highlight>.
-          L&apos;application est{' '}
+          L&apos;application est{" "}
           <Highlight>
             agréable d&apos;utilisation est visuellement belle
           </Highlight>
           . Les visiteurs peuvent facilement prendre rendez-vous grâce à une
-          implémentation réussie de{' '}
-          <LinkButton external href='https://cal.com'>
+          implémentation réussie de{" "}
+          <LinkButton external href="https://cal.com">
             Cal.com
           </LinkButton>
-          . L&apos;intégration des{' '}
+          . L&apos;intégration des{" "}
           <Highlight>recommendations de précédents clients</Highlight> est
           également <Highlight>réussie et non invasive</Highlight>.
         </>
@@ -285,33 +285,35 @@ export const projects: Record<string, Project> = {
     },
     relatedUrls: [
       {
-        name: {
-          en: 'GitHub Repository',
-          fr: 'Répertoire GitHub',
+        title: {
+          en: "GitHub Repository",
+          fr: "Répertoire GitHub",
         },
-        url: 'https://github.com/matthieu-vagnon/matthieu-vagnon-web',
+        link: {
+          en: "https://github.com/matthieu-vagnon/matthieu-vagnon-web",
+        },
       },
     ],
   },
-  'smart-interview': {
-    title: 'Smart Interview',
+  "smart-interview": {
+    title: "Smart Interview",
     year: 2024,
-    type: 'saas',
+    type: "saas",
     shortDescription: {
-      en: 'A platform to create and send AI-powered questionnaires and analyze responses.',
+      en: "A platform to create and send AI-powered questionnaires and analyze responses.",
       fr: "Une plateforme pour créer et envoyer des questionnaires alimentés par l'IA et analyser les réponses.",
     },
     longDescription: {
       en: (
         <>
-          SmartInterview is a SaaS platform made to create and send{' '}
+          SmartInterview is a SaaS platform made to create and send{" "}
           <Highlight>AI-powered questionnaires</Highlight>. A questionnaire is
           created by using the integrated builder or by importing a JSON file.
           The questionnaire is then sent to the audience and the responses can
-          be analyzed in the same application to{' '}
+          be analyzed in the same application to{" "}
           <Highlight>target their optimal audience</Highlight>.
           SmartInterview&apos;s AI automatically adds context-based questions to
-          the questionnaire when the user answers a questionnaire to add{' '}
+          the questionnaire when the user answers a questionnaire to add{" "}
           <Highlight>maximum details</Highlight> to the analysis.
         </>
       ),
@@ -321,106 +323,106 @@ export const projects: Record<string, Project> = {
           des <Highlight>questionnaires alimentés par l&apos;IA</Highlight>. Un
           questionnaire est créé en utilisant le builder intégré ou en important
           un fichier JSON. Le questionnaire est ensuite envoyé à l&apos;audience
-          et les réponses peuvent être analysées dans la même application pour{' '}
+          et les réponses peuvent être analysées dans la même application pour{" "}
           <Highlight>cibler leur audience optimale</Highlight>. L&apos;IA de
           SmartInterview ajoute automatiquement des questions contextuelles au
-          questionnaire lorsque l&apos;utilisateur répond pour ajouter un{' '}
+          questionnaire lorsque l&apos;utilisateur répond pour ajouter un{" "}
           <Highlight>maximum de détails</Highlight> à l&apos;analyse.
         </>
       ),
     },
     tags: {
-      en: ['AI', 'SaaS', 'Questionnaire', 'Mass Analysis'],
-      fr: ['IA', 'SaaS', 'Questionnaire', 'Analyse de masse'],
+      en: ["AI", "SaaS", "Questionnaire", "Mass Analysis"],
+      fr: ["IA", "SaaS", "Questionnaire", "Analyse de masse"],
     },
     technologies: [
-      'React.js',
-      'Next.js',
-      'TypeScript',
-      'JSX',
-      'SQL',
-      'Redux',
-      'Context API',
-      'TanStack Query',
-      'Framer Motion',
-      'Next-intl',
-      'Tailwind CSS',
-      'Material UI',
-      'ShadCN UI',
-      'Radix UI',
-      'Cypress',
-      'Webpack',
-      'npm',
-      'Next.js API Routes',
-      'PostgreSQL',
-      'Supabase',
-      'Figma',
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JSX",
+      "SQL",
+      "Redux",
+      "Context API",
+      "TanStack Query",
+      "Framer Motion",
+      "Next-intl",
+      "Tailwind CSS",
+      "Material UI",
+      "ShadCN UI",
+      "Radix UI",
+      "Cypress",
+      "Webpack",
+      "npm",
+      "Next.js API Routes",
+      "PostgreSQL",
+      "Supabase",
+      "Figma",
     ],
     previewImg: smartInterviewBuilder6,
     gallery: [
       {
         title: {
-          en: 'Presentation',
-          fr: 'Présentation',
+          en: "Presentation",
+          fr: "Présentation",
         },
         previewImage: smartInterviewBuilderPreview1,
-        src: 'https://www.youtube.com/embed/-toDAGtxVpQ',
-        audio: 'fr',
-        slug: 'presentation',
+        src: "https://www.youtube.com/embed/-toDAGtxVpQ",
+        audio: "fr",
+        slug: "presentation",
       },
       {
         title: {
-          en: 'Builder Editor',
-          fr: 'Éditeur de générateur',
+          en: "Builder Editor",
+          fr: "Éditeur de générateur",
         },
         image: smartInterviewBuilder1,
-        slug: 'builder-editor',
+        slug: "builder-editor",
       },
       {
         title: {
-          en: 'Table Editor',
-          fr: 'Éditeur de table',
+          en: "Table Editor",
+          fr: "Éditeur de table",
         },
         image: smartInterviewBuilder2,
-        slug: 'builder-preview',
+        slug: "builder-preview",
       },
       {
         title: {
-          en: 'Table Editor 2',
-          fr: 'Éditeur de table 2',
+          en: "Table Editor 2",
+          fr: "Éditeur de table 2",
         },
         image: smartInterviewBuilder3,
-        slug: 'table-editor-2',
+        slug: "table-editor-2",
       },
       {
         title: {
-          en: 'Tooltip',
-          fr: 'Tooltip',
+          en: "Tooltip",
+          fr: "Tooltip",
         },
         image: smartInterviewBuilder4,
-        slug: 'tooltip',
+        slug: "tooltip",
       },
       {
         title: {
-          en: 'JSON Editor',
-          fr: 'Éditeur JSON',
+          en: "JSON Editor",
+          fr: "Éditeur JSON",
         },
         image: smartInterviewBuilder5,
-        slug: 'json-editor',
+        slug: "json-editor",
       },
       {
         title: {
-          en: 'New Question',
-          fr: 'Nouvelle question',
+          en: "New Question",
+          fr: "Nouvelle question",
         },
         image: smartInterviewBuilder6,
-        slug: 'new-question',
+        slug: "new-question",
       },
     ],
     problem: {
       en: [
         <>
-          Enhance <Highlight>experience</Highlight> and{' '}
+          Enhance <Highlight>experience</Highlight> and{" "}
           <Highlight>interface</Highlight>.
         </>,
         <>
@@ -428,11 +430,11 @@ export const projects: Record<string, Project> = {
           empower non-technical users.
         </>,
         <>
-          Fix <Highlight>bugs</Highlight> and improve{' '}
+          Fix <Highlight>bugs</Highlight> and improve{" "}
           <Highlight>code readability</Highlight>.
         </>,
         <>
-          All of this in a reduced timeframe of{' '}
+          All of this in a reduced timeframe of{" "}
           <Highlight>4 to 5 weeks maximum</Highlight>.
         </>,
       ],
@@ -444,15 +446,15 @@ export const projects: Record<string, Project> = {
         <>
           <Highlight>
             Intégrer des fonctionnalités avancées et intuitives
-          </Highlight>{' '}
+          </Highlight>{" "}
           pour donner plus de pouvoir aux utilisateurs non techniques.
         </>,
         <>
-          Corriger les <Highlight>bugs</Highlight> et améliorer la{' '}
+          Corriger les <Highlight>bugs</Highlight> et améliorer la{" "}
           <Highlight>lisibilité du code</Highlight>.
         </>,
         <>
-          Tout cela en un temps réduit de{' '}
+          Tout cela en un temps réduit de{" "}
           <Highlight>4 à 5 semaines maximum</Highlight>.
         </>,
       ],
@@ -460,24 +462,24 @@ export const projects: Record<string, Project> = {
     solution: {
       en: [
         <>
-          Implemented essential UX enhancements including{' '}
-          <Highlight>loading indicators</Highlight> and{' '}
-          <Highlight>questions reordering</Highlight>. Integrated interactive{' '}
+          Implemented essential UX enhancements including{" "}
+          <Highlight>loading indicators</Highlight> and{" "}
+          <Highlight>questions reordering</Highlight>. Integrated interactive{" "}
           <Highlight>modals</Highlight> for confirmation workflows when saving
           questionnaires and adding new questions.
         </>,
         <>
-          Developed comprehensive <Highlight>customization options</Highlight>{' '}
-          for questionnaire elements, featuring{' '}
-          <Highlight>minimum and maximum number</Highlight> constraints,{' '}
+          Developed comprehensive <Highlight>customization options</Highlight>{" "}
+          for questionnaire elements, featuring{" "}
+          <Highlight>minimum and maximum number</Highlight> constraints,{" "}
           <Highlight>sliders</Highlight>, <Highlight>tables</Highlight>, and
           numerous additional configuration possibilities to enhance user
           control, avoiding user to be forced to edit the JSON file.
         </>,
         <>
-          Systematically <Highlight>fixed bugs</Highlight>,{' '}
+          Systematically <Highlight>fixed bugs</Highlight>,{" "}
           <Highlight>optimized</Highlight> application performance through code
-          refactoring, and significantly{' '}
+          refactoring, and significantly{" "}
           <Highlight>improved code readability</Highlight> for better
           maintainability.
         </>,
@@ -485,24 +487,24 @@ export const projects: Record<string, Project> = {
       fr: [
         <>
           Mise en place d&apos;améliorations essentielles de l&apos;UX incluant
-          des <Highlight>indicateurs de chargement</Highlight> et la{' '}
-          <Highlight>réorganisation des questions</Highlight>. Intégration de{' '}
+          des <Highlight>indicateurs de chargement</Highlight> et la{" "}
+          <Highlight>réorganisation des questions</Highlight>. Intégration de{" "}
           <Highlight>fenêtres modales</Highlight> interactives pour les
           processus de confirmation lors de l&apos;enregistrement des
           questionnaires et l&apos;ajout de nouvelles questions.
         </>,
         <>
-          Développement d&apos;options complètes de{' '}
+          Développement d&apos;options complètes de{" "}
           <Highlight>personnalisation</Highlight> pour les éléments du
-          questionnaire, comprenant des contraintes de{' '}
-          <Highlight>nombre minimum et maximum</Highlight>, des{' '}
+          questionnaire, comprenant des contraintes de{" "}
+          <Highlight>nombre minimum et maximum</Highlight>, des{" "}
           <Highlight>curseurs</Highlight>, des <Highlight>tableaux</Highlight>,
           et de nombreuses possibilités de configuration supplémentaires pour
           améliorer le contrôle utilisateur, évitant ainsi aux utilisateurs
           d&apos;être forcés de modifier le fichier JSON.
         </>,
         <>
-          <Highlight>Correction systématique des bugs</Highlight>,{' '}
+          <Highlight>Correction systématique des bugs</Highlight>,{" "}
           <Highlight>optimisation</Highlight> des performances de
           l&apos;application par la refactorisation du code, et amélioration
           significative de la <Highlight>lisibilité du code</Highlight> pour une
@@ -513,57 +515,59 @@ export const projects: Record<string, Project> = {
     results: {
       en: (
         <>
-          The application is now more <Highlight>user-friendly</Highlight>,{' '}
-          <Highlight>intuitive</Highlight>, <Highlight>consistent</Highlight>{' '}
-          and lets users <Highlight>save time</Highlight> and{' '}
-          <Highlight>resources</Highlight> while creating{' '}
-          <Highlight>complex questionnaires</Highlight>. Sales were boosted by{' '}
-          <Highlight>fewer bugs</Highlight>, a{' '}
-          <Highlight>better appearance</Highlight> and a{' '}
+          The application is now more <Highlight>user-friendly</Highlight>,{" "}
+          <Highlight>intuitive</Highlight>, <Highlight>consistent</Highlight>{" "}
+          and lets users <Highlight>save time</Highlight> and{" "}
+          <Highlight>resources</Highlight> while creating{" "}
+          <Highlight>complex questionnaires</Highlight>. Sales were boosted by{" "}
+          <Highlight>fewer bugs</Highlight>, a{" "}
+          <Highlight>better appearance</Highlight> and a{" "}
           <Highlight>better perceived UX</Highlight>.
         </>
       ),
       fr: (
         <>
-          L&apos;application est maintenant plus{' '}
+          L&apos;application est maintenant plus{" "}
           <Highlight>user-friendly</Highlight>, <Highlight>intuitive</Highlight>
-          , <Highlight>consistante</Highlight> et permet aux utilisateurs de{' '}
-          <Highlight>gagner du temps</Highlight> et{' '}
-          <Highlight>des ressources</Highlight> tout en créant des{' '}
+          , <Highlight>consistante</Highlight> et permet aux utilisateurs de{" "}
+          <Highlight>gagner du temps</Highlight> et{" "}
+          <Highlight>des ressources</Highlight> tout en créant des{" "}
           <Highlight>questionnaires complexes</Highlight>. Les ventes ont été
-          stimulées par <Highlight>moins de bugs</Highlight>, une{' '}
-          <Highlight>meilleure apparence</Highlight> et une{' '}
+          stimulées par <Highlight>moins de bugs</Highlight>, une{" "}
+          <Highlight>meilleure apparence</Highlight> et une{" "}
           <Highlight>meilleure UX perçue</Highlight>.
         </>
       ),
     },
     relatedUrls: [
       {
-        name: { en: 'Pulse Partners' },
-        url: 'https://pulse-partners.ch',
+        title: { en: "Pulse Partners" },
+        link: {
+          en: "https://pulse-partners.ch",
+        },
       },
     ],
   },
-  'koryori-ya': {
-    title: 'Koryori Ya Ozaki',
+  "koryori-ya": {
+    title: "Koryori Ya Ozaki",
     year: 2024,
-    type: 'webApplication',
+    type: "webApplication",
     shortDescription: {
-      en: 'A simple web application for a Japanese restaurant.',
-      fr: 'Une application web simple pour un restaurant japonais.',
+      en: "A simple web application for a Japanese restaurant.",
+      fr: "Une application web simple pour un restaurant japonais.",
     },
     longDescription: {
       en: (
         <>
-          A single page web application for a{' '}
+          A single page web application for a{" "}
           <Highlight>Japanese restaurant</Highlight> showcasing their adress
-          thanks to a <Highlight>map</Highlight> and letting people{' '}
+          thanks to a <Highlight>map</Highlight> and letting people{" "}
           <Highlight>call them</Highlight> easily.
         </>
       ),
       fr: (
         <>
-          Une application web simple pour un{' '}
+          Une application web simple pour un{" "}
           <Highlight>restaurant japonais</Highlight> présentant leur adresse
           grâce à une <Highlight>carte</Highlight> et permettant aux personnes
           de <Highlight>les appeler</Highlight> facilement.
@@ -571,54 +575,54 @@ export const projects: Record<string, Project> = {
       ),
     },
     tags: {
-      en: ['Web Application', 'Japanese', 'Restaurant'],
-      fr: ['Application Web', 'Japonais', 'Restaurant'],
+      en: ["Web Application", "Japanese", "Restaurant"],
+      fr: ["Application Web", "Japonais", "Restaurant"],
     },
     technologies: [
-      'React.js',
-      'TypeScript',
-      'JSX',
-      'CSS3',
-      'Vite',
-      'npm',
-      'Figma',
+      "React.js",
+      "TypeScript",
+      "JSX",
+      "CSS3",
+      "Vite",
+      "npm",
+      "Figma",
     ],
     previewImg: koryoriYa1,
     gallery: [
       {
         title: {
-          en: 'Loading Page',
-          fr: 'Page de chargement',
+          en: "Loading Page",
+          fr: "Page de chargement",
         },
         image: koryoriYa1,
-        slug: 'loading-page',
+        slug: "loading-page",
       },
       {
         title: {
-          en: 'Landing View',
+          en: "Landing View",
           fr: "Vue d'accueil",
         },
         image: koryoriYa2,
-        slug: 'landing-view',
+        slug: "landing-view",
       },
       {
         title: {
-          en: 'Concept View',
-          fr: 'Vue Concept',
+          en: "Concept View",
+          fr: "Vue Concept",
         },
         image: koryoriYa3,
-        slug: 'concept-view',
+        slug: "concept-view",
       },
       {
-        title: { en: 'Gallery', fr: 'Galerie' },
+        title: { en: "Gallery", fr: "Galerie" },
         image: koryoriYa4,
-        slug: 'gallery',
+        slug: "gallery",
       },
     ],
     problem: {
       en: [
         <>
-          Create a <Highlight>simple and clean interface</Highlight> while{' '}
+          Create a <Highlight>simple and clean interface</Highlight> while{" "}
           <Highlight>limiting infrastructure costs</Highlight>.
         </>,
         <>
@@ -628,7 +632,7 @@ export const projects: Record<string, Project> = {
       ],
       fr: [
         <>
-          Créer une <Highlight>interface simple et épurée</Highlight> tout en{' '}
+          Créer une <Highlight>interface simple et épurée</Highlight> tout en{" "}
           <Highlight>limitant les coûts d&apos;infrastructure</Highlight>.
         </>,
         <>
@@ -640,51 +644,55 @@ export const projects: Record<string, Project> = {
     solution: {
       en: [
         <>
-          Created a React/Vite app to meet the need for{' '}
-          <Highlight>control over the project</Highlight> and to reduce{' '}
+          Created a React/Vite app to meet the need for{" "}
+          <Highlight>control over the project</Highlight> and to reduce{" "}
           <Highlight>infrastructure costs</Highlight> due to the use of external
           services.
         </>,
         <>
-          Used{' '}
-          <LinkButton external href='https://vercel.com'>
+          Used{" "}
+          <LinkButton external href="https://vercel.com">
             Vercel
-          </LinkButton>{' '}
-          to host application with maximum{' '}
+          </LinkButton>{" "}
+          to host application with maximum{" "}
           <Highlight>performance and reliability</Highlight>.
         </>,
       ],
       fr: [
         <>
-          J&apos;ai créé une application React/Vite pour répondre au besoin de{' '}
-          <Highlight>contrôle sur le projet</Highlight> et pour réduire les{' '}
+          J&apos;ai créé une application React/Vite pour répondre au besoin de{" "}
+          <Highlight>contrôle sur le projet</Highlight> et pour réduire les{" "}
           <Highlight>coûts d&apos;infrastructure</Highlight> liés à
           l&apos;utilisation de services externes.
         </>,
         <>
-          J&apos;ai utilisé{' '}
-          <LinkButton external href='https://vercel.com'>
+          J&apos;ai utilisé{" "}
+          <LinkButton external href="https://vercel.com">
             Vercel
-          </LinkButton>{' '}
-          pour héberger l&apos;application avec une{' '}
+          </LinkButton>{" "}
+          pour héberger l&apos;application avec une{" "}
           <Highlight>performance et une fiabilité maximales</Highlight>.
         </>,
       ],
     },
     relatedUrls: [
       {
-        name: {
-          en: 'Access App',
+        title: {
+          en: "Access App",
           fr: "Accéder à l'application",
         },
-        url: 'https://koryoriyaozaki.uk',
+        link: {
+          ja: "https://koryoriyaozaki.uk",
+        },
       },
       {
-        name: {
-          en: 'GitHub Repository',
-          fr: 'Répertoire GitHub',
+        title: {
+          en: "GitHub Repository",
+          fr: "Répertoire GitHub",
         },
-        url: 'https://github.com/matthieu-vagnon/koryori-ya-website',
+        link: {
+          en: "https://github.com/matthieu-vagnon/koryori-ya-website",
+        },
       },
     ],
   },

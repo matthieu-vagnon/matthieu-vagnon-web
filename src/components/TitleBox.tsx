@@ -1,78 +1,77 @@
-'use client';
+"use client";
 
-import { SocialLink } from '@/app/[locale]/page';
-import { LayoutGroup, motion } from 'framer-motion';
-import { useMessages, useTranslations } from 'next-intl';
-import React from 'react';
-import { BlurFade } from './BlurFade';
-import { LinkButton } from './Button';
-import Highlight from './Highlight';
-import { MainCard, MainCardContent } from './MainCard';
-import Logo from './svg/Logo';
-import { TextRotate } from './TextRotate';
+import { profile } from "@/data/profile";
+import { getTranslatedData } from "@/lib/utils";
+import { LayoutGroup, motion } from "framer-motion";
+import { useLocale, useMessages, useTranslations } from "next-intl";
+import React from "react";
+import { BlurFade } from "./BlurFade";
+import { LinkButton } from "./Button";
+import Highlight from "./Highlight";
+import { MainCard, MainCardContent } from "./MainCard";
+import Logo from "./svg/Logo";
+import { TextRotate } from "./TextRotate";
 
-export default function TitleBox({
-  socialLinks,
-}: {
-  socialLinks: SocialLink[];
-}) {
-  const t = useTranslations('home.titleBox');
+export default function TitleBox() {
+  const t = useTranslations("home.titleBox");
   const messages = useMessages();
+  const locale = useLocale();
+  const socialLinks = profile.socials || {};
 
   return (
     <LayoutGroup>
       <motion.div
         layout
-        transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+        transition={{ type: "spring", damping: 30, stiffness: 400 }}
       >
-        <div className='flex w-full justify-center items-center flex-col gap-8 md:gap-10'>
+        <div className="flex w-full justify-center items-center flex-col gap-8 md:gap-10">
           <motion.span
             layout
-            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
-            <MainCard variant='dots' className='h-fit w-fit bg-background'>
-              <MainCardContent className='flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]'>
+            <MainCard variant="dots" className="h-fit w-fit bg-background">
+              <MainCardContent className="flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]">
                 <motion.span
                   layout
-                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-                  className='flex mb-2'
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  className="flex mb-2"
                 >
                   <Logo />
                 </motion.span>
                 <motion.span
                   layout
-                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
                 >
-                  {t.rich('name', {
+                  {t.rich("name", {
                     strong: (chunks: React.ReactNode) => (
-                      <span className='font-bold'>{chunks}</span>
+                      <span className="font-bold">{chunks}</span>
                     ),
                   })}
                 </motion.span>
-                <span className='flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2'>
+                <span className="flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2">
                   <motion.span
                     layout
                     transition={{
-                      type: 'spring',
+                      type: "spring",
                       damping: 30,
                       stiffness: 400,
                     }}
                   >
-                    {t('job.prefix')}
+                    {t("job.prefix")}
                   </motion.span>
                   <TextRotate
                     texts={Object.keys(messages.home.titleBox.job.skills).map(
                       (key) => messages.home.titleBox.job.skills[key]
                     )}
                     mainClassName={`px-2 sm:px-2 md:px-3 bg-main text-main-foreground overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg`}
-                    staggerFrom={'last'}
-                    initial={{ y: '100%' }}
+                    staggerFrom={"last"}
+                    initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    exit={{ y: '-120%' }}
+                    exit={{ y: "-120%" }}
                     staggerDuration={0.025}
-                    splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
+                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                     transition={{
-                      type: 'spring',
+                      type: "spring",
                       damping: 30,
                       stiffness: 400,
                     }}
@@ -82,12 +81,12 @@ export default function TitleBox({
                   <motion.span
                     layout
                     transition={{
-                      type: 'spring',
+                      type: "spring",
                       damping: 30,
                       stiffness: 400,
                     }}
                   >
-                    {t('job.suffix')}
+                    {t("job.suffix")}
                   </motion.span>
                 </span>
               </MainCardContent>
@@ -95,10 +94,10 @@ export default function TitleBox({
           </motion.span>
           <motion.span
             layout
-            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
-            <p className='text-center text-sm sm:text-base md:text-lg text-foreground-secondary!'>
-              {t.rich('subtitle', {
+            <p className="text-center text-sm sm:text-base md:text-lg text-foreground-secondary!">
+              {t.rich("subtitle", {
                 highlight: (chunks: React.ReactNode) => (
                   <Highlight>{chunks}</Highlight>
                 ),
@@ -107,21 +106,20 @@ export default function TitleBox({
           </motion.span>
           <motion.span
             layout
-            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
-            <div className='flex items-center justify-center gap-3 flex-wrap'>
-              {socialLinks.map((link, index) => (
-                <BlurFade delay={index * 0.3} key={link.label}>
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              {Object.values(socialLinks).map((social, index) => (
+                <BlurFade delay={index * 0.3} key={social.title}>
                   <LinkButton
-                    variant='secondary'
-                    size='sm'
-                    key={link.label}
-                    href={link.link}
+                    variant="secondary"
+                    size="sm"
+                    href={getTranslatedData(social.link, locale)}
                     external
-                    className='hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1'
+                    className="hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1"
                   >
-                    {link.icon ?? link.icon}
-                    {link.label}
+                    {social.img}
+                    {social.title}
                   </LinkButton>
                 </BlurFade>
               ))}

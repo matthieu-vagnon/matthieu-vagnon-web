@@ -2,53 +2,7 @@ import { BlurFade } from "@/components/BlurFade";
 import InfoBand from "@/components/InfoBand";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { Particles } from "@/components/Particules";
-import Findy from "@/components/svg/Findy";
-import Github from "@/components/svg/Github";
-import Linkedin from "@/components/svg/Linkedin";
-import Malt from "@/components/svg/Malt";
-import Youtube from "@/components/svg/Youtube";
 import TitleBox from "@/components/TitleBox";
-import { File } from "lucide-react";
-import React from "react";
-
-export type SocialLink = {
-  label: string;
-  link: string;
-  icon?: React.ReactNode;
-};
-
-const SOCIAL_LINKS: SocialLink[] = [
-  {
-    label: "LinkedIn",
-    link: process.env.NEXT_PUBLIC_LINKEDIN_URL!,
-    icon: <Linkedin />,
-  },
-  {
-    label: "Malt",
-    link: process.env.NEXT_PUBLIC_MALT_URL!,
-    icon: <Malt />,
-  },
-  {
-    label: "Findy",
-    link: process.env.NEXT_PUBLIC_FINDY_URL!,
-    icon: <Findy />,
-  },
-  {
-    label: "YouTube",
-    link: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
-    icon: <Youtube />,
-  },
-  {
-    label: "GitHub",
-    link: process.env.NEXT_PUBLIC_GITHUB_URL!,
-    icon: <Github />,
-  },
-  {
-    label: "PDF",
-    link: "resume.pdf",
-    icon: <File />,
-  },
-];
 
 export default function Home() {
   return (
@@ -64,7 +18,7 @@ export default function Home() {
         </div>
         <div className="flex-auto flex justify-center items-center">
           <BlurFade delay={0.1} className="flex">
-            <TitleBox socialLinks={SOCIAL_LINKS} />
+            <TitleBox />
           </BlurFade>
         </div>
       </div>

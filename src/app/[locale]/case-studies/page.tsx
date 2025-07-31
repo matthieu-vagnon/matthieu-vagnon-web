@@ -4,6 +4,8 @@ import PageTitle from "@/components/PageTitle";
 import ProjectCard from "@/components/ProjectCard";
 import SeeMore from "@/components/SeeMore";
 import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
+import { profile } from "@/data/profile";
+import { projects } from "@/data/projects";
 import cover1 from "@/public/project-card-cover/1.png";
 import cover2 from "@/public/project-card-cover/2.png";
 import cover3 from "@/public/project-card-cover/3.png";
@@ -11,7 +13,6 @@ import cover4 from "@/public/project-card-cover/4.png";
 import cover5 from "@/public/project-card-cover/5.png";
 import { useTranslations } from "next-intl";
 import { StaticImageData } from "next/image";
-import { projects } from "../../../../data/projects";
 
 const COVER_IMAGES: StaticImageData[] = [
   cover1,
@@ -48,18 +49,7 @@ export default function CaseStudies() {
         ))}
       </div>
       <BlurFade delay={blurDelay++ / 10}>
-        <SeeMore
-          links={[
-            {
-              name: "YouTube",
-              url: process.env.NEXT_PUBLIC_YOUTUBE_URL!,
-            },
-            {
-              name: "GitHub",
-              url: process.env.NEXT_PUBLIC_GITHUB_URL!,
-            },
-          ]}
-        />
+        <SeeMore socials={[profile.socials.youtube, profile.socials.github]} />
       </BlurFade>
     </TestimonialsStatusWrapper>
   );
