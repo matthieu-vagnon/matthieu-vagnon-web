@@ -44,7 +44,7 @@ const SOCIAL_LINKS: SocialLink[] = [
     icon: <Github />,
   },
   {
-    label: "Resume",
+    label: "PDF",
     link: "resume.pdf",
     icon: <File />,
   },
