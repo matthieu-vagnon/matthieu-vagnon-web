@@ -200,8 +200,8 @@ export const profile: Profile = {
           <Highlight>
             experiences that drive engagement, reduce friction and build user
             trust
-          </Highlight>{" "}
-          from Japan 🇯🇵
+          </Highlight>
+          .
         </span>
         <span>
           Combining my developer skills with a{" "}
@@ -226,8 +226,8 @@ export const profile: Profile = {
           <Highlight>
             expériences qui renforcent l’engagement, réduisent les frictions et
             instaurent la confiance des utilisateurs
-          </Highlight>{" "}
-          depuis le Japon 🇯🇵
+          </Highlight>
+          .
         </span>
         <span>
           Grâce à ma double compétence en{" "}
