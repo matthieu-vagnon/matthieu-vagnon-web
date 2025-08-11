@@ -78,7 +78,6 @@ export const projects: Record<string, Project> = {
       "Webpack",
       "npm",
       "Figma",
-      "Pixelmator",
     ],
     previewImg: mvWeb1,
     gallery: [
@@ -358,7 +357,6 @@ export const projects: Record<string, Project> = {
       "PostgreSQL",
       "Supabase",
       "Figma",
-      "Pixelmator",
     ],
     previewImg: smartInterviewBuilder6,
     gallery: [
@@ -588,7 +586,6 @@ export const projects: Record<string, Project> = {
       "Vite",
       "npm",
       "Figma",
-      "Pixelmator",
     ],
     previewImg: koryoriYa1,
     gallery: [
