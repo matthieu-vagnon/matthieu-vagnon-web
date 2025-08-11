@@ -188,7 +188,7 @@ export const profile: Profile = {
     "Component-Driven Development",
     "SEO Optimization",
   ],
-  design: ["Figma"],
+  design: ["Figma", "Pixelmator"],
   other: ["Git", "Visual Studio Code", "Prettier"],
   about: {
     en: (
@@ -301,6 +301,7 @@ export const profile: Profile = {
             "Webpack",
             "npm",
             "Figma",
+            "Pixelmator",
           ],
         },
         {
@@ -342,6 +343,7 @@ export const profile: Profile = {
             "OAuth",
             "PostgreSQL",
             "Figma",
+            "Pixelmator",
           ],
         },
       ],
@@ -404,6 +406,7 @@ export const profile: Profile = {
             "PostgreSQL",
             "Supabase",
             "Figma",
+            "Pixelmator",
           ],
         },
       ],
@@ -466,6 +469,7 @@ export const profile: Profile = {
             "Vite",
             "npm",
             "Figma",
+            "Pixelmator",
           ],
         },
         {
@@ -509,6 +513,7 @@ export const profile: Profile = {
             "Vite",
             "npm",
             "Figma",
+            "Pixelmator",
           ],
         },
         {
