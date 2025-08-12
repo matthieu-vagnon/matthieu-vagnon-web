@@ -25,7 +25,6 @@ import saintThomas from "@/public/profile/saint-thomas.png";
 import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
-import { File } from "lucide-react";
 
 export const profile: Profile = {
   socials: {
@@ -63,14 +62,6 @@ export const profile: Profile = {
       img: <Github />,
       link: {
         en: "https://github.com/matthieu-vagnon",
-      },
-    },
-    pdf: {
-      title: "PDF",
-      img: <File />,
-      link: {
-        en: "resume-en.pdf",
-        ja: "resume-ja.pdf",
       },
     },
   },
