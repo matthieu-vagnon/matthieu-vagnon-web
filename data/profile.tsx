@@ -193,8 +193,8 @@ export const profile: Profile = {
     en: (
       <>
         <span>
-          Hi, I&#39;m Matthieu, full-stack engineer and AI-powered SaaS expert.
-          I don&#39;t just build cutting-edge, accessible and scalable web
+          Hi, I&#39;m Matthieu, full-stack engineer specialized in AI-powered
+          SaaS. I don&#39;t just build cutting-edge, accessible and scalable web
           applications: I craft experiences that drive engagement, reduce
           friction and inspire user trust.
         </span>
@@ -214,8 +214,8 @@ export const profile: Profile = {
     fr: (
       <>
         <span>
-          Bonjour, je suis Matthieu, développeur full-stack et expert en
-          solutions SaaS améliorées par IA. Je ne me contente pas de créer des
+          Bonjour, je suis Matthieu, développeur full-stack spécialisé dans les
+          SaaS améliorées par IA. Je ne me contente pas de créer des
           applications web innovantes, accessibles et évolutives : je conçois
           des expériences qui suscitent l’engagement, réduisent les frictions et
           inspirent la confiance des utilisateurs.
