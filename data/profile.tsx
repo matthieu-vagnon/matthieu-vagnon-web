@@ -1,4 +1,3 @@
-import Highlight from "@/components/Highlight";
 import CssIcon from "@/components/svg/Css";
 import Findy from "@/components/svg/Findy";
 import Github from "@/components/svg/Github";
@@ -81,8 +80,8 @@ export const profile: Profile = {
   },
   avatarUrl: me,
   description: {
-    en: `"The most overlooked skill in web development is empathy." — Matthieu Vagnon, UX-Driven Full-Stack Engineer`,
-    fr: `La compétence la plus sous-estimée dans le développement web, c'est l'empathie. — Matthieu Vagnon, Développeur full-stack UX-first`,
+    en: "The most overlooked skill in web development is empathy.",
+    fr: "La compétence la plus sous-estimée dans le développement web, c'est l'empathie.",
   },
   businessCard: {
     image: businessCard,
@@ -194,56 +193,45 @@ export const profile: Profile = {
     en: (
       <>
         <span>
-          As a full-stack engineer, I don&apos;t just build{" "}
-          <Highlight>cutting-edge</Highlight>, <Highlight>accessible</Highlight>
-          , and <Highlight>scalable</Highlight> web applications: I craft{" "}
-          <Highlight>
-            experiences that drive engagement, reduce friction and build user
-            trust
-          </Highlight>
-          .
+          Hi, I&#39;m Matthieu, full-stack engineer and AI-powered SaaS expert.
+          I don&#39;t just build cutting-edge, accessible and scalable web
+          applications: I craft experiences that drive engagement, reduce
+          friction and inspire user trust.
         </span>
         <span>
-          Combining my developer skills with a{" "}
-          <Highlight>strong background in design</Highlight>, I bridge the gap
-          between design and implementation, ensuring{" "}
-          <Highlight>pixel-perfect, seamless user experiences</Highlight>.
+          Combining my developer skills with a strong background in design, I
+          bridge the gap between user experience and technical implementation,
+          ensuring pixel-perfect, seamless user journeys.
         </span>
         <span>
-          I worked with entities from early-stage startups like{" "}
-          <Highlight>Pulse Partners</Highlight> to global companies like{" "}
-          <Highlight>TotalEnergies</Highlight>.
+          In the past, I’ve enabled startups to achieve their first profits,
+          helped TotalEnergies strengthen its leadership in the Power & Gas
+          market by designing and delivering impactful AI-based solutions. I’m
+          now ready to bring this mindset to my next challenge!
         </span>
       </>
     ),
     fr: (
       <>
         <span>
-          En tant que développeur full-stack, je ne me contente pas de créer des
-          applications web <Highlight>performantes</Highlight>,{" "}
-          <Highlight>accessibles</Highlight> et{" "}
-          <Highlight>évolutives</Highlight> : je conçois des{" "}
-          <Highlight>
-            expériences qui renforcent l’engagement, réduisent les frictions et
-            instaurent la confiance des utilisateurs
-          </Highlight>
-          .
+          Bonjour, je suis Matthieu, développeur full-stack et expert en
+          solutions SaaS améliorées par IA. Je ne me contente pas de créer des
+          applications web innovantes, accessibles et évolutives : je conçois
+          des expériences qui suscitent l’engagement, réduisent les frictions et
+          inspirent la confiance des utilisateurs.
         </span>
         <span>
-          Grâce à ma double compétence en{" "}
-          <Highlight>développement et en design</Highlight>, je fais le lien
-          entre intention graphique et implémentation technique pour livrer des
-          interfaces soignées,{" "}
-          <Highlight>
-            pixel-perfect, prêtes pour la production, et pensées pour
-            l’utilisateur
-          </Highlight>
-          .
+          En associant mes compétences de développeur à une solide expérience en
+          design, je comble le fossé entre l’expérience utilisateur et la mise
+          en œuvre technique, garantissant des parcours fluides et un rendu
+          pixel-perfect.
         </span>
         <span>
-          J’ai travaillé avec des startups en phase de lancement comme{" "}
-          <Highlight>Pulse Partners</Highlight> jusqu&apos;à de grandes
-          entreprises comme <Highlight>TotalEnergies</Highlight>.
+          Par le passé, j’ai permis à des start-up de générer leurs premiers
+          bénéfices et aidé TotalEnergies à renforcer sa position de leader sur
+          le marché de l’énergie (Power & Gas) en concevant et en livrant des
+          solutions à fort impact basées sur l’IA. Aujourd’hui, je suis prêt à
+          mettre cet état d’esprit au service de mon prochain défi !
         </span>
       </>
     ),
