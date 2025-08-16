@@ -2,19 +2,21 @@ import { Media } from "@/components/Media";
 import { typeVariants } from "@/components/ProjectCard";
 import { Locale } from "next-intl";
 import { StaticImageData } from "next/image";
+import React from "react";
 
 declare global {
+  type MultiLingual = {
+    en: string | string[] | React.ReactNode | React.ReactNode[];
+    fr?: string | string[] | React.ReactNode | React.ReactNode[];
+    ja?: string | string[] | React.ReactNode | React.ReactNode[];
+  };
+
   type Testimonial = {
     id: number;
     name: string;
     company: string;
     position: string;
-    testimonial: {
-      original: Locale;
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
-    };
+    testimonial: MultiLingual & { original: Locale };
     method?: string;
     image?: StaticImageData;
   };
@@ -25,32 +27,19 @@ declare global {
       {
         title: string;
         img?: React.ReactNode;
-        link: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
+        link: MultiLingual;
       }
     >;
     contact: Record<string, string>;
     avatarUrl?: StaticImageData;
-    description: {
-      en?: string;
-      fr?: string;
-      ja?: string;
-    };
     businessCard: {
       image: StaticImageData;
-      title: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
+      title: MultiLingual;
     };
-    stackLogos: {
-      id: number;
-      name: string;
-      img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    features: {
+      title: MultiLingual;
+      description: MultiLingual;
+      icon: React.ReactNode;
     }[];
     languages: string[];
     aiTools: string[];
@@ -67,36 +56,16 @@ declare global {
     bestPractices: string[];
     design: string[];
     other: string[];
-    about: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
-    };
+    about: MultiLingual;
     experience: {
       company: string;
       logo?: StaticImageData;
       timeline: string;
-      position: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
+      position: MultiLingual;
       projects: {
-        title: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        };
-        description?: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        }[];
-        responsibilities: {
-          en?: string;
-          fr?: string;
-          ja?: string;
-        }[];
+        title: MultiLingual;
+        description?: MultiLingual[];
+        responsibilities: MultiLingual[];
         technologies: string[];
       }[];
     }[];
@@ -104,16 +73,8 @@ declare global {
       responsible: string;
       logo?: StaticImageData;
       timeline: string;
-      type: {
-        en?: string[];
-        fr?: string[];
-        ja?: string[];
-      };
-      degree: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
+      type: MultiLingual;
+      degree: MultiLingual;
       href: string;
     }[];
   };
@@ -122,50 +83,18 @@ declare global {
     title: string;
     year: number;
     type: keyof typeof typeVariants;
-    shortDescription: {
-      en?: string;
-      fr?: string;
-      ja?: string;
-    };
-    longDescription: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
-    };
-    tags: {
-      en?: string[];
-      fr?: string[];
-      ja?: string[];
-    };
+    shortDescription: MultiLingual;
+    longDescription: MultiLingual;
+    tags: MultiLingual;
     technologies: string[];
     previewImg: StaticImageData;
     gallery: Media[];
-    problem: {
-      en?: React.ReactNode[];
-      fr?: React.ReactNode[];
-      ja?: React.ReactNode[];
-    };
-    solution: {
-      en?: React.ReactNode[];
-      fr?: React.ReactNode[];
-      ja?: React.ReactNode[];
-    };
-    results?: {
-      en?: React.ReactNode;
-      fr?: React.ReactNode;
-      ja?: React.ReactNode;
-    };
+    problem: MultiLingual;
+    solution: MultiLingual;
+    results?: MultiLingual;
     relatedUrls?: {
-      title: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
-      link: {
-        en?: string;
-        fr?: string;
-        ja?: string;
-      };
+      title: MultiLingual;
+      link: MultiLingual;
     }[];
   };
 }

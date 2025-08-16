@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { cn, getTranslatedData } from '@/lib/utils';
-import { Dialog } from '@radix-ui/react-dialog';
-import { PlayIcon, Subtitles, Volume1 } from 'lucide-react';
-import { Locale, useLocale } from 'next-intl';
-import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
-import Magnetic, { MagneticSize } from './Magnetic';
-import MediaView from './MediaView';
-import { Separator } from './Separator';
-import { Tilt } from './Tilt';
+import { cn, getTranslatedData } from "@/lib/utils";
+import { Dialog } from "@radix-ui/react-dialog";
+import { PlayIcon, Subtitles, Volume1 } from "lucide-react";
+import { Locale, useLocale } from "next-intl";
+import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
+import Magnetic, { MagneticSize } from "./Magnetic";
+import MediaView from "./MediaView";
+import { Separator } from "./Separator";
+import { Tilt } from "./Tilt";
 
 export type Media = (
   | {
@@ -27,11 +27,7 @@ export type Media = (
       subtitle?: Locale[];
     }
 ) & {
-  title: {
-    en?: string;
-    fr?: string;
-    ja?: string;
-  };
+  title: MultiLingual;
   slug?: string;
 };
 
@@ -94,7 +90,7 @@ export default function Media({
 export function MediaButton({
   media,
   isTilt = false,
-  size = 'lg',
+  size = "lg",
   width,
   height,
   quality = 50,
@@ -107,12 +103,12 @@ export function MediaButton({
   const imageComponent = (
     <Image
       src={media.image ?? media.previewImage}
-      placeholder='blur'
+      placeholder="blur"
       alt={title}
       width={width}
       height={height}
       quality={quality}
-      className='rounded-lg group-hover:shadow-lg transition-all duration-300'
+      className="rounded-lg group-hover:shadow-lg transition-all duration-300"
     />
   );
 
@@ -121,7 +117,7 @@ export function MediaButton({
       <button
         onClick={onClick}
         className={cn(
-          'group relative cursor-pointer transition-all duration-300',
+          "group relative cursor-pointer transition-all duration-300",
           className
         )}
       >
@@ -130,7 +126,7 @@ export function MediaButton({
             rotationFactor={10}
             isReverse
             style={{
-              transformOrigin: 'center center',
+              transformOrigin: "center center",
             }}
             springOptions={{
               stiffness: 150,
@@ -144,36 +140,36 @@ export function MediaButton({
           imageComponent
         )}
         {media.previewImage && (
-          <div className='absolute bg-foreground/20 group-hover:bg-foreground/40 transition-all duration-300 right-2 bottom-2 backdrop-blur-md rounded-md p-2 flex items-center gap-x-2'>
+          <div className="absolute bg-foreground/20 group-hover:bg-foreground/40 transition-all duration-300 right-2 bottom-2 backdrop-blur-md rounded-md p-2 flex items-center gap-x-2">
             {media.audio && (
               <>
-                <div className='flex items-center gap-x-1'>
-                  <Volume1 className='w-4 h-4 text-background' />
-                  <span className='text-[10px] text-background'>
+                <div className="flex items-center gap-x-1">
+                  <Volume1 className="w-4 h-4 text-background" />
+                  <span className="text-[10px] text-background">
                     {media.audio.toUpperCase()}
                   </span>
                 </div>
                 <Separator
-                  orientation='vertical'
-                  className='h-4 bg-background/25'
+                  orientation="vertical"
+                  className="h-4 bg-background/25"
                 />
               </>
             )}
             {media.subtitle && (
               <>
-                <div className='flex items-center gap-x-1'>
-                  <Subtitles className='w-4 h-4 text-background' />
-                  <span className='text-[10px] text-background'>
-                    {media.subtitle.join(' · ').toUpperCase()}
+                <div className="flex items-center gap-x-1">
+                  <Subtitles className="w-4 h-4 text-background" />
+                  <span className="text-[10px] text-background">
+                    {media.subtitle.join(" · ").toUpperCase()}
                   </span>
                 </div>
                 <Separator
-                  orientation='vertical'
-                  className='h-4 bg-background/25'
+                  orientation="vertical"
+                  className="h-4 bg-background/25"
                 />
               </>
             )}
-            <PlayIcon className='w-4 h-4 text-background' />
+            <PlayIcon className="w-4 h-4 text-background" />
           </div>
         )}
       </button>

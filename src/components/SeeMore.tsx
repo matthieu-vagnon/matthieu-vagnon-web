@@ -10,11 +10,7 @@ type SeeMoreProps = {
   socials?: {
     title: string;
     img?: React.ReactNode;
-    link: {
-      en?: string;
-      fr?: string;
-      ja?: string;
-    };
+    link: MultiLingual;
     important?: boolean;
   }[];
   className?: string;

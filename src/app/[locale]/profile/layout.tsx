@@ -1,5 +1,5 @@
 import { profile } from "@/data/profile";
-import { getTranslatedData } from "@/lib/utils";
+import { getFlattenedNode, getTranslatedData } from "@/lib/utils";
 import { Metadata } from "next";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: t("title"),
-    description: getTranslatedData(profile.description, locale),
+    description: getFlattenedNode(getTranslatedData(profile.about, locale)),
     openGraph: {
       type: "website",
       siteName: "Matthieu Vagnon Web",

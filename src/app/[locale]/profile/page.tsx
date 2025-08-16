@@ -1,6 +1,6 @@
 import { BlurFade } from "@/components/BlurFade";
+import { FeaturesSectionWithHoverEffects } from "@/components/FeaturesSectionWithHoverEffects";
 import Header from "@/components/Header";
-import { LogoCarousel } from "@/components/LogoCarousel";
 import Media from "@/components/Media";
 import PageTitle from "@/components/PageTitle";
 import { ResumeCard } from "@/components/ResumeCard";
@@ -8,6 +8,7 @@ import SectionTitle from "@/components/SectionTitle";
 import SeeMore from "@/components/SeeMore";
 import { Separator } from "@/components/Separator";
 import SkillBox from "@/components/SkillBox";
+import PageDecoration from "@/components/svg/PageDecoration";
 import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
 import { profile } from "@/data/profile";
 import { getTranslatedData } from "@/lib/utils";
@@ -32,31 +33,37 @@ export default function Profile() {
       </BlurFade>
       <div className="flex flex-col gap-12 sm:gap-14 md:gap-16">
         <BlurFade delay={blurDelay++ / 10}>
-          <div className="gap-8 sm:gap-12 md:gap-18 flex flex-col sm:flex-row text-center sm:text-left items-center justify-start">
-            <Media
-              width={256}
-              media={{
-                image: profile.businessCard.image,
-                title: profile.businessCard.title,
-              }}
-              isTilt
-              size="md"
-              className="w-50 md:w-56 lg:w-64"
-            />
-            <div className="relative text-lg lg:text-xl italic">
-              <Quote
-                strokeWidth={0}
-                className="hidden sm:block size-20 -z-1 fill-foreground/5 absolute -top-6 -left-7"
+          <SectionTitle title={t("profile.about")} />
+          <div className="flex mt-5 gap-x-10">
+            <div className="flex flex-col items-center md:flex-row gap-5 lg:max-w-4/5 xl:max-w-2/3">
+              <Media
+                width={256}
+                media={{
+                  image: profile.businessCard.image,
+                  title: profile.businessCard.title,
+                }}
+                isTilt
+                size="md"
+                className="w-50 md:w-56 lg:w-64"
               />
-              {getTranslatedData(profile.description, locale)}
+              <div className="relative text-lg lg:text-xl italic">
+                <Quote
+                  strokeWidth={0}
+                  className="size-25 -z-1 fill-foreground/5 absolute -top-5 -left-3"
+                />
+                <span className="text-base md:text-lg text-foreground-secondary flex flex-col gap-3 px-3">
+                  {getTranslatedData(profile.about, locale)}
+                </span>
+              </div>
+            </div>
+            <div className="relative hidden lg:block w-33">
+              <div className="absolute inset-y-0 right-0 w-11 bg-gradient-to-l from-background to-transparent" />
+              <PageDecoration className="h-full w-full" />
             </div>
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
-          <SectionTitle title={t("profile.about")} />
-          <span className="text-base md:text-lg text-foreground-secondary flex flex-col gap-3">
-            {getTranslatedData(profile.about, locale)}
-          </span>
+          <FeaturesSectionWithHoverEffects feat={profile.features} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
@@ -107,9 +114,6 @@ export default function Profile() {
             <SkillBox title={t("profile.design")} items={profile.design} />
             <SkillBox title={t("profile.other")} items={profile.other} />
           </div>
-        </BlurFade>
-        <BlurFade delay={blurDelay++ / 10}>
-          <LogoCarousel columnCount={4} logos={profile.stackLogos} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className="flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16">

@@ -94,7 +94,8 @@ export async function generateMetadata(
       `${project.title}`,
       `${project.year}`,
       ...(parentMetadata.keywords || []),
-      ...(project.tags[locale as keyof typeof project.tags] || []),
+      ...((project.tags[locale as keyof typeof project.tags] as string[]) ||
+        []),
       ...project.technologies,
     ],
   };

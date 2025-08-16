@@ -1,15 +1,7 @@
-import CssIcon from "@/components/svg/Css";
 import Findy from "@/components/svg/Findy";
 import Github from "@/components/svg/Github";
-import HtmlIcon from "@/components/svg/Html";
-import JavaScriptIcon from "@/components/svg/JavaScript";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
-import MuiIcon from "@/components/svg/Mui";
-import NextjsIcon from "@/components/svg/Nextjs";
-import ReactIcon from "@/components/svg/React";
-import TailwindIcon from "@/components/svg/Tailwind";
-import TypeScriptIcon from "@/components/svg/TypeScript";
 import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
 import freelance from "@/public/profile/freelance.png";
@@ -25,6 +17,7 @@ import saintThomas from "@/public/profile/saint-thomas.png";
 import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
+import { IconReceipt2, IconTrafficCone } from "@tabler/icons-react";
 
 export const profile: Profile = {
   socials: {
@@ -40,6 +33,7 @@ export const profile: Profile = {
       title: "Malt",
       img: <Malt />,
       link: {
+        en: "https://www.malt.fr/profile/matthieuvagnon1",
         fr: "https://www.malt.fr/profile/matthieuvagnon1",
       },
     },
@@ -47,6 +41,7 @@ export const profile: Profile = {
       title: "Findy",
       img: <Findy />,
       link: {
+        en: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
         ja: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
       },
     },
@@ -54,6 +49,7 @@ export const profile: Profile = {
       title: "YouTube",
       img: <Youtube />,
       link: {
+        en: "https://www.youtube.com/@matthieu-vagnon",
         fr: "https://www.youtube.com/@matthieu-vagnon",
       },
     },
@@ -70,10 +66,6 @@ export const profile: Profile = {
     phone: "+817090997140",
   },
   avatarUrl: me,
-  description: {
-    en: "The most overlooked skill in web development is empathy.",
-    fr: "La compétence la plus sous-estimée dans le développement web, c'est l'empathie.",
-  },
   businessCard: {
     image: businessCard,
     title: {
@@ -81,46 +73,28 @@ export const profile: Profile = {
       fr: "Carte de visite",
     },
   },
-  stackLogos: [
+  features: [
     {
-      id: 1,
-      name: "React",
-      img: ReactIcon,
+      title: {
+        en: "Smart Pricing",
+        fr: "Tarification intelligente",
+      },
+      description: {
+        en: "Normal pricing for short-term projects, adjusted pricing for long-term collaborations.",
+        fr: "Tarif normal pour les projets courts, tarif ajusté pour les longues collaborations.",
+      },
+      icon: <IconReceipt2 />,
     },
     {
-      id: 2,
-      name: "Next.js",
-      img: NextjsIcon,
-    },
-    {
-      id: 3,
-      name: "JavaScript",
-      img: JavaScriptIcon,
-    },
-    {
-      id: 4,
-      name: "TypeScript",
-      img: TypeScriptIcon,
-    },
-    {
-      id: 5,
-      name: "HTML",
-      img: HtmlIcon,
-    },
-    {
-      id: 6,
-      name: "CSS",
-      img: CssIcon,
-    },
-    {
-      id: 7,
-      name: "Tailwind CSS",
-      img: TailwindIcon,
-    },
-    {
-      id: 8,
-      name: "Material UI",
-      img: MuiIcon,
+      title: {
+        en: "Included Maintenance",
+        fr: "Maintenance inclue",
+      },
+      description: {
+        en: "Fast and reactive maintenance package included in the price.",
+        fr: "Maintenance rapide et réactive inclue dans le prix.",
+      },
+      icon: <IconTrafficCone />,
     },
   ],
   aiTools: ["ChatGPT", "Claude", "Cursor IDE", "GitHub Copilot"],
