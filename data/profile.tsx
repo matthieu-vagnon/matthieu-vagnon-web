@@ -117,14 +117,6 @@ export const profile: Profile = {
       tech: ["TypeScript", "Python", "React.js", "Next.js", "FastAPI"],
     },
     {
-      icon: Brain,
-      title: {
-        en: "AI APIs",
-        fr: "APIs IA",
-      },
-      tech: ["OpenAI", "Gemini", "Anthropic"],
-    },
-    {
       icon: CodeXml,
       title: {
         en: "Languages",
@@ -138,6 +130,14 @@ export const profile: Profile = {
         "HTML/JSX",
         "CSS/SCSS/LESS",
       ],
+    },
+    {
+      icon: Brain,
+      title: {
+        en: "AI APIs",
+        fr: "APIs IA",
+      },
+      tech: ["OpenAI", "Gemini", "Anthropic"],
     },
   ],
   frontStack: [
