@@ -18,6 +18,15 @@ import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import { IconReceipt2, IconTrafficCone } from "@tabler/icons-react";
+import {
+  Brain,
+  CodeXml,
+  Cog,
+  HardHat,
+  Heart,
+  Paintbrush,
+  Palette,
+} from "lucide-react";
 
 export const profile: Profile = {
   socials: {
@@ -97,63 +106,136 @@ export const profile: Profile = {
       icon: <IconTrafficCone />,
     },
   ],
-  aiTools: ["ChatGPT", "Claude", "Cursor IDE", "GitHub Copilot"],
-  languages: [
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "HTML5/JSX",
-    "CSS3/SCSS/LESS",
-    "Python",
-    "SQL",
+  stack: [
+    {
+      icon: Heart,
+      title: {
+        en: "Favorites",
+        fr: "Favoris",
+      },
+      accent: true,
+      tech: ["TypeScript", "Python", "React.js", "Next.js", "FastAPI"],
+    },
+    {
+      icon: Brain,
+      title: {
+        en: "AI APIs",
+        fr: "APIs IA",
+      },
+      tech: ["OpenAI", "Gemini", "Anthropic"],
+    },
+    {
+      icon: CodeXml,
+      title: {
+        en: "Languages",
+        fr: "Languages",
+      },
+      tech: [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "HTML/JSX",
+        "CSS/SCSS/LESS",
+      ],
+    },
   ],
-  frontendFrameworks: ["React.js", "Next.js"],
-  stateManagement: ["Redux", "Context API"],
-  frontendLibraries: [
-    "TanStack Query (React Query)",
-    "Framer Motion",
-    "React Router",
-    "Zod",
-    "React-i18next",
-    "Next-intl",
-    "Plotly.js",
+  frontStack: [
+    {
+      icon: Paintbrush,
+      title: {
+        en: "Front-End Frameworks",
+        fr: "Frameworks front-end",
+      },
+      tech: ["React.js", "Next.js", "Cypress"],
+    },
+    {
+      icon: Paintbrush,
+      title: {
+        en: "Front-End Libraries",
+        fr: "Bibliothèques front-end",
+      },
+      tech: [
+        "Redux",
+        "TanStack Query",
+        "Framer Motion",
+        "Zod",
+        "React-i18next",
+        "Next-intl",
+        "Tailwind CSS",
+        "Material UI",
+        "Chakra UI",
+        "Bootstrap",
+        "Ant Design",
+        "ShadCN UI",
+        "Radix UI",
+      ],
+    },
+    {
+      icon: Paintbrush,
+      title: {
+        en: "Front-End Tools",
+        fr: "Outils front-end",
+      },
+      tech: ["NPM", "Vercel"],
+    },
   ],
-  uiLibraries: [
-    "Tailwind CSS",
-    "Material UI",
-    "Chakra UI",
-    "Bootstrap",
-    "Ant Design",
-    "Shadcn UI",
-    "Radix UI",
+  backStack: [
+    {
+      icon: Cog,
+      title: {
+        en: "Back-End Frameworks",
+        fr: "Frameworks back-end",
+      },
+      tech: ["FastAPI"],
+    },
+    {
+      icon: Cog,
+      title: {
+        en: "Back-End Libraries",
+        fr: "Bibliothèques back-end",
+      },
+      tech: ["Pydantic", "Pytest"],
+    },
+    {
+      icon: Cog,
+      title: {
+        en: "Back-End Tools",
+        fr: "Outils back-end",
+      },
+      tech: [
+        "Uvicorn",
+        "SQLAlchemy",
+        "OAuth",
+        "PostgreSQL",
+        "Supabase",
+        "Firebase",
+      ],
+    },
   ],
-  buildTools: ["Webpack", "Vite", "npm", "Yarn"],
-  backend: [
-    "FastAPI",
-    "Uvicorn",
-    "Pydantic",
-    "SQLAlchemy",
-    "OAuth",
-    "PostgreSQL",
-    "Supabase",
+  otherStack: [
+    {
+      icon: HardHat,
+      title: {
+        en: "DevOps",
+      },
+      tech: ["Docker", "Google Cloud", "GitHub Actions"],
+    },
+    {
+      icon: Palette,
+      title: {
+        en: "UI/UX",
+      },
+      tech: ["Figma"],
+    },
+    {
+      title: {
+        en: "Others",
+        fr: "Autres",
+      },
+      tech: ["Git", "Visual Studio Code", "ESLint"],
+    },
   ],
-  testing: ["React Testing Library", "Cypress", "Pytest"],
-  performance: ["Lighthouse", "Web Vitals", "Code Splitting", "Lazy Loading"],
-  accessibility: [
-    "WCAG 2.1 Standards",
-    "Aria Attributes",
-    "Screen Reader Compatibility",
-  ],
-  devops: ["Docker", "GitHub Actions", "Vercel"],
-  bestPractices: [
-    "ESLint",
-    "Responsive Design",
-    "Cross-Browser Compatibility",
-    "Atomic Design",
-    "Component-Driven Development",
-    "SEO Optimization",
-  ],
-  design: ["Figma"],
-  other: ["Git", "Visual Studio Code", "Prettier"],
   about: {
     en: (
       <>

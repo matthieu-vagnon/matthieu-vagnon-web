@@ -12,7 +12,7 @@ import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { cn, getFlattenedNode, getTranslatedData } from "@/lib/utils";
-import { Globe } from "lucide-react";
+import { Cog, Globe } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
@@ -158,6 +158,7 @@ export default async function Project(props: ProjectProps) {
               <div>{getTranslatedData(project.longDescription, locale)}</div>
               <div className="flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <SkillBox
+                  icon={Cog}
                   title={t("caseStudies.project.technologies")}
                   items={project.technologies}
                   className="flex-auto"

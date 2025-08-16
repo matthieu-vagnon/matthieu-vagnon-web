@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import { Sparkle } from "lucide-react";
 import Highlight from "./Highlight";
 
 type SkillBoxProps = {
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
   items: string[];
   accent?: boolean;
@@ -10,6 +10,7 @@ type SkillBoxProps = {
 };
 
 export default function SkillBox({
+  icon: Icon,
   title,
   items,
   accent,
@@ -23,8 +24,13 @@ export default function SkillBox({
         className
       )}
     >
-      <span className="text-sm font-bold flex flex-row items-center gap-1 text-accent-foreground">
-        <Sparkle strokeWidth={0} className="size-4 fill-accent-foreground" />
+      <span className="text-sm font-bold flex flex-row items-center gap-1.5 text-accent-foreground">
+        {Icon &&
+          (accent ? (
+            <Icon strokeWidth={0} className="size-4 fill-accent-foreground" />
+          ) : (
+            <Icon strokeWidth={3} className="size-3 stroke-accent-foreground" />
+          ))}
         {title}
       </span>
       <div className="flex flex-row flex-wrap gap-2">

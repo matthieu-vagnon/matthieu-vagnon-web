@@ -68,53 +68,51 @@ export default function Profile() {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.stackTitle")} />
-          <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-            <SkillBox
-              title={t("profile.aiTools")}
-              items={profile.aiTools}
-              accent
-            />
-            <SkillBox
-              title={t("profile.languages")}
-              items={profile.languages}
-            />
-            <SkillBox
-              title={t("profile.frontendFrameworks")}
-              items={profile.frontendFrameworks}
-            />
-            <SkillBox
-              title={t("profile.stateManagement")}
-              items={profile.stateManagement}
-            />
-            <SkillBox
-              title={t("profile.frontendLibraries")}
-              items={profile.frontendLibraries}
-            />
-            <SkillBox
-              title={t("profile.uiLibraries")}
-              items={profile.uiLibraries}
-            />
-            <SkillBox
-              title={t("profile.buildTools")}
-              items={profile.buildTools}
-            />
-            <SkillBox title={t("profile.backend")} items={profile.backend} />
-            <SkillBox title={t("profile.testing")} items={profile.testing} />
-            <SkillBox
-              title={t("profile.performance")}
-              items={profile.performance}
-            />
-            <SkillBox
-              title={t("profile.accessibility")}
-              items={profile.accessibility}
-            />
-            <SkillBox title={t("profile.devops")} items={profile.devops} />
-            <SkillBox
-              title={t("profile.bestPractices")}
-              items={profile.bestPractices}
-            />
-            <SkillBox title={t("profile.design")} items={profile.design} />
-            <SkillBox title={t("profile.other")} items={profile.other} />
+          <div className="flex flex-col gap-y-6">
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+              {profile.stack.map((el, index) => (
+                <SkillBox
+                  key={index}
+                  icon={el.icon}
+                  title={getTranslatedData(el.title, locale)}
+                  items={el.tech}
+                  accent={el.accent}
+                />
+              ))}
+            </div>
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+              {profile.frontStack.map((el, index) => (
+                <SkillBox
+                  key={index}
+                  icon={el.icon}
+                  title={getTranslatedData(el.title, locale)}
+                  items={el.tech}
+                  accent={el.accent}
+                />
+              ))}
+            </div>
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+              {profile.backStack.map((el, index) => (
+                <SkillBox
+                  key={index}
+                  icon={el.icon}
+                  title={getTranslatedData(el.title, locale)}
+                  items={el.tech}
+                  accent={el.accent}
+                />
+              ))}
+            </div>
+            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+              {profile.otherStack.map((el, index) => (
+                <SkillBox
+                  key={index}
+                  icon={el.icon}
+                  title={getTranslatedData(el.title, locale)}
+                  items={el.tech}
+                  accent={el.accent}
+                />
+              ))}
+            </div>
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>

@@ -41,21 +41,30 @@ declare global {
       description: MultiLingual;
       icon: React.ReactNode;
     }[];
-    languages: string[];
-    aiTools: string[];
-    frontendFrameworks: string[];
-    stateManagement: string[];
-    frontendLibraries: string[];
-    uiLibraries: string[];
-    buildTools: string[];
-    backend: string[];
-    testing: string[];
-    performance: string[];
-    accessibility: string[];
-    devops: string[];
-    bestPractices: string[];
-    design: string[];
-    other: string[];
+    stack: {
+      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+      title: MultiLingual;
+      accent?: boolean;
+      tech: string[];
+    }[];
+    frontStack: {
+      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+      title: MultiLingual;
+      accent?: boolean;
+      tech: string[];
+    }[];
+    backStack: {
+      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+      title: MultiLingual;
+      accent?: boolean;
+      tech: string[];
+    }[];
+    otherStack: {
+      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+      title: MultiLingual;
+      accent?: boolean;
+      tech: string[];
+    }[];
     about: MultiLingual;
     experience: {
       company: string;
