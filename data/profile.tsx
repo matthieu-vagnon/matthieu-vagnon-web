@@ -163,7 +163,7 @@ export const profile: Profile = {
         en: "AI APIs",
         fr: "APIs IA",
       },
-      tech: ["OpenAI", "Gemini", "Anthropic"],
+      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
     },
   ],
   frontStack: [
@@ -185,6 +185,7 @@ export const profile: Profile = {
         "Redux",
         "TanStack Query",
         "Framer Motion",
+        "React Router",
         "Zod",
         "React-i18next",
         "Next-intl",
