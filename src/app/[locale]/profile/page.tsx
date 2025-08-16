@@ -63,9 +63,11 @@ export default function Profile() {
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
+          <SectionTitle title={t("profile.providing")} />
           <FeaturesSectionWithHoverEffects feat={profile.features} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
+          <SectionTitle title={t("profile.stackTitle")} />
           <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
             <SkillBox
               title={t("profile.aiTools")}

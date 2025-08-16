@@ -67,6 +67,8 @@
     "title": "Profil",
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
+    "providing": "Ce que j'apporte",
+    "stackTitle": "Mon stack technique",
     "aiTools": "Outils IA",
     "languages": "Langages",
     "frontendFrameworks": "Frameworks front-end",
