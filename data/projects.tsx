@@ -682,6 +682,7 @@ export const projects: Record<string, Project> = {
           fr: "Accéder à l'application",
         },
         link: {
+          en: "https://koryoriyaozaki.uk",
           ja: "https://koryoriyaozaki.uk",
         },
       },
