@@ -1,7 +1,12 @@
+import FastApiIcon from "@/components/svg/FastApi";
 import Findy from "@/components/svg/Findy";
 import Github from "@/components/svg/Github";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
+import NextjsIcon from "@/components/svg/Nextjs";
+import PythonIcon from "@/components/svg/Python";
+import ReactIcon from "@/components/svg/React";
+import TypescriptIcon from "@/components/svg/TypeScript";
 import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
 import freelance from "@/public/profile/freelance.png";
@@ -114,7 +119,28 @@ export const profile: Profile = {
         fr: "Favoris",
       },
       accent: true,
-      tech: ["TypeScript", "Python", "React.js", "Next.js", "FastAPI"],
+      tech: [
+        {
+          techIcon: TypescriptIcon,
+          name: "TypeScript",
+        },
+        {
+          techIcon: PythonIcon,
+          name: "Python",
+        },
+        {
+          techIcon: ReactIcon,
+          name: "React.js",
+        },
+        {
+          techIcon: NextjsIcon,
+          name: "Next.js",
+        },
+        {
+          techIcon: FastApiIcon,
+          name: "FastAPI",
+        },
+      ],
     },
     {
       icon: CodeXml,

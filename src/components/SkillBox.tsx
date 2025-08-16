@@ -4,7 +4,12 @@ import Highlight from "./Highlight";
 type SkillBoxProps = {
   icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
-  items: string[];
+  items:
+    | string[]
+    | {
+        techIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+        name: string;
+      }[];
   accent?: boolean;
   className?: string;
 };
@@ -34,9 +39,16 @@ export default function SkillBox({
         {title}
       </span>
       <div className="flex flex-row flex-wrap gap-2">
-        {items.map((item) => (
-          <Highlight key={item} color={!accent ? "gray" : undefined}>
-            {item}
+        {items.map((item, index) => (
+          <Highlight key={index} color={!accent ? "gray" : undefined}>
+            {typeof item === "string" ? (
+              item
+            ) : (
+              <span className="flex gap-x-2 items-center">
+                {<item.techIcon className="size-4" />}
+                {item.name}
+              </span>
+            )}
           </Highlight>
         ))}
       </div>

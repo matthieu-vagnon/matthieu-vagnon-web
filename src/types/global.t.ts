@@ -45,7 +45,12 @@ declare global {
       icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
       title: MultiLingual;
       accent?: boolean;
-      tech: string[];
+      tech:
+        | string[]
+        | {
+            techIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+            name: string;
+          }[];
     }[];
     frontStack: {
       icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
