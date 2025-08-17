@@ -22,15 +22,18 @@ import saintThomas from "@/public/profile/saint-thomas.png";
 import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
-import { IconReceipt2, IconTrafficCone } from "@tabler/icons-react";
 import {
   Brain,
   CodeXml,
   Cog,
   HardHat,
   Heart,
+  Inbox,
   Paintbrush,
   Palette,
+  ReceiptEuro,
+  ThumbsUp,
+  TrafficCone,
 } from "lucide-react";
 
 export const profile: Profile = {
@@ -90,6 +93,17 @@ export const profile: Profile = {
   features: [
     {
       title: {
+        en: "A Complete Profile",
+        fr: "Un profil complet",
+      },
+      description: {
+        en: "Able to handle projects end-to-end and work fully independently, while ensuring quality and timely delivery.",
+        fr: "Capable de gérer un projet de bout en bout et de travailler en totale autonomie, tout en garantissant qualité et respect des délais.",
+      },
+      icon: <ThumbsUp />,
+    },
+    {
+      title: {
         en: "Smart Pricing",
         fr: "Tarification intelligente",
       },
@@ -97,7 +111,7 @@ export const profile: Profile = {
         en: "Normal pricing for short-term projects, adjusted pricing for long-term collaborations.",
         fr: "Tarif normal pour les projets courts, tarif ajusté pour les longues collaborations.",
       },
-      icon: <IconReceipt2 />,
+      icon: <ReceiptEuro />,
     },
     {
       title: {
@@ -108,7 +122,18 @@ export const profile: Profile = {
         en: "Fast and reactive maintenance package included in the price.",
         fr: "Maintenance rapide et réactive inclue dans le prix.",
       },
-      icon: <IconTrafficCone />,
+      icon: <TrafficCone />,
+    },
+    {
+      title: {
+        en: "Weekly Progress Updates",
+        fr: "Suivi hebdomadaire",
+      },
+      description: {
+        en: "A clear weekly recap email to ensure full transparency and visibility on project progress.",
+        fr: "Un compte-rendu clair chaque semaine par email pour assurer transparence et visibilité sur l’avancement du projet.",
+      },
+      icon: <Inbox />,
     },
   ],
   stack: [
@@ -156,14 +181,6 @@ export const profile: Profile = {
         "HTML/JSX",
         "CSS/SCSS/LESS",
       ],
-    },
-    {
-      icon: Brain,
-      title: {
-        en: "AI APIs",
-        fr: "APIs IA",
-      },
-      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
     },
   ],
   frontStack: [
@@ -242,11 +259,12 @@ export const profile: Profile = {
   ],
   otherStack: [
     {
-      icon: HardHat,
+      icon: Brain,
       title: {
-        en: "DevOps",
+        en: "AI APIs",
+        fr: "APIs IA",
       },
-      tech: ["Docker", "Google Cloud", "GitHub Actions"],
+      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
     },
     {
       icon: Palette,
@@ -254,6 +272,13 @@ export const profile: Profile = {
         en: "UI/UX",
       },
       tech: ["Figma"],
+    },
+    {
+      icon: HardHat,
+      title: {
+        en: "DevOps",
+      },
+      tech: ["Docker", "Google Cloud", "GitHub Actions"],
     },
     {
       title: {
