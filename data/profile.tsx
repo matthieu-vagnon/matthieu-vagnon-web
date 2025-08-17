@@ -221,7 +221,7 @@ export const profile: Profile = {
         en: "Front-End Tools",
         fr: "Outils front-end",
       },
-      tech: ["NPM", "Vercel"],
+      tech: ["NPM", "Vite", "Vercel"],
     },
   ],
   backStack: [
