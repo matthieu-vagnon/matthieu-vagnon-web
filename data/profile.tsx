@@ -252,6 +252,7 @@ export const profile: Profile = {
         "SQLAlchemy",
         "OAuth",
         "PostgreSQL",
+        "RapidAPI",
         "Supabase",
         "Firebase",
       ],
