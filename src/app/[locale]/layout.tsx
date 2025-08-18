@@ -6,6 +6,7 @@ import DockStatusProvider from "@/hooks/useDockStatus";
 import MagneticStatusProvider from "@/hooks/useMagneticStatus";
 import { TestimonialsStatusProvider } from "@/hooks/useTestimonialsStatus";
 import { routing } from "@/i18n/routing";
+import { getCookie } from "@/lib/server-utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -98,13 +99,16 @@ export default async function RootLayout({
     notFound();
   }
 
+  // Récupérer la couleur d'accent côté serveur
+  const accentColor = await getCookie("accent-color");
+
   return (
     <html lang={locale}>
       <NextIntlClientProvider>
         <TestimonialsStatusProvider>
           <DockStatusProvider>
             <MagneticStatusProvider>
-              <AccentColorProvider>
+              <AccentColorProvider initialAccentColor={accentColor}>
                 <body
                   className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} antialiased`}
                 >

@@ -1,7 +1,7 @@
-import { clsx, type ClassValue } from 'clsx';
-import { Locale } from 'next-intl';
-import React from 'react';
-import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue } from "clsx";
+import { Locale } from "next-intl";
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -29,28 +29,28 @@ export function getTranslatedData(
 }
 
 export function getFlattenedNode(node: React.ReactNode): string {
-  if (!node) return '';
+  if (!node) return "";
 
   if (React.isValidElement(node)) {
     const props = node.props as { children?: React.ReactNode };
     const children = props.children;
 
-    if (typeof children === 'string') {
+    if (typeof children === "string") {
       return children;
-    } else if (typeof children === 'number') {
+    } else if (typeof children === "number") {
       return children.toString();
     } else if (Array.isArray(children)) {
       return children
         .map((child) =>
-          typeof child === 'string' ? child : getFlattenedNode(child)
+          typeof child === "string" ? child : getFlattenedNode(child)
         )
-        .join('');
+        .join("");
     }
-  } else if (typeof node === 'string') {
+  } else if (typeof node === "string") {
     return node;
-  } else if (typeof node === 'number') {
+  } else if (typeof node === "number") {
     return node.toString();
   }
 
-  return '';
+  return "";
 }
