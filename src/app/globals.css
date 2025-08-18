@@ -51,7 +51,7 @@
 }
 
 :root {
-  --main: #007fff;
+  --main: var(--default-theme);
   --main-dark: #001428;
   --main-foreground: oklch(0.985 0 0);
   --background: #fafafa;
@@ -87,29 +87,35 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
+  --default-theme: #007fff;
+  --green-theme: #88ff88;
+  --pink-theme: #ff88ff;
+  --purple-theme: #8888ff;
+  --orange-theme: #ff8800;
+
   --radius: 0.625rem;
 }
 
 html[data-accent-color="green"] {
-  --main: #88ff88;
+  --main: var(--green-theme);
   --main-dark: #004000;
   --main-foreground: black;
 }
 
 html[data-accent-color="pink"] {
-  --main: #ff88ff;
+  --main: var(--pink-theme);
   --main-dark: #400040;
   --main-foreground: black;
 }
 
 html[data-accent-color="purple"] {
-  --main: #8888ff;
+  --main: var(--purple-theme);
   --main-dark: #000040;
   --main-foreground: black;
 }
 
 html[data-accent-color="orange"] {
-  --main: #ff8800;
+  --main: var(--orange-theme);
   --main-dark: #402000;
   --main-foreground: black;
 }

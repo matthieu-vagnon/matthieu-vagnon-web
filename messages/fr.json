@@ -129,6 +129,7 @@
   "configure": {
     "title": "Configuration",
     "description": "Veuillez configurer l'application à votre goût.",
+    "default": "par défaut",
     "accentColor": {
       "title": "Couleur d'accentuation",
       "placeholder": "Sélectionnez une couleur",
@@ -142,7 +143,7 @@
     },
     "magnetic": {
       "title": "Curseur magnétique",
-      "tip": "Non recommandé sur les écrans tactiles. Peut altérer les performances."
+      "tip": "Non recommandé sur les écrans tactiles. Peut légèrement altérer les performances."
     },
     "reset": "Réinitialiser les paramètres"
   },

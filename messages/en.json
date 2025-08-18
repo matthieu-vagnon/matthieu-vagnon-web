@@ -130,6 +130,7 @@
   "configure": {
     "title": "Configuration",
     "description": "Please configure the app to your liking.",
+    "default": "default",
     "accentColor": {
       "title": "Accent Color",
       "placeholder": "Select a color",
@@ -143,7 +144,7 @@
     },
     "magnetic": {
       "title": "Magnetic Cursor",
-      "tip": "Not recommended on touch screens. May alter performances."
+      "tip": "Not recommended on touch screens. May slightly alter performances."
     },
     "reset": "Reset Parameters"
   },
