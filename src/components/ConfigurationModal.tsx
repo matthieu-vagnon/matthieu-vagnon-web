@@ -48,10 +48,12 @@ export function ConfigurationModal() {
               {Object.entries(messages.configure.accentColor.colors).map(
                 ([key, value]) => (
                   <SelectItem key={key} value={key}>
-                    <div className="flex gap-x-1">
-                      {value ? value.toString() : ""}
+                    <div className="flex gap-x-1 py-0.5">
+                      <span className="leading-none">
+                        {value ? value.toString() : ""}
+                      </span>
                       {key === "default" && (
-                        <span className="text-xs text-muted-foreground self-baseline-last leading-4.5">
+                        <span className="text-xs text-muted-foreground self-baseline-last leading-none">
                           {t("default")}
                         </span>
                       )}
