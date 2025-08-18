@@ -109,7 +109,7 @@ export default async function RootLayout({
           <DockStatusProvider>
             <MagneticStatusProvider
               initialMagneticStatus={
-                initialMagneticStatus === undefined
+                !initialMagneticStatus
                   ? undefined
                   : initialMagneticStatus === "true"
               }
