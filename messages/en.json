@@ -137,7 +137,8 @@
         "default": "Blue",
         "green": "Green",
         "pink": "Pink",
-        "purple": "Purple"
+        "purple": "Purple",
+        "orange": "Orange"
       }
     },
     "magnetic": {

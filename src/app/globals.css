@@ -108,6 +108,12 @@ html[data-accent-color="purple"] {
   --main-foreground: black;
 }
 
+html[data-accent-color="orange"] {
+  --main: #ff8800;
+  --main-dark: #402000;
+  --main-foreground: black;
+}
+
 html {
   scroll-behavior: smooth;
 }
