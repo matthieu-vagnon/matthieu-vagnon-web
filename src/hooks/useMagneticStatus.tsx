@@ -1,58 +1,66 @@
-'use client'
+"use client";
 
-import { deleteCookie, getCookie, setCookie } from '@/lib/server-utils'
-import { createContext, useContext, useEffect, useState } from 'react'
+import { deleteCookie, setCookie } from "@/lib/server-utils";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const MagneticStatusContext = createContext<{
-  isMagnetic: boolean
-  changeIsMagnetic: (isMagnetic: boolean | undefined) => void
+  isMagnetic: boolean | undefined;
+  changeIsMagnetic: (isMagnetic: boolean | undefined) => void;
 }>({
   isMagnetic: false,
-  changeIsMagnetic: () => {}
-})
+  changeIsMagnetic: () => {},
+});
 
-export default function MagneticStatusProvider({ children }: { children: React.ReactNode }) {
-  const [isMagnetic, setIsMagnetic] = useState(false)
+export default function MagneticStatusProvider({
+  children,
+  initialMagneticStatus,
+}: {
+  children: React.ReactNode;
+  initialMagneticStatus?: boolean;
+}) {
+  const [isMagnetic, setIsMagnetic] = useState(initialMagneticStatus);
 
   const getDefaultMagneticStatus = () => {
-    if (window.matchMedia('(pointer: coarse)').matches) {
-      return false
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      return false;
     } else {
-      return true
+      return true;
     }
-  }
+  };
 
   const changeIsMagnetic = (isMagnetic: boolean | undefined) => {
     if (isMagnetic === undefined) {
-      setIsMagnetic(getDefaultMagneticStatus())
-      deleteCookie('magnetic')
+      setIsMagnetic(getDefaultMagneticStatus());
+      deleteCookie("magnetic");
     } else {
-      setIsMagnetic(isMagnetic)
-      setCookie('magnetic', isMagnetic.toString())
+      setIsMagnetic(isMagnetic);
+      setCookie("magnetic", isMagnetic.toString());
     }
-  }
+  };
 
   useEffect(() => {
-    getCookie('magnetic').then((cookie) => {
-      if (cookie) {
-        setIsMagnetic(cookie === 'true')
-      } else {
-        setIsMagnetic(getDefaultMagneticStatus())
-      }
-    })
-  }, [])
+    if (initialMagneticStatus !== undefined) {
+      setIsMagnetic(initialMagneticStatus);
+    } else {
+      setIsMagnetic(getDefaultMagneticStatus());
+    }
+  }, [initialMagneticStatus]);
 
   return (
-    <MagneticStatusContext.Provider value={{ isMagnetic, changeIsMagnetic }}>{children}</MagneticStatusContext.Provider>
-  )
+    <MagneticStatusContext.Provider value={{ isMagnetic, changeIsMagnetic }}>
+      {children}
+    </MagneticStatusContext.Provider>
+  );
 }
 
 export function useMagneticStatus() {
-  const context = useContext(MagneticStatusContext)
+  const context = useContext(MagneticStatusContext);
 
   if (!context) {
-    throw new Error('useMagneticStatus must be used within a MagneticStatusProvider')
+    throw new Error(
+      "useMagneticStatus must be used within a MagneticStatusProvider."
+    );
   }
 
-  return context
+  return context;
 }

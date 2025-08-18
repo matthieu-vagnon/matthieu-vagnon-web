@@ -99,15 +99,21 @@ export default async function RootLayout({
     notFound();
   }
 
-  // Récupérer la couleur d'accent côté serveur
   const accentColor = await getCookie("accent-color");
+  const initialMagneticStatus = await getCookie("magnetic");
 
   return (
     <html lang={locale}>
       <NextIntlClientProvider>
         <TestimonialsStatusProvider>
           <DockStatusProvider>
-            <MagneticStatusProvider>
+            <MagneticStatusProvider
+              initialMagneticStatus={
+                initialMagneticStatus === undefined
+                  ? undefined
+                  : initialMagneticStatus === "true"
+              }
+            >
               <AccentColorProvider initialAccentColor={accentColor}>
                 <body
                   className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} antialiased`}

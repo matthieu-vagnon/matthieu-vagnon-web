@@ -32,7 +32,6 @@ export default function AccentColorProvider({
     }
   };
 
-  // Appliquer la couleur initiale au chargement
   useEffect(() => {
     if (initialAccentColor && initialAccentColor !== "default") {
       document.documentElement.setAttribute(
@@ -53,7 +52,9 @@ export function useAccentColor() {
   const context = useContext(AccentColorContext);
 
   if (!context) {
-    throw new Error("useAccentColor must be used within a AccentColorProvider");
+    throw new Error(
+      "useAccentColor must be used within a AccentColorProvider."
+    );
   }
 
   return context;
