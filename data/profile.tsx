@@ -1,11 +1,10 @@
-import FastApiIcon from "@/components/svg/FastApi";
 import Findy from "@/components/svg/Findy";
 import Github from "@/components/svg/Github";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
 import NextjsIcon from "@/components/svg/Nextjs";
-import PythonIcon from "@/components/svg/Python";
 import ReactIcon from "@/components/svg/React";
+import TailwindIcon from "@/components/svg/Tailwind";
 import TypescriptIcon from "@/components/svg/TypeScript";
 import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
@@ -150,10 +149,6 @@ export const profile: Profile = {
           name: "TypeScript",
         },
         {
-          techIcon: PythonIcon,
-          name: "Python",
-        },
-        {
           techIcon: ReactIcon,
           name: "React.js",
         },
@@ -162,8 +157,8 @@ export const profile: Profile = {
           name: "Next.js",
         },
         {
-          techIcon: FastApiIcon,
-          name: "FastAPI",
+          techIcon: TailwindIcon,
+          name: "Tailwind CSS",
         },
       ],
     },
