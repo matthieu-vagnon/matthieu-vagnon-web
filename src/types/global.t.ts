@@ -64,7 +64,7 @@ declare global {
       accent?: boolean;
       tech: string[];
     }[];
-    otherStack: {
+    aiStack: {
       icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
       title: MultiLingual;
       accent?: boolean;

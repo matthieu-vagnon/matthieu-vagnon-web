@@ -25,6 +25,7 @@ import {
   Brain,
   CodeXml,
   Cog,
+  Ellipsis,
   HardHat,
   Heart,
   Inbox,
@@ -177,91 +178,6 @@ export const profile: Profile = {
         "CSS/SCSS/LESS",
       ],
     },
-  ],
-  frontStack: [
-    {
-      icon: Paintbrush,
-      title: {
-        en: "Front-End Frameworks",
-        fr: "Frameworks front-end",
-      },
-      tech: ["React.js", "Next.js", "Cypress"],
-    },
-    {
-      icon: Paintbrush,
-      title: {
-        en: "Front-End Libraries",
-        fr: "Bibliothèques front-end",
-      },
-      tech: [
-        "Redux",
-        "TanStack Query",
-        "Framer Motion",
-        "React Router",
-        "Zod",
-        "React-i18next",
-        "Next-intl",
-        "Tailwind CSS",
-        "Material UI",
-        "Chakra UI",
-        "Bootstrap",
-        "Ant Design",
-        "ShadCN UI",
-        "Radix UI",
-      ],
-    },
-    {
-      icon: Paintbrush,
-      title: {
-        en: "Front-End Tools",
-        fr: "Outils front-end",
-      },
-      tech: ["NPM", "Vite", "Vercel"],
-    },
-  ],
-  backStack: [
-    {
-      icon: Cog,
-      title: {
-        en: "Back-End Frameworks",
-        fr: "Frameworks back-end",
-      },
-      tech: ["FastAPI"],
-    },
-    {
-      icon: Cog,
-      title: {
-        en: "Back-End Libraries",
-        fr: "Bibliothèques back-end",
-      },
-      tech: ["Pydantic", "Pytest"],
-    },
-    {
-      icon: Cog,
-      title: {
-        en: "Back-End Tools",
-        fr: "Outils back-end",
-      },
-      tech: [
-        "Uvicorn",
-        "SQLAlchemy",
-        "OAuth",
-        "PostgreSQL",
-        "RapidAPI",
-        "Supabase",
-        "Firebase",
-      ],
-    },
-  ],
-  otherStack: [
-    {
-      icon: Brain,
-      title: {
-        en: "AI APIs",
-        fr: "APIs IA",
-      },
-      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
-    },
     {
       icon: Palette,
       title: {
@@ -277,11 +193,114 @@ export const profile: Profile = {
       tech: ["Docker", "Google Cloud", "GitHub Actions"],
     },
     {
+      icon: Ellipsis,
       title: {
         en: "Others",
         fr: "Autres",
       },
       tech: ["Git", "Visual Studio Code", "ESLint"],
+    },
+  ],
+  frontStack: [
+    {
+      icon: Paintbrush,
+      title: {
+        en: "Front-End Frameworks",
+        fr: "Frameworks front-end",
+      },
+      tech: ["React.js", "Next.js", "Cypress"],
+    },
+    {
+      title: {
+        en: "Front-End Libraries",
+        fr: "Bibliothèques front-end",
+      },
+      tech: [
+        "Redux",
+        "TanStack Query",
+        "Framer Motion",
+        "React Router",
+        "Zod",
+        "React-i18next",
+        "Next-intl",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      title: {
+        en: "Front-End Tools",
+        fr: "Outils front-end",
+      },
+      tech: ["PNPM", "NPM", "Vite", "Vercel"],
+    },
+    {
+      title: {
+        en: "Front-End Blocks",
+        fr: "Blocs front-end",
+      },
+      tech: [
+        "Material UI",
+        "Chakra UI",
+        "Bootstrap",
+        "Ant Design",
+        "ShadCN UI",
+        "Radix UI",
+      ],
+    },
+  ],
+  backStack: [
+    {
+      icon: Cog,
+      title: {
+        en: "Back-End Frameworks",
+        fr: "Frameworks back-end",
+      },
+      tech: ["FastAPI"],
+    },
+    {
+      title: {
+        en: "Back-End Libraries",
+        fr: "Bibliothèques back-end",
+      },
+      tech: ["Pydantic", "Pytest"],
+    },
+    {
+      title: {
+        en: "Back-End Tools",
+        fr: "Outils back-end",
+      },
+      tech: [
+        "Uvicorn",
+        "SQLAlchemy",
+        "OAuth",
+        "PostgreSQL",
+        "Supabase",
+        "Firebase",
+      ],
+    },
+    {
+      title: {
+        en: "Back-End Blocks",
+        fr: "Blocs back-end",
+      },
+      tech: ["RapidAPI"],
+    },
+  ],
+  aiStack: [
+    {
+      icon: Brain,
+      title: {
+        en: "AI Tools",
+        fr: "Outils IA",
+      },
+      tech: ["GitHub Copilot", "ChatGPT", "Xano"],
+    },
+    {
+      title: {
+        en: "AI APIs",
+        fr: "APIs IA",
+      },
+      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
     },
   ],
   about: {

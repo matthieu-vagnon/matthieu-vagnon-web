@@ -69,7 +69,7 @@ export default function Profile() {
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.stackTitle")} />
           <div className="flex flex-col gap-y-6">
-            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
               {profile.stack.map((el, index) => (
                 <SkillBox
                   key={index}
@@ -80,7 +80,7 @@ export default function Profile() {
                 />
               ))}
             </div>
-            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
               {profile.frontStack.map((el, index) => (
                 <SkillBox
                   key={index}
@@ -91,7 +91,7 @@ export default function Profile() {
                 />
               ))}
             </div>
-            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
               {profile.backStack.map((el, index) => (
                 <SkillBox
                   key={index}
@@ -102,8 +102,8 @@ export default function Profile() {
                 />
               ))}
             </div>
-            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-              {profile.otherStack.map((el, index) => (
+            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+              {profile.aiStack.map((el, index) => (
                 <SkillBox
                   key={index}
                   icon={el.icon}
