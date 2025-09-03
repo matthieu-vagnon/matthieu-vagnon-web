@@ -179,6 +179,21 @@ export const profile: Profile = {
       ],
     },
     {
+      icon: Brain,
+      title: {
+        en: "AI",
+        fr: "IA",
+      },
+      tech: [
+        "GitHub Copilot",
+        "ChatGPT",
+        "Xano",
+        "OpenAI API",
+        "Gemini API",
+        "Anthropic API",
+      ],
+    },
+    {
       icon: Palette,
       title: {
         en: "UI/UX",
@@ -190,7 +205,15 @@ export const profile: Profile = {
       title: {
         en: "DevOps",
       },
-      tech: ["Docker", "Google Cloud", "GitHub Actions"],
+      tech: [
+        "Docker",
+        "Google Cloud",
+        "Vercel",
+        "Railway",
+        "Supabase",
+        "Firebase",
+        "GitHub Actions",
+      ],
     },
     {
       icon: Ellipsis,
@@ -198,7 +221,7 @@ export const profile: Profile = {
         en: "Others",
         fr: "Autres",
       },
-      tech: ["Git", "Visual Studio Code", "ESLint"],
+      tech: ["Git", "ESLint"],
     },
   ],
   frontStack: [
@@ -231,7 +254,7 @@ export const profile: Profile = {
         en: "Front-End Tools",
         fr: "Outils front-end",
       },
-      tech: ["PNPM", "NPM", "Vite", "Vercel"],
+      tech: ["PNPM", "NPM", "Vite"],
     },
     {
       title: {
@@ -274,8 +297,8 @@ export const profile: Profile = {
         "SQLAlchemy",
         "OAuth",
         "PostgreSQL",
-        "Supabase",
-        "Firebase",
+        "Postman",
+        "TablePlus",
       ],
     },
     {
@@ -284,23 +307,6 @@ export const profile: Profile = {
         fr: "Blocs back-end",
       },
       tech: ["RapidAPI"],
-    },
-  ],
-  aiStack: [
-    {
-      icon: Brain,
-      title: {
-        en: "AI Tools",
-        fr: "Outils IA",
-      },
-      tech: ["GitHub Copilot", "ChatGPT", "Xano"],
-    },
-    {
-      title: {
-        en: "AI APIs",
-        fr: "APIs IA",
-      },
-      tech: ["OpenAI API", "Gemini API", "Anthropic API"],
     },
   ],
   about: {

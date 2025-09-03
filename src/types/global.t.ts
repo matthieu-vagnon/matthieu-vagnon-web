@@ -64,12 +64,6 @@ declare global {
       accent?: boolean;
       tech: string[];
     }[];
-    aiStack: {
-      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-      title: MultiLingual;
-      accent?: boolean;
-      tech: string[];
-    }[];
     about: MultiLingual;
     experience: {
       company: string;
