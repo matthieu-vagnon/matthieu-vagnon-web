@@ -102,17 +102,6 @@ export default function Profile() {
                 />
               ))}
             </div>
-            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-              {profile.aiStack.map((el, index) => (
-                <SkillBox
-                  key={index}
-                  icon={el.icon}
-                  title={getTranslatedData(el.title, locale)}
-                  items={el.tech}
-                  accent={el.accent}
-                />
-              ))}
-            </div>
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
