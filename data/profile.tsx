@@ -1,4 +1,3 @@
-import Findy from "@/components/svg/Findy";
 import Github from "@/components/svg/Github";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
@@ -25,15 +24,16 @@ import {
   Brain,
   CodeXml,
   Cog,
-  Ellipsis,
+  Eraser,
   HardHat,
   Heart,
-  Inbox,
+  Keyboard,
   Paintbrush,
   Palette,
-  ReceiptEuro,
-  ThumbsUp,
-  TrafficCone,
+  PaletteIcon,
+  Sparkles,
+  Users,
+  Zap,
 } from "lucide-react";
 
 export const profile: Profile = {
@@ -52,14 +52,6 @@ export const profile: Profile = {
       link: {
         en: "https://www.malt.fr/profile/matthieuvagnon1",
         fr: "https://www.malt.fr/profile/matthieuvagnon1",
-      },
-    },
-    findy: {
-      title: "Findy",
-      img: <Findy />,
-      link: {
-        en: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
-        ja: "https://findy-code.io/share_profiles/TCXixmT7ylwpK",
       },
     },
     youtube: {
@@ -93,47 +85,47 @@ export const profile: Profile = {
   features: [
     {
       title: {
-        en: "A Complete Profile",
-        fr: "Un profil complet",
+        en: "1. Prototype",
+        fr: "1. Prototypage",
       },
       description: {
-        en: "Able to handle projects end-to-end and work fully independently, while ensuring quality and timely delivery.",
-        fr: "Capable de gérer un projet de bout en bout et de travailler en totale autonomie, tout en garantissant qualité et respect des délais.",
+        en: "Functional and visual first step. I understand the client’s vision and produce the initial app visuals.",
+        fr: "Première étape fonctionnelle et visuelle. Je comprends la vision du client et produis les premiers visuels de l'application.",
       },
-      icon: <ThumbsUp />,
+      icon: <PaletteIcon />,
     },
     {
       title: {
-        en: "Smart Pricing",
-        fr: "Tarification intelligente",
+        en: "2. Essential/MVP",
+        fr: "2. Essentiel/MVP",
       },
       description: {
-        en: "Normal pricing for short-term projects, adjusted pricing for long-term collaborations.",
-        fr: "Tarif normal pour les projets courts, tarif ajusté pour les longues collaborations.",
+        en: "Development of a Minimum Viable Product to bring a marketable product to life quickly.",
+        fr: "Développement du Minimum Viable Product pour obtenir un produit marketable rapidement.",
       },
-      icon: <ReceiptEuro />,
+      icon: <Zap />,
     },
     {
       title: {
-        en: "Included Maintenance",
-        fr: "Maintenance inclue",
+        en: "3. Refactor",
+        fr: "3. Refactor",
       },
       description: {
-        en: "Fast and reactive maintenance package included in the price.",
-        fr: "Maintenance rapide et réactive inclue dans le prix.",
+        en: "Code optimization and reducing the visual gap between MVP and prototypes.",
+        fr: "Optimisation du code et réduction du gap visuel entre MVP et prototypes.",
       },
-      icon: <TrafficCone />,
+      icon: <Eraser />,
     },
     {
       title: {
-        en: "Weekly Progress Updates",
-        fr: "Suivi hebdomadaire",
+        en: "4. Functionality",
+        fr: "4. Fonctionnalité",
       },
       description: {
-        en: "A clear weekly recap email to ensure full transparency and visibility on project progress.",
-        fr: "Un compte-rendu clair chaque semaine par email pour assurer transparence et visibilité sur l’avancement du projet.",
+        en: "Adding extra features while avoiding bugs, slowdowns, and delays, thanks to the previous step.",
+        fr: "Ajout de fonctionnalités supplémentaires tout en évitant bugs, lenteurs et retards grâce à l'étape précédente.",
       },
-      icon: <Inbox />,
+      icon: <Keyboard />,
     },
   ],
   stack: [
@@ -154,6 +146,10 @@ export const profile: Profile = {
           name: "React.js",
         },
         {
+          techIcon: ReactIcon,
+          name: "React Native",
+        },
+        {
           techIcon: NextjsIcon,
           name: "Next.js",
         },
@@ -169,29 +165,34 @@ export const profile: Profile = {
         en: "Languages",
         fr: "Languages",
       },
+      tech: ["TypeScript", "JavaScript", "SQL", "HTML/JSX", "CSS/SCSS/LESS"],
+    },
+    {
+      icon: Paintbrush,
+      title: {
+        en: "Front-End",
+        fr: "Front-end",
+      },
       tech: [
-        "TypeScript",
-        "JavaScript",
-        "Python",
-        "SQL",
-        "HTML/JSX",
-        "CSS/SCSS/LESS",
+        "React.js",
+        "React Native",
+        "Next.js",
+        "Tailwind CSS",
+        "Material UI",
+        "TanStack Query",
+        "Electric SQL",
+        "Framer Motion",
+        "React Router",
+        "i18n",
       ],
     },
     {
-      icon: Brain,
+      icon: Cog,
       title: {
-        en: "AI",
-        fr: "IA",
+        en: "Back-End",
+        fr: "Back-end",
       },
-      tech: [
-        "GitHub Copilot",
-        "ChatGPT",
-        "Xano",
-        "OpenAI API",
-        "Gemini API",
-        "Anthropic API",
-      ],
+      tech: ["Node.js", "Fastify", "Prisma", "PostgreSQL"],
     },
     {
       icon: Palette,
@@ -201,157 +202,74 @@ export const profile: Profile = {
       tech: ["Figma"],
     },
     {
+      icon: Brain,
+      title: {
+        en: "AI",
+        fr: "IA",
+      },
+      tech: [
+        "LangChain",
+        "LangGraph",
+        "OpenAI API",
+        "Anthropic API",
+        "Gemini API",
+      ],
+    },
+    {
+      icon: Sparkles,
+      title: {
+        en: "Code Quality",
+        fr: "Qualité du code",
+      },
+      tech: ["ESLint", "Prettier", "Jest"],
+    },
+    {
       icon: HardHat,
       title: {
-        en: "DevOps",
+        en: "Infrastructure",
+        fr: "Infrastructure",
       },
-      tech: [
-        "Docker",
-        "Google Cloud",
-        "Vercel",
-        "Railway",
-        "Supabase",
-        "Firebase",
-        "GitHub Actions",
-      ],
+      tech: ["Docker", "Google Cloud", "GitHub Actions", "Vercel", "Railway"],
     },
     {
-      icon: Ellipsis,
+      icon: Users,
       title: {
-        en: "Others",
-        fr: "Autres",
+        en: "Project Management & Collaboration",
+        fr: "Gestion de projet & collaboration",
       },
-      tech: ["Git", "ESLint"],
-    },
-  ],
-  frontStack: [
-    {
-      icon: Paintbrush,
-      title: {
-        en: "Front-End Frameworks",
-        fr: "Frameworks front-end",
-      },
-      tech: ["React.js", "Next.js", "Cypress"],
-    },
-    {
-      title: {
-        en: "Front-End Libraries",
-        fr: "Bibliothèques front-end",
-      },
-      tech: [
-        "Redux",
-        "TanStack Query",
-        "Framer Motion",
-        "React Router",
-        "Zod",
-        "React-i18next",
-        "Next-intl",
-        "Tailwind CSS",
-      ],
-    },
-    {
-      title: {
-        en: "Front-End Tools",
-        fr: "Outils front-end",
-      },
-      tech: ["PNPM", "NPM", "Vite"],
-    },
-    {
-      title: {
-        en: "Front-End Blocks",
-        fr: "Blocs front-end",
-      },
-      tech: [
-        "Material UI",
-        "Chakra UI",
-        "Bootstrap",
-        "Ant Design",
-        "ShadCN UI",
-        "Radix UI",
-      ],
-    },
-  ],
-  backStack: [
-    {
-      icon: Cog,
-      title: {
-        en: "Back-End Frameworks",
-        fr: "Frameworks back-end",
-      },
-      tech: ["FastAPI"],
-    },
-    {
-      title: {
-        en: "Back-End Libraries",
-        fr: "Bibliothèques back-end",
-      },
-      tech: ["Pydantic", "Pytest"],
-    },
-    {
-      title: {
-        en: "Back-End Tools",
-        fr: "Outils back-end",
-      },
-      tech: [
-        "Uvicorn",
-        "SQLAlchemy",
-        "OAuth",
-        "PostgreSQL",
-        "Postman",
-        "TablePlus",
-      ],
-    },
-    {
-      title: {
-        en: "Back-End Blocks",
-        fr: "Blocs back-end",
-      },
-      tech: ["RapidAPI"],
+      tech: ["Git", "GitHub", "GitLab", "Jira"],
     },
   ],
   about: {
     en: (
       <>
+        <strong>User experience is the most powerful sales channel.</strong>
         <span>
-          Hi, I&#39;m Matthieu, full-stack engineer specialized in AI-powered
-          SaaS. I don&#39;t just build cutting-edge, accessible and scalable web
-          applications: I craft experiences that drive engagement, reduce
-          friction and inspire user trust.
+          As a freelance web & mobile developer specializing in UI/UX and LLM
+          integration, I’ve seen that the products that sell best aren’t the
+          ones with the most features, but the ones that minimize friction for
+          the user.
         </span>
         <span>
-          Combining my developer skills with a strong background in design, I
-          bridge the gap between user experience and technical implementation,
-          ensuring pixel-perfect, seamless user journeys.
-        </span>
-        <span>
-          In the past, I’ve enabled startups to achieve their first profits,
-          helped TotalEnergies strengthen its leadership in the Power & Gas
-          market by designing and delivering impactful AI-based solutions. I’m
-          now ready to bring this mindset to my next challenge!
+          That&apos;s why I help businesses maximize their ROI with my PERF
+          method.
         </span>
       </>
     ),
     fr: (
       <>
+        <strong>
+          L&apos;expérience utilisateur est le canal de vente le plus puissant.
+        </strong>
         <span>
-          Bonjour, je suis Matthieu, développeur full-stack spécialisé dans les
-          SaaS améliorées par IA. Je ne me contente pas de créer des
-          applications web innovantes, accessibles et évolutives : je conçois
-          des expériences qui suscitent l’engagement, réduisent les frictions et
-          inspirent la confiance des utilisateurs.
+          En tant que développeur web & mobile freelance spécialisé en UI/UX et
+          en intégration de LLM, j&apos;ai constaté que les produits qui se
+          vendent le plus ne sont pas ceux avec le plus de fonctionnalités, mais
+          ceux qui minimisent les frictions pour l&apos;utilisateur.
         </span>
         <span>
-          En associant mes compétences de développeur à une solide expérience en
-          design, je comble le fossé entre l’expérience utilisateur et la mise
-          en œuvre technique, garantissant des parcours fluides et un rendu
-          pixel-perfect.
-        </span>
-        <span>
-          Par le passé, j’ai permis à des start-up de générer leurs premiers
-          bénéfices et aidé TotalEnergies à renforcer sa position de leader sur
-          le marché de l’énergie (Power & Gas) en concevant et en livrant des
-          solutions à fort impact basées sur l’IA. Aujourd’hui, je suis prêt à
-          mettre cet état d’esprit au service de mon prochain défi !
+          C&apos;est pourquoi j&apos;aide les entreprises à maximiser leur
+          retour sur investissement avec ma méthode PERF.
         </span>
       </>
     ),

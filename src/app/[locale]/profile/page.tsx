@@ -63,45 +63,21 @@ export default function Profile() {
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
-          <SectionTitle title={t("profile.providing")} />
+          <SectionTitle title={t("profile.method")} />
           <FeaturesSectionWithHoverEffects feat={profile.features} />
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.stackTitle")} />
-          <div className="flex flex-col gap-y-6">
-            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-              {profile.stack.map((el, index) => (
-                <SkillBox
-                  key={index}
-                  icon={el.icon}
-                  title={getTranslatedData(el.title, locale)}
-                  items={el.tech}
-                  accent={el.accent}
-                />
-              ))}
-            </div>
-            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-              {profile.frontStack.map((el, index) => (
-                <SkillBox
-                  key={index}
-                  icon={el.icon}
-                  title={getTranslatedData(el.title, locale)}
-                  items={el.tech}
-                  accent={el.accent}
-                />
-              ))}
-            </div>
-            <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
-              {profile.backStack.map((el, index) => (
-                <SkillBox
-                  key={index}
-                  icon={el.icon}
-                  title={getTranslatedData(el.title, locale)}
-                  items={el.tech}
-                  accent={el.accent}
-                />
-              ))}
-            </div>
+          <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+            {profile.stack.map((el, index) => (
+              <SkillBox
+                key={index}
+                icon={el.icon}
+                title={getTranslatedData(el.title, locale)}
+                items={el.tech}
+                accent={el.accent}
+              />
+            ))}
           </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
@@ -152,13 +128,7 @@ export default function Profile() {
         </BlurFade>
       </div>
       <BlurFade delay={blurDelay++ / 10}>
-        <SeeMore
-          socials={[
-            profile.socials.linkedin,
-            profile.socials.malt,
-            profile.socials.findy,
-          ]}
-        />
+        <SeeMore socials={[profile.socials.linkedin, profile.socials.malt]} />
       </BlurFade>
     </TestimonialsStatusWrapper>
   );

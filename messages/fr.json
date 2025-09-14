@@ -40,13 +40,12 @@
         "prefix": "",
         "skills": {
           "1": "Développeur full-stack",
-          "2": "Spécialiste front-end",
-          "3": "Designer UI/UX",
-          "4": "Spécialiste SaaS IA"
+          "2": "Designer UI/UX",
+          "3": "Intégrateur IA"
         },
-        "suffix": " depuis 2021."
+        "suffix": " web & mobile."
       },
-      "subtitle": "Je ne développe pas que des interfaces : je façonne des <highlight>expériences IA durables et engageantes</highlight> depuis 2021."
+      "subtitle": "Ils me font confiance :"
     }
   },
   "profile": {
@@ -67,7 +66,7 @@
     "title": "Profil",
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
-    "providing": "Ce que j'apporte",
+    "method": "Ma méthode (PERF)",
     "stackTitle": "Ma stack technique",
     "work": "Expériences",
     "education": "Formations",

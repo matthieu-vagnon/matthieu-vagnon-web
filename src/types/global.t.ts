@@ -52,18 +52,6 @@ declare global {
             name: string;
           }[];
     }[];
-    frontStack: {
-      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-      title: MultiLingual;
-      accent?: boolean;
-      tech: string[];
-    }[];
-    backStack: {
-      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-      title: MultiLingual;
-      accent?: boolean;
-      tech: string[];
-    }[];
     about: MultiLingual;
     experience: {
       company: string;

@@ -4,10 +4,10 @@ import { profile } from "@/data/profile";
 import { getTranslatedData } from "@/lib/utils";
 import { LayoutGroup, motion } from "framer-motion";
 import { useLocale, useMessages, useTranslations } from "next-intl";
+import Image from "next/image";
 import React from "react";
 import { BlurFade } from "./BlurFade";
 import { LinkButton } from "./Button";
-import Highlight from "./Highlight";
 import { MainCard, MainCardContent } from "./MainCard";
 import Logo from "./svg/Logo";
 import { TextRotate } from "./TextRotate";
@@ -95,18 +95,7 @@ export default function TitleBox() {
           <motion.span
             layout
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          >
-            <p className="text-center text-sm sm:text-base md:text-lg text-foreground-secondary!">
-              {t.rich("subtitle", {
-                highlight: (chunks: React.ReactNode) => (
-                  <Highlight>{chunks}</Highlight>
-                ),
-              })}
-            </p>
-          </motion.span>
-          <motion.span
-            layout
-            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            className="mt-4"
           >
             <div className="flex items-center justify-center gap-3 flex-wrap">
               {Object.values(socialLinks).map((social, index) => (
@@ -123,6 +112,31 @@ export default function TitleBox() {
                   </LinkButton>
                 </BlurFade>
               ))}
+            </div>
+          </motion.span>
+          <motion.span
+            layout
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            className="flex flex-col gap-y-2"
+          >
+            <span className="text-center font-sans-special font-medium text-md sm:text-lg md:text-xl text-foreground-secondary">
+              {t("subtitle")}
+            </span>
+            <div className="h-12 flex gap-4 justify-center items-center">
+              <Image
+                src="/they-trust-me/totalenergies.png"
+                alt="TotalEnergies"
+                height={48}
+                width={1000}
+                className="object-contain h-full w-auto"
+              />
+              <Image
+                src="/they-trust-me/ccifj.png"
+                alt="CCIFJ"
+                height={48}
+                width={1000}
+                className="object-contain h-full w-auto"
+              />
             </div>
           </motion.span>
         </div>

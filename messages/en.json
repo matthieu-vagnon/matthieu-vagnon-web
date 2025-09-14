@@ -40,14 +40,13 @@
       "job": {
         "prefix": "",
         "skills": {
-          "1": "Full-Stack Engineer",
-          "2": "Front-End Specialist",
+          "1": "Full-Stack Developer",
           "3": "UI/UX Designer",
-          "4": "AI SaaS Specialist"
+          "4": "AI Implementer"
         },
-        "suffix": " since 2021."
+        "suffix": " web & mobile."
       },
-      "subtitle": "I don’t just build interfaces, I craft <highlight>lasting and engaging AI-powered experiences</highlight> since 2021."
+      "subtitle": "They trust me:"
     }
   },
   "profile": {
@@ -68,7 +67,7 @@
     "title": "Profile",
     "description": "A complete summary of my skills, work and education.",
     "about": "About",
-    "providing": "What I Provide",
+    "method": "My Method (PERF)",
     "stackTitle": "My Tech Stack",
     "work": "Work",
     "education": "Education",
