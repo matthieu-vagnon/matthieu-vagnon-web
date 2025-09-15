@@ -24,7 +24,7 @@ export default function SkillBox({
   return (
     <div
       className={cn(
-        "flex flex-col gap-3 bg-accent p-4 rounded-lg cursor-default overflow-hidden transition-all duration-300",
+        "flex flex-col gap-3 bg-accent p-4 rounded-lg overflow-hidden transition-all duration-300",
         accent && "bg-main/10",
         className
       )}
