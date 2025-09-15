@@ -111,19 +111,30 @@ export const profile: Profile = {
         fr: "3. Refactor",
       },
       description: {
-        en: "Code optimization and reducing the visual gap between MVP and prototypes.",
-        fr: "Optimisation du code et réduction du gap visuel entre MVP et prototypes.",
+        en: "Code optimization and cleaning.",
+        fr: "Optimisation du code et nettoyage.",
       },
       icon: <Eraser />,
     },
     {
       title: {
-        en: "4. Functionality",
-        fr: "4. Fonctionnalité",
+        en: "4. Redesign",
+        fr: "4. Redesign",
       },
       description: {
-        en: "Adding extra features while avoiding bugs, slowdowns, and delays, thanks to the previous step.",
-        fr: "Ajout de fonctionnalités supplémentaires tout en évitant bugs, lenteurs et retards grâce à l'étape précédente.",
+        en: "Improving the user experience (UX) and user interface (UI) to make the app more intuitive and enjoyable.",
+        fr: "Amélioration de l'expérience utilisateur (UX) et de l'interface utilisateur (UI) pour rendre l'application plus intuitive et agréable.",
+      },
+      icon: <Paintbrush />,
+    },
+    {
+      title: {
+        en: "5. Functionality",
+        fr: "5. Fonctionnalité",
+      },
+      description: {
+        en: "Adding extra features while avoiding bugs, slowdowns, and delays, thanks to the previous steps.",
+        fr: "Ajout de fonctionnalités supplémentaires tout en évitant bugs, lenteurs et retards grâce aux étapes précédentes.",
       },
       icon: <Keyboard />,
     },
@@ -251,7 +262,7 @@ export const profile: Profile = {
           the user.
         </span>
         <span>
-          That&apos;s why I help businesses maximize their ROI with my PERF
+          That&apos;s why I help businesses maximize their ROI with my PERRF
           method.
         </span>
       </>
@@ -269,7 +280,7 @@ export const profile: Profile = {
         </span>
         <span>
           C&apos;est pourquoi j&apos;aide les entreprises à maximiser leur
-          retour sur investissement avec ma méthode PERF.
+          retour sur investissement avec ma méthode PERRF.
         </span>
       </>
     ),
