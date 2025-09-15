@@ -7,7 +7,7 @@ import TitleBox from "@/components/TitleBox";
 export default function Home() {
   return (
     <>
-      <div className="min-h-svh w-full flex flex-col gap-y-4 items-center pb-22">
+      <div className="min-h-dvh w-full flex flex-col gap-y-4 items-center pb-22">
         <div className="flex flex-col gap-y-5 w-full mt-2">
           <BlurFade className="w-full">
             <InfoBand className="mt-4" />

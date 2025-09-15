@@ -124,7 +124,7 @@ export default async function RootLayout({
                     zIndex={999}
                   />
                   <Toaster />
-                  <div className="max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
+                  <div className="min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
                     {children}
                     <CardStack items={testimonials} />
                     <AppsDock />
