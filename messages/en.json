@@ -38,14 +38,14 @@
     "titleBox": {
       "name": "Hi, I'm <strong>Matthieu Vagnon</strong>,",
       "job": {
-        "prefix": "",
+        "prefix": "web & mobile ",
         "skills": {
           "1": "Full-Stack Developer",
           "2": "UI/UX Designer",
           "3": "AI Implementer",
           "4": "Project Manager"
         },
-        "suffix": " web & mobile."
+        "suffix": "."
       },
       "subtitle": "They trust me:"
     }
