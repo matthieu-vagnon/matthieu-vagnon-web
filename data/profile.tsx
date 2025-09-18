@@ -248,7 +248,7 @@ export const profile: Profile = {
         en: "Project Management & Collaboration",
         fr: "Gestion de projet & collaboration",
       },
-      tech: ["Git", "GitHub", "GitLab", "Jira"],
+      tech: ["Git", "GitHub", "GitLab", "Notion"],
     },
   ],
   about: {
