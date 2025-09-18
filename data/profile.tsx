@@ -240,7 +240,14 @@ export const profile: Profile = {
         en: "Infrastructure",
         fr: "Infrastructure",
       },
-      tech: ["Docker", "Google Cloud", "GitHub Actions", "Vercel", "Railway"],
+      tech: [
+        "Docker",
+        "Google Cloud",
+        "GitHub Actions",
+        "Vercel",
+        "Railway",
+        "Firebase",
+      ],
     },
     {
       icon: Users,
