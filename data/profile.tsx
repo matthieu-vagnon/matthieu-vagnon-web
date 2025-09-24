@@ -177,6 +177,13 @@ export const profile: Profile = {
       tech: ["TypeScript", "JavaScript", "SQL", "HTML/JSX", "CSS/SCSS/LESS"],
     },
     {
+      icon: Palette,
+      title: {
+        en: "UI/UX",
+      },
+      tech: ["Figma"],
+    },
+    {
       icon: Paintbrush,
       title: {
         en: "Front-End",
@@ -210,13 +217,6 @@ export const profile: Profile = {
         "Google Cloud",
         "PostgreSQL",
       ],
-    },
-    {
-      icon: Palette,
-      title: {
-        en: "UI/UX",
-      },
-      tech: ["Figma"],
     },
     {
       icon: Sparkles,
