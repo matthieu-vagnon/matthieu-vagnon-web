@@ -209,6 +209,8 @@ export const profile: Profile = {
         fr: "Infrastructure & back-end",
       },
       tech: [
+        "OpenRouter",
+        "RapidAPI",
         "Docker",
         "GitHub Actions",
         "Vercel",
