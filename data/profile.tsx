@@ -21,11 +21,9 @@ import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
-  Brain,
   CodeXml,
   Cog,
   Eraser,
-  HardHat,
   Heart,
   Keyboard,
   Paintbrush,
@@ -200,10 +198,18 @@ export const profile: Profile = {
     {
       icon: Cog,
       title: {
-        en: "Back-End",
-        fr: "Back-end",
+        en: "Infrastructure & Back-End",
+        fr: "Infrastructure & back-end",
       },
-      tech: ["Node.js", "Fastify", "Prisma", "PostgreSQL"],
+      tech: [
+        "Docker",
+        "GitHub Actions",
+        "Vercel",
+        "Supabase",
+        "Firebase",
+        "Google Cloud",
+        "PostgreSQL",
+      ],
     },
     {
       icon: Palette,
@@ -213,41 +219,12 @@ export const profile: Profile = {
       tech: ["Figma"],
     },
     {
-      icon: Brain,
-      title: {
-        en: "AI",
-        fr: "IA",
-      },
-      tech: [
-        "LangChain",
-        "LangGraph",
-        "OpenAI API",
-        "Anthropic API",
-        "Gemini API",
-      ],
-    },
-    {
       icon: Sparkles,
       title: {
         en: "Code Quality",
         fr: "Qualité du code",
       },
-      tech: ["ESLint", "Prettier", "Jest"],
-    },
-    {
-      icon: HardHat,
-      title: {
-        en: "Infrastructure",
-        fr: "Infrastructure",
-      },
-      tech: [
-        "Docker",
-        "Google Cloud",
-        "GitHub Actions",
-        "Vercel",
-        "Railway",
-        "Firebase",
-      ],
+      tech: ["ESLint", "Prettier", "Cypress"],
     },
     {
       icon: Users,
