@@ -94,8 +94,8 @@ export const profile: Profile = {
     },
     {
       title: {
-        en: "2. Essential/MVP",
-        fr: "2. Essentiel/MVP",
+        en: "2. Essential (POC or MVP)",
+        fr: "2. Essentiel (POC ou MVP)",
       },
       description: {
         en: "Development of a Minimum Viable Product to bring a marketable product to life quickly.",
@@ -109,8 +109,8 @@ export const profile: Profile = {
         fr: "3. Refactor",
       },
       description: {
-        en: "Code optimization and cleaning.",
-        fr: "Optimisation du code et nettoyage.",
+        en: "Code optimization and cleaning for the long-term maintainability.",
+        fr: "Optimisation du code et nettoyage pour la maintenabilité à long terme.",
       },
       icon: <Eraser />,
     },
@@ -234,7 +234,7 @@ export const profile: Profile = {
         en: "Project Management & Collaboration",
         fr: "Gestion de projet & collaboration",
       },
-      tech: ["Git", "GitHub", "GitLab", "Notion"],
+      tech: ["Git", "GitHub", "GitLab", "Jira", "Trello", "Notion"],
     },
   ],
   about: {
