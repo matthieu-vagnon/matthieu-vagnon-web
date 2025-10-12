@@ -162,7 +162,7 @@
       "title": "Questions Fréquemment Posées",
       "questions": {
         "1": {
-          "question": "Suis-je favorable à l'utilisation de l'IA (Intelligence Artificielle) ?",
+          "question": "Est ce que j'utilise l'IA ?",
           "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. À ce titre, j'utilise chaque jour des outils comme GitHub Copilot, GitHub Spark et ChatGPT. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome. J'utilise donc peu l'IA pour des tâches nécessitant une grande créativité, comme le design UI/UX et la conception de fonctionnalités complexes."
         }
       }

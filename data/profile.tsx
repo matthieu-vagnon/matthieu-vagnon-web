@@ -23,7 +23,6 @@ import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
   CodeXml,
   Cog,
-  Eraser,
   Heart,
   Keyboard,
   Paintbrush,
@@ -83,56 +82,45 @@ export const profile: Profile = {
   features: [
     {
       title: {
-        en: "1. Prototype",
-        fr: "1. Prototypage",
+        en: "1. Design",
+        fr: "1. Design",
       },
       description: {
-        en: "Functional and visual first step. I understand the client’s vision and produce the initial app visuals.",
-        fr: "Première étape fonctionnelle et visuelle. Je comprends la vision du client et produis les premiers visuels de l'application.",
+        en: "Purely visual first step. I understand the client’s vision and produce the initial app visuals.",
+        fr: "Première étape purement visuelle. Je comprends la vision du client et produis les premiers visuels de l'application.",
       },
       icon: <PaletteIcon />,
     },
     {
       title: {
-        en: "2. Essential (POC or MVP)",
-        fr: "2. Essentiel (POC ou MVP)",
+        en: "2. Prototype",
+        fr: "2. Prototype",
       },
       description: {
-        en: "Development of a Minimum Viable Product to bring a marketable product to life quickly.",
-        fr: "Développement du Minimum Viable Product pour obtenir un produit marketable rapidement.",
+        en: "Development of a Proof of Concept and/or Minimum Viable Product to bring a marketable product to life as quickly as possible, while maintaining code quality.",
+        fr: "Développement du Proof of Concept et/ou du Minimum Viable Product pour obtenir un produit marketable le plus rapidement possible, tout en produisant du code de qualité.",
       },
       icon: <Zap />,
     },
     {
       title: {
-        en: "3. Refactor",
-        fr: "3. Refactor",
+        en: "3. Redesign/Refactor",
+        fr: "3. Redesign/Refactor",
       },
       description: {
-        en: "Code optimization and cleaning for the long-term maintainability.",
-        fr: "Optimisation du code et nettoyage pour la maintenabilité à long terme.",
-      },
-      icon: <Eraser />,
-    },
-    {
-      title: {
-        en: "4. Redesign",
-        fr: "4. Redesign",
-      },
-      description: {
-        en: "Improving the user experience (UX) and user interface (UI) to make the app more intuitive and enjoyable.",
-        fr: "Amélioration de l'expérience utilisateur (UX) et de l'interface utilisateur (UI) pour rendre l'application plus intuitive et agréable.",
+        en: "Code optimization and cleaning for the long-term maintainability and app efficiency. Improving the user experience (UX) and user interface (UI) to make the app more intuitive and enjoyable (adding more transitions, etc...).",
+        fr: "Optimisation du code et nettoyage pour la maintenabilité à long terme et l'efficacité de l'application. Amélioration de l'expérience utilisateur (UX) et de l'interface utilisateur (UI) pour rendre l'application plus intuitive et agréable (ajout de plus de transitions, etc...).",
       },
       icon: <Paintbrush />,
     },
     {
       title: {
-        en: "5. Functionality",
-        fr: "5. Fonctionnalité",
+        en: "4. Functionality",
+        fr: "4. Fonctionnalité",
       },
       description: {
-        en: "Adding extra features while avoiding bugs, slowdowns, and delays, thanks to the previous steps.",
-        fr: "Ajout de fonctionnalités supplémentaires tout en évitant bugs, lenteurs et retards grâce aux étapes précédentes.",
+        en: "Delivering the Minimum Viable Product if necessary, then adding extra features.",
+        fr: "Livraison du Minimum Viable Product si nécessaire, puis ajout de fonctionnalités supplémentaires.",
       },
       icon: <Keyboard />,
     },
