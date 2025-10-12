@@ -21,6 +21,7 @@ import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
+  BrushCleaning,
   CodeXml,
   Cog,
   Heart,
@@ -111,7 +112,7 @@ export const profile: Profile = {
         en: "Code optimization and cleaning for the long-term maintainability and app efficiency. Improving the user experience (UX) and user interface (UI) to make the app more intuitive and enjoyable (adding more transitions, etc...).",
         fr: "Optimisation du code et nettoyage pour la maintenabilité à long terme et l'efficacité de l'application. Amélioration de l'expérience utilisateur (UX) et de l'interface utilisateur (UI) pour rendre l'application plus intuitive et agréable (ajout de plus de transitions, etc...).",
       },
-      icon: <Paintbrush />,
+      icon: <BrushCleaning />,
     },
     {
       title: {
@@ -236,7 +237,7 @@ export const profile: Profile = {
           the user.
         </span>
         <span>
-          That&apos;s why I help businesses maximize their ROI with my PERRF
+          That&apos;s why I help businesses maximize their ROI with my 4-steps
           method.
         </span>
       </>
@@ -254,7 +255,7 @@ export const profile: Profile = {
         </span>
         <span>
           C&apos;est pourquoi j&apos;aide les entreprises à maximiser leur
-          retour sur investissement avec ma méthode PERRF.
+          retour sur investissement avec ma méthode en 4 étapes.
         </span>
       </>
     ),
