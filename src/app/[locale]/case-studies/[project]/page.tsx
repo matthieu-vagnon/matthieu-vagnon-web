@@ -213,7 +213,6 @@ export default async function Project(props: ProjectProps) {
             profile.socials.youtube,
             profile.socials.github,
           ]}
-          className="mt-10 sm:mt-12 md:mt-14 mb-28"
         />
       </BlurFade>
     </TestimonialsStatusWrapper>
