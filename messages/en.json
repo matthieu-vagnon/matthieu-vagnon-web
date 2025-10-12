@@ -158,6 +158,15 @@
     "copyPhone": "Phone number copied to clipboard!",
     "copyEmail": "Email copied to clipboard!",
     "translate": "Translation",
-    "original": "Original"
+    "original": "Original",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "1": {
+          "question": "Do I support the use of AI (Artificial Intelligence)?",
+          "answer": "Yes! I believe AI is an incredible tool for improving my productivity and expanding my knowledge. In that regard, I use tools like GitHub Copilot, GitHub Spark, and ChatGPT every day. That said, I’m convinced AI should remain a tool — a complement rather than a fully autonomous agent. Therefore, I rarely use AI for tasks that require a high degree of creativity, such as UI/UX design or complex feature conception."
+        }
+      }
+    }
   }
 }

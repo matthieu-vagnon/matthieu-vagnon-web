@@ -1,5 +1,6 @@
 import AppsDock from "@/components/AppsDock";
 import { CardStack } from "@/components/CardStack";
+import Footer from "@/components/Footer";
 import { testimonials } from "@/data/testimonials";
 import AccentColorProvider from "@/hooks/useAccentColor";
 import DockStatusProvider from "@/hooks/useDockStatus";
@@ -126,6 +127,7 @@ export default async function RootLayout({
                   <Toaster />
                   <div className="min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
                     {children}
+                    <Footer />
                     <CardStack items={testimonials} />
                     <AppsDock />
                   </div>

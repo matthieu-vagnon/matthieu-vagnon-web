@@ -1,9 +1,7 @@
-import { cn, getTranslatedData } from "@/lib/utils";
+import { getTranslatedData } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
-import packageJson from "../../package.json";
 import { LinkButton } from "./Button";
 import { HyperText } from "./HyperText";
-import LanguageSwitch from "./LanguageSwitch";
 import { Separator } from "./Separator";
 
 type SeeMoreProps = {
@@ -23,12 +21,7 @@ export default function SeeMore({ socials = [], className }: SeeMoreProps) {
   return (
     <>
       <Separator className="my-10 sm:my-12 md:my-14" />
-      <div
-        className={cn(
-          "flex flex-col items-center justify-center mb-28 gap-5",
-          className
-        )}
-      >
+      <div className={className}>
         <div className="flex flex-col items-center justify-center gap-2">
           <HyperText
             as="h3"
@@ -56,10 +49,6 @@ export default function SeeMore({ socials = [], className }: SeeMoreProps) {
               ))}
           </div>
         </div>
-        <div className="text-xs text-foreground-secondary">
-          {t("madeWithLove")} - v{packageJson.version}
-        </div>
-        <LanguageSwitch />
       </div>
     </>
   );
