@@ -200,7 +200,6 @@ export const profile: Profile = {
       },
       tech: [
         "OpenRouter",
-        "RapidAPI",
         "Docker",
         "GitHub Actions",
         "Vercel",
@@ -217,6 +216,14 @@ export const profile: Profile = {
         fr: "Qualité du code",
       },
       tech: ["ESLint", "Prettier", "Cypress"],
+    },
+    {
+      icon: Keyboard,
+      title: {
+        en: "Productivity Tools",
+        fr: "Outils de productivité",
+      },
+      tech: ["Google Stitch", "GitHub Copilot", "GitHub Spark"],
     },
     {
       icon: Users,
@@ -317,6 +324,7 @@ export const profile: Profile = {
             "PostgreSQL",
             "ESLint",
             "Prettier",
+            "GitHub Copilot",
             "Git",
             "GitHub",
             "Jira",
