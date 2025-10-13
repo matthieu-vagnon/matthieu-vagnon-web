@@ -68,7 +68,7 @@ export default function Profile() {
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.stackTitle")} />
-          <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto [&>*]:md:flex-none">
+          <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto">
             {profile.stack.map((el, index) => (
               <SkillBox
                 key={index}
@@ -96,7 +96,7 @@ export default function Profile() {
                     }
                     period={experience.timeline}
                     projects={experience.projects}
-                    isOpen={index === 0}
+                    isOpen={experience.timeline.trim().endsWith("now")}
                   />
                 ))}
               </div>

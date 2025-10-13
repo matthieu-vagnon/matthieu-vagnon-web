@@ -328,7 +328,7 @@ export const profile: Profile = {
         en: "Full-stack Engineer & Designer",
         fr: "Développeur full-stack & designer",
       },
-      timeline: `2024 - ${new Date().getFullYear()}`,
+      timeline: "2024 - 2025",
     },
     {
       company: "Predictive Layer",
