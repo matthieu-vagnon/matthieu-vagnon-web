@@ -7,7 +7,6 @@ import TailwindIcon from "@/components/svg/Tailwind";
 import TypescriptIcon from "@/components/svg/TypeScript";
 import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
-import freelance from "@/public/profile/freelance.png";
 import google from "@/public/profile/google.jpg";
 import ikm from "@/public/profile/ikm.jpeg";
 import influactive from "@/public/profile/influactive.jpeg";
@@ -182,13 +181,15 @@ export const profile: Profile = {
         "React.js",
         "React Native",
         "Next.js",
-        "Tailwind CSS",
-        "Material UI",
+        "Redux",
         "TanStack Query",
         "Electric SQL",
-        "Framer Motion",
         "React Router",
-        "i18n",
+        "i18next",
+        "Next-intl",
+        "Tailwind CSS",
+        "Material UI",
+        "Framer Motion",
       ],
     },
     {
@@ -231,14 +232,14 @@ export const profile: Profile = {
       <>
         <strong>User experience is the most powerful sales channel.</strong>
         <span>
-          As a freelance web & mobile developer specializing in UI/UX and LLM
-          integration, I’ve seen that the products that sell best aren’t the
-          ones with the most features, but the ones that minimize friction for
-          the user.
+          As a web & mobile developer and UI/UX designer specializing in LLM/AI
+          integration, I’ve seen that the digital products that sell best aren’t
+          the ones with the most features, but the ones that minimize friction
+          for the user and empower them to achieve their goals effortlessly.
         </span>
         <span>
-          That&apos;s why I help businesses maximize their ROI with my 4-steps
-          method.
+          This is why I help businesses maximize their ROI with my 4-steps
+          method, since 2021.
         </span>
       </>
     ),
@@ -248,121 +249,21 @@ export const profile: Profile = {
           L&apos;expérience utilisateur est le canal de vente le plus puissant.
         </strong>
         <span>
-          En tant que développeur web & mobile freelance spécialisé en UI/UX et
-          en intégration de LLM, j&apos;ai constaté que les produits qui se
-          vendent le plus ne sont pas ceux avec le plus de fonctionnalités, mais
-          ceux qui minimisent les frictions pour l&apos;utilisateur.
+          En tant que développeur web & mobile spécialisé en intégration de
+          LLM/IA et designer UI/UX, j&apos;ai constaté que les produits
+          numériques qui se vendent le plus ne sont pas ceux avec le plus de
+          fonctionnalités, mais ceux qui minimisent les frictions pour
+          l&apos;utilisateur et qui donnent à ce dernier le pouvoir de faire
+          beaucoup, sans effort.
         </span>
         <span>
-          C&apos;est pourquoi j&apos;aide les entreprises à maximiser leur
-          retour sur investissement avec ma méthode en 4 étapes.
+          C&apos;est pourquoi j&apos;aide depuis 2021 les entreprises à
+          maximiser leur retour sur investissement avec ma méthode en 4 étapes.
         </span>
       </>
     ),
   },
   experience: [
-    {
-      company: "Matthieu Vagnon (Freelance)",
-      logo: freelance,
-      projects: [
-        {
-          title: {
-            en: "Hosted Portfolio (mvagnon.dev)",
-            fr: "Portfolio hébergé (mvagnon.dev)",
-          },
-          description: [
-            {
-              en: "Web portfolio built to showcase my freelancer profile and my past project case studies as well as my links.",
-              fr: "Portfolio web construit pour présenter mon profil freelance et mes études de cas de projets passés ainsi que mes liens.",
-            },
-            {
-              en: "Optimized for search engine visibility, achieving a 100/100 score in both SEO and Best Practices on Lighthouse, leveraging Next.js’s server-side rendering.",
-              fr: "Optimisé pour la visibilité dans les moteurs de recherche, obtenant un score de 100/100 en SEO et Bonnes Pratiques sur Lighthouse, en exploitant le rendu côté serveur de Next.js.",
-            },
-            {
-              en: "Delivers an intuitive user experience and fast performance, with a 99 Performance score on Lighthouse.",
-              fr: "Délivre une expérience utilisateur intuitive et des performances rapides, avec un score Performance de 99 sur Lighthouse.",
-            },
-            {
-              en: "Source code is publicly available on GitHub.",
-              fr: "Le code source est disponible publiquement sur GitHub.",
-            },
-          ],
-          responsibilities: [
-            {
-              en: "Designed the entire application and UI components in Figma.",
-              fr: "Conception de l'ensemble de l'application et des composants UI dans Figma.",
-            },
-            {
-              en: "Independently implemented the app using Next.js within less than 4 weeks.",
-              fr: "Développement de l'application web en utilisant Next.js dans un délai de moins de 4 semaines.",
-            },
-          ],
-          technologies: [
-            "React.js",
-            "Next.js",
-            "TypeScript",
-            "JSX",
-            "Context API",
-            "TanStack Query",
-            "Framer Motion",
-            "Next-intl",
-            "Tailwind CSS",
-            "ShadCN",
-            "Radix UI",
-            "Webpack",
-            "npm",
-            "Figma",
-          ],
-        },
-        {
-          title: {
-            en: "Deliver Software Development Services for a Diverse Range of Clients",
-            fr: "Prestations de développement full-stack pour divers clients",
-          },
-          responsibilities: [
-            {
-              en: "Provided full-stack development services to companies ranging from startups to international clients with a market cap of $130+ Billion USD, such as TotalEnergies.",
-              fr: "Prestations de développement full-stack pour des clients allant de startups à des entreprises internationales (ex. : Pulse Partners, TotalEnergies).",
-            },
-            {
-              en: "Focusing on the user experience (UX) to promote a strong user-first approach.",
-              fr: "Accent mis sur l’expérience utilisateur (UX) afin de garantir une approche centrée sur l’utilisateur.",
-            },
-          ],
-          technologies: [
-            "React.js",
-            "Next.js",
-            "JavaScript (ES6+)",
-            "TypeScript",
-            "JSX",
-            "CSS3",
-            "Python",
-            "SQL",
-            "Redux",
-            "Context API",
-            "Tailwind CSS",
-            "Material UI",
-            "ShadCN UI",
-            "Radix UI",
-            "Webpack",
-            "npm",
-            "FastAPI",
-            "Uvicorn",
-            "Pydantic",
-            "SQLAlchemy",
-            "OAuth",
-            "PostgreSQL",
-            "Figma",
-          ],
-        },
-      ],
-      position: {
-        en: "Full-Stack Engineer",
-        fr: "Développeur full-stack",
-      },
-      timeline: `2024 - ${new Date().getFullYear()}`,
-    },
     {
       company: "Pulse Partners",
       logo: pulsePartners,
@@ -399,23 +300,27 @@ export const profile: Profile = {
             "React.js",
             "Next.js",
             "TypeScript",
-            "JSX",
+            "HTML/JSX",
+            "CSS/SCSS/LESS",
             "SQL",
+            "Figma",
             "Redux",
-            "Context API",
             "TanStack Query",
-            "Framer Motion",
-            "Zod",
             "Next-intl",
             "Tailwind CSS",
             "Material UI",
-            "ShadCN UI",
-            "Radix UI",
-            "Webpack",
-            "npm",
-            "PostgreSQL",
+            "Framer Motion",
+            "Vercel",
             "Supabase",
-            "Figma",
+            "Firebase",
+            "Google Cloud",
+            "PostgreSQL",
+            "ESLint",
+            "Prettier",
+            "Git",
+            "GitHub",
+            "Jira",
+            "Notion",
           ],
         },
       ],
@@ -467,17 +372,21 @@ export const profile: Profile = {
           ],
           technologies: [
             "React.js",
-            "JavaScript (ES6+)",
-            "JSX",
-            "CSS3",
-            "Redux",
-            "Context API",
-            "React-i18next",
-            "Material UI",
-            "Webpack",
-            "Vite",
-            "npm",
+            "JavaScript",
+            "HTML/JSX",
+            "CSS/SCSS/LESS",
             "Figma",
+            "Redux",
+            "React Router",
+            "i18next",
+            "Material UI",
+            "ESLint",
+            "Prettier",
+            "Cypress",
+            "Git",
+            "GitLab",
+            "Jira",
+            "Notion",
           ],
         },
         {
@@ -510,17 +419,21 @@ export const profile: Profile = {
           ],
           technologies: [
             "React.js",
-            "JavaScript (ES6+)",
-            "JSX",
-            "CSS3",
-            "Redux",
-            "Context API",
-            "React-i18next",
-            "Material UI",
-            "Webpack",
-            "Vite",
-            "npm",
+            "JavaScript",
+            "HTML/JSX",
+            "CSS/SCSS/LESS",
             "Figma",
+            "Redux",
+            "React Router",
+            "i18next",
+            "Material UI",
+            "ESLint",
+            "Prettier",
+            "Cypress",
+            "Git",
+            "GitLab",
+            "Jira",
+            "Notion",
           ],
         },
         {
@@ -572,7 +485,7 @@ export const profile: Profile = {
               fr: "Maintenance de ces sites web.",
             },
           ],
-          technologies: ["JavaScript (ES6+)", "HTML5", "CSS3", "SQL"],
+          technologies: ["JavaScript", "HTML/JSX", "CSS/SCSS/LESS", "SQL"],
         },
         {
           title: {
@@ -599,7 +512,13 @@ export const profile: Profile = {
               fr: "Intégration d’outils de suivi (Google Analytics, Matomo, etc.), injectés conditionnellement en fonction du consentement de l’utilisateur — résultant dans une augmentation mesurable de la couverture du suivi, jusqu’à 2x plus de données collectées.",
             },
           ],
-          technologies: ["JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "Figma"],
+          technologies: [
+            "JavaScript",
+            "HTML/JSX",
+            "CSS/SCSS/LESS",
+            "SQL",
+            "Figma",
+          ],
         },
       ],
       position: {

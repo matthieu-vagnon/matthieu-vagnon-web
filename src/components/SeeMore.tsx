@@ -25,6 +25,7 @@ export default function SeeMore({ socials = [] }: SeeMoreProps) {
       <Separator className="my-10 sm:my-12 md:my-14" />
       <div className="flex flex-col gap-y-10 sm:gap-y-12 md:gap-y-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <Footer />
           <div className="flex flex-col items-center justify-center gap-2">
             <HyperText
               as="h3"
@@ -52,7 +53,6 @@ export default function SeeMore({ socials = [] }: SeeMoreProps) {
                 ))}
             </div>
           </div>
-          <Footer />
         </div>
         <div className="flex flex-col gap-y-2 items-center justify-center">
           <div className="text-xs text-foreground-secondary">
