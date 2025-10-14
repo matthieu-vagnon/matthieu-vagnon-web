@@ -7,6 +7,7 @@ import TailwindIcon from "@/components/svg/Tailwind";
 import TypescriptIcon from "@/components/svg/TypeScript";
 import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
+import cosigma from "@/public/profile/cosigma.jpeg";
 import google from "@/public/profile/google.jpg";
 import ikm from "@/public/profile/ikm.jpeg";
 import influactive from "@/public/profile/influactive.jpeg";
@@ -272,6 +273,16 @@ export const profile: Profile = {
   },
   experience: [
     {
+      company: "CoSigma.io",
+      logo: cosigma,
+      projects: [],
+      position: {
+        en: "Front-End Engineer & UI/UX Designer",
+        fr: "Développeur front-end & designer UI/UX",
+      },
+      timeline: "2025 - now",
+    },
+    {
       company: "Pulse Partners",
       logo: pulsePartners,
       projects: [
@@ -333,8 +344,8 @@ export const profile: Profile = {
         },
       ],
       position: {
-        en: "Full-stack Engineer & Designer",
-        fr: "Développeur full-stack & designer",
+        en: "Full-Stack Engineer & UI/UX Designer",
+        fr: "Développeur full-stack & designer UI/UX",
       },
       timeline: "2024 - 2025",
     },
@@ -459,7 +470,7 @@ export const profile: Profile = {
         },
       ],
       position: {
-        en: "Principal Front-end Engineer & Designer",
+        en: "Principal Front-End Engineer & Designer",
         fr: "Développeur front-end principal & designer",
       },
       timeline: "2022 - 2024",

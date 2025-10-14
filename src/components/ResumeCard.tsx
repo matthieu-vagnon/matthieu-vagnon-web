@@ -6,6 +6,7 @@ import { cn, getTranslatedData } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   ChevronRightIcon,
+  Dot,
   LucideIcon,
   SquareArrowOutUpRight,
 } from "lucide-react";
@@ -169,7 +170,13 @@ export const ResumeCard = (props: ResumeCardProps) => {
     </Link>
   ) : (
     <button onClick={handleClick} className="text-left cursor-pointer">
-      <ResumeCardContent isExpanded={isExpanded} {...props} />
+      <ResumeCardContent
+        isExpanded={isExpanded}
+        indicator={
+          props.projects && props.projects.length < 1 ? Dot : undefined
+        }
+        {...props}
+      />
     </button>
   );
 };
