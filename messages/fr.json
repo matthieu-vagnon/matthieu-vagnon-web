@@ -35,17 +35,18 @@
     },
     "title": "Accueil",
     "titleBox": {
-      "name": "Bonjour, je suis <strong>Matthieu Vagnon</strong>,",
       "job": {
-        "prefix": "",
+        "prefix": "Bonjour, je suis ",
         "skills": {
-          "1": "Développeur full-stack",
-          "2": "Designer UI/UX",
-          "3": "Intégrateur IA",
-          "4": "Chef de projet"
+          "1": "Matthieu Vagnon",
+          "2": "Développeur full-stack",
+          "3": "Designer UI/UX",
+          "4": "Intégrateur IA",
+          "5": "Chef de projet"
         },
-        "suffix": " web & mobile."
+        "suffix": ""
       },
+      "secondLine": "et je conçois des applications qui convertissent vraiment.",
       "subtitle": "Ils me font confiance :"
     }
   },

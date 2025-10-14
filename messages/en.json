@@ -36,17 +36,18 @@
     },
     "title": "Home",
     "titleBox": {
-      "name": "Hi, I'm <strong>Matthieu Vagnon</strong>,",
       "job": {
-        "prefix": "web & mobile ",
+        "prefix": "Hi, I'm ",
         "skills": {
-          "1": "Full-Stack Developer",
-          "2": "UI/UX Designer",
-          "3": "AI Implementer",
-          "4": "Project Manager"
+          "1": "Matthieu Vagnon",
+          "2": "Full-Stack Developer",
+          "3": "UI/UX Designer",
+          "4": "AI Implementer",
+          "5": "Project Manager"
         },
-        "suffix": "."
+        "suffix": ""
       },
+      "secondLine": "and I build apps that actually convert.",
       "subtitle": "They trust me:"
     }
   },

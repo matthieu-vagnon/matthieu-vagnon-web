@@ -5,12 +5,11 @@ import { getTranslatedData } from "@/lib/utils";
 import { LayoutGroup, motion } from "framer-motion";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
 import { BlurFade } from "./BlurFade";
 import { LinkButton } from "./Button";
 import { MainCard, MainCardContent } from "./MainCard";
-import Logo from "./svg/Logo";
 import { TextRotate } from "./TextRotate";
+import Logo from "./svg/Logo";
 
 export default function TitleBox() {
   const t = useTranslations("home.titleBox");
@@ -28,26 +27,16 @@ export default function TitleBox() {
           <motion.span
             layout
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            className="flex rounded-sm overflow-hidden hover:rotate-360 transition-transform duration-300"
+          >
+            <Logo />
+          </motion.span>
+          <motion.span
+            layout
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
             <MainCard variant="dots" className="h-fit w-fit bg-background">
               <MainCardContent className="flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-xl sm:text-3xl md:text-4xl translate-y-[6px]">
-                <motion.span
-                  layout
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  className="flex mb-2"
-                >
-                  <Logo />
-                </motion.span>
-                <motion.span
-                  layout
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                >
-                  {t.rich("name", {
-                    strong: (chunks: React.ReactNode) => (
-                      <span className="font-bold">{chunks}</span>
-                    ),
-                  })}
-                </motion.span>
                 <span className="flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2">
                   <motion.span
                     layout
@@ -89,6 +78,15 @@ export default function TitleBox() {
                     {t("job.suffix")}
                   </motion.span>
                 </span>
+                <motion.span
+                  layout
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  className="flex mb-2"
+                >
+                  <span className="font-handwriting text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    {t("secondLine")}
+                  </span>
+                </motion.span>
               </MainCardContent>
             </MainCard>
           </motion.span>
