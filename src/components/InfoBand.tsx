@@ -12,11 +12,11 @@ export default function InfoBand({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "w-full p-1.5 flex items-center justify-center rounded-lg bg-main",
+        "w-full py-2 px-3 flex items-center justify-center rounded-lg bg-main",
         className
       )}
     >
-      <span className="text-main-foreground font-medium text-md sm:text-lg text-center gap-2">
+      <span className="text-main-foreground font-medium text-sm sm:text-lg text-center gap-2">
         {t.rich("infoBand.text", {
           verif: () => <BadgeCheck className="inline mr-1 mb-0.5 w-4 h-4" />,
           a: (chunks) => (
