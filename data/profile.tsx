@@ -21,6 +21,7 @@ import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
+  BrainCircuit,
   BrushCleaning,
   CodeXml,
   Cog,
@@ -29,7 +30,6 @@ import {
   Paintbrush,
   Palette,
   PaletteIcon,
-  Sparkles,
   Users,
   Zap,
 } from "lucide-react";
@@ -166,13 +166,6 @@ export const profile: Profile = {
       tech: ["TypeScript", "JavaScript", "SQL", "HTML/JSX", "CSS/SCSS/LESS"],
     },
     {
-      icon: Palette,
-      title: {
-        en: "UI/UX",
-      },
-      tech: ["Figma"],
-    },
-    {
       icon: Paintbrush,
       title: {
         en: "Front-End",
@@ -191,6 +184,9 @@ export const profile: Profile = {
         "Tailwind CSS",
         "Material UI",
         "Framer Motion",
+        "Cypress",
+        "ESLint",
+        "Prettier",
       ],
     },
     {
@@ -200,7 +196,6 @@ export const profile: Profile = {
         fr: "Infrastructure & back-end",
       },
       tech: [
-        "OpenRouter",
         "Docker",
         "GitHub Actions",
         "Vercel",
@@ -211,20 +206,19 @@ export const profile: Profile = {
       ],
     },
     {
-      icon: Sparkles,
+      icon: Palette,
       title: {
-        en: "Code Quality",
-        fr: "Qualité du code",
+        en: "UI/UX",
       },
-      tech: ["ESLint", "Prettier", "Cypress"],
+      tech: ["Figma"],
     },
     {
-      icon: Keyboard,
+      icon: BrainCircuit,
       title: {
-        en: "Productivity Tools",
-        fr: "Outils de productivité",
+        en: "AI & LLM Integration",
+        fr: "Intégration IA & LLM",
       },
-      tech: ["Google Stitch", "GitHub Copilot", "GitHub Spark"],
+      tech: ["OpenRouter", "LM Studio"],
     },
     {
       icon: Users,
