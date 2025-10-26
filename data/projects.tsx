@@ -14,14 +14,12 @@ import mvWeb6 from "@/public/matthieu-vagnon/web-6.png";
 import mvWeb7 from "@/public/matthieu-vagnon/web-7.png";
 import mvWeb8 from "@/public/matthieu-vagnon/web-8.png";
 import mvWeb9 from "@/public/matthieu-vagnon/web-9.png";
-import mvWebPreview1 from "@/public/matthieu-vagnon/web-preview-1.png";
 import smartInterviewBuilder1 from "@/public/smart-interview/builder-1.png";
 import smartInterviewBuilder2 from "@/public/smart-interview/builder-2.png";
 import smartInterviewBuilder3 from "@/public/smart-interview/builder-3.png";
 import smartInterviewBuilder4 from "@/public/smart-interview/builder-4.png";
 import smartInterviewBuilder5 from "@/public/smart-interview/builder-5.png";
 import smartInterviewBuilder6 from "@/public/smart-interview/builder-6.png";
-import smartInterviewBuilderPreview1 from "@/public/smart-interview/builder-preview-1.png";
 
 export const projects: Record<string, Project> = {
   "matthieu-vagnon": {
@@ -67,16 +65,6 @@ export const projects: Record<string, Project> = {
     technologies: ["React.js", "Next.js"],
     previewImg: mvWeb1,
     gallery: [
-      {
-        title: {
-          en: "Presentation",
-          fr: "Présentation",
-        },
-        src: "https://www.youtube.com/embed/ItIo2Pu0plQ",
-        previewImage: mvWebPreview1,
-        audio: "fr",
-        slug: "presentation",
-      },
       {
         title: { en: "Home Page", fr: "Page d'accueil" },
         image: mvWeb1,
@@ -324,16 +312,6 @@ export const projects: Record<string, Project> = {
     technologies: ["React.js", "Next.js", "Supabase"],
     previewImg: smartInterviewBuilder6,
     gallery: [
-      {
-        title: {
-          en: "Presentation",
-          fr: "Présentation",
-        },
-        previewImage: smartInterviewBuilderPreview1,
-        src: "https://www.youtube.com/embed/-toDAGtxVpQ",
-        audio: "fr",
-        slug: "presentation",
-      },
       {
         title: {
           en: "Builder Editor",
