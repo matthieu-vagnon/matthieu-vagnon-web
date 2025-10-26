@@ -49,7 +49,9 @@ export default function CaseStudies() {
         ))}
       </div>
       <BlurFade delay={blurDelay++ / 10}>
-        <SeeMore socials={[profile.socials.youtube, profile.socials.github]} />
+        <SeeMore
+          socials={[profile.socials.instagram, profile.socials.github]}
+        />
       </BlurFade>
     </TestimonialsStatusWrapper>
   );

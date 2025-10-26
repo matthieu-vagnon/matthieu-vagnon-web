@@ -1,11 +1,11 @@
 import Github from "@/components/svg/Github";
+import Instagram from "@/components/svg/Instagram";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
 import NextjsIcon from "@/components/svg/Nextjs";
 import ReactIcon from "@/components/svg/React";
 import TailwindIcon from "@/components/svg/Tailwind";
 import TypescriptIcon from "@/components/svg/TypeScript";
-import Youtube from "@/components/svg/Youtube";
 import businessCard from "@/public/profile/business-card.png";
 import cosigma from "@/public/profile/cosigma.jpeg";
 import google from "@/public/profile/google.jpg";
@@ -52,12 +52,12 @@ export const profile: Profile = {
         fr: "https://www.malt.fr/profile/matthieuvagnon1",
       },
     },
-    youtube: {
-      title: "YouTube",
-      img: <Youtube />,
+    instagram: {
+      title: "Instagram",
+      img: <Instagram />,
       link: {
-        en: "https://www.youtube.com/@matthieu-vagnon",
-        fr: "https://www.youtube.com/@matthieu-vagnon",
+        en: "https://www.instagram.com/matthieu_vagnon?igsh=bzNhamk1OXQ5bm1t&utm_source=qr",
+        fr: "https://www.instagram.com/matthieu_vagnon?igsh=bzNhamk1OXQ5bm1t&utm_source=qr",
       },
     },
     github: {

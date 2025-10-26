@@ -210,7 +210,7 @@ export default async function Project(props: ProjectProps) {
         <SeeMore
           socials={[
             ...relatedUrls,
-            profile.socials.youtube,
+            profile.socials.instagram,
             profile.socials.github,
           ]}
         />
