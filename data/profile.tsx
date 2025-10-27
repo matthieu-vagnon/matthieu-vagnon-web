@@ -274,7 +274,7 @@ export const profile: Profile = {
         en: "Front-End Engineer & UI/UX Designer",
         fr: "Développeur front-end & designer UI/UX",
       },
-      timeline: "2025 - now",
+      timeline: "2025 - 2025",
     },
     {
       company: "Pulse Partners",
