@@ -70,7 +70,7 @@
     "description": "A complete summary of my skills, work and education.",
     "about": "About",
     "method": "My Method",
-    "stackTitle": "My Tech Stack",
+    "stackTitle": "My Optimal Tech Stack",
     "work": "Work",
     "education": "Education",
     "responsibilities": "My roles and responsibilities"
@@ -165,7 +165,7 @@
       "questions": {
         "1": {
           "question": "Do I use AI?",
-          "answer": "Yes! I believe AI is an incredible tool for improving my productivity and expanding my knowledge. In that regard, I use tools like GitHub Copilot, GitHub Spark, and ChatGPT every day. That said, I’m convinced AI should remain a tool — a complement rather than a fully autonomous agent. Therefore, I rarely use AI for tasks that require a high degree of creativity, such as UI/UX design or complex feature conception."
+          "answer": "Yes! I believe AI is an incredible tool for improving my productivity and knowledge acquisition. In that regard, I use tools like Claude Code every day for simple, repetitive logic and refactoring, as well as Lovable to quickly deliver POCs. However, I remain convinced that AI is a tool and should remain a complement rather than a fully autonomous agent."
         }
       }
     }

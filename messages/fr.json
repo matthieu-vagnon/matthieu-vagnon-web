@@ -69,7 +69,7 @@
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
     "about": "À propos",
     "method": "Ma méthode",
-    "stackTitle": "Ma stack technique",
+    "stackTitle": "Ma stack technique optimale",
     "work": "Expériences",
     "education": "Formations",
     "responsibilities": "Mes rôles et responsabilités"
@@ -164,7 +164,7 @@
       "questions": {
         "1": {
           "question": "Est ce que j'utilise l'IA ?",
-          "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. À ce titre, j'utilise chaque jour des outils comme GitHub Copilot, GitHub Spark et ChatGPT. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome. J'utilise donc peu l'IA pour des tâches nécessitant une grande créativité, comme le design UI/UX et la conception de fonctionnalités complexes."
+          "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. À ce titre, j'utilise chaque jour des outils comme Claude Code pour les logiques simples, répétitives et pour les refactors mais également Lovable pour délivrer des POC rapidement. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome."
         }
       }
     }
