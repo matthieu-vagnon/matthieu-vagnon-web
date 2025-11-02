@@ -21,12 +21,13 @@ import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
+  BadgePlus,
   BrainCircuit,
   BrushCleaning,
   CodeXml,
   Cog,
+  FileChartPie,
   Heart,
-  Keyboard,
   Paintbrush,
   Palette,
   PaletteIcon,
@@ -83,47 +84,58 @@ export const profile: Profile = {
   features: [
     {
       title: {
-        en: "1. Design",
-        fr: "1. Design",
+        en: "1. Audit",
+        fr: "1. Audit",
       },
       description: {
-        en: "Purely visual first step. I understand the client’s vision and produce the initial app visuals.",
-        fr: "Première étape purement visuelle. Je comprends la vision du client et produis les premiers visuels de l'application.",
+        en: "For existing projects, I conduct a comprehensive assessment and propose concrete solutions (UI/UX, features, performance, etc.) to maximize product profitability.",
+        fr: "Dans le cas d'un projet existant, je réalise un audit complet et propose des solutions concrètes (UI/UX, fonctionnalités, performance, etc.) pour maximiser la rentabilité du produit.",
+      },
+      icon: <FileChartPie />,
+    },
+    {
+      title: {
+        en: "2. Design",
+        fr: "2. Design",
+      },
+      description: {
+        en: "Creation of wireframes and mockups. I translate the client's vision into concrete, user-centered visual designs that guide the entire development process.",
+        fr: "Conception des wireframes et maquettes. Je traduis la vision du client en designs visuels concrets et centrés sur l'utilisateur qui guident l'ensemble du processus de développement.",
       },
       icon: <PaletteIcon />,
     },
     {
       title: {
-        en: "2. Prototype",
-        fr: "2. Prototype",
+        en: "3. Early-Stage Product Development",
+        fr: "3. Développement du POC",
       },
       description: {
-        en: "Development of a Proof of Concept and/or Minimum Viable Product to bring a marketable product to life as quickly as possible, while maintaining code quality.",
-        fr: "Développement du Proof of Concept et/ou du Minimum Viable Product pour obtenir un produit marketable le plus rapidement possible, tout en produisant du code de qualité.",
+        en: "Development of a Proof of Concept and/or Minimum Viable Product to deliver a market-ready product as quickly as possible, while maintaining high code quality and scalability.",
+        fr: "Développement d'un Proof of Concept et/ou d'un Minimum Viable Product pour livrer un produit prêt pour le marché le plus rapidement possible, tout en maintenant une qualité de code élevée et une scalabilité optimale.",
       },
       icon: <Zap />,
     },
     {
       title: {
-        en: "3. Redesign/Refactor",
-        fr: "3. Redesign/Refactor",
+        en: "4. Technical and Visual Refinement",
+        fr: "4. Perfectionnement technique et visuel",
       },
       description: {
-        en: "Code optimization and cleaning for the long-term maintainability and app efficiency. Improving the user experience (UX) and user interface (UI) to make the app more intuitive and enjoyable (adding more transitions, etc...).",
-        fr: "Optimisation du code et nettoyage pour la maintenabilité à long terme et l'efficacité de l'application. Amélioration de l'expérience utilisateur (UX) et de l'interface utilisateur (UI) pour rendre l'application plus intuitive et agréable (ajout de plus de transitions, etc...).",
+        en: "Code refactoring and optimization for long-term maintainability and performance. Enhancement of user experience and interface design through refined interactions, smooth transitions, and intuitive workflows.",
+        fr: "Refactorisation et optimisation du code pour une maintenabilité et des performances à long terme. Amélioration de l'expérience utilisateur et du design d'interface via des interactions raffinées, des transitions fluides et des workflows intuitifs.",
       },
       icon: <BrushCleaning />,
     },
     {
       title: {
-        en: "4. Functionality",
-        fr: "4. Fonctionnalité",
+        en: "5. Functionalities Implementation",
+        fr: "5. Implémentation de fonctionnalités",
       },
       description: {
-        en: "Delivering the Minimum Viable Product if necessary, then adding extra features.",
-        fr: "Livraison du Minimum Viable Product si nécessaire, puis ajout de fonctionnalités supplémentaires.",
+        en: "Iterative development and implementation of new features based on user feedback and business priorities. Continuous enhancement of the product to meet evolving market needs and maximize user value.",
+        fr: "Développement itératif et implémentation de nouvelles fonctionnalités basées sur les retours utilisateurs et les priorités business. Amélioration continue du produit pour répondre aux besoins évolutifs du marché et maximiser la valeur pour l'utilisateur.",
       },
-      icon: <Keyboard />,
+      icon: <BadgePlus />,
     },
   ],
   stack: [
@@ -260,7 +272,7 @@ export const profile: Profile = {
         </span>
         <span>
           C&apos;est pourquoi j&apos;aide depuis 2021 les entreprises à
-          maximiser leur retour sur investissement avec ma méthode en 4 étapes.
+          maximiser leur retour sur investissement avec ma méthode en 5 étapes.
         </span>
       </>
     ),
