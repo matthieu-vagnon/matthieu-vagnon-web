@@ -66,8 +66,13 @@ export default function Profile() {
           <SectionTitle title={t("profile.method")} />
           <FeaturesSectionWithHoverEffects feat={profile.features} />
         </BlurFade>
-        <BlurFade delay={blurDelay++ / 10}>
-          <SectionTitle title={t("profile.stackTitle")} />
+        <BlurFade delay={blurDelay++ / 10} className="gap-y-8 flex flex-col">
+          <div className="flex flex-col">
+            <SectionTitle title={t("profile.stackTitle")} />
+            <span className="text-foreground italic">
+              {t("profile.stackDescription")}
+            </span>
+          </div>
           <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto">
             {profile.stack.map((el, index) => (
               <SkillBox
