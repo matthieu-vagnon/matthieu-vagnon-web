@@ -27,7 +27,7 @@ export default function TitleBox() {
     <LayoutGroup>
       <div className="flex w-full justify-center items-center flex-col gap-8 md:gap-10">
         <motion.div layout="position" transition={MOTION_TRANSITION}>
-          <Logo className="hover:rotate-360 transition-transform duration-300 rounded-sm" />
+          <Logo className="hover:rotate-360 transition-transform duration-300" />
         </motion.div>
         <motion.span layout transition={MOTION_TRANSITION}>
           <MainCard variant="dots" className="h-fit w-fit bg-background">

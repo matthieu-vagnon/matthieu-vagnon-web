@@ -167,6 +167,14 @@
         "1": {
           "question": "Do I use AI?",
           "answer": "Yes! I believe AI is a powerful tool that significantly enhances my productivity and accelerates knowledge acquisition. That said, I'm firmly convinced that AI should serve as an augmentation tool rather than operate as a fully autonomous agent. I also believe that AI is not yet mature enough for creative tasks—which is why I don't rely on it when designing interfaces or refining existing user experiences. Human creativity and judgment remain irreplaceable in these areas."
+        },
+        "2": {
+          "question": "What is my work methodology?",
+          "answer": "I am extremely methodical and meticulous. I first rationalize my client's request by documenting it and creating associated tasks, then I execute in the most elegant way possible."
+        },
+        "3": {
+          "question": "Why me and not someone else?",
+          "answer": "Because I'm a rare profile, combining technical ability, knowledge of AI assistants, great creativity, and perfectionism. Entrusting me with your project means ensuring that it will follow a clear direction and remain faithful to your expectations."
         }
       }
     }

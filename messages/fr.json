@@ -166,6 +166,14 @@
         "1": {
           "question": "Est ce que j'utilise l'IA ?",
           "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome, je pense également que sur les tâches créatives, l'IA est loin d'être mature et je n'utilise donc pas cette dernière lorsque je concois des interfaces ou améliore des interfaces existantes."
+        },
+        "2": {
+          "question": "Quelle est ma méthode de travail ?",
+          "answer": "Je suis extrènement méthodique et soigné. Je rationalise d'abord la demande de mon client en la mettant sur papier et en créant des tâches associées, puis j'éxécute de la manière la plus élégante possible."
+        },
+        "3": {
+          "question": "Pourquoi moi et pas un autre ?",
+          "answer": "Car je suis un profil rare, alliant capacité technique, connaissance des assistants IA, grande créativité et perfectionisme. Me confier votre projet c'est vous assurer que votre projet suivra une ligne de conduite claire et sera fidèle à vos attentes."
         }
       }
     }
