@@ -166,7 +166,7 @@
       "questions": {
         "1": {
           "question": "Do I use AI?",
-          "answer": "Yes! I believe AI is an incredible tool for improving my productivity and knowledge acquisition. In that regard, I use tools like Claude Code every day for simple, repetitive logic and refactoring, as well as Lovable to quickly deliver POCs. However, I remain convinced that AI is a tool and should remain a complement rather than a fully autonomous agent."
+          "answer": "Yes! I believe AI is a powerful tool that significantly enhances my productivity and accelerates knowledge acquisition. That said, I'm firmly convinced that AI should serve as an augmentation tool rather than operate as a fully autonomous agent. I also believe that AI is not yet mature enough for creative tasks—which is why I don't rely on it when designing interfaces or refining existing user experiences. Human creativity and judgment remain irreplaceable in these areas."
         }
       }
     }

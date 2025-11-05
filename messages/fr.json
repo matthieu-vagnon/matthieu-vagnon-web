@@ -165,7 +165,7 @@
       "questions": {
         "1": {
           "question": "Est ce que j'utilise l'IA ?",
-          "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. À ce titre, j'utilise chaque jour des outils comme Claude Code pour les logiques simples, répétitives et pour les refactors mais également Lovable pour délivrer des POC rapidement. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome."
+          "answer": "Oui ! Je pense que l'IA est un formidable outil pour améliorer ma productivité et mon acquisition de connaissances. Pour autant, je reste convaincu que l'IA est un outil et doit rester un complément plutôt qu'un agent totalement autonome, je pense également que sur les tâches créatives, l'IA est loin d'être mature et je n'utilise donc pas cette dernière lorsque je concois des interfaces ou améliore des interfaces existantes."
         }
       }
     }
