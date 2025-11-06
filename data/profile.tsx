@@ -230,7 +230,7 @@ export const profile: Profile = {
         en: "AI & LLM Integration",
         fr: "Intégration IA & LLM",
       },
-      tech: ["OpenRouter", "Ollama"],
+      tech: ["OpenRouter"],
     },
     {
       icon: Users,
