@@ -44,6 +44,7 @@ declare global {
     stack: {
       icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
       title: MultiLingual;
+      tooltip?: MultiLingual;
       accent?: boolean;
       tech:
         | string[]

@@ -79,6 +79,7 @@ export default function Profile() {
                 key={index}
                 icon={el.icon}
                 title={getTranslatedData(el.title, locale)}
+                tooltip={getTranslatedData(el.tooltip, locale)}
                 items={el.tech}
                 accent={el.accent}
               />

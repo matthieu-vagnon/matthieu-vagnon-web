@@ -28,6 +28,7 @@ import {
   Cog,
   FileChartPie,
   Heart,
+  Keyboard,
   Paintbrush,
   Palette,
   PaletteIcon,
@@ -142,8 +143,8 @@ export const profile: Profile = {
     {
       icon: Heart,
       title: {
-        en: "Favorites",
-        fr: "Favoris",
+        en: "Core",
+        fr: "Cœur",
       },
       accent: true,
       tech: [
@@ -221,7 +222,7 @@ export const profile: Profile = {
       title: {
         en: "UI/UX",
       },
-      tech: ["Figma"],
+      tech: ["Figma", "Canva"],
     },
     {
       icon: BrainCircuit,
@@ -238,6 +239,18 @@ export const profile: Profile = {
         fr: "Gestion de projet & collaboration",
       },
       tech: ["Git", "GitHub", "Notion"],
+    },
+    {
+      icon: Keyboard,
+      title: {
+        en: "Productivity Tools",
+        fr: "Outils de productivité",
+      },
+      tooltip: {
+        en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
+        fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
+      },
+      tech: ["v0", "Claude", "Claude Code", "GitHub Copilot"],
     },
   ],
   about: {
