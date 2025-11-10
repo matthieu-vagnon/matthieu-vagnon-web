@@ -17,11 +17,14 @@ const MOTION_TRANSITION: Transition = {
   stiffness: 400,
 };
 
+const DELAY_INCREMENT = 0.3;
+
 export default function TitleBox() {
   const t = useTranslations("home.titleBox");
   const messages = useMessages();
   const locale = useLocale();
   const socialLinks = profile.socials || {};
+  let blurDelay = 0;
 
   return (
     <LayoutGroup>
@@ -74,7 +77,10 @@ export default function TitleBox() {
         >
           <div className="flex items-center justify-center gap-3 flex-wrap">
             {Object.values(socialLinks).map((social, index) => (
-              <BlurFade delay={index * 0.3} key={social.title}>
+              <BlurFade
+                delay={(blurDelay = index * DELAY_INCREMENT)}
+                key={social.title}
+              >
                 <LinkButton
                   variant="secondary"
                   size="sm"
@@ -94,25 +100,37 @@ export default function TitleBox() {
           transition={MOTION_TRANSITION}
           className="flex flex-col gap-y-2"
         >
-          <span className="text-center font-sans-special font-medium text-md sm:text-lg md:text-xl text-foreground-secondary">
-            {t("subtitle")}
-          </span>
-          <div className="h-12 flex gap-4 justify-center items-center">
-            <Image
-              src="/they-trust-me/totalenergies.png"
-              alt="TotalEnergies"
-              height={48}
-              width={1000}
-              className="object-contain h-full w-auto"
-            />
-            <Image
-              src="/they-trust-me/ccifj.png"
-              alt="CCIFJ"
-              height={48}
-              width={1000}
-              className="object-contain h-full w-auto"
-            />
-          </div>
+          <BlurFade
+            delay={(blurDelay = blurDelay + DELAY_INCREMENT)}
+            className="flex flex-col gap-y-2"
+          >
+            <span className="text-center font-sans-special font-medium text-md sm:text-lg md:text-xl text-foreground-secondary">
+              {t("subtitle")}
+            </span>
+            <div className="h-12 flex gap-4 justify-center items-center">
+              <BlurFade delay={blurDelay} className="h-full">
+                <Image
+                  src="/they-trust-me/totalenergies.png"
+                  alt="TotalEnergies"
+                  height={48}
+                  width={1000}
+                  className="object-contain h-full w-auto"
+                />
+              </BlurFade>
+              <BlurFade
+                delay={(blurDelay = blurDelay + DELAY_INCREMENT)}
+                className="h-full"
+              >
+                <Image
+                  src="/they-trust-me/ccifj.png"
+                  alt="CCIFJ"
+                  height={48}
+                  width={1000}
+                  className="object-contain h-full w-auto"
+                />
+              </BlurFade>
+            </div>
+          </BlurFade>
         </motion.span>
       </div>
     </LayoutGroup>
