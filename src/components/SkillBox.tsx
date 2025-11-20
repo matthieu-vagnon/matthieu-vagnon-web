@@ -26,7 +26,7 @@ export default function SkillBox({
   className,
 }: SkillBoxProps) {
   return (
-    <Tooltip>
+    <Tooltip disableHoverableContent>
       <TooltipTrigger asChild>
         <div
           className={cn(

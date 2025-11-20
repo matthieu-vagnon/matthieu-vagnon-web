@@ -188,6 +188,7 @@ export const profile: Profile = {
         "React.js",
         "React Native",
         "Next.js",
+        "Vite.js",
         "Redux",
         "TanStack Query",
         "Electric SQL",
@@ -240,7 +241,7 @@ export const profile: Profile = {
         en: "Project Management & Collaboration",
         fr: "Gestion de projet & collaboration",
       },
-      tech: ["Git", "GitHub", "Notion"],
+      tech: ["Git", "GitHub", "Notion", "Jira", "Trello"],
     },
     {
       icon: Keyboard,
@@ -252,7 +253,7 @@ export const profile: Profile = {
         en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
         fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
       },
-      tech: ["v0", "GitHub Copilot"],
+      tech: ["v0", "GitHub Copilot", "Cursor", "Google Antigravity"],
     },
   ],
   about: {
@@ -295,7 +296,63 @@ export const profile: Profile = {
     {
       company: "CoSigma.io",
       logo: cosigma,
-      projects: [],
+      projects: [
+        {
+          title: {
+            en: "CoSigma (SaaS)",
+          },
+          description: [
+            {
+              en: "CoSigma is a complex document-review platform used by businesses to negotiate and refine PDF specifications. The application enables structured discussions directly on documents, allowing teams to identify issues, track disagreements, and converge toward revision increments that lead to a mutually accepted final version ready for signature. AI augments the workflow by detecting unrequested changes between revisions, surfacing likely-resolved comments, and highlighting points of interest across the document lifecycle.",
+              fr: "CoSigma est une plateforme avancée permettant aux entreprises de revoir, commenter et négocier des spécifications au format PDF. L’application structure les échanges autour du document : détection des points de friction, suivi des désaccords, gestion des itérations et convergence vers une version finalisée prête à être signée. L’IA renforce le processus en détectant les modifications non sollicitées entre versions, en identifiant les commentaires potentiellement résolus et en mettant en évidence les zones critiques du document.",
+            },
+          ],
+          responsibilities: [
+            {
+              en: "Designed and developed the entire front-end of a highly feature-rich application without prior Figma mockups; the UI was conceived and refined directly during implementation using React, Vite.js, TypeScript, and Tailwind.",
+              fr: "Conçu et développé l’ensemble du front-end d’une application complexe sans maquettes préalables ; l’interface a été pensée et optimisée directement lors du développement avec React, Vite.js, TypeScript et Tailwind.",
+            },
+            {
+              en: "Focused on building a dense yet intuitive interface that minimizes cognitive load and reduces the number of user clicks, ensuring that even advanced revision workflows remain fast and frictionless.",
+              fr: "Créé une interface dense mais intuitive, minimisant la charge cognitive et réduisant le nombre de clics nécessaires pour naviguer entre versions, commentaires, insights IA et étapes de validation.",
+            },
+            {
+              en: "Implemented UI/UX patterns enabling smooth navigation between document versions, AI-generated insights, comment threads, and validation steps.",
+              fr: "Mis en place des patterns UI/UX facilitant les workflows avancés de révision et la navigation entre documents lourds.",
+            },
+            {
+              en: "Created scalable component architecture using Context API, Radix UI, ShadCN, and Framer Motion to preserve responsiveness and clarity despite the complexity of the interactions.",
+              fr: "Développé une architecture de composants scalable basée sur Context API, Radix UI, ShadCN et Framer Motion, garantissant fluidité et clarté malgré la complexité de l’outil.",
+            },
+            {
+              en: "Optimized the app for speed and usability, ensuring consistently high Lighthouse scores and near-instant navigation between heavy PDF-based interfaces.",
+              fr: "Optimisé les performances et l’expérience utilisateur, assurant une navigation quasi instantanée et des scores Lighthouse élevés même sur des interfaces PDF intensives.",
+            },
+          ],
+          technologies: [
+            "React.js",
+            "React Native",
+            "Vite.js",
+            "TypeScript",
+            "HTML/JSX",
+            "CSS/SCSS/LESS",
+            "Redux",
+            "TanStack Query",
+            "Electric SQL",
+            "Tailwind CSS",
+            "Framer Motion",
+            "ESLint",
+            "Prettier",
+            "Figma",
+            "OpenRouter",
+            "Git",
+            "GitHub",
+            "Notion",
+            "Trello",
+            "GitHub Copilot",
+          ],
+        },
+      ],
       position: {
         en: "Front-End Engineer & UI/UX Designer",
         fr: "Développeur front-end & designer UI/UX",
@@ -358,6 +415,7 @@ export const profile: Profile = {
             "Git",
             "GitHub",
             "Notion",
+            "Cursor",
           ],
         },
       ],
@@ -409,6 +467,7 @@ export const profile: Profile = {
           ],
           technologies: [
             "React.js",
+            "Vite.js",
             "JavaScript",
             "HTML/JSX",
             "CSS/SCSS/LESS",
@@ -454,6 +513,7 @@ export const profile: Profile = {
           ],
           technologies: [
             "React.js",
+            "Vite.js",
             "JavaScript",
             "HTML/JSX",
             "CSS/SCSS/LESS",
