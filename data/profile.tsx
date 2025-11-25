@@ -42,8 +42,8 @@ export const profile: Profile = {
       title: "LinkedIn",
       img: <LinkedIn />,
       link: {
-        en: "https://www.linkedin.com/in/matthieu-vagnon/",
-        fr: "https://www.linkedin.com/in/matthieu-vagnon/?locale=fr_FR",
+        en: "https://www.linkedin.com/in/matthieu-vagnon/?locale=en_US",
+        fr: "https://www.linkedin.com/in/matthieu-vagnon",
       },
     },
     malt: {

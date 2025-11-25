@@ -1,5 +1,6 @@
 "use client";
 
+import { profile } from "@/data/profile";
 import { useDockStatus } from "@/hooks/useDockStatus";
 import { Link } from "@/i18n/navigation";
 import {
@@ -7,6 +8,7 @@ import {
   Cog,
   HomeIcon,
   MessageCircle,
+  Newspaper,
   UserRound,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -63,6 +65,12 @@ export default function AppsDock() {
       icon: <BriefcaseBusiness className="h-full w-full text-neutral-600" />,
       url: "/case-studies",
     },
+    {
+      title: t("utils.blog"),
+      icon: <Newspaper className="h-full w-full text-neutral-600" />,
+      url: `${profile.socials.linkedin.link.fr}/recent-activity/all/`,
+      newTab: true,
+    },
   ];
 
   const modals = [
@@ -89,7 +97,11 @@ export default function AppsDock() {
       >
         <Dock className="items-end pb-3">
           {apps.map((app, idx) => (
-            <Link key={idx} href={app.url}>
+            <Link
+              key={idx}
+              href={app.url}
+              target={app.newTab ? "_blank" : "_self"}
+            >
               <DockElement title={app.title} icon={app.icon} />
             </Link>
           ))}

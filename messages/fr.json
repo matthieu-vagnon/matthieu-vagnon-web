@@ -46,7 +46,7 @@
         },
         "suffix": ""
       },
-      "secondLine": "et je crée des apps qui retiennent et convertissent",
+      "secondLine": "et je rends vos apps irremplaçables",
       "subtitle": "Ils me font confiance :"
     }
   },
@@ -160,6 +160,7 @@
     "copyEmail": "Email copié dans le presse-papiers !",
     "translate": "Traduction",
     "original": "Original",
+    "blog": "Blog",
     "faq": {
       "title": "Questions Fréquemment Posées",
       "questions": {
