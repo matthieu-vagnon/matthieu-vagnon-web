@@ -9,7 +9,7 @@ export function FeaturesSectionWithHoverEffects({
   const locale = useLocale();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 relative z-10 mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 relative z-10 mx-auto">
       {feat.map((feature, index) => (
         <Feature
           key={index}
@@ -38,14 +38,14 @@ const Feature = ({
     <div
       className={cn(
         "flex flex-col xl:border-r py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 5) && "xl:border-l dark:border-neutral-800",
-        index < 5 && "xl:border-b dark:border-neutral-800"
+        (index === 0 || index === 3) && "xl:border-l dark:border-neutral-800",
+        index < 6 && "xl:border-b dark:border-neutral-800"
       )}
     >
-      {index < 5 && (
+      {index < 6 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
-      {index >= 5 && (
+      {index >= 6 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
       <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">

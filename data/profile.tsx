@@ -26,6 +26,7 @@ import {
   BrushCleaning,
   CodeXml,
   Cog,
+  Database,
   FileChartPie,
   Heart,
   Keyboard,
@@ -129,8 +130,19 @@ export const profile: Profile = {
     },
     {
       title: {
-        en: "5. Functionalities Implementation",
-        fr: "5. Implémentation de fonctionnalités",
+        en: "5. Production Deployment",
+        fr: "5. Déploiement en production",
+      },
+      description: {
+        en: "Deployment of the application to production environments, ensuring a smooth and uninterrupted launch. Configuration of necessary infrastructures to guarantee scalability, security, and optimal product performance.",
+        fr: "Déploiement de l'application sur les environnements de production, assurant une mise en ligne fluide et sans interruption. Configuration des infrastructures nécessaires pour garantir la scalabilité, la sécurité et la performance optimale du produit.",
+      },
+      icon: <Database />,
+    },
+    {
+      title: {
+        en: "6. Functionalities Implementation",
+        fr: "6. Implémentation de fonctionnalités",
       },
       description: {
         en: "Iterative development and implementation of new features based on user feedback and business priorities. Continuous enhancement of the product to meet evolving market needs and maximize user value.",
@@ -267,7 +279,7 @@ export const profile: Profile = {
           for the user and empower them to achieve their goals effortlessly.
         </span>
         <span>
-          This is why I help businesses maximize their ROI with my 4-steps
+          This is why I help businesses maximize their ROI with my 6-steps
           method, since 2021.
         </span>
       </>
@@ -287,7 +299,7 @@ export const profile: Profile = {
         </span>
         <span>
           C&apos;est pourquoi j&apos;aide depuis 2021 les entreprises à
-          maximiser leur retour sur investissement avec ma méthode en 5 étapes.
+          maximiser leur retour sur investissement avec ma méthode en 6 étapes.
         </span>
       </>
     ),
