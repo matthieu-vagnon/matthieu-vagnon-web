@@ -63,7 +63,7 @@ export default function TitleBox() {
                 </motion.span>
               </span>
               <motion.span layout="position" transition={MOTION_TRANSITION}>
-                <span className="font-handwriting text-2xl sm:text-4xl md:text-6xl">
+                <span className="font-handwriting tracking-tighter text-xl sm:text-3xl md:text-4xl">
                   {t("secondLine")}
                 </span>
               </motion.span>

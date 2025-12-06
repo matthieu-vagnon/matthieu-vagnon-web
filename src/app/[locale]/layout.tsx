@@ -13,11 +13,11 @@ import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import {
+  Caveat,
   Courier_Prime,
   Noto_Sans_JP,
   Signika_Negative,
   Source_Sans_3,
-  The_Nautigal,
   Zen_Antique,
 } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -58,8 +58,8 @@ const courierPrime = Courier_Prime({
   preload: false,
 });
 
-const theNautigal = The_Nautigal({
-  variable: "--font-the-nautigal",
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
   weight: ["400", "700"],
   preload: false,
@@ -126,7 +126,7 @@ export default async function RootLayout({
               >
                 <AccentColorProvider initialAccentColor={accentColor}>
                   <body
-                    className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} ${theNautigal.variable} antialiased`}
+                    className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} ${caveat.variable} antialiased`}
                   >
                     <NextTopLoader
                       showSpinner={false}
