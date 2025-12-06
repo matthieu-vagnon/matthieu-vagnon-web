@@ -271,35 +271,58 @@ export const profile: Profile = {
   about: {
     en: (
       <>
-        <strong>User experience is the most powerful sales channel.</strong>
+        <strong>
+          From Concept to Production: I Build Digital Products Engineered to
+          Retain 4x More Users.
+        </strong>
+        <span>Why is one app more profitable than another?</span>
         <span>
-          As a web & mobile developer and UI/UX designer specializing in LLM/AI
-          integration, I’ve seen that the digital products that sell best aren’t
-          the ones with the most features, but the ones that minimize friction
-          for the user and empower them to achieve their goals effortlessly.
+          It’s not just the feature count. It’s the absence of friction. As
+          highlighted by recent research on the influence of UX (2025), a
+          seamless experience is what dictates conversion rates and user
+          loyalty. That’s where I come in. I’m not just a technical executor;
+          I’m your end-to-end product partner. My dual expertise is ideal:
         </span>
         <span>
-          This is why I help businesses maximize their ROI with my 6-steps
-          method, since 2021.
+          UI/UX: I craft intuitive journeys that naturally guide the user.
+          <br />
+          Full-Stack Dev (Web/Mobile/AI): I ensure technical performance that
+          eliminates load times and bugs—the silent killers of retention.
+        </span>
+        <span>
+          I build complete products where AI (LLM) integration feels natural and
+          invisible.
         </span>
       </>
     ),
     fr: (
       <>
         <strong>
-          L&apos;expérience utilisateur est le canal de vente le plus puissant.
+          De la conception à la mise en production : Je crée des produits
+          digitaux conçus pour retenir 4x plus d&apos;utilisateurs.
         </strong>
         <span>
-          En tant que développeur web & mobile spécialisé en intégration de
-          LLM/IA et designer UI/UX, j&apos;ai constaté que les produits
-          numériques qui se vendent le plus ne sont pas ceux avec le plus de
-          fonctionnalités, mais ceux qui minimisent les frictions pour
-          l&apos;utilisateur et qui donnent à ce dernier le pouvoir de faire
-          beaucoup, sans effort.
+          Pourquoi une application est-elle plus lucrative qu&apos;une autre ?
         </span>
         <span>
-          C&apos;est pourquoi j&apos;aide depuis 2021 les entreprises à
-          maximiser leur retour sur investissement avec ma méthode en 6 étapes.
+          Ce n&apos;est pas que le nombre de fonctionnalités. C&apos;est
+          l&apos;absence de friction. Comme souligné dans les recherches
+          récentes sur l&apos;influence de l&apos;UX (2025), c&apos;est la
+          fluidité de &apos;expérience qui dicte le taux de conversion et la
+          fidélité. C&apos;est là que j&apos;interviens. Je ne suis pas
+          seulement un exécutant technique, je suis votre partenaire produit
+          global avec une double compétence idéale :
+        </span>
+        <span>
+          UI/UX : Je crée des parcours intuitifs qui guident l&apos;utilisateur.
+          <br />
+          Dev full-stack (Web/Mobile/IA) : Je garantis une performance technique
+          qui élimine les temps de chargement et les bugs, tueurs silencieux de
+          rétention.
+        </span>
+        <span>
+          Je construis des produits complets où l&apos;intégration d&apos;IA
+          (LLM) devient invisible et naturelle.
         </span>
       </>
     ),
