@@ -53,8 +53,8 @@
 
 :root {
   --main: var(--default-theme);
-  --main-dark: #001428;
-  --main-foreground: oklch(0.985 0 0);
+  --main-dark: #004000;
+  --main-foreground: black;
   --background: #fafafa;
   --foreground: oklch(0.145 0 0);
   --foreground-secondary: #4a4a4a;
@@ -88,8 +88,8 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --default-theme: #007fff;
-  --green-theme: #88ff88;
+  --default-theme: #88ff88;
+  --blue-theme: #007fff;
   --pink-theme: #ff88ff;
   --purple-theme: #8888ff;
   --orange-theme: #ff8800;
@@ -97,15 +97,15 @@
   --radius: 0.625rem;
 }
 
-html[data-accent-color="green"] {
-  --main: var(--green-theme);
-  --main-dark: #004000;
-  --main-foreground: black;
+html[data-accent-color="blue"] {
+  --main: var(--blue-theme);
+  --main-dark: #001428;
+  --main-foreground: oklch(0.985 0 0);
 }
 
 html[data-accent-color="pink"] {
   --main: var(--pink-theme);
-  --main-dark: #400040;
+  --main-dark: #001428;
   --main-foreground: black;
 }
 

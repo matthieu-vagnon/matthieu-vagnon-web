@@ -137,8 +137,8 @@
       "title": "Accent Color",
       "placeholder": "Select a color",
       "colors": {
-        "default": "Blue",
-        "green": "Green",
+        "default": "Green",
+        "blue": "Blue",
         "pink": "Pink",
         "purple": "Purple",
         "orange": "Orange"

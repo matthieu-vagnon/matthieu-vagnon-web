@@ -136,8 +136,8 @@
       "title": "Couleur d'accentuation",
       "placeholder": "Sélectionnez une couleur",
       "colors": {
-        "default": "Bleu",
-        "green": "Vert",
+        "default": "Vert",
+        "blue": "Bleu",
         "pink": "Rose",
         "purple": "Violet",
         "orange": "Orange"
