@@ -250,10 +250,10 @@ export const profile: Profile = {
     {
       icon: Users,
       title: {
-        en: "Project Management & Collaboration",
-        fr: "Gestion de projet & collaboration",
+        en: "Project Management & Analytics",
+        fr: "Gestion de projet & suivi",
       },
-      tech: ["Git", "GitHub", "Notion", "Jira", "Trello"],
+      tech: ["Git", "GitHub", "Notion", "Jira", "Trello", "Mixpanel"],
     },
     {
       icon: Keyboard,
