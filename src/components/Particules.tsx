@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useMagneticStatus } from '@/hooks/useMagneticStatus';
-import { cn } from '@/lib/utils';
-import React, { useEffect, useRef, useState } from 'react';
+import { useMagneticStatus } from "@/hooks/useMagneticStatus";
+import { cn } from "@/lib/utils";
+import React, { useEffect, useRef, useState } from "react";
 
 type MousePosition = {
   x: number;
@@ -32,10 +32,10 @@ function MousePosition(): MousePosition {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -43,13 +43,13 @@ function MousePosition(): MousePosition {
 }
 
 function hexToRgb(hex: string): number[] {
-  hex = hex.replace('#', '');
+  hex = hex.replace("#", "");
 
   if (hex.length === 3) {
     hex = hex
-      .split('')
+      .split("")
       .map((char) => char + char)
-      .join('');
+      .join("");
   }
 
   const hexInt = parseInt(hex, 16);
@@ -60,13 +60,13 @@ function hexToRgb(hex: string): number[] {
 }
 
 const Particles: React.FC<ParticlesProps> = ({
-  className = '',
+  className = "",
   quantity = 100,
   staticity = 50,
   ease = 50,
   size = 0.4,
   refresh = false,
-  color = '#ffffff',
+  color = "#ffffff",
   vx = 0,
   vy = 0,
 }) => {
@@ -81,25 +81,28 @@ const Particles: React.FC<ParticlesProps> = ({
 
   useEffect(() => {
     if (canvasRef.current) {
-      context.current = canvasRef.current.getContext('2d');
+      context.current = canvasRef.current.getContext("2d");
     }
     initCanvas();
     animate();
-    window.addEventListener('resize', initCanvas);
+    window.addEventListener("resize", initCanvas);
 
     return () => {
-      window.removeEventListener('resize', initCanvas);
+      window.removeEventListener("resize", initCanvas);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
 
   useEffect(() => {
     if (isMagnetic) {
       onMouseMove();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition.x, mousePosition.y, isMagnetic]);
 
   useEffect(() => {
     initCanvas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   const initCanvas = () => {
@@ -107,7 +110,7 @@ const Particles: React.FC<ParticlesProps> = ({
     drawParticles();
   };
 
-  const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1;
+  const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
   const onMouseMove = () => {
     if (canvasRef.current) {
@@ -182,7 +185,7 @@ const Particles: React.FC<ParticlesProps> = ({
       context.current.translate(translateX, translateY);
       context.current.beginPath();
       context.current.arc(x, y, size, 0, 2 * Math.PI);
-      context.current.fillStyle = `rgba(${rgb.join(', ')}, ${alpha})`;
+      context.current.fillStyle = `rgba(${rgb.join(", ")}, ${alpha})`;
       context.current.fill();
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
@@ -277,11 +280,11 @@ const Particles: React.FC<ParticlesProps> = ({
 
   return (
     <div
-      className={cn('pointer-events-none', className)}
+      className={cn("pointer-events-none", className)}
       ref={canvasContainerRef}
-      aria-hidden='true'
+      aria-hidden="true"
     >
-      <canvas ref={canvasRef} className='size-full' />
+      <canvas ref={canvasRef} className="size-full" />
     </div>
   );
 };

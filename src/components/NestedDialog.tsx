@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useDockStatus } from '@/hooks/useDockStatus';
-import { cn } from '@/lib/utils';
-import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { X } from 'lucide-react';
-import * as React from 'react';
+import { useDockStatus } from "@/hooks/useDockStatus";
+import { cn } from "@/lib/utils";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
+import * as React from "react";
 
 type DialogContextValue = {
   innerOpen: boolean;
@@ -55,7 +55,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      'fixed inset-0 z-101 bg-background/40 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      "fixed inset-0 z-101 bg-background/40 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -69,7 +69,7 @@ const DialogContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => {
   const context = React.useContext(DialogContext);
 
-  if (!context) throw new Error('DialogContent must be used within a Dialog');
+  if (!context) throw new Error("DialogContent must be used within a Dialog");
 
   return (
     <DialogPortal>
@@ -77,17 +77,17 @@ const DialogContent = React.forwardRef<
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          'max-h-[calc(100svh-1rem)] flex flex-col fixed overflow-hidden left-1/2 top-1/2 z-102 w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
+          "max-h-[calc(100svh-1rem)] flex flex-col fixed overflow-hidden left-1/2 top-1/2 z-102 w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2",
           context.innerOpen &&
-            'translate-y-[-60%] translate-x-[-55%] scale-[0.95]',
+            "translate-y-[-60%] translate-x-[-55%] scale-[0.95]",
           className
         )}
         {...props}
       >
         {children}
-        <DialogClose className='hover:cursor-pointer absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
-          <X className='h-4 w-4' />
-          <span className='sr-only'>Close</span>
+        <DialogClose className="hover:cursor-pointer absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <X className="h-4 w-4" />
+          <span className="sr-only">Close</span>
         </DialogClose>
       </DialogPrimitive.Content>
     </DialogPortal>
@@ -98,22 +98,22 @@ DialogContent.displayName = DialogPrimitive.Content.displayName;
 function InnerDialog({ children }: { children: React.ReactNode }) {
   const context = React.useContext(DialogContext);
 
-  if (!context) throw new Error('InnerDialog must be used within a Dialog');
+  if (!context) throw new Error("InnerDialog must be used within a Dialog");
 
   React.useEffect(() => {
     const handleEscapeKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && context.innerOpen) {
+      if (event.key === "Escape" && context.innerOpen) {
         context.setInnerOpen(false);
         event.stopPropagation();
       }
     };
 
-    document.addEventListener('keydown', handleEscapeKeyDown);
+    document.addEventListener("keydown", handleEscapeKeyDown);
 
     return () => {
-      document.removeEventListener('keydown', handleEscapeKeyDown);
+      document.removeEventListener("keydown", handleEscapeKeyDown);
     };
-  }, [context.innerOpen, context.setInnerOpen]);
+  }, [context, context.innerOpen, context.setInnerOpen]);
 
   return (
     <DialogPrimitive.Root
@@ -132,7 +132,7 @@ const InnerDialogContent = React.forwardRef<
   const context = React.useContext(DialogContext);
 
   if (!context)
-    throw new Error('InnerDialogContent must be used within a Dialog');
+    throw new Error("InnerDialogContent must be used within a Dialog");
 
   const [isDragging, setIsDragging] = React.useState(false);
   const [startY, setStartY] = React.useState(0);
@@ -176,48 +176,48 @@ const InnerDialogContent = React.forwardRef<
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         className={cn(
-          'fixed overflow-hidden left-1/2 top-1/2 z-103 grid w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2',
+          "fixed overflow-hidden left-1/2 top-1/2 z-103 grid w-[calc(100%-1rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=open]:slide-in-from-bottom-1/2",
           className
         )}
         {...props}
       >
         <div
           ref={contentRef}
-          className='max-h-[calc(100svh-1rem)] flex flex-col'
+          className="max-h-[calc(100svh-1rem)] flex flex-col"
         >
           {children}
         </div>
-        <DialogClose className='hover:cursor-pointer absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
-          <X className='h-4 w-4' />
-          <span className='sr-only'>Close</span>
+        <DialogClose className="hover:cursor-pointer absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <X className="h-4 w-4" />
+          <span className="sr-only">Close</span>
         </DialogClose>
       </DialogPrimitive.Content>
     </DialogPortal>
   );
 });
-InnerDialogContent.displayName = 'InnerDialogContent';
+InnerDialogContent.displayName = "InnerDialogContent";
 
 const InnerDialogHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn('flex flex-col space-y-1.5 text-left', className)}
+    className={cn("flex flex-col space-y-1.5 text-left", className)}
     {...props}
   />
 );
-InnerDialogHeader.displayName = 'InnerDialogHeader';
+InnerDialogHeader.displayName = "InnerDialogHeader";
 
 const InnerDialogFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn('flex flex-col-reverse sm:flex-row sm:space-x-2', className)}
+    className={cn("flex flex-col-reverse sm:flex-row sm:space-x-2", className)}
     {...props}
   />
 );
-InnerDialogFooter.displayName = 'InnerDialogFooter';
+InnerDialogFooter.displayName = "InnerDialogFooter";
 
 const InnerDialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
@@ -226,13 +226,13 @@ const InnerDialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      'text-lg font-semibold leading-none tracking-tight',
+      "text-lg font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
   />
 ));
-InnerDialogTitle.displayName = 'InnerDialogTitle';
+InnerDialogTitle.displayName = "InnerDialogTitle";
 
 const InnerDialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
@@ -240,11 +240,11 @@ const InnerDialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ));
-InnerDialogDescription.displayName = 'InnerDialogDescription';
+InnerDialogDescription.displayName = "InnerDialogDescription";
 
 const DialogHeader = ({
   className,
@@ -252,24 +252,24 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      'flex flex-col space-y-1.5 text-left h-fit border-b p-4',
+      "flex flex-col space-y-1.5 text-left h-fit border-b p-4",
       className
     )}
     {...props}
   />
 );
-DialogHeader.displayName = 'DialogHeader';
+DialogHeader.displayName = "DialogHeader";
 
 const DialogFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn('flex flex-col-reverse sm:flex-row sm:space-x-2', className)}
+    className={cn("flex flex-col-reverse sm:flex-row sm:space-x-2", className)}
     {...props}
   />
 );
-DialogFooter.displayName = 'DialogFooter';
+DialogFooter.displayName = "DialogFooter";
 
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
@@ -278,7 +278,7 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      'text-lg font-semibold leading-none tracking-tight',
+      "text-lg font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
@@ -292,7 +292,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ));
