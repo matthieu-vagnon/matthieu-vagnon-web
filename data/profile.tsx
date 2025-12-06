@@ -251,7 +251,7 @@ export const profile: Profile = {
       icon: Users,
       title: {
         en: "Project Management & Analytics",
-        fr: "Gestion de projet & suivi",
+        fr: "Gestion de projet & analyse d'audience",
       },
       tech: ["Git", "GitHub", "Notion", "Jira", "Trello", "Mixpanel"],
     },
