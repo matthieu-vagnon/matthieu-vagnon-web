@@ -115,7 +115,7 @@ export default function AppsDock() {
         modals.find((modal) => modal.action === activeModal)?.modal}
       <ProgressiveBlur
         direction="bottom"
-        className="pointer-events-none fixed bottom-0 left-0 h-36 w-full z-99 bg-linear-to-b from-transparent to-white dark:to-black from-66%"
+        className="pointer-events-none fixed bottom-0 left-0 h-36 w-full z-99 bg-linear-to-b from-transparent to-background dark:to-black from-66%"
       />
     </Dialog>
   );
