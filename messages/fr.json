@@ -35,6 +35,7 @@
     },
     "title": "Accueil",
     "titleBox": {
+      "seePlans": "Voir mes offres",
       "job": {
         "prefix": "Bonjour, je suis ",
         "skills": {

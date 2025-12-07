@@ -3,6 +3,7 @@
 import { profile } from "@/data/profile";
 import { getTranslatedData } from "@/lib/utils";
 import { LayoutGroup, motion, Transition } from "framer-motion";
+import { HeartHandshake } from "lucide-react";
 import { useLocale, useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import { BlurFade } from "./BlurFade";
@@ -23,8 +24,19 @@ export default function TitleBox() {
   const t = useTranslations("home.titleBox");
   const messages = useMessages();
   const locale = useLocale();
-  const socialLinks = profile.socials || {};
+  let socialLinks = profile.socials || {};
   let blurDelay = 0;
+
+  socialLinks = {
+    ...socialLinks,
+    seePlans: {
+      title: t("seePlans"),
+      img: <HeartHandshake />,
+      link: {
+        en: "/your-project",
+      },
+    },
+  };
 
   return (
     <LayoutGroup>
@@ -93,6 +105,17 @@ export default function TitleBox() {
                 </LinkButton>
               </BlurFade>
             ))}
+            <BlurFade delay={(blurDelay = blurDelay + DELAY_INCREMENT)}>
+              <LinkButton
+                variant="default"
+                size="sm"
+                href="/your-project"
+                className="bg-main/33 text-main-foreground hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1"
+              >
+                <HeartHandshake />
+                {t("seePlans")}
+              </LinkButton>
+            </BlurFade>
           </div>
         </motion.span>
         <motion.span

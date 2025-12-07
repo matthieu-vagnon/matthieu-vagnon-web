@@ -36,6 +36,7 @@
     },
     "title": "Home",
     "titleBox": {
+      "seePlans": "See my plans",
       "job": {
         "prefix": "Hi, I'm ",
         "skills": {

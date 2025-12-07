@@ -103,7 +103,7 @@ export default function AppsDock() {
               <DockElement title={app.title} icon={app.icon} />
             </Link>
           ))}
-          <Separator orientation="vertical" className="h-10" />
+          <Separator orientation="vertical" className="hidden sm:block h-10" />
           {modals.map((modal, idx) => (
             <button key={idx} onClick={() => setActiveModal(modal.action)}>
               <DockElement title={modal.title} icon={modal.icon} />
