@@ -24,19 +24,8 @@ export default function TitleBox() {
   const t = useTranslations("home.titleBox");
   const messages = useMessages();
   const locale = useLocale();
-  let socialLinks = profile.socials || {};
+  const socialLinks = profile.socials || {};
   let blurDelay = 0;
-
-  socialLinks = {
-    ...socialLinks,
-    seePlans: {
-      title: t("seePlans"),
-      img: <HeartHandshake />,
-      link: {
-        en: "/your-project",
-      },
-    },
-  };
 
   return (
     <LayoutGroup>
