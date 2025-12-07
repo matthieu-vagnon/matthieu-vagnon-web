@@ -37,14 +37,14 @@ export default function Profile() {
           <div className="flex mt-5 gap-x-10">
             <div className="flex flex-col items-center md:flex-row gap-5 lg:max-w-4/5 xl:max-w-2/3">
               <Media
-                width={256}
+                width={288}
                 media={{
                   image: profile.businessCard.image,
                   title: profile.businessCard.title,
                 }}
                 isTilt
                 size="md"
-                className="w-50 md:w-56 lg:w-64"
+                className="w-56 md:w-64 lg:w-72"
               />
               <div className="relative text-lg lg:text-xl italic">
                 <Quote

@@ -188,7 +188,13 @@ export const profile: Profile = {
         en: "Languages",
         fr: "Languages",
       },
-      tech: ["TypeScript", "JavaScript", "SQL", "HTML/JSX", "CSS/SCSS/LESS"],
+      tech: [
+        "TypeScript",
+        "JavaScript",
+        "SQL",
+        "HTML/TSX/JSX",
+        "CSS/SCSS/LESS",
+      ],
     },
     {
       icon: Paintbrush,
@@ -237,7 +243,7 @@ export const profile: Profile = {
       title: {
         en: "UI/UX",
       },
-      tech: ["Figma", "Canva"],
+      tech: ["Figma", "Canva", "Lighthouse", "Vercel Speed Insights"],
     },
     {
       icon: BrainCircuit,
@@ -253,7 +259,15 @@ export const profile: Profile = {
         en: "Project Management & Analytics",
         fr: "Gestion de projet & analyse d'audience",
       },
-      tech: ["Git", "GitHub", "Notion", "Jira", "Trello", "Mixpanel"],
+      tech: [
+        "Git",
+        "GitHub",
+        "Notion",
+        "Jira",
+        "Trello",
+        "Mixpanel",
+        "Vercel Web Analytics",
+      ],
     },
     {
       icon: Keyboard,
@@ -308,7 +322,7 @@ export const profile: Profile = {
           Ce n&apos;est pas que le nombre de fonctionnalités. C&apos;est
           l&apos;absence de friction. Comme souligné dans les recherches
           récentes sur l&apos;influence de l&apos;UX (2025), c&apos;est la
-          fluidité de &apos;expérience qui dicte le taux de conversion et la
+          fluidité de l&apos;expérience qui dicte le taux de conversion et la
           fidélité. C&apos;est là que j&apos;interviens. Je ne suis pas
           seulement un exécutant technique, je suis votre partenaire produit
           global avec une double compétence idéale :
