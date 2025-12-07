@@ -7,7 +7,7 @@ type LogoProps = {
 export default function Logo({ className }: LogoProps) {
   return (
     <svg
-      className={cn("h-8 sm:h-10 md:h-12 rounded-sm", className)}
+      className={cn("h-8 sm:h-10 md:h-12", className)}
       viewBox="0 0 800 800"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
