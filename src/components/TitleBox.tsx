@@ -124,8 +124,9 @@ export default function TitleBox() {
                 <Image
                   src="/they-trust-me/totalenergies.png"
                   alt="TotalEnergies"
-                  height={48}
-                  width={1000}
+                  height={0}
+                  width={0}
+                  sizes="100%"
                   className="object-contain h-full w-auto"
                 />
               </BlurFade>
@@ -136,8 +137,9 @@ export default function TitleBox() {
                 <Image
                   src="/they-trust-me/ccifj.png"
                   alt="CCIFJ"
-                  height={48}
-                  width={1000}
+                  height={0}
+                  width={0}
+                  sizes="100%"
                   className="object-contain h-full w-auto"
                 />
               </BlurFade>
