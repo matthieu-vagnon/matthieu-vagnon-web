@@ -18,7 +18,7 @@ export default function Profile() {
         <Header />
       </BlurFade>
       <BlurFade delay={blurDelay++ / 10}>
-        <div className="relative flex h-[200px] sm:h-[400px] lg:h-[600px] max-h-[calc(100svh-225px)] w-full flex-col items-center justify-center overflow-hidden rounded-xl border bg-blue-700">
+        <div className="relative flex h-[200px] sm:h-[400px] lg:h-[600px] min-h-50 sm:min-h-60 lg:min-h-70 max-h-[calc(100svh-225px)] w-full flex-col items-center justify-center overflow-hidden rounded-xl border bg-blue-700">
           <ShaderAnimation />
           <div className="px-10 absolute pointer-events-none z-10 text-center flex flex-col gap-y-4 items-center">
             <span className="leading-none font-sans-special tracking-tighter whitespace-pre-wrap font-semibold text-white text-2xl sm:text-4xl lg:text-7xl">
