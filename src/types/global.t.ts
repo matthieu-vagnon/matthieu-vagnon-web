@@ -76,6 +76,16 @@ declare global {
     }[];
   };
 
+  type PricingPlan = {
+    title: MultiLingual;
+    price?: MultiLingual;
+    priceDescription?: MultiLingual;
+    description: MultiLingual;
+    features?: MultiLingual[];
+    image?: StaticImageData;
+    imageAlt?: string;
+  };
+
   type Project = {
     title: string;
     year: number;

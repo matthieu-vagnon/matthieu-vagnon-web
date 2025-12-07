@@ -1,6 +1,5 @@
 "use client";
 
-import { useDockStatus } from "@/hooks/useDockStatus";
 import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
@@ -22,26 +21,22 @@ const InnerDialogTrigger = DialogPrimitive.Trigger;
 
 function Dialog({
   children,
-  defaultOpen,
+  setActiveModal,
+  open = false,
 }: {
   children: React.ReactNode;
-  defaultOpen?: boolean;
+  setActiveModal: (activeModal: string | undefined) => void;
+  open?: boolean;
 }) {
-  const { setIsDockOpen } = useDockStatus();
-  const [outerOpen, setOuterOpen] = React.useState(false);
   const [innerOpen, setInnerOpen] = React.useState(false);
 
-  React.useEffect(() => {
-    setOuterOpen(defaultOpen ?? false);
-  }, [defaultOpen]);
-
-  React.useEffect(() => {
-    setIsDockOpen(!outerOpen);
-  }, [outerOpen, setIsDockOpen]);
+  const closeDialog = () => {
+    setActiveModal(undefined);
+  };
 
   return (
     <DialogContext.Provider value={{ innerOpen, setInnerOpen }}>
-      <DialogPrimitive.Root open={outerOpen} onOpenChange={setOuterOpen}>
+      <DialogPrimitive.Root open={open} onOpenChange={closeDialog}>
         {children}
       </DialogPrimitive.Root>
     </DialogContext.Provider>

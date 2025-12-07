@@ -75,6 +75,31 @@
     "education": "Formations",
     "responsibilities": "Mes rôles et responsabilités"
   },
+  "yourProject": {
+    "metadata": {
+      "title": "Votre projet | Matthieu Vagnon",
+      "description": "Votre projet mérite le meilleur. Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs.",
+      "openGraph": {
+        "title": "Offres de Matthieu Vagnon",
+        "description": "Votre projet mérite le meilleur. Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs."
+      },
+      "keywords": {
+        "1": "Votre",
+        "2": "Projet",
+        "3": "Offre",
+        "4": "Deal"
+      }
+    },
+    "tooltip": "Votre projet",
+    "title": "Votre projet mérite le meilleur",
+    "description": "Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs.",
+    "pricingPlans": "Plans tarifaires",
+    "pricingTitle": "Tarification transparente, sans surprise",
+    "uniqueRequest": "Demande unique",
+    "uniqueRequestDescription": "Vous avez un besoin spécifique ou un projet unique en tête ? N'hésitez pas à me contacter pour discuter de vos exigences particulières et obtenir une offre personnalisée.",
+    "letsTalk": "Prenons contact",
+    "startFast": "Début des travaux sous 3 jours garanti."
+  },
   "caseStudies": {
     "metadata": {
       "title": "Cas pratiques | Matthieu Vagnon",

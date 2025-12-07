@@ -76,6 +76,31 @@
     "education": "Education",
     "responsibilities": "My roles and responsibilities"
   },
+  "yourProject": {
+    "metadata": {
+      "title": "Your Project | Matthieu Vagnon",
+      "description": "Your Project Deserves the Best. Let's discuss your project and see how I can help you achieve your goals.",
+      "openGraph": {
+        "title": "Matthieu Vagnon's Offers",
+        "description": "Your Project Deserves the Best. Let's discuss your project and see how I can help you achieve your goals."
+      },
+      "keywords": {
+        "1": "Your",
+        "2": "Project",
+        "3": "Offer",
+        "4": "Deal"
+      }
+    },
+    "tooltip": "Your Project",
+    "title": "Your Project Deserves the Best",
+    "description": "Let's discuss your project and see how I can help you achieve your goals.",
+    "pricingPlans": "Pricing Plans",
+    "pricingTitle": "Transparent Pricing, No Surprises",
+    "uniqueRequest": "Unique Request",
+    "uniqueRequestDescription": "Are you looking for something custom? Don't hesitate to contact us, and we'll help brainstorm your product to success.",
+    "letsTalk": "Let's Talk",
+    "startFast": "Get Started In 3 Days."
+  },
   "caseStudies": {
     "metadata": {
       "title": "Case Studies | Matthieu Vagnon",

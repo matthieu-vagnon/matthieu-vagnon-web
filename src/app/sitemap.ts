@@ -1,18 +1,19 @@
-import { profile } from '@/data/profile';
-import { projects } from '@/data/projects';
-import { getPathname } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
-import type { MetadataRoute } from 'next';
-import { Locale } from 'next-intl';
+import { profile } from "@/data/profile";
+import { projects } from "@/data/projects";
+import { getPathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import type { MetadataRoute } from "next";
+import { Locale } from "next-intl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    ...getEntries('/'),
-    ...getEntries('/profile', [
+    ...getEntries("/"),
+    ...getEntries("/profile", [
       profile.avatarUrl?.src,
       profile.businessCard.image.src,
     ]),
-    ...getEntries('/case-studies'),
+    ...getEntries("/your-project"),
+    ...getEntries("/case-studies"),
     ...Object.entries(projects).flatMap(([project, data]) =>
       getEntries(
         `/case-studies/${project}`,
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 }
 
-type Href = Parameters<typeof getPathname>[0]['href'];
+type Href = Parameters<typeof getPathname>[0]["href"];
 
 function getEntries(href: Href, imgs?: (string | undefined)[]) {
   const filteredImgs = imgs?.filter((img) => img !== undefined);
@@ -32,7 +33,7 @@ function getEntries(href: Href, imgs?: (string | undefined)[]) {
   return routing.locales.map((locale: Locale) => ({
     url: getUrl(href, locale),
     lastModified: new Date().toISOString(),
-    changeFrequency: 'daily' as const,
+    changeFrequency: "daily" as const,
     images: filteredImgs?.map((img) => `${process.env.NEXT_PUBLIC_URL!}${img}`),
     alternates: {
       languages: Object.fromEntries(

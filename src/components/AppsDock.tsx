@@ -1,23 +1,24 @@
 "use client";
 
 import { profile } from "@/data/profile";
+import { useActiveModal } from "@/hooks/useActiveModal";
 import { useDockStatus } from "@/hooks/useDockStatus";
 import { Link } from "@/i18n/navigation";
 import {
   BriefcaseBusiness,
   Cog,
+  HeartHandshake,
   HomeIcon,
   MessageCircle,
   Newspaper,
   UserRound,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ConfigurationModal } from "./ConfigurationModal";
 import { ContactModal } from "./ContactModal";
 import { Dock, DockIcon, DockItem, DockLabel } from "./Dock";
-import { Dialog, DialogTrigger } from "./NestedDialog";
+import { Dialog } from "./NestedDialog";
 import { ProgressiveBlur } from "./ProgressiveBlur";
 import { Separator } from "./Separator";
 
@@ -38,16 +39,8 @@ function DockElement({
 
 export default function AppsDock() {
   const { isDockOpen } = useDockStatus();
-  const searchParams = useSearchParams();
-  const modalParam = searchParams.get("action");
-  const [activeModal, setActiveModal] = useState<string | undefined>(undefined);
   const t = useTranslations();
-
-  useEffect(() => {
-    if (modalParam) {
-      setActiveModal(modalParam);
-    }
-  }, [modalParam]);
+  const { activeModal, setActiveModal } = useActiveModal();
 
   const apps = [
     {
@@ -59,6 +52,11 @@ export default function AppsDock() {
       title: t("profile.title"),
       icon: <UserRound className="h-full w-full text-neutral-600" />,
       url: "/profile",
+    },
+    {
+      title: t("yourProject.tooltip"),
+      icon: <HeartHandshake className="h-full w-full text-neutral-600" />,
+      url: "/your-project",
     },
     {
       title: t("caseStudies.title"),
@@ -89,7 +87,7 @@ export default function AppsDock() {
   ];
 
   return (
-    <Dialog defaultOpen={!!modalParam}>
+    <Dialog open={!!activeModal} setActiveModal={setActiveModal}>
       <div
         className={`fixed bottom-0 pb-2 left-1/2 w-full -translate-x-1/2 z-100 ${
           isDockOpen ? "translate-y-0" : "translate-y-full"
@@ -107,11 +105,9 @@ export default function AppsDock() {
           ))}
           <Separator orientation="vertical" className="h-10" />
           {modals.map((modal, idx) => (
-            <DialogTrigger key={idx} asChild>
-              <button onClick={() => setActiveModal(modal.action)}>
-                <DockElement title={modal.title} icon={modal.icon} />
-              </button>
-            </DialogTrigger>
+            <button key={idx} onClick={() => setActiveModal(modal.action)}>
+              <DockElement title={modal.title} icon={modal.icon} />
+            </button>
           ))}
         </Dock>
       </div>
@@ -119,7 +115,7 @@ export default function AppsDock() {
         modals.find((modal) => modal.action === activeModal)?.modal}
       <ProgressiveBlur
         direction="bottom"
-        className="pointer-events-none fixed bottom-0 left-0 h-36 w-full z-99 bg-gradient-to-b from-transparent to-white dark:to-black from-50%"
+        className="pointer-events-none fixed bottom-0 left-0 h-36 w-full z-99 bg-linear-to-b from-transparent to-white dark:to-black from-66%"
       />
     </Dialog>
   );
