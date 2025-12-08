@@ -5,35 +5,6 @@ import uiRevamp from "@/public/your-project/ui-revamp.png";
 export const pricing: PricingPlan[] = [
   {
     title: {
-      en: "UI/UX Revamp",
-      fr: "Revamp UI/UX",
-    },
-    price: {
-      en: "3000 €",
-    },
-    priceDescription: {
-      en: "For 10 days of service, then 400 €/day",
-      fr: "Pour 10 jours de prestation, puis 400 €/jour.",
-    },
-    description: {
-      en: "Ideal for app owners who want to multiply the adoption of their product.",
-      fr: "Idéal pour les propriétaires d'app qui veulent multiplier l'adoption de leur produit.",
-    },
-    features: [
-      {
-        en: "Initial audit",
-        fr: "Audit initial",
-      },
-      {
-        en: "UI/UX revamp",
-        fr: "Refonte UI/UX complète",
-      },
-    ],
-    image: uiRevamp,
-    imageAlt: "ui/ux revamp illustration",
-  },
-  {
-    title: {
       en: "Lightspeed POC Development",
       fr: "Développement éclair d'un POC",
     },
@@ -60,6 +31,35 @@ export const pricing: PricingPlan[] = [
     ],
     image: bolt,
     imageAlt: "fast dev illustration",
+  },
+  {
+    title: {
+      en: "UI/UX Revamp",
+      fr: "Revamp UI/UX",
+    },
+    price: {
+      en: "3000 €",
+    },
+    priceDescription: {
+      en: "For 10 days of service, then 400 €/day",
+      fr: "Pour 10 jours de prestation, puis 400 €/jour.",
+    },
+    description: {
+      en: "Ideal for app owners who want to multiply the adoption of their product.",
+      fr: "Idéal pour les propriétaires d'app qui veulent multiplier l'adoption de leur produit.",
+    },
+    features: [
+      {
+        en: "Initial audit",
+        fr: "Audit initial",
+      },
+      {
+        en: "UI/UX revamp",
+        fr: "Refonte UI/UX complète",
+      },
+    ],
+    image: uiRevamp,
+    imageAlt: "ui/ux revamp illustration",
   },
   {
     title: {
