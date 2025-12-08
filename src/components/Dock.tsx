@@ -180,11 +180,8 @@ function DockItem({ children, className }: DockItemProps) {
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
-      // Prevent hover state from getting stuck on touch devices
-      onPointerDown={(e) => {
-        if (e.pointerType === "touch") {
-          setTimeout(() => isHovered.set(0), 1500);
-        }
+      onPointerDown={() => {
+        setTimeout(() => isHovered.set(0), 1500);
       }}
       className={cn(
         "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer",

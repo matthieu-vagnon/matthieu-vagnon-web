@@ -8,6 +8,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import { BlurFade } from "./BlurFade";
 import { LinkButton } from "./Button";
+import Highlight from "./Highlight";
 import { MainCard, MainCardContent } from "./MainCard";
 import { TextRotate } from "./TextRotate";
 import Logo from "./svg/Logo";
@@ -31,7 +32,7 @@ export default function TitleBox() {
     <LayoutGroup>
       <div className="flex w-full justify-center items-center flex-col gap-8 md:gap-10">
         <motion.div layout="position" transition={MOTION_TRANSITION}>
-          <Logo className="hover:rotate-360 transition-transform duration-300" />
+          <Logo className="motion-safe:animate-bounce transition-transform duration-300" />
         </motion.div>
         <motion.span layout transition={MOTION_TRANSITION}>
           <MainCard variant="dots" className="h-fit w-fit bg-background">
@@ -64,8 +65,10 @@ export default function TitleBox() {
                 </motion.span>
               </span>
               <motion.span layout="position" transition={MOTION_TRANSITION}>
-                <span className="font-handwriting tracking-tighter text-xl sm:text-3xl md:text-4xl">
-                  {t("secondLine")}
+                <span className="font-contrast tracking-tight text-xl sm:text-2xl md:text-3xl">
+                  {t.rich("secondLine", {
+                    highlight: (chunks) => <Highlight>{chunks}</Highlight>,
+                  })}
                 </span>
               </motion.span>
             </MainCardContent>
