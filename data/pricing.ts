@@ -67,7 +67,7 @@ export const pricing: PricingPlan[] = [
       fr: "Développement d'app de bout en bout",
     },
     price: {
-      en: "8000 €",
+      en: "7500 €",
     },
     priceDescription: {
       en: "For 30 days of service, then 350 €/day",

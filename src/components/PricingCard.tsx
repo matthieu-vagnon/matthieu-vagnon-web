@@ -21,16 +21,6 @@ interface PricingCardProps {
   className?: string;
 }
 
-const cardVariants: Variants = {
-  initial: { scale: 1, y: 0 },
-  hover: {
-    scale: 1.03,
-    y: -5,
-    boxShadow: "0px 15px 30px -5px hsl(var(--foreground) / 0.1)",
-    transition: { type: "spring", stiffness: 300, damping: 20 },
-  },
-};
-
 const imageVariants: Variants = {
   initial: { scale: 1, rotate: 0 },
   hover: {
@@ -62,11 +52,10 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
     return (
       <motion.div
         ref={ref}
-        variants={cardVariants}
         initial="initial"
         whileHover="hover"
         className={cn(
-          "relative w-full md:w-[calc(50%-15px)] flex flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground shadow-sm transition-shadow duration-300",
+          "relative flex-1 min-w-82 flex flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground shadow-sm transition-shadow duration-300",
           className
         )}
         {...props}
@@ -115,7 +104,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
         </div>
 
         <div className="mt-6 flex flex-col gap-y-3">
-          <Button size="md" className="w-full" onClick={onCta}>
+          <Button size="lg" className="w-full" onClick={onCta}>
             {buttonText}
           </Button>
           <span className="leading-none text-sm italic text-muted-foreground/66">
