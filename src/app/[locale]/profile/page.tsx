@@ -35,7 +35,7 @@ export default function Profile() {
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.about")} />
           <div className="flex mt-5 gap-x-10">
-            <div className="flex flex-col items-center md:flex-row gap-5 lg:max-w-4/5 xl:max-w-2/3">
+            <div className="flex flex-col items-center md:flex-row gap-5 xl:max-w-3/4">
               <Media
                 width={288}
                 media={{
@@ -56,8 +56,8 @@ export default function Profile() {
                 </span>
               </div>
             </div>
-            <div className="relative hidden lg:block w-33">
-              <div className="absolute inset-y-0 right-0 w-11 bg-gradient-to-l from-background to-transparent" />
+            <div className="relative hidden xl:block w-33">
+              <div className="absolute inset-y-0 right-0 w-11 bg-linear-to-l from-background to-transparent" />
               <PageDecoration className="h-full w-full" />
             </div>
           </div>
