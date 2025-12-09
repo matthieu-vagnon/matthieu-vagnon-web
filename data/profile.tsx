@@ -1,3 +1,4 @@
+import Facebook from "@/components/svg/Facebook";
 import Github from "@/components/svg/Github";
 import Instagram from "@/components/svg/Instagram";
 import LinkedIn from "@/components/svg/Linkedin";
@@ -6,6 +7,7 @@ import NextjsIcon from "@/components/svg/Nextjs";
 import ReactIcon from "@/components/svg/React";
 import TailwindIcon from "@/components/svg/Tailwind";
 import TypescriptIcon from "@/components/svg/TypeScript";
+import X from "@/components/svg/X";
 import businessCard from "@/public/profile/business-card.png";
 import cosigma from "@/public/profile/cosigma.jpeg";
 import google from "@/public/profile/google.jpg";
@@ -45,6 +47,20 @@ export const profile: Profile = {
       link: {
         en: "https://www.linkedin.com/in/matthieu-vagnon/?locale=en_US",
         fr: "https://www.linkedin.com/in/matthieu-vagnon",
+      },
+    },
+    x: {
+      title: "X",
+      img: <X />,
+      link: {
+        en: "https://x.com/matthieu_vagnon",
+      },
+    },
+    facebook: {
+      title: "Facebook",
+      img: <Facebook />,
+      link: {
+        en: "https://www.facebook.com/profile.php?id=61584912657172",
       },
     },
     malt: {
