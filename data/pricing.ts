@@ -1,4 +1,4 @@
-import bolt from "@/public/your-project/bolt.png";
+import fast from "@/public/your-project/fast.png";
 import fullStackDev from "@/public/your-project/full-stack-dev.png";
 import uiRevamp from "@/public/your-project/ui-revamp.png";
 
@@ -29,7 +29,7 @@ export const pricing: PricingPlan[] = [
         fr: "Attention particulière accordée aux problématiques de design et d'expérience utilisateur",
       },
     ],
-    image: bolt,
+    image: fast,
     imageAlt: "fast dev illustration",
   },
   {
