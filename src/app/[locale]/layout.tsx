@@ -137,15 +137,15 @@ export default async function RootLayout({
                       zIndex={999}
                     />
                     <Toaster />
-                    <div className="flex flex-col min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden pt-14">
-                      <BlurFade className="w-full fixed top-0 left-0 z-100 px-4 pt-5">
+                    <div className="flex flex-col min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
+                      <BlurFade className="w-full z-100 pt-5">
                         <InfoBand />
+                        <ProgressiveBlur
+                          blurIntensity={0.66}
+                          direction="top"
+                          className="pointer-events-none h-full w-full z-99"
+                        />
                       </BlurFade>
-                      <ProgressiveBlur
-                        blurIntensity={0.66}
-                        direction="top"
-                        className="pointer-events-none fixed top-0 left-0 h-26 w-full z-99"
-                      />
                       {children}
                       <CardStack items={testimonials} />
                       <AppsDock />
