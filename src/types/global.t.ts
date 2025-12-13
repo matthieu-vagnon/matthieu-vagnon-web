@@ -46,12 +46,13 @@ declare global {
       title: MultiLingual;
       tooltip?: MultiLingual;
       accent?: boolean;
-      tech:
-        | string[]
+      tech: (
+        | string
         | {
             techIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
             name: string;
-          }[];
+          }
+      )[];
     }[];
     about: MultiLingual;
     experience: {

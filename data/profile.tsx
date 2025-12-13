@@ -30,7 +30,6 @@ import {
   Cog,
   Database,
   FileChartPie,
-  Heart,
   Keyboard,
   Paintbrush,
   Palette,
@@ -169,43 +168,16 @@ export const profile: Profile = {
   ],
   stack: [
     {
-      icon: Heart,
-      title: {
-        en: "Core",
-        fr: "Cœur",
-      },
-      accent: true,
-      tech: [
-        {
-          techIcon: TypescriptIcon,
-          name: "TypeScript",
-        },
-        {
-          techIcon: ReactIcon,
-          name: "React.js",
-        },
-        {
-          techIcon: ReactIcon,
-          name: "React Native",
-        },
-        {
-          techIcon: NextjsIcon,
-          name: "Next.js",
-        },
-        {
-          techIcon: TailwindIcon,
-          name: "Tailwind CSS",
-        },
-      ],
-    },
-    {
       icon: CodeXml,
       title: {
         en: "Languages",
         fr: "Languages",
       },
       tech: [
-        "TypeScript",
+        {
+          techIcon: TypescriptIcon,
+          name: "TypeScript",
+        },
         "JavaScript",
         "SQL",
         "HTML/TSX/JSX",
@@ -219,19 +191,33 @@ export const profile: Profile = {
         fr: "Front-end",
       },
       tech: [
-        "React.js",
-        "React Native",
-        "Next.js",
+        {
+          techIcon: ReactIcon,
+          name: "React.js",
+        },
+        {
+          techIcon: ReactIcon,
+          name: "React Native",
+        },
+        {
+          techIcon: NextjsIcon,
+          name: "Next.js",
+        },
         "Vite.js",
-        "Redux",
-        "@alewin/useWorker",
+        "React Router",
         "TanStack Query",
         "Electric SQL",
-        "React Router",
-        "i18next",
-        "Tailwind CSS",
+        {
+          techIcon: TailwindIcon,
+          name: "Tailwind CSS",
+        },
         "Material UI",
         "Framer Motion",
+        "Redux",
+        "Zod",
+        "Effect",
+        "i18n",
+        "@alewin/useWorker",
         "Cypress",
         "ESLint",
         "Prettier",
@@ -245,7 +231,6 @@ export const profile: Profile = {
       },
       tech: [
         "RapidAPI",
-        "SerpAPI",
         "Docker",
         "GitHub Actions",
         "Vercel",
@@ -259,7 +244,7 @@ export const profile: Profile = {
       title: {
         en: "UI/UX",
       },
-      tech: ["Figma", "Canva", "Lighthouse", "Vercel Speed Insights"],
+      tech: ["Figma", "Lighthouse", "Vercel Speed Insights"],
     },
     {
       icon: BrainCircuit,
@@ -267,7 +252,7 @@ export const profile: Profile = {
         en: "AI & LLM Integration",
         fr: "Intégration IA & LLM",
       },
-      tech: ["OpenRouter", "Firebase"],
+      tech: ["OpenRouter", "SerpAPI", "Firebase"],
     },
     {
       icon: Users,
@@ -278,6 +263,7 @@ export const profile: Profile = {
       tech: [
         "Git",
         "GitHub",
+        "GitLab",
         "Notion",
         "Jira",
         "Trello",
@@ -295,7 +281,7 @@ export const profile: Profile = {
         en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
         fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
       },
-      tech: ["v0", "GitHub Copilot", "Cursor", "Google Antigravity"],
+      tech: ["Banani", "v0", "Cursor"],
     },
   ],
   about: {

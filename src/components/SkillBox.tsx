@@ -7,12 +7,13 @@ type SkillBoxProps = {
   icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   title: string;
   tooltip?: string;
-  items:
-    | string[]
+  items: (
+    | string
     | {
         techIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
         name: string;
-      }[];
+      }
+  )[];
   accent?: boolean;
   className?: string;
 };
@@ -69,7 +70,9 @@ export default function SkillBox({
           </div>
         </div>
       </TooltipTrigger>
-      {tooltip && <TooltipContent>{tooltip}</TooltipContent>}
+      {tooltip && (
+        <TooltipContent collisionPadding={8}>{tooltip}</TooltipContent>
+      )}
     </Tooltip>
   );
 }

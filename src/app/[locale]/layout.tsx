@@ -1,5 +1,8 @@
 import AppsDock from "@/components/AppsDock";
+import { BlurFade } from "@/components/BlurFade";
 import { CardStack } from "@/components/CardStack";
+import InfoBand from "@/components/InfoBand";
+import { ProgressiveBlur } from "@/components/ProgressiveBlur";
 import { TooltipProvider } from "@/components/Tooltip";
 import { testimonials } from "@/data/testimonials";
 import AccentColorProvider from "@/hooks/useAccentColor";
@@ -134,7 +137,15 @@ export default async function RootLayout({
                       zIndex={999}
                     />
                     <Toaster />
-                    <div className="min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
+                    <div className="flex flex-col min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden pt-14">
+                      <BlurFade className="w-full fixed top-0 left-0 z-100 px-4 pt-5">
+                        <InfoBand />
+                      </BlurFade>
+                      <ProgressiveBlur
+                        blurIntensity={0.66}
+                        direction="top"
+                        className="pointer-events-none fixed top-0 left-0 h-26 w-full z-99"
+                      />
                       {children}
                       <CardStack items={testimonials} />
                       <AppsDock />
