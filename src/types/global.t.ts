@@ -1,5 +1,6 @@
 import { Media } from "@/components/Media";
 import { typeVariants } from "@/components/ProjectCard";
+import { LucideIcon } from "lucide-react";
 import { Locale } from "next-intl";
 import { StaticImageData } from "next/image";
 import React from "react";
@@ -19,6 +20,11 @@ declare global {
     testimonial: MultiLingual & { original: Locale };
     method?: string;
     image?: StaticImageData;
+  };
+
+  type InfoBand = {
+    icon?: LucideIcon;
+    text: MultiLingual;
   };
 
   type Profile = {

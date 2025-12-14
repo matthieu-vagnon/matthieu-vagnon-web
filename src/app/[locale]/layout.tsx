@@ -129,19 +129,17 @@ export default async function RootLayout({
                   <body
                     className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} ${contrastFont.variable} antialiased`}
                   >
-                    <div className="min-h-dvh max-w-[2250px] flex flex-col mx-auto">
-                      <NextTopLoader
-                        showSpinner={false}
-                        color="var(--main)"
-                        zIndex={999}
-                      />
+                    <NextTopLoader
+                      showSpinner={false}
+                      color="var(--main)"
+                      zIndex={999}
+                    />
+                    <Toaster />
+                    <div className="mx-auto min-h-dvh max-w-[2250px] flex flex-col relative px-4 sm:px-6 md:px-8 overflow-hidden">
                       <InfoBand />
-                      <Toaster />
-                      <div className="flex flex-1 w-full flex-col mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
-                        {children}
-                        <CardStack items={testimonials} />
-                        <AppsDock />
-                      </div>
+                      {children}
+                      <CardStack items={testimonials} />
+                      <AppsDock />
                     </div>
                   </body>
                 </AccentColorProvider>

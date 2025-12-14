@@ -6,7 +6,7 @@ import TitleBox from "@/components/TitleBox";
 export default function Home() {
   return (
     <>
-      <div className="flex-1 w-full flex flex-col gap-y-4 items-center pb-22">
+      <div className="w-full flex-1 flex flex-col gap-y-4 items-center pb-22">
         <BlurFade className="w-full flex justify-end mt-6 sm:mt-8">
           <LanguageSwitch />
         </BlurFade>
