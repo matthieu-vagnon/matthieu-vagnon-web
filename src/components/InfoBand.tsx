@@ -28,7 +28,7 @@ export default function InfoBand({ className }: { className?: string }) {
 
   return (
     <>
-      <div className="h-16" />
+      <div className="h-18" />
       <div className="fixed top-4 left-0 px-4 z-99">
         <style jsx global>{`
           @keyframes progress-loading {
