@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <div className="flex-1 w-full flex flex-col gap-y-4 items-center pb-22">
-        <BlurFade className="w-full flex justify-end mt-6">
+        <BlurFade className="w-full flex justify-end mt-6 sm:mt-8">
           <LanguageSwitch />
         </BlurFade>
         <div className="flex-auto flex justify-center items-center">

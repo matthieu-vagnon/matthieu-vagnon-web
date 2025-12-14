@@ -1,8 +1,6 @@
 import AppsDock from "@/components/AppsDock";
-import { BlurFade } from "@/components/BlurFade";
 import { CardStack } from "@/components/CardStack";
 import InfoBand from "@/components/InfoBand";
-import { ProgressiveBlur } from "@/components/ProgressiveBlur";
 import { TooltipProvider } from "@/components/Tooltip";
 import { testimonials } from "@/data/testimonials";
 import AccentColorProvider from "@/hooks/useAccentColor";
@@ -131,24 +129,19 @@ export default async function RootLayout({
                   <body
                     className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} ${contrastFont.variable} antialiased`}
                   >
-                    <NextTopLoader
-                      showSpinner={false}
-                      color="var(--main)"
-                      zIndex={999}
-                    />
-                    <Toaster />
-                    <div className="flex flex-col min-h-dvh max-w-[3840px] mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
-                      <BlurFade className="w-full z-100 pt-5">
-                        <InfoBand />
-                        <ProgressiveBlur
-                          blurIntensity={0.66}
-                          direction="top"
-                          className="pointer-events-none h-full w-full z-99"
-                        />
-                      </BlurFade>
-                      {children}
-                      <CardStack items={testimonials} />
-                      <AppsDock />
+                    <div className="min-h-dvh max-w-[2250px] flex flex-col mx-auto">
+                      <NextTopLoader
+                        showSpinner={false}
+                        color="var(--main)"
+                        zIndex={999}
+                      />
+                      <InfoBand />
+                      <Toaster />
+                      <div className="flex flex-1 w-full flex-col mx-auto relative px-4 sm:px-6 md:px-8 overflow-x-hidden">
+                        {children}
+                        <CardStack items={testimonials} />
+                        <AppsDock />
+                      </div>
                     </div>
                   </body>
                 </AccentColorProvider>
