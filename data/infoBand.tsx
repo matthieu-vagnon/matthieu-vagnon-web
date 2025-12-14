@@ -7,14 +7,11 @@ export const infoBand: InfoBand[] = [
       fr: "Membre certifié de la CCIFJ depuis juin 2025.",
     },
     icon: BadgeCheck,
-    url: {
-      en: "https://www.ccifj.or.jp/",
-    },
   },
   {
     text: {
       en: "Accredited for the French Innovation Tax Credit since 2025.",
-      fr: "Prestataire agréé CII (Crédit Impôt Innovation).",
+      fr: "Prestataire agréé CII (Crédit Impôt Innovawdawdawd awd awd awd awd awd awd awd wad awd aw dwaation).",
     },
     icon: BadgeEuro,
   },

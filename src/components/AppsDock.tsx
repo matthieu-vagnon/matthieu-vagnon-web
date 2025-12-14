@@ -18,7 +18,6 @@ import { ConfigurationModal } from "./ConfigurationModal";
 import { ContactModal } from "./ContactModal";
 import { Dock, DockIcon, DockItem, DockLabel } from "./Dock";
 import { Dialog } from "./NestedDialog";
-import { ProgressiveBlur } from "./ProgressiveBlur";
 import { Separator } from "./Separator";
 
 function DockElement({
@@ -109,11 +108,6 @@ export default function AppsDock() {
       </div>
       {activeModal !== undefined &&
         modals.find((modal) => modal.action === activeModal)?.modal}
-      <ProgressiveBlur
-        blurIntensity={0.33}
-        direction="bottom"
-        className="pointer-events-none fixed bottom-0 left-0 h-36 w-full z-99"
-      />
     </Dialog>
   );
 }
