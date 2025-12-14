@@ -11,7 +11,7 @@ export const infoBand: InfoBand[] = [
   {
     text: {
       en: "Accredited for the French Innovation Tax Credit since 2025.",
-      fr: "Prestataire agréé CII (Crédit Impôt Innovawdawdawd awd awd awd awd awd awd awd wad awd aw dwaation).",
+      fr: "Prestataire agréé CII (Crédit Impôt Innovation).",
     },
     icon: BadgeEuro,
   },
