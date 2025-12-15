@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { Dialog } from '@radix-ui/react-dialog';
-import { useState } from 'react';
+import { Dialog } from "@radix-ui/react-dialog";
+import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './Carousel';
-import { MediaButton, Media as MediaType } from './Media';
-import MediaView from './MediaView';
+} from "./Carousel";
+import { MediaButton, Media as MediaType } from "./Media";
+import MediaView from "./MediaView";
 
 type MediaCarouselProps = {
   medias: MediaType[];
@@ -26,12 +26,12 @@ export function MediaCarousel({ medias, isOpenSlug }: MediaCarouselProps) {
 
   return (
     <>
-      <Carousel opts={{ align: 'start' }} className='w-full flex flex-col'>
+      <Carousel opts={{ align: "start" }} className="w-full flex flex-col">
         <CarouselContent>
           {medias.map((element, index) => (
             <CarouselItem
               key={index}
-              className='basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center'
+              className="basis-full sm:basis-1/2 md:basis-1/3 xl:basis-1/4 pb-4 flex items-center justify-center"
             >
               <MediaButton
                 quality={10}
@@ -40,12 +40,12 @@ export function MediaCarousel({ medias, isOpenSlug }: MediaCarouselProps) {
                   setIsOpen(true);
                 }}
                 media={element}
-                className='cursor-[inherit] active:cursor-[inherit]'
+                className="cursor-[inherit] active:cursor-[inherit]"
               />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className='flex flex-row gap-x-3 flex-nowrap items-center justify-start'>
+        <div className="flex flex-row gap-x-3 flex-nowrap items-center justify-start">
           <CarouselPrevious />
           <CarouselNext />
         </div>

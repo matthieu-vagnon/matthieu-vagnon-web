@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import { Li, Ul } from "@/components/List";
 import { MediaCarousel } from "@/components/MediaCarousel";
 import PageTitle from "@/components/PageTitle";
-import { ScrollProgress } from "@/components/ScrollProgress";
 import SectionTitle from "@/components/SectionTitle";
 import SeeMore from "@/components/SeeMore";
 import { default as SkillBox } from "@/components/SkillBox";
@@ -125,7 +124,6 @@ export default async function Project(props: ProjectProps) {
 
   return (
     <TestimonialsStatusWrapper shouldCollapse={true}>
-      <ScrollProgress />
       <BlurFade>
         <Header />
       </BlurFade>
