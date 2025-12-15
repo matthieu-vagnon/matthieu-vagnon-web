@@ -25,6 +25,7 @@ declare global {
   type InfoBand = {
     icon?: LucideIcon;
     text: MultiLingual;
+    url?: MultiLingual;
   };
 
   type Profile = {

@@ -6,6 +6,9 @@ export const infoBand: InfoBand[] = [
       en: "Certified member of the CCIFJ since June 2025.",
       fr: "Membre certifié de la CCIFJ depuis juin 2025.",
     },
+    url: {
+      en: "https://www.ccifj.or.jp/",
+    },
     icon: BadgeCheck,
   },
   {
@@ -14,5 +17,8 @@ export const infoBand: InfoBand[] = [
       fr: "Prestataire agréé CII (Crédit Impôt Innovation).",
     },
     icon: BadgeEuro,
+    url: {
+      en: "https://www.entreprises.gouv.fr/espace-entreprises/beneficier-d-une-aide-ou-d-un-credit-d-impot/credit-dimpot-innovation",
+    },
   },
 ];

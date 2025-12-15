@@ -3,19 +3,22 @@
 import { infoBand } from "@/data/infoBand";
 import { cn, getTranslatedData } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
+import { LinkButton } from "./Button";
 
 const DURATION = 7500;
 
 export default function InfoBand({ className }: { className?: string }) {
   const [item, setItem] = useState(0);
   const locale = useLocale();
+  const t = useTranslations();
 
   const infoBands = infoBand.length;
   const infoBandItem = infoBand[item];
   const InfoBandIcon = infoBandItem?.icon;
   const infoBandText = infoBandItem?.text;
+  const infoBandUrl = getTranslatedData(infoBandItem.url, locale);
 
   const handleNextItem = () => {
     setItem((prev) => {
@@ -69,6 +72,15 @@ export default function InfoBand({ className }: { className?: string }) {
                 <InfoBandIcon className="inline-flex size-3 sm:size-4 mb-0.5 mr-1 sm:mr-1.5" />
               )}
               {getTranslatedData(infoBandText, locale)}
+              {infoBandUrl && (
+                <LinkButton
+                  href={infoBandUrl}
+                  external
+                  className="ml-1 sm:ml-1.5"
+                >
+                  {t("utils.seeMore")}
+                </LinkButton>
+              )}
             </motion.span>
           </AnimatePresence>
           <div
