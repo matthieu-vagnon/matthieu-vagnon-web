@@ -102,7 +102,7 @@ export default function TitleBox() {
                 variant="default"
                 size="sm"
                 href="/your-project"
-                className="bg-main/33 text-main-foreground hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1"
+                className="bg-main text-main-foreground hover:bg-accent-foreground hover:text-accent rounded-full px-4 py-1"
               >
                 <HeartHandshake />
                 {t("seePlans")}
