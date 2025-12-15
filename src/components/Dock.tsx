@@ -184,7 +184,7 @@ function DockItem({ children, className }: DockItemProps) {
         setTimeout(() => isHovered.set(0), 1500);
       }}
       className={cn(
-        "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/3",
+        "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/2",
         className
       )}
       tabIndex={0}

@@ -36,8 +36,8 @@ export default function TitleBox() {
         </motion.div>
         <motion.span layout transition={MOTION_TRANSITION}>
           <MainCard variant="dots" className="h-fit w-fit bg-background">
-            <MainCardContent className="flex flex-col gap-1 md:gap-3 whitespace-pre items-center font-sans-special text-center text-xl sm:text-2xl md:text-3xl">
-              <span className="flex items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2">
+            <MainCardContent className="flex flex-col gap-1.5 md:gap-4 whitespace-pre items-center font-sans-special text-center text-xl sm:text-2xl md:text-3xl">
+              <span className="flex tracking-tight items-center justify-center flex-wrap gap-y-2 mt-1 md:mt-2">
                 <motion.span layout="position" transition={MOTION_TRANSITION}>
                   {t("job.prefix")}
                 </motion.span>
@@ -65,9 +65,12 @@ export default function TitleBox() {
                 </motion.span>
               </span>
               <motion.span layout="position" transition={MOTION_TRANSITION}>
-                <span className="font-contrast tracking-tight text-xl sm:text-2xl md:text-3xl">
+                <span className="tracking-tighter text-sm sm:text-xl md:text-2xl">
                   {t.rich("secondLine", {
                     highlight: (chunks) => <Highlight>{chunks}</Highlight>,
+                    italic: (chunks) => (
+                      <span className="italic">{chunks}</span>
+                    ),
                   })}
                 </span>
               </motion.span>
