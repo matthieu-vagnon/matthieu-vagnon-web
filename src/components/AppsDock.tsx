@@ -85,7 +85,7 @@ export default function AppsDock() {
   return (
     <Dialog open={!!activeModal} setActiveModal={setActiveModal}>
       <div
-        className={`fixed bottom-0 pb-1 left-1/2 w-full -translate-x-1/2 z-100 transition-transform duration-300`}
+        className={`fixed bottom-0 pb-2 left-1/2 w-full -translate-x-1/2 z-100 transition-transform duration-300`}
       >
         <Dock className="items-end pb-3">
           {apps.map((app, idx) => (
