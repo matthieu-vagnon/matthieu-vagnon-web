@@ -64,7 +64,7 @@ type DockProviderProps = {
 };
 
 const DOCK_HEIGHT = 128;
-const DEFAULT_MAGNIFICATION = 52;
+const DEFAULT_MAGNIFICATION = 56;
 const DEFAULT_DISTANCE = 150;
 const DEFAULT_PANEL_HEIGHT = 64;
 const DockContext = createContext<DocContextType | undefined>(undefined);
@@ -106,7 +106,7 @@ function Dock({
     return (
       <div
         className={cn(
-          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-accent/50 backdrop-blur-sm px-4",
+          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-foreground/3 backdrop-blur-xs px-3 border border-foreground/4",
           className
         )}
         style={{ height: panelHeight }}
@@ -138,7 +138,7 @@ function Dock({
           mouseX.set(Infinity);
         }}
         className={cn(
-          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-accent/50 backdrop-blur-sm px-4",
+          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-foreground/3 backdrop-blur-xs px-3 border border-foreground/4",
           className
         )}
         style={{ height: panelHeight }}
@@ -184,7 +184,7 @@ function DockItem({ children, className }: DockItemProps) {
         setTimeout(() => isHovered.set(0), 1500);
       }}
       className={cn(
-        "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-full bg-gray-200 cursor-pointer",
+        "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/3",
         className
       )}
       tabIndex={0}
@@ -226,7 +226,7 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "pointer-events-none absolute bottom-13 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700",
+            "pointer-events-none absolute bottom-13 left-1/2 w-fit z-99 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700",
             className
           )}
           role="tooltip"
