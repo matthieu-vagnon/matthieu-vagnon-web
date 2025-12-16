@@ -219,7 +219,6 @@ export const profile: Profile = {
         "Effect",
         "i18n",
         "@alewin/useWorker",
-        "Cypress",
       ],
     },
     {
@@ -249,6 +248,8 @@ export const profile: Profile = {
         "Component-Based Architecture",
         "ESLint",
         "Prettier",
+        "Jest",
+        "Vitest",
       ],
     },
     {
