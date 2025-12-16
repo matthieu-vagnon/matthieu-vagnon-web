@@ -24,6 +24,7 @@ import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import {
   BadgePlus,
+  Braces,
   BrainCircuit,
   BrushCleaning,
   CodeXml,
@@ -219,8 +220,6 @@ export const profile: Profile = {
         "i18n",
         "@alewin/useWorker",
         "Cypress",
-        "ESLint",
-        "Prettier",
       ],
     },
     {
@@ -237,6 +236,19 @@ export const profile: Profile = {
         "Supabase",
         "Google Cloud",
         "PostgreSQL",
+      ],
+    },
+    {
+      icon: Braces,
+      title: {
+        en: "Development Practices",
+        fr: "Pratiques de développement",
+      },
+      tech: [
+        "Hexagonal Architecture",
+        "Component-Based Architecture",
+        "ESLint",
+        "Prettier",
       ],
     },
     {
@@ -281,7 +293,7 @@ export const profile: Profile = {
         en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
         fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
       },
-      tech: ["Banani", "v0", "Cursor"],
+      tech: ["Banani", "v0", "Cursor", "Claude Code"],
     },
   ],
   about: {
