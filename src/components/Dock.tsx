@@ -180,9 +180,6 @@ function DockItem({ children, className }: DockItemProps) {
       onHoverEnd={() => isHovered.set(0)}
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
-      onPointerDown={() => {
-        setTimeout(() => isHovered.set(0), 1500);
-      }}
       className={cn(
         "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/2",
         className

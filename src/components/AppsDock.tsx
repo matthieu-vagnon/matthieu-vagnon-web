@@ -28,7 +28,7 @@ function DockElement({
 }) {
   return (
     <DockItem>
-      <DockLabel>{title}</DockLabel>
+      {navigator.maxTouchPoints === 0 && <DockLabel>{title}</DockLabel>}
       <DockIcon>{icon}</DockIcon>
     </DockItem>
   );
