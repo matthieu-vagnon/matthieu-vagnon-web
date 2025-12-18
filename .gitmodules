@@ -1,0 +1,3 @@
+[submodule ".cursor"]
+	path = .cursor
+	url = https://github.com/matthieu-vagnon/next.js-cursor.git
