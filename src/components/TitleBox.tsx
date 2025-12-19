@@ -125,7 +125,7 @@ export default function TitleBox() {
             <span className="text-center font-sans-special font-medium text-md sm:text-lg md:text-xl text-foreground-secondary">
               {t("subtitle")}
             </span>
-            <div className="h-12 flex gap-4 justify-center items-center">
+            <div className="h-12 flex gap-4 justify-center items-center flex-wrap">
               <Image
                 src="/they-trust-me/totalenergies.png"
                 alt="TotalEnergies"

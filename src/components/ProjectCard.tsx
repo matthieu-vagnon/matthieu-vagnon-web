@@ -30,7 +30,7 @@ const CardWrapper = ({
       onClick={() => {
         setActiveModal("contact");
       }}
-      className="cursor-pointer relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 p-3 sm:p-4"
+      className="text-left cursor-pointer relative rounded-lg h-full w-full hover:shadow-2xl transition-shadow duration-300 overflow-hidden group flex flex-col justify-end items-start gap-2 p-3 sm:p-4"
     >
       {children}
     </button>
