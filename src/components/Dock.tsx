@@ -106,7 +106,7 @@ function Dock({
     return (
       <div
         className={cn(
-          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-white/50 backdrop-blur-xs px-3",
+          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-background/50 backdrop-blur-xs px-3 border border-foreground/4",
           className
         )}
         style={{ height: panelHeight }}
@@ -138,7 +138,7 @@ function Dock({
           mouseX.set(Infinity);
         }}
         className={cn(
-          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-white/50 backdrop-blur-xs px-3",
+          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-background/50 backdrop-blur-xs px-3 border border-foreground/4",
           className
         )}
         style={{ height: panelHeight }}
