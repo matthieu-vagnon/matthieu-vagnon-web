@@ -129,7 +129,9 @@
       "technologies": "Technologies",
       "problem": "Problèmes et enjeux",
       "solution": "Solutions",
-      "results": "Résultat"
+      "results": "Résultat",
+      "andMuchMore": "Et bien d'autres...",
+      "andMuchMoreDescription": "Demandez à en voir plus lors d'un appel !"
     },
     "title": "Cas pratiques",
     "description": "Voici une liste non exhaustive des projets sur lesquels j'ai travaillé."

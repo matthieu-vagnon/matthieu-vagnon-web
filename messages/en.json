@@ -130,7 +130,9 @@
       "technologies": "Technologies",
       "problem": "Problems and Challenges",
       "solution": "Solutions",
-      "results": "Result"
+      "results": "Result",
+      "andMuchMore": "And much more...",
+      "andMuchMoreDescription": "Ask me to see more during a call!"
     },
     "title": "Case Studies",
     "description": "Here is a non-exhaustive list of projects I have worked on."

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   AnimatePresence,
@@ -6,10 +6,10 @@ import {
   useInView,
   UseInViewOptions,
   Variants,
-} from 'framer-motion';
-import { useRef } from 'react';
+} from "framer-motion";
+import { useRef } from "react";
 
-type MarginType = UseInViewOptions['margin'];
+type MarginType = UseInViewOptions["margin"];
 
 type BlurFadeProps = {
   children: React.ReactNode;
@@ -35,8 +35,8 @@ export function BlurFade({
   delay = 0,
   yOffset = 6,
   inView = false,
-  inViewMargin = '-50px',
-  blur = '6px',
+  inViewMargin = "-50px",
+  blur = "6px",
   dynamic = false,
 }: BlurFadeProps) {
   const ref = useRef(null);
@@ -49,13 +49,13 @@ export function BlurFade({
       y: yOffset,
       opacity: 0,
       filter: `blur(${blur})`,
-      ...(dynamic && { display: 'none' }),
+      ...(dynamic && { display: "none" }),
     },
     visible: {
       y: -yOffset,
       opacity: 1,
       filter: `blur(0px)`,
-      ...(dynamic && { display: 'block' }),
+      ...(dynamic && { display: "block" }),
     },
   };
 
@@ -65,14 +65,14 @@ export function BlurFade({
     <AnimatePresence>
       <motion.div
         ref={ref}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-        exit='hidden'
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        exit="hidden"
         variants={combinedVariants}
         transition={{
           delay: 0.04 + delay,
           duration,
-          ease: 'easeOut',
+          ease: "easeOut",
         }}
         className={className}
       >

@@ -126,29 +126,30 @@ export default function TitleBox() {
               {t("subtitle")}
             </span>
             <div className="h-12 flex gap-4 justify-center items-center">
-              <BlurFade delay={blurDelay} className="h-full">
-                <Image
-                  src="/they-trust-me/totalenergies.png"
-                  alt="TotalEnergies"
-                  height={0}
-                  width={0}
-                  sizes="100%"
-                  className="object-contain h-full w-auto"
-                />
-              </BlurFade>
-              <BlurFade
-                delay={(blurDelay = blurDelay + DELAY_INCREMENT)}
-                className="h-full"
-              >
-                <Image
-                  src="/they-trust-me/ccifj.png"
-                  alt="CCIFJ"
-                  height={0}
-                  width={0}
-                  sizes="100%"
-                  className="object-contain h-full w-auto"
-                />
-              </BlurFade>
+              <Image
+                src="/they-trust-me/totalenergies.png"
+                alt="TotalEnergies"
+                height={0}
+                width={0}
+                sizes="100%"
+                className="object-contain h-full w-auto"
+              />
+              <Image
+                src="/they-trust-me/pl.png"
+                alt="Predictive Layer"
+                height={0}
+                width={0}
+                sizes="100%"
+                className="object-contain h-full w-auto"
+              />
+              <Image
+                src="/they-trust-me/ccifj.png"
+                alt="CCIFJ"
+                height={0}
+                width={0}
+                sizes="100%"
+                className="object-contain h-full w-auto"
+              />
             </div>
           </BlurFade>
         </motion.span>
