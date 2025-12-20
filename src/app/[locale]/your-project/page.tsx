@@ -40,7 +40,6 @@ export default function Profile() {
           socials={[
             profile.socials.linkedin,
             profile.socials.x,
-            profile.socials.facebook,
             profile.socials.malt,
           ]}
         />

@@ -1,4 +1,3 @@
-import Facebook from "@/components/svg/Facebook";
 import Github from "@/components/svg/Github";
 import Instagram from "@/components/svg/Instagram";
 import LinkedIn from "@/components/svg/Linkedin";
@@ -54,13 +53,6 @@ export const profile: Profile = {
       img: <X />,
       link: {
         en: "https://x.com/matthieu_vagnon",
-      },
-    },
-    facebook: {
-      title: "Facebook",
-      img: <Facebook />,
-      link: {
-        en: "https://www.facebook.com/profile.php?id=61584912657172",
       },
     },
     malt: {
