@@ -287,7 +287,7 @@ export const profile: Profile = {
         en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
         fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
       },
-      tech: ["Google Stitch", "v0", "Cursor"],
+      tech: ["Google Stitch", "Cursor"],
     },
   ],
   about: {
