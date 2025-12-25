@@ -270,7 +270,6 @@ export const profile: Profile = {
         "Git",
         "GitHub",
         "GitLab",
-        "Notion",
         "Jira",
         "Trello",
         "Mixpanel",
