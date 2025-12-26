@@ -258,7 +258,7 @@ export const profile: Profile = {
         en: "AI & LLM Integration",
         fr: "Intégration IA & LLM",
       },
-      tech: ["OpenRouter", "SerpAPI", "Firebase"],
+      tech: ["OpenRouter", "Exa", "Firebase"],
     },
     {
       icon: Users,
@@ -272,7 +272,7 @@ export const profile: Profile = {
         "GitLab",
         "Jira",
         "Trello",
-        "Mixpanel",
+        "PostHog",
         "Vercel Web Analytics",
       ],
     },
