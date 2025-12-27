@@ -30,7 +30,6 @@ type ResumeCardProps = {
     title: MultiLingual;
     description?: MultiLingual[];
     responsibilities: MultiLingual[];
-    technologies: string[];
   }[];
   isOpen?: boolean;
 };
@@ -127,15 +126,6 @@ const ResumeCardContent = ({
                     );
                   })}
                 </ul>
-                {project.technologies && (
-                  <div className="flex flex-wrap gap-1">
-                    {project.technologies.map((badge, index) => (
-                      <Highlight color="gray" key={index}>
-                        {badge}
-                      </Highlight>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </motion.div>
@@ -146,7 +136,7 @@ const ResumeCardContent = ({
 };
 
 export const ResumeCard = (props: ResumeCardProps) => {
-  const { href, projects, isOpen = false } = props;
+  const { projects, href, isOpen = false } = props;
   const [isExpanded, setIsExpanded] = React.useState(isOpen);
 
   const handleClick = () => {

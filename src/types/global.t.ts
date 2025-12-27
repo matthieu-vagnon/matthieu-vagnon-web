@@ -71,7 +71,6 @@ declare global {
         title: MultiLingual;
         description?: MultiLingual[];
         responsibilities: MultiLingual[];
-        technologies: string[];
       }[];
     }[];
     education: {

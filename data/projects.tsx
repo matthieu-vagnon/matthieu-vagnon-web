@@ -309,7 +309,7 @@ export const projects: Record<string, Project> = {
       en: ["AI", "SaaS", "Questionnaire", "Mass Analysis"],
       fr: ["IA", "SaaS", "Questionnaire", "Analyse de masse"],
     },
-    technologies: ["React.js", "Next.js", "Supabase"],
+    technologies: ["React.js", "Next.js"],
     previewImg: smartInterviewBuilder6,
     gallery: [
       {
