@@ -148,8 +148,6 @@ export const testimonials: Testimonial[] = [
           <Highlight color="emerald">
             serious, efficient and very nice profile
           </Highlight>{" "}
-          {":)"}
-          <br />
           <Highlight color="emerald">I recommend without hesitation!</Highlight>
         </>
       ),
@@ -174,10 +172,8 @@ export const testimonials: Testimonial[] = [
           </Highlight>
           . C’est un{" "}
           <Highlight color="emerald">
-            profil sérieux, efficace et super sympa
+            profil sérieux, efficace et super sympa.
           </Highlight>{" "}
-          {":)"}
-          <br />
           <Highlight color="emerald">Je recommande sans hésitation !</Highlight>
         </>
       ),

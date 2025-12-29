@@ -7,11 +7,10 @@ import { ChevronLeft, ChevronRight, Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
-import { BlurFade } from "./BlurFade";
 import { Button } from "./Button";
 import Magnetic from "./Magnetic";
 
-const DURATION = 6666;
+const DURATION = 7500;
 
 type CardStackProps = {
   items: Testimonial[];
@@ -50,8 +49,7 @@ export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
   };
 
   return (
-    <BlurFade
-      dynamic
+    <div
       className={cn(
         "fixed bottom-25 right-10 z-99",
         isCollapsed && "pointer-events-none"
@@ -185,6 +183,6 @@ export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
           })}
         </div>
       </div>
-    </BlurFade>
+    </div>
   );
 };
