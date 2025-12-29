@@ -11,7 +11,7 @@ import { BlurFade } from "./BlurFade";
 import { Button } from "./Button";
 import Magnetic from "./Magnetic";
 
-const DURATION = 15000;
+const DURATION = 6666;
 
 type CardStackProps = {
   items: Testimonial[];
@@ -51,7 +51,6 @@ export const CardStack = ({ items, offset, scaleFactor }: CardStackProps) => {
 
   return (
     <BlurFade
-      delay={5}
       dynamic
       className={cn(
         "fixed bottom-25 right-10 z-99",
