@@ -2,32 +2,7 @@
   "home": {
     "metadata": {
       "title": "Portfolio web de Matthieu Vagnon",
-      "description": "Je suis développeur web full-stack et designer UI/UX. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes.",
-      "openGraph": {
-        "title": "Portfolio Web de Matthieu Vagnon",
-        "description": "Développeur full-stack UX-first. Je propose à mes clients le développement d'applications fidélisantes."
-      },
-      "keywords": {
-        "1": "Matthieu Vagnon",
-        "2": "Front-end",
-        "3": "Back-end",
-        "4": "Full-stack",
-        "5": "Développeur",
-        "6": "SEO",
-        "7": "Responsive",
-        "8": "UI",
-        "9": "UX",
-        "10": "SaaS",
-        "11": "Web",
-        "12": "Application",
-        "13": "App",
-        "14": "React",
-        "15": "Next.js",
-        "16": "Figma",
-        "18": "Web3",
-        "19": "AI",
-        "20": "Node.js"
-      }
+      "description": "Je suis développeur web full-stack et designer UI/UX. Je propose à mes clients la conception et le développement de SaaS et d'applications web fidélisantes."
     },
     "title": "Accueil",
     "titleBox": {
@@ -50,17 +25,7 @@
   "profile": {
     "metadata": {
       "title": "Profil | Matthieu Vagnon",
-      "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
-      "openGraph": {
-        "title": "Profil de Matthieu Vagnon",
-        "description": "Un résumé de mes compétences, de mes expériences passées et de mes certifications."
-      },
-      "keywords": {
-        "1": "Profil",
-        "2": "CV",
-        "3": "Curriculum",
-        "4": "Vitae"
-      }
+      "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications."
     },
     "title": "Profil",
     "description": "Un résumé complet de mes compétences, de mes expériences passées et de mes certifications.",
@@ -75,17 +40,7 @@
   "yourProject": {
     "metadata": {
       "title": "Votre projet | Matthieu Vagnon",
-      "description": "Votre projet mérite le meilleur. Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs.",
-      "openGraph": {
-        "title": "Offres de Matthieu Vagnon",
-        "description": "Votre projet mérite le meilleur. Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs."
-      },
-      "keywords": {
-        "1": "Votre",
-        "2": "Projet",
-        "3": "Offre",
-        "4": "Deal"
-      }
+      "description": "Votre projet mérite le meilleur. Discutons de votre projet et voyons comment je peux vous aider à atteindre vos objectifs."
     },
     "tooltip": "Votre projet",
     "title": "Votre projet mérite le meilleur",
@@ -100,22 +55,11 @@
   "caseStudies": {
     "metadata": {
       "title": "Cas pratiques | Matthieu Vagnon",
-      "description": "Quelques-uns des projets sur lesquels j'ai travaillé au cours de ma carrière. SaaS, IA, Web3, enseignement et plus encore.",
-      "openGraph": {
-        "title": "Cas pratiques de Matthieu Vagnon",
-        "description": "Quelques-uns des projets sur lesquels j'ai travaillé. SaaS, IA, Web3, enseignement..."
-      },
-      "keywords": {
-        "1": "Cas pratiques",
-        "2": "Cas pratique"
-      }
+      "description": "Quelques-uns des projets sur lesquels j'ai travaillé au cours de ma carrière. SaaS, IA, Web3, enseignement et plus encore."
     },
     "project": {
       "metadata": {
-        "title": "{name} | Matthieu Vagnon",
-        "openGraph": {
-          "title": "{name} - Matthieu Vagnon"
-        }
+        "title": "{name} | Matthieu Vagnon"
       },
       "type": {
         "webApplication": "Application web",

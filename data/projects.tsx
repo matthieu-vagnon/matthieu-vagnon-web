@@ -20,6 +20,7 @@ import smartInterviewBuilder3 from "@/public/smart-interview/builder-3.png";
 import smartInterviewBuilder4 from "@/public/smart-interview/builder-4.png";
 import smartInterviewBuilder5 from "@/public/smart-interview/builder-5.png";
 import smartInterviewBuilder6 from "@/public/smart-interview/builder-6.png";
+import { Fragment } from "react";
 
 export const projects: Record<string, Project> = {
   "matthieu-vagnon": {
@@ -137,45 +138,45 @@ export const projects: Record<string, Project> = {
     ],
     problem: {
       en: [
-        <>
+        <Fragment key="1">
           Need to produce a <Highlight>dynamic and performant</Highlight> React
           application to demonstrate my skills with public source code while
           maintaining <Highlight>high-quality SEO</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           <Highlight>Limited time</Highlight> to work on this application in
           parallel with my other projects.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           <Highlight>No back-end infrastructure</Highlight> to host the data
           (profile, projects, ...).
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           Nécessité de produire une application React{" "}
           <Highlight>dynamique et performante</Highlight> pour démontrer mes
           compétences avec un code source publique tout en maintenant un{" "}
           <Highlight>SEO de haute qualité</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           <Highlight>Peu de temps</Highlight> pour travailler sur cette
           application en parallèle de mes autres projets.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           <Highlight>Pas d&apos;infrastructure back-end</Highlight> pour
           héberger les données (profil, projets, ...).
-        </>,
+        </Fragment>,
       ],
     },
     solution: {
       en: [
-        <>
+        <Fragment key="1">
           Decision to use <Highlight>Next.js</Highlight> as a framework to{" "}
           <Highlight>ensure SEO</Highlight> while leveraging the app router to
           manage multiple pages.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Use of component libraries like{" "}
           <LinkButton external href="https://www.shadcn.net">
             ShadCN
@@ -183,21 +184,21 @@ export const projects: Record<string, Project> = {
           whose strength is <Highlight>customization</Highlight> to accelerate
           development while ensuring{" "}
           <Highlight>high code quality and performance optimization</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           In order to <Highlight>properly manage application data</Highlight>{" "}
           without having to develop a complete back-end infrastructure, I
           created a <Code>/data</Code> folder in which I stored the data needed
           for the application.
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           Décision d&apos;utiliser <Highlight>Next.js</Highlight> comme
           framework afin de <Highlight>garantir le SEO</Highlight> tout en
           tirant profit de l&apos;app router pour gérer les pages multiples.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Utilisation de librairies de composants comme{" "}
           <LinkButton external href="https://www.shadcn.net">
             ShadCN
@@ -209,8 +210,8 @@ export const projects: Record<string, Project> = {
             une qualité de code élevée et une optimisation des performances
           </Highlight>
           .
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           Afin de{" "}
           <Highlight>
             gérer les données de l&apos;application proprement
@@ -218,7 +219,7 @@ export const projects: Record<string, Project> = {
           sans avoir à développer une infrastructure back-end complète,
           j&apos;ai créé un dossier <Code>/data</Code> dans lequel j&apos;ai
           stocké les données nécessaires à l&apos;application.
-        </>,
+        </Fragment>,
       ],
     },
     results: {
@@ -363,79 +364,79 @@ export const projects: Record<string, Project> = {
     ],
     problem: {
       en: [
-        <>
+        <Fragment key="1">
           Enhance <Highlight>experience</Highlight> and{" "}
           <Highlight>interface</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           <Highlight>Integrate advanced, intuitive features</Highlight> to
           empower non-technical users.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           Fix <Highlight>bugs</Highlight> and improve{" "}
           <Highlight>code readability</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="4">
           All of this in a reduced timeframe of{" "}
           <Highlight>4 to 5 weeks maximum</Highlight>.
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           Améliorer l&apos;<Highlight>expérience</Highlight> et l&apos;
           <Highlight>interface</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           <Highlight>
             Intégrer des fonctionnalités avancées et intuitives
           </Highlight>{" "}
           pour donner plus de pouvoir aux utilisateurs non techniques.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           Corriger les <Highlight>bugs</Highlight> et améliorer la{" "}
           <Highlight>lisibilité du code</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="4">
           Tout cela en un temps réduit de{" "}
           <Highlight>4 à 5 semaines maximum</Highlight>.
-        </>,
+        </Fragment>,
       ],
     },
     solution: {
       en: [
-        <>
+        <Fragment key="1">
           Implemented essential UX enhancements including{" "}
           <Highlight>loading indicators</Highlight> and{" "}
           <Highlight>questions reordering</Highlight>. Integrated interactive{" "}
           <Highlight>modals</Highlight> for confirmation workflows when saving
           questionnaires and adding new questions.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Developed comprehensive <Highlight>customization options</Highlight>{" "}
           for questionnaire elements, featuring{" "}
           <Highlight>minimum and maximum number</Highlight> constraints,{" "}
           <Highlight>sliders</Highlight>, <Highlight>tables</Highlight>, and
           numerous additional configuration possibilities to enhance user
           control, avoiding user to be forced to edit the JSON file.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           Systematically <Highlight>fixed bugs</Highlight>,{" "}
           <Highlight>optimized</Highlight> application performance through code
           refactoring, and significantly{" "}
           <Highlight>improved code readability</Highlight> for better
           maintainability.
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           Mise en place d&apos;améliorations essentielles de l&apos;UX incluant
           des <Highlight>indicateurs de chargement</Highlight> et la{" "}
           <Highlight>réorganisation des questions</Highlight>. Intégration de{" "}
           <Highlight>fenêtres modales</Highlight> interactives pour les
           processus de confirmation lors de l&apos;enregistrement des
           questionnaires et l&apos;ajout de nouvelles questions.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Développement d&apos;options complètes de{" "}
           <Highlight>personnalisation</Highlight> pour les éléments du
           questionnaire, comprenant des contraintes de{" "}
@@ -444,14 +445,14 @@ export const projects: Record<string, Project> = {
           et de nombreuses possibilités de configuration supplémentaires pour
           améliorer le contrôle utilisateur, évitant ainsi aux utilisateurs
           d&apos;être forcés de modifier le fichier JSON.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="3">
           <Highlight>Correction systématique des bugs</Highlight>,{" "}
           <Highlight>optimisation</Highlight> des performances de
           l&apos;application par la refactorisation du code, et amélioration
           significative de la <Highlight>lisibilité du code</Highlight> pour une
           meilleure maintenabilité.
-        </>,
+        </Fragment>,
       ],
     },
     results: {
@@ -555,58 +556,58 @@ export const projects: Record<string, Project> = {
     ],
     problem: {
       en: [
-        <>
+        <Fragment key="1">
           Create a <Highlight>simple and clean interface</Highlight> while{" "}
           <Highlight>limiting infrastructure costs</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Dealing with <Highlight>a very short timeframe</Highlight> (~ 1 week
           before restaurant opening).
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           Créer une <Highlight>interface simple et épurée</Highlight> tout en{" "}
           <Highlight>limitant les coûts d&apos;infrastructure</Highlight>.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Faire face à <Highlight>un délai très court</Highlight> (~ 1 semaine
           avant l&apos;ouverture du restaurant).
-        </>,
+        </Fragment>,
       ],
     },
     solution: {
       en: [
-        <>
+        <Fragment key="1">
           Created a React/Vite app to meet the need for{" "}
           <Highlight>control over the project</Highlight> and to reduce{" "}
           <Highlight>infrastructure costs</Highlight> due to the use of external
           services.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           Used{" "}
           <LinkButton external href="https://vercel.com">
             Vercel
           </LinkButton>{" "}
           to host application with maximum{" "}
           <Highlight>performance and reliability</Highlight>.
-        </>,
+        </Fragment>,
       ],
       fr: [
-        <>
+        <Fragment key="1">
           J&apos;ai créé une application React/Vite pour répondre au besoin de{" "}
           <Highlight>contrôle sur le projet</Highlight> et pour réduire les{" "}
           <Highlight>coûts d&apos;infrastructure</Highlight> liés à
           l&apos;utilisation de services externes.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="2">
           J&apos;ai utilisé{" "}
           <LinkButton external href="https://vercel.com">
             Vercel
           </LinkButton>{" "}
           pour héberger l&apos;application avec une{" "}
           <Highlight>performance et une fiabilité maximales</Highlight>.
-        </>,
+        </Fragment>,
       ],
     },
     relatedUrls: [

@@ -75,7 +75,7 @@ export async function generateMetadata(
     openGraph: {
       type: "article",
       siteName: "Matthieu Vagnon Web",
-      title: t("openGraph.title", { name: project.title }),
+      title: t("title", { name: project.title }),
       description: getTranslatedData(
         project.shortDescription,
         locale

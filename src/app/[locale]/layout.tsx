@@ -12,7 +12,7 @@ import { getCookie } from "@/lib/server-utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import {
   Courier_Prime,
   Noto_Sans_JP,
@@ -60,7 +60,6 @@ const courierPrime = Courier_Prime({
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("home.metadata");
-  const messages = (await getMessages()).home.metadata;
 
   return {
     title: t("title"),
@@ -68,17 +67,14 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       siteName: "Matthieu Vagnon Web",
-      title: t("openGraph.title"),
-      description: t("openGraph.description"),
+      title: t("title"),
+      description: t("description"),
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_URL!}/og-image.png`,
         },
       ],
     },
-    keywords: Object.keys(messages.keywords).map(
-      (key) => messages.keywords[key]
-    ),
     authors: [
       {
         name: "Matthieu Vagnon",

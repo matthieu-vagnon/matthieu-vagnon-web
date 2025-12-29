@@ -1,12 +1,10 @@
 import { profile } from "@/data/profile";
 import { getFlattenedNode, getTranslatedData } from "@/lib/utils";
 import { Metadata } from "next";
-import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("profile.metadata");
-  const homeMessages = (await getMessages()).home.metadata;
-  const messages = (await getMessages()).profile.metadata;
   const locale = await getLocale();
   const businessCard = getTranslatedData(profile.businessCard, locale);
 
@@ -16,8 +14,8 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       siteName: "Matthieu Vagnon Web",
-      title: t("openGraph.title"),
-      description: t("openGraph.description"),
+      title: t("title"),
+      description: t("description"),
       images: [
         {
           url: profile.avatarUrl
@@ -37,10 +35,6 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: [
       ...(profile.experience.map((experience) => experience.company) || []),
       ...(profile.education.map((education) => education.responsible) || []),
-      ...Object.values(homeMessages.keywords).map(
-        (keyword) => keyword as string
-      ),
-      ...Object.values(messages.keywords).map((keyword) => keyword as string),
     ],
   };
 }
