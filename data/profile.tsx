@@ -21,6 +21,7 @@ import saintThomas from "@/public/profile/saint-thomas.png";
 import toeic from "@/public/profile/toeic.webp";
 import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
+import totalEnergies from "@/public/they-trust-me/totalenergies.png";
 import {
   BadgePlus,
   Braces,
@@ -434,8 +435,8 @@ export const profile: Profile = {
       timeline: "2024 - 2025",
     },
     {
-      company: "Predictive Layer",
-      logo: predictiveLayer,
+      company: "TotalEnergies",
+      logo: totalEnergies,
       projects: [
         {
           title: {
@@ -474,6 +475,17 @@ export const profile: Profile = {
             },
           ],
         },
+      ],
+      position: {
+        en: "Principal Front-End Engineer & Designer",
+        fr: "Développeur front-end principal & designer",
+      },
+      timeline: "2024 - 2024",
+    },
+    {
+      company: "Predictive Layer",
+      logo: predictiveLayer,
+      projects: [
         {
           title: {
             en: "Demo SaaS",
