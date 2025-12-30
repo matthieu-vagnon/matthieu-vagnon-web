@@ -134,13 +134,7 @@ export default function Profile() {
         </BlurFade>
       </div>
       <BlurFade delay={blurDelay++ / 10}>
-        <SeeMore
-          socials={[
-            profile.socials.linkedin,
-            profile.socials.x,
-            profile.socials.malt,
-          ]}
-        />
+        <SeeMore socials={[profile.socials.linkedin, profile.socials.malt]} />
       </BlurFade>
     </TestimonialsStatusWrapper>
   );
