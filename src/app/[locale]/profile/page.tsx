@@ -7,7 +7,6 @@ import { ResumeCard } from "@/components/ResumeCard";
 import SectionTitle from "@/components/SectionTitle";
 import SeeMore from "@/components/SeeMore";
 import { Separator } from "@/components/Separator";
-import SkillBox from "@/components/SkillBox";
 import PageDecoration from "@/components/svg/PageDecoration";
 import TestimonialsStatusWrapper from "@/components/TestimonialsStatusWrapper";
 import { profile } from "@/data/profile";
@@ -65,26 +64,6 @@ export default function Profile() {
         <BlurFade delay={blurDelay++ / 10}>
           <SectionTitle title={t("profile.method")} />
           <FeaturesSectionWithHoverEffects feat={profile.features} />
-        </BlurFade>
-        <BlurFade delay={blurDelay++ / 10} className="gap-y-8 flex flex-col">
-          <div className="flex flex-col">
-            <SectionTitle title={t("profile.stackTitle")} />
-            <span className="text-foreground italic">
-              {t("profile.stackDescription")}
-            </span>
-          </div>
-          <div className="flex flex-row gap-2 sm:gap-3 flex-wrap [&>*]:flex-auto">
-            {profile.stack.map((el, index) => (
-              <SkillBox
-                key={index}
-                icon={el.icon}
-                title={getTranslatedData(el.title, locale)}
-                tooltip={getTranslatedData(el.tooltip, locale)}
-                items={el.tech}
-                accent={el.accent}
-              />
-            ))}
-          </div>
         </BlurFade>
         <BlurFade delay={blurDelay++ / 10}>
           <div className="flex flex-row flex-wrap justify-between gap-y-12 sm:gap-y-14 md:gap-y-16">

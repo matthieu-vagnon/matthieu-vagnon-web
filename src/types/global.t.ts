@@ -48,19 +48,6 @@ declare global {
       description: MultiLingual;
       icon: React.ReactNode;
     }[];
-    stack: {
-      icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-      title: MultiLingual;
-      tooltip?: MultiLingual;
-      accent?: boolean;
-      tech: (
-        | string
-        | {
-            techIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-            name: string;
-          }
-      )[];
-    }[];
     about: MultiLingual;
     experience: {
       company: string;

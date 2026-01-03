@@ -2,10 +2,6 @@ import Github from "@/components/svg/Github";
 import Instagram from "@/components/svg/Instagram";
 import LinkedIn from "@/components/svg/Linkedin";
 import Malt from "@/components/svg/Malt";
-import NextjsIcon from "@/components/svg/Nextjs";
-import ReactIcon from "@/components/svg/React";
-import TailwindIcon from "@/components/svg/Tailwind";
-import TypescriptIcon from "@/components/svg/TypeScript";
 import businessCard from "@/public/profile/business-card.png";
 import cosigma from "@/public/profile/cosigma.jpeg";
 import google from "@/public/profile/google.jpg";
@@ -23,18 +19,10 @@ import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import totalEnergies from "@/public/they-trust-me/totalenergies.png";
 import {
   BadgePlus,
-  Braces,
-  BrainCircuit,
   BrushCleaning,
-  CodeXml,
-  Cog,
   Database,
   FileChartPie,
-  Keyboard,
-  Paintbrush,
-  Palette,
   PaletteIcon,
-  Users,
   Zap,
 } from "lucide-react";
 
@@ -150,136 +138,6 @@ export const profile: Profile = {
         fr: "Développement itératif et implémentation de nouvelles fonctionnalités basées sur les retours utilisateurs et les priorités business. Amélioration continue du produit pour répondre aux besoins évolutifs du marché et maximiser la valeur pour l'utilisateur.",
       },
       icon: <BadgePlus />,
-    },
-  ],
-  stack: [
-    {
-      icon: CodeXml,
-      title: {
-        en: "Languages",
-        fr: "Languages",
-      },
-      tech: [
-        {
-          techIcon: TypescriptIcon,
-          name: "TypeScript",
-        },
-        "JavaScript",
-        "SQL",
-        "HTML/TSX/JSX",
-        "CSS/SCSS/LESS",
-      ],
-    },
-    {
-      icon: Paintbrush,
-      title: {
-        en: "Front-End",
-        fr: "Front-end",
-      },
-      tech: [
-        {
-          techIcon: ReactIcon,
-          name: "React.js",
-        },
-        {
-          techIcon: ReactIcon,
-          name: "React Native",
-        },
-        {
-          techIcon: NextjsIcon,
-          name: "Next.js",
-        },
-        "Vite.js",
-        "TanStack Router",
-        "TanStack Query",
-        "Electric SQL",
-        {
-          techIcon: TailwindIcon,
-          name: "Tailwind CSS",
-        },
-        "Material UI",
-        "Framer Motion",
-        "Zustand",
-        "Zod",
-        "React Hook Form",
-        "Effect",
-        "i18next/next-intl",
-        "@alewin/useWorker",
-      ],
-    },
-    {
-      icon: Cog,
-      title: {
-        en: "Infrastructure & Back-End",
-        fr: "Infrastructure & back-end",
-      },
-      tech: [
-        "RapidAPI",
-        "Docker",
-        "GitHub Actions",
-        "Vercel",
-        "Supabase",
-        "Google Cloud",
-        "PostgreSQL",
-      ],
-    },
-    {
-      icon: Braces,
-      title: {
-        en: "Development Practices",
-        fr: "Pratiques de développement",
-      },
-      tech: [
-        "Hexagonal Architecture",
-        "Component-Based Architecture",
-        "ESLint",
-        "Prettier",
-        "Jest",
-        "Vitest",
-      ],
-    },
-    {
-      icon: Palette,
-      title: {
-        en: "UI/UX",
-      },
-      tech: ["Figma", "Lighthouse", "Vercel Speed Insights"],
-    },
-    {
-      icon: BrainCircuit,
-      title: {
-        en: "AI & LLM Integration",
-        fr: "Intégration IA & LLM",
-      },
-      tech: ["OpenRouter", "Exa", "Firebase"],
-    },
-    {
-      icon: Users,
-      title: {
-        en: "Project Management & Analytics",
-        fr: "Gestion de projet & analyse d'audience",
-      },
-      tech: [
-        "Git",
-        "GitHub",
-        "GitLab",
-        "Jira",
-        "Trello",
-        "PostHog",
-        "Vercel Web Analytics",
-      ],
-    },
-    {
-      icon: Keyboard,
-      title: {
-        en: "Productivity Tools",
-        fr: "Outils de productivité",
-      },
-      tooltip: {
-        en: "I use these technologies to support my productivity. I'm not a fan of 'vibe-coding'.",
-        fr: "J'utilise ces technologies comme support pour soutenir ma productivité. Je ne suis pas adepte du 'vibe-coding'.",
-      },
-      tech: ["Google Stitch", "Cursor IDE", "Claude Code"],
     },
   ],
   about: {
