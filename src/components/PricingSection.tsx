@@ -54,7 +54,7 @@ export default function PricingSection() {
         ))}
       </div>
 
-      <div className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm">
+      <div className="rounded-lg border bg-white/33 p-6 text-card-foreground shadow-sm">
         <h3 className="text-xl font-semibold">{t("uniqueRequest")}</h3>
         <p className="mt-2 text-muted-foreground">
           {t("uniqueRequestDescription")}

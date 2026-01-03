@@ -55,7 +55,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
         initial="initial"
         whileHover="hover"
         className={cn(
-          "relative flex-1 min-w-82 flex flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground shadow-sm transition-shadow duration-300",
+          "relative flex-1 min-w-82 flex flex-col justify-between rounded-lg border bg-white/66 p-6 text-card-foreground shadow-sm transition-shadow duration-300",
           className
         )}
         {...props}
