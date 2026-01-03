@@ -1,7 +1,6 @@
 import AppsDock from "@/components/AppsDock";
 import { CardStack } from "@/components/CardStack";
 import InfoBand from "@/components/InfoBand";
-import { TooltipProvider } from "@/components/Tooltip";
 import { testimonials } from "@/data/testimonials";
 import AccentColorProvider from "@/hooks/useAccentColor";
 import ActiveModalProvider from "@/hooks/useActiveModal";
@@ -103,38 +102,36 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider>
-        <TooltipProvider>
-          <TestimonialsStatusProvider>
-            <ActiveModalProvider>
-              <MagneticStatusProvider
-                initialMagneticStatus={
-                  !initialMagneticStatus
-                    ? undefined
-                    : initialMagneticStatus === "true"
-                }
-              >
-                <AccentColorProvider initialAccentColor={accentColor}>
-                  <body
-                    className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} antialiased`}
-                  >
-                    <NextTopLoader
-                      showSpinner={false}
-                      color="var(--main)"
-                      zIndex={999}
-                    />
-                    <Toaster />
-                    <div className="mx-auto min-h-dvh max-w-[2250px] flex flex-col relative px-4 sm:px-6 md:px-8 overflow-hidden">
-                      <InfoBand />
-                      {children}
-                      <CardStack items={testimonials} />
-                      <AppsDock />
-                    </div>
-                  </body>
-                </AccentColorProvider>
-              </MagneticStatusProvider>
-            </ActiveModalProvider>
-          </TestimonialsStatusProvider>
-        </TooltipProvider>
+        <TestimonialsStatusProvider>
+          <ActiveModalProvider>
+            <MagneticStatusProvider
+              initialMagneticStatus={
+                !initialMagneticStatus
+                  ? undefined
+                  : initialMagneticStatus === "true"
+              }
+            >
+              <AccentColorProvider initialAccentColor={accentColor}>
+                <body
+                  className={`${signikaNegative.variable} ${sourceSans3.variable} ${notoSansJP.variable} ${zenAntique.variable} ${courierPrime.variable} antialiased`}
+                >
+                  <NextTopLoader
+                    showSpinner={false}
+                    color="var(--main)"
+                    zIndex={999}
+                  />
+                  <Toaster />
+                  <div className="mx-auto min-h-dvh max-w-[2250px] flex flex-col relative px-4 sm:px-6 md:px-8 overflow-hidden">
+                    <InfoBand />
+                    {children}
+                    <CardStack items={testimonials} />
+                    <AppsDock />
+                  </div>
+                </body>
+              </AccentColorProvider>
+            </MagneticStatusProvider>
+          </ActiveModalProvider>
+        </TestimonialsStatusProvider>
       </NextIntlClientProvider>
       <SpeedInsights />
     </html>
