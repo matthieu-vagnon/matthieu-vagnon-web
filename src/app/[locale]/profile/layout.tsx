@@ -33,6 +33,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     keywords: [
+      ...(Object.values(profile.features).map((feature) =>
+        getTranslatedData(feature.title, locale)
+      ) || []),
       ...(profile.experience.map((experience) => experience.company) || []),
       ...(profile.education.map((education) => education.responsible) || []),
     ],

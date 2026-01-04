@@ -131,7 +131,7 @@ export const profile: Profile = {
     {
       title: {
         en: "6. Paid Advertising",
-        fr: "6. Paid Ads (Google Ads)",
+        fr: "6. Publicité payante",
       },
       description: {
         en: "Setup and optimization of paid advertising campaigns (Google Ads, etc.) to drive targeted traffic to your product and maximize conversion rates with data-driven strategies.",
