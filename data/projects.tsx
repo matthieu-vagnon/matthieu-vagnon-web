@@ -63,7 +63,7 @@ export const projects: Record<string, Project> = {
       en: ["Web Application", "Portfolio", "Matthieu Vagnon"],
       fr: ["Application Web", "Portfolio", "Matthieu Vagnon"],
     },
-    technologies: ["React.js", "Next.js"],
+    technologies: ["Next.js"],
     previewImg: mvWeb1,
     gallery: [
       {
@@ -310,7 +310,7 @@ export const projects: Record<string, Project> = {
       en: ["AI", "SaaS", "Questionnaire", "Mass Analysis"],
       fr: ["IA", "SaaS", "Questionnaire", "Analyse de masse"],
     },
-    technologies: ["React.js", "Next.js"],
+    technologies: ["Next.js", "Supabase"],
     previewImg: smartInterviewBuilder6,
     gallery: [
       {
@@ -521,7 +521,7 @@ export const projects: Record<string, Project> = {
       en: ["Web Application", "Japanese", "Restaurant"],
       fr: ["Application Web", "Japonais", "Restaurant"],
     },
-    technologies: ["React.js"],
+    technologies: ["React.js (Vite)"],
     previewImg: koryoriYa1,
     gallery: [
       {
