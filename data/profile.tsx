@@ -7,7 +7,7 @@ import cosigma from "@/public/profile/cosigma.jpeg";
 import google from "@/public/profile/google.jpg";
 import ikm from "@/public/profile/ikm.jpeg";
 import influactive from "@/public/profile/influactive.jpeg";
-import me from "@/public/profile/me.png";
+import logo from "@/public/profile/logo.png";
 import meta from "@/public/profile/meta.jpeg";
 import polytech from "@/public/profile/polytech.webp";
 import predictiveLayer from "@/public/profile/predictive-layer.png";
@@ -64,7 +64,6 @@ export const profile: Profile = {
     email: "mvagnon@icloud.com",
     phone: "+817090997140",
   },
-  avatarUrl: me,
   businessCard: {
     image: businessCard,
     title: {
@@ -200,6 +199,73 @@ export const profile: Profile = {
     ),
   },
   experience: [
+    {
+      company: "Matthieu Vagnon (EI)",
+      logo: logo,
+      timeline: "2024 - now",
+      position: {
+        en: "Full-Stack Engineer & UI/UX Designer",
+        fr: "Développeur full-stack & designer UI/UX",
+      },
+      projects: [
+        {
+          title: {
+            en: "For my clients",
+            fr: "Pour mes clients",
+          },
+          description: [
+            {
+              en: "Development of SaaS and web applications for my clients",
+              fr: "Développement de SaaS et applications web pour mes clients",
+            },
+          ],
+          responsibilities: [
+            {
+              en: "Creation of wireframes and mockups. I translate the client's vision into concrete, user-centered visual designs that guide the entire development process.",
+              fr: "Conception des wireframes et maquettes. Je traduis la vision du client en designs visuels concrets et centrés sur l'utilisateur qui guident l'ensemble du processus de développement.",
+            },
+            {
+              en: "Rapid development and deployment of a Proof of Concept to validate the product idea and core features, ensuring technical feasibility and market fit as quickly as possible.",
+              fr: "Développement et déploiement rapide d'un Proof of Concept pour valider l'idée du produit et ses fonctionnalités clés, assurant la faisabilité technique et l'adéquation au marché le plus rapidement possible.",
+            },
+            {
+              en: "Development of a Minimum Viable Product and iterative enhancement based on user feedback. Continuous improvement to meet evolving market needs while maintaining high code quality and scalability.",
+              fr: "Développement d'un Minimum Viable Product et amélioration itérative basée sur les retours utilisateurs. Amélioration continue pour répondre aux besoins évolutifs du marché tout en maintenant une qualité de code élevée et une scalabilité optimale.",
+            },
+            {
+              en: "Deployment of the application to production environments with robust infrastructure setup. Configuration of scalable, secure, and high-performance systems to ensure optimal product availability.",
+              fr: "Déploiement de l'application sur les environnements de production avec mise en place d'une infrastructure robuste. Configuration de systèmes scalables, sécurisés et performants pour garantir une disponibilité optimale du produit.",
+            },
+            {
+              en: "Creation of a professional landing page to showcase your SaaS product and implementation of payment solutions (Stripe, etc.) to enable seamless monetization and subscription management.",
+              fr: "Création d'un site web vitrine professionnel pour présenter votre SaaS et intégration des solutions de paiement (Stripe, etc.) pour permettre une monétisation fluide et la gestion des abonnements.",
+            },
+            {
+              en: "Setup and optimization of paid advertising campaigns (Google Ads, etc.) to drive targeted traffic to your product and maximize conversion rates with data-driven strategies.",
+              fr: "Mise en place et optimisation de campagnes publicitaires payantes (Google Ads, etc.) pour générer du trafic ciblé vers votre produit et maximiser les taux de conversion avec des stratégies basées sur les données.",
+            },
+          ],
+        },
+        {
+          title: {
+            en: "For my own projects",
+            fr: "Pour mon compte",
+          },
+          description: [
+            {
+              en: "Development and sale of SaaS and web applications for my own projects",
+              fr: "Développement et mise en vente de SaaS et applications web pour mon compte",
+            },
+          ],
+          responsibilities: [
+            {
+              en: "Same as for my clients.",
+              fr: "Idem que pour mes clients.",
+            },
+          ],
+        },
+      ],
+    },
     {
       company: "CoSigma.io",
       logo: cosigma,
