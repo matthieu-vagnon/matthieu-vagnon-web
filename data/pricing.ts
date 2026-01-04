@@ -9,11 +9,11 @@ export const pricing: PricingPlan[] = [
       fr: "Développement éclair d'un POC",
     },
     price: {
-      en: "900 €",
+      en: "800 €",
     },
     priceDescription: {
-      en: "For 3 days of service, then 400 €/day",
-      fr: "Pour 3 jours de prestation, puis 400 €/jour.",
+      en: "For 3 days of service, then 350 €/day",
+      fr: "Pour 3 jours de prestation, puis 350 €/jour.",
     },
     description: {
       en: "Ideal for project holders who want to seek funding quickly.",
@@ -34,48 +34,19 @@ export const pricing: PricingPlan[] = [
   },
   {
     title: {
-      en: "UI/UX Revamp",
-      fr: "Revamp UI/UX",
+      en: "App Development",
+      fr: "Développement d'application",
     },
     price: {
-      en: "3000 €",
+      en: "2500 €",
     },
     priceDescription: {
-      en: "For 10 days of service, then 400 €/day",
-      fr: "Pour 10 jours de prestation, puis 400 €/jour.",
+      en: "For 10 days of service, then 350 €/day",
+      fr: "Pour 10 jours de prestation, puis 350 €/jour.",
     },
     description: {
-      en: "Ideal for app owners who want to multiply the adoption of their product.",
-      fr: "Idéal pour les propriétaires d'app qui veulent multiplier l'adoption de leur produit.",
-    },
-    features: [
-      {
-        en: "Initial audit",
-        fr: "Audit initial",
-      },
-      {
-        en: "UI/UX revamp",
-        fr: "Refonte UI/UX complète",
-      },
-    ],
-    image: uiRevamp,
-    imageAlt: "ui/ux revamp illustration",
-  },
-  {
-    title: {
-      en: "End-to-End App Development",
-      fr: "Développement d'app de bout en bout",
-    },
-    price: {
-      en: "7500 €",
-    },
-    priceDescription: {
-      en: "For 30 days of service, then 350 €/day",
-      fr: "Pour 30 jours de prestation, puis 350 €/jour.",
-    },
-    description: {
-      en: "Ideal for project holders who want a freelancer who will accompany them throughout the project without multiplying costs.",
-      fr: "Idéal pour les détenteurs d'un projet qui veulent un freelance qui les accompagnera tout le long du projet sans multiplier les coûts.",
+      en: "Ideal for entrepreneurs who want to launch their MVP and iterate based on user feedback.",
+      fr: "Idéal pour les entrepreneurs qui veulent lancer leur MVP et itérer en fonction des retours utilisateurs.",
     },
     features: [
       {
@@ -83,20 +54,57 @@ export const pricing: PricingPlan[] = [
         fr: "Conception UI/UX avec Figma",
       },
       {
-        en: "Proof of concept development",
-        fr: "Développement de la preuve de concept",
-      },
-      {
-        en: "Technical and visual refinement",
-        fr: "Perfectionnement technique et visuel",
+        en: "MVP development and beyond",
+        fr: "Développement du MVP et au-delà",
       },
       {
         en: "Production deployment",
         fr: "Déploiement en production",
       },
+    ],
+    image: uiRevamp,
+    imageAlt: "app development illustration",
+  },
+  {
+    title: {
+      en: "Full-Service Development",
+      fr: "Développement tout compris",
+    },
+    price: {
+      en: "6000 €",
+    },
+    priceDescription: {
+      en: "For 30 days of service, then 300 €/day",
+      fr: "Pour 30 jours de prestation, puis 300 €/jour.",
+    },
+    description: {
+      en: "Complete package for entrepreneurs who want a turnkey SaaS, from design to customer acquisition.",
+      fr: "Offre complète pour les entrepreneurs qui veulent un SaaS clé en main, du design à l'acquisition client.",
+    },
+    features: [
       {
-        en: "Functionalities implementation",
-        fr: "Implémentation de fonctionnalités",
+        en: "UI/UX design with Figma",
+        fr: "Conception UI/UX avec Figma",
+      },
+      {
+        en: "POC development & deployment",
+        fr: "Développement et déploiement du POC",
+      },
+      {
+        en: "MVP development and beyond",
+        fr: "Développement du MVP et au-delà",
+      },
+      {
+        en: "Production deployment & infrastructure setup",
+        fr: "Déploiement en production et mise en place de l'infrastructure",
+      },
+      {
+        en: "Landing page & payment integration (Stripe, etc.)",
+        fr: "Site vitrine et intégration des paiements (Stripe, etc.)",
+      },
+      {
+        en: "Paid advertising setup (Google Ads)",
+        fr: "Mise en place des Paid Ads (Google Ads)",
       },
     ],
     image: fullStackDev,

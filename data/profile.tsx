@@ -18,11 +18,11 @@ import univLyon1 from "@/public/profile/univ-lyon1.png";
 import univLyon2 from "@/public/profile/univ-lyon2.jpg";
 import totalEnergies from "@/public/they-trust-me/totalenergies.png";
 import {
-  BadgePlus,
-  BrushCleaning,
-  Database,
-  FileChartPie,
+  CreditCard,
+  Megaphone,
   PaletteIcon,
+  Rocket,
+  Server,
   Zap,
 } from "lucide-react";
 
@@ -75,19 +75,8 @@ export const profile: Profile = {
   features: [
     {
       title: {
-        en: "1. Audit",
-        fr: "1. Audit",
-      },
-      description: {
-        en: "For existing projects, I conduct a comprehensive assessment and propose concrete solutions (UI/UX, features, performance, etc.) to maximize product profitability.",
-        fr: "Dans le cas d'un projet existant, je réalise un audit complet et propose des solutions concrètes (UI/UX, fonctionnalités, performance, etc.) pour maximiser la rentabilité du produit.",
-      },
-      icon: <FileChartPie />,
-    },
-    {
-      title: {
-        en: "2. Design",
-        fr: "2. Design",
+        en: "1. Design",
+        fr: "1. Design",
       },
       description: {
         en: "Creation of wireframes and mockups. I translate the client's vision into concrete, user-centered visual designs that guide the entire development process.",
@@ -97,47 +86,58 @@ export const profile: Profile = {
     },
     {
       title: {
-        en: "3. Early-Stage Product Development",
-        fr: "3. Développement du POC",
+        en: "2. POC Development & Deployment",
+        fr: "2. Développement et déploiement du POC",
       },
       description: {
-        en: "Development of a Proof of Concept and/or Minimum Viable Product to deliver a market-ready product as quickly as possible, while maintaining high code quality and scalability.",
-        fr: "Développement d'un Proof of Concept et/ou d'un Minimum Viable Product pour livrer un produit prêt pour le marché le plus rapidement possible, tout en maintenant une qualité de code élevée et une scalabilité optimale.",
+        en: "Rapid development and deployment of a Proof of Concept to validate the product idea and core features, ensuring technical feasibility and market fit as quickly as possible.",
+        fr: "Développement et déploiement rapide d'un Proof of Concept pour valider l'idée du produit et ses fonctionnalités clés, assurant la faisabilité technique et l'adéquation au marché le plus rapidement possible.",
       },
       icon: <Zap />,
     },
     {
       title: {
-        en: "4. Technical and Visual Refinement",
-        fr: "4. Perfectionnement technique et visuel",
+        en: "3. MVP Development & Beyond",
+        fr: "3. Développement du MVP et au-delà",
       },
       description: {
-        en: "Code refactoring and optimization for long-term maintainability and performance. Enhancement of user experience and interface design through refined interactions, smooth transitions, and intuitive workflows.",
-        fr: "Refactorisation et optimisation du code pour une maintenabilité et des performances à long terme. Amélioration de l'expérience utilisateur et du design d'interface via des interactions raffinées, des transitions fluides et des workflows intuitifs.",
+        en: "Development of a Minimum Viable Product and iterative enhancement based on user feedback. Continuous improvement to meet evolving market needs while maintaining high code quality and scalability.",
+        fr: "Développement d'un Minimum Viable Product et amélioration itérative basée sur les retours utilisateurs. Amélioration continue pour répondre aux besoins évolutifs du marché tout en maintenant une qualité de code élevée et une scalabilité optimale.",
       },
-      icon: <BrushCleaning />,
+      icon: <Rocket />,
     },
     {
       title: {
-        en: "5. Production Deployment",
-        fr: "5. Déploiement en production",
+        en: "4. Production Deployment & Infrastructure",
+        fr: "4. Déploiement en production et mise en place de l'infrastructure",
       },
       description: {
-        en: "Deployment of the application to production environments, ensuring a smooth and uninterrupted launch. Configuration of necessary infrastructures to guarantee scalability, security, and optimal product performance.",
-        fr: "Déploiement de l'application sur les environnements de production, assurant une mise en ligne fluide et sans interruption. Configuration des infrastructures nécessaires pour garantir la scalabilité, la sécurité et la performance optimale du produit.",
+        en: "Deployment of the application to production environments with robust infrastructure setup. Configuration of scalable, secure, and high-performance systems to ensure optimal product availability.",
+        fr: "Déploiement de l'application sur les environnements de production avec mise en place d'une infrastructure robuste. Configuration de systèmes scalables, sécurisés et performants pour garantir une disponibilité optimale du produit.",
       },
-      icon: <Database />,
+      icon: <Server />,
     },
     {
       title: {
-        en: "6. Functionalities Implementation",
-        fr: "6. Implémentation de fonctionnalités",
+        en: "5. Landing Page & Payment Integration",
+        fr: "5. Site vitrine & intégration des paiements",
       },
       description: {
-        en: "Iterative development and implementation of new features based on user feedback and business priorities. Continuous enhancement of the product to meet evolving market needs and maximize user value.",
-        fr: "Développement itératif et implémentation de nouvelles fonctionnalités basées sur les retours utilisateurs et les priorités business. Amélioration continue du produit pour répondre aux besoins évolutifs du marché et maximiser la valeur pour l'utilisateur.",
+        en: "Creation of a professional landing page to showcase your SaaS product and implementation of payment solutions (Stripe, etc.) to enable seamless monetization and subscription management.",
+        fr: "Création d'un site web vitrine professionnel pour présenter votre SaaS et intégration des solutions de paiement (Stripe, etc.) pour permettre une monétisation fluide et la gestion des abonnements.",
       },
-      icon: <BadgePlus />,
+      icon: <CreditCard />,
+    },
+    {
+      title: {
+        en: "6. Paid Advertising",
+        fr: "6. Paid Ads (Google Ads)",
+      },
+      description: {
+        en: "Setup and optimization of paid advertising campaigns (Google Ads, etc.) to drive targeted traffic to your product and maximize conversion rates with data-driven strategies.",
+        fr: "Mise en place et optimisation de campagnes publicitaires payantes (Google Ads, etc.) pour générer du trafic ciblé vers votre produit et maximiser les taux de conversion avec des stratégies basées sur les données.",
+      },
+      icon: <Megaphone />,
     },
   ],
   about: {
