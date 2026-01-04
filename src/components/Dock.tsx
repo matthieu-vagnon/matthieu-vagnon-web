@@ -126,7 +126,7 @@ function Dock({
         height: height,
         scrollbarWidth: "none",
       }}
-      className="mx-2 flex max-w-full items-end overflow-x-auto"
+      className="mx-2 flex max-w-full items-end overflow-x-auto overflow-y-visible"
     >
       <motion.div
         onMouseMove={({ pageX }) => {
@@ -138,7 +138,7 @@ function Dock({
           mouseX.set(Infinity);
         }}
         className={cn(
-          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-background/66 backdrop-blur-md px-3 border border-foreground/4",
+          "mx-auto flex flex-row flex-nowrap w-fit gap-2 sm:gap-3 rounded-2xl bg-background/66 backdrop-blur-md px-3 border border-foreground/4 overflow-visible",
           className
         )}
         style={{ height: panelHeight }}
@@ -181,7 +181,7 @@ function DockItem({ children, className }: DockItemProps) {
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       className={cn(
-        "relative active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/2",
+        "relative overflow-visible active:brightness-90 inline-flex items-center justify-center aspect-square rounded-lg bg-gray-200 cursor-pointer border border-foreground/2",
         className
       )}
       tabIndex={0}
@@ -218,16 +218,20 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: -10 }}
-          exit={{ opacity: 0, y: 0 }}
+          initial={{ opacity: 0, y: 0, x: "-50%" }}
+          animate={{ opacity: 1, y: -10, x: "-50%" }}
+          exit={{ opacity: 0, y: 0, x: "-50%" }}
           transition={{ duration: 0.2 }}
           className={cn(
             "pointer-events-none absolute bottom-13 left-1/2 w-fit z-99 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700",
             className
           )}
           role="tooltip"
-          style={{ x: "-50%" }}
+          style={{
+            translateZ: 0,
+            WebkitBackfaceVisibility: "hidden",
+            willChange: "transform, opacity",
+          }}
         >
           {children}
         </motion.div>
