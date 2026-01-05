@@ -1,5 +1,6 @@
 import Highlight from "@/components/Highlight";
 import bibimouneImage from "@/public/testimonials/bibimoune.jpeg";
+import yohanGoncalvesImage from "@/public/testimonials/goncalves.jpeg";
 import ousamaBoujaouaneImage from "@/public/testimonials/ousama-boujaouane.jpeg";
 import rigoriImage from "@/public/testimonials/rigori.jpeg";
 import saussayeImage from "@/public/testimonials/saussaye.jpeg";
@@ -179,5 +180,76 @@ export const testimonials: Testimonial[] = [
       ),
     },
     image: ousamaBoujaouaneImage,
+  },
+  {
+    id: 5,
+    name: "Yohan Goncalves",
+    company: "SoluDevTech",
+    position: "CEO",
+    testimonial: {
+      original: "fr",
+      en: (
+        <>
+          I warmly recommend Matthieu Vagnon, web developer and UI/UX designer.
+          Matthieu has this{" "}
+          <Highlight color="emerald">
+            dual technical and design expertise
+          </Highlight>{" "}
+          that makes all the difference. Technically, he{" "}
+          <Highlight color="emerald">
+            perfectly masters the modern React ecosystem
+          </Highlight>{" "}
+          (TypeScript, Next.js, Vite) and scalable architectures. What really
+          sets him apart: his{" "}
+          <Highlight color="emerald">user-centered approach</Highlight> and his
+          ability to minimize complexity while maintaining an excellent user
+          experience.{" "}
+          <Highlight color="emerald">Completely autonomous</Highlight>, he
+          handles projects{" "}
+          <Highlight color="emerald">from end to end</Highlight>: Figma,
+          development, API integration, deployment. He can also build great
+          showcase websites with integrated payment and SEO/SEA.{" "}
+          <Highlight color="emerald">
+            Reliable and solution-oriented collaborator
+          </Highlight>
+          , he understands business challenges and delivers results that matter.
+          I{" "}
+          <Highlight color="emerald">
+            recommend him without reservation
+          </Highlight>{" "}
+          for any senior or lead SaaS/web development position.
+        </>
+      ),
+      fr: (
+        <>
+          Je recommande chaleureusement Matthieu Vagnon, développeur web et
+          designer UI/UX. Matthieu possède cette{" "}
+          <Highlight color="emerald">
+            double compétence technique et design
+          </Highlight>{" "}
+          qui fait toute la différence. Techniquement, il{" "}
+          <Highlight color="emerald">
+            maîtrise parfaitement l&apos;écosystème React moderne
+          </Highlight>{" "}
+          (TypeScript, Next.js, Vite) et les architectures scalables. Ce qui le
+          distingue vraiment : son{" "}
+          <Highlight color="emerald">approche centrée utilisateur</Highlight> et
+          sa capacité à minimiser la complexité tout en maintenant une
+          excellente expérience utilisateur.{" "}
+          <Highlight color="emerald">Totalement autonome</Highlight>, il prend
+          en charge les projets{" "}
+          <Highlight color="emerald">de bout en bout</Highlight> : Figma,
+          développement, intégration API, déploiement. Il peut également vous
+          faire de super sites vitrines avec paiement et SEO/SEA intégrés.{" "}
+          <Highlight color="emerald">
+            Collaborateur fiable et orienté solution
+          </Highlight>
+          , il comprend les enjeux business et livre des résultats qui comptent.
+          Je le <Highlight color="emerald">recommande sans réserve</Highlight>{" "}
+          pour tout poste de développement SaaS/web senior ou lead.
+        </>
+      ),
+    },
+    image: yohanGoncalvesImage,
   },
 ];
